@@ -1,0 +1,75 @@
+package Adresses;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'ћодуль дл€ работы со справочником адресов'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  qFEditForm,
+  UnivSprav,
+  CommonSP,
+  cxExtEditorsVCLD7,
+  vcl,
+  rtl,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  vcldb,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  rxdb7,
+  rxctl7,
+  vclx,
+  VclSmp,
+  qFControls,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7;
+
+contains
+  uAdrMainForm in 'uAdrMainForm.pas' {AdrMainForm},
+  uAdresses in 'uAdresses.pas',
+  uAdr_DataModule in 'uAdr_DataModule.pas' {AdrDM: TDataModule},
+  uAdressForm in 'uAdressForm.pas' {AdrForm},
+  uAddCountry in 'uAddCountry.pas' {Add_Country_Form},
+  uAddRegion in 'uAddRegion.pas' {Add_Region_Form},
+  uAddPlace in 'uAddPlace.pas' {Add_Place_Form},
+  uAddStreetForm in 'uAddStreetForm.pas' {Add_Street_Form},
+  uAddDistrict in 'uAddDistrict.pas' {Add_District_Form},
+  Address_dmStorProc in 'Address_dmStorProc.pas' {StorProcDM: TDataModule},
+  uAddModifAdr3 in 'uAddModifAdr3.pas' {AddModifAdrForm3},
+  Address_ZMessages in 'Address_ZMessages.pas',
+  AdrSp_Consts in 'AdrSp_Consts.pas',
+  AdrSp_MainForm in 'AdrSp_MainForm.pas' {fmAdrSp},
+  AdrSp_Types in 'AdrSp_Types.pas',
+  uAddCityArea in 'uAddCityArea.pas' {AddCityArea};
+
+end.

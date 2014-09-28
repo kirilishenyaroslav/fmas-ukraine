@@ -1,0 +1,51 @@
+package Adresses;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'ћодуль дл€ работы со справочником адресов'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  qFEditForm,
+  UnivSprav,
+  CommonSP,
+  cxExtEditorsVCLD7;
+
+contains
+  uAdrMainForm in 'uAdrMainForm.pas' {AdrMainForm},
+  uAdresses in 'uAdresses.pas',
+  uAdr_DataModule in 'uAdr_DataModule.pas' {AdrDM: TDataModule},
+  uAddModifAdr in 'uAddModifAdr.pas' {AddModifAdrForm},
+  uAdressForm in 'uAdressForm.pas' {AdrForm},
+  uAddCountry in 'uAddCountry.pas' {Add_Country_Form},
+  uAddRegion in 'uAddRegion.pas' {Add_Region_Form},
+  uAddPlace in 'uAddPlace.pas' {Add_Place_Form},
+  uAddStreetForm in 'uAddStreetForm.pas' {Add_Street_Form},
+  uAddDistrict in 'uAddDistrict.pas' {Add_District_Form},
+  uAddCityArea in 'uAddCityArea.pas' {AddCityArea},
+  uAddModifAdr2 in 'uAddModifAdr2.pas' {AddModifAdrForm2},
+  uAddBirthPlace in 'uAddBirthPlace.pas' {AddBirthPlace},
+  uAddModifAdr3 in 'uAddModifAdr3.pas' {AddModifAdrForm3};
+
+end.
