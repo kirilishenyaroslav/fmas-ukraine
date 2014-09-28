@@ -1,0 +1,84 @@
+package MatasSpr;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  vcldb,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  cxCommonEditingVCLD7,
+  cxTreeListVCLD7,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  cxExtEditorsVCLD7,
+  vclx,
+  rxctl7,
+  VclSmp,
+  FR7,
+  MatasLib,
+  CommonSp,
+  Globals,
+  LoadDog;
+
+contains
+  uSpMatOtv in 'Modules\MatasSpr\SpMatOtv\uSpMatOtv.pas' {fmSpMatOtv},
+  uSpMatOtvAdd in 'Modules\MatasSpr\SpMatOtv\uSpMatOtvAdd.pas' {fmSpMatOtvAdd},
+  uSpTipDocFormEdit in 'Modules\MatasSpr\SpTipDoc\uSpTipDocFormEdit.pas' {TipDocEditForm},
+  uSpMatSchEx in 'Modules\MatasSpr\SpMatSch\uSpMatSchEx.pas' {MatSchExForm},
+  uSpKomissia in 'Modules\MatasSpr\SpKomissia\uSpKomissia.pas' {KomissiaMainForm},
+  uSpOper in 'Modules\MatasSpr\SpOper\uSpOper.pas' {SpOperForm},
+  uSpOperTreeEdit in 'Modules\MatasSpr\SpOper\uSpOperTreeEdit.pas' {SpOperEditForm},
+  uSpOperProvEdit in 'Modules\MatasSpr\SpOper\uSpOperProvEdit.pas' {SpOperProvForm},
+  uSpOperProvWork in 'Modules\MatasSpr\SpOper\uSpOperProvWork.pas' {SpOperWorkForm},
+  uSpMarks in 'Modules\MatasSpr\SpMarks\uSpMarks.pas' {SpMarksForm},
+  uSpMarksEdit in 'Modules\MatasSpr\SpMarks\uSpMarksEdit.pas' {SpMarksEdit},
+  uSpCustWork in 'Modules\MatasSpr\SpCustomer\uSpCustWork.pas',
+  uSpDogWork in 'Modules\MatasSpr\SpDog\uSpDogWork.pas',
+  uSpTipDocTemplate in 'Modules\MatasSpr\SpTipDoc\uSpTipDocTemplate.pas' {SpTipDocTemplForm},
+  uSpTipDoc in 'Modules\MatasSpr\SpTipDoc\uSpTipDoc.pas' {TipDocForm},
+  uSpKomissiaWork in 'Modules\MatasSpr\SpKomissia\uSpKomissiaWork.pas' {SpKomissiaWorkForm},
+  uSpKomissiaGroupWork in 'Modules\MatasSpr\SpKomissia\uSpKomissiaGroupWork.pas' {SpKomissiaGroupWorkForm},
+  uSpMatSchMulti in 'Modules\MatasSpr\SpMatSch\uSpMatSchMulti.pas' {MatSchFormMulti},
+  uSpMatSch in 'Modules\MatasSpr\SpMatSch\uSpMatSch.pas' {MatSchForm},
+  uSpMatOtvPrint in 'Modules\MatasSpr\SpMatOtv\uSpMatOtvPrint.pas' {fmSpMatOtvPrint},
+  uSpTipDocMulti in 'Modules\MatasSpr\SpTipDoc\uSpTipDocMulti.pas' {TipDocMultiForm},
+  uSpTipDOper in 'Modules\MatasSpr\SpTipDOper\uSpTipDOper.pas' {TipDOperForm},
+  uSpOperTipD in 'Modules\MatasSpr\SpTipDOper\uSpOperTipD.pas' {OperTipDForm},
+  uSpWorkDoc in 'Modules\MatasSpr\SpTipDOper\uSpWorkDoc.pas' {DocWorkoperForm},
+  uSpMatOtvHistory in 'Modules\MatasSpr\SpMatOtv\uSpMatOtvHistory.pas' {SpMatOtvHistoryForm},
+  uNormIzn in 'Modules\MatasSpr\SpNormIzn\uNormIzn.pas' {NormIznForm},
+  uAddTMC in 'Modules\MatasSpr\SpNormIzn\uAddTMC.pas' {NomnForm},
+  uAddNormIzn in 'Modules\MatasSpr\SpNormIzn\uAddNormIzn.pas' {AddGrpIznosForm};
+
+end.

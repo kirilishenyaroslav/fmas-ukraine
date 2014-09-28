@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TfrxReport Name="" Version="3.15" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="2047" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" PrintOptions.ShowDialog="False" ReportOptions.CreateDate="39658,4197063079" ReportOptions.Description.Text="" ReportOptions.LastChange="39688,574463831" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end." PropData="044C65667403B00103546F7003400108446174617365747301010C3400000020446174615365743D22667278444244617461736574312220446174615365744E616D653D2266727844424461746173657431220000095661726961626C657301010C22000000204E616D653D224461746542222056616C75653D222730312E30372E32303038272200010C22000000204E616D653D224461746545222056616C75653D222733312E30372E32303038272200010C3D000000204E616D653D224F52475F4E414D45222056616C75653D2227C4EEEDE5F6FCEAE8E920EDE0F6B3EEEDE0EBFCEDE8E920F3EDB3E2E5F0F1E8F2E5F2272200010C26000000204E616D653D224F52475F53484F52545F4E414D45222056616C75653D2227C4EEEDCDD3272200010C27000000204E616D653D224F52475F4B4F445F4F4B504F222056616C75653D2227303230373038303327220000055374796C650100">
+  <TfrxReportPage Name="Page1" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="0" PaperWidth="210" PaperHeight="297" PaperSize="9" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxReportTitle Name="ReportTitle1" Height="34,01577" Left="0" Top="18,89765" Width="718,1107"/>
+    <TfrxMasterData Name="MasterData1" Height="26,45671" Left="0" Top="362,83488" Width="718,1107" ColumnWidth="0" ColumnGap="0" DataSet="frxDBDataset1" DataSetName="frxDBDataset1" RowCount="0" Stretched="True">
+      <TfrxMemoView Name="Memo15" Left="75,5906" Top="0" Width="52,91342" Height="26,45671" Frame.Typ="15" HAlign="haCenter" Memo.Text="[frxDBDataset1.&#34;DB_SM_KOD&#34;]"/>
+      <TfrxMemoView Name="Memo16" Left="128,50402" Top="0" Width="52,91342" Height="26,45671" Frame.Typ="15" HAlign="haCenter" Memo.Text="[frxDBDataset1.&#34;DB_RZ_KOD&#34;]"/>
+      <TfrxMemoView Name="Memo17" Left="181,41744" Top="0" Width="52,91342" Height="26,45671" Frame.Typ="15" HAlign="haCenter" Memo.Text="[frxDBDataset1.&#34;DB_ST_KOD&#34;]"/>
+      <TfrxMemoView Name="Memo18" Left="234,33086" Top="0" Width="60,47248" Height="26,45671" Frame.Typ="15" HAlign="haCenter" Memo.Text="[frxDBDataset1.&#34;DB_KEKV_KOD&#34;]"/>
+      <TfrxMemoView Name="Memo23" Left="612,28386" Top="0" Width="102,04731" Height="26,45671" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%4.4f" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" Memo.Text=" [frxDBDataset1.&#34;SUMMA&#34;]"/>
+      <TfrxMemoView Name="Memo27" Left="0" Top="0" Width="75,5906" Height="26,45671" Frame.Typ="15" HAlign="haCenter" Memo.Text="[frxDBDataset1.&#34;KR_SCH_NUMBER&#34;]"/>
+      <TfrxMemoView Name="Memo21" Left="491,3389" Top="0" Width="41,57483" Height="26,45671" Frame.Typ="15" HAlign="haCenter" Memo.Text="[frxDBDataset1.&#34;SHORT_NAME&#34;]"/>
+      <TfrxMemoView Name="Memo22" Left="532,91373" Top="0" Width="79,37013" Height="26,45671" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.2f" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" HideZeros="True" Memo.Text="[frxDBDataset1.&#34;KOL_MAT&#34;]"/>
+      <TfrxMemoView Name="Memo44" Left="294,80334" Top="0" Width="196,53556" Height="26,45671" Frame.Typ="15" Memo.Text="[frxDBDataset1.&#34;NAME&#34;]&#13;&#10;[frxDBDataset1.&#34;NOMN&#34; #dhh:mm:ss]"/>
+    </TfrxMasterData>
+    <TfrxPageFooter Name="PageFooter1" Height="22,67718" Left="0" Top="657,63822" Width="718,1107">
+      <TfrxMemoView Name="Memo1" Left="642,419312533333" Top="0" Width="75,5906" Height="18,89765" HAlign="haRight" Memo.Text="[Page#]"/>
+    </TfrxPageFooter>
+    <TfrxGroupHeader Name="GroupHeader1" Height="18,89765" Left="0" Top="154,96073" Width="718,1107" Condition="frxDBDataset1.&#34;ID_GROUP_4&#34;">
+      <TfrxMemoView Name="Memo2" Left="0" Top="0" Width="714,33117" Height="18,89765" Frame.Typ="15" Memo.Text="[frxDBDataset1.&#34;NAME_GROUP4&#34;]"/>
+    </TfrxGroupHeader>
+    <TfrxGroupHeader Name="GroupHeader2" Height="18,89765" Left="0" Top="196,53556" Width="718,1107" Condition="frxDBDataset1.&#34;ID_GROUP_3&#34;">
+      <TfrxMemoView Name="Memo3" Left="37,7953" Top="0" Width="676,53587" Height="18,89765" Frame.Typ="15" Memo.Text="[frxDBDataset1.&#34;NAME_GROUP3&#34;]"/>
+      <TfrxMemoView Name="Memo38" Left="0" Top="0" Width="37,7953" Height="18,89765" Frame.Typ="15" Memo.Text=""/>
+    </TfrxGroupHeader>
+    <TfrxGroupHeader Name="GroupHeader3" Height="18,89765" Left="0" Top="238,11039" Width="718,1107" Condition="frxDBDataset1.&#34;ID_GROUP_2&#34;">
+      <TfrxMemoView Name="Memo4" Left="79,37013" Top="0" Width="634,96104" Height="18,89765" Frame.Typ="15" Memo.Text="[frxDBDataset1.&#34;NAME_GROUP2&#34;]"/>
+      <TfrxMemoView Name="Memo39" Left="0" Top="0" Width="79,37013" Height="18,89765" Frame.Typ="15" Memo.Text=""/>
+    </TfrxGroupHeader>
+    <TfrxGroupHeader Name="GroupHeader4" Height="18,89765" Left="0" Top="279,68522" Width="718,1107" Condition="frxDBDataset1.&#34;ID_GROUP_1&#34;">
+      <TfrxMemoView Name="Memo5" Left="117,16543" Top="0" Width="597,16574" Height="18,89765" Frame.Typ="15" Memo.Text="[frxDBDataset1.&#34;NAME_GROUP1&#34;]"/>
+      <TfrxMemoView Name="Memo40" Left="0" Top="0" Width="117,16543" Height="18,89765" Frame.Typ="15" Memo.Text=""/>
+    </TfrxGroupHeader>
+    <TfrxHeader Name="Header2" Height="18,89765" Left="0" Top="321,26005" Width="718,1107">
+      <TfrxMemoView Name="Memo6" Left="75,5906" Top="0" Width="52,91342" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="Бюджет"/>
+      <TfrxMemoView Name="Memo7" Left="128,50402" Top="0" Width="52,91342" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="Розділ"/>
+      <TfrxMemoView Name="Memo8" Left="181,41744" Top="0" Width="52,91342" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="Стаття"/>
+      <TfrxMemoView Name="Memo9" Left="234,33086" Top="0" Width="60,47248" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="КЕКВ"/>
+      <TfrxMemoView Name="Memo14" Left="612,28386" Top="0" Width="102,04731" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="Сума"/>
+      <TfrxMemoView Name="Memo26" Left="0" Top="0" Width="75,5906" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="0" Frame.Typ="15" HAlign="haCenter" Memo.Text="Кор.рахунок" ParentFont="False"/>
+      <TfrxMemoView Name="Memo11" Left="294,80334" Top="0" Width="196,53556" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="Назва, номенклатурний номер"/>
+      <TfrxMemoView Name="Memo20" Left="491,3389" Top="0" Width="41,57483" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="Од.вим."/>
+      <TfrxMemoView Name="Memo25" Left="532,91373" Top="0" Width="79,37013" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="Кількість"/>
+    </TfrxHeader>
+    <TfrxGroupFooter Name="GroupFooter1" Height="18,89765" Left="0" Top="411,96877" Width="718,1107">
+      <TfrxMemoView Name="Memo10" Left="612,28386" Top="0" Width="102,04731" Height="18,89765" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%4.4f" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" Memo.Text="[SUM(&#60;frxDBDataset1.&#34;SUMMA&#34;&#62;,MasterData1)]"/>
+      <TfrxMemoView Name="Memo19" Left="532,91373" Top="0" Width="79,37013" Height="18,89765" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.2f" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" Memo.Text="[SUM(&#60;frxDBDataset1.&#34;KOL_MAT&#34;&#62;)]"/>
+      <TfrxMemoView Name="Memo28" Left="0" Top="0" Width="532,91373" Height="18,89765" Frame.Typ="15" Memo.Text="Всього по [frxDBDataset1.&#34;NAME_GROUP1&#34;]"/>
+    </TfrxGroupFooter>
+    <TfrxGroupFooter Name="GroupFooter2" Height="18,89765" Left="0" Top="453,5436" Width="718,1107">
+      <TfrxMemoView Name="Memo29" Left="612,28386" Top="0" Width="102,04731" Height="18,89765" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%4.4f" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" Memo.Text="[SUM(&#60;frxDBDataset1.&#34;SUMMA&#34;&#62;,MasterData1)]"/>
+      <TfrxMemoView Name="Memo31" Left="0" Top="0" Width="532,91373" Height="18,89765" Frame.Typ="15" Memo.Text="Всього по [frxDBDataset1.&#34;NAME_GROUP2&#34;]"/>
+      <TfrxMemoView Name="Memo30" Left="532,91373" Top="0" Width="79,37013" Height="18,89765" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.2f" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" Memo.Text="[SUM(&#60;frxDBDataset1.&#34;KOL_MAT&#34;&#62;,MasterData1)]"/>
+    </TfrxGroupFooter>
+    <TfrxGroupFooter Name="GroupFooter3" Height="18,89765" Left="0" Top="495,11843" Width="718,1107">
+      <TfrxMemoView Name="Memo32" Left="612,28386" Top="0" Width="102,04731" Height="18,89765" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%4.4f" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" Memo.Text="[SUM(&#60;frxDBDataset1.&#34;SUMMA&#34;&#62;,MasterData1)]"/>
+      <TfrxMemoView Name="Memo33" Left="532,91373" Top="0" Width="79,37013" Height="18,89765" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.2f" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" Memo.Text="[SUM(&#60;frxDBDataset1.&#34;KOL_MAT&#34;&#62;,MasterData1)]"/>
+      <TfrxMemoView Name="Memo34" Left="0" Top="0" Width="532,91373" Height="18,89765" Frame.Typ="15" Memo.Text="Всього по [frxDBDataset1.&#34;NAME_GROUP3&#34;]"/>
+    </TfrxGroupFooter>
+    <TfrxGroupFooter Name="GroupFooter4" Height="18,89765" Left="0" Top="536,69326" Width="718,1107">
+      <TfrxMemoView Name="Memo35" Left="612,28386" Top="0" Width="102,04731" Height="18,89765" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%4.4f" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" Memo.Text="[SUM(&#60;frxDBDataset1.&#34;SUMMA&#34;&#62;,MasterData1)]"/>
+      <TfrxMemoView Name="Memo36" Left="532,91373" Top="0" Width="79,37013" Height="18,89765" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.2f" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" Memo.Text="[SUM(&#60;frxDBDataset1.&#34;KOL_MAT&#34;&#62;,MasterData1)]"/>
+      <TfrxMemoView Name="Memo37" Left="0" Top="0" Width="532,91373" Height="18,89765" Frame.Typ="15" Memo.Text="Всього по [frxDBDataset1.&#34;NAME_GROUP4&#34;]"/>
+    </TfrxGroupFooter>
+    <TfrxGroupHeader Name="GroupHeader5" Height="18,89765" Left="0" Top="113,3859" Width="718,1107" Condition="frxDBDataset1.&#34;DB_SCH_TITLE&#34;" Stretched="True">
+      <TfrxMemoView Name="Memo24" Left="0" Top="0" Width="714,33117" Height="18,89765" Frame.Typ="15" Memo.Text="[frxDBDataset1.&#34;DB_SCH_NUMBER&#34;]  [frxDBDataset1.&#34;DB_SCH_TITLE&#34;]"/>
+    </TfrxGroupHeader>
+    <TfrxGroupFooter Name="GroupFooter5" Height="18,89765" Left="0" Top="578,26809" Width="718,1107">
+      <TfrxMemoView Name="Memo41" Left="0" Top="0" Width="532,91373" Height="18,89765" Frame.Typ="15" Memo.Text="Всього по рахунку [frxDBDataset1.&#34;DB_SCH_NUMBER&#34;]"/>
+      <TfrxMemoView Name="Memo12" Left="532,91373" Top="0" Width="79,37013" Height="18,89765" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.2f" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" Memo.Text="[SUM(&#60;frxDBDataset1.&#34;KOL_MAT&#34;&#62;,MasterData1)]"/>
+      <TfrxMemoView Name="Memo13" Left="612,28386" Top="0" Width="102,04731" Height="18,89765" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%4.4f" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" Memo.Text="[SUM(&#60;frxDBDataset1.&#34;SUMMA&#34;&#62;,MasterData1)]"/>
+    </TfrxGroupFooter>
+  </TfrxReportPage>
+</TfrxReport>

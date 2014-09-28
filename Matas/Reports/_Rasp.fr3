@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TfrxReport Name="" Version="3.15" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="2047" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" ReportOptions.CreateDate="40459,5772860532" ReportOptions.Description.Text="" ReportOptions.LastChange="40459,5820818866" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end." PropData="044C656674027803546F70020808446174617365747301010C3400000020446174615365743D22667278444244617461736574312220446174615365744E616D653D2266727844424461746173657431220000095661726961626C657301010C3D000000204E616D653D224F52475F4E414D45222056616C75653D2227C4EEEDE5F6FCEAE8E920EDE0F6B3EEEDE0EBFCEDE8E920F3EDB3E2E5F0F1E8F2E5F2272200010C27000000204E616D653D224F52475F4B4F445F4F4B504F222056616C75653D22273032303730383033272200010C23000000204E616D653D22504552494F44222056616C75653D222730312E30392E3230313027220000055374796C650100">
+  <TfrxReportPage Name="Page1" PaperWidth="209,973333333333" PaperHeight="296,926" PaperSize="9" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxPageHeader Name="PageHeader1" Height="120,94496" Left="0" Top="18,89765" Width="718,009912533334">
+      <TfrxMemoView Name="Memo1" Left="0" Top="0" Width="718,1107" Height="18,89765" HAlign="haCenter" Memo.Text="ÄÎÍÅÖÊÈÉ ÍÀÖÈÎÍÀËÜÍÛÉ ÓÍÈÂÅÐÑÈÒÅÒ"/>
+      <TfrxMemoView Name="Memo2" Left="0" Top="45,35436" Width="725,66976" Height="52,91342" Font.Charset="1" Font.Color="0" Font.Height="-19" Font.Name="Arial" Font.Style="1" HAlign="haCenter" Memo.Text="ÐÀÑÏÎÐßÆÅÍÈÅ " ParentFont="False"/>
+      <TfrxMemoView Name="Memo3" Left="79,37013" Top="86,92919" Width="650,07916" Height="18,89765" Memo.Text="_________________       ã. Äîíåöê                                         ¹ ________________"/>
+    </TfrxPageHeader>
+    <TfrxGroupHeader Name="GroupHeader1" Height="68,03154" Left="0" Top="200,31509" Width="718,009912533334" Condition="frxDBDataset1.&#34;SFIO&#34;" StartNewPage="True">
+      <TfrxMemoView Name="Memo4" Left="491,3389" Top="0" Width="222,99227" Height="18,89765" Memo.Text="Ìàòåðèàëüíî îòâåòñòâåííîìó ëèöó "/>
+      <TfrxMemoView Name="Memo5" Left="0" Top="22,67718" Width="718,1107" Height="18,89765" HAlign="haRight" Memo.Text="[frxDBDataset1.&#34;NAME_DEPARTMENT&#34;]"/>
+      <TfrxMemoView Name="Memo6" Left="0" Top="49,13389" Width="718,1107" Height="18,89765" HAlign="haRight" Memo.Text="[frxDBDataset1.&#34;SFIO&#34;]"/>
+    </TfrxGroupHeader>
+  </TfrxReportPage>
+</TfrxReport>

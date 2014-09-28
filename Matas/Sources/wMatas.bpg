@@ -1,0 +1,93 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = SpUnitMeas.bpl SpNom.bpl MatasInvKart.bpl Matas.exe MatasByutjet.bpl \
+  MatasAnalize.bpl MatasAnalizeTMC.bpl MatasDoc.bpl MatasDragMet.bpl \
+  MatasFilter.bpl MatasInventKart.bpl MatasIstFin.bpl MatasLib.bpl MatasMain.bpl \
+  MatasMBook.bpl MatasMna.bpl MatasMO.bpl MatasOborot.bpl MatasOst.bpl \
+  MatasPereoc.bpl MatasRep.bpl MatasSpr.bpl MatasTools.bpl MatasWHKart.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+Matas.exe: MainProg\Matas.dpr
+  $(DCC)
+
+SpNom.bpl: SpNom\SpNom.dpk
+  $(DCC)
+
+MatasInvKart.bpl: InvKart\MatasInvKart.dpk
+  $(DCC)
+
+SpUnitMeas.bpl: SpUnitMeas\SpUnitMeas.dpk
+  $(DCC)
+
+MatasByutjet.bpl: MatasByutjet.dpk
+  $(DCC)
+
+MatasAnalize.bpl: MatasAnalize.dpk
+  $(DCC)
+
+MatasAnalizeTMC.bpl: MatasAnalizeTMC.dpk
+  $(DCC)
+
+MatasDoc.bpl: MatasDoc.dpk
+  $(DCC)
+
+MatasDragMet.bpl: MatasDragMet.dpk
+  $(DCC)
+
+MatasFilter.bpl: MatasFilter.dpk
+  $(DCC)
+
+MatasInventKart.bpl: MatasInventKart.dpk
+  $(DCC)
+
+MatasIstFin.bpl: MatasIstFin.dpk
+  $(DCC)
+
+MatasLib.bpl: MatasLib.dpk
+  $(DCC)
+
+MatasMain.bpl: MatasMain.dpk
+  $(DCC)
+
+MatasMBook.bpl: MatasMBook.dpk
+  $(DCC)
+
+MatasMna.bpl: MatasMna.dpk
+  $(DCC)
+
+MatasMO.bpl: MatasMO.dpk
+  $(DCC)
+
+MatasOborot.bpl: MatasOborot.dpk
+  $(DCC)
+
+MatasOst.bpl: MatasOst.dpk
+  $(DCC)
+
+MatasPereoc.bpl: MatasPereoc.dpk
+  $(DCC)
+
+MatasRep.bpl: MatasRep.dpk
+  $(DCC)
+
+MatasSpr.bpl: MatasSpr.dpk
+  $(DCC)
+
+MatasTools.bpl: MatasTools.dpk
+  $(DCC)
+
+MatasWHKart.bpl: MatasWHKart.dpk
+  $(DCC)
+
+

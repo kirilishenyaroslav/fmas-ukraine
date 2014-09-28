@@ -1,0 +1,53 @@
+package MatasMO;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  FIBPlus7,
+  vcldb,
+  dbrtl,
+  visualdbclx,
+  visualclx,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  dxBarD7,
+  vcljpg,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxGridVCLD7,
+  FR7,
+  fs7,
+  frxDB7,
+  frx7,
+  MatasLib,
+  MatasSpr;
+
+contains
+  UMatasMO in 'Modules\MatasMO\UMatasMO.pas' {fmMatasMO},
+  uParamsMO in 'Modules\MatasMO\uParamsMO.pas' {ParamsForm};
+
+end.

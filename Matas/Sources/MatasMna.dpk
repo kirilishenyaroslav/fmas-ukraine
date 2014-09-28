@@ -1,0 +1,62 @@
+ package MatasMna;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  FIBPlus7,
+  vcldb,
+  dbrtl,
+  visualdbclx,
+  visualclx,
+  vcljpg,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxExtEditorsVCLD7,
+  cxGridVCLD7,
+  rxctl7,
+  MatasLib,
+  MatasSpr,
+  fs7,
+  frxDB7,
+  frx7,
+  frxe7;
+
+contains
+  uMatasMnaMain in 'Modules\MatasMna\uMatasMnaMain.pas' {MnaKartMainForm},
+  uMnaDragMetWork in 'Modules\MatasMna\uMnaDragMetWork.pas' {MnaDragMetWorkForm},
+  uMnaWorkForm in 'Modules\MatasMna\uMnaWorkForm.pas' {MnaWorkFrom},
+  uMnaPrintForm in 'Modules\MatasMna\uMnaPrintForm.pas' {MnaPrintForm},
+  uMnaWorkOst in 'Modules\MatasMna\uMnaWorkOst.pas' {MnaWorkOstForm},
+  uMnaPereocForm in 'Modules\MatasMna\uMnaPereocForm.pas' {MnaPereocForm},
+  uMnaFilter in 'Modules\MatasMna\uMnaFilter.pas' {MnaFilterForm},
+  uMnaNumWork in 'Modules\MatasMna\uMnaNumWork.pas' {NumWork},
+  uMnaNumAdd in 'Modules\MatasMna\uMnaNumAdd.pas' {NumAddForm},
+  uMnaHistory in 'Modules\MatasMna\uMnaHistory.pas' {HistoryForm};
+
+end.

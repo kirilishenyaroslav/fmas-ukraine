@@ -1,0 +1,93 @@
+package MatasInvKart;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  FR7,
+  tee,
+  vcljpg,
+  bdertl,
+  vcldb,
+  designide,
+  vclactnband,
+  vclx,
+  VclSmp,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxExtEditorsVCLD7,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  cxCommonEditingVCLD7,
+  cxTreeListVCLD7,
+  rxctl7,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  Globals,
+  Kerneldpk,
+  rxdb7,
+  dxBarD7,
+  MatasLib,
+  fs7,
+  frxDB7,
+  frx7,
+  MatasSpr,
+  frxe7;
+
+contains
+  AddInvKartForm in 'InvKart\AddInvKartForm.pas' {fmInvKartAdd},
+  ClassInvKart in 'InvKart\ClassInvKart.pas',
+  MainInvKartForm in 'InvKart\MainInvKartForm.pas' {fmMainIvKartForm},
+  uAddMetall in 'InvKart\uAddMetall.pas' {fmAddDragMetall},
+  uAddNorma in 'InvKart\uAddNorma.pas' {fmAddNorma},
+  uNormIznos in 'InvKart\uNormIznos.pas' {fmNormIznos},
+  uAddNew_Object in 'InvKart\uAddNew_Object.pas' {fmAddNewObject},
+  uOperacii in 'InvKart\uOperacii.pas' {fmOperacion},
+  uAddProv in 'InvKart\uAddProv.pas' {fmAddProv},
+  uFind in 'InvKart\uFind.pas' {fmFind},
+  uChecked in 'InvKart\uChecked.pas' {fmChacked},
+  uWaite in 'InvKart\uWaite.pas' {fmWaite},
+  uCreateVed in 'InvKart\uCreateVed.pas' {fmCreateVedomost},
+  uAmort_selection in 'InvKart\uAmort_selection.pas' {fmAmSelect},
+  uInvPrinting in 'InvKart\uInvPrinting.pas' {fmPrinting},
+  uShowAmVed in 'InvKart\uShowAmVed.pas' {fmShowAmVedomost},
+  uPrintAllDoc in 'InvKart\uPrintAllDoc.pas' {fmPrintDoc},
+  uChangeInfoPereoc in 'InvKart\uChangeInfoPereoc.pas' {fmChPereocenka},
+  uSelectOst in 'InvKart\uSelectOst.pas' {fmWievOst},
+  uCheBalPrice in 'InvKart\uCheBalPrice.pas' {fmCheBalPrice},
+  uPereocenka in 'InvKart\uPereocenka.pas' {fmPereocenka},
+  uLookingHistory in 'InvKart\uLookingHistory.pas' {fmLookingHistory},
+  WorldLookingKKart in 'InvKart\WorldLookingKKart.pas' {fmWorldLooking},
+  uShowAllVedPereoc in 'InvKart\uShowAllVedPereoc.pas' {fmPereocVed},
+  uSelectShablon in 'InvKart\uSelectShablon.pas' {fmSelectShablon},
+  AddGroupForm in 'invkart\AddGroupForm.pas' {fmInvAddPapka},
+  uKapRem in 'InvKart\uKapRem.pas' {KapRemForm};
+
+end.

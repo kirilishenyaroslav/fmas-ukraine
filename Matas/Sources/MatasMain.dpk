@@ -1,0 +1,84 @@
+package MatasMain;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  FIBPlus7,
+  vcldb,
+  visualdbclx,
+  visualclx,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  FR7,
+  tee,
+  bdertl,
+  designide,
+  vclactnband,
+  vclx,
+  VclSmp,
+  dclOfficeXP,
+  fs7,
+  frxDB7,
+  frx7,
+  frxe7,
+  MatasSpr,
+  MatasLib,
+  cxExtEditorsVCLD7,
+  fqb70,
+  fsDB7,
+  rxctl7,
+  cxCommonEditingVCLD7,
+  cxTreeListVCLD7,
+  adortl,
+  Globals;
+
+contains
+  uViewOstCur in 'Modules\MatasMain\uViewOstCur.pas' {OstCurForm},
+  uEditOstBase in 'Modules\MatasMain\uEditOstBase.pas' {EditOstBaseForm},
+  uOborotByMOForm in 'Modules\MatasMain\uOborotByMOForm.pas' {OborotByMoForm},
+  uViewOstBase in 'Modules\MatasMain\uViewOstBase.pas' {OstBaseForm},
+  uPrnForm in 'Modules\MatasMain\uPrnForm.pas' {PrintForm},
+  uPrnOstatki in 'Modules\MatasMain\uPrnOstatki.pas' {fmOstPrint},
+  uPrnOstM14 in 'Modules\MatasMain\uPrnOstM14.pas' {fmOstM14Print},
+  uViewOstFilter in 'Modules\MatasMain\uViewOstFilter.pas' {OstFilterForm},
+  uViewOstMnaKart in 'Modules\MatasMain\uViewOstMnaKart.pas' {OstMnaKartForm},
+  uViewOstIstfin in 'Modules\MatasMain\uViewOstIstfin.pas' {OstIstfinForm},
+  uViewOstIstfinFilter in 'Modules\MatasMain\uViewOstIstfinFilter.pas' {OstIstFinFilterForm},
+  uViewOstInvKart in 'Modules\MatasMain\uViewOstInvKart.pas' {OstInvKartForm},
+  uViewBegOst in 'Modules\MatasMain\uViewBegOst.pas' {BegOstForm},
+  uEditBegOst in 'Modules\MatasMain\uEditBegOst.pas' {EditBegOstForm},
+  uPrintIstfin in 'Modules\MatasMain\uPrintIstfin.pas' {PrintFormIstfin},
+  uViewBSOKart in 'Modules\MatasMain\uViewBSOKart.pas' {BsoForm},
+  uViewOstBaseIstfin in 'Modules\MatasMain\uViewOstBaseIstfin.pas' {OstBaseIstfinForm};
+
+end.

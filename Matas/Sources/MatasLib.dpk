@@ -1,0 +1,79 @@
+package MatasLib;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  FIBPlus7,
+  vcldb,
+  dbrtl,
+  visualdbclx,
+  visualclx,
+  CommonSp,
+  vcljpg,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxExtEditorsVCLD7,
+  tee,
+  bdertl,
+  designide,
+  vclactnband,
+  vclx,
+  VclSmp,
+  AccMgmtBpl,
+  Globals,
+  dxBarD7,
+  dxComnD7,
+  dclOfficeXP,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  cxCommonEditingVCLD7,
+  cxTreeListVCLD7,
+  FR7;
+
+contains
+  uResources in 'Modules\MatasLib\uResources.pas',
+  uPackageManager in 'Modules\MatasLib\uPackageManager.pas',
+  uMatasUtils in 'Modules\MatasLib\uMatasUtils.pas',
+  uSplash in 'Modules\MatasLib\uSplash.pas' {SplashForm},
+  uShablonDoc in 'Modules\MatasLib\uShablonDoc.pas' {fmPrintShablonDoc},
+  uMatasVars in 'Modules\MatasLib\uMatasVars.pas',
+  uMatasGetSumma in 'Modules\MatasLib\uMatasGetSumma.pas' {MatasGetSummaForm},
+  uMatasPrintForm in 'Modules\MatasLib\uMatasPrintForm.pas' {MatasPrintForm},
+  uWaitWindow in 'Modules\MatasLib\uWaitWindow.pas' {WaitForm},
+  uZProc in 'Modules\MatasLib\uZProc.pas',
+  dmMain in 'Modules\MatasLib\dmMain.pas' {dmMatas: TDataModule},
+  uShowFields in 'Modules\MatasLib\uShowFields.pas' {fmShowFields},
+  uMatasExport in 'Modules\MatasLib\uMatasExport.pas' {fmExport},
+  uMatasFilter in 'Modules\MatasLib\uMatasFilter.pas',
+  uMatasFilterParam in 'Modules\MatasLib\uMatasFilterParam.pas' {FilterParamForm},
+  uMatasFilterGroupNomn in 'Modules\MatasLib\uMatasFilterGroupNomn.pas' {FilterGroupNomnForm};
+
+end.
+
+

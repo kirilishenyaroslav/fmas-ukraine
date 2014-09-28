@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TfrxReport Name="" Version="3.15" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="2047" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" ReportOptions.CreateDate="40771,6399909491" ReportOptions.Description.Text="" ReportOptions.LastChange="40771,6575576852" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end." PropData="044C65667403F80003546F7003C0000844617461736574730100095661726961626C65730100055374796C650100">
+  <TfrxReportPage Name="Page1" Orientation="poLandscape" PaperWidth="297" PaperHeight="210" PaperSize="9" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxReportTitle Name="ReportTitle1" Height="238,11039" Left="0" Top="18,89765" Width="1046,92981">
+      <TfrxMemoView Name="Memo1" Left="0" Top="18,89765" Width="113,3859" Height="188,9765" Frame.Typ="15" HAlign="haCenter" Memo.Text="Показники" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo2" Left="113,3859" Top="18,89765" Width="49,13389" Height="188,9765" Frame.Typ="15" HAlign="haCenter" Memo.Text="КЕКВ" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo3" Left="162,51979" Top="18,89765" Width="90,70872" Height="79,37013" Frame.Typ="15" HAlign="haCenter" Memo.Text="Надійшло&#13;&#10; коштів" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo4" Left="162,51979" Top="98,26778" Width="45,35436" Height="109,60637" Frame.Typ="15" HAlign="haCenter" Memo.Text="загаль-&#13;&#10;ний&#13;&#10;фонд" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo5" Left="207,87415" Top="98,26778" Width="45,35436" Height="109,60637" Frame.Typ="15" HAlign="haCenter" Memo.Text="спеці-&#13;&#10;альний&#13;&#10;фонд" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo6" Left="253,22851" Top="18,89765" Width="90,70872" Height="79,37013" Frame.Typ="15" HAlign="haCenter" Memo.Text="Касові&#13;&#10;видатки" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo7" Left="253,22851" Top="98,26778" Width="45,35436" Height="109,60637" Frame.Typ="15" HAlign="haCenter" Memo.Text="загаль-&#13;&#10;ний&#13;&#10;фонд" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo8" Left="298,58287" Top="98,26778" Width="45,35436" Height="109,60637" Frame.Typ="15" HAlign="haCenter" Memo.Text="спеці-&#13;&#10;альний&#13;&#10;фонд" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo9" Left="343,93723" Top="18,89765" Width="578,26809" Height="79,37013" Frame.Typ="15" HAlign="haCenter" Memo.Text="Збільшено необоротні активи:" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo10" Left="343,93723" Top="98,26778" Width="306,14193" Height="86,92919" Frame.Typ="15" HAlign="haCenter" Memo.Text="основні засоби" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo11" Left="343,93723" Top="185,19697" Width="34,01574803" Height="22,67718" Frame.Typ="15" HAlign="haCenter" Memo.Text="101" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo12" Left="377,953" Top="185,19697" Width="34,01574803" Height="22,67718" Frame.Typ="15" HAlign="haCenter" Memo.Text="102" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo13" Left="411,96877" Top="185,19697" Width="34,01574803" Height="22,67718" Frame.Typ="15" HAlign="haCenter" Memo.Text="103" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo14" Left="445,98454" Top="185,19697" Width="34,01574803" Height="22,67718" Frame.Typ="15" HAlign="haCenter" Memo.Text="104" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo15" Left="480,00031" Top="185,19697" Width="34,01574803" Height="22,67718" Frame.Typ="15" HAlign="haCenter" Memo.Text="105" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo16" Left="888,18955" Top="185,19697" Width="34,01574803" Height="22,67718" Frame.Typ="15" HAlign="haCenter" Memo.Text="143" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo17" Left="786,14224" Top="185,19697" Width="34,01574803" Height="22,67718" Frame.Typ="15" HAlign="haCenter" Memo.Text="122" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo18" Left="514,01608" Top="185,19697" Width="34,01574803" Height="22,67718" Frame.Typ="15" HAlign="haCenter" Memo.Text="106" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo19" Left="548,03185" Top="185,19697" Width="34,01574803" Height="22,67718" Frame.Typ="15" HAlign="haCenter" Memo.Text="107" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo20" Left="582,04762" Top="185,19697" Width="34,01574803" Height="22,67718" Frame.Typ="15" HAlign="haCenter" Memo.Text="108" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo21" Left="616,06339" Top="185,19697" Width="34,01574803" Height="22,67718" Frame.Typ="15" HAlign="haCenter" Memo.Text="109" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo22" Left="752,12647" Top="185,19697" Width="34,01574803" Height="22,67718" Frame.Typ="15" HAlign="haCenter" Memo.Text="121" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo23" Left="650,07916" Top="185,19697" Width="34,01574803" Height="22,67718" Frame.Typ="15" HAlign="haCenter" Memo.Text="112" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo24" Left="684,09493" Top="185,19697" Width="34,01574803" Height="22,67718" Frame.Typ="15" HAlign="haCenter" Memo.Text="113" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo25" Left="718,1107" Top="185,19697" Width="34,01574803" Height="22,67718" Frame.Typ="15" HAlign="haCenter" Memo.Text="114" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo26" Left="820,15801" Top="185,19697" Width="34,01574803" Height="22,67718" Frame.Typ="15" HAlign="haCenter" Memo.Text="141" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo27" Left="854,17378" Top="185,19697" Width="34,01574803" Height="22,67718" Frame.Typ="15" HAlign="haCenter" Memo.Text="142" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo28" Left="956,22109" Top="18,89765" Width="90,70872" Height="79,37013" Frame.Typ="15" HAlign="haCenter" Memo.Text="Залишок&#13;&#10;коштів на&#13;&#10;кінець&#13;&#10;звітнього&#13;&#10;періоду" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo29" Left="956,22109" Top="98,26778" Width="45,35436" Height="109,60637" Frame.Typ="15" HAlign="haCenter" Memo.Text="загаль-&#13;&#10;ний&#13;&#10;фонд" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo30" Left="1001,57545" Top="98,26778" Width="45,35436" Height="109,60637" Frame.Typ="15" HAlign="haCenter" Memo.Text="спеці-&#13;&#10;альний&#13;&#10;фонд" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo31" Left="922,20532" Top="18,89765" Width="34,01574803" Height="188,9765" Frame.Typ="15" HAlign="haCenter" Memo.Text="Інші" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo32" Left="650,07916" Top="98,26778" Width="102,04731" Height="86,92919" Frame.Typ="15" HAlign="haCenter" Memo.Text="інші&#13;&#10;необоротні&#13;&#10;матеріальні&#13;&#10;активи" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo33" Left="752,12647" Top="98,26778" Width="68,03154" Height="86,92919" Frame.Typ="15" HAlign="haCenter" Memo.Text="немате-&#13;&#10;ріальні&#13;&#10;активи" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo34" Left="820,15801" Top="98,26778" Width="102,04731" Height="86,92919" Frame.Typ="15" HAlign="haCenter" Memo.Text="незавершене капітальне будівництво" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo35" Left="0" Top="207,87415" Width="113,3859" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="1" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo36" Left="113,3859" Top="207,87415" Width="49,13389" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="2" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo37" Left="162,51979" Top="207,87415" Width="45,35436" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="3" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo38" Left="207,87415" Top="207,87415" Width="45,35436" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="4" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo39" Left="253,22851" Top="207,87415" Width="45,35436" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="5" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo40" Left="298,58287" Top="207,87415" Width="45,35436" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="6" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo41" Left="1001,57545" Top="207,87415" Width="45,35436" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="26" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo42" Left="956,22109" Top="207,87415" Width="45,35436" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="25" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo43" Left="343,93723" Top="207,87415" Width="34,01577" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="7" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo44" Left="377,953" Top="207,87415" Width="34,01577" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="8" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo45" Left="411,96877" Top="207,87415" Width="34,01577" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="9" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo46" Left="445,98454" Top="207,87415" Width="34,01577" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="10" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo47" Left="480,00031" Top="207,87415" Width="34,01577" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="11" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo48" Left="514,01608" Top="207,87415" Width="34,01577" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="12" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo49" Left="548,03185" Top="207,87415" Width="34,01577" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="13" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo50" Left="582,04762" Top="207,87415" Width="34,01577" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="14" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo51" Left="616,06339" Top="207,87415" Width="34,01577" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="15" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo52" Left="650,07916" Top="207,87415" Width="34,01577" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="16" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo53" Left="684,09493" Top="207,87415" Width="34,01577" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="17" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo54" Left="718,1107" Top="207,87415" Width="34,01577" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="18" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo55" Left="752,12647" Top="207,87415" Width="34,01577" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="19" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo56" Left="786,14224" Top="207,87415" Width="34,01577" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="20" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo57" Left="820,15801" Top="207,87415" Width="34,01577" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="21" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo58" Left="854,17378" Top="207,87415" Width="34,01577" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="22" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo59" Left="888,18955" Top="207,87415" Width="34,01577" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="23" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo60" Left="922,20532" Top="207,87415" Width="34,01577" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="24" VAlign="vaCenter"/>
+    </TfrxReportTitle>
+  </TfrxReportPage>
+</TfrxReport>

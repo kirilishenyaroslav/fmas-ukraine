@@ -1,0 +1,54 @@
+package MatasTools;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  vcldb,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  MatasLib,
+  MatasSpr,
+  KernelDPK;
+
+contains
+  uSchSaldo in 'Modules\MatasTools\uSchSaldo.pas' {SchSaldoForm},
+  uSchManager in 'Modules\MatasTools\uSchManager.pas' {SchManagerForm},
+  fmTools in 'Modules\MatasTools\fmTools.pas' {frmTools},
+  uSchSaldoAdd in 'Modules\MatasTools\uSchSaldoAdd.pas' {SchSaldoAdd},
+  uSchSaldoPrint in 'Modules\MatasTools\uSchSaldoPrint.pas' {SchSaldoPrintForm},
+  uSchInvMna in 'Modules\MatasTools\uSchInvMna.pas' {InvMnaForm};
+
+end.
