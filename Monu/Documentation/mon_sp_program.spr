@@ -1,0 +1,15 @@
+[Main]
+FormStyle = 1
+Caption = Довідник програм
+CaptionEdit = програму
+TableName = MON_SP_PROGRAM
+Key_Field = ID_PROGRAM
+Parent_Field = LINKTO
+Fields = CODE;NAME_PROGRAM
+Fields_Caption = Код програми;Назва програми
+Fields_Width = 10;90
+SearchField = code
+AddProc = MON_SP_PROGRAM_INS
+DelProc = MON_SP_PROGRAM_DEL
+UpdProc = MON_SP_PROGRAM_UPD
+SelProc = MON_SP_PROGRAM

@@ -1,0 +1,15 @@
+[Main]
+FormStyle = 1
+Caption = Довідник відомчої приналежністі
+CaptionEdit = відомчу приналежність
+TableName = MON_SP_KVK
+Key_Field = ID_KVK
+Parent_Field = LINKTO
+Fields = num_kvk;name_kvk
+Fields_Caption = Код;Назва
+Fields_Width = 30;70
+SearchField = num_kvk
+AddProc = MON_SP_KVK_INS
+DelProc = MON_SP_KVK_DEL
+UpdProc = MON_SP_KVK_UPD
+SelProc = MON_SP_KVK

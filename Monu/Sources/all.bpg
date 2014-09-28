@@ -1,0 +1,55 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = LoginPack.bpl Monu.exe MonuLoader.bpl MonuImport.bpl \
+  MonuViewReport.bpl MonuDesignColum.bpl MonuForm.bpl MonuReport1.bpl \
+  MonuReportAccepted.bpl MonuVewReportSV.bpl notImport.bpl Organizations.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+LoginPack.bpl: LoginPack\LoginPack.dpk
+  $(DCC)
+
+Monu.exe: Main\Monu.dpr
+  $(DCC)
+
+MonuLoader.bpl: MonuLoader\MonuLoader.dpk
+  $(DCC)
+
+MonuImport.bpl: MonuImport\MonuImport.dpk
+  $(DCC)
+
+MonuViewReport.bpl: MonuViewReport\MonuViewReport.dpk
+  $(DCC)
+
+MonuDesignColum.bpl: MonuDesignColum\MonuDesignColum.dpk
+  $(DCC)
+
+MonuForm.bpl: MonuForm\MonuForm.dpk
+  $(DCC)
+
+MonuReport1.bpl: MonuReport1\MonuReport1.dpk
+  $(DCC)
+
+MonuReportAccepted.bpl: MonuReportAccepted\MonuReportAccepted.dpk
+  $(DCC)
+
+MonuVewReportSV.bpl: MonuVewReportSV\MonuVewReportSV.dpk
+  $(DCC)
+
+notImport.bpl: NotImported\notImport.dpk
+  $(DCC)
+
+Organizations.bpl: Organizations\Organizations.dpk
+  $(DCC)
+
+

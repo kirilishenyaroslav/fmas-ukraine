@@ -1,0 +1,14 @@
+[Main]
+FormStyle = 1
+Caption = Довідник типів організацій
+CaptionEdit = тип
+TableName = MON_SP_TYPE_ORG
+Key_Field = ID_TYPE_ORG
+Fields = NAME_TYPE_ORG
+Fields_Caption = Назва
+Fields_Width = 100
+SearchField = name_type_org
+AddProc = MON_SP_TYPE_ORG_INS
+DelProc = MON_SP_TYPE_ORG_DEL
+UpdProc = MON_SP_TYPE_ORG_UPD
+SelProc = MON_SP_TYPE_ORG

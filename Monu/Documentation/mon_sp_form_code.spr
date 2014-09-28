@@ -1,0 +1,14 @@
+[Main]
+FormStyle = 1
+Caption = Довідник кодів форм
+CaptionEdit = код форми
+TableName = MON_SP_form_code
+Key_Field = ID_form_code
+Fields = NAME_form_code;descr
+Fields_Caption = Назва коду;Опис
+Fields_Width = 20;80
+SearchField = name_form_code
+AddProc = MON_SP_FORM_CODE_INS
+DelProc = MON_SP_FORM_CODE_DEL
+UpdProc = MON_SP_FORM_CODE_UPD
+SelProc = MON_SP_form_code

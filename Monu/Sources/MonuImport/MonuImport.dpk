@@ -1,0 +1,68 @@
+package MonuImport;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxExtEditorsVCLD7,
+  FIBPlus7,
+  aarraypack,
+  Halcyon6D7,
+  Monuloader,
+  cxGridVCLD7,
+  loaddog,
+  adortl,
+  dclOfficeXP,
+  Loader,
+  vcldb,
+  vcljpg,
+  vclx,
+  cxExportVCLD7,
+  visualdbclx,
+  visualclx,
+  designide,
+  vclactnband,
+  cxTreeListVCLD7,
+  cxCommonEditingVCLD7,
+  SysL,
+  AccMgmtBpl,
+  Pwd,
+  MD5,
+  dsnap,
+  ibxpress,
+  Globals;
+
+contains
+  uMonuImport in 'uMonuImport.pas' {frmImport},
+  uMonuImportDbf in 'uMonuImportDbf.pas' {frmImportDbf},
+  uMonuImportXls in 'uMonuImportXls.pas' {frmImportXls};
+
+end.

@@ -1,0 +1,14 @@
+[Main]
+FormStyle = 1
+Caption = Довідник типів форм
+CaptionEdit = тип форми
+TableName = MON_SP_TYPE_FORM
+Key_Field = ID_TYPE_FORM
+Fields = CODE;NAME_TYPE_FORM
+Fields_Caption = Код;Назва типу форми
+Fields_Width = 20;80
+SearchField = name_type_FORM
+AddProc = MON_SP_TYPE_FORM_INS
+DelProc = MON_SP_TYPE_FORM_DEL
+UpdProc = MON_SP_TYPE_FORM_UPD
+SelProc = MON_SP_TYPE_FORM
