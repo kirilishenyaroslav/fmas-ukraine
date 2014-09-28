@@ -1,0 +1,62 @@
+package AsupReportFormaKH;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  FIBPlus7,
+  vcldb,
+  visualdbclx,
+  visualclx,
+  frxDB7,
+  fsDB7,
+  fs7,
+  vclx,
+  tee,
+  frx7,
+  vcljpg,
+  VclSmp,
+  rxctl7,
+  fqb70,
+  bdertl,
+  cxExtEditorsVCLD7,
+  cxDataD7,
+  cxEditorsVCLD7,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  CommonSp,
+  ASUP_LoaderPrintDocs,
+  qFControls,
+  SpLib,
+  frxe7;
+
+contains
+  AsupReportFormaKH_PrintDM in 'AsupReportFormaKH_PrintDM.pas' {DM: TDataModule},
+  AsupReportFormaKH_UnitLoader in 'AsupReportFormaKH_UnitLoader.pas',
+  AsupReportFormaKH_FilterForm in 'AsupReportFormaKH_FilterForm.pas' {FormOptions};
+
+end.

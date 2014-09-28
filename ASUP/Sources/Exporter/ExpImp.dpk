@@ -1,0 +1,61 @@
+{******************************************************************************}
+{                                                                              }
+{                           (c) Klug , 2002-2004                               }
+{                                                                              }
+{******************************************************************************}
+
+{                      Пакет "Конвертирование данных"                          }
+{            Фрейм для конвертирования данных из dbf таблиц в базу InterBase   }
+{                                               ответственный: Тимофеев Антон  }
+package ExpImp;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Фрейм экспорта данных'}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  dbrtl,
+  visualclx,
+  VclSmp,
+  vclx,
+  vcl,
+  cxEditorsVCLD7,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxDataD7,
+  vcljpg,
+  vcldb,
+  Halcyon6D7,
+  designide,
+  vclactnband,
+  FIBPlus7,
+  visualdbclx,
+  rxctl7;
+
+contains
+  DMMain in 'DMMain.pas' {MainDM: TDataModule},
+  U_ExpImpFrame in 'U_ExpImpFrame.pas' {ExpImpFr: TFrame};
+
+end.

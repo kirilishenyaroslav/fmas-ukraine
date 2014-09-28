@@ -1,0 +1,72 @@
+package ExperPage;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION '¬кладка регалий в личной карточке'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  CommonSp,
+  FIBPlus7,
+  vcljpg,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxGridVCLD7,
+  SpLib,
+  vcl,
+  dbrtl,
+  ibxpress,
+  dsnap,
+  vcldb,
+  visualdbclx,
+  visualclx,
+  qFControls,
+  cxExportVCLD7,
+  FR7,
+  tee,
+  bdertl,
+  designide,
+  vclactnband,
+  vclx,
+  VclSmp,
+  cxExtEditorsVCLD7,
+  qFEditForm,
+  UpKernel,
+  AccMgmtBpl,
+  UnivSprav,
+  SP_Staj;
+
+contains
+  uExperPage in 'uExperPage.pas',
+  uExperFrame in 'uExperFrame.pas' {fmPCardExperPage: TFrame},
+  uExperDataModule in 'uExperDataModule.pas' {dmExper: TDataModule},
+  uExperAdd in 'uExperAdd.pas' {ExperForm},
+  uHistExper in 'uHistExper.pas' {fmHistExper},
+  uPersonStajMan in 'uPersonStajMan.pas' {frmPersonStaj},
+  uManCalcStajInfo in 'uManCalcStajInfo.pas' {frmManCalcStajInfo};
+
+end.

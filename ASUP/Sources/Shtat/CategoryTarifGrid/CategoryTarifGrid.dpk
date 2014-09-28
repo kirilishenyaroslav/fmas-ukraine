@@ -1,0 +1,61 @@
+package CategoryTarifGrid;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Справочник разрядов тарифных сеток'}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  FIBPlus7,
+  vcldb,
+  visualdbclx,
+  visualclx,
+  CommonSp,
+  ShowNagScreen,
+  rxdb7,
+  rxctl7,
+  vclx,
+  VclSmp,
+  vcljpg,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxGridVCLD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  cxExportVCLD7,
+  Globals,
+  qFControls,
+  UnivSprav;
+
+contains
+  CatTarifGridMain in 'CatTarifGridMain.pas' {frmCatTarifGrid},
+  CatTarifGridAdd in 'CatTarifGridAdd.pas' {frmCatTarifGridAdd},
+  uMainCatTG in 'uMainCatTG.pas';
+
+end.

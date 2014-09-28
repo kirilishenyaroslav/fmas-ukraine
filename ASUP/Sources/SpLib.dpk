@@ -1,0 +1,77 @@
+
+{****************************************************************************}
+{                            Пакет SpLib                                     }
+{             облегчение работы с Interbase под Delphi 5                     }
+{                        (c) Qizz 2002-2003                                  }
+{       ( Олег Волков при участии Даниила Збуривского, Родиона Миронова )    }
+{               распространяется по личной договоренности                    }
+{****************************************************************************}
+
+package SpLib;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'SpLib - Пакет для работы с Interbase'}
+{$IMPLICITBUILD ON}
+
+requires
+  vcl,
+  vcldb,
+  ibxpress,
+  vclx,
+  rtl,
+  vclactnband,
+  dbrtl,
+  dsnap,
+  VclSmp,
+  vcljpg,
+  FR7,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  qFControls,
+  tee,
+  bdertl,
+  designide,
+  frx7,
+  frxe7;
+
+contains
+  SpComboBox in 'SpLib\SpComboBox.pas',
+  SpFormUnit in 'SpLib\SpFormUnit.pas' {SpForm},
+  CheckEditUnit in 'SpLib\CheckEditUnit.pas',
+  FieldControl in 'SpLib\FieldControl.pas',
+  EditControl in 'SpLib\EditControl.pas',
+  SpCommon in 'SpLib\SpCommon.pas',
+  SpTimeUtils in 'SpLib\SpTimeUtils.pas',
+  SpPrintDataUnit in 'SpLib\SpPrintDataUnit.pas' {PrintQueryForm},
+  uSearchFrame in 'SpLib\uSearchFrame.pas' {fmSearch: TFrame},
+  uSelectForm in 'SpLib\uSelectForm.pas' {SelectForm},
+  ExportReportUnit in 'SpLib\ExportReportUnit.pas' {ExportReportForm},
+  uExportReport3 in 'SpLib\uExportReport3.pas' {fmExportReport3},
+  uExportReport in 'SpLib\uExportReport.pas';
+
+end.

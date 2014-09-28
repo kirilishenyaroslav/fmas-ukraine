@@ -1,0 +1,77 @@
+
+{****************************************************************************}
+{                            Пакет SpLib                                     }
+{             облегчение работы с Interbase под Delphi 5                     }
+{                        (c) Qizz 2002-2003                                  }
+{       ( Олег Волков при участии Даниила Збуривского, Родиона Миронова )    }
+{               распространяется по личной договоренности                    }
+{****************************************************************************}
+
+package SpLib;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'SpLib - Пакет для работы с Interbase'}
+{$IMPLICITBUILD ON}
+
+requires
+  vcl,
+  vcldb,
+  ibxpress,
+  vclx,
+  rtl,
+  vclactnband,
+  dbrtl,
+  dsnap,
+  VclSmp,
+  vcljpg,
+  FR7,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  qFControls,
+  tee,
+  bdertl,
+  designide,
+  frx7,
+  frxe7;
+
+contains
+  SpComboBox in 'SpComboBox.pas',
+  SpFormUnit in 'SpFormUnit.pas' {SpForm},
+  CheckEditUnit in 'CheckEditUnit.pas',
+  FieldControl in 'FieldControl.pas',
+  EditControl in 'EditControl.pas',
+  SpCommon in 'SpCommon.pas',
+  SpTimeUtils in 'SpTimeUtils.pas',
+  SpPrintDataUnit in 'SpPrintDataUnit.pas' {PrintQueryForm},
+  uSearchFrame in 'uSearchFrame.pas' {fmSearch: TFrame},
+  uSelectForm in 'uSelectForm.pas' {SelectForm},
+  ExportReportUnit in 'ExportReportUnit.pas' {ExportReportForm},
+  uExportReport3 in 'uExportReport3.pas' {fmExportReport3},
+  uExportReport in 'uExportReport.pas';
+
+end.

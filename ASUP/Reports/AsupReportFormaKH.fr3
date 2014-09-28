@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TfrxReport Name="" Version="3.15" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="2047" PreviewOptions.Zoom="1" PrintOptions.Printer="За замовчуванням" ReportOptions.CreateDate="38776,750022419" ReportOptions.Description.Text="" ReportOptions.LastChange="38777,0423502546" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end." PropData="044C65667403A80008446174617365747301010C3600000020446174615365743D225265706F727444736574446174612220446174615365744E616D653D225265706F72744473657444617461220000095661726961626C65730100055374796C650100">
+  <TfrxReportPage Name="Page1" PaperWidth="210" PaperHeight="297" PaperSize="9" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxGroupHeader Name="GroupHeader1" Height="916" Left="0" Top="16" Width="718,1107" Condition="ReportDsetData.&#34;FAMILIA&#34;" KeepTogether="True">
+      <TfrxMemoView Name="Memo2" Align="baCenter" Left="199,05535" Top="0" Width="320" Height="20" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" HAlign="haCenter" Memo.Text="ДЕРЖАВНА СТАТИСТИЧНА ЗВІТНІСТЬ" ParentFont="False"/>
+      <TfrxMemoView Name="Memo3" Align="baWidth" Left="1" Top="24" Width="717,1" Height="16" Frame.Typ="15" HAlign="haCenter" Memo.Text="КОДИ" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo4" Left="0" Top="56" Width="56" Height="124" Frame.Typ="15" HAlign="haCenter" Memo.Text="форми доку&#13;&#10;мента за ДКУД"/>
+      <TfrxMemoView Name="Memo5" Left="56" Top="56" Width="76" Height="124" Frame.Typ="15" HAlign="haCenter" Memo.Text="організації, яка складає ідентифікаційний код за ЄДРПОУ"/>
+      <TfrxMemoView Name="Memo6" Left="132" Top="56" Width="68" Height="124" Frame.Typ="15" HAlign="haCenter" Memo.Text="теріторії за КОАТУУ"/>
+      <TfrxMemoView Name="Memo7" Left="252" Top="56" Width="44" Height="124" Frame.Typ="15" HAlign="haCenter" Memo.Text="виду економічної діяль&#13;&#10;ності за КВЕД"/>
+      <TfrxMemoView Name="Memo8" Left="296" Top="56" Width="60" Height="124" Frame.Typ="15" HAlign="haCenter" Memo.Text="форми влас&#13;&#10;ності за КФВ"/>
+      <TfrxMemoView Name="Memo9" Left="356" Top="56" Width="94,1" Height="124" Frame.Typ="15" HAlign="haCenter" Memo.Text="організаційно-&#13;&#10;правової форми господарювання за КОПФГ"/>
+      <TfrxMemoView Name="Memo10" Left="200" Top="56" Width="52" Height="124" Frame.Typ="15" HAlign="haCenter" Memo.Text="галузі за ЗКГНГ"/>
+      <TfrxMemoView Name="Memo11" Left="0" Top="180" Width="56" Height="16" Frame.Typ="9" HAlign="haCenter" Memo.Text="1" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo12" Left="56" Top="180" Width="76" Height="16" Frame.Typ="15" HAlign="haCenter" Memo.Text="2" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo13" Left="132" Top="180" Width="68" Height="16" Frame.Typ="15" HAlign="haCenter" Memo.Text="3" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo14" Left="200" Top="180" Width="52" Height="16" Frame.Typ="15" HAlign="haCenter" Memo.Text="4" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo15" Left="252" Top="180" Width="44" Height="16" Frame.Typ="15" HAlign="haCenter" Memo.Text="5" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo16" Left="296" Top="180" Width="60" Height="16" Frame.Typ="15" HAlign="haCenter" Memo.Text="6" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo17" Left="356" Top="180" Width="94,1" Height="16" Frame.Typ="15" HAlign="haCenter" Memo.Text="7" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo18" Left="450,1" Top="56" Width="72" Height="124" Frame.Typ="15" HAlign="haCenter" Memo.Text="міністерства, іншого централь&#13;&#10;ного органу виконавчої влади за СПОДУ"/>
+      <TfrxMemoView Name="Memo19" Left="522,1" Top="56" Width="76" Height="124" Frame.Typ="15" HAlign="haCenter" Memo.Text="вищої організації - ідентифікаційний код за ЄДРПОУ"/>
+      <TfrxMemoView Name="Memo20" Left="598,1" Top="56" Width="40" Height="124" Frame.Typ="15" HAlign="haCenter" Memo.Text="групи посад"/>
+      <TfrxMemoView Name="Memo21" Left="638,1" Top="56" Width="36" Height="124" Frame.Typ="15" HAlign="haCenter" Memo.Text="виду установи"/>
+      <TfrxMemoView Name="Memo22" Left="674,1" Top="56" Width="44" Height="124" Frame.Typ="15" HAlign="haCenter" Memo.Text="КС"/>
+      <TfrxMemoView Name="Memo23" Left="450,1" Top="180" Width="72" Height="16" Frame.Typ="15" HAlign="haCenter" Memo.Text="8" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo24" Left="522,1" Top="180" Width="76" Height="16" Frame.Typ="15" HAlign="haCenter" Memo.Text="9" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo25" Left="638,1" Top="180" Width="36" Height="16" Frame.Typ="15" HAlign="haCenter" Memo.Text="11" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo26" Left="674,1" Top="180" Width="44" Height="16" Frame.Typ="15" HAlign="haCenter" Memo.Text="12" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo27" Left="598,1" Top="180" Width="40" Height="16" Frame.Typ="15" HAlign="haCenter" Memo.Text="10" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo28" Left="0" Top="40" Width="56" Height="16" Frame.Typ="15" HAlign="haCenter" Memo.Text="" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo29" Left="56" Top="40" Width="76" Height="16" Frame.Typ="15" HAlign="haCenter" Memo.Text="" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo30" Left="132" Top="40" Width="68" Height="16" Frame.Typ="15" HAlign="haCenter" Memo.Text="" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo31" Left="200" Top="40" Width="52" Height="16" Frame.Typ="15" HAlign="haCenter" Memo.Text="" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo32" Left="252" Top="40" Width="44" Height="16" Frame.Typ="15" HAlign="haCenter" Memo.Text="" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo33" Left="296" Top="40" Width="60" Height="16" Frame.Typ="15" HAlign="haCenter" Memo.Text="" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo34" Left="356" Top="40" Width="94,1" Height="16" Frame.Typ="15" HAlign="haCenter" Memo.Text="" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo35" Left="450,1" Top="40" Width="72" Height="16" Frame.Typ="15" HAlign="haCenter" Memo.Text="" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo36" Left="522,1" Top="40" Width="76" Height="16" Frame.Typ="15" HAlign="haCenter" Memo.Text="" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo37" Left="638,1" Top="40" Width="36" Height="16" Frame.Typ="15" HAlign="haCenter" Memo.Text="" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo38" Left="674,1" Top="40" Width="44" Height="16" Frame.Typ="15" HAlign="haCenter" Memo.Text="" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo39" Left="598,1" Top="40" Width="40" Height="16" Frame.Typ="15" HAlign="haCenter" Memo.Text="" VAlign="vaCenter"/>
+      <TfrxLineView Name="Line1" Left="0" Top="196" Width="718,1" Height="0" Frame.Typ="4" Frame.Width="1,5"/>
+      <TfrxLineView Name="Line2" Left="0" Top="24" Width="718,1" Height="0" Frame.Typ="4" Frame.Width="1,5"/>
+      <TfrxLineView Name="Line3" Left="1" Top="24" Width="0" Height="172" Frame.Typ="1" Frame.Width="1,5"/>
+      <TfrxLineView Name="Line4" Left="718,1" Top="24" Width="0" Height="172" Frame.Typ="1" Frame.Width="1,5"/>
+      <TfrxMemoView Name="Memo40" Left="8" Top="232" Width="104" Height="16" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="0" Memo.Text="Кому подається" ParentFont="False"/>
+      <TfrxMemoView Name="Memo41" Left="8" Top="268" Width="328" Height="16" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="0" Memo.Text="Міністерство, інший центральний орган виконавчої влади" ParentFont="False"/>
+      <TfrxMemoView Name="Memo42" Left="8" Top="292" Width="216" Height="16" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="0" Memo.Text="Концерн, асоціація та інші об'єднання" ParentFont="False"/>
+      <TfrxMemoView Name="Memo43" Left="8" Top="316" Width="176" Height="16" Memo.Text="Організація, установа, ВНЗ"/>
+      <TfrxMemoView Name="Memo44" Left="8" Top="340" Width="216" Height="16" Memo.Text="Адреса організації, установи, ВНЗ"/>
+      <TfrxMemoView Name="Memo45" Left="8" Top="364" Width="120" Height="16" Memo.Text="Форма власності"/>
+      <TfrxMemoView Name="Memo46" Left="8" Top="388" Width="296" Height="16" Memo.Text="Організаційно-правова форма господарювання"/>
+      <TfrxMemoView Name="Memo47" Left="8" Top="412" Width="244" Height="16" Memo.Text="Вид економічної діяльності (основний)"/>
+      <TfrxMemoView Name="Memo48" Left="616" Top="224" Width="100" Height="16" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="5" HAlign="haRight" Memo.Text="Форма № КН" ParentFont="False"/>
+      <TfrxMemoView Name="Memo49" Left="580" Top="240" Width="136" Height="48" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="0" HAlign="haRight" Memo.Text="Затверджена наказом&#13;&#10;Держкомстату України&#13;&#10;від 18.12.99 № 205" ParentFont="False"/>
+      <TfrxMemoView Name="Memo50" Left="524" Top="304" Width="112" Height="16" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="1" HAlign="haCenter" Memo.Text="Поштова - річна" ParentFont="False"/>
+      <TfrxMemoView Name="Memo51" Left="472" Top="328" Width="244" Height="72" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="0" Memo.Text="Подають організації, установи, ВНЗ не&#13;&#10;пізніше ніж 5 жовтня:&#13;&#10;1. Органу державної статистики за місцем &#13;&#10;перебування.&#13;&#10;2. Своїй вищепоставленій організації." ParentFont="False"/>
+      <TfrxMemoView Name="Memo52" Left="72" Top="480" Width="80" Height="16" Frame.Typ="15" Frame.Width="1,5" Memo.Text="№ картки"/>
+      <TfrxMemoView Name="Memo53" Left="152" Top="480" Width="80" Height="16" Frame.Typ="15" Memo.Text=""/>
+      <TfrxMemoView Name="Memo54" Left="72" Top="524" Width="80" Height="16" Frame.Typ="15" Frame.Width="1,5" Memo.Text=""/>
+      <TfrxMemoView Name="Memo55" Left="152" Top="524" Width="80" Height="16" Frame.Typ="15" Memo.Text=""/>
+      <TfrxMemoView Name="Memo56" Left="312" Top="480" Width="36" Height="16" Frame.Typ="15" Frame.Width="1,5" Memo.Text=""/>
+      <TfrxMemoView Name="Memo57" Left="348" Top="480" Width="196" Height="16" Frame.Typ="15" Memo.Text="[ReportDsetData.&#34;UCH_STEPEN_DOC&#34;]"/>
+      <TfrxMemoView Name="Memo58" Left="312" Top="496" Width="232" Height="16" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="0" Memo.Text="Серія та номер диплома кандидата наук" ParentFont="False"/>
+      <TfrxMemoView Name="Memo59" Align="baCenter" Left="161,05535" Top="836" Width="396" Height="24" Font.Charset="1" Font.Color="0" Font.Height="-19" Font.Name="Arial" Font.Style="1" HAlign="haCenter" Memo.Text="КАРТКА ОБЛІКУ КАНДИДАТА НАУК" ParentFont="False"/>
+      <TfrxMemoView Name="Memo60" Align="baCenter" Left="253,05535" Top="864" Width="212" Height="16" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="1" HAlign="haCenter" Memo.Text="на [dates]" ParentFont="False"/>
+      <TfrxMemoView Name="Memo61" Align="baCenter" Left="225,05535" Top="888" Width="268" Height="16" HAlign="haCenter" Memo.Text="(надсилається в надрукованому вигляді)"/>
+      <TfrxMemoView Name="Memo129" Left="108" Top="248" Width="312" Height="16" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="0" HAlign="haCenter" Memo.Text="(назва та адреса одержувача)" ParentFont="False"/>
+      <TfrxMemoView Name="Memo130" Left="112" Top="232" Width="308" Height="16" Frame.Typ="8" Memo.Text=""/>
+      <TfrxMemoView Name="Memo131" Left="336" Top="268" Width="84" Height="16" Frame.Typ="8" Memo.Text=""/>
+      <TfrxMemoView Name="Memo132" Left="224" Top="292" Width="196" Height="16" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="4" Frame.Typ="8" Memo.Text="" ParentFont="False"/>
+      <TfrxMemoView Name="Memo133" Left="184" Top="316" Width="236" Height="16" Frame.Typ="8" Memo.Text=""/>
+      <TfrxMemoView Name="Memo134" Left="224" Top="340" Width="196" Height="16" Frame.Typ="8" Memo.Text=""/>
+      <TfrxMemoView Name="Memo135" Left="128" Top="364" Width="292" Height="16" Frame.Typ="8" Memo.Text=""/>
+      <TfrxMemoView Name="Memo136" Left="304" Top="388" Width="116" Height="16" Frame.Typ="8" Memo.Text=""/>
+      <TfrxMemoView Name="Memo137" Left="252" Top="412" Width="168" Height="16" Frame.Typ="8" Memo.Text=""/>
+    </TfrxGroupHeader>
+    <TfrxGroupFooter Name="GroupFooter1" Height="92" Left="0" Top="1636" Width="718,1107">
+      <TfrxMemoView Name="Memo121" Left="0" Top="8" Width="72" Height="16" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" Memo.Text="Примітка:" ParentFont="False"/>
+      <TfrxMemoView Name="Memo122" Left="72" Top="8" Width="272" Height="16" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="0" Memo.Text="Номер картки організації не заповнюють" ParentFont="False"/>
+      <TfrxMemoView Name="Memo123" Left="8" Top="32" Width="208" Height="16" Frame.Typ="8" HAlign="haCenter" Memo.Text="[dates]"/>
+      <TfrxMemoView Name="Memo124" Left="4" Top="60" Width="216" Height="16" Frame.Typ="8" Memo.Text=""/>
+      <TfrxMemoView Name="Memo125" Left="4" Top="72" Width="216" Height="16" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="0" HAlign="haCenter" Memo.Text="(прізвище та № телефону виконавця)" ParentFont="False"/>
+      <TfrxMemoView Name="Memo126" Left="344" Top="44" Width="104" Height="16" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" Memo.Text="Керівник" ParentFont="False"/>
+      <TfrxMemoView Name="Memo127" Left="448" Top="44" Width="248" Height="16" Frame.Typ="8" Memo.Text=""/>
+      <TfrxMemoView Name="Memo128" Left="448" Top="60" Width="248" Height="16" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="0" HAlign="haCenter" Memo.Text="(прізвище, підпис)" ParentFont="False"/>
+    </TfrxGroupFooter>
+    <TfrxMasterData Name="MasterData1" Height="664" Left="0" Top="952" Width="718,1107" ColumnWidth="0" ColumnGap="0" DataSet="ReportDsetData" DataSetName="ReportDsetData" RowCount="0" StartNewPage="True">
+      <TfrxMemoView Name="Memo1" Left="0" Top="0" Width="80" Height="48" Frame.Typ="15" HAlign="haCenter" Memo.Text="№ рядка"/>
+      <TfrxMemoView Name="Memo62" Left="80" Top="0" Width="492" Height="48" Frame.Typ="15" Memo.Text=""/>
+      <TfrxMemoView Name="Memo63" Left="572" Top="0" Width="146,01" Height="48" Frame.Typ="15" HAlign="haCenter" Memo.Text="Коди (заповнюють у державних органах статистики)"/>
+      <TfrxMemoView Name="Memo64" Left="0" Top="48" Width="80" Height="48" Frame.Typ="15" HAlign="haCenter" Memo.Text="1" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo65" Left="80" Top="48" Width="168" Height="24" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="13" Memo.Text="Прізвище, ім'я по батькові" ParentFont="False" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo66" Left="572" Top="48" Width="146,01" Height="48" Frame.Typ="15" HAlign="haCenter" Memo.Text=""/>
+      <TfrxMemoView Name="Memo67" Left="0" Top="96" Width="80" Height="24" Frame.Typ="15" HAlign="haCenter" Memo.Text="2" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo68" Left="80" Top="72" Width="492" Height="24" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" Frame.Typ="15" HAlign="haCenter" Memo.Text="[ReportDsetData.&#34;IMYA_OTCHESTVO&#34;]" ParentFont="False" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo69" Left="572" Top="96" Width="146,01" Height="24" Frame.Typ="15" HAlign="haCenter" Memo.Text=""/>
+      <TfrxMemoView Name="Memo70" Left="80" Top="96" Width="52" Height="24" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="13" Memo.Text="Стать" ParentFont="False" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo71" Left="0" Top="120" Width="80" Height="24" Frame.Typ="15" HAlign="haCenter" Memo.Text="3" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo72" Left="572" Top="120" Width="146,01" Height="24" Frame.Typ="15" HAlign="haCenter" Memo.Text=""/>
+      <TfrxMemoView Name="Memo73" Left="80" Top="120" Width="168" Height="24" Frame.Typ="13" Memo.Text="Дата народження:    число" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo74" Left="0" Top="144" Width="80" Height="24" Frame.Typ="15" HAlign="haCenter" Memo.Text="4" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo75" Left="572" Top="144" Width="146,01" Height="24" Frame.Typ="15" HAlign="haCenter" Memo.Text=""/>
+      <TfrxMemoView Name="Memo76" Left="80" Top="144" Width="144" Height="24" Frame.Typ="13" Memo.Text="Рік видання диплому" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo77" Left="0" Top="168" Width="80" Height="48" Frame.Typ="15" HAlign="haCenter" Memo.Text="5" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo78" Left="572" Top="168" Width="146,01" Height="48" Frame.Typ="15" HAlign="haCenter" Memo.Text=""/>
+      <TfrxMemoView Name="Memo79" Left="80" Top="168" Width="492" Height="24" Frame.Typ="15" Memo.Text="Галузь науки, з якої привоєно ступінь кандидата наук" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo80" Left="0" Top="216" Width="80" Height="52" Frame.Typ="15" HAlign="haCenter" Memo.Text="6" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo81" Left="572" Top="216" Width="146,01" Height="52" Frame.Typ="15" HAlign="haCenter" Memo.Text=""/>
+      <TfrxMemoView Name="Memo82" Left="80" Top="192" Width="492" Height="24" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" Frame.Typ="15" Memo.Text="[ReportDsetData.&#34;UCH_STEPEN&#34;]" ParentFont="False" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo83" Left="80" Top="216" Width="492" Height="28" Frame.Typ="15" Memo.Text="Спеціальність, з якої підготована дисертація на одержання наукового степеня кандидата наук" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo84" Left="80" Top="244" Width="492" Height="24" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" Frame.Typ="15" Memo.Text="[ReportDsetData.&#34;DISCIPLINE&#34;]" ParentFont="False" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo85" Left="0" Top="268" Width="80" Height="84" Frame.Typ="15" HAlign="haCenter" Memo.Text="7" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo86" Left="572" Top="268" Width="146,01" Height="84" Frame.Typ="15" HAlign="haCenter" Memo.Text=""/>
+      <TfrxMemoView Name="Memo87" Left="80" Top="268" Width="492" Height="16" Frame.Typ="15" Memo.Text="Тема кандидатської дисертації" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo88" Left="80" Top="284" Width="492" Height="44" Frame.Typ="15" Memo.Text="" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo89" Left="80" Top="328" Width="492" Height="24" Frame.Typ="15" Memo.Text="" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo90" Left="0" Top="352" Width="80" Height="64" Frame.Typ="15" HAlign="haCenter" Memo.Text="8" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo91" Left="572" Top="352" Width="146,01" Height="64" Frame.Typ="15" HAlign="haCenter" Memo.Text=""/>
+      <TfrxMemoView Name="Memo92" Left="80" Top="352" Width="492" Height="24" Frame.Typ="15" Memo.Text="Обрано академіком, членом-кореспондентом (потрібне підкреслити)" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo93" Left="80" Top="376" Width="104" Height="24" Frame.Typ="13" Memo.Text="Академії наук" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo94" Left="184" Top="400" Width="388" Height="16" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="0" Frame.Typ="8" HAlign="haCenter" Memo.Text="(назва Академії)" ParentFont="False"/>
+      <TfrxMemoView Name="Memo95" Left="0" Top="416" Width="80" Height="24" Frame.Typ="15" HAlign="haCenter" Memo.Text="9" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo96" Left="572" Top="416" Width="146,01" Height="24" Frame.Typ="15" HAlign="haCenter" Memo.Text=""/>
+      <TfrxMemoView Name="Memo97" Left="80" Top="416" Width="104" Height="24" Frame.Typ="13" Memo.Text="Рік обрання" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo98" Left="0" Top="440" Width="80" Height="24" Frame.Typ="15" HAlign="haCenter" Memo.Text="10" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo99" Left="572" Top="440" Width="146,01" Height="24" Frame.Typ="15" HAlign="haCenter" Memo.Text=""/>
+      <TfrxMemoView Name="Memo100" Left="80" Top="440" Width="92" Height="24" Frame.Typ="13" Memo.Text="Вчене звання:" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo101" Left="0" Top="464" Width="80" Height="24" Frame.Typ="15" HAlign="haCenter" Memo.Text="11" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo102" Left="572" Top="440" Width="146,01" Height="24" Frame.Typ="15" HAlign="haCenter" Memo.Text=""/>
+      <TfrxMemoView Name="Memo103" Left="80" Top="464" Width="276" Height="24" Frame.Typ="13" Memo.Text="Рік присвоєння останнього вченого звання" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo104" Left="0" Top="488" Width="80" Height="48" Frame.Typ="15" HAlign="haCenter" Memo.Text="12" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo105" Left="572" Top="488" Width="146,01" Height="48" Frame.Typ="15" HAlign="haCenter" Memo.Text=""/>
+      <TfrxMemoView Name="Memo106" Left="80" Top="488" Width="492" Height="24" Frame.Typ="15" Memo.Text="Посада, яку обіймаєте" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo107" Left="0" Top="536" Width="80" Height="24" Frame.Typ="15" HAlign="haCenter" Memo.Text="13" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo108" Left="572" Top="536" Width="146,01" Height="24" Frame.Typ="15" HAlign="haCenter" Memo.Text=""/>
+      <TfrxMemoView Name="Memo109" Left="80" Top="536" Width="372" Height="24" Frame.Typ="13" Memo.Text="Загальгий стаж наукової та науково-педагогічної діяльності" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo110" Left="0" Top="560" Width="80" Height="48" Frame.Typ="15" HAlign="haCenter" Memo.Text="14" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo111" Left="572" Top="560" Width="146,01" Height="48" Frame.Typ="15" HAlign="haCenter" Memo.Text=""/>
+      <TfrxMemoView Name="Memo112" Left="80" Top="560" Width="492" Height="24" Frame.Typ="15" Memo.Text="Спеціальність за основним напрямком наукової діяльності" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo113" Left="80" Top="584" Width="492" Height="24" Frame.Typ="15" Memo.Text="" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo114" Left="0" Top="608" Width="80" Height="56" Frame.Typ="15" HAlign="haCenter" Memo.Text="15" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo115" Left="572" Top="608" Width="146,01" Height="56" Frame.Typ="15" HAlign="haCenter" Memo.Text=""/>
+      <TfrxMemoView Name="Memo116" Left="80" Top="608" Width="492" Height="24" Frame.Typ="15" Memo.Text="Перелік мов, якими володієте, рівень володіння" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo117" Left="80" Top="632" Width="164" Height="32" Frame.Typ="15" HAlign="haCenter" Memo.Text="читаєте та перекладаєте зі словником" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo118" Left="244" Top="632" Width="164" Height="32" Frame.Typ="15" HAlign="haCenter" Memo.Text="читаєте та розмовляєте" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo119" Left="408" Top="632" Width="164" Height="32" Frame.Typ="15" HAlign="haCenter" Memo.Text="володієте вільно" VAlign="vaCenter"/>
+      <TfrxLineView Name="Line5" Left="644" Top="628" Width="8" Height="16" Frame.Width="1,5" Diagonal="True"/>
+      <TfrxLineView Name="Line6" Left="653,05535" Top="628" Width="-12" Height="16" Frame.Width="1,5" Diagonal="True"/>
+      <TfrxMemoView Name="Memo120" Left="248" Top="120" Width="44" Height="24" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="4" HAlign="haCenter" HideZeros="True" Memo.Text="[ReportDsetData.&#34;BIRTH_DATE_DAY&#34;]" ParentFont="False" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo138" Left="292" Top="120" Width="52" Height="24" HAlign="haCenter" Memo.Text="місяць" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo139" Left="344" Top="120" Width="48" Height="24" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="4" HAlign="haCenter" HideZeros="True" Memo.Text="[ReportDsetData.&#34;BIRTH_DATE_MONTH&#34;]" ParentFont="False" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo140" Left="392" Top="120" Width="24" Height="24" HAlign="haCenter" Memo.Text="рік" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo141" Left="416" Top="120" Width="80" Height="24" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="4" HAlign="haCenter" HideZeros="True" Memo.Text="[ReportDsetData.&#34;BIRTH_DATE_YEAR&#34;]" ParentFont="False" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo142" Left="224" Top="144" Width="348" Height="24" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" Frame.Typ="4" HideZeros="True" Memo.Text="[ReportDsetData.&#34;UCH_STEPEN_DATE&#34;]" ParentFont="False" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo143" Left="184" Top="376" Width="388" Height="24" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" Frame.Typ="8" HAlign="haCenter" Memo.Text="[ReportDsetData.&#34;AKAD&#34;]" ParentFont="False" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo144" Left="184" Top="416" Width="220" Height="24" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" HideZeros="True" Memo.Text="[ReportDsetData.&#34;AKAD_DATE&#34;]" ParentFont="False" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo145" Left="172" Top="440" Width="400" Height="24" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" Frame.Typ="4" Memo.Text="[ReportDsetData.&#34;UCH_ZVANIE&#34;]" ParentFont="False" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo146" Left="356" Top="464" Width="52" Height="24" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" Frame.Typ="12" HideZeros="True" Memo.Text="[ReportDsetData.&#34;UCH_ZVANIE_DATE&#34;]" ParentFont="False" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo147" Left="408" Top="464" Width="164" Height="24" Frame.Typ="14" Memo.Text="р." VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo148" Left="80" Top="512" Width="492" Height="24" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" Frame.Typ="15" Memo.Text="[ReportDsetData.&#34;POST&#34;]" ParentFont="False" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo149" Left="452" Top="536" Width="120" Height="24" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" HideZeros="True" Memo.Text="[ReportDsetData.&#34;STAJ&#34;] років" ParentFont="False" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo150" Left="248" Top="48" Width="324" Height="24" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" Memo.Text="        [ReportDsetData.&#34;FAMILIA&#34;]" ParentFont="False" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo151" Left="132" Top="96" Width="440" Height="24" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" Frame.Typ="14" Memo.Text="[ReportDsetData.&#34;SEX&#34;]" ParentFont="False" VAlign="vaBottom"/>
+    </TfrxMasterData>
+  </TfrxReportPage>
+</TfrxReport>

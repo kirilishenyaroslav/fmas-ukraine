@@ -1,0 +1,43 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = PrintSpPost.bpl ShtatDoc.bpl ShtatReport.bpl ShtatUtils.bpl \
+  ShtatView.bpl SpMinZP.bpl SpPost.bpl SpPostDigits.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+
+PrintSpPost.bpl: PrintSpPost.dpk
+  $(DCC)
+
+ShtatDoc.bpl: ShtatDoc.dpk
+  $(DCC)
+
+ShtatReport.bpl: ShtatReport.dpk
+  $(DCC)
+
+ShtatUtils.bpl: ShtatUtils.dpk
+  $(DCC)
+
+ShtatView.bpl: ShtatView.dpk
+  $(DCC)
+
+SpMinZP.bpl: SpMinZP.dpk
+  $(DCC)
+
+SpPost.bpl: SpPost.dpk
+  $(DCC)
+
+SpPostDigits.bpl: SpPostDigits.dpk
+  $(DCC)
+
+

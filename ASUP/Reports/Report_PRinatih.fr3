@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TfrxReport Name="" Version="3.15" DotMatrixReport="False" EngineOptions.DoublePass="True" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="2047" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" ReportOptions.CreateDate="37970,7973020718" ReportOptions.Description.Text="" ReportOptions.LastChange="38615,6618958912" ScriptLanguage="PascalScript" ScriptText.Text="uses 'Reports/GoodPageBreak.pas';&#13;&#10;&#13;&#10;procedure OnBeforePrint(Sender: TfrxComponent);&#13;&#10;begin&#13;&#10;  pfBeforePrint(Sender);&#13;&#10;end;&#13;&#10;&#13;&#10;procedure OnAfterCalcHeight(Sender: TfrxComponent);&#13;&#10;begin&#13;&#10;  pfCalcHeight(Sender);&#13;&#10;end;&#13;&#10;&#13;&#10;begin&#13;&#10;&#13;&#10;end." PropData="044C65667403E80003546F70024008446174617365747301010C2E00000020446174615365743D224652446174615365742220446174615365744E616D653D22526573756C745175657279220000095661726961626C65730100055374796C650100">
+  <TfrxReportPage Name="Page1" PaperWidth="210" PaperHeight="297" PaperSize="9" LeftMargin="0" RightMargin="0" TopMargin="0" BottomMargin="0" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxMasterData Name="MasterData1" Height="16" Left="0" Top="279,68522" Width="793,7013" OnAfterCalcHeight="OnAfterCalcHeight" OnBeforePrint="OnBeforePrint" Columns="1" ColumnWidth="200" ColumnGap="20" DataSet="FRDataSet" DataSetName="ResultQuery" RowCount="0" Stretched="True">
+      <TfrxMemoView Name="Memo6" Left="36" Top="0" Width="32" Height="16" StretchMode="smMaxHeight" Frame.Typ="15" HAlign="haCenter" Memo.Text="[ResultQuery.&#34;NOMER&#34;]"/>
+      <TfrxMemoView Name="Memo11" Left="68" Top="0" Width="124" Height="16" StretchMode="smMaxHeight" Frame.Typ="15" Memo.Text="[ResultQuery.&#34;FIO_SMALL&#34;]"/>
+      <TfrxMemoView Name="Memo12" Left="240" Top="0" Width="148" Height="16" StretchMode="smMaxHeight" Frame.Typ="15" Memo.Text="[ResultQuery.&#34;NAME_POST&#34;]"/>
+      <TfrxMemoView Name="Memo13" Left="532" Top="0" Width="116" Height="16" StretchMode="smMaxHeight" Frame.Typ="15" Memo.Text="Наказ №[ResultQuery.&#34;NUM_ORDER&#34;]"/>
+      <TfrxMemoView Name="Memo16" Left="442,66666667" Top="0" Width="89,1968503937008" Height="16" StretchMode="smMaxHeight" Frame.Typ="15" HAlign="haCenter" Memo.Text="[ResultQuery.&#34;DATE_BEGIN&#34;]"/>
+      <TfrxMemoView Name="Memo3" Left="388" Top="0" Width="54,0472440944882" Height="16" StretchMode="smMaxHeight" Frame.Typ="15" Memo.Text="[ResultQuery.&#34;OKL_STR&#34;]"/>
+      <TfrxMemoView Name="Memo15" Left="192" Top="0" Width="48" Height="16" StretchMode="smMaxHeight" Frame.Typ="15" HAlign="haCenter" Memo.Text="[ResultQuery.&#34;TN&#34;]"/>
+      <TfrxMemoView Name="Memo18" Left="648" Top="0" Width="96" Height="15,87401575" StretchMode="smMaxHeight" DataField="ADDR" DataSet="FRDataSet" DataSetName="ResultQuery" Frame.Typ="15" Memo.Text="[ResultQuery.&#34;ADDR&#34;]" WordBreak="True"/>
+    </TfrxMasterData>
+    <TfrxReportTitle Name="ReportTitle1" Height="92" Left="0" Top="18,89765" Width="793,7013" OnBeforePrint="OnBeforePrint">
+      <TfrxMemoView Name="Memo1" Left="32" Top="20" Width="740" Height="24" StretchMode="smMaxHeight" Font.Charset="1" Font.Color="0" Font.Height="-19" Font.Name="Arial" Font.Style="0" Memo.Text="Відомість співробітників прийнятих за період з [ResultQuery.&#34;PERIOD_BEG&#34;] по [ResultQuery.&#34;PERIOD_END&#34;]" ParentFont="False"/>
+    </TfrxReportTitle>
+    <TfrxGroupHeader Name="GroupHeader1" Height="20" Left="0" Top="238,11039" Width="793,7013" OnAfterCalcHeight="OnAfterCalcHeight" OnBeforePrint="OnBeforePrint" Condition="&#60;ResultQuery.&#34;DEPARTMENT_NAME&#34;&#62;" Stretched="True">
+      <TfrxMemoView Name="Memo4" Left="36" Top="0" Width="708" Height="20" StretchMode="smMaxHeight" Color="15790320" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" Frame.Typ="15" Memo.Text="&#34;[ResultQuery.&#34;DEPARTMENT_NAME&#34;]&#34;" ParentFont="False"/>
+    </TfrxGroupHeader>
+    <TfrxPageHeader Name="PageHeader1" Height="44" Left="0" Top="132,28355" Width="793,7013">
+      <TfrxMemoView Name="Memo7" Left="36" Top="24" Width="32" Height="20" StretchMode="smMaxHeight" Color="14671839" Frame.Typ="15" HAlign="haCenter" Memo.Text="№"/>
+      <TfrxMemoView Name="Memo8" Left="68" Top="24" Width="124" Height="20" StretchMode="smMaxHeight" Color="14671839" Frame.Typ="15" HAlign="haCenter" Memo.Text="ПІБ"/>
+      <TfrxMemoView Name="Memo9" Left="240" Top="24" Width="148" Height="20" StretchMode="smMaxHeight" Color="14671839" Frame.Typ="15" HAlign="haCenter" Memo.Text="Посада"/>
+      <TfrxMemoView Name="Memo10" Left="532" Top="24" Width="116" Height="20" StretchMode="smMaxHeight" Color="14671839" Frame.Typ="15" HAlign="haCenter" Memo.Text="Підстава"/>
+      <TfrxMemoView Name="Memo14" Left="442,66666667" Top="24" Width="89,33333333" Height="20" StretchMode="smMaxHeight" Color="14671839" Frame.Typ="15" HAlign="haCenter" Memo.Text="Дата прийому"/>
+      <TfrxMemoView Name="Memo2" Left="388" Top="24" Width="54,66666666" Height="20" StretchMode="smMaxHeight" Color="14671839" Frame.Typ="15" HAlign="haCenter" Memo.Text="Тар/Окл"/>
+      <TfrxMemoView Name="Memo5" Left="192" Top="24" Width="48" Height="20" StretchMode="smMaxHeight" Color="14671839" Frame.Typ="15" HAlign="haCenter" Memo.Text="ТН"/>
+      <TfrxMemoView Name="Memo17" Left="624" Top="4" Width="120" Height="16" Memo.Text="Стор. [Page] з [TotalPages]"/>
+      <TfrxMemoView Name="Memo19" Left="648" Top="24,18897638" Width="96" Height="20" StretchMode="smMaxHeight" Color="14671839" Frame.Typ="15" HAlign="haCenter" Memo.Text="Адреса"/>
+    </TfrxPageHeader>
+  </TfrxReportPage>
+</TfrxReport>

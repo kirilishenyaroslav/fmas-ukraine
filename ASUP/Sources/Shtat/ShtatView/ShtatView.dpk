@@ -1,0 +1,57 @@
+package ShtatView;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Просмотр и редактирование штатного расписания'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  CommonSp,
+  qFControls,
+  qFEditForm,
+  rxctl7,
+  Globals,
+  cxCommonEditingVCLD7,
+  cxTreeListVCLD7,
+  SpLib,
+  ShowNagScreen,
+  ShtatUtils,
+  AccMgmtBpl,
+  UpKernel,
+  TuCommon,
+  UpWMFillGrid;
+
+contains
+  uShtatAdd in 'uShtatAdd.pas' {fmShtatAdd},
+  uShtatView in 'uShtatView.pas' {fmShtatView},
+  uShtatData in 'uShtatData.pas' {dmShtatView: TDataModule},
+  uShtatViewMain in 'uShtatViewMain.pas',
+  uShtatConsts in 'uShtatConsts.pas',
+  uShtatTree in 'uShtatTree.pas',
+  uShtatBonusFrame in 'uShtatBonusFrame.pas' {frmShtatBonus: TFrame},
+  uShtatBonus in 'uShtatBonus.pas' {fmShtatBonus},
+  uShtatBonusAdd in 'uShtatBonusAdd.pas' {fmShtatBonusAdd},
+  uShtatPeople in 'uShtatPeople.pas' {fmShtatPeople};
+
+end.

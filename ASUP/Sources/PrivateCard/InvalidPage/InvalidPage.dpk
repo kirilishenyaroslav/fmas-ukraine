@@ -1,0 +1,54 @@
+package InvalidPage;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Вкладка инвалидности в личной карточке'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  CommonSp,
+  FIBPlus7,
+  vcljpg,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxGridVCLD7,
+  UpKernel,
+  SpLib,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7;
+
+contains
+  uInvalidPage in 'uInvalidPage.pas',
+  uInvalidFrame in 'uInvalidFrame.pas' {fmPCardInvalidPage: TFrame},
+  uInvalidDataModule in 'uInvalidDataModule.pas' {dmInvalid: TDataModule},
+  uInvalidAdd in 'uInvalidAdd.pas' {AddInvalidForm},
+  uInvalidHistory in 'uInvalidHistory.pas' {frmInvalidHistory},
+  uInvalidGroup in 'uInvalidGroup.pas' {frmInvalidGroup},
+  uInvalidGroupEdit in 'uInvalidGroupEdit.pas' {frmGroupEdit};
+
+end.

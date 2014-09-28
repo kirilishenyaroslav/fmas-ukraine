@@ -1,0 +1,59 @@
+{*******************************************************************************
+* qFControls                                                                   *
+* Библиотека компонентов для работы с формой редактирования                    *
+* Copyright ©  2005, Олег Г. Волков, Донецкий Национальный Университет         *
+*******************************************************************************}
+
+package qFControls;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'qFControls - пакет компонентов для ввода данных'}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  vclx,
+  VclSmp,
+  rxctl7;
+
+contains
+  uFControl in 'uFControl.pas',
+  uCharControl in 'uCharControl.pas',
+  qFStrings in 'qFStrings.pas',
+  uLabeledFControl in 'uLabeledFControl.pas',
+  qFTools in 'qFTools.pas',
+  uSpravControl in 'uSpravControl.pas',
+  uEnumControl in 'uEnumControl.pas',
+  uDateControl in 'uDateControl.pas',
+  uLogicCheck in 'uLogicCheck.pas',
+  uIntControl in 'uIntControl.pas',
+  uFloatControl in 'uFloatControl.pas',
+  uSimpleCheck in 'uSimpleCheck.pas',
+  uBoolControl in 'uBoolControl.pas',
+  uMemoControl in 'uMemoControl.pas',
+  uInvisControl in 'uInvisControl.pas';
+
+end.

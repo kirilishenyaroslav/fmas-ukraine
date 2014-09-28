@@ -1,0 +1,66 @@
+package ShtatPrint_v2;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Пакет для печати штатного расписания'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  CommonSp,
+  vcl,
+  dbrtl,
+  ibxpress,
+  dsnap,
+  FR7,
+  tee,
+  vcljpg,
+  bdertl,
+  vcldb,
+  designide,
+  vclactnband,
+  vclx,
+  VclSmp,
+  SpLib,
+  frxe7,
+  frx7,
+  fs7,
+  fqb70,
+  qFControls,
+  rxctl7,
+  cxExportVCLD7,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxGridVCLD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  FIBPlus7,
+  frxDB7;
+
+contains
+  uShtat2Report in 'ReportModules\ShtatPrint_v2\uShtat2Report.pas',
+  uShtat2DM in 'ReportModules\ShtatPrint_v2\uShtat2DM.pas' {dmShtat2Report: TDataModule},
+  uShtatPrint2Params in 'ReportModules\ShtatPrint_v2\uShtatPrint2Params.pas' {fmShtatPrint2Params};
+
+end.

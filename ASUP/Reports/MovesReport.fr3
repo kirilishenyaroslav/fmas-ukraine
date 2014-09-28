@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TfrxReport Name="" Version="3.15" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="2047" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" ReportOptions.CreateDate="38594,5022845949" ReportOptions.Description.Text="" ReportOptions.LastChange="38722,5021862269" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end." PropData="044C656674022003546F7003880008446174617365747301010C2800000020446174615365743D224D6F76657344532220446174615365744E616D653D224D6F7665734453220000095661726961626C657301010C25000000204E616D653D22446174655F426567222056616C75653D222730352E30312E32303035272200010C25000000204E616D653D22446174655F456E64222056616C75653D222730352E30312E32303036272200010C28000000204E616D653D224465706172746D656E74222056616C75653D2227CAE5F0B3E2EDE8F6F2E2EE272200010C30000000204E616D653D225349474E5F504F5354222056616C75653D2227C3E5EDE5F0E0EBFCEDE8E920E4E8F0E5EAF2EEF0272200010C25000000204E616D653D225349474E5F46494F222056616C75653D2227CEF0EBEEE220C02ECE2E27220000055374796C650100">
+  <TfrxReportPage Name="Page1" Orientation="poLandscape" PaperWidth="297" PaperHeight="210" PaperSize="9" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxMasterData Name="MasterData1" Height="18,89765" Left="0" Top="192,75603" Width="1046,92981" ColumnWidth="0" ColumnGap="0" DataSet="MovesDS" DataSetName="MovesDS" RowCount="0" Stretched="True">
+      <TfrxMemoView Name="Memo1" Left="22,67718" Top="0" Width="105,82684" Height="18,89765" StretchMode="smMaxHeight" Frame.Typ="15" Memo.Text="[MovesDS.&#34;FIO&#34;]"/>
+      <TfrxMemoView Name="Memo2" Left="0" Top="0" Width="22,67718" Height="18,89765" StretchMode="smMaxHeight" Frame.Typ="15" HAlign="haCenter" Memo.Text="[Line#]"/>
+      <TfrxMemoView Name="Memo3" Left="128,50402" Top="0" Width="124,72449" Height="18,89765" StretchMode="smMaxHeight" Frame.Typ="15" Memo.Text="[MovesDS.&#34;NAME_POST1&#34;]"/>
+      <TfrxMemoView Name="Memo4" Left="253,22851" Top="0" Width="192,75603" Height="18,89765" StretchMode="smMaxHeight" Frame.Typ="15" Memo.Text="[MovesDS.&#34;FULL_DEPT_1&#34;]"/>
+      <TfrxMemoView Name="Memo5" Left="445,98454" Top="0" Width="162,51979" Height="18,89765" StretchMode="smMaxHeight" Frame.Typ="15" Memo.Text="[MovesDS.&#34;NAME_POST2&#34;]"/>
+      <TfrxMemoView Name="Memo6" Left="608,50433" Top="0" Width="200,31509" Height="18,89765" StretchMode="smMaxHeight" Frame.Typ="15" Memo.Text="[MovesDS.&#34;FULL_DEPT_2&#34;]"/>
+      <TfrxMemoView Name="Memo7" Left="808,81942" Top="0" Width="75,5906" Height="18,89765" StretchMode="smMaxHeight" Frame.Typ="15" HAlign="haCenter" Memo.Text="[MovesDS.&#34;DATE_MOVE&#34;]"/>
+      <TfrxMemoView Name="Memo8" Left="884,41002" Top="0" Width="75,5906" Height="18,89765" StretchMode="smMaxHeight" Frame.Typ="15" HAlign="haCenter" HideZeros="True" Memo.Text="[MovesDS.&#34;MOVE_END&#34;]"/>
+      <TfrxMemoView Name="Memo9" Left="960,00062" Top="0" Width="86,92919" Height="18,89765" StretchMode="smMaxHeight" Frame.Typ="15" Memo.Text="Наказ №[&#60;MovesDS.&#34;ORDER_NUMBER&#34;&#62;]"/>
+    </TfrxMasterData>
+    <TfrxPageHeader Name="PageHeader1" Height="18,89765" Left="0" Top="113,3859" Width="1046,92981" Stretched="True">
+      <TfrxMemoView Name="Memo11" Left="0" Top="0" Width="22,67718" Height="18,89765" StretchMode="smMaxHeight" Color="-16777194" Frame.Typ="15" Memo.Text="№" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo12" Left="22,67718" Top="0" Width="105,82684" Height="18,89765" StretchMode="smMaxHeight" Color="-16777194" Frame.Typ="15" HAlign="haCenter" Memo.Text="ПІБ" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo13" Left="128,50402" Top="0" Width="124,72449" Height="18,89765" StretchMode="smMaxHeight" Color="-16777194" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="0" Frame.Typ="15" Memo.Text="Посада до перевода" ParentFont="False" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo14" Left="253,22851" Top="0" Width="192,75603" Height="18,89765" StretchMode="smMaxHeight" Color="-16777194" Frame.Typ="15" HAlign="haCenter" Memo.Text="Дільниця, підрозділ" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo15" Left="445,98454" Top="0" Width="162,51979" Height="18,89765" StretchMode="smMaxHeight" Color="-16777194" Frame.Typ="15" HAlign="haCenter" Memo.Text="Посада після перевода" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo16" Left="608,50433" Top="0" Width="200,31509" Height="18,89765" StretchMode="smMaxHeight" Color="-16777194" Frame.Typ="15" HAlign="haCenter" Memo.Text="Дільниця, підрозділ" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo17" Left="808,81942" Top="0" Width="75,5906" Height="18,89765" StretchMode="smMaxHeight" Color="-16777194" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="15" HAlign="haCenter" Memo.Text="Дата перевода" ParentFont="False" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo18" Left="884,41002" Top="0" Width="75,5906" Height="18,89765" StretchMode="smMaxHeight" Color="-16777194" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="0" Frame.Typ="15" HAlign="haCenter" Memo.Text="Дата кінця тимчасового перевода" ParentFont="False" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo19" Left="960,00062" Top="0" Width="86,92919" Height="18,89765" StretchMode="smMaxHeight" Color="-16777194" Frame.Typ="15" HAlign="haCenter" Memo.Text="Підстава" VAlign="vaCenter"/>
+    </TfrxPageHeader>
+    <TfrxReportTitle Name="ReportTitle1" Height="71,81107" Left="0" Top="18,89765" Width="1046,92981">
+      <TfrxMemoView Name="Memo10" Left="3,77953" Top="0" Width="94,48825" Height="18,89765" StretchMode="smActualHeight" AutoWidth="True" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="1" Memo.Text="Відомість переводів співробітників за період з [Date_Beg] по [Date_End]" ParentFont="False"/>
+      <TfrxMemoView Name="Memo20" Left="3,77953" Top="30,23624" Width="94,48825" Height="18,89765" AutoWidth="True" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" Memo.Text="[Department]" ParentFont="False"/>
+    </TfrxReportTitle>
+    <TfrxReportSummary Name="ReportSummary1" Height="41,57483" Left="0" Top="272,12616" Width="1046,92981">
+      <TfrxMemoView Name="Memo21" Left="3,77953" Top="18,89765" Width="340,1577" Height="18,89765" AutoWidth="True" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" Memo.Text="[Sign_Post]                                                                        [Sign_FIO]" ParentFont="False"/>
+    </TfrxReportSummary>
+  </TfrxReportPage>
+</TfrxReport>

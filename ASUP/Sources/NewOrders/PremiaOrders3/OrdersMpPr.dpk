@@ -1,0 +1,80 @@
+package OrdersMpPr;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  cxCommonEditingVCLD7,
+  cxDataD7,
+  cxEditorsVCLD7,
+  cxGridUtilsVCLD7,
+  cxGridVCLD7,
+  FIBPlus7,
+  AccMgmtBpl,
+  CommonDB,
+  CommonSp,
+  FIBCommonDB,
+  IBXCommonDB,
+  Pwd,
+  qFControls,
+  qFEditForm,
+  ShowNagScreen,
+  ShowProgress,
+  ShtatUtils,
+  vcl,
+  dbrtl,
+  rxctl7,
+  vclx,
+  VclSmp,
+  SpLib,
+  frxe7,
+  frx7,
+  fs7,
+  tee,
+  fqb70,
+  bdertl,
+  vcldb,
+  vcljpg,
+  designide,
+  vclactnband,
+  cxExportVCLD7,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  FR7,
+  dsnap,
+  ibxpress,
+  visualdbclx,
+  visualclx,
+  frxDB7,
+  cxExtEditorsVCLD7;
+
+contains
+  uPremiaOrder2 in 'uPremiaOrder2.pas',
+  dmPremiaOrder2 in 'dmPremiaOrder2.pas' {DM: TDataModule},
+  uPremiaOrderForm2 in 'uPremiaOrderForm2.pas' {fmPremiaOrderList},
+  uPremiaRndForm in 'uPremiaRndForm.pas' {fmRndForm},
+  uPremiaRecalcForm in 'uPremiaRecalcForm.pas' {fmRecalcForm};
+
+end.

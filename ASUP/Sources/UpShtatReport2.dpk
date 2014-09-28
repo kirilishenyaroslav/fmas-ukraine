@@ -1,0 +1,68 @@
+package UpShtatReport2;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Отчет по штатному (2)'}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  vcldb,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  frxDB7,
+  fsDB7,
+  fs7,
+  vclx,
+  tee,
+  fqb70,
+  bdertl,
+  frx7,
+  frxe7,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  rxdb7,
+  rxctl7,
+  VclSmp,
+  qFControls,
+  SpLib,
+  designide,
+  vclactnband,
+  FR7,
+  dsnap,
+  ibxpress,
+  CommonSp;
+
+contains
+  uShtatReport2 in '..\..\UP\Sources\Reports\UpShtatReport2\uShtatReport2.pas',
+  uShtatReport2Params in '..\..\UP\Sources\Reports\UpShtatReport2\uShtatReport2Params.pas' {fmShtatReport2Params};
+
+end.

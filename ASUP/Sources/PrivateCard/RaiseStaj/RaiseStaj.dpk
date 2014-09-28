@@ -1,0 +1,64 @@
+package RaiseStaj;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  cxGridVCLD7,
+  CommonSp,
+  qFEditForm,
+  qFControls,
+  vcl,
+  rtl,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  vcldb,
+  cxExportVCLD7,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  rxctl7,
+  vclx,
+  VclSmp,
+  ShowNagScreen,
+  rxdb7,
+  FR7,
+  ibxpress,
+  SpLib,
+  UnivSprav;
+
+contains
+  StajForm in 'StajForm.pas' {RaiseForm},
+  RaiseStajAdd in 'RaiseStajAdd.pas' {AddRaise},
+  RaiseStajData in 'RaiseStajData.pas' {DM: TDataModule},
+  uMainUnit in 'uMainUnit.pas',
+  RaiseCatStajAdd in 'RaiseCatStajAdd.pas' {frmCatRaiseStajEdit},
+  UPostEdit in 'UPostEdit.pas' {frmPostEdit},
+  RasieStZvStaj in 'RasieStZvStaj.pas' {frmStZvStaj};
+
+end.

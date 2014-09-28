@@ -1,0 +1,207 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = asup.exe Address_Linear.bpl AsupDataCheck.bpl AsupLtdBuffer.bpl \
+  DbfBuffer.bpl ExpImp.bpl AsupHospital.bpl LogInForma.bpl MD5.bpl \
+  AcceptOrder.bpl BonusOrder.bpl BonusRemoveOrder.bpl DismissSovmestOrder.bpl \
+  ExitDekret.bpl AsupHalfTimeOrder.bpl HolHosOrder.bpl HolidayOrder.bpl \
+  HolidayRemoveOrder.bpl HolidaySovmestOrder.bpl MassHolidayOrder.bpl \
+  MassMoveOrder.bpl NewSrOrder.bpl OrderItems.bpl PlanHolidayOrder.bpl \
+  PochasOrder.bpl SpPochasTarif.bpl PremiaOrder.bpl OrdersMpPr.bpl \
+  RenameOrder.bpl SpDismission.bpl SpMovingType.bpl StajBonus.bpl PochasFact.bpl \
+  AdditionalPage.bpl BonusPage.bpl EducationPage.bpl ExperPage.bpl FamilyPage.bpl \
+  FLangPage.bpl HolidayPage.bpl OrdersPage.bpl PochasPage.bpl RaiseStaj.bpl \
+  RegardsPage.bpl Reminder.bpl StajRecalc.bpl UP_BonusPage.bpl \
+  UP_CertificatePage.bpl UP_ManOrdersPage.bpl UP_MovingsPage.bpl \
+  Up_HolidaysFrame.bpl Up_PochasPage.bpl Up_AllHolidaysFrame.bpl SpRaise.bpl \
+  SpRegards.bpl AsupTableCore.bpl MoveOrder.bpl DismissOrder.bpl PrintOrder.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+asup.exe: asup.dpr
+  $(DCC)
+
+Address_Linear.bpl: Address_Linear.dpk
+  $(DCC)
+
+AsupDataCheck.bpl: AsupDataCheck.dpk
+  $(DCC)
+
+AsupLtdBuffer.bpl: AsupLtdBuffer.dpk
+  $(DCC)
+
+DbfBuffer.bpl: DbfBuffer.dpk
+  $(DCC)
+
+ExpImp.bpl: ExpImp.dpk
+  $(DCC)
+
+AsupHospital.bpl: AsupHospital.dpk
+  $(DCC)
+
+LogInForma.bpl: LogInForma.dpk
+  $(DCC)
+
+MD5.bpl: MD5.dpk
+  $(DCC)
+
+AcceptOrder.bpl: AcceptOrder.dpk
+  $(DCC)
+
+BonusOrder.bpl: BonusOrder.dpk
+  $(DCC)
+
+BonusRemoveOrder.bpl: BonusRemoveOrder.dpk
+  $(DCC)
+
+DismissSovmestOrder.bpl: DismissSovmestOrder.dpk
+  $(DCC)
+
+ExitDekret.bpl: ExitDekret.dpk
+  $(DCC)
+
+AsupHalfTimeOrder.bpl: AsupHalfTimeOrder.dpk
+  $(DCC)
+
+HolHosOrder.bpl: HolHosOrder.dpk
+  $(DCC)
+
+HolidayOrder.bpl: HolidayOrder.dpk
+  $(DCC)
+
+HolidayRemoveOrder.bpl: HolidayRemoveOrder.dpk
+  $(DCC)
+
+HolidaySovmestOrder.bpl: HolidaySovmestOrder.dpk
+  $(DCC)
+
+MassHolidayOrder.bpl: MassHolidayOrder.dpk
+  $(DCC)
+
+MassMoveOrder.bpl: MassMoveOrder.dpk
+  $(DCC)
+
+NewSrOrder.bpl: NewSrOrder.dpk
+  $(DCC)
+
+OrderItems.bpl: OrderItems.dpk
+  $(DCC)
+
+PlanHolidayOrder.bpl: PlanHolidayOrder.dpk
+  $(DCC)
+
+PochasOrder.bpl: PochasOrder.dpk
+  $(DCC)
+
+SpPochasTarif.bpl: SpPochasTarif.dpk
+  $(DCC)
+
+PremiaOrder.bpl: PremiaOrder.dpk
+  $(DCC)
+
+OrdersMpPr.bpl: OrdersMpPr.dpk
+  $(DCC)
+
+RenameOrder.bpl: RenameOrder.dpk
+  $(DCC)
+
+SpDismission.bpl: SpDismission.dpk
+  $(DCC)
+
+SpMovingType.bpl: SpMovingType.dpk
+  $(DCC)
+
+StajBonus.bpl: StajBonus.dpk
+  $(DCC)
+
+PochasFact.bpl: PochasFact.dpk
+  $(DCC)
+
+AdditionalPage.bpl: AdditionalPage.dpk
+  $(DCC)
+
+BonusPage.bpl: BonusPage.dpk
+  $(DCC)
+
+EducationPage.bpl: EducationPage.dpk
+  $(DCC)
+
+ExperPage.bpl: ExperPage.dpk
+  $(DCC)
+
+FamilyPage.bpl: FamilyPage.dpk
+  $(DCC)
+
+FLangPage.bpl: FLangPage.dpk
+  $(DCC)
+
+HolidayPage.bpl: HolidayPage.dpk
+  $(DCC)
+
+OrdersPage.bpl: OrdersPage.dpk
+  $(DCC)
+
+PochasPage.bpl: PochasPage.dpk
+  $(DCC)
+
+RaiseStaj.bpl: RaiseStaj.dpk
+  $(DCC)
+
+RegardsPage.bpl: RegardsPage.dpk
+  $(DCC)
+
+Reminder.bpl: Reminder.dpk
+  $(DCC)
+
+StajRecalc.bpl: StajRecalc.dpk
+  $(DCC)
+
+UP_BonusPage.bpl: UP_BonusPage.dpk
+  $(DCC)
+
+UP_CertificatePage.bpl: UP_CertificatePage.dpk
+  $(DCC)
+
+UP_ManOrdersPage.bpl: UP_ManOrdersPage.dpk
+  $(DCC)
+
+UP_MovingsPage.bpl: UP_MovingsPage.dpk
+  $(DCC)
+
+Up_HolidaysFrame.bpl: Up_HolidaysFrame.dpk
+  $(DCC)
+
+Up_PochasPage.bpl: Up_PochasPage.dpk
+  $(DCC)
+
+Up_AllHolidaysFrame.bpl: Up_AllHolidaysFrame.dpk
+  $(DCC)
+
+SpRaise.bpl: SpRaise.dpk
+  $(DCC)
+
+SpRegards.bpl: SpRegards.dpk
+  $(DCC)
+
+AsupTableCore.bpl: AsupTableCore.dpk
+  $(DCC)
+
+MoveOrder.bpl: MoveOrder.dpk
+  $(DCC)
+
+DismissOrder.bpl: DismissOrder.dpk
+  $(DCC)
+
+PrintOrder.bpl: PrintOrder.dpk
+  $(DCC)
+
+

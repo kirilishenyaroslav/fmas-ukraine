@@ -1,0 +1,75 @@
+package SpEdOrg;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Модуль для работы со справочником ВУЗов'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  CommonSp,
+  FIBPlus7,
+  rxdb7,
+  rtl,
+  vcljpg,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxExtEditorsVCLD7,
+  cxGridVCLD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  qFControls,
+  SpLib,
+  qFEditForm,
+  vcl,
+  dbrtl,
+  vclx,
+  ibxpress,
+  dsnap,
+  vcldb,
+  cxExportVCLD7,
+  rxctl7,
+  VclSmp,
+  visualdbclx,
+  visualclx,
+  frxe7,
+  frx7,
+  fs7,
+  tee,
+  fqb70,
+  bdertl,
+  designide,
+  vclactnband,
+  FR7;
+
+contains
+  uSPEdOrg_Main in 'uSPEdOrg_Main.pas',
+  U_SPEducOrg_Add in 'U_SPEducOrg_Add.pas' {Form_SPEducOrg_Add},
+  U_SPEducOrg_AddGr in 'U_SPEducOrg_AddGr.pas' {Form_SPEducOrg_AddGr},
+  U_SPEducOrgDM in 'U_SPEducOrgDM.pas' {DM_SPEducOrg: TDataModule},
+  uSPEdOrgForm in 'uSPEdOrgForm.pas' {SpEdOrgForm};
+
+end.

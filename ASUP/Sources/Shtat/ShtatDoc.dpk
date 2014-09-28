@@ -1,0 +1,60 @@
+package ShtatDoc;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Документы штатного расписания'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  CommonSp,
+  rxctl7,
+  rxdb7,
+  vcljpg,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxGridVCLD7,
+  FIBPlus7,
+  qFControls,
+  qFEditForm,
+  SpLib,
+  ShowNagScreen,
+  Globals,
+  UpKernel;
+
+contains
+  uShtatDocMain in 'ShtatDocuments\uShtatDocMain.pas',
+  uShtatDocView in 'ShtatDocuments\uShtatDocView.pas' {fmShtatDocView},
+  uShtatDocData in 'ShtatDocuments\uShtatDocData.pas' {dmShtatDoc: TDataModule},
+  uShtatDocAdd in 'ShtatDocuments\uShtatDocAdd.pas' {fmShtatDocAdd},
+  uShtatFunds in 'ShtatDocuments\uShtatFunds.pas' {fmShtatSRFund},
+  uShtatDocPlanFundAdd in 'ShtatDocuments\uShtatDocPlanFundAdd.pas' {fmShtatDocPlanFundAdd},
+  uShtatDefaultSmeta in 'ShtatDocuments\uShtatDefaultSmeta.pas' {fmDefaultSmeta},
+  uAddDefaultSmeta in 'ShtatDocuments\uAddDefaultSmeta.pas' {fmAddDefaultSmeta},
+  uSmetaSplit in 'ShtatDocuments\uSmetaSplit.pas' {fmSmetaSplit},
+  uFormNewShtat in 'ShtatDocuments\uFormNewShtat.pas' {fmFormNewShtat},
+  uSRSmetaFilter in 'ShtatDocuments\uSRSmetaFilter.pas' {fmSrSmetaFilter};
+
+end.

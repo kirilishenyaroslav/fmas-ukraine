@@ -1,0 +1,80 @@
+{******************************************************************************}
+{               Автоматизированная система управления персоналом               }
+{                                                                              }
+{               (c) Донецкий национальный университет, 2002-2004               }
+{******************************************************************************}
+
+{                      Пакет "Справочник надбавок 3.2.0"                       }
+{                 Работа со справочником надбавок                              }
+{                                               ответственный: Тимофеев Антон  }
+package SPRaise;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'SPRaise - Пакет для работы со справочником надбавок'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vclx,
+  vcl,
+  vcljpg,
+  vcldb,
+  dbrtl,
+  adortl,
+  bdertl,
+  SpLib,
+  VclSmp,
+  rxctl7,
+  rxdb7,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxExtEditorsVCLD7,
+  cxCommonEditingVCLD7,
+  cxTreeListVCLD7,
+  cxGridVCLD7,
+  FIBPlus7,
+  CommonSp,
+  visualdbclx,
+  visualclx,
+  tee,
+  designide,
+  vclactnband,
+  dsnap,
+  Globals;
+
+contains
+  U_SPRaise_DataModule in 'U_SPRaise_DataModule.pas' {DMSPRaise: TDataModule},
+  U_SP_Raise in 'U_SP_Raise.pas' {SP_Raise},
+  U_SP_Raise_Add in 'U_SP_Raise_Add.pas' {SP_Raise_Add},
+  U_SP_Raise_Del in 'U_SP_Raise_Del.pas' {F_SP_Raise_Del},
+  U_SP_Raise_History in 'U_SP_Raise_History.pas' {F_SP_Raise_Hist},
+  U_SP_Raise_AddType in 'U_SP_Raise_AddType.pas' {SPRaise_AddGr},
+  U_SPRaise_Main in 'U_SPRaise_Main.pas',
+  USpAbsGroup in 'USpAbsGroup.pas' {frmGetSpGroup},
+  USpAbsGroupEdit in 'USpAbsGroupEdit.pas' {frmGetAbsGroupName};
+
+end.

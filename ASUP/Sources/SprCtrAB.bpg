@@ -1,0 +1,43 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = SpDepartment.bpl SpLib.bpl qFControls.bpl qFEditForm.bpl \
+  CommonSp.bpl CommonDB.bpl FIBCommonDB.bpl IBXCommonDB.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+
+SpDepartment.bpl: SpDepartment.dpk
+  $(DCC)
+
+SpLib.bpl: SpLib.dpk
+  $(DCC)
+
+qFControls.bpl: qFControls.dpk
+  $(DCC)
+
+qFEditForm.bpl: qFEditForm.dpk
+  $(DCC)
+
+CommonSp.bpl: CommonSp.dpk
+  $(DCC)
+
+CommonDB.bpl: CommonDB.dpk
+  $(DCC)
+
+FIBCommonDB.bpl: FIBCommonDB.dpk
+  $(DCC)
+
+IBXCommonDB.bpl: IBXCommonDB.dpk
+  $(DCC)
+
+

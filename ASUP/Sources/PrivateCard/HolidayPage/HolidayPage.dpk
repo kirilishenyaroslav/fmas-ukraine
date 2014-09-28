@@ -1,0 +1,53 @@
+package HolidayPage;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  cxDataD7,
+  cxCommonEditingVCLD7,
+  cxEditorsVCLD7,
+  cxExportVCLD7,
+  cxExtEditorsVCLD7,
+  cxGridUtilsVCLD7,
+  cxGridVCLD7,
+  cxLibraryVCLD7,
+  cxTreeListVCLD7,
+  CommonSp,
+  qFEditForm,
+  qFControls,
+  SpLib,
+  ShtatUtils,
+  frxDB7;
+
+contains
+  HolidayDM in 'HolidayDM.pas' {dmHoliday: TDataModule},
+  uHolidayFrame in 'uHolidayFrame.pas' {HolidayFrame: TFrame},
+  uHolidayPage in 'uHolidayPage.pas',
+  uHolidayAdd in 'uHolidayAdd.pas' {HolidayForm},
+  Holiday_Form in 'Holiday_Form.pas' {HolidayAuto},
+  uHolidayForm in 'uHolidayForm.pas',
+  AutoMain in 'AutoMain.pas' {Form1};
+
+end.

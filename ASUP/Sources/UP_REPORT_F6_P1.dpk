@@ -1,0 +1,56 @@
+package UP_REPORT_F6_P1;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  VclSmp,
+  vclx,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  vcldb,
+  frxDB7,
+  fsDB7,
+  fs7,
+  tee,
+  fqb70,
+  bdertl,
+  frx7,
+  frxe7,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  CommonSp;
+
+contains
+  dmUP_Report_F6_P1 in '..\..\UP\Sources\Reports\UP_REPORT_F6_P1\dmUP_Report_F6_P1.pas' {DM: TDataModule},
+  uUP_Report_F6_P1 in '..\..\UP\Sources\Reports\UP_REPORT_F6_P1\uUP_Report_F6_P1.pas' {fmMain};
+
+end.

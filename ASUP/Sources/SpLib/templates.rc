@@ -1,0 +1,9 @@
+AddTemplate RCDATA AddTemplate.pas
+Copyright RCDATA
+BEGIN
+ "(c) Qizz 2002-2003\0",
+ "Пакет SpLib для облегчения доступа к Interbase\0",
+ "Олег Волков при участии Даниила Збуривского и Родиона Миронова\0",
+ "-----\0",
+ "It's sad that, in our blindness, we gather thorns for flowers\0"
+END

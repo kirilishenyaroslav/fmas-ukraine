@@ -1,0 +1,53 @@
+package MassHolidayOrder;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  cxCommonEditingVCLD7,
+  cxDataD7,
+  cxEditorsVCLD7,
+  cxGridUtilsVCLD7,
+  cxGridVCLD7,
+  FIBPlus7,
+  AccMgmtBpl,
+  CommonDB,
+  CommonSp,
+  FIBCommonDB,
+  IBXCommonDB,
+  Pwd,
+  qFControls,
+  qFEditForm,
+  ShowNagScreen,
+  ShowProgress,
+  ShtatUtils;
+
+contains
+  uMassHolidayOrder in 'uMassHolidayOrder.pas',
+  dmMassHolidayOrder in 'dmMassHolidayOrder.pas' {DM: TDataModule},
+  uMassHolidayOrderForm in 'uMassHolidayOrderForm.pas' {fmMassHolidayOrder},
+  uMassHolidayAdd in 'uMassHolidayAdd.pas' {fmMassHolidayAdd};
+
+end.

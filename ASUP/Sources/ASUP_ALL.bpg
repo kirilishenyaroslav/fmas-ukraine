@@ -1,0 +1,281 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+
+PROJECTS = MD5.bpl ShowNagScreen.bpl CommonSp.bpl qFControls.bpl SpLib.bpl \
+  qFEditForm.bpl ShowProgress.bpl CommonDB.bpl IBXCommonDB.bpl FIBCommonDB.bpl \
+  SpDepartment.bpl Pwd.bpl DbfBuffer.bpl ExpImp.bpl OrdersMpPr.bpl SpRegards.bpl \
+  SpRaise.bpl SpPost.bpl ShtatDoc.bpl ShtatUtils.bpl SpPostDigits.bpl SpMinZP.bpl \
+  ShtatView.bpl ShtatReport.bpl PrintSpPost.bpl ShtatMain.exe PCardsList.bpl \
+  AcceptOrder.bpl MoveOrder.bpl SpDismission.bpl DismissOrder.bpl PrintOrder.bpl \
+  PrintOrderEx.exe MainInfo.bpl PrivateCard.bpl MovingsPage.bpl InvalidPage.bpl \
+  PensionPage.bpl RegardsPage.bpl BonusPage.bpl OrdersPage.bpl FLangPage.bpl \
+  EducationPage.bpl AdditionalPage.bpl ExperPage.bpl FamilyPage.bpl \
+  HolidayPage.bpl PochasPage.bpl StajRecalc.bpl Reminder.bpl PochasOrder.bpl \
+  SpPochasTarif.bpl PochasFact.bpl BonusOrder.bpl PremiaOrder.bpl \
+  MassMoveOrder.bpl MovesReport.bpl MassHolidayOrder.bpl SpMovingType.bpl \
+  Address_Linear.bpl HolidayOrder.bpl SPEdOrg.bpl RenameOrder.bpl \
+  BonusRemoveOrder.bpl AsupTableCore.bpl AsupDataCheck.bpl NewSrOrder.bpl \
+  PlanHolidayOrder.bpl HolHosOrder.bpl HolidayRemoveOrder.bpl \
+  HolidaySovmestOrder.bpl BonusSmeta.bpl DismissSovmestOrder.bpl \
+  OrderListModule.bpl AsupFactShtat.bpl ASUP.exe UpdateSystem.exe CryptSystem.exe \
+  AsupReportShtatRasp.bpl AsupLtdBuffer.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+SpLib.bpl: SpLib\SpLib.dpk
+  $(DCC)
+
+SpDepartment.bpl: SpDepartment\SpDepartment.dpk
+  $(DCC)
+
+CommonSp.bpl: CommonSp\CommonSp.dpk
+  $(DCC)
+
+CommonDB.bpl: CommonDB\CommonDB.dpk
+  $(DCC)
+
+IBXCommonDB.bpl: CommonDB\IBXCommonDB\IBXCommonDB.dpk
+  $(DCC)
+
+FIBCommonDB.bpl: CommonDB\FIBCommonDB\FIBCommonDB.dpk
+  $(DCC)
+
+ShowProgress.bpl: ProcessForm\ShowProgress.dpk
+  $(DCC)
+
+DbfBuffer.bpl: Buffer\DbfBuffer.dpk
+  $(DCC)
+
+ShowNagScreen.bpl: ShowNagScreen\ShowNagScreen.dpk
+  $(DCC)
+
+qFControls.bpl: qFControls\qFControls.dpk
+  $(DCC)
+
+qFEditForm.bpl: qFControls\qFEditForm\qFEditForm.dpk
+  $(DCC)
+
+Pwd.bpl: Pwd\Pwd.dpk
+  $(DCC)
+
+SpRegards.bpl: SpRegards\SpRegards.dpk
+  $(DCC)
+
+SpRaise.bpl: SpRaise\SpRaise.dpk
+  $(DCC)
+
+SpPost.bpl: SpPost\SpPost.dpk
+  $(DCC)
+
+ShtatDoc.bpl: Shtat\ShtatDocuments\ShtatDoc.dpk
+  $(DCC)
+
+ShtatView.bpl: Shtat\ShtatView\ShtatView.dpk
+  $(DCC)
+
+UpdateSystem.exe: UpdateSystem\UpdateSystem.dpr
+  $(DCC)
+
+ShtatMain.exe: Shtat\ShtatMain.dpr
+  $(DCC)
+
+ExpImp.bpl: Exporter\ExpImp.dpk
+  $(DCC)
+
+ASUP.exe: ASUP.dpr
+  $(DCC)
+
+CryptSystem.exe: UpdateSystem\CryptSystem\CryptSystem.dpr
+  $(DCC)
+
+ShtatUtils.bpl: Shtat\ShtatUtils\ShtatUtils.dpk
+  $(DCC)
+
+ShtatReport.bpl: Shtat\ShtatReport\ShtatReport.dpk
+  $(DCC)
+
+AcceptOrder.bpl: NewOrders\AcceptOrder\AcceptOrder.dpk
+  $(DCC)
+
+DismissOrder.bpl: NewOrders\DismissOrder\DismissOrder.dpk
+  $(DCC)
+
+MoveOrder.bpl: NewOrders\MoveOrder\MoveOrder.dpk
+  $(DCC)
+
+PrintOrder.bpl: NewOrders\PrintOrder\PrintOrder.dpk
+  $(DCC)
+
+PCardsList.bpl: pcardslist\PCardsList.dpk
+  $(DCC)
+
+PrivateCard.bpl: PrivateCard\PrivateCard.dpk
+  $(DCC)
+
+MainInfo.bpl: PrivateCard\MainInfo\MainInfo.dpk
+  $(DCC)
+
+MovingsPage.bpl: PrivateCard\MovingsPage\MovingsPage.dpk
+  $(DCC)
+
+PochasOrder.bpl: NewOrders\PochasOrder\PochasOrder.dpk
+  $(DCC)
+
+SpPochasTarif.bpl: NewOrders\PochasOrder\SpPochasTarif\SpPochasTarif.dpk
+  $(DCC)
+
+PochasFact.bpl: PochasFact\PochasFact.dpk
+  $(DCC)
+
+PochasFact.bpl: PochasFact\PochasFact.dpk
+  $(DCC)
+
+BonusOrder.bpl: NewOrders\BonusOrder\BonusOrder.dpk
+  $(DCC)
+
+InvalidPage.bpl: PrivateCard\InvalidPage\InvalidPage.dpk
+  $(DCC)
+
+PensionPage.bpl: PrivateCard\PensionPage\PensionPage.dpk
+  $(DCC)
+
+PremiaOrder.bpl: NewOrders\PremiaOrder\PremiaOrder.dpk
+  $(DCC)
+
+MovesReport.bpl: ReportModules\MovesReport\MovesReport.dpk
+  $(DCC)
+
+RegardsPage.bpl: PrivateCard\RegardsPage\RegardsPage.dpk
+  $(DCC)
+
+OrdersPage.bpl: PrivateCard\OrdersPage\OrdersPage.dpk
+  $(DCC)
+
+BonusPage.bpl: PrivateCard\BonusPage\BonusPage.dpk
+  $(DCC)
+
+FLangPage.bpl: PrivateCard\FLangPage\FLangPage.dpk
+  $(DCC)
+
+EducationPage.bpl: PrivateCard\EducationPage\EducationPage.dpk
+  $(DCC)
+
+MassMoveOrder.bpl: NewOrders\MassMoveOrder\MassMoveOrder.dpk
+  $(DCC)
+
+ExperPage.bpl: PrivateCard\ExperPage\ExperPage.dpk
+  $(DCC)
+
+AdditionalPage.bpl: PrivateCard\AdditionalPage\AdditionalPage.dpk
+  $(DCC)
+
+FamilyPage.bpl: PrivateCard\FamilyPage\FamilyPage.dpk
+  $(DCC)
+
+MassHolidayOrder.bpl: NewOrders\MassHolidayOrder\MassHolidayOrder.dpk
+  $(DCC)
+
+MD5.bpl: Md5\MD5.dpk
+  $(DCC)
+
+SpMovingType.bpl: NewOrders\SpMovingType\SpMovingType.dpk
+  $(DCC)
+
+Address_Linear.bpl: Address\Address_Linear.dpk
+  $(DCC)
+
+AsupTableCore.bpl: TableCore\AsupTableCore.dpk
+  $(DCC)
+
+HolidayPage.bpl: PrivateCard\HolidayPage\HolidayPage.dpk
+  $(DCC)
+
+SPEdOrg.bpl: Sp_EducOrg\SPEdOrg.dpk
+  $(DCC)
+
+HolidayOrder.bpl: NewOrders\HolidayOrder\HolidayOrder.dpk
+  $(DCC)
+
+SpDismission.bpl: NewOrders\SpDismission\SpDismission.dpk
+  $(DCC)
+
+HolidayOrder.bpl: NewOrders\HolidayOrder\HolidayOrder.dpk
+  $(DCC)
+
+SpPostDigits.bpl: Shtat\SpPostDigits\SpPostDigits.dpk
+  $(DCC)
+
+PochasPage.bpl: PrivateCard\PochasPage\PochasPage.dpk
+  $(DCC)
+
+SpMinZP.bpl: Shtat\SpMinZP\SpMinZP.dpk
+  $(DCC)
+
+PrintOrderEx.exe: NewOrders\PrintOrder\PrintOrderEx.dpr
+  
+
+RenameOrder.bpl: NewOrders\RenameOrder\RenameOrder.dpk
+  $(DCC)
+
+BonusRemoveOrder.bpl: NewOrders\BonusRemoveOrder\BonusRemoveOrder.dpk
+  $(DCC)
+
+NewSrOrder.bpl: NewOrders\NewSrOrder\NewSrOrder.dpk
+  $(DCC)
+
+AsupDataCheck.bpl: AsupDataCheck\AsupDataCheck.dpk
+  $(DCC)
+
+StajRecalc.bpl: PrivateCard\StajRecalc\StajRecalc.dpk
+  $(DCC)
+
+PrintSpPost.bpl: Shtat\PrintSpPost\PrintSpPost.dpk
+  $(DCC)
+
+PlanHolidayOrder.bpl: NewOrders\PlanHolidayOrder\PlanHolidayOrder.dpk
+  $(DCC)
+
+HolHosOrder.bpl: NewOrders\HolHosOrder\HolHosOrder.dpk
+  $(DCC)
+
+Reminder.bpl: PrivateCard\Reminder\Reminder.dpk
+  $(DCC)
+
+HolidayRemoveOrder.bpl: NewOrders\HolidayRemoveOrder\HolidayRemoveOrder.dpk
+  $(DCC)
+
+HolidaySovmestOrder.bpl: NewOrders\HolidaySovmestOrder\HolidaySovmestOrder.dpk
+  $(DCC)
+
+BonusSmeta.bpl: NewOrders\BonusSmet\BonusSmeta.dpk
+  $(DCC)
+
+DismissSovmestOrder.bpl: NewOrders\DismissSovmestOrder\DismissSovmestOrder.dpk
+  $(DCC)
+
+AsupFactShtat.bpl: ReportModules\Fact_Shtat\AsupFactShtat.dpk
+  $(DCC)
+
+AsupReportShtatRasp.bpl: ReportModules\AsupReportShtatRasp\AsupReportShtatRasp.dpk
+  $(DCC)
+
+OrdersMpPr.bpl: NewOrders\PremiaOrders3\OrdersMpPr.dpk
+  $(DCC)
+
+OrderListModule.bpl: ..\..\UP\Sources\OrderList\OrderListModule.dpk
+  $(DCC)
+
+AsupLtdBuffer.bpl: Buffer\AsupLtdBuffer.dpk
+  $(DCC)
+
+

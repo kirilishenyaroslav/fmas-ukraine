@@ -1,0 +1,68 @@
+package AsupLtdBuffer;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Транзакционная запись в буферные таблицы обмена с бухгалтерией'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  ibxpress,
+  dsnap,
+  Halcyon6D7,
+  visualclx,
+  designide,
+  vclactnband,
+  vclx,
+  SpLib,
+  frxe7,
+  frx7,
+  fs7,
+  tee,
+  fqb70,
+  bdertl,
+  vcldb,
+  vcljpg,
+  qFControls,
+  rxctl7,
+  VclSmp,
+  cxExportVCLD7,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxGridVCLD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  FR7,
+  ShowProgress,
+  ShowNagScreen;
+
+contains
+  uBuffer2 in 'uBuffer2.pas',
+  Buffer in 'Buffer.pas',
+  CRC32 in 'CRC32.pas',
+  uBufferString in 'uBufferString.pas';
+
+end.

@@ -1,0 +1,55 @@
+package ShtatReport;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Печать штатного расписания'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  FIBPlus7,
+  CommonSp,
+  fs7,
+  frxDB7,
+  vcl,
+  rtl,
+  tee,
+  vcljpg,
+  bdertl,
+  dbrtl,
+  vcldb,
+  designide,
+  vclactnband,
+  vclx,
+  VclSmp,
+  frxe7,
+  ShowNagScreen,
+  SpLib,
+  Globals;
+
+contains
+  U_Shtat_Rep065 in 'ShtatReport\U_Shtat_Rep065.pas' {Shtat_Rep},
+  ShtatReportMain in 'ShtatReport\ShtatReportMain.pas',
+  u_raise_config in 'ShtatReport\u_raise_config.pas' {Raise_config};
+
+end.

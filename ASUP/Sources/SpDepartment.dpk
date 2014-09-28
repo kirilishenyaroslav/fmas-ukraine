@@ -1,0 +1,68 @@
+package SpDepartment;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Справочник подразделений'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  dbrtl,
+  FIBPlus7,
+  vcldb,
+  vcl,
+  visualdbclx,
+  visualclx,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  rxdb7,
+  rxctl7,
+  vclx,
+  VclSmp,
+  cxExtEditorsVCLD7,
+  cxCommonEditingVCLD7,
+  cxTreeListVCLD7,
+  qFControls,
+  qFEditForm,
+  FR7,
+  CommonSp,
+  SpLib,
+  frxDB7,
+  AccMgmtBpl;
+
+contains
+  uDepartmentsData in 'SpDepartment\uDepartmentsData.pas' {dmDepartments: TDataModule},
+  uDepartmentsMain in 'SpDepartment\uDepartmentsMain.pas',
+  uDepartmentsTree in 'SpDepartment\uDepartmentsTree.pas' {fmDepartmentsTree: TFrame},
+  uDepartmentsView in 'SpDepartment\uDepartmentsView.pas' {fmDepartmentsView},
+  uDepartmentsAdd in 'SpDepartment\uDepartmentsAdd.pas' {fmDepartmentAdd},
+  uDepartmentsConsts in 'SpDepartment\uDepartmentsConsts.pas',
+  uAddDepProp in 'SpDepartment\uAddDepProp.pas' {fmAddDepProp};
+
+end.

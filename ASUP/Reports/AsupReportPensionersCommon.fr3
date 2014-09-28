@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TfrxReport Name="" Version="3.15" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="2047" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" ReportOptions.CreateDate="38702,3452585995" ReportOptions.Description.Text="" ReportOptions.LastChange="38744,6632193866" ScriptLanguage="PascalScript" ScriptText.Text="var&#13;&#10; CurDate:String;&#13;&#10; DateBeg:String;&#13;&#10; DateEnd:String;&#13;&#10; Firm_Name  :String;&#13;&#10;begin&#13;&#10;&#13;&#10;end." PropData="044C656674024803546F70027008446174617365747301010C2C00000020446174615365743D224652446174615365742220446174615365744E616D653D22465244617461536574220000095661726961626C657301010C24000000204E616D653D2243555244415445222056616C75653D222732372E30312E32303036272200010C25000000204E616D653D22444154455F424547222056616C75653D222730312E30382E32303035272200010C25000000204E616D653D22444154455F454E44222056616C75653D222733312E31322E32303036272200010C1F000000204E616D653D2253756D5F576F726B696E67222056616C75653D222730272200010C21000000204E616D653D2253756D5F4465736D6973736564222056616C75653D222730272200010C3E000000204E616D653D224649524D5F4E414D45222056616C75653D2227C4CECDC5D6DCCAC8C920CDC0D6B2CECDC0CBDCCDC8C920D3CDB2C2C5D0D1C8D2C5D227220000055374796C650100">
+  <TfrxReportPage Name="Page1" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" Orientation="poLandscape" PaperWidth="279,4" PaperHeight="215,9" PaperSize="256" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxReportTitle Name="ReportTitle1" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" Height="98,26778" Left="0" ParentFont="False" Top="18,89765" Width="980,410082">
+      <TfrxMemoView Name="Memo1" Left="3,77953" Top="0" Width="366,61441" Height="34,01577" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" HAlign="haCenter" Memo.Text="[Firm_Name]&#13;&#10;АСУ ВУЗ" ParentFont="False" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo2" Left="755,906" Top="0" Width="222,99227" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" Memo.Text="Поточна дата [CurDate]" ParentFont="False"/>
+      <TfrxMemoView Name="Memo4" Left="264,5671" Top="18,89765" Width="453,5436" Height="64,25201" Font.Charset="1" Font.Color="0" Font.Height="-19" Font.Name="Arial" Font.Style="1" HAlign="haCenter" Memo.Text="Список пенсионерів&#13;&#10;Донецький Національний Університет&#13;&#10;з [Date_Beg] по [Date_End]" ParentFont="False" VAlign="vaCenter"/>
+    </TfrxReportTitle>
+    <TfrxPageFooter Name="PageFooter1" Height="22,67718" Left="0" Top="400,63018" Width="980,410082">
+      <TfrxMemoView Name="Memo5" Left="884,41002" Top="0" Width="94,48825" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" Memo.Text="Сторінка [Page#]" ParentFont="False"/>
+    </TfrxPageFooter>
+    <TfrxPageHeader Name="PageHeader1" Height="102,04731" Left="0" Top="139,84261" Width="980,410082">
+      <TfrxLineView Name="Line1" Left="3,77953" Top="3,77952999999999" Width="975,11874" Height="0" Frame.Typ="4"/>
+      <TfrxLineView Name="Line2" Left="3,77953" Top="102,04731" Width="967,55905512" Height="0" Frame.Typ="4"/>
+      <TfrxMemoView Name="Memo6" Left="33,89765969" Top="7,55905999999999" Width="233,16434074" Height="90,70872" Frame.Typ="15" HAlign="haCenter" Memo.Text="П.І.Б" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo7" Left="3,77953" Top="7,55905999999999" Width="30,11812969" Height="90,70872" Frame.Typ="15" HAlign="haCenter" Memo.Text="№" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo8" Left="267,06218035" Top="7,55905999999999" Width="94,11897535" Height="90,70872" Frame.Typ="15" HAlign="haCenter" Memo.Text="Ідетинфікаійний номер" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo9" Left="361,18133562" Top="7,55905999999999" Width="101,669291338583" Height="90,70872" Frame.Typ="15" HAlign="haCenter" Memo.Text="Дата народження" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo10" Left="462,90809271" Top="7,55905999999999" Width="312,51120604" Height="90,70872" Frame.Typ="15" HAlign="haCenter" Memo.Text="Домашня адреса" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo3" Left="775,41947869" Top="7,55905999999999" Width="101,291338582677" Height="90,70872" Frame.Typ="15" HAlign="haCenter" Memo.Text="Дата прийома (оформлення пенсії)" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo11" Left="876,85096" Top="7,55905999999999" Width="98,26778" Height="90,70872" Frame.Typ="15" HAlign="haCenter" Memo.Text="Дата звілнння" VAlign="vaCenter"/>
+    </TfrxPageHeader>
+    <TfrxMasterData Name="MasterData1" Height="36,46196667" Left="0" Top="302,3624" Width="980,410082" ColumnWidth="0" ColumnGap="0" DataSet="FRDataSet" DataSetName="FRDataSet" RowCount="0" Stretched="True">
+      <TfrxMemoView Name="Memo15" Left="266,83464567" Top="0" Width="94,11023622" Height="34,01577" StretchMode="smMaxHeight" Frame.Typ="15" Memo.Text="[FRDataSet.&#34;TIN_NUM&#34;]"/>
+      <TfrxMemoView Name="Memo13" Left="34,01577" Top="0" Width="233,1968089" Height="34,01577" StretchMode="smMaxHeight" Frame.Typ="15" Memo.Text="[FRDataSet.&#34;FIO_PENTION&#34;]"/>
+      <TfrxMemoView Name="Memo14" Left="3,77953" Top="0" Width="30,23624" Height="34,01577" StretchMode="smMaxHeight" Frame.Typ="14" Memo.Text="[Line#]"/>
+      <TfrxMemoView Name="Memo16" Left="361,32283465" Top="0" Width="101,19403937" Height="34,01577" StretchMode="smMaxHeight" Frame.Typ="15" Memo.Text="[FRDataSet.&#34;DATE_BIRTH&#34;]"/>
+      <TfrxMemoView Name="Memo17" Left="462,61417323" Top="0" Width="312,58790698" Height="34,01577" StretchMode="smMaxHeight" Frame.Typ="15" Memo.Text="[FRDataSet.&#34;ADRES&#34;]"/>
+      <TfrxMemoView Name="Memo12" Left="775,18110236" Top="0" Width="101,65879265" Height="34,01574803" StretchMode="smMaxHeight" Frame.Typ="15" Memo.Text="[FRDataSet.&#34;DATE_START_PENTION&#34;]"/>
+      <TfrxMemoView Name="Memo18" Left="876,85096" Top="0" Width="98,26778" Height="34,01577" StretchMode="smMaxHeight" Frame.Typ="15" Memo.Text="[FRDataSet.&#34;DATE_DISMISSION&#34;]"/>
+    </TfrxMasterData>
+  </TfrxReportPage>
+</TfrxReport>

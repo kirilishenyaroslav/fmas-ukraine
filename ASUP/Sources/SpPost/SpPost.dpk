@@ -1,0 +1,104 @@
+{******************************************************************************}
+{               Автоматизированная система управления персоналом               }
+{                                                                              }
+{               (c) Донецкий национальный университет, 2002-2005               }
+{******************************************************************************}
+
+{                      Пакет "Справочник должностей 1.1.0"                     }
+{                 Работа со справочником должностей                            }
+{                                               ответственный: Тимофеев Антон  }
+package SpPost;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'SPPost - Пакет для работы со справочником должностей'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vclx,
+  vcl,
+  vcljpg,
+  vcldb,
+  dbrtl,
+  adortl,
+  bdertl,
+  ibxpress,
+  SpLib,
+  VclSmp,
+  rxctl7,
+  rxdb7,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxExtEditorsVCLD7,
+  cxCommonEditingVCLD7,
+  cxTreeListVCLD7,
+  cxGridVCLD7,
+  FIBPlus7,
+  CommonSp,
+  visualdbclx,
+  visualclx,
+  tee,
+  designide,
+  vclactnband,
+  dsnap,
+  cxExportVCLD7,
+  dxsbD7,
+  Halcyon6D7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  qFEditForm,
+  qFControls,
+  UpKernel,
+  UnivSprav;
+
+contains
+  U_SPPost_DataModule in 'U_SPPost_DataModule.pas' {DMSPPost: TDataModule},
+  U_SP_Post_AddType in 'U_SP_Post_AddType.pas' {SP_Post_AddType},
+  U_SP_Post_Add in 'U_SP_Post_Add.pas' {SP_Post_Add},
+  U_SPPost in 'U_SPPost.pas' {SP_Post},
+  U_SP_Post_AddTypes in 'U_SP_Post_AddTypes.pas' {SP_Post_AddTypes},
+  U_SP_Post_AddPosts in 'U_SP_Post_AddPosts.pas' {SP_Post_AddPosts},
+  U_SP_Post_AddCat in 'U_SP_Post_AddCat.pas' {SP_post_AddCat},
+  U_SP_Post_ChType in 'U_SP_Post_ChType.pas' {SP_Post_ChType},
+  U_SP_Post_ChPost in 'U_SP_Post_ChPost.pas' {SP_Post_ChPost},
+  U_SP_Cat in 'U_SP_Cat.pas' {SP_Cat},
+  U_SP_TypePost in 'U_SP_TypePost.pas' {SP_TypePost},
+  U_SP_Post_Add_Dates in 'U_SP_Post_Add_Dates.pas' {FDates},
+  U_SPPost_Main in 'u_SpPost_Main.pas',
+  U_SP_Post_Salary_Sum in 'U_Sp_Post_Salary_Sum.pas' {SP_Post_SalSum},
+  U_SP_Post_BS_Add in 'U_SP_Post_BS_Add.pas' {SP_PBS_Add},
+  U_SP_Post_Holliday_Add in 'U_SP_Post_Holliday_Add.pas' {SP_post_holiday_Add},
+  U_Sp_Post_Salary in 'U_Sp_Post_Salary.pas' {SP_Post_salary},
+  uAddJnPostDigit in 'uAddJnPostDigit.pas' {fmAddJnPostDigit},
+  U_Raise_Add in 'U_Raise_Add.pas' {AddRaiseForm},
+  uAddHolidayLong in 'uAddHolidayLong.pas' {fmAddHolidayLong},
+  uHolidayLong in 'uHolidayLong.pas' {SpHolidayLong},
+  uSpPostGroup in 'uSpPostGroup.pas' {fmSpPostGroup},
+  uAddPostGroup in 'uAddPostGroup.pas' {fmAddPostGroup};
+
+end.

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TfrxReport Name="" Version="3.15" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="2047" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" ReportOptions.CreateDate="38762,5166431481" ReportOptions.Description.Text="" ReportOptions.LastChange="39129,4133178819" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end." PropData="044C65667403E80003546F7002300844617461736574730100095661726961626C65730100055374796C650100">
+  <TfrxReportPage Name="Page1" Orientation="poLandscape" PaperWidth="210" PaperHeight="148" PaperSize="11" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxReportTitle Name="ReportTitle1" Height="464,88219" Left="0" Top="18,89765" Width="718,1107">
+      <TfrxMemoView Name="Memo2" Left="151,1812" Top="56,69295" Width="249,44898" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" Memo.Text="начальник відділу (цеху)" ParentFont="False"/>
+      <TfrxMemoView Name="Memo3" Left="404,40971" Top="56,69295" Width="313,70099" Height="18,89765" Frame.Typ="8" Memo.Text=""/>
+      <TfrxMemoView Name="Memo4" Left="404,40971" Top="75,5906" Width="313,70099" Height="18,89765" HAlign="haCenter" Memo.Text="(підпис)"/>
+      <TfrxMemoView Name="Memo1" Left="0" Top="15,11812" Width="718,1107" Height="26,45671" Font.Charset="1" Font.Color="0" Font.Height="-24" Font.Name="Arial" Font.Style="1" HAlign="haCenter" Memo.Text="ЗВІТ ЗАТВЕРДЖУЮ:" ParentFont="False" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo5" Left="0" Top="113,3859" Width="328,81911" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="1" Memo.Text="Звіт про виконання завдання." ParentFont="False"/>
+      <TfrxMemoView Name="Memo6" Left="434,64595" Top="113,3859" Width="283,46475" Height="18,89765" Memo.Text="&#34;____&#34;_________________________ 20___ р."/>
+      <TfrxMemoView Name="Memo7" Left="0" Top="151,1812" Width="396,85065" Height="26,45671" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" Memo.Text="Під час перебування у службовому відрядженні в м." ParentFont="False"/>
+      <TfrxMemoView Name="Memo8" Left="400,63018" Top="154,96073" Width="317,48052" Height="18,89765" Frame.Typ="8" Memo.Text=""/>
+      <TfrxMemoView Name="Memo9" Left="0" Top="196,53556" Width="317,48052" Height="18,89765" Frame.Typ="8" Memo.Text=""/>
+      <TfrxMemoView Name="Memo10" Left="400,63018" Top="196,53556" Width="317,48052" Height="18,89765" Frame.Typ="8" Memo.Text=""/>
+      <TfrxMemoView Name="Memo11" Left="317,48052" Top="196,53556" Width="83,14966" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" HAlign="haCenter" Memo.Text="на" ParentFont="False"/>
+      <TfrxMemoView Name="Memo12" Left="0" Top="241,88992" Width="718,1107" Height="18,89765" Frame.Typ="8" Memo.Text=""/>
+      <TfrxMemoView Name="Memo13" Left="0" Top="287,24428" Width="718,1107" Height="18,89765" Frame.Typ="8" Memo.Text=""/>
+      <TfrxMemoView Name="Memo14" Left="3,77953" Top="336,37817" Width="200,31509" Height="26,45671" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" Memo.Text="мною виконано наступне:" ParentFont="False"/>
+      <TfrxMemoView Name="Memo15" Left="207,87415" Top="340,1577" Width="510,23655" Height="18,89765" Frame.Typ="8" Memo.Text=""/>
+      <TfrxMemoView Name="Memo16" Left="3,77953" Top="400,63018" Width="283,46475" Height="18,89765" Memo.Text="&#34;____&#34;_________________________ 20___ р."/>
+      <TfrxMemoView Name="Memo17" Left="396,85065" Top="396,85065" Width="313,70099" Height="18,89765" Frame.Typ="8" Memo.Text=""/>
+      <TfrxMemoView Name="Memo18" Left="396,85065" Top="415,7483" Width="313,70099" Height="18,89765" HAlign="haCenter" Memo.Text="(підпис)"/>
+    </TfrxReportTitle>
+  </TfrxReportPage>
+  <TfrxReportPage Name="Page2" Orientation="poLandscape" PaperWidth="210" PaperHeight="148" PaperSize="11" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxMemoView Name="Memo20" Left="0" Top="22,67718" Width="721,89023" Height="26,45671" Font.Charset="1" Font.Color="0" Font.Height="-21" Font.Name="Arial" Font.Style="1" HAlign="haCenter" Memo.Text="Завдання про відрядження №  ____________" ParentFont="False" VAlign="vaBottom"/>
+    <TfrxMemoView Name="Memo21" Left="0" Top="68,03154" Width="188,9765" Height="26,45671" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" Memo.Text="Під час відрядження гр." ParentFont="False"/>
+    <TfrxMemoView Name="Memo22" Left="192,75603" Top="71,81107" Width="525,35467" Height="18,89765" Frame.Typ="8" Memo.Text=""/>
+    <TfrxMemoView Name="Memo23" Left="302,3624" Top="117,16543" Width="415,7483" Height="18,89765" Frame.Typ="8" Memo.Text=""/>
+    <TfrxMemoView Name="Memo24" Left="0" Top="162,51979" Width="718,1107" Height="18,89765" Frame.Typ="8" Memo.Text=""/>
+    <TfrxMemoView Name="Memo25" Left="0" Top="207,87415" Width="718,1107" Height="18,89765" Frame.Typ="8" Memo.Text=""/>
+    <TfrxMemoView Name="Memo26" Left="154,96073" Top="411,96877" Width="192,75603" Height="26,45671" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" Memo.Text="Начальник відділу (цеху)" ParentFont="False"/>
+    <TfrxMemoView Name="Memo28" Left="3,77953" Top="359,05535" Width="283,46475" Height="18,89765" Memo.Text="&#34;____&#34;_________________________ 20___ р."/>
+    <TfrxMemoView Name="Memo29" Left="351,49629" Top="415,7483" Width="366,61441" Height="18,89765" Frame.Typ="8" Memo.Text=""/>
+    <TfrxMemoView Name="Memo30" Left="351,49629" Top="434,64595" Width="366,61441" Height="18,89765" HAlign="haCenter" Memo.Text="(підпис)"/>
+    <TfrxMemoView Name="Memo19" Left="0" Top="117,16543" Width="302,3624" Height="26,45671" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" Memo.Text="доручається провести наступну роботу" ParentFont="False"/>
+    <TfrxMemoView Name="Memo27" Left="0" Top="253,22851" Width="718,1107" Height="18,89765" Frame.Typ="8" Memo.Text=""/>
+    <TfrxMemoView Name="Memo31" Left="0" Top="298,58287" Width="718,1107" Height="18,89765" Frame.Typ="8" Memo.Text=""/>
+  </TfrxReportPage>
+</TfrxReport>

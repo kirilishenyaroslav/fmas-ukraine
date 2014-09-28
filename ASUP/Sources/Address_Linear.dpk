@@ -1,0 +1,86 @@
+package Address_Linear;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Линейный справочник адресов'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  qFEditForm,
+  qFControls,
+  CommonSp,
+  vcl,
+  rtl,
+  dbrtl,
+  vcldb,
+  ibxpress,
+  dsnap,
+  frxe7,
+  frx7,
+  fs7,
+  vclx,
+  tee,
+  fqb70,
+  bdertl,
+  vcljpg,
+  designide,
+  vclactnband,
+  rxctl7,
+  VclSmp,
+  cxExportVCLD7,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxGridVCLD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  FR7,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  SpLib;
+
+contains
+  AGComponents in 'AGComponents.pas',
+  AGCommon in 'AGCommon.pas',
+  AGBaseTypes in 'AGBaseTypes.pas',
+  AGSYS_OPTIONS in 'AGsys_options.pas',
+  ini_type_place_FORM in 'ini_type_place\ini_type_place_FORM.pas' {Fini_type_place},
+  ini_type_place_FORM_ADD in 'ini_type_place\ini_type_place_FORM_ADD.pas' {Fini_type_place_form_add},
+  ini_type_region_FORM_ADD in 'ini_type_region\ini_type_region_FORM_ADD.pas' {Fini_type_region_form_add},
+  ini_type_region_FORM in 'ini_type_region\ini_type_region_FORM.pas' {Fini_type_region},
+  sp_country_FORM_ADD in 'sp_country\sp_country_FORM_ADD.pas' {Fsp_country_form_add},
+  sp_country_FORM in 'sp_country\sp_country_FORM.pas' {Fsp_country},
+  ini_type_street_FORM_ADD in 'sp_country\ini_type_street\ini_type_street_FORM_ADD.pas' {Fini_type_street_form_add},
+  ini_type_street_FORM in 'sp_country\ini_type_street\ini_type_street_FORM.pas' {Fini_type_street},
+  sp_district_FORM_ADD in 'sp_district\sp_district_FORM_ADD.pas' {Fsp_district_form_add},
+  sp_district_FORM in 'sp_district\sp_district_FORM.pas' {Fsp_district},
+  sp_place_FORM_ADD in 'sp_place\sp_place_FORM_ADD.pas' {Fsp_place_form_add},
+  sp_place_FORM in 'sp_place\sp_place_FORM.pas' {Fsp_place},
+  sp_region_FORM_ADD in 'sp_region\sp_region_FORM_ADD.pas' {Fsp_region_form_add},
+  sp_region_FORM in 'sp_region\sp_region_FORM.pas' {Fsp_region},
+  uAddressCommon in 'uAddressCommon.pas',
+  uAddressLinMain in 'uAddressLinMain.pas',
+  AdressUnit in 'AdressUnit.pas';
+
+end.

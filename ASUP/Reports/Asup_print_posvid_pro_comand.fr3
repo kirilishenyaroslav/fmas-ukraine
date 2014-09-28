@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TfrxReport Name="" Version="3.15" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="2047" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" ReportOptions.CreateDate="38762,4498674306" ReportOptions.Description.Text="" ReportOptions.LastChange="39129,4114251157" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end." PropData="044C65667403E80003546F70023008446174617365747301010C3E00000020446174615365743D226672784442446174617365745361626C6F6E2220446174615365744E616D653D226672784442446174617365745361626C6F6E220000095661726961626C65730100055374796C650100">
+  <TfrxReportPage Name="Page1" Orientation="poLandscape" PaperWidth="210" PaperHeight="148" PaperSize="11" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxReportTitle Name="ReportTitle1" Height="464,88219" Left="0" Top="18,89765" Width="718,1107">
+      <TfrxMemoView Name="Memo1" Left="525,35467" Top="11,33859" Width="188,9765" Height="83,14966" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="0" Memo.Text="Затверджено наказом Державної&#13;&#10;податкової адміністрації України&#13;&#10;від 28.07.1997 року № 260&#13;&#10;&#13;&#10;зареєстровано в Міністерстві юстиції&#13;&#10;України 14.08.1997 року №311/2115" ParentFont="False"/>
+      <TfrxMemoView Name="Memo2" Left="3,77953" Top="64,25201" Width="170,07885" Height="34,01577" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="0" HAlign="haCenter" Memo.Text="Штамп підприємства,&#13;&#10;установи, організації" ParentFont="False"/>
+      <TfrxMemoView Name="Memo3" Left="0" Top="124,72449" Width="718,1107" Height="34,01577" Font.Charset="1" Font.Color="0" Font.Height="-19" Font.Name="Arial" Font.Style="1" HAlign="haCenter" Memo.Text="ПОСВІДЧЕННЯ ПРО ВІДРЯДЖЕННЯ" ParentFont="False"/>
+      <TfrxMemoView Name="Memo4" Left="158,74026" Top="158,74026" Width="94,48825" Height="18,89765" Memo.Text="Видано"/>
+      <TfrxMemoView Name="Memo5" Left="257,00804" Top="158,74026" Width="461,10266" Height="18,89765" Frame.Typ="8" HAlign="haCenter" Memo.Text="[frxDBDatasetSablon.&#34;FIO&#34;]"/>
+      <TfrxMemoView Name="Memo6" Left="158,74026" Top="177,63791" Width="559,37044" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="0" HAlign="haCenter" Memo.Text="(прізвище, ім'я та по батькові)" ParentFont="False"/>
+      <TfrxMemoView Name="Memo7" Left="158,74026" Top="192,75603" Width="559,37044" Height="18,89765" Frame.Typ="8" HAlign="haCenter" Memo.Text="[frxDBDatasetSablon.&#34;POSADA&#34;]"/>
+      <TfrxMemoView Name="Memo8" Left="158,74026" Top="211,65368" Width="559,37044" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="0" HAlign="haCenter" Memo.Text="(посада, місце роботи)" ParentFont="False"/>
+      <TfrxMemoView Name="Memo9" Left="158,74026" Top="226,7718" Width="124,72449" Height="18,89765" Memo.Text="відрядженному до"/>
+      <TfrxMemoView Name="Memo10" Left="283,46475" Top="226,7718" Width="434,64595" Height="18,89765" Frame.Typ="8" HAlign="haCenter" Memo.Text="[frxDBDatasetSablon.&#34;PLACE_TARGET&#34;]"/>
+      <TfrxMemoView Name="Memo11" Left="158,74026" Top="245,66945" Width="559,37044" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="0" HAlign="haCenter" Memo.Text="(пункт призначення)" ParentFont="False"/>
+      <TfrxMemoView Name="Memo12" Left="158,74026" Top="264,5671" Width="559,37044" Height="18,89765" Frame.Typ="8" HAlign="haCenter" Memo.Text="[frxDBDatasetSablon.&#34;ORG_NAME&#34;]"/>
+      <TfrxMemoView Name="Memo13" Left="158,74026" Top="283,46475" Width="559,37044" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="0" HAlign="haCenter" Memo.Text="(найменування підприємства, установи, організації)" ParentFont="False"/>
+      <TfrxMemoView Name="Memo14" Left="158,74026" Top="302,3624" Width="136,06308" Height="18,89765" Memo.Text="Термін відрядження "/>
+      <TfrxMemoView Name="Memo15" Left="294,80334" Top="302,3624" Width="52,91342" Height="18,89765" Frame.Typ="8" HAlign="haCenter" Memo.Text="[frxDBDatasetSablon.&#34;TERMIN&#34;]"/>
+      <TfrxMemoView Name="Memo16" Left="351,49629" Top="302,3624" Width="34,01577" Height="18,89765" Memo.Text="днів"/>
+      <TfrxMemoView Name="Memo17" Left="389,29159" Top="302,3624" Width="328,81911" Height="18,89765" Frame.Typ="8" HAlign="haCenter" Memo.Text="[frxDBDatasetSablon.&#34;TARGET&#34;]"/>
+      <TfrxMemoView Name="Memo18" Left="385,51206" Top="321,26005" Width="332,59864" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="0" HAlign="haCenter" Memo.Text="(мета відрядження)" ParentFont="False"/>
+      <TfrxMemoView Name="Memo19" Left="158,74026" Top="347,71676" Width="136,06308" Height="18,89765" Memo.Text="Підстава: Наказ від"/>
+      <TfrxMemoView Name="Memo20" Left="294,80334" Top="347,71676" Width="136,06308" Height="18,89765" Frame.Typ="8" HAlign="haCenter" Memo.Text="[frxDBDatasetSablon.&#34;DATE_ORD&#34;]"/>
+      <TfrxMemoView Name="Memo21" Left="430,86642" Top="347,71676" Width="34,01577" Height="18,89765" Memo.Text="р. №"/>
+      <TfrxMemoView Name="Memo22" Left="464,88219" Top="347,71676" Width="253,22851" Height="18,89765" Frame.Typ="8" HAlign="haCenter" Memo.Text="[frxDBDatasetSablon.&#34;NUM_ORDER&#34;]"/>
+      <TfrxMemoView Name="Memo23" Left="162,51979" Top="385,51206" Width="238,11039" Height="18,89765" Memo.Text="Дійсне по пред'явленні паспорта серії"/>
+      <TfrxMemoView Name="Memo24" Left="404,40971" Top="385,51206" Width="56,69295" Height="18,89765" Frame.Typ="8" HAlign="haCenter" Memo.Text="[frxDBDatasetSablon.&#34;SERIYA_PASS&#34;]"/>
+      <TfrxMemoView Name="Memo25" Left="461,10266" Top="385,51206" Width="34,01577" Height="18,89765" HAlign="haCenter" Memo.Text=" №"/>
+      <TfrxMemoView Name="Memo26" Left="495,11843" Top="385,51206" Width="222,99227" Height="18,89765" Frame.Typ="8" HAlign="haCenter" Memo.Text="[frxDBDatasetSablon.&#34;NUM_PASS&#34;]"/>
+      <TfrxMemoView Name="Memo27" Left="0" Top="434,64595" Width="718,1107" Height="18,89765" Memo.Text="М.П.                                    Керівник"/>
+    </TfrxReportTitle>
+  </TfrxReportPage>
+  <TfrxReportPage Name="Page2" Orientation="poLandscape" PaperWidth="210" PaperHeight="148" PaperSize="11" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxReportTitle Name="ReportTitle2" Height="464,88219" Left="0" Top="18,89765" Width="718,1107">
+      <TfrxMemoView Name="Memo28" Left="3,77953" Top="0" Width="710,55164" Height="60,47248" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="0" HAlign="haCenter" Memo.Text="Відмітки про вибуття у відрядження, прибуття в&#13;&#10;пункт призначення, вибуття з них та прибуття до&#13;&#10;місця постійної роботи" ParentFont="False"/>
+      <TfrxMemoView Name="Memo29" Left="3,77953" Top="68,03154" Width="60,47248" Height="18,89765" Memo.Text="Вибув з"/>
+      <TfrxMemoView Name="Memo30" Left="68,03154" Top="68,03154" Width="234,33086" Height="18,89765" Frame.Typ="8" HAlign="haCenter" Memo.Text="[frxDBDatasetSablon.&#34;VIBUV&#34;]"/>
+      <TfrxMemoView Name="Memo31" Left="3,77953" Top="98,26778" Width="298,58287" Height="18,89765" Memo.Text="&#34;______&#34;_________________________ 200__ р."/>
+      <TfrxMemoView Name="Memo32" Left="3,77953" Top="124,72449" Width="298,58287" Height="18,89765" Memo.Text="М.П.                           Підпис ________________"/>
+      <TfrxMemoView Name="Memo33" Left="3,77953" Top="170,07885" Width="60,47248" Height="18,89765" Memo.Text="Вибув із"/>
+      <TfrxMemoView Name="Memo34" Left="68,03154" Top="170,07885" Width="234,33086" Height="18,89765" Frame.Typ="8" HAlign="haCenter" Memo.Text="[frxDBDatasetSablon.&#34;PRIBUV&#34;]"/>
+      <TfrxMemoView Name="Memo35" Left="3,77953" Top="200,31509" Width="298,58287" Height="18,89765" Memo.Text="&#34;______&#34;_________________________ 200__ р."/>
+      <TfrxMemoView Name="Memo36" Left="3,77953" Top="226,7718" Width="298,58287" Height="18,89765" Memo.Text="М.П.                           Підпис ________________"/>
+      <TfrxMemoView Name="Memo37" Left="3,77953" Top="283,46475" Width="60,47248" Height="18,89765" Memo.Text="Вибув із"/>
+      <TfrxMemoView Name="Memo38" Left="68,03154" Top="283,46475" Width="234,33086" Height="18,89765" Frame.Typ="8" HAlign="haCenter" Memo.Text=""/>
+      <TfrxMemoView Name="Memo39" Left="3,77953" Top="313,70099" Width="298,58287" Height="18,89765" Memo.Text="&#34;______&#34;_________________________ 200__ р."/>
+      <TfrxMemoView Name="Memo40" Left="3,77953" Top="340,1577" Width="298,58287" Height="18,89765" Memo.Text="М.П.                           Підпис ________________"/>
+      <TfrxMemoView Name="Memo41" Left="404,40971" Top="68,03154" Width="68,03154" Height="18,89765" Memo.Text="Прибув до"/>
+      <TfrxMemoView Name="Memo42" Left="476,22078" Top="68,03154" Width="226,7718" Height="18,89765" Frame.Typ="8" HAlign="haCenter" Memo.Text="[frxDBDatasetSablon.&#34;PRIBUV&#34;]"/>
+      <TfrxMemoView Name="Memo43" Left="404,40971" Top="98,26778" Width="298,58287" Height="18,89765" Memo.Text="&#34;______&#34;_________________________ 200__ р."/>
+      <TfrxMemoView Name="Memo44" Left="404,40971" Top="124,72449" Width="298,58287" Height="18,89765" Memo.Text="М.П.                           Підпис ________________"/>
+      <TfrxMemoView Name="Memo45" Left="404,40971" Top="170,07885" Width="60,47248" Height="18,89765" Memo.Text="Прибув до"/>
+      <TfrxMemoView Name="Memo46" Left="468,66172" Top="170,07885" Width="234,33086" Height="18,89765" Frame.Typ="8" HAlign="haCenter" Memo.Text="[frxDBDatasetSablon.&#34;VIBUV&#34;]"/>
+      <TfrxMemoView Name="Memo47" Left="404,40971" Top="200,31509" Width="298,58287" Height="18,89765" Memo.Text="&#34;______&#34;_________________________ 200__ р."/>
+      <TfrxMemoView Name="Memo48" Left="404,40971" Top="226,7718" Width="298,58287" Height="18,89765" Memo.Text="М.П.                           Підпис ________________"/>
+      <TfrxMemoView Name="Memo49" Left="404,40971" Top="283,46475" Width="60,47248" Height="18,89765" Memo.Text="Прибув до"/>
+      <TfrxMemoView Name="Memo50" Left="468,66172" Top="283,46475" Width="234,33086" Height="18,89765" Frame.Typ="8" HAlign="haCenter" Memo.Text=""/>
+      <TfrxMemoView Name="Memo51" Left="404,40971" Top="313,70099" Width="298,58287" Height="18,89765" Memo.Text="&#34;______&#34;_________________________ 200__ р."/>
+      <TfrxMemoView Name="Memo52" Left="404,40971" Top="340,1577" Width="298,58287" Height="18,89765" Memo.Text="М.П.                           Підпис ________________"/>
+      <TfrxMemoView Name="Memo53" Left="0" Top="408,18924" Width="721,89023" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" Memo.Text="Примітка: При виїзді в декілька пунктів відмітки про прибуття і вибуття робляться окремо в кожному х них." ParentFont="False"/>
+    </TfrxReportTitle>
+  </TfrxReportPage>
+</TfrxReport>
