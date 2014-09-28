@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TfrxReport Name="" Version="3.15" DotMatrixReport="False" EngineOptions.MaxMemSize="10000000" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="2047" PreviewOptions.Zoom="1" PrintOptions.Printer="По умолчанию" ReportOptions.CreateDate="38316,4037272569" ReportOptions.Description.Text="" ReportOptions.LastChange="38580,3984684143" ScriptLanguage="PascalScript" ScriptText.Text="procedure Memo10OnBeforePrint(Sender: TfrxComponent);&#13;&#10;begin&#13;&#10;   ;&#13;&#10;end;&#13;&#10;&#13;&#10;begin&#13;&#10;&#13;&#10;end." PropData="044C656674020803546F70027608446174617365747301010C3100000020446174615365743D22466F6E64446174617365742220446174615365744E616D653D22466F6E647344617461736574220000095661726961626C657301010C10000000204E616D653D2220427564676574732200010C0A000000204E616D653D22534D2200010C0A000000204E616D653D22525A2200010C0A000000204E616D653D225354220000055374796C650100">
+  <TfrxReportPage Name="Page1" PaperWidth="210" PaperHeight="297" PaperSize="9" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" Color="16777215" HGuides.Text="" VGuides.Text="">
+    <TfrxReportTitle Name="ReportTitle1" Height="29,11812" Left="0" Top="18,89765" Width="718,1107">
+      <TfrxMemoView Name="Memo1" Left="3,41744" Top="0,866109999999999" Width="710,55164" Height="23,57483" Font.Charset="1" Font.Color="0" Font.Height="-19" Font.Name="Arial" Font.Style="0" HAlign="haCenter" Memo.Text="Реестр групп бюджетов" ParentFont="False"/>
+    </TfrxReportTitle>
+    <TfrxMasterData Name="MasterData1" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Height="21,70872" Left="0" ParentFont="False" Top="192,75603" Width="718,1107" ColumnWidth="0" ColumnGap="0" DataSet="FondDataset" DataSetName="FondsDataset" RowCount="0" Stretched="True">
+      <TfrxMemoView Name="Memo13" Left="0" Top="0" Width="73,32283465" Height="21,21259843" StretchMode="smMaxHeight" AllowHTMLTags="True" Color="16777215" Font.Charset="1" Font.Color="0" Font.Height="-19" Font.Name="Times New Roman" Font.Style="0" Frame.Typ="15" HAlign="haCenter" Memo.Text="[FondsDataSet.&#34;GROUP_KOD&#34;]" ParentFont="False"/>
+      <TfrxMemoView Name="Memo14" Left="72,94488189" Top="0" Width="642,89793803" Height="21,21259843" StretchMode="smActualHeight" AllowHTMLTags="True" Color="16777215" Font.Charset="1" Font.Color="0" Font.Height="-19" Font.Name="Times New Roman" Font.Style="0" Frame.Typ="15" Memo.Text="[FondsDataSet.&#34;GROUP_TITLE&#34;]" ParentFont="False"/>
+    </TfrxMasterData>
+    <TfrxMasterData Name="MasterData2" Height="61,67718" Left="0" Top="109,60637" Width="718,1107" ColumnWidth="0" ColumnGap="0" RowCount="1">
+      <TfrxMemoView Name="Memo9" Left="72,5906" Top="0" Width="642,00062" Height="60,47244094" AllowHTMLTags="True" Color="12632256" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="mmmm yyyy" DisplayFormat.Kind="fkDateTime" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Times New Roman" Font.Style="0" Frame.Typ="15" HAlign="haCenter" Memo.Text="Группа" ParentFont="False" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo11" Left="0" Top="0" Width="73,29159" Height="60,47244094" AllowHTMLTags="True" Color="12632256" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="mmmm yyyy" DisplayFormat.Kind="fkDateTime" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Times New Roman" Font.Style="0" Frame.Typ="15" HAlign="haCenter" Memo.Text="Код" ParentFont="False" VAlign="vaCenter"/>
+    </TfrxMasterData>
+    <TfrxPageFooter Name="PageFooter1" Height="22,67718" Left="0" Top="321,26005" Width="718,1107">
+      <TfrxMemoView Name="Memo36" Left="616,06339" Top="0" Width="94,48825" Height="18,89765" Memo.Text="стр. [Page]"/>
+    </TfrxPageFooter>
+    <TfrxMasterData Name="MasterData3" Height="22,67718" Left="0" Top="238,11039" Width="718,1107" ColumnWidth="0" ColumnGap="0" RowCount="1">
+      <TfrxMemoView Name="Memo16" Left="0" Top="0" Width="714,33117" Height="18,89765" Frame.Typ="4" Memo.Text=""/>
+    </TfrxMasterData>
+  </TfrxReportPage>
+</TfrxReport>

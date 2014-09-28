@@ -1,0 +1,85 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = BuSysDPK.bpl GetDoc.bpl GenHTML.bpl KekvPackage.bpl otchintf.bpl \
+  PublicSmeta.bpl RazdPackage.bpl SmetaPackage.bpl SmGlobalization.bpl \
+  SmGlobalWizard.bpl smgrpintf.bpl smpkvintf.bpl restanalize.bpl typefinance.bpl \
+  UseSmReports.bpl UDocReestr.bpl USmetPackage.bpl WizardReports.bpl \
+  BdgtMgmnt.exe pubburprt.exe JO5.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+
+BuSysDPK.bpl: BuSysDPK.dpk
+  $(DCC)
+
+GetDoc.bpl: GetDoc.dpk
+  $(DCC)
+
+GenHTML.bpl: GenHTML.dpk
+  $(DCC)
+
+KekvPackage.bpl: KekvPackage.dpk
+  $(DCC)
+
+otchintf.bpl: otchintf.dpk
+  $(DCC)
+
+PublicSmeta.bpl: PublicSmeta.dpk
+  $(DCC)
+
+RazdPackage.bpl: RazdPackage.dpk
+  $(DCC)
+
+SmetaPackage.bpl: SmetaPackage.dpk
+  $(DCC)
+
+SmGlobalization.bpl: SmGlobalization.dpk
+  $(DCC)
+
+SmGlobalWizard.bpl: SmGlobalWizard.dpk
+  $(DCC)
+
+smgrpintf.bpl: smgrpintf.dpk
+  $(DCC)
+
+smpkvintf.bpl: smpkvintf.dpk
+  $(DCC)
+
+restanalize.bpl: restanalize.dpk
+  $(DCC)
+
+typefinance.bpl: typefinance.dpk
+  $(DCC)
+
+UseSmReports.bpl: UseSmReports.dpk
+  $(DCC)
+
+UDocReestr.bpl: UDocReestr.dpk
+  $(DCC)
+
+USmetPackage.bpl: USmetPackage.dpk
+  $(DCC)
+
+WizardReports.bpl: WizardReports.dpk
+  $(DCC)
+
+BdgtMgmnt.exe: BdgtMgmnt.dpr
+  $(DCC)
+
+pubburprt.exe: pubburprt.dpr
+  $(DCC)
+
+JO5.exe: ..\..\JO5\Sources\JO5_Exe\JO5.dpr
+  $(DCC)
+
+

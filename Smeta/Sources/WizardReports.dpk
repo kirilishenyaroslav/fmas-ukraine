@@ -1,0 +1,68 @@
+package WizardReports;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  FIBPlus7,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  vcldb,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  rxctl7,
+  vclx,
+  VclSmp,
+  visualdbclx,
+  visualclx,
+  frx7,
+  fs7,
+  tee,
+  fqb70,
+  bdertl,
+  frxDB7,
+  fsDB7,
+  frxe7,
+  Globals,
+  AccMgmtBpl,
+  Pwd,
+  SysL,
+  MD5,
+  dsnap,
+  ibxpress,
+  cxExtEditorsVCLD7;
+
+contains
+  WizardReportsIntf in 'WizardReports\WizardReportsIntf.pas',
+  frmReport1Chart in 'WizardReports\frmReport1Chart.pas' {frmReport1Diagram},
+  FrmReport1 in 'WizardReports\FrmReport1.pas' {frmHtmlReport},
+  UGetAnalizeLevel in 'WizardReports\UGetAnalizeLevel.pas' {frmGetAnalizelevel};
+
+end.

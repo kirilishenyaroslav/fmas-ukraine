@@ -1,0 +1,71 @@
+package USmetPackage;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcljpg,
+  vcl,
+  dbrtl,
+  vcldb,
+  FIBPlus7,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxGridVCLD7,
+  dxBarD7,
+  dxComnD7,
+  dxDockingD7,
+  visualdbclx,
+  visualclx,
+  Globals,
+  fs7,
+  frx7,
+  frxDB7,
+  VclSmp,
+  rxctl7,
+  rxdb7;
+
+contains
+  USmetStru in 'USmetStru.pas' {frmSmetaStru},
+  uNewStruObj in 'uNewStruObj.pas' {frmSelectNewObjType},
+  USmetaDocs in 'USmetaDocs.pas' {frmSDocs},
+  UEditSmetaDocs in 'UEditSmetaDocs.pas' {frmEditSmetaDocs},
+  USmetSum in 'USmetSum.pas' {frmPlanSum},
+  UDoOtch in 'UDoOtch.pas' {frmDoOtch},
+  USESMIntf in 'USESMIntf.pas',
+  UDoOtchThread in 'UDoOtchThread.pas',
+  UDoOtchThreadDB in 'UDoOtchThreadDB.pas',
+  UPlanSign in 'UPlanSign.pas' {frmSigners},
+  UPlanSignEdt in 'UPlanSignEdt.pas' {frmPersonEdit},
+  UConfigureRz in 'UConfigureRz.pas' {frmConfRazd},
+  UDoRests in 'UDoRests.pas' {frmGetBuRests},
+  UDoSmRecalc in 'UDoSmRecalc.pas' {frmBURecalc},
+  UDoRecalcThread in 'UDoRecalcThread.pas',
+  USmetChart in 'USmetChart.pas' {ChartForm},
+  UEditNoteForm in 'UEditNoteForm.pas' {frmEditNote};
+
+end.

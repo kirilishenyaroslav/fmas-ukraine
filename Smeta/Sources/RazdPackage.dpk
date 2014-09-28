@@ -1,0 +1,58 @@
+package RazdPackage;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  FIBPlus7,
+  vcldb,
+  dbrtl,
+  visualdbclx,
+  visualclx,
+  vcljpg,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxGridVCLD7,
+  Globals,
+  Halcyon6D7,
+  cxCommonEditingVCLD7,
+  cxTreeListVCLD7,
+  VclSmp,
+  rxctl7,
+  fs7,
+  frx7,
+  frxDB7,
+  frxe7;
+
+contains
+  uEditRazdSt in 'RazdPackage\uEditRazdSt.pas' {frmEditRazdSt},
+  uRazdSt in 'RazdPackage\uRazdSt.pas' {frmRazdSt},
+  uEditStAnalitic in 'RazdPackage\uEditStAnalitic.pas' {frmStAnaliticInfo},
+  UGetPrintDate in 'RazdPackage\UGetPrintDate.pas' {frmPrintConfigure};
+
+end.

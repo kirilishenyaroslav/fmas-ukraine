@@ -1,0 +1,72 @@
+package USmetPackage;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcljpg,
+  vcl,
+  dbrtl,
+  vcldb,
+  FIBPlus7,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxGridVCLD7,
+  dxBarD7,
+  dxComnD7,
+  dxDockingD7,
+  visualdbclx,
+  visualclx,
+  Globals,
+  fs7,
+  frx7,
+  frxDB7,
+  VclSmp,
+  rxctl7,
+  rxdb7;
+
+contains
+  USmetStru in 'UsmetPackage\USmetStru.pas' {frmSmetaStru},
+  uNewStruObj in 'UsmetPackage\uNewStruObj.pas' {frmSelectNewObjType},
+  USmetaDocs in 'UsmetPackage\USmetaDocs.pas' {frmSDocs},
+  UEditSmetaDocs in 'UsmetPackage\UEditSmetaDocs.pas' {frmEditSmetaDocs},
+  USmetSum in 'UsmetPackage\USmetSum.pas' {frmPlanSum},
+  UDoOtch in 'UsmetPackage\UDoOtch.pas' {frmDoOtch},
+  USESMIntf in 'UsmetPackage\USESMIntf.pas',
+  UDoOtchThread in 'UsmetPackage\UDoOtchThread.pas',
+  UDoOtchThreadDB in 'UsmetPackage\UDoOtchThreadDB.pas',
+  UPlanSign in 'UsmetPackage\UPlanSign.pas' {frmSigners},
+  UPlanSignEdt in 'UsmetPackage\UPlanSignEdt.pas' {frmPersonEdit},
+  UConfigureRz in 'UsmetPackage\UConfigureRz.pas' {frmConfRazd},
+  UDoRests in 'UsmetPackage\UDoRests.pas' {frmGetBuRests},
+  UDoSmRecalc in 'UsmetPackage\UDoSmRecalc.pas' {frmBURecalc},
+  UDoRecalcThread in 'UsmetPackage\UDoRecalcThread.pas',
+  USmetChart in 'UsmetPackage\USmetChart.pas' {ChartForm},
+  UEditNoteForm in 'UsmetPackage\UEditNoteForm.pas' {frmEditNote},
+  uBuMonthValues in 'UsmetPackage\uBuMonthValues.pas' {frmGetMonthValues};
+
+end.
