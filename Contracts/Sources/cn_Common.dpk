@@ -1,0 +1,67 @@
+package cn_Common;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'ѕакет ядра'}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  dbrtl,
+  vcljpg,
+  vcldb,
+  FIBPlus7,
+  cxGridVCLD7,
+  rxctl7,
+  visualdbclx,
+  visualclx,
+  Pwd,
+  ibxpress,
+  rxdb7,
+  AccMgmtBpl,
+  SysL,
+  applib,
+  cn_Consts,
+  cxExtEditorsVCLD7;
+
+contains
+  cn_Common_Types in 'Common\cn_Common_Types.pas',
+  cn_Common_Loader in 'Common\cn_Common_Loader.pas',
+  cn_Common_Messages in 'Common\cn_Common_Messages.pas',
+  cn_Common_Funcs in 'Common\cn_Common_Funcs.pas',
+  cn_Common_GridStyles in 'Common\cn_Common_GridStyles.pas' {DM_Styles: TDataModule},
+  cn_Common_Tray_Baloon in 'Common\cn_Common_Tray_Baloon.pas',
+  cn_Common_DM in 'Common\cn_Common_DM.pas' {DM_Common: TDataModule},
+  cn_common_sql_monitor in 'Common\cn_common_sql_monitor.pas',
+  cn_Common_WaitForm_progress in 'Common\cn_Common_WaitForm_progress.pas' {cnWaitForm_progress},
+  cn_Common_WaitForm in 'Common\cn_Common_WaitForm.pas' {cnWaitForm};
+
+end.
+
+
+

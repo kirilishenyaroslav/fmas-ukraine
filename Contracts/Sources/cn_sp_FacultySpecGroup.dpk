@@ -1,0 +1,60 @@
+package cn_sp_FacultySpecGroup;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Пакет "Справочник фак-спец-групп"'}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  vcldb,
+  cxExtEditorsVCLD7,
+  vclx,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  cn_Common,
+  cn_Consts,
+  CommonSp;
+
+contains
+  FacultySpecGroup_Loader in 'FacultySpecGroup\FacultySpecGroup_Loader.pas',
+  FacultySpecGroup_Unit in 'FacultySpecGroup\FacultySpecGroup_Unit.pas' {frmFacultySpecGruop},
+  DM_FacultySpecGroup in 'FacultySpecGroup\DM_FacultySpecGroup.pas' {DM_FSG: TDataModule},
+  Fac_AE in 'FacultySpecGroup\Fac_AE.pas' {frmFac_AE},
+  Group_AE in 'FacultySpecGroup\Group_AE.pas' {frmGroup_AE};
+
+end.
+

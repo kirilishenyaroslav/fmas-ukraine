@@ -1,0 +1,68 @@
+package cn_SynchEDBO;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Пакет "Синхронизация с ЕДБО"'}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  dbrtl,
+  vcljpg,
+  vcldb,
+  cxExtEditorsVCLD7,
+  vclx,
+  cn_Common,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  cn_Consts,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  rxctl7,
+  VclSmp,
+  cxPageControlVCLD7,
+  applib,
+  SpAllPeople;
+
+contains
+  DM_SynchEDBO in 'SynchEDBO\DM_SynchEDBO.pas' {DM_synch: TDataModule},
+  uSynchEDBO_Loader in 'SynchEDBO\uSynchEDBO_Loader.pas',
+  uSynchEDBO_Main in 'SynchEDBO\uSynchEDBO_Main.pas' {frmSynchEDBO_Main},
+  uSynchEDBO_facul_AE in 'SynchEDBO\uSynchEDBO_facul_AE.pas' {frmSynchEDBO_facul_AE},
+  uSynchEDBO_Spec_AE in 'SynchEDBO\uSynchEDBO_Spec_AE.pas' {frmSynchEDBO_Spec_AE},
+  uSynchEDBO_OKR_AE in 'SynchEDBO\uSynchEDBO_OKR_AE.pas' {frmSynchEDBO_OKR_AE},
+  uSynchEDBO_Kurs in 'SynchEDBO\uSynchEDBO_Kurs.pas' {frmSynchEDBO_kurs},
+  uSynchEDBO_Group in 'SynchEDBO\uSynchEDBO_Group.pas' {frmSynchEDBO_Group},
+  uSynchEDBO_Settings in 'SynchEDBO\uSynchEDBO_Settings.pas' {frmSynchEDBO_Settings},
+  uSynchEDBO_select in 'SynchEDBO\uSynchEDBO_select.pas' {frmSynchEDBO_select};
+
+end.

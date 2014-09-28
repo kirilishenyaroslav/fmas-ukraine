@@ -1,0 +1,123 @@
+{               "”чет товарно-материальных ценностей, ќ—, ћЌј и ћЅѕ"           }
+{                                                                              }
+{               (c) Ўамарин ё.¬. 2004-2007                                     }
+{                                                                              }
+unit uZProc;
+
+interface
+
+Uses SysUtils, Classes, StrUtils, Controls, Windows, VarUtils, Variants, Math;
+
+function SumToString(ASumma:extended; aLanguageIndex:byte):string;
+
+implementation
+
+const Kopeika   : array[1..3,1..20] of string =(('','','','','','','','','','','','','','','','','','','',''),
+                                                ('','','','','','','','','','','','','','','','','','','',''),
+                                                ('','','','','','','','','','','','','','','','','','','',''));
+const Grivnja   : array[1..3,1..20] of string =(('','','','','','','','','','','','','','','','','','','',''),
+                                                ('','','','','','','','','','','','','','','','','','','',''),
+                                                ('','','','','','','','','','','','','','','','','','','',''));
+const DigitWoMan: array[1..3,1..20] of string =(('','одна','дв≥','три','чотири','п''€ть','ш≥сть','с≥м','в≥с≥м','дев''€ть','дес€ть','одинадц€ть','дванадц€ть','тринадц€ть','чотирнадц€ть','п''€тнадц€ть','ш≥стнадц€ть','с≥мнадц€ть','в≥с≥мнадц€ь','дев''€тнадц€ть'),
+                                                ('','одна','две','три','четыре','п€ть','шесть','семь','восемь','дев€ть','дес€ть','одиннадцать','двенадцать','тринадцать','четырнадцать','п€тнадцать','шестнадцать','семнадцать','восемнадцать','дев€тнадцать'),
+                                                ('','одна','дв≥','три','чотири','п''€ть','ш≥сть','с≥м','в≥с≥м','дев''€ть','дес€ть','одинадц€ть','дванадц€ть','тринадц€ть','чотирнадц€ть','п''€тнадц€ть','ш≥стнадц€ть','с≥мнадц€ть','в≥с≥мнадц€ь','дев''€тнадц€ть'));
+const DigitMan  : array[1..3,1..20] of string =(('','один','два','три','чотири','п''€ть','ш≥сть','с≥м','в≥с≥м','дев''€ть','дес€ть','одинадц€ть','дванадц€ть','тринадц€ть','чотирнадц€ть','п''€тнадц€ть','ш≥стнадц€ть','с≥мнадц€ть','в≥с≥мнадц€ь','дев''€тнадц€ть'),
+                                                ('','один','два','три','четыре','п€ть','шесть','семь','восемь','дев€ть','дес€ть','одиннадцать','двенадцать','тринадцать','четырнадцать','п€тнадцать','шестнадцать','семнадцать','восемнадцать','дев€тнадцать'),
+                                                ('','одне','два','три','чотири','п''€ть','ш≥сть','с≥м','в≥с≥м','дев''€ть','дес€ть','одинадц€ть','дванадц€ть','тринадц€ть','чотирнадц€ть','п''€тнадц€ть','ш≥стнадц€ть','с≥мнадц€ть','в≥с≥мнадц€ь','дев''€тнадц€ть'));
+const Ten       : array[1..3,1..10] of string =(('','дес€ть','двадц€ть','тридц€ть','сорок','п''€тдес€т','ш≥стдес€т','с≥мдес€т','в≥с≥мдес€т','дев''€носто'),
+                                                ('','дес€ть','двадцать','тридцать','сорок','п€тьдес€т','шестьдес€т','семьдес€т','восемьдес€т','дев€носто'),
+                                                ('','дес€ть','двадц€ть','тридц€ть','сорок','п''€тдес€т','ш≥стдес€т','с≥мдес€т','в≥с≥мдес€т','дев''€носто'));
+const Hundread  : array[1..3,1..10] of string =(('','сто','дв≥ст≥','триста','чотириста','п''€тсот','ш≥стсот','с≥мсот','в≥с≥мсот','д''ев€тсот'),
+                                                ('','сто','двести','триста','четыреста','п€тсот','шестсот','семьсот','восемьсот','дев€тсот'),
+                                                ('','сто','дв≥ст≥','триста','чотириста','п''€тсот','ш≥стсот','с≥мсот','в≥с≥мсот','д''ев€тсот'));
+const Thousand  : array[1..3,1..20] of string =(('','тис€ча','тис€ч≥','тис€ч≥','тис€ч≥','тис€ч','тис€ч','тис€ч','тис€ч','тис€ч','тис€ч','тис€ч','тис€ч','тис€ч','тис€ч','тис€ч','тис€ч','тис€ч','тис€ч','тис€ч'),
+                                                ('','тыс€ча','тыс€чи','тыс€чи','тыс€чи','тыс€ч','тыс€ч','тыс€ч','тыс€ч','тыс€ч','тыс€ч','тыс€ч','тыс€ч','тыс€ч','тыс€ч','тыс€ч','тыс€ч','тыс€ч','тыс€ч','тыс€ч'),
+                                                ('','тис€ча','тис€ч≥','тис€ч≥','тис€ч≥','тис€ч','тис€ч','тис€ч','тис€ч','тис€ч','тис€ч','тис€ч','тис€ч','тис€ч','тис€ч','тис€ч','тис€ч','тис€ч','тис€ч','тис€ч'));
+const Million   : array[1..3,1..20] of string =(('','м≥льон','м≥льони','м≥льони','м≥льони','м≥льон≥в','м≥льон≥в','м≥льон≥в','м≥льон≥в','м≥льон≥в','м≥льон≥в','м≥льон≥в','м≥льон≥в','м≥льон≥в','м≥льон≥в','м≥льон≥в','м≥льон≥в','м≥льон≥в','м≥льон≥в','м≥льон≥в'),
+                                                ('','миллион','миллиона','миллиона','миллиона','миллионов','миллионов','миллионов','миллионов','миллионов','миллионов','миллионов','миллионов','миллионов','миллионов','миллионов','миллионов','миллионов','миллионов','миллионов'),
+                                                ('','м≥льон','м≥льони','м≥льони','м≥льони','м≥льон≥в','м≥льон≥в','м≥льон≥в','м≥льон≥в','м≥льон≥в','м≥льон≥в','м≥льон≥в','м≥льон≥в','м≥льон≥в','м≥льон≥в','м≥льон≥в','м≥льон≥в','м≥льон≥в','м≥льон≥в','м≥льон≥в'));
+const ManState  : array[1..3,1..4] of boolean = ((False,False,False,True),(False,True,False,True),(False,True,False,True));
+
+function SumToString(ASumma:extended; aLanguageIndex:byte):string;
+
+var res,t_res,text,t_text:String;
+    j,int_sum:integer;
+    PLanguageIndex:byte;
+    GrivnjaWasAdded:boolean;
+
+ function ThreeDigitNumberToString(var ANumber:string):string;
+  var pres:string;
+      TCount:byte;
+ begin
+  TCount:=1;
+  ANumber:=Trim(ANumber);
+  if length(ANumber)>3 then raise Exception.Create('It''s imposible!!!');
+  while Length(ANumber)<3 do ANumber:=' '+ANumber;
+  if ANumber[1]<>' ' then
+    pres:=Hundread[PLanguageIndex][StrToInt(ANumber[1])+1];
+  if ANumber[2]='1' then
+   begin
+    pres:=trim(pres)+' '+ifThen(ManState[PLanguageIndex][j+1]=True,
+                                DigitMan[PLanguageIndex][StrToInt(copy(ANumber,2,2))+1],
+                                DigitWoMan[PLanguageIndex][StrToInt(copy(ANumber,2,2))+1]);
+
+    TCount:=2;
+   end
+  else
+   begin
+    if ANumber[2]<>' ' then
+       pres:=trim(pres)+' '+Ten[PLanguageIndex][StrToInt(ANumber[2])+1];
+    if ANumber[3]<>' ' then
+       pres:=trim(pres)+' '+ifThen(ManState[PLanguageIndex][j+1]=True,
+                                   DigitMan[PLanguageIndex][StrToInt(copy(ANumber,3,1))+1],
+                                   DigitWoMan[PLanguageIndex][StrToInt(copy(ANumber,3,1))+1]);
+   end;
+  if Trim(pres)<>'' then
+   case j of
+    0: pres:=Trim(pres)+' '+Kopeika[PLanguageIndex][StrToInt(copy(ANumber,4-TCount,TCount))+1];
+    1:
+     begin
+      pres:=Trim(pres)+' '+Grivnja[PLanguageIndex][StrToInt(copy(ANumber,4-TCount,TCount))+1];
+      GrivnjaWasAdded:=True;
+     end;
+    2: pres:=Trim(pres)+' '+Thousand[PLanguageIndex][StrToInt(copy(ANumber,4-TCount,TCount))+1];
+    3: pres:=Trim(pres)+' '+Million[PLanguageIndex][StrToInt(copy(ANumber,4-TCount,TCount))+1];
+   end;
+   if (not GrivnjaWasAdded) and (Trim(pres)<>'') and (j>0) then
+    begin
+     pres:=Trim(pres)+' '+Grivnja[PLanguageIndex][1];
+     GrivnjaWasAdded:=True;
+    end;
+  Result:=pRes;
+ end;
+
+begin
+  if (ASumma>0) then
+  begin
+   GrivnjaWasAdded:=False;
+   PLanguageIndex:=aLanguageIndex;
+   int_sum:=round((ASumma-int(ASumma))*100);
+   text:=IntToStr(int_sum);
+
+   j:=0;
+   res:=ThreeDigitNumberToString(text);
+
+   int_sum:=Round(int(ASumma));
+   text:=IntToStr(int_sum);
+   while Trim(text)<>'' do
+   begin
+    inc(j);
+    t_text:=copy(text,LENGTH(text)-2,3);
+    t_res:=ThreeDigitNumberToString(t_text);
+    res:=Trim(t_res)+' '+trim(res);
+    if Length(Trim(text))<3 then text:=''
+    else delete(text,LENGTH(text)-2,3);
+   end;
+   Result:=Res;
+  end
+ else
+  Result:='';
+end;
+
+end.
+

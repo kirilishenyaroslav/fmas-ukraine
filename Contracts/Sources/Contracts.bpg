@@ -1,0 +1,145 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = cn_Consts.bpl cn_Common.bpl cn_Access.bpl cn_About.bpl \
+  cn_WhatsNew.bpl cn_lxsFinal.bpl cn_dbfBuffer.bpl cn_DefaultAccounts.bpl \
+  cn_Roles.bpl cn_Log.bpl cn_SysOptions.bpl cn_Signature.bpl cn_sp_Actions.bpl \
+  cn_sp_National.bpl cn_sp_CategoryStudy.bpl cn_sp_FormStud.bpl \
+  cn_sp_FacultySpecGroup.bpl cn_sp_Spec.bpl cn_sp_Groups.bpl cn_sp_TypeDiss.bpl \
+  cn_sp_ContractsList.bpl cn_sp_DogStatus.bpl cn_sp_RaportStatus.bpl \
+  cn_sp_TypeDocum.bpl cn_ini_TypeStage.bpl cn_ini_TypeLgots.bpl \
+  cn_dt_DissInfo.bpl cn_dt_PayerInfo.bpl cn_dt_EntryRest.bpl cn_dt_Raport.bpl \
+  cn_dt_Lgots.bpl cn_inf_PaymentAnalysis.bpl cn_inf_DocsProv_DB_KR_Info.bpl \
+  cn_fr_PaymentAnalysis.bpl cn_fr_Calc.bpl cn_SchToPay.bpl cn_Contracts.bpl \
+  cn_ToNextCurs.bpl Contracts.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+
+Contracts.exe: Exe\Contracts.dpr
+  $(DCC)
+
+cn_Consts.bpl: Consts\cn_Consts.dpk
+  $(DCC)
+
+cn_Common.bpl: Common\cn_Common.dpk
+  $(DCC)
+
+cn_About.bpl: About\cn_About.dpk
+  $(DCC)
+
+cn_Contracts.bpl: Contracts\cn_Contracts.dpk
+  $(DCC)
+
+cn_Access.bpl: Access\cn_Access.dpk
+  $(DCC)
+
+cn_sp_National.bpl: National\cn_sp_National.dpk
+  $(DCC)
+
+cn_sp_CategoryStudy.bpl: CategoryStud\cn_sp_CategoryStudy.dpk
+  $(DCC)
+
+cn_sp_FormStud.bpl: FormStud\cn_sp_FormStud.dpk
+  $(DCC)
+
+cn_sp_FacultySpecGroup.bpl: FacultySpecGroup\cn_sp_FacultySpecGroup.dpk
+  $(DCC)
+
+cn_ini_TypeStage.bpl: IniTypeStage\cn_ini_TypeStage.dpk
+  $(DCC)
+
+cn_dt_EntryRest.bpl: EntryRest\cn_dt_EntryRest.dpk
+  $(DCC)
+
+cn_inf_PaymentAnalysis.bpl: PaymentAnalysis\cn_inf_PaymentAnalysis.dpk
+  $(DCC)
+
+cn_sp_ContractsList.bpl: SpContracts\cn_sp_ContractsList.dpk
+  $(DCC)
+
+cn_dt_Lgots.bpl: Lgots\cn_dt_Lgots.dpk
+  $(DCC)
+
+cn_ini_TypeLgots.bpl: IniTypeLgots\cn_ini_TypeLgots.dpk
+  $(DCC)
+
+cn_DefaultAccounts.bpl: DefaultAccounts\cn_DefaultAccounts.dpk
+  $(DCC)
+
+cn_lxsFinal.bpl: Final\cn_lxsFinal.dpk
+  $(DCC)
+
+cn_WhatsNew.bpl: WhatsNew\cn_WhatsNew.dpk
+  $(DCC)
+
+cn_dt_DissInfo.bpl: DissInfo\cn_dt_DissInfo.dpk
+  $(DCC)
+
+cn_sp_TypeDiss.bpl: spTypeDiss\cn_sp_TypeDiss.dpk
+  $(DCC)
+
+cn_dt_PayerInfo.bpl: PayerInfo\cn_dt_PayerInfo.dpk
+  $(DCC)
+
+cn_fr_PaymentAnalysis.bpl: Reports\frPaymentAnalysis\cn_fr_PaymentAnalysis.dpk
+  $(DCC)
+
+cn_fr_Calc.bpl: Reports\frCalc\cn_fr_Calc.dpk
+  $(DCC)
+
+cn_inf_DocsProv_DB_KR_Info.bpl: DocsProvDB_KR_info\cn_inf_DocsProv_DB_KR_Info.dpk
+  $(DCC)
+
+cn_sp_Groups.bpl: SpGroups\cn_sp_Groups.dpk
+  $(DCC)
+
+cn_Roles.bpl: cnRoles\cn_Roles.dpk
+  $(DCC)
+
+cn_dbfBuffer.bpl: dbfBuffer\cn_dbfBuffer.dpk
+  $(DCC)
+
+cn_sp_Actions.bpl: Actions\cn_sp_Actions.dpk
+  $(DCC)
+
+cn_Log.bpl: Log\cn_Log.dpk
+  $(DCC)
+
+cn_SchToPay.bpl: SchToPay\cn_SchToPay.dpk
+  $(DCC)
+
+cn_SysOptions.bpl: SysOptions\cn_SysOptions.dpk
+  $(DCC)
+
+cn_Signature.bpl: Signature\cn_Signature.dpk
+  $(DCC)
+
+cn_ToNextCurs.bpl: ToNextCurs\cn_ToNextCurs.dpk
+  $(DCC)
+
+cn_sp_Spec.bpl: SpSpec\cn_sp_Spec.dpk
+  $(DCC)
+
+cn_sp_DogStatus.bpl: SpDogStatus\cn_sp_DogStatus.dpk
+  $(DCC)
+
+cn_sp_RaportStatus.bpl: SpRaportStatus\cn_sp_RaportStatus.dpk
+  $(DCC)
+
+cn_sp_TypeDocum.bpl: SpTypeDocum\cn_sp_TypeDocum.dpk
+  $(DCC)
+
+cn_dt_Raport.bpl: DtRaport\cn_dt_Raport.dpk
+  $(DCC)
+
+

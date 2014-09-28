@@ -1,0 +1,57 @@
+package cn_inf_DocsProv_DB_KR_Info;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Пакет "Информация по документам и проводкам"'}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  vcldb,
+  cxExtEditorsVCLD7,
+  vclx,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  cn_Common;
+
+contains
+  cn_DM_kr_db_Loader in 'DocsProvDB_KR_info\cn_DM_kr_db_Loader.pas',
+  cn_DM_kr_db_Unit_Begin in 'DocsProvDB_KR_info\cn_DM_kr_db_Unit_Begin.pas' {frmDB_KR_Info},
+  cn_DM_kr_db in 'DocsProvDB_KR_info\cn_DM_kr_db.pas' {DM_kr_db: TDataModule},
+  cn_DM_kr_db_Unit_Second in 'DocsProvDB_KR_info\cn_DM_kr_db_Unit_Second.pas' {frmDB_KR_Info_2},
+  cn_DM_kr_db_Unit_Third in 'DocsProvDB_KR_info\cn_DM_kr_db_Unit_Third.pas' {frmDB_KR_Info_3};
+
+end.

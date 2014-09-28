@@ -1,0 +1,57 @@
+package cn_sp_National;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Пакет "Справочник гражданств"'}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  dbrtl,
+  vcljpg,
+  vcldb,
+  cxExtEditorsVCLD7,
+  vclx,
+  cn_Common,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  cn_Consts,
+  FIBPlus7,
+  visualdbclx,
+  visualclx;
+
+contains
+  National_Unit in 'National\National_Unit.pas' {frmNationality},
+  National_Loader in 'National\National_Loader.pas',
+  DM_National in 'National\DM_National.pas' {DM: TDataModule},
+  National_Add_Edit in 'National\National_Add_Edit.pas' {frmNational_Add_Edit};
+
+end.

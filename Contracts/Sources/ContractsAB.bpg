@@ -1,0 +1,267 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = cn_Consts.bpl cn_Common.bpl cn_Access.bpl cn_About.bpl \
+  cn_accounts.bpl cn_account_ost.bpl cn_WhatsNew.bpl cn_ini_TypeStage.bpl \
+  cn_ini_TypeLgots.bpl cn_sp_ContractsList.bpl cn_sp_National.bpl \
+  cn_sp_CategoryStudy.bpl cn_sp_FacultySpecGroup.bpl cn_sp_Spec.bpl \
+  cn_sp_FormStud.bpl cn_dt_EntryRest.bpl cn_lxsFinal.bpl cn_DefaultAccounts.bpl \
+  cn_dt_Lgots.bpl cn_inf_PaymentAnalysis.bpl cn_Contracts.bpl Cn_ReportsConst.bpl \
+  cn_ViewReports.bpl cn_ReportsFilter.bpl cn_ReportsStud.bpl cn_ReportsMail.bpl \
+  cn_ReportsPayDPK.bpl cn_ReportsDocProv.bpl cn_ReportsAnalyz.bpl \
+  cn_ImportDBF.bpl cn_ReportsAnalyzSmeta.bpl cn_ReportPercentPay.bpl \
+  cn_ReportsLgot.bpl cn_ReportsUnSum.bpl cn_ReportDiss.bpl \
+  cn_ReportPayAnalyzDPK.bpl cn_ReportConfig.bpl Sprav_pay.bpl cn_SchToPay.bpl \
+  cn_Signature.bpl cn_dbfBuffer.bpl cn_dt_DissInfo.bpl cn_dt_Orders.bpl \
+  cn_dt_Raport.bpl cn_inf_DocsProv_DB_KR_Info.bpl cn_Log.bpl cn_sp_DogStatus.bpl \
+  cn_sp_Groups.bpl cn_sp_NamesReport.bpl cn_sp_OrderTypes.bpl \
+  cn_sp_RaportStatus.bpl cn_sp_TypeDiss.bpl cn_sp_TypeDocum.bpl cn_sp_TypeDog.bpl \
+  cn_sp_Actions.bpl cn_spisanie.bpl cn_SysOptions.bpl cn_ToNextCurs.bpl \
+  cn_Roles.bpl cn_sp_CreditStatus.bpl cn_reestr.bpl cn_fr_paymentanalysis.bpl \
+  Cn_PrintDogovor.bpl cn_fr_calc.bpl PrintDogs.bpl import_from_VC.bpl \
+  cn_prices_ex.bpl cn_calc.bpl cn_ReportsExpSer.bpl cn_printregdog.bpl \
+  cn_printkanditdog.bpl cn_printnotexistdog.bpl Contracts.exe cn_Scan.bpl \
+  cn_Credit.bpl cn_SynchEDBO.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+
+
+cn_account_ost.bpl: cn_account_ost.dpk
+  $(DCC)
+
+cn_Consts.bpl: cn_Consts.dpk
+  $(DCC)
+
+cn_Common.bpl: cn_Common.dpk
+  $(DCC)
+
+cn_Access.bpl: cn_Access.dpk
+  $(DCC)
+
+cn_About.bpl: cn_About.dpk
+  $(DCC)
+
+cn_WhatsNew.bpl: cn_WhatsNew.dpk
+  $(DCC)
+
+cn_lxsFinal.bpl: cn_lxsFinal.dpk
+  $(DCC)
+
+cn_DefaultAccounts.bpl: cn_DefaultAccounts.dpk
+  $(DCC)
+
+cn_sp_National.bpl: cn_sp_National.dpk
+  $(DCC)
+
+cn_sp_CategoryStudy.bpl: cn_sp_CategoryStudy.dpk
+  $(DCC)
+
+cn_sp_FormStud.bpl: cn_sp_FormStud.dpk
+  $(DCC)
+
+cn_sp_FacultySpecGroup.bpl: cn_sp_FacultySpecGroup.dpk
+  $(DCC)
+
+cn_ini_TypeStage.bpl: cn_ini_TypeStage.dpk
+  $(DCC)
+
+cn_ini_TypeLgots.bpl: cn_ini_TypeLgots.dpk
+  $(DCC)
+
+cn_dt_EntryRest.bpl: cn_dt_EntryRest.dpk
+  $(DCC)
+
+cn_dt_Lgots.bpl: cn_dt_Lgots.dpk
+  $(DCC)
+
+cn_inf_PaymentAnalysis.bpl: cn_inf_PaymentAnalysis.dpk
+  $(DCC)
+
+cn_sp_ContractsList.bpl: cn_sp_ContractsList.dpk
+  $(DCC)
+
+cn_accounts.bpl: cn_accounts.dpk
+  $(DCC)
+
+cn_Contracts.bpl: cn_Contracts.dpk
+  $(DCC)
+
+Cn_ReportsConst.bpl: Cn_ReportsConst.dpk
+  $(DCC)
+
+cn_ReportsStud.bpl: cn_ReportsStud.dpk
+  $(DCC)
+
+cn_ReportsFilter.bpl: cn_ReportsFilter.dpk
+  $(DCC)
+
+cn_ViewReports.bpl: cn_ViewReports.dpk
+  $(DCC)
+
+cn_ReportsPayDPK.bpl: cn_ReportsPayDPK.dpk
+  $(DCC)
+
+cn_ReportsDocProv.bpl: cn_ReportsDocProv.dpk
+  $(DCC)
+
+cn_ReportsAnalyz.bpl: cn_ReportsAnalyz.dpk
+  $(DCC)
+
+cn_ImportDBF.bpl: cn_ImportDBF.dpk
+  $(DCC)
+
+cn_ReportsAnalyzSmeta.bpl: cn_ReportsAnalyzSmeta.dpk
+  $(DCC)
+
+cn_ReportPercentPay.bpl: cn_ReportPercentPay.dpk
+  $(DCC)
+
+cn_ReportsLgot.bpl: cn_ReportsLgot.dpk
+  $(DCC)
+
+cn_ReportsUnSum.bpl: cn_ReportsUnSum.dpk
+  $(DCC)
+
+cn_ReportDiss.bpl: cn_ReportDiss.dpk
+  $(DCC)
+
+cn_ReportPayAnalyzDPK.bpl: cn_ReportPayAnalyzDPK.dpk
+  $(DCC)
+
+cn_ReportConfig.bpl: cn_ReportConfig.dpk
+  $(DCC)
+
+cn_Scan.bpl: cn_Scan.dpk
+  $(DCC)
+
+cn_SchToPay.bpl: cn_SchToPay.dpk
+  $(DCC)
+
+cn_Signature.bpl: cn_Signature.dpk
+  $(DCC)
+
+cn_Credit.bpl: cn_Credit.dpk
+  $(DCC)
+
+cn_dbfBuffer.bpl: cn_dbfBuffer.dpk
+  $(DCC)
+
+cn_dt_DissInfo.bpl: cn_dt_DissInfo.dpk
+  $(DCC)
+
+cn_dt_Orders.bpl: cn_dt_Orders.dpk
+  $(DCC)
+
+cn_dt_Raport.bpl: cn_dt_Raport.dpk
+  $(DCC)
+
+cn_inf_DocsProv_DB_KR_Info.bpl: cn_inf_DocsProv_DB_KR_Info.dpk
+  $(DCC)
+
+cn_Log.bpl: cn_Log.dpk
+  $(DCC)
+
+cn_sp_DogStatus.bpl: cn_sp_DogStatus.dpk
+  $(DCC)
+
+cn_sp_Groups.bpl: cn_sp_Groups.dpk
+  $(DCC)
+
+cn_sp_NamesReport.bpl: cn_sp_NamesReport.dpk
+  $(DCC)
+
+cn_sp_OrderTypes.bpl: cn_sp_OrderTypes.dpk
+  $(DCC)
+
+cn_sp_RaportStatus.bpl: cn_sp_RaportStatus.dpk
+  $(DCC)
+
+cn_sp_Spec.bpl: cn_sp_Spec.dpk
+  $(DCC)
+
+cn_sp_TypeDiss.bpl: cn_sp_TypeDiss.dpk
+  $(DCC)
+
+cn_sp_TypeDocum.bpl: cn_sp_TypeDocum.dpk
+  $(DCC)
+
+cn_sp_TypeDog.bpl: cn_sp_TypeDog.dpk
+  $(DCC)
+
+cn_spisanie.bpl: cn_spisanie.dpk
+  $(DCC)
+
+cn_SysOptions.bpl: cn_SysOptions.dpk
+  $(DCC)
+
+cn_ToNextCurs.bpl: cn_ToNextCurs.dpk
+  $(DCC)
+
+cn_Roles.bpl: cn_Roles.dpk
+  $(DCC)
+
+cn_sp_Actions.bpl: cn_sp_Actions.dpk
+  $(DCC)
+
+cn_sp_CreditStatus.bpl: cn_sp_CreditStatus.dpk
+  $(DCC)
+
+cn_reestr.bpl: cn_reestr.dpk
+  $(DCC)
+
+cn_fr_paymentanalysis.bpl: cn_fr_paymentanalysis.dpk
+  $(DCC)
+
+Cn_PrintDogovor.bpl: Cn_PrintDogovor.dpk
+  $(DCC)
+
+cn_fr_calc.bpl: cn_fr_calc.dpk
+  $(DCC)
+
+PrintDogs.bpl: PrintDogs.dpk
+  $(DCC)
+
+import_from_VC.bpl: import_from_VC.dpk
+  $(DCC)
+
+Contracts.exe: Contracts.dpr
+  $(DCC)
+
+cn_calc.bpl: cn_calc.dpk
+  $(DCC)
+
+cn_ReportsExpSer.bpl: cn_ReportsExpSer.dpk
+  $(DCC)
+
+cn_prices_ex.bpl: cn_prices_ex.dpk
+  $(DCC)
+
+Sprav_pay.bpl: Sprav_pay.dpk
+  $(DCC)
+
+cn_printregdog.bpl: cn_printregdog.dpk
+  $(DCC)
+
+cn_printkanditdog.bpl: cn_printkanditdog.dpk
+  $(DCC)
+
+cn_printnotexistdog.bpl: cn_printnotexistdog.dpk
+  $(DCC)
+
+cn_ReportsMail.bpl: cn_ReportsMail.dpk
+  $(DCC)
+
+cn_SynchEDBO.bpl: cn_SynchEDBO.dpk
+  $(DCC)
+
+

@@ -1,0 +1,56 @@
+package Sprav_pay;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  dbrtl,
+  vcljpg,
+  vcldb,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  fs7,
+  frx7,
+  frxDB7,
+  frxe7,
+  cn_Common,
+  cn_Consts,
+  fsDB7,
+  vclx,
+  tee,
+  fqb70,
+  bdertl;
+
+contains
+  uSprav_pay_main in 'Reports\Sprav_pay\uSprav_pay_main.pas' {frmSprav_pay_main},
+  uZProc in 'Reports\Sprav_pay\uZProc.pas';
+
+end.

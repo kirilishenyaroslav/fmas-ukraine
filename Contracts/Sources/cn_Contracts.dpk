@@ -1,0 +1,64 @@
+package cn_Contracts;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Пакет "Контракты"'}
+{$IMPLICITBUILD ON}
+
+requires
+  cn_Consts,
+  Pwd,
+  AccMgmtBpl,
+  applib,
+  LoadDog,
+  cn_Common,
+  fs7,
+  frxDB7,
+  frx7,
+  SpAllPeople;
+
+contains
+  Contracts_Unit in 'Contracts\Contracts_Unit.pas' {frmContracts},
+  Contracts_Loader in 'Contracts\Contracts_Loader.pas',
+  Contract_Add_Edit in 'Contracts\Contract_Add_Edit.pas' {frm_Contracts_AE},
+  DM in 'Contracts\DM.pas' {DM_Contracts: TDataModule},
+  Contracts_Payer_AE in 'Contracts\Contracts_Payer_AE.pas' {frm_Contracts_Payer_AE},
+  Contracts_Study_AE in 'Contracts\Contracts_Study_AE.pas' {frm_Contracts_Study_AE},
+  Contracts_Periods_AE in 'Contracts\Contracts_Periods_AE.pas' {frm_Contracts_Periods_AE},
+  Contracts_Istochniki_AE in 'Contracts\Contracts_Istochniki_AE.pas' {frm_Istochniki_AE},
+  Contracts_StudInf_AE in 'Contracts\Contracts_StudInf_AE.pas' {frmStudInf},
+  cn_Contracts_FilterEx in 'Contracts\cn_Contracts_FilterEx.pas' {frmFilterEx},
+  cn_History_Unit in 'Contracts\cn_History_Unit.pas' {frmHistory},
+  cn_PayersInfo in 'Contracts\cn_PayersInfo.pas' {frmPayeres_Info},
+  cn_Periods in 'Contracts\cn_Periods.pas' {frmPeriods},
+  cn_ContractsLis in 'Contracts\cn_ContractsLis.pas' {frmContractsReestr},
+  UGetParamValueforstud in 'Contracts\UGetParamValueforstud.pas' {frmGetParamValueforstud},
+  uVer_dog in 'Contracts\uVer_dog.pas' {frmVer_dog},
+  Contracts_ViewReestrData in 'Contracts\Contracts_ViewReestrData.pas' {fmCnViewReestrData},
+  uComments in 'Contracts\uComments.pas' {frm_comments},
+  uComments_AE in 'Contracts\uComments_AE.pas' {frm_comments_ae},
+  uselect_valute in 'Contracts\uselect_valute.pas' {frmselect_valute},
+  uSelected_param_edbo in 'Contracts\uSelected_param_edbo.pas' {frm_selected_param_edbo};
+
+end.
+
