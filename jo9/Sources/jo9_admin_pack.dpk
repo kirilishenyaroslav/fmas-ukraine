@@ -1,0 +1,52 @@
+package jo9_admin_pack;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  vcljpg,
+  vcldb,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxGridVCLD7,
+  Kerneldpk,
+  jo9_PackLoader,
+  cxGridUtilsVCLD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  tagLib;
+
+contains
+  Block_Sch in 'jo9_admin\Block_Sch.pas' {Block_Sch_Form},
+  JO9_Options in 'jo9_admin\JO9_Options.pas' {JO9_Options_Form},
+  Report_settings in 'jo9_admin\Report_settings.pas' {Report_Settings_Form},
+  Rep_Setting_akt_sverki in 'jo9_admin\Rep_Setting_akt_sverki.pas' {SetPropAktForm};
+
+end.

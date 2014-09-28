@@ -1,0 +1,52 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = JO5_Common.bpl JO5_RegSch.bpl JO5_Access.bpl JO5_KorToSch.bpl \
+  JO5_DopKorToSch.bpl JO5_SetPrtJrnlParams7.bpl JO5_SetPrtMOParams7.bpl JO5v2.exe \
+  ZDocImport.bpl JO5_WorkRemnants.bpl Jo5_Saldo.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+JO5_Access.bpl: JO5_Access.dpk
+  $(DCC)
+
+JO5v2.exe: JO5v2.dpr
+  $(DCC)
+
+JO5_Common.bpl: JO5_Common.dpk
+  $(DCC)
+
+JO5_RegSch.bpl: JO5_RegSch.dpk
+  $(DCC)
+
+JO5_KorToSch.bpl: JO5_KorToSch.dpk
+  $(DCC)
+
+JO5_DopKorToSch.bpl: JO5_DopKorToSch.dpk
+  $(DCC)
+
+JO5_SetPrtJrnlParams7.bpl: JO5_SetPrtJrnlParams7.dpk
+  $(DCC)
+
+JO5_SetPrtMOParams7.bpl: JO5_SetPrtMOParams7.dpk
+  $(DCC)
+
+ZDocImport.bpl: ZDocImport.dpk
+  $(DCC)
+
+JO5_WorkRemnants.bpl: JO5_WorkRemnants.dpk
+  $(DCC)
+
+Jo5_Saldo.bpl: Jo5_Saldo.dpk
+  $(DCC)
+
+

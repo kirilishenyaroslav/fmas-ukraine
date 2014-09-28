@@ -1,0 +1,46 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = mdi.bpl tagLib.bpl jo9_PackLoader.bpl jo9_PrintPack.bpl \
+  jo9_admin_pack.bpl jo9_ostatki_pack.bpl JO9_Docs_Pack.bpl jo9_SpecOper_Pack.bpl \
+  JO9Project.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+JO9_Docs_Pack.bpl: JO9_Docs_Pack.dpk
+  $(DCC)
+
+jo9_PackLoader.bpl: jo9_PackLoader.dpk
+  $(DCC)
+
+jo9_PrintPack.bpl: jo9_PrintPack.dpk
+  $(DCC)
+
+jo9_admin_pack.bpl: jo9_admin_pack.dpk
+  $(DCC)
+
+jo9_ostatki_pack.bpl: jo9_ostatki_pack.dpk
+  $(DCC)
+
+jo9_SpecOper_Pack.bpl: jo9_SpecOper_Pack.dpk
+  $(DCC)
+
+mdi.bpl: mdi.dpk
+  $(DCC)
+
+tagLib.bpl: tagLib.dpk
+  $(DCC)
+
+JO9Project.exe: JO9Project.dpr
+  $(DCC)
+
+

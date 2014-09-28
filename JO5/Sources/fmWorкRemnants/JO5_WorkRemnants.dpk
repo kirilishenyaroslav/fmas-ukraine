@@ -1,0 +1,50 @@
+package JO5_WorkRemnants;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  vcl,
+  vcljpg,
+  dbrtl,
+  vcldb,
+  FIBPlus7,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxGridVCLD7,
+  JO5_Common;
+
+contains
+  mainWorkRemnants in 'mainWorkRemnants.pas' {FMainWorkRemnants},
+  Jo5_RemnantsDM in 'Jo5_RemnantsDM.pas' {DM: TDataModule},
+  Jo5_InsertUpdateDoc in 'Jo5_InsertUpdateDoc.pas' {fmInsertUpdateDoc},
+  Jo5_InfoDoc in 'Jo5_InfoDoc.pas' {fmInfoDoc};
+
+end.

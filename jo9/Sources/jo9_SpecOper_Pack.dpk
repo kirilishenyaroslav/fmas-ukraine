@@ -1,0 +1,55 @@
+package jo9_SpecOper_Pack;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  vcljpg,
+  vcldb,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxExtEditorsVCLD7,
+  cxGridVCLD7,
+  dxBarD7,
+  dxComnD7,
+  jo9_PackLoader,
+  Kerneldpk,
+  cxGridUtilsVCLD7,
+  dxBarExtItemsD7,
+  tagLib,
+  rxdb7,
+  fs7,
+  frxDB7,
+  frx7;
+
+contains
+  jo9_SpecOper in 'jo9_SpecOper\jo9_SpecOper.pas' {jo9_SpecOper_Form},
+  jo9_SpecOper_View in 'jo9_SpecOper\jo9_SpecOper_View.pas' {jo9_SpecOper_View_Form};
+
+end.
