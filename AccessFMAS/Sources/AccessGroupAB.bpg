@@ -1,0 +1,32 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = AccessFMAS.exe AccMgmtBpl.bpl PwdCrypt.dll Md5dll.dll Licence.dll
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+AccessFMAS.exe: AccessFMAS.dpr
+  $(DCC)
+
+AccMgmtBpl.bpl: AccMgmtBpl.dpk
+  $(DCC)
+
+PwdCrypt.dll: Pwd\PwdCryptDll\PwdCrypt.dpr
+  $(DCC)
+
+Md5dll.dll: MD5\Md5dll\Md5dll.dpr
+  $(DCC)
+
+Licence.dll: Licence\LicenceDll\Licence.dpr
+  $(DCC)
+
+
