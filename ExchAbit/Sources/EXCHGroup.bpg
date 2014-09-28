@@ -1,0 +1,30 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = EXCH_AbitCn_Resources.bpl EXCH_AbitCn_Loader.bpl EXCH_Crypt.bpl \
+  EXCH_AbitCn.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+EXCH_AbitCn.exe: EXCH_AbitCn\EXCH_AbitCn.dpr
+  $(DCC)
+
+EXCH_AbitCn_Resources.bpl: EXCH_AbitCn_Resources\EXCH_AbitCn_Resources.dpk
+  $(DCC)
+
+EXCH_AbitCn_Loader.bpl: EXCH_AbitCn_Loader\EXCH_AbitCn_Loader.dpk
+  $(DCC)
+
+EXCH_Crypt.bpl: EXCH_Crypt\EXCH_Crypt.dpk
+  $(DCC)
+
+

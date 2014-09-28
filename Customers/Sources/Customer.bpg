@@ -1,0 +1,42 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = CustPackage.bpl GroupContact.bpl SpBankPac.bpl TypeContact.bpl \
+  Branches.bpl Accounts.bpl IniTypeMen.bpl SpIst.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+CustPackage.bpl: CustomDPK\CustPackage.dpk
+  $(DCC)
+
+GroupContact.bpl: GroupContact\GroupContact.dpk
+  $(DCC)
+
+SpBankPac.bpl: BankDPK\SpBankPac.dpk
+  $(DCC)
+
+TypeContact.bpl: TypeContactDPK\TypeContact.dpk
+  $(DCC)
+
+Branches.bpl: BranchesDPK\Branches.dpk
+  $(DCC)
+
+Accounts.bpl: IniAccDPK\Accounts.dpk
+  $(DCC)
+
+IniTypeMen.bpl: IniTypeMenDPK\IniTypeMen.dpk
+  $(DCC)
+
+SpIst.bpl: SpIstDPK\SpIst.dpk
+  $(DCC)
+
+

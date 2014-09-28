@@ -1,0 +1,50 @@
+========== Инструкция по вызову справочника контрагентов ===============
+
+[I] Для работы со справочником контрагентов необходимы следующие пакеты(расположены в папке "Customer"):
+ - Accounts.bpl
+ - CustPackage.bpl 
+ - GroupContact.bpl
+ - IniTypeMen.bpl
+ - SpBankPac.bpl
+ - SpIst.bpl
+ - TypeContact.bpl
+И пакет загркзчик:
+ - LoadDog.bpl
+ - LoadDpg.dcp
+ 
+[II] Для вызова справочника необходимо:
+ 1. В uses прописать модуль "DogLoaderUnit";
+ 2. В Requires пакета добавить LoadDog.dcp;
+ 3. В нужном месте написать следующее:
+  
+  var
+   Res : Variant;
+  begin
+   Res := ShowCustomersSprav(Self, DBHandle, FormStyle, ActualDate, SelectionMode, id_customer, id_rate_account, isMultiSelect, id_session);
+  end;
+
+[III] Описание параметров вызова:
+ Self          - родительская форма;
+ DBHandle      - хэндл базы данных;
+ FormStyle     - стиль формы(fsNormal, fsMDIChild);
+ ActualDate    - актуальная дата(чаще всего равняется now);
+ SelectionMode - режим выбора:
+   * csmNone       - без выбора;
+   * csmCustomers  - выбор контрагента;
+   * csmRateAcc    - выбор счета;
+   * csmContactMen - выбор лица;
+   Примечание: данные константы находятся в пакете "Globals.bpl", модуль "GlobalSPR.pas".
+ id_customer     - идентификатор контрагента, на который необходимо позиционироваться при открытии справочника;
+ id_rate_account - идентификатор счета, на который необходимо позиционироваться при открытии справочника;
+ isMultiSelect   - нужна ли возможность множественного выбора контрагентов(Используется при csmCustomers);
+ id_session      - идентификатор сессии;
+ 
+[IV] Описание сессий:
+Если возникает необходимость отображать в справочнике не всех контрагентов, 
+а только определенное множество(набор идентификаторов известен), то необходимо использовать сессии.
+ 1. Получить значение генератора GEN_TMP_SP_CUSTOMER(это и будет id_session);
+ 2. Записать в таблицу TMP_SP_CUSTOMER необходимое множество идентификаторов контрагентов с данной сессией
+    (Таблица состоит из двух полей id_customer И id_session);
+ 3. Вызвать справочник передав ему id_session;
+ 4. По завершению работы справочника удалить данные из таблицы(delete from TMP_SP_CUSTOMER where id_session = :id_session);
+    

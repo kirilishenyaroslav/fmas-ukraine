@@ -1,0 +1,72 @@
+package CustPackage;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  vcldb,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  cxExtEditorsVCLD7,
+  vclx,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  cxCommonEditingVCLD7,
+  cxTreeListVCLD7,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  VclSmp,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  globals,
+  LoadDog,
+  dogLangPack,
+  waitpack,
+  CommonSp,
+  fs7,
+  frx7,
+  frxe7,
+  TICommon;
+
+contains
+  sp_cust_contact_FORM in 'sp_cust_contact_form.pas' {Fsp_cust_contact},
+  sp_cust_contact_FORM_ADD in 'sp_cust_contact_FORM_ADD.pas' {Fsp_cust_contact_form_add},
+  sp_cust_rate_acc_FORM_ADD in 'sp_cust_rate_acc_FORM_ADD.pas' {Fsp_cust_rate_acc_ADD},
+  sp_customer_FORM in 'sp_customer_FORM.pas' {Fsp_customer},
+  sp_customer_FORM_ADD in 'sp_customer_FORM_ADD.pas' {Fsp_customer_ADD},
+  sp_customer_FORM_PEOPLE_ADD in 'sp_customer_FORM_PEOPLE_ADD.pas' {fsp_customer_form_people_add},
+  pub_sp_customer_filterx in 'pub_sp_customer_filterx.pas' {frmCustomerFilter},
+  sp_customer_FORM_DUPLICATES in 'sp_customer_FORM_DUPLICATES.pas' {frmSP_CUST_DUPL},
+  sp_cust_rate_acc_FORM_HIS in 'sp_cust_rate_acc_FORM_HIS.pas' {frmHistAcc},
+  sp_customer_FORM_HIST in 'sp_customer_FORM_HIST.pas' {frmCustHist};
+
+end.

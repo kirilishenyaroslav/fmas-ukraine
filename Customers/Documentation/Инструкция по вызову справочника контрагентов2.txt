@@ -1,0 +1,93 @@
+========== Инструкция по вызову справочника контрагентов №2 ===============
+
+[I] Для работы со справочником контрагентов необходимы следующие пакеты(расположены в папке "Customer"):
+ - Accounts.bpl
+ - CustPackage.bpl 
+ - GroupContact.bpl
+ - IniTypeMen.bpl
+ - SpBankPac.bpl
+ - SpIst.bpl
+ - TypeContact.bpl
+И пакет загркзчик:
+ - LoadDog.bpl
+ - LoadDpg.dcp
+ 
+[II] Для вызова справочника необходимо:
+ 1. В uses прописать модуль "DogLoaderUnit";
+ 2. В Requires пакета добавить LoadDog.dcp;
+ 3. В нужном месте написать следующее:
+  
+  var
+    i, o : TSpravParams;
+  begin
+    i := TSpravParams.Create;
+    o := TSpravParams.Create;
+    i['DataBase']     := Integer(dm.Database.Handle);
+    i['FormStyle']    := fsNormal;
+    i['bMultiSelect'] := false;
+    i['id_session']   := -1;
+    i['SelectMode']   := selRateAccount;
+    LoadSprav('Customer\CustPackage.bpl', Self, i, o);
+    if o['ModalResult'] = mrOk then
+    begin
+      ....
+    end;
+    i.Free;
+    o.Free;  
+  end;
+
+[III] Описание параметров вызова:
+ DataBase      - хэндл базы данных;
+ FormStyle     - стиль формы(fsNormal, fsMDIChild);
+ SelectMode - режим выбора(константы находяться в LoadDog.bpl->dogLoaderUnit.pas):
+   * SelNone        - без выбора;
+   * SelCustomer    - выбор контрагента;
+   * selRateAccount - выбор счета;
+   
+ id_customer     - идентификатор контрагента, на который необходимо позиционироваться при открытии справочника;
+ id_rate_account - идентификатор счета, на который необходимо позиционироваться при открытии справочника;
+ isMultiSelect   - нужна ли возможность множественного выбора контрагентов(Используется при csmCustomers);
+ id_session      - идентификатор сессии;
+ show_all        - показывать все типы счетов при выборе (0 или 1) (иначе показываются только банковские)
+ actual_date     - дата на которую показівать счета
+ 
+[IV] Выходные параметры.
+Доступ к выходным параметрам осчуществляется через объект "o". Пример: id_cust := o['ID_CUSTOMER'];
+ ID_CUSTOMER - Идентификатор контрагента
+ ID_HIGHER_INSTACE - Идентификатор класса
+ NAME_CUSTOMER - Название
+ KOD_EDRPOU - ЕДРПОУ
+ DATE_NNS - Дата выдачи налогового свидетельства
+ NNS - Номер налогового свидетельства      
+ NALOG_NOM - Налоговый номер
+ FIZ_LICO - Физическое лицо
+ SHORT_NAME - Сокращенное название  
+ ID_DEPARTMENT - Идентификатор подразделения
+ PLAT_NDS - Платильщик НДС    
+ ID_BRANCH - Идентификатор отрасли
+ NAME_IST - Название класса
+ NAME_BRANCH - Название отрасли
+ NAME_DEPARTMENT - Название подразделения
+ ID_RATE_ACCOUNT - Идентификатор счета
+ RATE_ACCOUNT - Счет
+ ID_BANK - Идентификатор банка
+ ID_TYPE_ACCOUNT - Идентификатор типа счета
+ MFO - МФО
+ NAME_BANK - Название банка
+ NAME_TYPE_ACCOUNT - Название типа счета
+ ModalResult - :)
+
+ 
+[V] Описание сессий:
+Если возникает необходимость отображать в справочнике не всех контрагентов, 
+а только определенное множество(набор идентификаторов известен), то необходимо использовать сессии.
+ 1. Получить значение генератора GEN_TMP_SP_CUSTOMER(это и будет id_session);
+ 2. Записать в таблицу TMP_SP_CUSTOMER необходимое множество идентификаторов контрагентов с данной сессией
+    (Таблица состоит из двух полей id_customer И id_session);
+ 3. Вызвать справочник передав ему id_session;
+ 4. По завершению работы справочника удалить данные из таблицы(delete from TMP_SP_CUSTOMER where id_session = :id_session);
+   
+[VI] Существует фозможность посмотреть(визуально) возвращаемые параметры. Для этого понадобиться пакет:
+Workdog\ShowSP.bpl
+Для просмотра необходимо вызвать процедуру:
+ ShowSpravParams(Self, o);

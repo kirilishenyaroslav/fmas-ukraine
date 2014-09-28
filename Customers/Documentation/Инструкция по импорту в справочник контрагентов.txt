@@ -1,0 +1,49 @@
+Для импорта необходимо использовать пакет LoadDog.bpl и юнит содержащийся в нем: "DogLoaderUnit.pas".
+Используемые структуры:
+ 
+ TImportCustomer = record
+  exists : boolean;
+  id_customer : int64;
+  id_higher_instance : integer;
+  name_customer : string[180];
+  short_name : string[40];
+  kod_edrpou : string[16];
+  date_nns   : TDate;
+  nns        : string[16];
+  nalog_nom  : integer;
+  fiz_lico   : integer;
+  plat_nds   : integer;
+  pay_nds    : integer;
+  id_type_property : integer;
+  id_branch  : integer;
+ end;
+
+ TImportCustRateAcc = record
+  exists : boolean;
+  id_cust_rate_acc : int64;
+  rate_account : string[30];
+  id_bank : integer;
+  id_type_account : integer;
+  date_beg : TDate;
+  date_end : TDate;
+ end;
+
+ TImportBank = record
+  exists  : boolean;
+  id_bank : integer;
+  mfo     : string[16];
+  name    : string[80];
+  city    : string[30];
+ end;
+ 
+ где "exists" признак существования донной записи(т.е. она не будет проимпортирована и у 
+ нее обязательно должен быть выставлен идентификатор, а остальные поля аналогичны полям в БД);
+ 
+Используемые функции:
+
+function ImportCustomer(cust : TImportCustomer) : boolean;
+function ImportCustRateAcc(cust_rate_acc : TImportCustRateAcc) : boolean;
+function ImportBank(bank : TImportBank) : boolean;
+
+Возвращают "true" если импорт удался и "false" если нет.
+ 
