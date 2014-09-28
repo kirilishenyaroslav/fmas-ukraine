@@ -1,0 +1,57 @@
+package UP_AcceptOrder;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Модуль приказа на прием (2)'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  FIBPlus7,
+  CommonSP,
+  vcljpg,
+  cxLibraryVCLD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxExtEditorsVCLD7,
+  cxGridVCLD7,
+  Globals,
+  SpLib,
+  UpKernel,
+  applib,
+  qFControls,
+  qFEditForm,
+  UnivSprav,
+  TuCommon,
+  UpWMFillGrid;
+
+contains
+  Up_Acception in 'Up_Acception.pas' {UP_AcceptForm},
+  UP_DMAcception in 'UP_DMAcception.pas' {UPAcceptDM: TDataModule},
+  UP_AccAddSmeta in 'UP_AccAddSmeta.pas' {UP_AccAddSmetaForm},
+  uFreeFundsSelect in 'uFreeFundsSelect.pas' {fmFreeFundsSelect},
+  uBonusEdit in 'uBonusEdit.pas' {fmBonusEdit},
+  uAbsent in 'uAbsent.pas' {fmAbsentForm};
+
+end.

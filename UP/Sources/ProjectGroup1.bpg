@@ -1,0 +1,49 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = asup.exe UpComandOrder.bpl SpLib.bpl UpComandFactOrder.bpl \
+  UpKernel.bpl UpOrderList.exe UP_OrderList.bpl SpPost.bpl UP_AcceptOrder.bpl \
+  UpGetHoliday.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+asup.exe: ..\..\ASUP\Sources\asup.dpr
+  $(DCC)
+
+UpComandOrder.bpl: UpComandOrder\UpComandOrder.dpk
+  $(DCC)
+
+SpLib.bpl: ..\..\ASUP\Sources\SpLib.dpk
+  $(DCC)
+
+UpComandFactOrder.bpl: UpComandFactOrder\UpComandFactOrder.dpk
+  $(DCC)
+
+UpKernel.bpl: UpKernel\UpKernel.dpk
+  $(DCC)
+
+UpOrderList.exe: OrderList\UpOrderList.dpr
+  $(DCC)
+
+UP_OrderList.bpl: OrderList\UP_OrderList.dpk
+  $(DCC)
+
+SpPost.bpl: ..\..\ASUP\Sources\SpPost\SpPost.dpk
+  $(DCC)
+
+UP_AcceptOrder.bpl: AcceptOrder\UP_AcceptOrder.dpk
+  $(DCC)
+
+UpGetHoliday.bpl: UpGetHoliday\UpGetHoliday.dpk
+  $(DCC)
+
+

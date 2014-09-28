@@ -1,0 +1,61 @@
+package UpBonusRemove;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  FIBPlus7,
+  vcldb,
+  visualdbclx,
+  visualclx,
+  CommonSp,
+  vcljpg,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxGridVCLD7,
+  qFControls,
+  applib,
+  Globals,
+  AccMgmtBpl,
+  rxctl7,
+  vclx,
+  VclSmp,
+  cxExportVCLD7,
+  rxdb7,
+  UpKernel;
+
+contains
+  UpBonusRemoveOrderMUnit in 'UpBonusRemoveOrderMUnit.pas',
+  UpBonusRemoveMainForm in 'UpBonusRemoveMainForm.pas' {frmRemoveBonus},
+  UpBonusRemoveEdit in 'UpBonusRemoveEdit.pas' {frmBonusRemoveChangeDate},
+  UpRemoveBonusOrderReasonForm in 'UpRemoveBonusOrderReasonForm.pas' {frmReasonForm},
+  UBonusRemoveOrderShowErrors in 'UBonusRemoveOrderShowErrors.pas' {frmGetErrors},
+  UExtItemsInfo in 'UExtItemsInfo.pas' {frmExtItemsViewInfo};
+
+end.

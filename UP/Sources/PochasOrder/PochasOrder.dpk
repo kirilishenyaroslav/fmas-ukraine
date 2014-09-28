@@ -1,0 +1,64 @@
+package PochasOrder;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  qFControls,
+  commonsp,
+  FIBPlus7,
+  qfEditForm,
+  applib,
+  accmgmtbpl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  kerneldpk,
+  upkernel,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  vcl,
+  cxDataD7,
+  dbrtl,
+  vcljpg,
+  vcldb,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  visualdbclx,
+  visualclx,
+  rxctl7,
+  vclx,
+  VclSmp,
+  spallpeople,
+  univsprav;
+
+contains
+  uPochas in 'uPochas.pas' {frmPochasOrder},
+  uPochasSmet in 'uPochasSmet.pas' {frmPochasSmet},
+  uPochasAdd in 'uPochasAdd.pas' {frmPochasOrderAdd},
+  uPochasDates in 'uPochasDates.pas' {frmPochasDates};
+
+end.

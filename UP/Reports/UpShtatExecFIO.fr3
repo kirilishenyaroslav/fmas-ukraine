@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TfrxReport Name="" Version="3.15" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="2047" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" ReportOptions.CreateDate="39647,4908493171" ReportOptions.Description.Text="" ReportOptions.LastChange="39647,619599294" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end." PropData="044C65667403850103546F70020708446174617365747301010C2500000020446174615365743D22667278446174612220446174615365744E616D653D2244617461220000095661726961626C657301010C25000000204E616D653D224163745F44617465222056616C75653D222731382E30372E3230303827220000055374796C650100">
+  <TfrxReportPage Name="Page1" Orientation="poLandscape" PaperWidth="297" PaperHeight="210" PaperSize="9" LeftMargin="10,00125" RightMargin="10,00125" TopMargin="10,00125" BottomMargin="10,00125" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxReportTitle Name="ReportTitle1" Height="43" Left="0" Top="16" Width="1046,920361175">
+      <TfrxMemoView Name="Memo1" Left="0" Top="22" Width="1044" Height="16" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" HAlign="haCenter" Memo.Text="ÂÈÊÎÍÀÍÍß ØÒÀÒÍÎÃÎ ÐÎÇÊËÀÄÓ ÍÀ [Act_Date]" ParentFont="False"/>
+    </TfrxReportTitle>
+    <TfrxPageHeader Name="PageHeader1" Height="36" Left="0" Top="79" Width="1046,920361175"/>
+    <TfrxGroupHeader Name="GroupHeader1" Height="16" Left="0" Top="217" Width="1046,920361175" Condition="Data.&#34;DEPARTMENT_NAME&#34;" Stretched="True">
+      <TfrxMemoView Name="Memo2" Left="2" Top="0" Width="1044" Height="16" StretchMode="smMaxHeight" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" Frame.Typ="15" HAlign="haCenter" Memo.Text="[Data.&#34;DEPARTMENT_NAME&#34;]" ParentFont="False"/>
+    </TfrxGroupHeader>
+    <TfrxGroupHeader Name="GroupHeader2" Height="18" Left="0" Top="253" Width="1046,920361175" Condition="Data.&#34;POST_NAME&#34;">
+      <TfrxMemoView Name="Memo3" Left="2" Top="2" Width="362" Height="16" Font.Charset="1" Font.Color="0" Font.Height="-15" Font.Name="Times New Roman" Font.Style="1" Frame.Typ="15" Memo.Text="[Data.&#34;POST_NAME&#34;]" ParentFont="False" VAlign="vaBottom"/>
+      <TfrxMemoView Name="Memo18" Left="364" Top="2" Width="59" Height="16" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.2n" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" Memo.Text="[Data.&#34;PLAN_OKLAD&#34;]"/>
+      <TfrxMemoView Name="Memo19" Left="423" Top="2" Width="59" Height="16" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.2n" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" Memo.Text="[Data.&#34;PLAN_OKLAD_BASE&#34;]"/>
+      <TfrxMemoView Name="Memo20" Left="482" Top="2" Width="27" Height="16" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.2n" Frame.Typ="15" HAlign="haRight" Memo.Text="[Data.&#34;SMETA_KOD&#34;]"/>
+      <TfrxMemoView Name="Memo21" Left="509" Top="2" Width="59" Height="16" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.2n" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" HideZeros="True" Memo.Text="[Data.&#34;PLAN_OKLAD_PPS&#34;]"/>
+      <TfrxMemoView Name="Memo22" Left="605" Top="2" Width="27" Height="16" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.2n" Frame.Typ="15" HAlign="haRight" HideZeros="True" Memo.Text="[Data.&#34;SMETA_PPS_KOD&#34;]"/>
+      <TfrxMemoView Name="Memo23" Left="568" Top="2" Width="37" Height="16" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.2n" Frame.Typ="15" HAlign="haRight" HideZeros="True" Memo.Text="[Data.&#34;KOEFF_PPS&#34;]"/>
+      <TfrxMemoView Name="Memo24" Left="632" Top="2" Width="46" Height="16" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.4f" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" HideZeros="True" Memo.Text="[Data.&#34;PLAN_RATE_COUNT&#34;]"/>
+      <TfrxMemoView Name="Memo25" Left="678" Top="2" Width="368" Height="16" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.4f" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" HideZeros="True" Memo.Text=""/>
+    </TfrxGroupHeader>
+    <TfrxMasterData Name="MasterData1" Height="52" Left="0" Top="291" Width="1046,920361175" ColumnWidth="0" ColumnGap="0" DataSet="frxData" DataSetName="Data" RowCount="0">
+      <TfrxMemoView Name="Memo4" Left="2" Top="0" Width="202" Height="16" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="1" Frame.Typ="15" HAlign="haCenter" Memo.Text="[&#60;Data.&#34;FIO&#34;&#62;] ([Data.&#34;TN&#34;])" ParentFont="False"/>
+      <TfrxMemoView Name="Memo5" Left="2" Top="16" Width="202" Height="16" Frame.Typ="15" HAlign="haCenter" Memo.Text="[Data.&#34;MOV_DATE_BEG&#34;] - [Data.&#34;MOV_DATE_END&#34;]"/>
+      <TfrxMemoView Name="Memo6" Left="2" Top="32" Width="202" Height="19" Frame.Typ="15" Memo.Text="Íàêàç ¹[Data.&#34;ORDER_STR&#34;]"/>
+      <TfrxMemoView Name="Memo7" Left="204" Top="0" Width="80" Height="51" Frame.Typ="15" HAlign="haCenter" Memo.Text="[Data.&#34;WORK_REASON&#34;]" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo8" Left="284" Top="0" Width="40" Height="51" Frame.Typ="15" HAlign="haCenter" Memo.Text="[Data.&#34;STEP&#34;]" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo9" Left="324" Top="0" Width="40" Height="51" Frame.Typ="15" HAlign="haCenter" Memo.Text="[Data.&#34;ZVAN&#34;]" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo10" Left="364" Top="0" Width="59" Height="51" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.2n" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" Memo.Text="[Data.&#34;FACT_OKLAD&#34;]" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo12" Left="423" Top="0" Width="59" Height="51" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.2n" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" Memo.Text="[Data.&#34;FACT_OKLAD_BASE&#34;]" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo13" Left="482" Top="0" Width="27" Height="51" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%g" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" Memo.Text="[Data.&#34;SMETA_KOD&#34;]" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo14" Left="509" Top="0" Width="59" Height="51" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.2n" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" HideZeros="True" Memo.Text="[Data.&#34;FACT_OKLAD_PPS&#34;]" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo15" Left="605" Top="0" Width="27" Height="51" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%g" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" HideZeros="True" Memo.Text="[Data.&#34;SMETA_PPS_KOD&#34;]" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo16" Left="568" Top="0" Width="37" Height="51" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%g" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" HideZeros="True" Memo.Text="[Data.&#34;KOEFF_PPS&#34;]" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo26" Left="725" Top="0" Width="46" Height="51" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.4n" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" HideZeros="True" Memo.Text="[Data.&#34;TEMPFREE_RATE_COUNT&#34;]" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo27" Left="771" Top="0" Width="46" Height="51" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.4n" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" HideZeros="True" Memo.Text="[Data.&#34;TEMPFOR_RATE_COUNT&#34;]" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo29" Left="817" Top="0" Width="229" Height="51" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.4n" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" HideZeros="True" Memo.Text="[Data.&#34;NOTE&#34;]" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo28" Left="632" Top="0" Width="46" Height="51" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.4n" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" HideZeros="True" Memo.Text="" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo17" Left="678" Top="0" Width="47" Height="51" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.4n" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" HideZeros="True" Memo.Text="[Data.&#34;FACT_RATE_COUNT&#34;]" VAlign="vaCenter"/>
+    </TfrxMasterData>
+    <TfrxGroupHeader Name="GroupHeader3" Height="22" Left="0" Top="175" Width="1046,920361175" Condition="Data.&#34;SMETA_TITLE&#34;">
+      <TfrxMemoView Name="Memo11" Left="2" Top="1" Width="1044" Height="21" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="2" Frame.Typ="15" HAlign="haCenter" Memo.Text="[Data.&#34;SMETA_TITLE&#34;]" ParentFont="False"/>
+    </TfrxGroupHeader>
+  </TfrxReportPage>
+</TfrxReport>

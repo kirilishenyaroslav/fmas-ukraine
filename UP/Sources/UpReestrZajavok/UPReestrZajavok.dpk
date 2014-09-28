@@ -1,0 +1,79 @@
+package UPReestrZajavok;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  applib,
+  CommonSp,
+  qFControls,
+  UpKernel,
+  FIBPlus7,
+  vcljpg,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxExtEditorsVCLD7,
+  cxGridVCLD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  applib,
+  AccMgmtBpl,
+  SpAllPeople,
+  UnivSprav,
+  fs7,
+  frxDB7,
+  frx7,
+  vcl,
+  dbrtl,
+  vcldb,
+  visualdbclx,
+  visualclx,
+  fsDB7,
+  vclx,
+  tee,
+  fqb70,
+  bdertl,
+  Globals,
+  VclSmp,
+  rxctl7,
+  rxdb7,
+  Pwd,
+  SysL,
+  MD5,
+  dsnap,
+  ibxpress,
+  cxExportVCLD7,
+  Zarplatadpk;
+
+contains
+  uReestrZajavok in 'uReestrZajavok.pas' {frmReestrZajavok},
+  Add_Reestr in 'Add_Reestr.pas' {Add_Form},
+  PrintFormR in 'PrintFormR.pas' {frmPrintR},
+  ReestrSignsHist in 'ReestrSignsHist.pas' {frmSignsHst};
+
+end.

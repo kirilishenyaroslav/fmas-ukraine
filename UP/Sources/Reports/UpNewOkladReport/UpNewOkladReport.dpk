@@ -1,0 +1,44 @@
+package UpNewOkladReport;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Отчет по людям (ФШР)'}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  CommonSp,
+  qFControls,
+  vcljpg,
+  fs7,
+  frxDB7,
+  frx7,
+  FIBPlus7,
+  ShowNagScreen;
+
+contains
+  uNewOkladData in 'uNewOkladData.pas' {NewOkladsData: TDataModule},
+  uNewOkladReportForm in 'uNewOkladReportForm.pas' {fmNewOkladPrint};
+
+end.

@@ -1,0 +1,82 @@
+package UpPremiaOrder;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  CommonSp,
+  FIBPlus7,
+  Globals,
+  vcl,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  vcldb,
+  cxExtEditorsVCLD7,
+  vclx,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  visualdbclx,
+  visualclx,
+  rxdb7,
+  rxctl7,
+  VclSmp,
+  qFControls,
+  qFEditForm,
+  SpLib,
+  SpAllPeople,
+  frxe7,
+  frx7,
+  fs7,
+  tee,
+  fqb70,
+  bdertl,
+  designide,
+  vclactnband,
+  FR7,
+  dsnap,
+  ibxpress,
+  ShtatUtils,
+  applib,
+  AccMgmtBpl,
+  UnivSprav,
+  UpKernel,
+  dclOfficeXP;
+
+contains
+  UpPremiaOrderMUnit in 'UpPremiaOrderMUnit.pas',
+  UpPremiaOrderForm in 'UpPremiaOrderForm.pas' {fmPremiaOrder},
+  UpPremiaOrderFormEditSm in 'UpPremiaOrderFormEditSm.pas' {fmChangeSmeta},
+  UPremiaOrderAddNW in 'UPremiaOrderAddNW.pas' {frmAddNW},
+  UpPremiaOrderEditPeriod in 'UpPremiaOrderEditPeriod.pas' {frmEditPeriod},
+  UpPremiaOrderReasonForm in 'UpPremiaOrderReasonForm.pas' {frmReasonForm},
+  UPremiaOrderShowErrors in 'UPremiaOrderShowErrors.pas' {frmGetErrors},
+  UpPremiaNoClone in 'UpPremiaNoClone.pas' {frmNoCloneForm},
+  UpOrderDismission in 'UpOrderDismission.pas' {fmWarnDismission};
+
+end.

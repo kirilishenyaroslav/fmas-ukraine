@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TfrxReport Name="" Version="3.15" DotMatrixReport="False" EngineOptions.DoublePass="True" EngineOptions.MaxMemSize="10000000" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="2047" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" ReportOptions.CreateDate="37965,7138414352" ReportOptions.Description.Text="" ReportOptions.LastChange="39160,4758284607" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end." PropData="044C65667403280108446174617365747301010C3600000020446174615365743D225265706F727444736574446174612220446174615365744E616D653D225265706F72744473657444617461220000095661726961626C657301010C16000000204E616D653D22204E65772043617465676F7279312200010C27000000204E616D653D2254222056616C75653D2227E2F1B320E4E0F2E820EDE0F0EEE4E6E5EDEDFF272200010C31000000204E616D653D224445505F4E414D45222056616C75653D2227C4C2CF20ABD3EAF0EFF0EEECE2EEE4F7EEF0ECE5F2BB272200010C3A000000204E616D653D224E616D6556222056616C75653D2227C4CECDC5D6DCCAC8C920CDC0D6B2CECDC0CBDCCDC8C920D3CDB2C2C5D0D1C8D2C5D227220000055374796C650100">
+  <TfrxReportPage Name="Page1" Orientation="poLandscape" PaperWidth="297" PaperHeight="210" PaperSize="9" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxReportTitle Name="ReportTitle1" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" Height="82,9" Left="0" ParentFont="False" Top="18,89765" Width="1046,92981">
+      <TfrxMemoView Name="Memo1" Align="baCenter" Left="1,464905" Top="30,9" Width="1044" Height="48" StretchMode="smMaxHeight" Font.Charset="1" Font.Color="0" Font.Height="-19" Font.Name="Times New Roman" Font.Style="1" HAlign="haCenter" Memo.Text="СПИСОК" ParentFont="False"/>
+      <TfrxMemoView Name="Memo12" Left="912,25201" Top="0" Width="131,62" Height="16" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Times New Roman" Font.Style="0" HAlign="haRight" Memo.Text="Маш. дата [date]" ParentFont="False"/>
+      <TfrxMemoView Name="Memo3" Left="0" Top="0" Width="544" Height="16" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Times New Roman" Font.Style="1" Memo.Text="[NameV]" ParentFont="False"/>
+      <TfrxMemoView Name="Memo6" Align="baCenter" Left="1,464905" Top="60,47248" Width="1044" Height="21,54329" StretchMode="smMaxHeight" Font.Charset="1" Font.Color="0" Font.Height="-19" Font.Name="Times New Roman" Font.Style="1" HAlign="haCenter" Memo.Text="[ReportDsetData.&#34;CATEGORY&#34;]" ParentFont="False"/>
+    </TfrxReportTitle>
+    <TfrxMasterData Name="MasterData1" Font.Charset="1" Font.Color="536870912" Font.Height="-13" Font.Name="Times New Roman" Font.Style="0" Height="20" Left="0" ParentFont="False" Top="279,68522" Width="1046,92981" Columns="1" ColumnWidth="200" ColumnGap="20" DataSet="ReportDsetData" DataSetName="ReportDsetData" RowCount="0" Stretched="True">
+      <TfrxMemoView Name="Memo8" Left="0" Top="0" Width="56" Height="20" StretchMode="smMaxHeight" Frame.Typ="15" HAlign="haCenter" Memo.Text="[Line#]" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo9" Left="56" Top="0" Width="384" Height="20" StretchMode="smMaxHeight" Frame.Typ="15" Memo.Text="[ReportDsetData.&#34;FIO&#34;]" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo10" Left="439,78" Top="0" Width="84" Height="20" StretchMode="smMaxHeight" Frame.Typ="15" HAlign="haCenter" Memo.Text="[ReportDsetData.&#34;TIN&#34;]" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo11" Left="523,81154" Top="0" Width="68" Height="20" StretchMode="smMaxHeight" Frame.Typ="15" HAlign="haCenter" Memo.Text="[ReportDsetData.&#34;WORK_REASON&#34;]" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo13" Left="592,03154" Top="0" Width="228" Height="20" StretchMode="smMaxHeight" Frame.Typ="15" Memo.Text="[ReportDsetData.&#34;NAME_POST&#34;]" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo17" Left="820,25" Top="0" Width="226,68" Height="20" StretchMode="smMaxHeight" Frame.Typ="15" Memo.Text="[ReportDsetData.&#34;STEP_ZVAN&#34;]" VAlign="vaCenter"/>
+    </TfrxMasterData>
+    <TfrxHeader Name="Header1" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Times New Roman" Font.Style="0" Height="52" Left="0" ParentFont="False" Top="162,51979" Width="1046,92981" Stretched="True">
+      <TfrxMemoView Name="Memo2" Left="0" Top="0" Width="56" Height="52" Frame.Typ="15" HAlign="haCenter" Memo.Text="№ п/п" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo15" Left="56" Top="0" Width="384,03154" Height="52" Frame.Typ="15" HAlign="haCenter" Memo.Text="Прізвище, ім'я, по батькові" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo19" Left="440,03154" Top="0" Width="84" Height="52" Frame.Typ="15" HAlign="haCenter" Memo.Text="Ід. номер" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo20" Left="524,03154" Top="0" Width="68" Height="52" Frame.Typ="15" HAlign="haCenter" Memo.Text="Штатний чи сумісник" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo21" Left="592,25201" Top="0" Width="228" Height="52" Frame.Typ="15" HAlign="haCenter" Memo.Text="Посада" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo22" Left="820,25201" Top="0" Width="226,68" Height="52" Frame.Typ="15" HAlign="haCenter" Memo.Text="Науковий ступінь, вчене звання" VAlign="vaCenter"/>
+    </TfrxHeader>
+    <TfrxGroupHeader Name="GroupHeader1" Font.Charset="1" Font.Color="0" Font.Height="-15" Font.Name="Times New Roman" Font.Style="1" Height="18,9" Left="0" ParentFont="False" Top="238,11039" Width="1046,92981" Condition="ReportDsetData.&#34;name_cafedra&#34;" Stretched="True">
+      <TfrxMemoView Name="Memo4" Left="0" Top="0" Width="523,46" Height="18,89765" StretchMode="smMaxHeight" DataSet="ReportDsetData" DataSetName="ReportDsetData" Frame.Typ="13" Memo.Text="[ReportDsetData.&#34;NAME_FACULTY&#34;]" SuppressRepeated="True"/>
+      <TfrxMemoView Name="Memo5" Left="523,46" Top="0" Width="523,47" Height="18,9" Frame.Typ="14" Memo.Text="[ReportDsetData.&#34;NAME_CAFEDRA&#34;]"/>
+    </TfrxGroupHeader>
+  </TfrxReportPage>
+</TfrxReport>

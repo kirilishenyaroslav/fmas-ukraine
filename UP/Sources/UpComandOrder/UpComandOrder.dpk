@@ -1,0 +1,51 @@
+package UpComandOrder;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  CommonSp,
+  qFControls,
+  UnivSprav,
+  SpAllPeople,
+  applib,
+  AccMgmtBpl;
+
+contains
+  UpComandOrderMUnit in 'UpComandOrderMUnit.pas',
+  UpComandOrderMain in 'UpComandOrderMain.pas' {FormComandMain},
+  UpComandOrderEdit in 'UpComandOrderEdit.pas' {FormComandOrderEdit},
+  UpComandOrderPosts in 'UpComandOrderPosts.pas' {FormPost},
+  UpComandOrderCityOrg in 'UpComandOrderCityOrg.pas' {FormComandCityOrg},
+  UpComandOrderSmet in 'UpComandOrderSmet.pas' {FormComandSmet},
+  UpComandOrderAddOrg in 'UpComandOrderAddOrg.pas' {FormAddOrg},
+  UpComandOrderSpCity in 'UpComandOrderSpCity.pas' {FormComandSpCity},
+  UpComandOrderCityAdd in 'UpComandOrderCityAdd.pas' {FormCityAdd},
+  UpComandOrderSpOrg in 'UpComandOrderSpOrg.pas' {FormComandSpOrg},
+  UpComandOrderShowErrors in 'UpComandOrderShowErrors.pas' {frmGetErrors},
+  UpComandOrderSpTarget in 'UpComandOrderSpTarget.pas' {FormComandSpTarget},
+  UpComandOrderTargetAdd in 'UpComandOrderTargetAdd.pas' {FormTargetAdd};
+
+end.

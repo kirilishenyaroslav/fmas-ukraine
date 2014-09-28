@@ -1,0 +1,235 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = UnivSprav.bpl UpGetHoliday.bpl UP_OrderList.bpl UP_AcceptOrder.bpl \
+  UP_OrderPrint.bpl UP_CancelOrderItem7.bpl UpPremiaOrder.bpl UpForma6.bpl \
+  UpForma7.bpl UpForma10a.bpl UpForma11a.bpl UpForma14.bpl UpForma15a.bpl \
+  UpForma16a.bpl UpForma51.bpl UpReeCandidats.bpl UpReeDoctors.bpl \
+  UpRegardsCommonReport.bpl UpReportStd.bpl UpScienceReport.bpl UpHolidayPlan.bpl \
+  UpHolidayFact.bpl HL_CalcPlanHoliday70.bpl HL_FilterPrtPlanFact70.bpl \
+  UPForma12.bpl UpForma17.bpl UpForma18.bpl UpForma19.bpl UpForma20.bpl \
+  UPForma30.bpl UpReeWithRegsLess.bpl UPReportACCEPTED.bpl UpReportCard.bpl \
+  UpReportChildren.bpl UpReportDEAD.bpl UPReportDISMISSED.bpl UpReportForma3.bpl \
+  UpReportForma4.bpl UpReportForma9.bpl UpReportForma8.bpl UpReportHoliday.bpl \
+  UpReportLessAge.bpl UPReportLongAge.bpl UpReportNation.bpl UpReportNumber.bpl \
+  UpReportPensioners.bpl UpReportProfAllSotr.bpl UpReportProfAward.bpl \
+  UpReportProfHosp.bpl UpReportProfKom.bpl UPReportProfPermit.bpl \
+  UpReportProfSotr.bpl UpReportReeWork.bpl UPReportShtatBonus.bpl \
+  UpReportShtatRasp.bpl UPReportSotr.bpl UpReportSovm.bpl UpReportSpecstaj.bpl \
+  UpReportSvod.bpl UpReportTable.bpl UPReportTempWorkers.bpl \
+  UpReportVozrChild.bpl UpReportWorkF27.bpl UpReportWorkingPensioners.bpl \
+  UPSciencePensionReport.bpl UpReportWithPensienceWork.bpl up_filter.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+UP_OrderList.bpl: OrderList\UP_OrderList.dpk
+  $(DCC)
+
+UP_AcceptOrder.bpl: AcceptOrder\UP_AcceptOrder.dpk
+  $(DCC)
+
+UP_OrderPrint.bpl: UP_PrintOrder\UP_OrderPrint.dpk
+  $(DCC)
+
+UP_CancelOrderItem7.bpl: UP_CancelOrderItem\Package\UP_CancelOrderItem7.dpk
+  $(DCC)
+
+UpPremiaOrder.bpl: UpPremiaOrder\UpPremiaOrder.dpk
+  $(DCC)
+
+UpForma6.bpl: Reports\UpForma6\UpForma6.dpk
+  $(DCC)
+
+UpForma7.bpl: Reports\UpForma7\UpForma7.dpk
+  $(DCC)
+
+UpForma10a.bpl: Reports\UpForma10a\UpForma10a.dpk
+  $(DCC)
+
+UpForma11a.bpl: Reports\UpForma11a\UpForma11a.dpk
+  $(DCC)
+
+UpForma14.bpl: Reports\UpForma14\UpForma14.dpk
+  $(DCC)
+
+UpForma15a.bpl: Reports\UpForma15a\UpForma15a.dpk
+  $(DCC)
+
+UpForma16a.bpl: Reports\UpForma16a\UpForma16a.dpk
+  $(DCC)
+
+UpForma51.bpl: Reports\UpForma51\UpForma51.dpk
+  $(DCC)
+
+UpReeCandidats.bpl: Reports\UpReeCandidats\UpReeCandidats.dpk
+  $(DCC)
+
+UpReeDoctors.bpl: Reports\UpReeDoctors\UpReeDoctors.dpk
+  $(DCC)
+
+UpRegardsCommonReport.bpl: Reports\UpRegardsCommonReport\UpRegardsCommonReport.dpk
+  $(DCC)
+
+UpReportStd.bpl: Reports\UpReportStd\UpReportStd.dpk
+  $(DCC)
+
+UpScienceReport.bpl: Reports\UpScienceReport\UpScienceReport.dpk
+  $(DCC)
+
+UpHolidayPlan.bpl: UpHolidayPlan\UpHolidayPlan.dpk
+  $(DCC)
+
+UpHolidayFact.bpl: UpHolidayFact\UpHolidayFact.dpk
+  $(DCC)
+
+HL_CalcPlanHoliday70.bpl: HL_CalcPlanHoliday\Package\HL_CalcPlanHoliday70.dpk
+  $(DCC)
+
+HL_FilterPrtPlanFact70.bpl: Reports\HL_FilterPrtPlanFact\Package\HL_FilterPrtPlanFact70.dpk
+  $(DCC)
+
+UPForma12.bpl: Reports\UpForma12\UPForma12.dpk
+  $(DCC)
+
+UpForma17.bpl: Reports\UpForma17\UpForma17.dpk
+  $(DCC)
+
+UpForma18.bpl: Reports\UpForma18\UpForma18.dpk
+  $(DCC)
+
+UpForma19.bpl: Reports\UpForma19\UpForma19.dpk
+  $(DCC)
+
+UpForma20.bpl: Reports\UpForma20\UpForma20.dpk
+  $(DCC)
+
+UPForma30.bpl: Reports\UpForma30\UPForma30.dpk
+  $(DCC)
+
+UpReeWithRegsLess.bpl: Reports\UpReeWithRegsLess\UpReeWithRegsLess.dpk
+  $(DCC)
+
+UPReportACCEPTED.bpl: Reports\UPReportACCEPTED\UPReportACCEPTED.dpk
+  $(DCC)
+
+UpReportCard.bpl: Reports\UpReportCard\UpReportCard.dpk
+  $(DCC)
+
+UpReportChildren.bpl: Reports\UpReportChildren\UpReportChildren.dpk
+  $(DCC)
+
+UpReportDEAD.bpl: Reports\UpReportDEAD\UpReportDEAD.dpk
+  $(DCC)
+
+UPReportDISMISSED.bpl: Reports\UPReportDISMISSED\UPReportDISMISSED.dpk
+  $(DCC)
+
+UpReportForma3.bpl: Reports\UpReportForma3\UpReportForma3.dpk
+  $(DCC)
+
+UpReportForma4.bpl: Reports\UpReportForma4\UpReportForma4.dpk
+  $(DCC)
+
+UpReportForma9.bpl: Reports\UpReportForma8\UpReportForma9.dpk
+  $(DCC)
+
+UpReportForma8.bpl: Reports\UpReportForma8\UpReportForma8.dpk
+  $(DCC)
+
+UpReportHoliday.bpl: Reports\UpReportHoliday\UpReportHoliday.dpk
+  $(DCC)
+
+UpReportLessAge.bpl: Reports\UpReportLessAge\UpReportLessAge.dpk
+  $(DCC)
+
+UPReportLongAge.bpl: Reports\UPReportLongAge\UPReportLongAge.dpk
+  $(DCC)
+
+UpReportNation.bpl: Reports\UpReportNation\UpReportNation.dpk
+  $(DCC)
+
+UpReportNumber.bpl: Reports\UpReportNumber\UpReportNumber.dpk
+  $(DCC)
+
+UpReportPensioners.bpl: Reports\UpReportPensioners\UpReportPensioners.dpk
+  $(DCC)
+
+UpReportProfAllSotr.bpl: Reports\UpReportProfAllSotr\UpReportProfAllSotr.dpk
+  $(DCC)
+
+UpReportProfAward.bpl: Reports\UpReportProfAward\UpReportProfAward.dpk
+  $(DCC)
+
+UpReportProfHosp.bpl: Reports\UpReportProfHosp\UpReportProfHosp.dpk
+  $(DCC)
+
+UpReportProfKom.bpl: Reports\UpReportProfKom\UpReportProfKom.dpk
+  $(DCC)
+
+UPReportProfPermit.bpl: Reports\UPReportProfPermit\UPReportProfPermit.dpk
+  $(DCC)
+
+UpReportProfSotr.bpl: Reports\UpReportProfSotr\UpReportProfSotr.dpk
+  $(DCC)
+
+UpReportReeWork.bpl: Reports\UpReportReeWork\UpReportReeWork.dpk
+  $(DCC)
+
+UPReportShtatBonus.bpl: Reports\UPReportShtatBonus\UPReportShtatBonus.dpk
+  $(DCC)
+
+UpReportShtatRasp.bpl: Reports\UpReportShtatRasp\UpReportShtatRasp.dpk
+  $(DCC)
+
+UPReportSotr.bpl: Reports\UPReportSotr\UPReportSotr.dpk
+  $(DCC)
+
+UpReportSovm.bpl: Reports\UpReportSovm\UpReportSovm.dpk
+  $(DCC)
+
+UpReportSpecstaj.bpl: Reports\UpReportSpecstaj\UpReportSpecstaj.dpk
+  $(DCC)
+
+UpReportSvod.bpl: Reports\UpReportSvod\UpReportSvod.dpk
+  $(DCC)
+
+UpReportTable.bpl: Reports\UpReportTable\UpReportTable.dpk
+  $(DCC)
+
+UPReportTempWorkers.bpl: Reports\UPReportTempWorkers\UPReportTempWorkers.dpk
+  $(DCC)
+
+UpReportVozrChild.bpl: Reports\UpReportVozrChild\UpReportVozrChild.dpk
+  $(DCC)
+
+UpReportWorkF27.bpl: Reports\UpReportWorkF27\UpReportWorkF27.dpk
+  $(DCC)
+
+UpReportWorkingPensioners.bpl: Reports\UpReportWorkingPensioners\UpReportWorkingPensioners.dpk
+  $(DCC)
+
+UPSciencePensionReport.bpl: Reports\UpSciencePensionReport\UPSciencePensionReport.dpk
+  $(DCC)
+
+UpReportWithPensienceWork.bpl: Reports\UpWithPensienceWork\UpReportWithPensienceWork.dpk
+  $(DCC)
+
+UpGetHoliday.bpl: UpGetHoliday\UpGetHoliday.dpk
+  $(DCC)
+
+UnivSprav.bpl: ..\..\Adresses\Sources\UnivSprav\UnivSprav.dpk
+  $(DCC)
+
+up_filter.bpl: UpMultyFilter\up_filter.dpk
+  $(DCC)
+
+

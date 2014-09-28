@@ -1,0 +1,73 @@
+package UpGetBonusSum;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  vcldb,
+  cxExtEditorsVCLD7,
+  vclx,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  rxctl7,
+  VclSmp,
+  rxdb7,
+  qFControls,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  qFEditForm,
+  SpLib,
+  frxe7,
+  frx7,
+  fs7,
+  tee,
+  fqb70,
+  bdertl,
+  designide,
+  vclactnband,
+  FR7,
+  dsnap,
+  ibxpress,
+  CommonSp,
+  AccMgmtBpl,
+  UpKernel,
+  applib;
+
+contains
+  UpGetBonusSumForm in 'UpGetBonusSumForm.pas' {fmChangeBonus},
+  UpGetBonusSumUnit in 'UpGetBonusSumUnit.pas';
+
+end.

@@ -1,0 +1,94 @@
+package UP_OrderList;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Главный список приказов.'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  UnivSprav,
+  AccMgmtBpl,
+  CommonSp,
+  qFControls,
+  qFEditForm,
+  ShtatUtils,
+  cxExtEditorsVCLD7,
+  Globals,
+  applib,
+  vclie,
+  inet,
+  UpKernel,
+  vcl,
+  rtl,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  vcldb,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  rxdb7,
+  rxctl7,
+  vclx,
+  VclSmp,
+  ibxpress,
+  dsnap,
+  dxBarD7,
+  dxComnD7,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  Kerneldpk,
+  cxCommonEditingVCLD7,
+  cxTreeListVCLD7;
+
+contains
+  UpOrderList in 'UpOrderList.pas' {UpOrderListForm},
+  UpDefSignersFrame in 'UpDefSignersFrame.pas' {UP_DefSignersFrame: TFrame},
+  UpOrderListSettings in 'UpOrderListSettings.pas' {frmGetSettings},
+  ULevelsEdit in 'ULevelsEdit.pas' {frmUpLevelsEdit},
+  UDependOrders in 'UDependOrders.pas' {frmDependOList},
+  UShowSaveErrors in 'UShowSaveErrors.pas' {frmGetErrors},
+  UpOrderAddItem in 'UpOrderAddItem.pas' {UpOrderAddItemForm},
+  UpOrderEdit in 'UpOrderEdit.pas' {UpEditOrder},
+  UEditPlanBpl in 'UEditPlanBpl.pas' {frmEditPlanBpl},
+  UPathHistory in 'UPathHistory.pas' {frmPathHistory},
+  UEditExtReport in 'UEditExtReport.pas' {frmGetExtReport},
+  UEditTypes in 'UEditTypes.pas' {frmEditTypeInfo},
+  UpItemStru in 'UpItemStru.pas' {frmGetItemsStru},
+  UpSignersFrame in 'UpSignersFrame.pas' {UP_SignersFrame: TFrame},
+  UEditBody in 'UEditBody.pas' {frmEditBody},
+  UpSpSigners in 'UpSpSigners.pas' {frmSpSigners},
+  UpEditSigners in 'UpEditSigners.pas' {frmEditSignInfo},
+  USpecModuleEdit in 'USpecModuleEdit.pas' {frmSpecModuleEdit},
+  USpecModules in 'USpecModules.pas' {frmSpecModulesSelect},
+  UShowMaxRate in 'UShowMaxRate.pas' {frmMaxRate},
+  UShowFirstCheck in 'UShowFirstCheck.pas' {frmFirstCheck},
+  UpShablonText in 'UpShablonText.pas' {frmShablonText},
+  UpEditText in 'UpEditText.pas' {frmShablonEdit},
+  UPremiaSum in 'UPremiaSum.pas' {frmPremiaSum};
+
+end.
