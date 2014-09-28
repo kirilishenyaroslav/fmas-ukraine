@@ -1,0 +1,100 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = ZarplataConsts.bpl ZarplataDPK.bpl ZcxBarPlugins.bpl gr_Common.bpl \
+  Grant.exe gr_Account.bpl gr_Stud.bpl ReeVed.bpl gr_Print.bpl gr_AccountData.bpl \
+  gr_OperationEnd.bpl gr_GrantRise.bpl gr_IndexCount.bpl gr_SpSmet.bpl \
+  SprSubs.bpl SprDoh.bpl gr_SvodBySch.bpl gr_SpSch.bpl SvodBySch.bpl AcctCard.bpl \
+  gr_StudentCards.bpl gr_Current_Ctrl.bpl gr_Grant_Ctrl.bpl gr_Current.bpl \
+  gr_AccList.bpl OperationEnd.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+ZarplataDPK.bpl: ..\..\Zarplata\Sources\Common\ZarplataDPK.dpk
+  $(DCC)
+
+ZarplataConsts.bpl: ..\..\Zarplata\Sources\Consts\ZarplataConsts.dpk
+  $(DCC)
+
+ZcxBarPlugins.bpl: ..\..\Zarplata\Sources\BarPlugins\ZcxBarPlugins.dpk
+  $(DCC)
+
+gr_Common.bpl: gr_Common.dpk
+  $(DCC)
+
+Grant.exe: Grant.dpr
+  $(DCC)
+
+gr_Account.bpl: gr_Account.dpk
+  $(DCC)
+
+gr_Stud.bpl: gr_Stud.dpk
+  $(DCC)
+
+ReeVed.bpl: ..\..\Zarplata\Sources\ReeVed\ReeVed.dpk
+  $(DCC)
+
+gr_Print.bpl: gr_Print.dpk
+  $(DCC)
+
+gr_AccountData.bpl: gr_AccountData.dpk
+  $(DCC)
+
+gr_OperationEnd.bpl: gr_OperationEnd.dpk
+  $(DCC)
+
+gr_GrantRise.bpl: gr_GrantRise.dpk
+  $(DCC)
+
+gr_IndexCount.bpl: gr_IndexCount.dpk
+  $(DCC)
+
+gr_SpSmet.bpl: gr_SpSmet.dpk
+  $(DCC)
+
+SprSubs.bpl: ..\..\Zarplata\Sources\Print\SprSubs\SprSubs.dpk
+  $(DCC)
+
+SprDoh.bpl: ..\..\Zarplata\Sources\Print\SprDoh\SprDoh.dpk
+  $(DCC)
+
+gr_SvodBySch.bpl: gr_SvodBySch.dpk
+  $(DCC)
+
+gr_SpSch.bpl: gr_SpSch.dpk
+  $(DCC)
+
+SvodBySch.bpl: ..\..\Zarplata\Sources\Print\SvodDocs\SvodBySch\SvodBySch.dpk
+  $(DCC)
+
+AcctCard.bpl: ..\..\Zarplata\Sources\AcctCard\AcctCard.dpk
+  $(DCC)
+
+gr_StudentCards.bpl: gr_StudentCards.dpk
+  $(DCC)
+
+gr_Current_Ctrl.bpl: gr_Current_Ctrl.dpk
+  $(DCC)
+
+gr_Grant_Ctrl.bpl: gr_Grant_Ctrl.dpk
+  $(DCC)
+
+gr_Current.bpl: gr_Current.dpk
+  $(DCC)
+
+gr_AccList.bpl: gr_AccList.dpk
+  $(DCC)
+
+OperationEnd.bpl: ..\..\Zarplata\Sources\OperationEnd\OperationEnd.dpk
+  $(DCC)
+
+

@@ -1,0 +1,66 @@
+package gr_Common;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  dbrtl,
+  vcljpg,
+  vcldb,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  cxGridVCLD7,
+  dxBarD7,
+  dxComnD7,
+  cxExportVCLD7,
+  CommonSp,
+  dxDockingD7,
+  cxCommonEditingVCLD7,
+  cxTreeListVCLD7,
+  VclSmp,
+  vclx,
+  dxBarExtItemsD7,
+  cxExtEditorsVCLD7,
+  ZarplataDPK;
+
+contains
+  gr_uCommonConsts in 'Common\gr_uCommonConsts.pas',
+  gr_uCommonLoader in 'Common\gr_uCommonLoader.pas',
+  gr_uMessage in 'Common\gr_uMessage.pas',
+  gr_uCommonProc in 'Common\gr_uCommonProc.pas',
+  gr_uStProcDM in 'Common\gr_uStProcDM.pas' {StProcDM: TDataModule},
+  gr_uWaitForm in 'Common\gr_uWaitForm.pas' {WaitForm},
+  gr_dmCommonStyles in 'Common\gr_dmCommonStyles.pas' {StylesDM: TDataModule},
+  gr_uThreadWaitForm in 'Common\gr_uThreadWaitForm.pas' {FThreadWait},
+  gr_uThread in 'Common\gr_uThread.pas',
+  gr_uCommonTypes in 'Common\gr_uCommonTypes.pas';
+
+end.

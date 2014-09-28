@@ -1,0 +1,143 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = gr_Common.bpl gr_SvodLoader.bpl Grant.exe Access.bpl \
+  gr_AccDepart.bpl gr_AccList.bpl gr_Account.bpl gr_AccountData.bpl \
+  gr_AcctCard.bpl gr_CountCurrent.bpl gr_CountSheet.bpl gr_Current.bpl \
+  gr_Current_Ctrl.bpl gr_FilterKodSetup.bpl gr_Filters.bpl gr_Grant_Ctrl.bpl \
+  gr_GrantRise.bpl gr_IndexCount.bpl gr_OperationEnd.bpl gr_Print.bpl \
+  gr_Recount.bpl gr_ReCountData.bpl gr_ReeAlimony.bpl gr_ReeDolg.bpl gr_SpSch.bpl \
+  gr_SpSmet.bpl gr_Stud.bpl gr_Stud_Edu_Terms_Ctrl.bpl gr_Stud_Terms_Ctrl.bpl \
+  gr_StudentCards.bpl gr_SvodBySch.bpl gr_SvodDocs.bpl gr_Stud_Vacation_Ctrl.bpl \
+  gr_GroupGrant.bpl gr_StudIndexEdit.bpl ZarplataDPK.bpl ReeDepVO.bpl SprDoh.bpl \
+  SprSubs.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+gr_Common.bpl: gr_Common.dpk
+  $(DCC)
+
+Grant.exe: Grant.dpr
+  $(DCC)
+
+gr_AccountData.bpl: gr_AccountData.dpk
+  $(DCC)
+
+gr_ReCountData.bpl: gr_ReCountData.dpk
+  $(DCC)
+
+gr_Recount.bpl: gr_Recount.dpk
+  $(DCC)
+
+gr_Stud.bpl: gr_Stud.dpk
+  $(DCC)
+
+gr_Stud_Terms_Ctrl.bpl: gr_Stud_Terms_Ctrl.dpk
+  $(DCC)
+
+gr_Stud_Edu_Terms_Ctrl.bpl: gr_Stud_Edu_Terms_Ctrl.dpk
+  $(DCC)
+
+gr_CountSheet.bpl: gr_CountSheet.dpk
+  $(DCC)
+
+gr_AccList.bpl: gr_AccList.dpk
+  $(DCC)
+
+gr_Current.bpl: gr_Current.dpk
+  $(DCC)
+
+gr_CountCurrent.bpl: gr_CountCurrent.dpk
+  $(DCC)
+
+gr_Current_Ctrl.bpl: gr_Current_Ctrl.dpk
+  $(DCC)
+
+Access.bpl: Access.dpk
+  $(DCC)
+
+gr_Account.bpl: gr_Account.dpk
+  $(DCC)
+
+gr_AcctCard.bpl: gr_AcctCard.dpk
+  $(DCC)
+
+gr_OperationEnd.bpl: gr_OperationEnd.dpk
+  $(DCC)
+
+gr_Grant_Ctrl.bpl: gr_Grant_Ctrl.dpk
+  $(DCC)
+
+gr_AccDepart.bpl: gr_AccDepart.dpk
+  $(DCC)
+
+gr_GrantRise.bpl: gr_GrantRise.dpk
+  $(DCC)
+
+gr_FilterKodSetup.bpl: gr_FilterKodSetup.dpk
+  $(DCC)
+
+gr_Filters.bpl: gr_Filters.dpk
+  $(DCC)
+
+gr_IndexCount.bpl: gr_IndexCount.dpk
+  $(DCC)
+
+gr_SpSch.bpl: gr_SpSch.dpk
+  $(DCC)
+
+gr_SpSmet.bpl: gr_SpSmet.dpk
+  $(DCC)
+
+gr_StudentCards.bpl: gr_StudentCards.dpk
+  $(DCC)
+
+gr_Print.bpl: gr_Print.dpk
+  $(DCC)
+
+gr_ReeAlimony.bpl: gr_ReeAlimony.dpk
+  $(DCC)
+
+gr_ReeDolg.bpl: gr_ReeDolg.dpk
+  $(DCC)
+
+gr_SvodBySch.bpl: gr_SvodBySch.dpk
+  $(DCC)
+
+gr_SvodDocs.bpl: gr_SvodDocs.dpk
+  $(DCC)
+
+gr_SvodLoader.bpl: gr_SvodLoader.dpk
+  $(DCC)
+
+gr_Stud_Vacation_Ctrl.bpl: gr_Stud_Vacation_Ctrl.dpk
+  $(DCC)
+
+gr_GroupGrant.bpl: gr_GroupGrant.dpk
+  $(DCC)
+
+gr_StudIndexEdit.bpl: gr_StudIndexEdit.dpk
+  $(DCC)
+
+ZarplataDPK.bpl: ..\..\Zarplata\Sources\Common\ZarplataDPK.dpk
+  $(DCC)
+
+ReeDepVO.bpl: ..\..\Zarplata\Sources\Print\ReeDepVo\ReeDepVO.dpk
+  $(DCC)
+
+SprDoh.bpl: ..\..\Zarplata\Sources\Print\SprDoh\SprDoh.dpk
+  $(DCC)
+
+SprSubs.bpl: ..\..\Zarplata\Sources\Print\SprSubs\SprSubs.dpk
+  $(DCC)
+
+

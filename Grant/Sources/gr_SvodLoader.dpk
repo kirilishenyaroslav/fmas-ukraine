@@ -1,0 +1,43 @@
+package gr_SvodLoader;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  FIBPlus7,
+  vcldb,
+  dbrtl,
+  visualdbclx,
+  visualclx,
+  gr_Common;
+
+contains
+  gr_SvodConstsUnit in 'Print\SvodDocs\SvodLoader\gr_SvodConstsUnit.pas',
+  gr_SvodLoaderUnit in 'Print\SvodDocs\SvodLoader\gr_SvodLoaderUnit.pas',
+  gr_SvodProcUnit in 'Print\SvodDocs\SvodLoader\gr_SvodProcUnit.pas',
+  gr_SvodTypesUnit in 'Print\SvodDocs\SvodLoader\gr_SvodTypesUnit.pas';
+
+end.

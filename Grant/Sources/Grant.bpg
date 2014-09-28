@@ -1,0 +1,110 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = ZarplataConsts.bpl ZarplataDPK.bpl ZcxBarPlugins.bpl gr_Common.bpl \
+  Grant.exe gr_AccDepart.bpl Access.bpl gr_AccList.bpl gr_Account.bpl \
+  gr_AccountData.bpl gr_AcctCard.bpl gr_CountCurrent.bpl gr_CountSheet.bpl \
+  gr_Current.bpl gr_Current_Ctrl.bpl gr_OperationEnd.bpl gr_FilterKodSetup.bpl \
+  gr_Filters.bpl gr_Grant_Ctrl.bpl gr_GrantRise.bpl gr_IndexCount.bpl \
+  gr_Recount.bpl gr_ReCountData.bpl gr_SpSch.bpl gr_SpSmet.bpl gr_Stud.bpl \
+  gr_Stud_Edu_Terms_Ctrl.bpl gr_Stud_Terms_Ctrl.bpl gr_StudentCards.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+ZarplataDPK.bpl: ..\Zarplata\Sources\Common\ZarplataDPK.dpk
+  $(DCC)
+
+ZarplataConsts.bpl: ..\Zarplata\Sources\Consts\ZarplataConsts.dpk
+  $(DCC)
+
+ZcxBarPlugins.bpl: ..\Zarplata\Sources\BarPlugins\ZcxBarPlugins.dpk
+  $(DCC)
+
+gr_Common.bpl: Sources\Common\gr_Common.dpk
+  $(DCC)
+
+Grant.exe: Sources\Exe\Grant.dpr
+  $(DCC)
+
+gr_AccountData.bpl: Sources\AccountData\gr_AccountData.dpk
+  $(DCC)
+
+gr_ReCountData.bpl: Sources\ReCountData\gr_ReCountData.dpk
+  $(DCC)
+
+gr_Recount.bpl: Sources\ReCount\gr_Recount.dpk
+  $(DCC)
+
+gr_Stud.bpl: Sources\Student\gr_Stud.dpk
+  $(DCC)
+
+gr_Stud_Terms_Ctrl.bpl: Sources\Stud_Terms_Ctrl\gr_Stud_Terms_Ctrl.dpk
+  $(DCC)
+
+gr_Stud_Edu_Terms_Ctrl.bpl: Sources\Stud_Edu_Terms_Ctrl\gr_Stud_Edu_Terms_Ctrl.dpk
+  $(DCC)
+
+gr_CountSheet.bpl: Sources\CountSheet\gr_CountSheet.dpk
+  $(DCC)
+
+gr_AccList.bpl: Sources\AccList\gr_AccList.dpk
+  $(DCC)
+
+gr_Current.bpl: Sources\Current\gr_Current.dpk
+  $(DCC)
+
+gr_CountCurrent.bpl: Sources\CountCurrent\gr_CountCurrent.dpk
+  $(DCC)
+
+gr_Current_Ctrl.bpl: Sources\CurrentCtrl\gr_Current_Ctrl.dpk
+  $(DCC)
+
+Access.bpl: Sources\Access\Access.dpk
+  $(DCC)
+
+gr_Account.bpl: Sources\Account\gr_Account.dpk
+  $(DCC)
+
+gr_AcctCard.bpl: Sources\AcctCard\gr_AcctCard.dpk
+  $(DCC)
+
+gr_OperationEnd.bpl: Sources\EndOperation\gr_OperationEnd.dpk
+  $(DCC)
+
+gr_Grant_Ctrl.bpl: Sources\Grant_Ctrl\gr_Grant_Ctrl.dpk
+  $(DCC)
+
+gr_AccDepart.bpl: Sources\AccDepartment\gr_AccDepart.dpk
+  $(DCC)
+
+gr_GrantRise.bpl: Sources\GrantRise\gr_GrantRise.dpk
+  $(DCC)
+
+gr_FilterKodSetup.bpl: Sources\FilterKodSetup\gr_FilterKodSetup.dpk
+  $(DCC)
+
+gr_Filters.bpl: Sources\Filters\gr_Filters.dpk
+  $(DCC)
+
+gr_IndexCount.bpl: Sources\Index\gr_IndexCount.dpk
+  $(DCC)
+
+gr_SpSch.bpl: Sources\SpSch\gr_SpSch.dpk
+  $(DCC)
+
+gr_SpSmet.bpl: Sources\SpSmet\gr_SpSmet.dpk
+  $(DCC)
+
+gr_StudentCards.bpl: Sources\StudentCards\gr_StudentCards.dpk
+  $(DCC)
+
+

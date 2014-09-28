@@ -1,0 +1,79 @@
+package gr_GroupGrant;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dxBarD7,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  dxComnD7,
+  FIBPlus7,
+  vcldb,
+  dbrtl,
+  visualdbclx,
+  visualclx,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  cxExtEditorsVCLD7,
+  vclx,
+  dxBarExtItemsD7,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  cxCommonEditingVCLD7,
+  cxTreeListVCLD7,
+  rxdb7,
+  rxctl7,
+  VclSmp,
+  dsnap,
+  dbexpress,
+  ibxpress,
+  FIBDBMidas7,
+  frxDB7,
+  fsDB7,
+  fs7,
+  tee,
+  fqb70,
+  bdertl,
+  frx7,
+  frxe7,
+  gr_Common,
+  ZcxBarPlugins,
+  Globals,
+  UpKernel;
+
+contains
+  gr_Stud_Group_Loader in 'Group_Grant\gr_Stud_Group_Loader.pas',
+  gr_Filter_Stud_Group in 'Group_Grant\gr_Filter_Stud_Group.pas' {FFilter},
+  GrAccDepart_GG in 'Group_Grant\GrAccDepart_GG.pas' {FGrAccDep},
+  gr_Stud_Group_DM in 'Group_Grant\gr_Stud_Group_DM.pas' {DM_G: TDataModule},
+  Current_Ctrl_MainForm_Mas in 'Group_Grant\Current_Ctrl_MainForm_Mas.pas' {FgrCurrentCtrlMas},
+  gr_EditGG in 'Group_Grant\gr_EditGG.pas' {FEditGG},
+  gr_MainGG in 'Group_Grant\gr_MainGG.pas' {FGroupGrant},
+  Grant_Ctrl_MainForm_Mas in 'Group_Grant\Grant_Ctrl_MainForm_Mas.pas' {FGrantCtrlMas};
+
+end.
