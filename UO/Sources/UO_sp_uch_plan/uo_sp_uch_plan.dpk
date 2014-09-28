@@ -1,0 +1,66 @@
+package uo_sp_uch_plan;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  cxGridVCLD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  FIBPlus7,
+  cn_Common,
+  PrK_Resources,
+  PrK_Loader,
+  UO_Resources,
+  cxExtEditorsVCLD7,
+  vcl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  dbrtl,
+  vcljpg,
+  vcldb,
+  vclx,
+  cxExportVCLD7,
+  visualdbclx,
+  visualclx,
+  AArrayPack,
+  SpSpec;
+
+contains
+  uo_sp_uchplan_main in 'uo_sp_uchplan_main.pas' {fmuo_sp_uchplan_main},
+  uo_sp_uchplan_add in 'uo_sp_uchplan_add.pas' {fmuo_sp_uchplan_add},
+  uo_hours_add in 'uo_hours_add.pas' {fmuo_hours_add},
+  uo_dics in 'uo_dics.pas' {fmuo_dics},
+  yo_sem in 'yo_sem.pas' {fmyo_sem},
+  uo_sp_ucplan_semhours in 'uo_sp_ucplan_semhours.pas' {fmuo_sp_ucplan_semhours},
+  uo_control_add in 'uo_control_add.pas' {fmuo_control_add},
+  uo_sp_uchplan_ects in 'uo_sp_uchplan_ects.pas' {fmuo_sp_uchplan_ects},
+  uo_filter_plan in 'uo_filter_plan.pas' {fmuo_filter_plan},
+  uo_filter_change in 'uo_filter_change.pas' {fmuo_filter_change};
+
+end.

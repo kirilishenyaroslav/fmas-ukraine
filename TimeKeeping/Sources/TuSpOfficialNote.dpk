@@ -1,0 +1,43 @@
+package TuSpOfficialNote;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  TuCommon,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  cxExtEditorsVCLD7,
+  ZarplataDPK,
+  gr_Common;
+
+contains
+  TuSpOfficialNote_Loader in 'SpOfficialNote\TuSpOfficialNote_Loader.pas',
+  TuSpOfficialNote_Main in 'SpOfficialNote\TuSpOfficialNote_Main.pas' {FormOfficialNote},
+  TuSpOfficialNote_DM in 'SpOfficialNote\TuSpOfficialNote_DM.pas' {DM: TDataModule},
+  TuSpOfficialNote_Filter in 'SpOfficialNote\TuSpOfficialNote_Filter.pas' {FormOfficialNote_Filtr};
+
+end.

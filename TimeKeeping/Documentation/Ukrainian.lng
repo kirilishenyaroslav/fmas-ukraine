@@ -1,0 +1,295 @@
+	[MainMenu]
+ExitAnswer_Caption = Вихід
+ExitAnswer_Text    = Ви дійсно бажаєте покинути систему?
+
+Help            =Довідка
+Service         =Сервіс
+Directories     =Довідники
+Indicators      =Показники
+Info            =Інформація
+Work            =Робота
+Helps           =Довідки
+Windows         =Вікна
+Exit            =Вихід
+
+WhatsNew        =Що нового
+AboutProgram    =Про програму
+Calendar        =Календар
+ModeWork        =Режими праці
+Cascade         =Каскадом
+Horizontal      =Горизонтально
+Vertical        =Вертикально
+Minimize        =Мінімізувати
+Normalize       =Нормалізувати
+Close           =Закрити
+
+[Form]
+#Filter		 = Вибір співробітників 
+#Workers		 = Співробітники		
+#CardBankCont	 = Продовження карткових рахунків
+#Current	      = Поточні операції
+WhatsNew		 = Що нового
+Access		 = Вхід
+WorkMode		 = Режими праці
+MainFormCaption    =Автоматизована система табельного обліку
+Calendar        =Календар
+TranscriptWorkMode =Розшифровка режимів праці 
+SpPost                 =Довідник посад
+TempletTimesheet      = Шаблони табелів
+NotUseDep                 =Довідник не використаних підрозділів
+NotUseCat                 =Довідник не використаних категорій
+Dog          = Трудові договора
+
+[Button]
+Insert   	 = Додати
+Update 		 = Редагувати
+Delete  	 = Вилучити
+#Detail   	 = Додатково
+Exit     	 = Вийти
+CorWorkMode	= Корегування режима праці
+#Filter   	 = Вибір співробітників
+#KodSetup 	 = Період
+#AcctCard 	 = Рахунок
+#Avarage		 = Середнє
+#Ok		 = Прийняти
+#Cancel		 = Відмінити
+#Do		 = Обробити
+#Save		 = Зберегти
+#Avans            = Аванс
+Refresh          = Оновити
+#AddMan           = Додати особу
+#LineView         = Лінійно
+#Group            = Згрупувати
+Yes		 = Прийняти
+Cancel		 = Відмінити
+Transcript       = Розшифрувати
+Print             = Друк
+Yes1              =Так
+No                =  Ні    
+Filter            =Фільтр
+Select          =Обрати      
+
+
+[RadioButton]
+#Person           = Фізична особа
+#Locate           = Пошук
+#HasCharactic     = Існує
+#HasNotCharactic  = Не існує
+
+
+
+[CheckBox]
+#Percon		 = Фізична особа
+#Man	 	 = Співробітник
+#Tin		 = Ід. код
+#Familiya	 = Прізвище
+#Department       = Підрозділ
+#Properties       = Властивість
+#Privilege        = Пільга
+#Raise            = Надбавка/доплата
+#Period		 = Період
+#MainJob          = Має сновне місце роботи
+#NotMainJob       = Не має основного місця роботи
+#LeavedJob        = Тільки звільнених
+Change		=Зміна
+Holiday		=Вихідний
+TypeView   = Відображення по змінам
+
+[TabSheet]
+RMoving  	 = Трудовий договор
+#BMoving  	 = Надбавки
+#Hospital 	 = Лікарняні
+#Holiday  	 = Відпустки
+#Current  	 = Поточні
+#Alimony  	 = Виконавчі листи
+#Invalid  	 = Інваліди
+#Priv     	 = Пільги
+#Prop     	 = Властивості
+#Exception	 = Винятки
+#DopNach  	 = Додаткові нарахування 
+#DedConst 	 = Постійні утримання
+#Remont   	 = Ремонтні
+#WorkMode         = Режим
+Department   = Підрозділи
+Categor      = Катигорії
+Dog          =Трудові договора
+Balans       =Не додані у шаблони
+
+[Label]
+#KodSetup	 = Період
+#Smeta	 	 = Смета
+#Department	 = Підрозділ
+#EnterDate        = Дата введення
+#Prikaz           = Наказ
+#NDay             = Кількість днів
+#Clock            = Кількість годин
+#Percent          = Відсоток
+#SumClock         = Сума за годину
+#Category	 = Категорія
+#Tin		 = Ід. код
+#DateBirth	 = Дата народження
+#Prikaz		 = Наказ
+#Razryad		 = Клас/Розряд
+#Category         = Категорія
+#Document	 = Документ
+#SendPeople	 = Одержувач
+#SendAdress	 = Адреса одержувача
+#Man		 = Фізична особа
+#Familiya	 = Прізвище
+#RecordCount	 = Кількість записів
+#PeopleCount	 = Кількість осіб
+#LocateDate	 = Дата пошуку
+#IsOperationFilter= Фільтрувати операції
+#Vidopl           = Вид операції
+#Prikaz           = Наказ
+#IdMan		 = Фізична особа
+Nomer		=Номер
+Name		=Найменування
+ShortName	=Скорочення
+StartTime	=Початок нічних годин
+FinishTime	=кінець нічних годин
+DonNU_Name_Full = Донецький Національний університет
+Year            =Рік
+Moon            =Місяць
+DayCountYear	=Днів у році
+HoursYear		=Годин у році
+Hours       	=Годин
+DayWorkYear		=У році
+DayCountsMonth	=У місяці
+HourMonth		=Годин у місяці
+Days            =Днів
+Kalendar        = Календарних
+Works           =Працює за графіком
+NoWorks           =Не працює за графіком
+Holidays        = У свята 
+Nights          = Нічних
+Exception       =Винятки
+Holiday         =Свята
+ExcDate         =Дата винятку
+NumMode         =Номер дня режиму
+NightHoliday    =Нічні у свята
+Output          =У вихідні
+Coordinating    =Погоджуючий
+Approver        =Затверджуючий
+Signing         =Підписуючий
+Koment         =Коментарий
+PeriodBeg         = Початок дії
+PeriodEnd         =Кінець дії 
+ShowAll        =Показувати усі
+Date           =Дата
+TempletTimeSheet  =Довідник табельних шаблонів
+CountDay          = Кількість днів у році
+CountHolidayDay   = Кількість святковіх днів у році
+Templet            = Шаблон
+MoveSelect               =  Перенести  виділене
+ 
+
+[GridColumn]
+#Tn		 = Тн
+#FIO              = П.І.Б. 
+#Tin		 = Ід. код
+#Man		 = Фізична особа
+PeriodBeg	 = Початок дії
+PeriodEnd	 =Кінець дії 
+#DateBeg		 = З
+#DateEnd		 = По
+#Sovmest		 = Тип роботи
+#Post		 = Посада
+Stavka		 = Ставка
+#Oklad		 = Оклад
+#SummaBase	 = Баз. сума
+#SummaPPS	 = Сума ПВС
+#KodSmBase	 = Баз. смета
+#KodSmPPS	 = Смета ПВС
+#Property	 = Властивість
+#KodSetup	 = Період
+#KodDepartment	 = Підрозділ
+#Summa		 = Сума
+#KodSmeta	 = Смета
+#KodVidopl	 = ВО
+#NameVidopl	 = Вид операції
+#WorkPeriod	 = Період роботи
+#Note 		 = Примітка
+#PercentSign 	 = %
+#MaxPercent	 = Найб. відсоток
+#Dolg		 = Борг
+#PochtaPercent 	 = Поштовий збір
+#Expense		 = Кількість
+#Kod		 = Код
+#Priv		 = Пільга
+#Prikaz 		 = Наказ
+#Seria		 = Серія
+#Number		 = Номер
+#Percent		 = Відсоток
+#Reestr		 = Реєстр
+#Name		 = Назва
+#AcctCard	 = Рахунок
+#Imya		 = І'мя
+#Fam		 = Прізвище
+#Worker		 = Робітник
+#Student		 = Студент
+#Granter		 = Стипендіант
+#WorkEnd		 = Закінчення роботи
+#StudEnd		 = Закінчення навчання
+#GrantEnd	 = Закінчення стипедії
+#Prim		 = Примітка
+#WorkModeTitle       = Режим праці
+#Budget           = Бюджет
+#BudgetKPO        = Бюджет КПО
+Nomer		= Номер	
+Name			= Назва
+NameShort		= Скорочена назва
+NightBeg		= Початок ночі
+NightEnd		= Кінець ночі
+IsSmena		= Зміна
+Holidays        =Свята
+Day				=День
+WorkBeg           =Початок роботи
+WorkEnd          =Кінець роботи
+BreakBeg          =Початок перерви
+BreakEnd           =Кінець перерви 
+TodayHour          =Часів сьогодні
+TomorrowHours      = Часів завтра
+TodayHoursNight    =Часів нічних сьогодні
+TomorrowHoursNight  =Часів нічних завтра
+TypeView            =Тип відображення
+WorkHour            =Кількість годин
+Fio               =ПІБ
+Post              =Посада
+NameTemplet       =Назва шаблону
+KomentTemplet     =Коментарий
+NameDep           =Назва підрозділу
+NameCat           =Назва категорії
+TIN               =Табельний номер
+
+
+
+[GroupBox]
+#Period		 = Період
+
+[OtherConsts]
+#NotInputDataError= Не введено дані
+#Error		 = Помилка
+MonthJanuary     = Січень
+MonthFebruary    = Лютий
+MonthMarch       = Березень
+MonthApril       = Квітень
+MonthMay         = Травень
+MonthJune        = Червень
+MonthJuly        = Липень
+MonthAutumn      = Серпень
+MonthSeptember   = Вересень
+MonthOctober     = Жовтень
+MonthNovember    = Листопад
+MonthDecember    = Грудень
+HolidaysDay      =Святковий день
+WorkDay          =Робочий день
+WorkingHours     =Кількість робочих годин
+
+[Error]
+Caption		= Помилка
+LoadBPLText	= Не можливо завантажити пакет!
+Delete		= Вилучення запису
+Deletetext	= Ви дійсно бажаєте видалити обраний запис?
+EmptyData	= Введіть усі даніКнопочка = Кнопочка
+

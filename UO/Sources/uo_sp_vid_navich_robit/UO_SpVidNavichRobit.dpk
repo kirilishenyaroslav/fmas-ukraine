@@ -1,0 +1,63 @@
+package UO_SpVidNavichRobit;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  vcldb,
+  cxExtEditorsVCLD7,
+  vclx,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  frxDB7,
+  fsDB7,
+  fs7,
+  tee,
+  fqb70,
+  bdertl,
+  frx7,
+  frxe7,
+  AArrayPack,
+  PrK_Loader;
+
+contains
+  UoVidNRobit_Add in 'UoVidNRobit_Add.pas' {fmUWspTypeViplatAdd},
+  UoVidNRobit_Add_Norm in 'UoVidNRobit_Add_Norm.pas' {fmUoVidNRobit_Add_Norm},
+  UoVidNRobit_Main in 'UoVidNRobit_Main.pas' {fmUoVidNRobit_Main};
+
+end.

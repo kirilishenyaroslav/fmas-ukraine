@@ -1,0 +1,32 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = TICommon.bpl TaxInvoices.exe TIAccess.bpl TaxInvoices.bpl ArndSch.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+TaxInvoices.exe: Sources\TaxInvoices.dpr
+  $(DCC)
+
+TICommon.bpl: Sources\TICommon.dpk
+  $(DCC)
+
+TIAccess.bpl: Sources\TIAccess.dpk
+  $(DCC)
+
+TaxInvoices.bpl: Sources\TaxInvoices.dpk
+  $(DCC)
+
+ArndSch.bpl: Sources\ArndSch.dpk
+  $(DCC)
+
+

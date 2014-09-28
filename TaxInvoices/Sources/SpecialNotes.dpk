@@ -1,0 +1,52 @@
+package SpecialNotes;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  vcl,
+  FIBPlus7,
+  vcldb,
+  dbrtl,
+  visualdbclx,
+  visualclx,
+  TICommon,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  cxGridVCLD7,
+  cxExportVCLD7;
+
+contains
+  SpecialNotes_Main in 'SpecialNotes\SpecialNotes_Main.pas' {SpecialNotesMainForm},
+  SpecialNotes_DM in 'SpecialNotes\SpecialNotes_DM.pas' {SpecialNotesDM: TDataModule},
+  SpecialNotes_Loader in 'SpecialNotes\SpecialNotes_Loader.pas';
+
+end.

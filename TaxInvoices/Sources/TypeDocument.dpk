@@ -1,0 +1,52 @@
+package TypeDocument;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  vcldb,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  TICommon;
+
+contains
+  TypeDocument_DM in 'TypeDocument\TypeDocument_DM.pas' {TypeDocumentDM: TDataModule},
+  TypeDocument_Loader in 'TypeDocument\TypeDocument_Loader.pas',
+  TypeDocument_Main in 'TypeDocument\TypeDocument_Main.pas' {TypeDocumentMainForm};
+
+end.

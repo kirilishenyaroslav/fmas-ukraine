@@ -1,0 +1,126 @@
+Для тех справочников которые вызываютя в одну строчку данные возвращаются в таком виде:
+ if DataSetPrKSprav.FieldValues[ID_NAME]<>NULL then
+  begin
+    ResultArray    :=VarArrayCreate([0,4], varVariant);
+    ResultArray[0] :=DataSetPrKSprav.FieldValues[ID_NAME];
+    ResultArray[1] :=DataSetPrKSprav.FieldValues['NAME'];
+    ResultArray[2] :=DataSetPrKSprav.FieldValues['SHORT_NAME'];
+    ResultArray[3] :=DataSetPrKSprav.FieldValues['KOD'];
+    ResultArray[4] :=DataSetPrKSprav.FieldValues['NPP'];
+    close;
+  end;
+
+Для остальных справочников посмотреть возвращаемые данные можно при помощи
+функции: ViewArray(self, ResultArray);
+
+uses
+ uPrK_Resources,uPrK_Loader
+
+Год набора 
+  uPrK_Loader.ShowPrkSprav(self,Database.Handle,PrK_SP_GOD_NABORA,fsNormal);
+
+Курсы
+   uPrK_Loader.ShowPrkSprav(self,Database.Handle,PrK_SP_KURS,fsMDIChild);
+
+Срок обучения
+   uPrK_Loader.ShowPrkSprav(self,Database.Handle,PrK_SP_SROK_OB,fsMDIChild);
+     ResultArray    :=VarArrayCreate([0,7], varVariant);
+     ResultArray[0] :=DataSetPrKSprav.FieldValues[ID_NAME];
+     ResultArray[1] :=DataSetPrKSprav.FieldValues['NAME'];
+     ResultArray[2] :=DataSetPrKSprav.FieldValues['SHORT_NAME'];
+     ResultArray[3] :=DataSetPrKSprav.FieldValues['KOD'];
+     ResultArray[4] :=DataSetPrKSprav.FieldValues['NPP'];
+     ResultArray[5] :=DataSetPrKSprav.FieldValues['YEARS_KOLVO'];
+     ResultArray[6] :=DataSetPrKSprav.FieldValues['MONTHES_KOLVO'];
+
+
+
+ uses
+    cn_Common_Loader,cn_Common_Types;
+
+Cn_Kat_Stud
+
+procedure TFormPRK_SP_PLAN_NABORA_Edit.cxButtonEditCnKatStudPropertiesButtonClick(
+  Sender: TObject; AButtonIndex: Integer);
+var
+  AParameter:TcnSimpleParams;
+  Res :variant;
+begin
+  AParameter                := TcnSimpleParams.Create;
+  AParameter.Owner          := self;
+  AParameter.Db_Handle      := TFormPRK_SP_PLAN_NABORA(self.Owner).DataBasePrKVuzLicense.Handle;
+  AParameter.Formstyle      := fsNormal;
+  AParameter.WaitPakageOwner:= self;
+  res := RunFunctionFromPackage(AParameter, 'Contracts\cn_sp_CategoryStudy.bpl','ShowSPCategoryStudy');
+  AParameter.Free;
+  if VarArrayDimCount(res) > 0 then
+  begin
+      if  Res[0]<>Null then  
+      begin
+          DataVL['ID_CN_SP_KAT_STUD'].AsInt64      := Res[0];
+          DataVL['SHORT_NAME_KAT_STUD'].AsString   := Res[1];
+          cxButtonEditCnKatStud.Text              := DataVL['SHORT_NAME_KAT_STUD'].AsString;
+          cxButtonEditCnFormStud.SetFocus;
+      end;
+  end;
+end;
+
+Cn_Form_Stud
+
+procedure TFormPRK_SP_PLAN_NABORA_Edit.cxButtonEditCnFormStudPropertiesButtonClick(
+  Sender: TObject; AButtonIndex: Integer);
+var
+  AParameter:TcnSimpleParams;
+Res :variant;
+begin
+  AParameter                := TcnSimpleParams.Create;
+  AParameter.Owner          := self;
+  AParameter.Db_Handle      := TFormPRK_SP_PLAN_NABORA(self.Owner).DataBasePrKVuzLicense.Handle;
+  AParameter.Formstyle      := fsNormal;
+  AParameter.WaitPakageOwner:= self;
+  res := RunFunctionFromPackage(AParameter, 'Contracts\cn_sp_FormStud.bpl','ShowSPFormStud');
+  AParameter.Free;
+  if VarArrayDimCount(res) > 0 then
+  begin
+      if  Res[0]<>Null then  
+      begin
+          DataVL['ID_CN_SP_FORM_STUD'].AsInt64      := Res[0];
+          DataVL['SHORT_NAME_FORM_STUD'].AsString   := Res[1];
+          cxButtonEditCnFormStud.Text               := DataVL['SHORT_NAME_FORM_STUD'].AsString;
+          cxButtonEditGodNabora.SetFocus;
+      end;
+  end;
+end;
+
+
+CN_Spec (Fac_Spec)
+
+procedure TFormPRK_SP_PLAN_NABORA_Edit.cxButtonEditCnFaculSpecPropertiesButtonClick(
+  Sender: TObject; AButtonIndex: Integer);
+var
+  AParameter:TcnSimpleParams;
+  Res :variant;
+begin
+  AParameter                := TcnSimpleParams.Create;
+  AParameter.Owner          := self;
+  AParameter.Db_Handle      := TFormPRK_SP_PLAN_NABORA(self.Owner).DataBasePrKVuzLicense.Handle;
+  AParameter.Formstyle      := fsNormal;
+  AParameter.WaitPakageOwner:= self;
+
+  AParameter.DontShowGroups := True;
+  Res:=RunFunctionFromPackage(AParameter, 'Contracts\cn_sp_FacultySpecGroup.bpl','ShowSPFacSpecGroup');
+  AParameter.Free;
+  if VarArrayDimCount(res) > 0 then
+  begin
+      if ((Res[0]<>Null) and (Res[1]<>Null))  then
+      begin
+          DataVL['ID_CN_SP_FAK'].AsInt64        := Res[0];   // id_faculty;
+          DataVL['ID_CN_SP_SPEC'].AsInt64       := Res[1];   // id_spec;
+          DataVL['SHORT_NAME_FAK'].AsString     := Res[3];   //DM.DataSet['NAME'];
+          DataVL['SHORT_NAME_SPEC'].AsString    := Res[4];   //DM_Detail_1.DataSet['NAME'];
+          DataVL['ID_CN_JN_FACUL_SPEC'].AsInt64 := Res[6];
+          cxButtonEditCnFaculSpec.Text        := DataVL['SHORT_NAME_FAK'].AsString+'/'+DataVL['SHORT_NAME_SPEC'].AsString;
+          cxButtonEditCnKatStud.SetFocus;
+      end;
+  end;
+end;

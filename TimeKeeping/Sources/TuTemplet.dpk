@@ -1,0 +1,59 @@
+package TuTemplet;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcljpg,
+  vcl,
+  dbrtl,
+  vcldb,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxExtEditorsVCLD7,
+  cxGridVCLD7,
+  FIBPlus7,
+  TuCommon,
+  cxCommonEditingVCLD7,
+  cxTreeListVCLD7,
+  ZarplataDPK,
+  gr_Common,
+  AccMgmtBpl;
+
+contains
+  SpTuTemplet_MainForm in 'Templet\SpTuTemplet_MainForm.pas' {FormTemplet_Main},
+  SpTuTemplet_Loader in 'Templet\SpTuTemplet_Loader.pas',
+  SpTuTemplet_DM in 'Templet\SpTuTemplet_DM.pas' {DM: TDataModule},
+  SpTuTempet_Edit in 'Templet\SpTuTempet_Edit.pas' {FormTemplet_Edit},
+  SpTuTemplet_SpCateg in 'Templet\SpTuTemplet_SpCateg.pas' {FormSpCategor},
+  SpTuTemplet_Filter in 'Templet\SpTuTemplet_Filter.pas' {Form2},
+  SpTuTemplet_Warning in 'Templet\SpTuTemplet_Warning.pas' {FormWarning};
+
+end.

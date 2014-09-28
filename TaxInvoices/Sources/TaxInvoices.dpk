@@ -1,0 +1,74 @@
+package TaxInvoices;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcljpg,
+  vcl,
+  dbrtl,
+  vcldb,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  dxBarD7,
+  dxComnD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxGridVCLD7,
+  neBase7,
+  ZarplataDPK,
+  TICommon,
+  LoadDog,
+  Loader,
+  cxExtEditorsVCLD7,
+  vclx,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  AccMgmtBpl,
+  frxDB7,
+  Kerneldpk,
+  cxExportVCLD7,
+  PCLib;
+
+contains
+  TITaxInvoices_Main in 'TaxInvoices\TITaxInvoices_Main.pas' {TaxInvoicesMainForm},
+  TITaxInvoices_Loader in 'TaxInvoices\TITaxInvoices_Loader.pas',
+  TITaxInvoicesDM in 'TaxInvoices\TITaxInvoicesDM.pas' {TaxInvoicesDM: TDataModule},
+  TITaxInvoices_Filter in 'TaxInvoices\TITaxInvoices_Filter.pas' {TaxInvoicesFilterForm},
+  TITaxinvoices_AddReestr in 'TaxInvoices\TITaxinvoices_AddReestr.pas' {TaxInvoicesAddReestrForm},
+  TITaxInvoices_UpdVidNaklImport in 'TaxInvoices\TITaxInvoices_UpdVidNaklImport.pas' {TITaxInvoicesUpdVidNaklImportForm},
+  TITaxInvoices_SignDocHist in 'TaxInvoices\TITaxInvoices_SignDocHist.pas' {TaxInvoicesSignReestrHistForm},
+  TITaxInvoices_AddOtrNakl in 'TaxInvoices\TITaxInvoices_AddOtrNakl.pas' {TITaxInvoicesAddOtrNaklForm},
+  TITaxInvoices_ExportReestr in 'TaxInvoices\TITaxInvoices_ExportReestr.pas' {ExportReestrForm},
+  TITaxInvoices_SetPrint in 'TaxInvoices\TITaxInvoices_SetPrint.pas' {TITaxInvoicesSetPrintForm},
+  TITaxInvoices_AddVidNakl in 'TaxInvoices\TITaxInvoices_AddVidNakl.pas' {TITaxInvoicesAddVidNaklForm},
+  TITaxInvoices_ImportReestr in 'TaxInvoices\TITaxInvoices_ImportReestr.pas' {ImportReestrForm},
+  TIImportDBFControlInfo in 'TaxInvoices\TIImportDBFControlInfo.pas' {ControlInfoForm},
+  TIImportDBFData in 'TaxInvoices\TIImportDBFData.pas' {ImportDBFForm},
+  TITaxInvoices_ExportNakl in 'TaxInvoices\TITaxInvoices_ExportNakl.pas' {ExportNaklForm},
+  TI_TaxInvoicesParamEducation in 'TaxInvoices\TI_TaxInvoicesParamEducation.pas' {FormParamEducation};
+
+end.

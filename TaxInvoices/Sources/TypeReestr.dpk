@@ -1,0 +1,52 @@
+package TypeReestr;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  TICommon,
+  vcl,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  vcldb,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  FIBPlus7,
+  visualdbclx,
+  visualclx;
+
+contains
+  TypeReestr_DM in 'TypeReestr\TypeReestr_DM.pas' {TypeReestrDM: TDataModule},
+  TypeReestr_Loader in 'TypeReestr\TypeReestr_Loader.pas',
+  TypeReestr_Main in 'TypeReestr\TypeReestr_Main.pas' {TypeReestrMainForm};
+
+end.

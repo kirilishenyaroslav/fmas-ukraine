@@ -1,0 +1,288 @@
+unit uo_kontingent_3_potok;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, cxStyles, cxCustomData, cxGraphics, cxFilter, cxData,
+  cxDataStorage, cxEdit, DB, cxDBData, dxStatusBar, cxGridTableView,
+  ImgList, ActnList, FIBDatabase, pFIBDatabase, FIBDataSet, pFIBDataSet,
+  cxGridLevel, cxGridCustomTableView, cxGridDBTableView, cxClasses,
+  cxControls, cxGridCustomView, cxGrid, dxBar, dxBarExtItems, cxTextEdit,
+  cxMaskEdit, cxButtonEdit, cxContainer, cxLabel, ExtCtrls, uo_kontingent_3_main, AArray,
+  FIBQuery, pFIBQuery, pFIBStoredProc, cxGridBandedTableView,
+  cxGridDBBandedTableView, cxSplitter;
+
+type
+  Tfmuo_kontingent_3_potok = class(TForm)
+    dxBarManager_sp_type: TdxBarManager;
+    dxBarLargeButtonAdd: TdxBarLargeButton;
+    dxBarLargeButtonChange: TdxBarLargeButton;
+    dxBarLargeButtonVibrat: TdxBarLargeButton;
+    dxBarLargeButtonOtmena: TdxBarLargeButton;
+    dxBarLargeButtonObnov: TdxBarLargeButton;
+    dxBarLargeButtonView: TdxBarLargeButton;
+    dxBarLargeButtonDel: TdxBarLargeButton;
+    dxBarLargeButton1: TdxBarLargeButton;
+    dxBarSubItem1: TdxBarSubItem;
+    dxBarLargeButton2: TdxBarLargeButton;
+    cxGrid1: TcxGrid;
+    cxGrid1DBTableView1: TcxGridDBTableView;
+    cxGrid1Level1: TcxGridLevel;
+    DataSource1: TDataSource;
+    DS: TpFIBDataSet;
+    DB: TpFIBDatabase;
+    Tr: TpFIBTransaction;
+    TWr: TpFIBTransaction;
+    ActionList1: TActionList;
+    ActionAdd: TAction;
+    ActionChange: TAction;
+    ActionDelete: TAction;
+    ActionClose: TAction;
+    ActionPrint: TAction;
+    ActionFind: TAction;
+    ActionUp: TAction;
+    ActionCancel: TAction;
+    ActionRefresh: TAction;
+    ActionProperties: TAction;
+    ActionProp: TAction;
+    ActionCopy: TAction;
+    ActionMoveTo: TAction;
+    ActionLast: TAction;
+    ActionPrintMan: TAction;
+    ActionTake: TAction;
+    ActionView: TAction;
+    ActionFullCollaps: TAction;
+    ActionFullExpand: TAction;
+    ActionAddKoren: TAction;
+    Action1: TAction;
+    ImageListButton: TImageList;
+    StyleRepository: TcxStyleRepository;
+    cxStyle4: TcxStyle;
+    cxStyle5: TcxStyle;
+    cxStyle6: TcxStyle;
+    cxStyle7: TcxStyle;
+    cxStyle8: TcxStyle;
+    cxStyle9: TcxStyle;
+    cxStyle10: TcxStyle;
+    cxStyle11: TcxStyle;
+    cxStyle12: TcxStyle;
+    cxStyle13: TcxStyle;
+    cxStyle14: TcxStyle;
+    cxStyle15: TcxStyle;
+    cxStyle16: TcxStyle;
+    cxStyle17: TcxStyle;
+    cxStyleYellow: TcxStyle;
+    cxStyleFontBlack: TcxStyle;
+    cxStyleMalin: TcxStyle;
+    cxStyleBorder: TcxStyle;
+    cxStylemalinYellow: TcxStyle;
+    cxStyleGrid: TcxStyle;
+    GridTableViewStyleSheetDevExpress: TcxGridTableViewStyleSheet;
+    dxStatusBarSP: TdxStatusBar;
+    dxBarLargeButton3: TdxBarLargeButton;
+    dxBarSubItem2: TdxBarSubItem;
+    dxBarListItem1: TdxBarListItem;
+    dxBarSubItem3: TdxBarSubItem;
+    dxBarToolbarsListItem1: TdxBarToolbarsListItem;
+    dxBarControlContainerItem1: TdxBarControlContainerItem;
+    cxGrid1DBTableView1DBColumn1: TcxGridDBColumn;
+    cxGrid1DBTableView1DBColumn2: TcxGridDBColumn;
+    cxGrid1DBTableView1DBColumn4: TcxGridDBColumn;
+    Stored: TpFIBStoredProc;
+    DSLang: TpFIBDataSet;
+    DataSource2: TDataSource;
+    dxBarLargeButton4: TdxBarLargeButton;
+    dxBarLargeButton5: TdxBarLargeButton;
+    dxBarLargeButton6: TdxBarLargeButton;
+    DSLangID_DT_KONTINGENT_IN: TFIBBCDField;
+    DSLangID_DT_KONTINGENT: TFIBBCDField;
+    DSLangID_SP_IN_LANG: TFIBBCDField;
+    DSLangKOLVE: TFIBIntegerField;
+    DSLangKOD_LANG: TFIBIntegerField;
+    DSLangNAME_LANG: TFIBStringField;
+    DSLangSHORT_NAME_LANG: TFIBStringField;
+    DSave: TpFIBDataSet;
+    cxGrid1DBTableView1DBColumn5: TcxGridDBColumn;
+    DSID_SP_KURS: TFIBBCDField;
+    DSID_SP_DERG_ZAKAZ: TFIBBCDField;
+    DSKOLVO: TFIBIntegerField;
+    DSID_SP_KAF: TFIBBCDField;
+    DSNAME_KURS: TFIBStringField;
+    DSSHORT_NAME_KURS: TFIBStringField;
+    DSNAME_ZAKAZ: TFIBStringField;
+    DSSHORT_NAME_ZAKAZ: TFIBStringField;
+    DSNAME_KAF: TFIBStringField;
+    DSID_DT_KONTINGENT: TFIBBCDField;
+    DSID_SP_SPECIALIZATION: TFIBBCDField;
+    DSNAME_SL: TFIBStringField;
+    DSSHORT_NAME_SL: TFIBStringField;
+    procedure dxBarLargeButtonOtmenaClick(Sender: TObject);
+    procedure ActionRefreshExecute(Sender: TObject);
+    procedure ActionDeleteExecute(Sender: TObject);
+    procedure ActionAddExecute(Sender: TObject);
+    procedure ActionChangeExecute(Sender: TObject);
+    procedure ActionCloseExecute(Sender: TObject);
+  private
+    myform : Tfm_uo_kontingent_3_main;
+    reg : smallint;
+  public
+    id_potok : int64;
+    id_kon, id_god, id_fak, id_form, id_kat, id_kurs, id_spec : int64;
+    date_work, name_spec : string;
+    constructor Create(aOwner: TComponent; mform : Tfm_uo_kontingent_3_main; r : smallint); reintroduce; overload;
+  end;
+
+implementation
+uses uUO_Loader,
+     uo_kontingent_3_potok_add,
+     uCommonSp;
+{$R *.dfm}
+
+constructor Tfmuo_kontingent_3_potok.Create(aOwner: TComponent;
+  mform: Tfm_uo_kontingent_3_main; r: smallint);
+begin
+    inherited Create(aOwner);
+    reg    := r;
+    myform := mform;
+    DB                      := myform.db;
+    Tr.DefaultDatabase      := DB;
+    TWr.DefaultDatabase     := DB;
+    DB.DefaultTransaction   := Tr;
+
+    DS.Database             := DB;
+    DS.Transaction          := Tr;
+
+    DSLang.Database         := DB;
+    DSLang.Transaction      := Tr;
+
+    Tr.StartTransaction;
+
+    date_work := myform.DS.FBN('CUR_DAT').AsString;
+    id_spec   := StrToInt64(myform.ds.fbn('ID_SP_SPEC').AsString);
+    name_spec := myform.ds.fbn('NAME_SPEC').AsString;
+    id_god    := StrToInt64(myform.ds.fbn('ID_SP_GOD_NABORA').AsString);
+    id_fak    := StrToInt64(myform.ds.fbn('ID_SP_DEPARTMENT_FAK').AsString);
+    id_form   := StrToInt64(myform.ds.fbn('ID_SP_FORM_STUD').AsString);
+    id_kat    := StrToInt64(myform.ds.fbn('ID_SP_KAT_STUD').AsString);
+
+//    DSLang.SQLs.SelectSQL.Text := 'select * from UO_DT_KONTINGENT_IN_S(?ID_DT_KONTINGENT)';
+
+    if (reg = 2) or (reg = 3) then
+        if not myform.DS.FBN('ID_DT_KONTINGENT').IsNull then
+        begin
+//            cxGrid1.SetFocus;
+            id_kon    := StrToInt64(myform.DS.FBN('ID_DT_KONTINGENT').AsString);
+            DS.Close;
+            DS.SQLs.SelectSQL.Text  := 'select * from UO_DT_KONTINGENT_2_SELECT_KAFED('+IntToStr(id_potok)+', '+IntToStr(id_spec)+', '+IntToStr(id_god)+', '+IntToStr(id_fak)+', '+IntToStr(id_form)+', '+IntToStr(id_kat)+')';
+            DS.Open;
+        end;
+
+    if reg = 3 then
+    begin
+        ActionAdd.Enabled    := false;
+        ActionChange.Enabled := false;
+        ActionDelete.Enabled := false;
+
+    end;
+
+end;
+
+procedure Tfmuo_kontingent_3_potok.dxBarLargeButtonOtmenaClick(Sender: TObject);
+begin
+    Close;
+end;
+
+procedure Tfmuo_kontingent_3_potok.ActionRefreshExecute(Sender: TObject);
+begin
+    if id_potok > 0 then
+    begin
+        DS.Close;
+//        DSLang.Close;
+//        DSLang.SQLs.SelectSQL.Text := 'select * from UO_DT_KONTINGENT_IN_S(?ID_DT_KONTINGENT)';
+
+        DS.SQLs.SelectSQL.Text  := 'select * from UO_DT_KONTINGENT_2_SELECT_KAFED('+IntToStr(id_potok)+', '+IntToStr(id_spec)+', '+IntToStr(id_god)+', '+IntToStr(id_fak)+', '+IntToStr(id_form)+', '+IntToStr(id_kat)+')';
+        DS.Open;
+    end;
+end;
+
+procedure Tfmuo_kontingent_3_potok.ActionDeleteExecute(Sender: TObject);
+var
+    id_del_l, id_del_t : int64;
+begin
+    if not DS.IsEmpty then
+    begin
+        if MessageBox(Handle, Pchar('¬и д≥йсно бажаЇте цей запис?'{ + DS.FieldByName('NAME_GROUP').AsString + ' к≥льк≥стю ' + DS.FieldByName('KOLVO').AsString}), Pchar('”вага!'), MB_YESNO + MB_DEFBUTTON2)=mrYes then
+        begin
+            id_del_t           := StrToInt64(DS.FieldByName('ID_DT_KONTINGENT').AsString);
+            cxGrid1DBTableView1.Controller.GoToPrev(false);
+            id_del_l           := StrToInt64(DS.FieldByName('ID_DT_KONTINGENT').AsString);
+            cxGrid1DBTableView1.Controller.GoToNext(false);
+            Stored.Database    := DB;
+            Stored.Transaction := TWr;
+            try
+                TWr.StartTransaction;
+                Stored.StoredProcName := 'UO_DT_KONTINGENT_3_DELETE';
+                Stored.ParamByName('ID_DT_KONTINGENT').AsInt64 := id_del_t;
+                Stored.ExecProc;
+                TWr.Commit;
+            except on E:Exception do begin
+                TWr.Rollback;
+                ShowMessage(E.Message);
+            end end;
+            ActionRefreshExecute(Sender);
+            DS.Locate('ID_DT_KONTINGENT', id_del_l, []);
+        end;
+    end;
+end;
+
+procedure Tfmuo_kontingent_3_potok.ActionAddExecute(Sender: TObject);
+var
+    T : Tfmuo_kontingent_3_potok_add;
+begin
+{    if id_potok <= 0 then
+    begin
+        cxButtonEdit1PropertiesButtonClick(Sender, 0);
+        if id_potok <=0 then exit;
+    end;
+{    if not DS.IsEmpty then
+    begin
+        id_god   := StrToInt64(ds.fbn('ID_SP_GOD_NABORA').AsString);
+        id_fak   := StrToInt64(ds.fbn('ID_SP_DEPARTMENT_FAK').AsString);
+        id_form  := StrToInt64(ds.fbn('ID_SP_FORM_STUD').AsString);
+        id_kat   := StrToInt64(ds.fbn('ID_SP_KAT_STUD').AsString);
+        id_kurs  := StrToInt64(ds.fbn('ID_SP_KURS').AsString);
+        id_spec  := StrToInt64(ds.fbn('ID_SP_SPEC').AsString);
+    end else
+    begin
+        id_god   := StrToInt64(myform.ds.fbn('ID_SP_GOD_NABORA').AsString);
+        try id_fak   := StrToInt64(myform.ds.fbn('ID_SP_DEPARTMENT_FAK').AsString); except id_fak := 1; end;
+        id_form  := StrToInt64(myform.ds.fbn('ID_SP_FORM_STUD').AsString);
+        id_kat   := StrToInt64(myform.ds.fbn('ID_SP_KAT_STUD').AsString);
+        id_kurs  := StrToInt64(myform.ds.fbn('ID_SP_KURS').AsString);
+        id_spec  := StrToInt64(myform.ds.fbn('ID_SP_SPEC').AsString);
+    end;   }
+    T := Tfmuo_kontingent_3_potok_add.Create(Self, Self, 1);
+    T.Showmodal;
+    T.Free;
+
+end;
+
+procedure Tfmuo_kontingent_3_potok.ActionChangeExecute(Sender: TObject);
+var
+    T : Tfmuo_kontingent_3_potok_add;
+begin
+    if not DS.IsEmpty then
+    begin
+        T := Tfmuo_kontingent_3_potok_add.Create(Self, Self, 2);
+        T.Showmodal;
+        T.Free;
+    end;
+end;
+
+procedure Tfmuo_kontingent_3_potok.ActionCloseExecute(Sender: TObject);
+begin
+    Close;
+end;
+
+end.

@@ -1,0 +1,40 @@
+package TuSpOfficialNoteEdit;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  cxExtEditorsVCLD7,
+  TuCommon,
+  ZarplataDPK,
+  gr_Common,
+  AccMgmtBpl;
+
+contains
+  TuSpOfficialNoteEdit_Main in 'SpOfficialNoteEdit\TuSpOfficialNoteEdit_Main.pas' {FormSpOfficialNoteEdit},
+  TuSpOfficialNoteEdit_Loader in 'SpOfficialNoteEdit\TuSpOfficialNoteEdit_Loader.pas',
+  TuSpOfficialNoteEdit_DM in 'SpOfficialNoteEdit\TuSpOfficialNoteEdit_DM.pas' {DM: TDataModule};
+
+end.

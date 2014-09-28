@@ -1,0 +1,89 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = UO_Resources.bpl UO_SP_CIKL_PIDG.bpl UO_SP_TYPE_CIKL_PIDG.bpl \
+  UO_SP_TYPE_DISC.bpl UO_SP_DISC.bpl UO_SP_SEMESTR.bpl UO_SP_SPECIALIZATION.bpl \
+  UO_SP_TYPE_CONTROL.bpl UO_SP_TYPE_DISC_LESSON.bpl uo_sp_norm_chisl_stud.bpl \
+  uo_sp_norm_chisl_asp.bpl uo_sp_type_potok.bpl uo_sp_potok.bpl \
+  uo_sys_type_kontingent.bpl uo_sp_uch_plan.bpl uo_kontingent_1.bpl \
+  uo_kontingent_2.bpl uo_kontingent_3.bpl uo_kontingent_4.bpl \
+  UO_SpVidNavichRobit.bpl UO_SpVidStudRobit.bpl UO.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+UO.exe: MainForm\UO.dpr
+  $(DCC)
+
+UO_Resources.bpl: UO_Resources\UO_Resources.dpk
+  $(DCC)
+
+UO_SP_CIKL_PIDG.bpl: UO_SP_CIKL_PIDG\UO_SP_CIKL_PIDG.dpk
+  $(DCC)
+
+UO_SP_DISC.bpl: UO_SP_DISC\UO_SP_DISC.dpk
+  $(DCC)
+
+UO_SP_SEMESTR.bpl: UO_SP_SEMESTR\UO_SP_SEMESTR.dpk
+  $(DCC)
+
+UO_SP_SPECIALIZATION.bpl: UO_SP_SPECIALIZATION\UO_SP_SPECIALIZATION.dpk
+  $(DCC)
+
+UO_SP_TYPE_CONTROL.bpl: UO_SP_TYPE_CONTROL\UO_SP_TYPE_CONTROL.dpk
+  $(DCC)
+
+UO_SP_TYPE_DISC.bpl: UO_SP_TYPE_DISC\UO_SP_TYPE_DISC.dpk
+  $(DCC)
+
+UO_SP_TYPE_DISC_LESSON.bpl: UO_SP_TYPE_DISC_LESSON\UO_SP_TYPE_DISC_LESSON.dpk
+  $(DCC)
+
+uo_sp_uch_plan.bpl: UO_sp_uch_plan\uo_sp_uch_plan.dpk
+  $(DCC)
+
+uo_sp_norm_chisl_stud.bpl: UO_sp_norm_chisl_stud\uo_sp_norm_chisl_stud.dpk
+  $(DCC)
+
+uo_sp_norm_chisl_asp.bpl: UO_sp_norm_chisl_asp\uo_sp_norm_chisl_asp.dpk
+  $(DCC)
+
+UO_SP_TYPE_CIKL_PIDG.bpl: uo_sp_type_cikl_pidg\UO_SP_TYPE_CIKL_PIDG.dpk
+  $(DCC)
+
+uo_sp_type_potok.bpl: uo_sp_type_potok\uo_sp_type_potok.dpk
+  $(DCC)
+
+uo_sp_potok.bpl: UO_SP_POTOK\uo_sp_potok.dpk
+  $(DCC)
+
+uo_sys_type_kontingent.bpl: uo_sys_type_kontingent\uo_sys_type_kontingent.dpk
+  $(DCC)
+
+uo_kontingent_1.bpl: UO_KONTINGENT_1\uo_kontingent_1.dpk
+  $(DCC)
+
+uo_kontingent_2.bpl: UO_KONTINGENT_2\uo_kontingent_2.dpk
+  $(DCC)
+
+uo_kontingent_3.bpl: UO_KONTINGENT_3\uo_kontingent_3.dpk
+  $(DCC)
+
+uo_kontingent_4.bpl: UO_KONTINGENT_4\uo_kontingent_4.dpk
+  $(DCC)
+
+UO_SpVidNavichRobit.bpl: uo_sp_vid_navich_robit\UO_SpVidNavichRobit.dpk
+  $(DCC)
+
+UO_SpVidStudRobit.bpl: UO_SP_VID_STUD_ROBIT\UO_SpVidStudRobit.dpk
+  $(DCC)
+
+

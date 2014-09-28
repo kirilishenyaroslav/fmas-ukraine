@@ -1,0 +1,78 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = TuCommon.bpl TimeKeeping.exe TuAccess.bpl TuWhatsNew.bpl \
+  Calendar.bpl SpWorkMode.bpl WorkModeEdit.bpl WorkModeTranscript.bpl \
+  WorkModeEditDays.bpl TuTemplet.bpl TuSpPost.bpl TuSpDepartment.bpl \
+  TuTimesheet.bpl TuSpDog.bpl TuSpTypeWork.bpl TuSpOfficialNote.bpl \
+  TuSpOfficialNoteEdit.bpl ZarplataDPK.bpl gr_Common.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+TimeKeeping.exe: TimeKeeping.dpr
+  $(DCC)
+
+Calendar.bpl: Calendar.dpk
+  $(DCC)
+
+TuAccess.bpl: TuAccess.dpk
+  $(DCC)
+
+TuCommon.bpl: TuCommon.dpk
+  $(DCC)
+
+TuWhatsNew.bpl: TuWhatsNew.dpk
+  $(DCC)
+
+SpWorkMode.bpl: SpWorkMode.dpk
+  $(DCC)
+
+WorkModeEdit.bpl: WorkModeEdit.dpk
+  $(DCC)
+
+WorkModeTranscript.bpl: WorkModeTranscript.dpk
+  $(DCC)
+
+WorkModeEditDays.bpl: WorkModeEditDays.dpk
+  $(DCC)
+
+TuTemplet.bpl: TuTemplet.dpk
+  $(DCC)
+
+TuSpPost.bpl: TuSpPost.dpk
+  $(DCC)
+
+TuSpDepartment.bpl: TuSpDepartment.dpk
+  $(DCC)
+
+TuTimesheet.bpl: TuTimesheet.dpk
+  $(DCC)
+
+TuSpDog.bpl: TuSpDog.dpk
+  $(DCC)
+
+TuSpTypeWork.bpl: TuSpTypeWork.dpk
+  $(DCC)
+
+TuSpOfficialNote.bpl: TuSpOfficialNote.dpk
+  $(DCC)
+
+TuSpOfficialNoteEdit.bpl: TuSpOfficialNoteEdit.dpk
+  $(DCC)
+
+ZarplataDPK.bpl: ..\..\Zarplata\Sources\Common\ZarplataDPK.dpk
+  $(DCC)
+
+gr_Common.bpl: ..\..\Grant\Sources\gr_Common.dpk
+  $(DCC)
+
+

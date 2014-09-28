@@ -1,0 +1,73 @@
+unit uPrK_Filtr;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, AArray, ibase,ib_externals;
+
+type
+  TFormPrK_Filtr = class(TForm)
+
+  private
+    DBHANDLE                :TISC_DB_HANDLE;
+    ResultArray             :TAArray;
+    TextViewColor           :TColor;
+    IndLang                 :integer;
+    
+  public
+    constructor Create(aOwner: TComponent; aParam : TAArray); overload;
+   
+  end;
+
+  procedure ShowAllPrkBpl (aOwner: TComponent; aParam : TAArray); stdcall;
+  exports   ShowAllPrkBpl;
+
+...
+ 
+procedure ShowAllPrkBpl (aOwner: TComponent; aParam : TAArray);
+var
+ T :TFormPrK_Filtr;
+begin
+   T:=TFormPrK_Filtr.Create(aOwner,aParam);
+
+   T.FormStyle:= aParam['Input']['aFrmStyle'].AsVariant;
+   case T.FormStyle of
+     fsNormal:   begin
+                   T.ShowModal;
+                  // T.ActionVibrat.Enabled:=true;
+                  // T.dxBarLargeButtonVibrat.Visible:=ivAlways;
+                 end;
+     fsMDIChild: begin
+                 //  T.ActionVibrat.Enabled:=false;
+                 //  T.dxBarLargeButtonVibrat.Visible:=ivNever;
+                 end;
+     else
+        T.Free;
+   end;
+end;
+
+
+{ TFormPrK_Filtr }
+
+
+constructor TFormPrK_Filtr.Create(aOwner: TComponent; aParam: TAArray);
+begin
+   if Assigned(PVoid(aParam['Input']['aDBHANDLE'])) then
+   begin
+      DBHANDLE      :=PVoid(aParam['Input']['aDBHANDLE'].asInteger);
+      ResultArray   :=aParam;
+      IndLang       :=SelectLanguage;
+      TextViewColor :=cl3DLight;
+      ID_USER_GLOBAL         :=ResultArray['Input']['ID_USER'].AsInt64;
+      ID_GOD_NABORA_GLOBAL   :=ResultArray['Input']['GodNabora'].AsInt64;
+      inherited Create(aOwner);
+      if SelectShemaColor=1 then
+       begin
+          cxStyleBackGround_Content.Color           := $00EBC4A4;
+          cxStyleInactive.Color                     := $00F7EAD9;
+          cxEditStyleControllerPrK.Style.Color      := $00EBC4A4;
+       end;
+   end
+   else ShowMessage('Ошибка Handl`a База');
+end;

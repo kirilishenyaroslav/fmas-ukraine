@@ -1,0 +1,14 @@
+var
+  InputParam :TAArray;
+begin
+  
+
+  InputParam :=TAArray.Create;
+    InputParam['Name_Bpl'].AsString                     := 'PrK_Ekz_Vedom.bpl';
+    InputParam['Input']['aDBHANDLE'].AsInteger          := Integer(Database.Handle);
+    InputParam['Input']['aFrmStyle'].AsVariant          := fsMDIChild;
+    InputParam['Input']['GodNabora'].AsInt64            := God_Nabora;
+    InputParam['Input']['ID_USER_GLOBAL'].AsInt64       := ID_USER_GLOBAL;
+  uPrK_Loader.ShowAllPrkBpl(self,InputParam);
+//в режиме fsNormal делать InputParam.Free;  InputParam := Nil;
+end;
