@@ -1,0 +1,36 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = CS.exe CS_TypeStreetSynch.bpl EDBOIntf.bpl EDBOTest.exe \
+  CS_Loader.bpl CS_Stud.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+CS.exe: ..\CS_Exe\CS.dpr
+  $(DCC)
+
+CS_TypeStreetSynch.bpl: CS_TypeStreetSynch.dpk
+  $(DCC)
+
+EDBOIntf.bpl: ..\EDBOIntf\EDBOIntf.dpk
+  $(DCC)
+
+EDBOTest.exe: ..\EDBOTest\EDBOTest.dpr
+  $(DCC)
+
+CS_Loader.bpl: ..\CS_Loader\CS_Loader.dpk
+  $(DCC)
+
+CS_Stud.bpl: ..\CS_Stud\CS_Stud.dpk
+  $(DCC)
+
+

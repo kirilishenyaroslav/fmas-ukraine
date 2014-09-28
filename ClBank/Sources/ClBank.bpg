@@ -1,0 +1,46 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = PackageConstClBank.bpl LoadClBank.bpl AddDocClBank.bpl \
+  ConfigClBank.bpl RunClBank.bpl ViewClBank.bpl TestForm.exe PrintDocClBank.bpl \
+  Bank.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+PackageConstClBank.bpl: Sources\constClBank\PackageConstClBank.dpk
+  $(DCC)
+
+LoadClBank.bpl: Sources\LoadCLBANK\LoadClBank.dpk
+  $(DCC)
+
+AddDocClBank.bpl: Sources\AddDocClBank\AddDocClBank.dpk
+  $(DCC)
+
+ConfigClBank.bpl: Sources\ConfigClBank\ConfigClBank.dpk
+  $(DCC)
+
+RunClBank.bpl: Sources\RunClBank\RunClBank.dpk
+  $(DCC)
+
+ViewClBank.bpl: Sources\ViewClBank\ViewClBank.dpk
+  $(DCC)
+
+TestForm.exe: Sources\testForm\TestForm.dpr
+  $(DCC)
+
+PrintDocClBank.bpl: Sources\PrintDocClBank\PrintDocClBank.dpk
+  $(DCC)
+
+Bank.exe: ..\Bank\Sources\MainFormBank\Bank.dpr
+  $(DCC)
+
+

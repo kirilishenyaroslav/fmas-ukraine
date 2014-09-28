@@ -1,0 +1,43 @@
+package CsStudImportInfo;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  CSKernel,
+  applib,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  cxGridVCLD7,
+  CS_Loader,
+  cxExtEditorsVCLD7;
+
+contains
+  DM_StudImportInfo in 'DM_StudImportInfo.pas' {DM: TDataModule},
+  uStudImportInfoLoader in 'uStudImportInfoLoader.pas',
+  uStudImportInfoMain in 'uStudImportInfoMain.pas' {fmStudImportInfo};
+
+end.

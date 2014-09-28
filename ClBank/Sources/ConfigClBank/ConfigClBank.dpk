@@ -1,0 +1,52 @@
+package ConfigClBank;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  vcljpg,
+  vcl,
+  rtl,
+  dbrtl,
+  vclx,
+  vcldb,
+  VclSmp,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxExtEditorsVCLD7,
+  cxGridVCLD7,
+  rxctl7,
+  rxdb7,
+  Halcyon6D7,
+  PackageConstClBank,
+  FIBPlus7,
+  LoadDog;
+
+contains
+  CongifFormClBank in 'CongifFormClBank.pas' {frmConfigExports},
+  AllConfgi in 'AllConfgi.pas' {frmAllConfig};
+
+end.

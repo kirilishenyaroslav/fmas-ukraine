@@ -1,0 +1,42 @@
+package CsReportSvKatPay;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  CS_Resources,
+  fs7,
+  frxDB7,
+  frx7,
+  frxe7,
+  CS_Loader,
+  CSKernel,
+  cxGridVCLD7;
+
+contains
+  DM_ReportSvKatPay in 'DM_ReportSvKatPay.pas' {DM: TDataModule},
+  uReportSvKatPayMain in 'uReportSvKatPayMain.pas' {fmReportSvKatPay};
+
+end.
