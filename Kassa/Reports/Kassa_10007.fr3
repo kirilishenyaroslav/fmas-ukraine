@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TfrxReport Name="" Version="3.15" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="2047" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" ReportOptions.CreateDate="38593,4808506829" ReportOptions.Description.Text="" ReportOptions.LastChange="39870,5252793982" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end." PropData="044C65667403C80103546F7003D80008446174617365747301010C3200000020446174615365743D2244424461746173657444656C2220446174615365744E616D653D2244424461746173657444656C220000095661726961626C65730100055374796C650100">
+  <TfrxReportPage Name="Page1" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Times New Roman" Font.Style="0" PaperWidth="210" PaperHeight="297" PaperSize="9" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxReportTitle Name="ReportTitle1" Height="68,03154" Left="0" Top="18,89765" Width="718,1107">
+      <TfrxMemoView Name="Memo2" Left="11,33859" Top="0" Width="706,77211" Height="30,23624" Font.Charset="1" Font.Color="0" Font.Height="-8" Font.Name="Times New Roman" Font.Style="0" Memo.Text="[DBDatasetDel.&#34;NAME_PREDPR&#34;]" ParentFont="False"/>
+      <TfrxMemoView Name="Memo3" Left="166,29932" Top="30,23624" Width="377,953" Height="34,01577" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Times New Roman" Font.Style="1" HAlign="haCenter" Memo.Text="Реестр удаленных кассовых ордеров&#13;&#10;за [date_beg]" ParentFont="False"/>
+    </TfrxReportTitle>
+    <TfrxMasterData Name="MasterData1" Height="18,89765" Left="0" Top="200,31509" Width="718,1107" ColumnWidth="0" ColumnGap="0" DataSet="DBDatasetDel" DataSetName="DBDatasetDel" KeepChild="True" KeepFooter="True" KeepHeader="True" RowCount="0" Stretched="True">
+      <TfrxMemoView Name="Memo9" Left="7,55906" Top="0" Width="56,69295" Height="18,89765" StretchMode="smMaxHeight" Frame.Typ="15" Memo.Text="[DBDatasetDel.&#34;NUMBER&#34;]"/>
+      <TfrxMemoView Name="Memo10" Left="64,25201" Top="0" Width="257,00804" Height="18,89765" StretchMode="smMaxHeight" Frame.Typ="15" Memo.Text=" [DBDatasetDel.&#34;FIO&#34;]&#13;&#10; [DBDatasetDel.&#34;NOTE&#34;]" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo11" Left="321,26005" Top="0" Width="83,14966" Height="18,89765" StretchMode="smMaxHeight" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.2f" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" Memo.Text="[DBDatasetDel.&#34;SUMMA_PRIH&#34;]" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo12" Left="404,40971" Top="0" Width="83,14966" Height="18,89765" StretchMode="smMaxHeight" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.2f" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" Memo.Text="[DBDatasetDel.&#34;SUMMA_RASH&#34;]" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo13" Left="487,55937" Top="0" Width="226,7718" Height="18,89765" StretchMode="smMaxHeight" Frame.Typ="15" Memo.Text="[DBDatasetDel.&#34;FIO_DEL&#34;]&#13;&#10;       [DBDatasetDel.&#34;USE_END&#34;]"/>
+    </TfrxMasterData>
+    <TfrxPageFooter Name="PageFooter1" Height="22,67718" Left="0" Top="362,83488" Width="718,1107">
+      <TfrxMemoView Name="Memo1" Left="642,41931253" Top="0" Width="75,5906" Height="18,89765" HAlign="haRight" Memo.Text="Стр. [Page#]"/>
+      <TfrxMemoView Name="Memo18" Left="11,33859" Top="7,55905999999999" Width="608,50433" Height="11,33859" Font.Charset="1" Font.Color="0" Font.Height="-7" Font.Name="Times New Roman" Font.Style="0" Memo.Text="Лаб.&#34;Модел.проц.фин.менедж.&#34;ДонНУ. Заказ № 10007 от 29.08.2005 (U[id_user][comp]DT [DATE][TIME])" ParentFont="False"/>
+    </TfrxPageFooter>
+    <TfrxFooter Name="Footer1" Height="60,47248" Left="0" Top="241,88992" Width="718,1107">
+      <TfrxMemoView Name="Memo14" Left="34,01577" Top="37,7953000000001" Width="60,47248" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Times New Roman" Font.Style="1" Memo.Text="Кассир" ParentFont="False"/>
+      <TfrxMemoView Name="Memo15" Left="325,03958" Top="37,7953000000001" Width="136,06308" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Times New Roman" Font.Style="1" Memo.Text="Главный бухгалтер" ParentFont="False"/>
+      <TfrxMemoView Name="Memo16" Left="461,10266" Top="37,7953000000001" Width="215,43321" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Times New Roman" Font.Style="1" Frame.Typ="8" Memo.Text="" ParentFont="False"/>
+      <TfrxMemoView Name="Memo17" Left="90,70872" Top="37,7953000000001" Width="200,31509" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Times New Roman" Font.Style="1" Frame.Typ="8" Memo.Text="" ParentFont="False"/>
+      <TfrxMemoView Name="Memo19" Left="321,26005" Top="0" Width="83,14966" Height="18,89765" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.2n" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" Memo.Text=" [SUM(&#60;DBDatasetDel.&#34;SUMMA_PRIH&#34;&#62;, MAsterData1)] " VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo20" Left="404,40971" Top="0" Width="83,14966" Height="18,89765" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.2n" DisplayFormat.Kind="fkNumeric" Frame.Typ="15" HAlign="haRight" Memo.Text=" [SUM(&#60;DBDatasetDel.&#34;SUMMA_RASH&#34;&#62;, MAsterData1)] " VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo21" Left="487,55937" Top="0" Width="226,7718" Height="18,89765" Frame.Typ="15" Memo.Text=""/>
+      <TfrxMemoView Name="Memo22" Left="7,55906" Top="0" Width="313,70099" Height="18,89765" Frame.Typ="15" HAlign="haRight" Memo.Text=" Итого : " VAlign="vaCenter"/>
+    </TfrxFooter>
+    <TfrxPageHeader Name="PageHeader1" Height="30,23624" Left="0" Top="109,60637" Width="718,1107">
+      <TfrxMemoView Name="Memo4" Left="7,55906" Top="3,77952999999999" Width="56,69295" Height="26,45671" Frame.Typ="15" HAlign="haCenter" Memo.Text="№ док-та" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo5" Left="321,26005" Top="3,77952999999999" Width="83,14966" Height="26,45671" Frame.Typ="15" HAlign="haCenter" Memo.Text="Приход" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo6" Left="404,40971" Top="3,77952999999999" Width="83,14966" Height="26,45671" Frame.Typ="15" HAlign="haCenter" Memo.Text="Расход" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo7" Left="64,25201" Top="3,77952999999999" Width="257,00804" Height="26,45671" Frame.Typ="15" Memo.Text="Фамилия&#13;&#10;Основание"/>
+      <TfrxMemoView Name="Memo8" Left="487,55937" Top="3,77952999999999" Width="226,7718" Height="26,45671" Frame.Typ="15" Memo.Text="Кто удалил&#13;&#10;Когда удалил"/>
+    </TfrxPageHeader>
+  </TfrxReportPage>
+</TfrxReport>

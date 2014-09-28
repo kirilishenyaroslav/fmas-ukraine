@@ -1,0 +1,61 @@
+package Balance;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  vcljpg,
+  dbrtl,
+  vcldb,
+  fs7,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxCommonEditingVCLD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxTreeListVCLD7,
+  cxPageControlVCLD7,
+  frx7,
+  FIBPlus7,
+  cxExtEditorsVCLD7,
+  cxGridVCLD7,
+  VclSmp,
+  ibxpress,
+  rxctl7,
+  rxdb7,
+  Globals,
+  frxDB7,
+  frxe7;
+
+contains
+  UBalance in 'UBalance.pas' {frmBalance},
+  getBalance in 'getBalance.pas',
+  UAddEditBalance in 'UAddEditBalance.pas' {frmAddEditBalance},
+  UBalanceSetupProp in 'UBalanceSetupProp.pas' {frmBalanceSetupProp},
+  USetFilter in 'USetFilter.pas' {frmSetFilter},
+  UDbKrSch in 'UDbKrSch.pas' {frmDbKr};
+
+end.

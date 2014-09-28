@@ -1,0 +1,58 @@
+package Globals;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  FIBPlus7,
+  vcldb,
+  dbrtl,
+  visualdbclx,
+  visualclx,
+  cxEditorsVCLD7,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxDataD7,
+  vcljpg,
+  cxGridVCLD7,
+  cxExtEditorsVCLD7,
+  vclx,
+  AccMgmtBpl;
+
+contains
+  BaseTypes in 'Globals\BaseTypes.pas',
+  Common in 'Globals\Common.pas',
+  SYS_OPTIONS in 'Globals\sys_options.pas',
+  GlobalSPR in 'Globals\GlobalSpr.pas',
+  Resources_unitb in 'Globals\Resources_unitb.pas',
+  UConfigAppx in 'Globals\uconfigappx.pas',
+  RegUnit in 'Globals\RegUnit.pas',
+  check_user in 'Globals\check_user.pas' {CkeckAccessFrm},
+  HSFlatButton in 'Globals\HSFlatButton.pas',
+  HSDialogs in 'Globals\HSDialogs.pas',
+  WindowThread in 'Globals\WindowThread.pas';
+
+end.

@@ -1,0 +1,53 @@
+package kowtoris;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  applib,
+  vcljpg,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxGridVCLD7,
+  Globals,
+  vcl,
+  dbrtl,
+  vcldb,
+  cxExtEditorsVCLD7,
+  vclx,
+  FIBPlus7,
+  visualdbclx,
+  visualclx;
+
+contains
+  UKowIntf in 'UKowIntf.pas',
+  UKowMainForm in 'UKowMainForm.pas' {frmKowtoris},
+  UKowEditDoc in 'UKowEditDoc.pas' {frmDocEdit},
+  UKowDocsValues in 'UKowDocsValues.pas' {frmDocValues},
+  UDocValueEdit in 'UDocValueEdit.pas' {frmEditValue};
+
+end.

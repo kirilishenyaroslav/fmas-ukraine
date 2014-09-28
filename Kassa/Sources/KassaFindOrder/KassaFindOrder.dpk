@@ -1,0 +1,47 @@
+package KassaFindOrder;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  FR7,
+  cxExtEditorsVCLD7,
+  dxBarD7,
+  AccMgmtBpl,
+  Globals,
+  dxBarExtItemsD7,
+  LoadDog,
+  sys_admin,
+  SpravkaL,
+  Pwd,
+  AlBPLMyLoad,
+  Kerneldpk;
+
+contains
+  KassaResultFindForm in 'KassaResultFindForm.pas' {fmKassaResultFindForm},
+  KassaFindForm in 'KassaFindForm.pas' {fmKassaFindForm},
+  KassaSchSelect in 'KassaSchSelect.pas' {fmKassaSchSelect},
+  KassaShowP in 'KassaShowP.pas' {fmKassaShowP};
+
+end.

@@ -1,0 +1,52 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = AlBPLMyLoad.bpl KassaNastroykaBPL.bpl KassaSystemBpl.bpl \
+  KassaFindOrder.bpl KassaDocBPL.bpl KassaDayBPL.bpl KassaDeleteOrder.bpl \
+  KassaSchSys.bpl AnalitGotOper.bpl HistoryInfoBPL.bpl Kassa.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+KassaDocBPL.bpl: KassaDoc\KassaDocBPL.dpk
+  $(DCC)
+
+KassaDayBPL.bpl: KassaDay\KassaDayBPL.dpk
+  $(DCC)
+
+AlBPLMyLoad.bpl: KassaResurce\AlBPLMyLoad.dpk
+  $(DCC)
+
+KassaSchSys.bpl: SpSchSystem\KassaSchSys.dpk
+  $(DCC)
+
+Kassa.exe: MainForm\Kassa.dpr
+  $(DCC)
+
+KassaDeleteOrder.bpl: KassaShowDeleteOrder\KassaDeleteOrder.dpk
+  $(DCC)
+
+KassaNastroykaBPL.bpl: KassaNastroyka\KassaNastroykaBPL.dpk
+  $(DCC)
+
+KassaSystemBpl.bpl: KassaSystem\KassaSystemBpl.dpk
+  $(DCC)
+
+KassaFindOrder.bpl: KassaFindOrder\KassaFindOrder.dpk
+  $(DCC)
+
+AnalitGotOper.bpl: KassaAnalitGotOper\AnalitGotOper.dpk
+  $(DCC)
+
+HistoryInfoBPL.bpl: HistoryInfo\HistoryInfoBPL.dpk
+  $(DCC)
+
+

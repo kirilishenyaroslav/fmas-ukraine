@@ -1,0 +1,78 @@
+package ACards;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  FIBPlus7,
+  frx7,
+  fs7,
+  vclx,
+  tee,
+  fqb70,
+  bdertl,
+  vcldb,
+  vcljpg,
+  frxDB7,
+  fsDB7,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxExtEditorsVCLD7,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  visualdbclx,
+  visualclx,
+  Globals,
+  VclSmp,
+  rxctl7,
+  applib,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  frxe7,
+  LoadDog;
+
+contains
+  UCardInterface in 'UCardInterface.pas',
+  UCardGetAssignConfigure in 'UCardGetAssignConfigure.pas' {frmAssignConfigureForm},
+  UCardGetUrO in 'UCardGetUrO.pas' {frmGetUrOMain},
+  UCardGetFactRasxConfigure in 'UCardGetFactRasxConfigure.pas' {frmFactrasxConfigureFrm},
+  UCardGetKassaRasxConfigure in 'UCardGetKassaRasxConfigure.pas' {frmKassaRasxConfigureFrm},
+  UCardKassaRasx in 'UCardKassaRasx.pas' {frmGetKassaRasx},
+  ACardFactRasx in 'ACardFactRasx.pas' {frmGetFactRsx},
+  UParams in 'UParams.pas' {frmEditMainParams},
+  UACConfigureForm in 'UACConfigureForm.pas' {frmGetConfInfo},
+  ACardsDocsInfo in 'ACardsDocsInfo.pas' {frmACDocsInfo},
+  UProgress in 'UProgress.pas' {frmACardProgress},
+  ACardPrintReport in 'ACardPrintReport.pas' {AcardPrintReportForm},
+  UKardNOMainForm in 'UKardNOMainForm.pas' {frmKardNOMainForm},
+  UKardKVMainForm in 'UKardKVMainForm.pas' {frmKardKVMainForm},
+  UCardGetAssign in 'UCardGetAssign.pas' {frmGetAssignMain};
+
+end.

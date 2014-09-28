@@ -1,0 +1,100 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = applib.bpl Globals.bpl Kerneldpk.bpl GetProvs.bpl CustomEnums.bpl \
+  omatrix.bpl OperPackage.bpl SysDPK.bpl SchPackage.bpl wizardgpi.bpl \
+  AnalizePackage.bpl SchAnalize.bpl obranalize.bpl reports.bpl getfinfrm.bpl \
+  KrDbAnalize.bpl zadanalize.bpl mo_mainbook.bpl mo_14form.bpl MO_17form.bpl \
+  obranalize_ex.bpl Main_book.exe Balance.bpl ACards.bpl Finance.exe \
+  kowtoris.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+Globals.bpl: Globals.dpk
+  $(DCC)
+
+Kerneldpk.bpl: Kerneldpk.dpk
+  $(DCC)
+
+Main_book.exe: Main_book.dpr
+  $(DCC)
+
+CustomEnums.bpl: CustomEnums.dpk
+  $(DCC)
+
+GetProvs.bpl: GetProvs.dpk
+  $(DCC)
+
+omatrix.bpl: omatrix.dpk
+  $(DCC)
+
+OperPackage.bpl: OperPackage.dpk
+  $(DCC)
+
+SysDPK.bpl: SysDPK.dpk
+  $(DCC)
+
+SchPackage.bpl: SchPackage.dpk
+  $(DCC)
+
+wizardgpi.bpl: wizardgpi.dpk
+  $(DCC)
+
+AnalizePackage.bpl: AnalizePackage.dpk
+  $(DCC)
+
+SchAnalize.bpl: SchAnalize.dpk
+  $(DCC)
+
+obranalize.bpl: obranalize.dpk
+  $(DCC)
+
+reports.bpl: reports.dpk
+  $(DCC)
+
+getfinfrm.bpl: getfinfrm.dpk
+  $(DCC)
+
+KrDbAnalize.bpl: KrDbAnalize.dpk
+  $(DCC)
+
+zadanalize.bpl: zadanalize.dpk
+  $(DCC)
+
+applib.bpl: applib.dpk
+  $(DCC)
+
+mo_mainbook.bpl: mo_mainbook.dpk
+  $(DCC)
+
+mo_14form.bpl: mo_14form.dpk
+  $(DCC)
+
+MO_17form.bpl: MO_17form.dpk
+  $(DCC)
+
+obranalize_ex.bpl: obranalize_ex.dpk
+  $(DCC)
+
+Balance.bpl: Balance\Balance.dpk
+  $(DCC)
+
+ACards.bpl: ACardDPK\ACards.dpk
+  $(DCC)
+
+Finance.exe: Finance.dpr
+  $(DCC)
+
+kowtoris.bpl: kowtoris\kowtoris.dpk
+  $(DCC)
+
+

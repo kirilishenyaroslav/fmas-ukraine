@@ -1,0 +1,61 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = getfinfrm.bpl Finance.exe ACards.bpl ACardsEx.bpl Globals.bpl \
+  obranalize_ex.bpl obranalize.bpl GenHTML.bpl KekvPackage.bpl OperPackage.bpl \
+  GetProvs.bpl SchPackage.bpl Kerneldpk.bpl wizardgpi.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+getfinfrm.bpl: getfinfrm.dpk
+  $(DCC)
+
+Finance.exe: Finance.dpr
+  $(DCC)
+
+ACards.bpl: ACardDPK\ACards.dpk
+  $(DCC)
+
+Globals.bpl: globals\Globals.dpk
+  $(DCC)
+
+obranalize_ex.bpl: AnOborDocInfo\obranalize_ex.dpk
+  $(DCC)
+
+obranalize.bpl: AnOborDPK\obranalize.dpk
+  $(DCC)
+
+ACardsEx.bpl: ACardsEx\ACardsEx.dpk
+  $(DCC)
+
+GenHTML.bpl: ..\..\Smeta\Sources\GenHTML.dpk
+  $(DCC)
+
+KekvPackage.bpl: ..\..\Smeta\Sources\KekvPackage.dpk
+  $(DCC)
+
+OperPackage.bpl: OperPackage\OperPackage.dpk
+  $(DCC)
+
+GetProvs.bpl: GetProvs\GetProvs.dpk
+  $(DCC)
+
+SchPackage.bpl: SchPackage\SchPackage.dpk
+  $(DCC)
+
+Kerneldpk.bpl: KernelDPK\Kerneldpk.dpk
+  $(DCC)
+
+wizardgpi.bpl: WizardGPI\wizardgpi.dpk
+  $(DCC)
+
+

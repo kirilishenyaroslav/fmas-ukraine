@@ -1,0 +1,106 @@
+package XLSReadWriteII30DPK;
+
+{$R *.res}
+{$R 'XLSReadWriteReg2.dcr'}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  vcljpg,
+  designide,
+  vclactnband,
+  vclx,
+  dbrtl;
+
+contains
+  XLSReadWriteII2 in 'XLSReadWriteII2.pas',
+  ApplyFormat in 'ApplyFormat.pas',
+  BIFFRecsII2 in 'BIFFRecsII2.pas',
+  CalculateFormula2 in 'CalculateFormula2.pas',
+  Cell2 in 'Cell2.pas',
+  CellAreas2 in 'CellAreas2.pas',
+  CellFormats2 in 'CellFormats2.pas',
+  CellStorage2 in 'CellStorage2.pas',
+  CellValues2 in 'CellValues2.pas',
+  ColorSelect2 in 'ColorSelect2.pas' {frmExcelColorSelect},
+  Columns2 in 'Columns2.pas',
+  CondFmt2 in 'CondFmt2.pas',
+  ControlObj2 in 'ControlObj2.pas',
+  DecodeFormula2 in 'DecodeFormula2.pas',
+  DrawingObj2 in 'DrawingObj2.pas',
+  DrawingObjAnchor2 in 'DrawingObjAnchor2.pas',
+  DrawingObjChart2 in 'DrawingObjChart2.pas',
+  EncodeFormulaII2 in 'EncodeFormulaII2.pas',
+  Escher2 in 'Escher2.pas',
+  EscherCtrlObj2 in 'EscherCtrlObj2.pas',
+  EscherTypes2 in 'EscherTypes2.pas',
+  ExcelMaskII2 in 'ExcelMaskII2.pas',
+  ExportCSV2 in 'ExportCSV2.pas',
+  ExtSeek2 in 'ExtSeek2.pas',
+  FormattedObj2 in 'FormattedObj2.pas',
+  FormulaHandler2 in 'FormulaHandler2.pas',
+  HTMLParse2 in 'HTMLParse2.pas',
+  HTMLTypes2 in 'HTMLTypes2.pas',
+  Hyperlink2 in 'Hyperlink2.pas',
+  ImportCSV2 in 'ImportCSV2.pas',
+  ImportHTMLTable2 in 'ImportHTMLTable2.pas',
+  ImportOOCalc in 'ImportOOCalc.pas',
+  MergedCells2 in 'MergedCells2.pas',
+  MoveCopy2 in 'MoveCopy2.pas',
+  PropEdExcelColorsD50_2 in 'PropEdExcelColorsD50_2.pas' {frmPropEdExcelColors},
+  PropEditorsReg2 in 'PropEditorsReg2.pas',
+  RecordStorage2 in 'RecordStorage2.pas',
+  RecordStorageChart2 in 'RecordStorageChart2.pas',
+  Rows2 in 'Rows2.pas',
+  RTFReadWrite2 in 'RTFReadWrite2.pas',
+  SheetData2 in 'SheetData2.pas',
+  SST2 in 'SST2.pas',
+  Validate2 in 'Validate2.pas',
+  XLS_MD4Hash in 'XLS_MD4Hash.pas',
+  XLS_MD5 in 'XLS_MD5.pas',
+  XLS_RC4 in 'XLS_RC4.pas',
+  XLSDbRead2 in 'XLSDbRead2.pas',
+  XLSExport2 in 'XLSExport2.pas',
+  XLSExportHTML2 in 'XLSExportHTML2.pas',
+  XLSFonts2 in 'XLSFonts2.pas',
+  XLSFuncEval2 in 'XLSFuncEval2.pas',
+  XLSHashTrie in 'XLSHashTrie.pas',
+  XLSHTMLDecode in 'XLSHTMLDecode.pas',
+  XLSNames2 in 'XLSNames2.pas',
+  XLSRange2 in 'XLSRange2.pas',
+  XLSReadII2 in 'XLSReadII2.pas',
+  XLSReadWriteReg2 in 'XLSReadWriteReg2.pas',
+  XLSReadWriteZIP in 'XLSReadWriteZip.pas',
+  XLSRegDb2 in 'XLSRegDb2.pas',
+  XLSStream2 in 'XLSStream2.pas',
+  XLSUtils2 in 'XLSUtils2.pas',
+  XLSVarStack2 in 'XLSVarStack2.pas',
+  XLSVBA2 in 'XLSVBA2.pas',
+  XLSWideStrList2 in 'XLSWideStrList2.pas',
+  XLSWriteII2 in 'XLSWriteII2.pas',
+  XLSXML in 'XLSXML.pas',
+  ZipInterface in 'ZipInterface.pas';
+
+end.
