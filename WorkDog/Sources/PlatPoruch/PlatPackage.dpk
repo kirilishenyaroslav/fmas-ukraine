@@ -1,0 +1,72 @@
+package PlatPackage;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  vcldb,
+  cxExtEditorsVCLD7,
+  vclx,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  cxTreeListVCLD7,
+  cxCommonEditingVCLD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  FIBPlus7,
+  visualdbclx,
+  LoadDog,
+  visualclx,
+  fs7,
+  frxDB7,
+  frx7,
+  Kerneldpk,
+  WaitPack,
+  Halcyon6D7,
+  dogLangPack,
+  designide,
+  vclactnband,
+  Globals,
+  commonsp,
+  frxe7,
+  FR7,
+  Customizer,
+  ZarplataDPK;
+
+contains
+  platFormUnit in 'platFormUnit.pas' {platForm},
+  fin_obligations in 'fin_obligations.pas' {frmFin_obl},
+  fltPlatUnit in 'fltPlatUnit.pas' {fltPlatForm},
+  ShapkaEditUnit in 'ShapkaEditUnit.pas' {ShapkaEditForm};
+
+end.

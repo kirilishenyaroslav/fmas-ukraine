@@ -1,0 +1,74 @@
+package FiltrDogUrFn;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  FIBPlus7,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxPageControlVCLD7,
+  cxEditorsVCLD7,
+  LoadDog,
+  Loader,
+  CommonSp,
+  AArrayPack,
+  Globals,
+  dogLangPack,
+  WaitPack,
+  vcl,
+  dbrtl,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  cxDataD7,
+  vcljpg,
+  vcldb,
+  cxExtEditorsVCLD7,
+  vclx,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  cxTreeListVCLD7,
+  cxCommonEditingVCLD7,
+  visualdbclx,
+  visualclx,
+  XLSReadWriteII30DPK,
+  Halcyon6D7,
+  designide,
+  vclactnband,
+  fs7,
+  frxDB7,
+  frx7,
+  frxe7;
+
+contains
+  FiltrDogUrFn_DM in 'FiltrDogUrFn_DM.pas' {FiltrDogUrFnDM: TDataModule},
+  LoaderFiltrUrFn in 'LoaderFiltrUrFn.pas',
+  FilterformFiltrDogUrFn in 'FilterformFiltrDogUrFn.pas' {FilterForm},
+  RezultFilterDogUrFn in 'RezultFilterDogUrFn.pas' {RezultFilterForm},
+  UrFnDogFilterDogUrFn in 'UrFnDogFilterDogUrFn.pas' {UrFnDogForm},
+  RezultFilterDogUrFnGroupBy in 'RezultFilterDogUrFnGroupBy.pas' {RezultFilterGroupByForm};
+
+end.

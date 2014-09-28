@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TfrxReport Name="" Version="3.15" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="2047" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" ReportOptions.CreateDate="39014,3803233333" ReportOptions.Description.Text="" ReportOptions.LastChange="39014,4117706366" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end." PropData="044C65667403380103546F7003100108446174617365747301010C3400000020446174615365743D22667278444244617461736574312220446174615365744E616D653D2266727844424461746173657431220000095661726961626C65730100055374796C650100">
+  <TfrxReportPage Name="Page1" PaperWidth="210" PaperHeight="297" PaperSize="9" LeftMargin="20" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxReportTitle Name="ReportTitle1" Height="83,14966" Left="0" Top="18,89765" Width="680,3154">
+      <TfrxMemoView Name="Memo2" Left="0" Top="0" Width="676,53587" Height="79,37013" Font.Charset="1" Font.Color="0" Font.Height="-19" Font.Name="Times New Roman" Font.Style="0" HAlign="haCenter" Memo.Text="Помилки при проведенні імпорту&#13;&#10;по договору [name_dog]&#13;&#10;від [frxDBDataset1.&#34;TIME_IMPORT&#34;]&#13;&#10;Проводив імпорт [frxDBDataset1.&#34;NAME_USER_IMP&#34;]" ParentFont="False"/>
+    </TfrxReportTitle>
+    <TfrxMasterData Name="MasterData1" Height="37,7953" Left="0" Top="222,99227" Width="680,3154" ColumnWidth="0" ColumnGap="0" DataSet="frxDBDataset1" DataSetName="frxDBDataset1" RowCount="0">
+      <TfrxMemoView Name="Memo3" Left="0" Top="0" Width="117,16543" Height="18,89765" Frame.Typ="15" Memo.Text="[frxDBDataset1.&#34;LIC_SCH&#34;]"/>
+      <TfrxMemoView Name="Memo4" Left="117,16543" Top="0" Width="98,26778" Height="18,89765" Frame.Typ="15" Memo.Text="[frxDBDataset1.&#34;TIN&#34;]"/>
+      <TfrxMemoView Name="Memo5" Left="215,43321" Top="0" Width="154,96073" Height="18,89765" Frame.Typ="15" Memo.Text="[frxDBDataset1.&#34;FAMILIYA&#34;]"/>
+      <TfrxMemoView Name="Memo6" Left="525,35467" Top="0" Width="154,96073" Height="18,89765" Frame.Typ="15" Memo.Text="[frxDBDataset1.&#34;OTCHESTVO&#34;]"/>
+      <TfrxMemoView Name="Memo7" Left="370,39394" Top="0" Width="154,96073" Height="18,89765" Frame.Typ="15" Memo.Text="[frxDBDataset1.&#34;IMYA&#34;]"/>
+      <TfrxMemoView Name="Memo8" Left="0" Top="18,89765" Width="680,3154" Height="18,89765" Frame.Typ="15" Memo.Text="[frxDBDataset1.&#34;COMENT&#34;]"/>
+    </TfrxMasterData>
+    <TfrxPageFooter Name="PageFooter1" Height="22,67718" Left="0" Top="321,26005" Width="680,3154">
+      <TfrxMemoView Name="Memo1" Left="600,84448253" Top="0" Width="75,5906" Height="18,89765" HAlign="haRight" Memo.Text="[Page#]"/>
+      <TfrxMemoView Name="Memo15" Left="3,77953" Top="0" Width="593,38621" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-5" Font.Name="Arial" Font.Style="0" Memo.Text="Лаб.&#34;Модел.проц.фин.менедж.&#34;ДонНУ. Заказ № 2 от 24.10.2006 (U[id_user][comp]DT [DATE][TIME])  Разработал форму Гаврилюк А.Г." ParentFont="False" VAlign="vaCenter"/>
+    </TfrxPageFooter>
+    <TfrxPageHeader Name="PageHeader1" Height="37,7953" Left="0" Top="124,72449" Width="680,3154">
+      <TfrxMemoView Name="Memo9" Left="0" Top="0" Width="117,16543" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="Рахунок" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo10" Left="117,16543" Top="0" Width="98,26778" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="Ідент. номер" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo11" Left="215,43321" Top="0" Width="154,96073" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="Прізвище" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo12" Left="370,39394" Top="0" Width="154,96073" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="Ім'я" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo13" Left="525,35467" Top="0" Width="154,96073" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="По батькові" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo14" Left="0" Top="18,89765" Width="680,3154" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="Помилка" VAlign="vaCenter"/>
+    </TfrxPageHeader>
+  </TfrxReportPage>
+</TfrxReport>

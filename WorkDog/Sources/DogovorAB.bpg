@@ -1,0 +1,174 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = WaitPack.bpl AArrayPack.bpl Loader.bpl LoadDog.bpl GroupDoc.bpl \
+  NdsProcent.bpl PlatProsm.bpl AddKosht.bpl AddKoshtPr.bpl history_dog.bpl \
+  Predoplata.bpl Kowtoris.bpl ArndSch.bpl add_arnd_contract.bpl \
+  add_arnd_contract_sh.bpl add_arnd_favour.bpl SprFavour.bpl ArndDogForm.bpl \
+  BuSchCheck.bpl Shablon_1.bpl Shablon_2.bpl Shablon_4.bpl Shablon_5.bpl \
+  Shablon_6.bpl Shablon_7.bpl Shablon_8.bpl Shablon_9.bpl Shablon_10.bpl \
+  Shablon_11.bpl Shablon_VCV.bpl sys_admin.bpl SavePlDoc.bpl SprMfoRsch.bpl \
+  SprTypeDog.bpl ZayavInfo.bpl EditSum.bpl PlatPackage.bpl ReeUrzb.bpl \
+  ReeFnzb.bpl ReePack.bpl Comment.bpl dogSpec.bpl MatShablons.bpl FulfilPack.bpl \
+  dogMain.bpl dogLangPack.bpl SysL.bpl FiltrDogUrFn.bpl Dogovor.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+
+AddKosht.bpl: AddKosht\AddKosht.dpk
+  $(DCC)
+
+GroupDoc.bpl: GroupDoc\GroupDoc.dpk
+  $(DCC)
+
+history_dog.bpl: HistoryDog\history_dog.dpk
+  $(DCC)
+
+LoadDog.bpl: LoadDogovor\LoadDog.dpk
+  $(DCC)
+
+NdsProcent.bpl: NdsProcent\NdsProcent.dpk
+  $(DCC)
+
+PlatPackage.bpl: PlatPoruch\PlatPackage.dpk
+  $(DCC)
+
+PlatProsm.bpl: PlatUtils\PlatProsm.dpk
+  $(DCC)
+
+Predoplata.bpl: Predoplata\Predoplata.dpk
+  $(DCC)
+
+SavePlDoc.bpl: SavePlDoc\SavePlDoc.dpk
+  $(DCC)
+
+Shablon_1.bpl: Shablon1\Shablon_1.dpk
+  $(DCC)
+
+Shablon_2.bpl: Shablon2\Shablon_2.dpk
+  $(DCC)
+
+add_arnd_contract.bpl: Shablon3\add_arnd_contract.dpk
+  $(DCC)
+
+Shablon_4.bpl: Shablon4\Shablon_4.dpk
+  $(DCC)
+
+Shablon_5.bpl: Shablon5\Shablon_5.dpk
+  $(DCC)
+
+Shablon_6.bpl: Shablon6\Shablon_6.dpk
+  $(DCC)
+
+Shablon_7.bpl: Shablon7\Shablon_7.dpk
+  $(DCC)
+
+Shablon_8.bpl: Shablon8\Shablon_8.dpk
+  $(DCC)
+
+SprMfoRsch.bpl: SprMfoRsch\SprMfoRsch.dpk
+  $(DCC)
+
+SprTypeDog.bpl: SprTypeDog\SprTypeDog.dpk
+  $(DCC)
+
+ArndSch.bpl: arnd_sch\ArndSch.dpk
+  $(DCC)
+
+Kowtoris.bpl: Kowtoris\Kowtoris.dpk
+  $(DCC)
+
+Shablon_10.bpl: Shablon10\Shablon_10.dpk
+  $(DCC)
+
+ZayavInfo.bpl: ZayavInfo\ZayavInfo.dpk
+  $(DCC)
+
+EditSum.bpl: EditSum\EditSum.dpk
+  $(DCC)
+
+ReeUrzb.bpl: ReeUrzb\ReeUrzb.dpk
+  $(DCC)
+
+ReeFnzb.bpl: ReeFnzb\ReeFnzb.dpk
+  $(DCC)
+
+Comment.bpl: Comment\Comment.dpk
+  $(DCC)
+
+Shablon_11.bpl: Shablon11\Shablon_11.dpk
+  $(DCC)
+
+dogMain.bpl: dogForm\dogMain.dpk
+  $(DCC)
+
+Loader.bpl: Loader\Loader.dpk
+  $(DCC)
+
+AArrayPack.bpl: AArray\AArrayPack.dpk
+  $(DCC)
+
+FulfilPack.bpl: dogFulfil\FulfilPack.dpk
+  $(DCC)
+
+dogSpec.bpl: dogSpec\dogSpec.dpk
+  $(DCC)
+
+MatShablons.bpl: MatShablons\MatShablons.dpk
+  $(DCC)
+
+Shablon_VCV.bpl: Shablon_VCV\Shablon_VCV.dpk
+  $(DCC)
+
+Dogovor.exe: Dogovor\Dogovor.dpr
+  $(DCC)
+
+add_arnd_favour.bpl: Shablon12\add_arnd_favour.dpk
+  $(DCC)
+
+ReePack.bpl: ReePack\ReePack.dpk
+  $(DCC)
+
+add_arnd_contract_sh.bpl: Shablon13\add_arnd_contract_sh.dpk
+  $(DCC)
+
+SprFavour.bpl: SpFavour\SprFavour.dpk
+  $(DCC)
+
+ArndDogForm.bpl: ArndDogForm\ArndDogForm.dpk
+  $(DCC)
+
+AddKoshtPr.bpl: AddKoshtPr\AddKoshtPr.dpk
+  $(DCC)
+
+sys_admin.bpl: sysAdmin\sys_admin.dpk
+  $(DCC)
+
+dogLangPack.bpl: LangPack\dogLangPack.dpk
+  $(DCC)
+
+SysL.bpl: SysL\SysL.dpk
+  $(DCC)
+
+BuSchCheck.bpl: BuCheckNativeAcc\BuSchCheck.dpk
+  $(DCC)
+
+WaitPack.bpl: WaitPack\WaitPack.dpk
+  $(DCC)
+
+Shablon_9.bpl: Shablon9\Shablon_9.dpk
+  $(DCC)
+
+FiltrDogUrFn.bpl: FiltrDogUrFn\FiltrDogUrFn.dpk
+  $(DCC)
+
+

@@ -1,0 +1,71 @@
+package dogSpec;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  DogLangPack,
+  WaitPack,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  cxExtEditorsVCLD7,
+  cxCommonEditingVCLD7,
+  cxTreeListVCLD7,
+  fs7,
+  frxDB7,
+  frx7,
+  LoadDog,
+  AArrayPack,
+  vcl,
+  rtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  dbrtl,
+  vcljpg,
+  vcldb,
+  vclx,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  designide,
+  vclactnband,
+  Globals,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  CommonSP,
+  frxe7,
+  Customizer,
+  cn_Consts,
+  cn_Common,
+  St_Loader,
+  accmgmtbpl;
+
+contains
+  dogSpecUnit in 'DogSpecUnit.pas' {frmDogSpec},
+  AddDogSpecUnit in 'AddDogSpecUnit.pas' {frmAddSpec};
+
+end.

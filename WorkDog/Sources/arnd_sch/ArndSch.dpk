@@ -1,0 +1,68 @@
+package ArndSch;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  FIBPlus7,
+  vcldb,
+  dbrtl,
+  visualdbclx,
+  visualclx,
+  vcljpg,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxGridVCLD7,
+  cxExtEditorsVCLD7,
+  fs7,
+  frx7,
+  LoadDog,
+  cxCommonEditingVCLD7,
+  cxTreeListVCLD7,
+  frxDB7,
+  WaitPack,
+  frxe7,
+  CommonSp,
+  Kerneldpk,
+  cxExportVCLD7,
+  TICommon,
+  sys_admin,
+  AccMgmtBpl;
+
+contains
+  Arnd_Sch in 'Arnd_Sch.pas' {Arnd_Sch_Form},
+  Arnd_Sch_Add in 'Arnd_Sch_Add.pas' {Arnd_Sch_Add_Form},
+  Arnd_Filter in 'Arnd_Filter.pas' {frmFilterArnd},
+  arndNaklNum in 'arndNaklNum.pas' {TNaklNumForm},
+  VikonDataEdit in 'VikonDataEdit.pas' {VikonEdit},
+  ReeUrzbImport in 'ReeUrzbImport.pas' {FormExport};
+
+end.

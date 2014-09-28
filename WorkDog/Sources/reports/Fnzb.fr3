@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TfrxReport Name="" Version="3.15" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="2047" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" ReportOptions.CreateDate="38786,6154141319" ReportOptions.Description.Text="" ReportOptions.LastChange="39268,6654844792" ScriptLanguage="PascalScript" ScriptText.Text="Var&#13;&#10; REEZB_UDK          :String;&#13;&#10; REEZB_NAME_UDK     :String;&#13;&#10; REEZB_BUDGET       :String;&#13;&#10; REEZB_NAME_BUDGET  :String;&#13;&#10; REEZB_KVK          :String;&#13;&#10; REEZB_NAME_KVK     :String;&#13;&#10; REEEZB_KOD_GRANTEE :String;&#13;&#10; REEZB_DEGREE_CLIENT:String;&#13;&#10; REEZB_CLIENT_NAME  :String;&#13;&#10; REEZB_KPK          :String;&#13;&#10; Fond               :String;&#13;&#10; REEZB_EDRPOU       :String;&#13;&#10; REEZB_KPK_Name     :String;&#13;&#10; Fond_Name          :String;&#13;&#10;begin&#13;&#10;&#13;&#10;end." PropData="044C656674020803546F7003880008446174617365747301010C4000000020446174615365743D226672784442446174617365745F666E7A625F312220446174615365744E616D653D226672784442446174617365745F666E7A625F312200010C3A00000020446174615365743D22667278444244617461736574466E7A622220446174615365744E616D653D22667278444244617461736574466E7A62220000095661726961626C65730100055374796C650100">
+  <TfrxReportPage Name="Page1" Orientation="poLandscape" PaperWidth="297" PaperHeight="210" PaperSize="9" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxPageHeader Name="PageHeader1" Height="94,48825" Left="0" Top="377,953" Width="1046,92981">
+      <TfrxMemoView Name="Memo10" Left="0" Top="0" Width="37,7953" Height="75,5906" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="0" Frame.Typ="15" HAlign="haCenter" Memo.Text="№ з/п" ParentFont="False" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo11" Left="37,7953" Top="0" Width="34,01577" Height="75,5906" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="0" Frame.Typ="15" HAlign="haCenter" Memo.Text="КЕКВ" ParentFont="False" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo12" Left="71,81107" Top="0" Width="835,27613" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="0" Frame.Typ="15" HAlign="haCenter" Memo.Text="Дані фінансового зобов'язання" ParentFont="False" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo13" Left="71,81107" Top="18,89765" Width="75,5906" Height="56,69295" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="0" Frame.Typ="15" HAlign="haCenter" Memo.Text="дата" ParentFont="False" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo14" Left="147,40167" Top="18,89765" Width="64,25201" Height="56,69295" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="0" Frame.Typ="15" HAlign="haCenter" Memo.Text="номер документа" ParentFont="False" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo16" Left="982,6778" Top="37,7952999999999" Width="64,25201" Height="37,7953" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="0" Frame.Typ="15" HAlign="haCenter" Memo.Text="№ з/п у реєстрі" ParentFont="False" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo17" Left="907,0872" Top="37,7952999999999" Width="75,5906" Height="37,7953" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="0" Frame.Typ="15" HAlign="haCenter" Memo.Text="дата реєстру" ParentFont="False" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo15" Left="907,0872" Top="0" Width="139,84261" Height="37,7953" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="0" Frame.Typ="15" HAlign="haCenter" Memo.Text="Примітка" ParentFont="False" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo18" Left="302,3624" Top="18,89765" Width="86,92919" Height="56,69295" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="0" Frame.Typ="15" HAlign="haCenter" Memo.Text="у т.ч.: попередня оплата" ParentFont="False" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo19" Left="211,65368" Top="18,89765" Width="90,70872" Height="56,69295" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="0" Frame.Typ="15" HAlign="haCenter" Memo.Text="сума зобов' я зання (грн.)" ParentFont="False" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo20" Left="389,29159" Top="18,89765" Width="517,79561" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="0" Frame.Typ="15" HAlign="haCenter" Memo.Text="реквізити кредитора" ParentFont="False" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo21" Left="389,29159" Top="37,7952999999999" Width="83,14966" Height="37,7953" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="0" Frame.Typ="15" HAlign="haCenter" Memo.Text="код за ЕДРПОУ кредитора" ParentFont="False" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo22" Left="472,44125" Top="37,7952999999999" Width="249,44898" Height="37,7953" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="0" Frame.Typ="15" HAlign="haCenter" Memo.Text="назва банку" ParentFont="False" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo23" Left="721,89023" Top="37,7952999999999" Width="68,03154" Height="37,7953" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="0" Frame.Typ="15" HAlign="haCenter" Memo.Text="МФО банку" ParentFont="False" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo25" Left="789,92177" Top="37,7952999999999" Width="117,16543" Height="37,7953" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="0" Frame.Typ="15" HAlign="haCenter" Memo.Text="номер рахунку в банку" ParentFont="False" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo2" Left="0" Top="75,5905999999998" Width="37,7953" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="1" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo1" Left="37,7953" Top="75,5905999999998" Width="34,01577" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="2" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo3" Left="71,81107" Top="75,5905999999998" Width="75,5906" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="3" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo4" Left="147,40167" Top="75,5905999999998" Width="64,25201" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="4" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo5" Left="211,65368" Top="75,5905999999998" Width="90,70872" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="5" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo6" Left="302,3624" Top="75,5905999999998" Width="86,92919" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="6" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo7" Left="389,29159" Top="75,5905999999998" Width="83,14966" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="7" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo8" Left="472,44125" Top="75,5905999999998" Width="249,44898" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="8" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo9" Left="721,89023" Top="75,5905999999998" Width="68,03154" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="9" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo24" Left="789,92177" Top="75,5905999999998" Width="117,16543" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="10" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo26" Left="907,0872" Top="75,5905999999998" Width="75,5906" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="11" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo27" Left="982,6778" Top="75,5905999999998" Width="64,25201" Height="18,89765" Frame.Typ="15" HAlign="haCenter" Memo.Text="12" VAlign="vaCenter"/>
+    </TfrxPageHeader>
+    <TfrxReportTitle Name="ReportTitle1" Height="336,37817" Left="0" Top="18,89765" Width="1046,92981">
+      <TfrxMemoView Name="Memo28" Left="306,14193" Top="0" Width="359,05535" Height="52,91342" HAlign="haCenter" Memo.Text="Реєстр&#13;&#10;фінансових зобов'язань розпорядників коштів бюджету &#13;&#10;від [frxDBDataset_fnzb_1.&#34;DATE_FNZB&#34;] року"/>
+      <TfrxMemoView Name="Memo29" Left="3,77953" Top="0" Width="298,58287" Height="18,89765" DataSet="frmReeUrzb.frxDataset_urzb_1" DataSetName="frxDataset_urzb_1" Memo.Text="[frxDBDataset_fnzb_1.&#34;NAME_CUST_NATIVE&#34;]"/>
+      <TfrxMemoView Name="Memo30" Left="3,77953" Top="18,89765" Width="238,11039" Height="18,89765" DataSet="frmReeUrzb.frxDataset_urzb_1" DataSetName="frxDataset_urzb_1" Memo.Text="[frxDBDataset_fnzb_1.&#34;RATE_ACCOUNT_BANK&#34;]"/>
+      <TfrxMemoView Name="Memo52" Left="3,77953" Top="71,81107" Width="302,3624" Height="18,89765" Memo.Text="Дані бютжетноЇ установи (розпорядника коштів)"/>
+      <TfrxMemoView Name="Memo53" Left="3,77953" Top="94,48825" Width="445,98454" Height="18,89765" Memo.Text="ІРДПОУ кліента (розпорядника чи одержувача бюджетних коштів)"/>
+      <TfrxMemoView Name="Memo54" Left="449,76407" Top="94,48825" Width="98,26778" Height="18,89765" Frame.Typ="15" Memo.Text="[REEZB_EDRPOU]"/>
+      <TfrxMemoView Name="Memo55" Left="449,76407" Top="113,3859" Width="154,96073" Height="18,89765" Frame.Typ="15" Memo.Text="[REEZB_CLIENT_NAME]"/>
+      <TfrxMemoView Name="Memo56" Left="3,77953" Top="113,3859" Width="445,98454" Height="18,89765" Memo.Text="Кліент (назварозпорядника чи одержувача коштів)"/>
+      <TfrxMemoView Name="Memo57" Left="3,77953" Top="132,28355" Width="105,82684" Height="18,89765" Memo.Text="УДК"/>
+      <TfrxMemoView Name="Memo58" Align="baLeft" Left="109,60637" Top="132,28355" Width="98,26778" Height="18,89765" Frame.Typ="3" Memo.Text="Код"/>
+      <TfrxMemoView Name="Memo59" Align="baLeft" Left="207,87415" Top="132,28355" Width="147,40167" Height="18,89765" Memo.Text="[REEZB_UDK]"/>
+      <TfrxMemoView Name="Memo60" Align="baLeft" Left="355,27582" Top="132,28355" Width="94,48825" Height="18,89765" Frame.Typ="2" Memo.Text="Назва"/>
+      <TfrxMemoView Name="Memo61" Align="baLeft" Left="449,76407" Top="132,28355" Width="381,73253" Height="18,89765" Memo.Text="[REEZB_NAME_UDK]"/>
+      <TfrxMemoView Name="Memo62" Left="3,77953" Top="151,1812" Width="105,82684" Height="18,89765" Memo.Text="Бютжет"/>
+      <TfrxMemoView Name="Memo63" Align="baLeft" Left="109,60637" Top="151,1812" Width="98,26778" Height="18,89765" Frame.Typ="3" Memo.Text="Код"/>
+      <TfrxMemoView Name="Memo64" Align="baLeft" Left="207,87415" Top="151,1812" Width="147,40167" Height="18,89765" Memo.Text="[REEZB_BUDGET]"/>
+      <TfrxMemoView Name="Memo65" Align="baLeft" Left="355,27582" Top="151,1812" Width="94,48825" Height="18,89765" Frame.Typ="2" Memo.Text="Назва"/>
+      <TfrxMemoView Name="Memo66" Align="baLeft" Left="449,76407" Top="151,1812" Width="381,73253" Height="18,89765" Memo.Text="[REEZB_NAME_BUDGET]"/>
+      <TfrxMemoView Name="Memo67" Left="3,77953" Top="170,07885" Width="105,82684" Height="18,89765" Memo.Text="КВК"/>
+      <TfrxMemoView Name="Memo68" Align="baLeft" Left="109,60637" Top="170,07885" Width="98,26778" Height="18,89765" Frame.Typ="3" Memo.Text="Код"/>
+      <TfrxMemoView Name="Memo69" Align="baLeft" Left="207,87415" Top="170,07885" Width="147,40167" Height="18,89765" Memo.Text="[REEZB_KVK]"/>
+      <TfrxMemoView Name="Memo70" Align="baLeft" Left="355,27582" Top="170,07885" Width="94,48825" Height="18,89765" Frame.Typ="2" Memo.Text="Назва"/>
+      <TfrxMemoView Name="Memo71" Align="baLeft" Left="449,76407" Top="170,07885" Width="381,73253" Height="18,89765" Memo.Text="[REEZB_NAME_KVK]"/>
+      <TfrxMemoView Name="Memo72" Left="3,77953" Top="188,9765" Width="563,14997" Height="18,89765" Memo.Text="Код одержувача (розпорядника чи одержувача бюджетних коштів відп. до мережі)"/>
+      <TfrxMemoView Name="Memo73" Left="566,9295" Top="188,9765" Width="94,48825" Height="18,89765" Frame.Typ="1" Memo.Text="[REEEZB_KOD_GRANTEE]"/>
+      <TfrxMemoView Name="Memo74" Left="3,77953" Top="207,87415" Width="563,14997" Height="18,89765" Memo.Text="Ступінь кліента (розпорядника чи одержувача бюджетних коштів відп. до мережі)"/>
+      <TfrxMemoView Name="Memo75" Left="566,9295" Top="207,87415" Width="94,48825" Height="18,89765" Frame.Typ="1" Memo.Text="[REEZB_DEGREE_CLIENT]"/>
+      <TfrxMemoView Name="Memo76" Left="3,77953" Top="226,7718" Width="105,82684" Height="18,89765" Memo.Text="КПК / КТКВМБ"/>
+      <TfrxMemoView Name="Memo77" Align="baLeft" Left="109,60637" Top="226,7718" Width="98,26778" Height="18,89765" Frame.Typ="3" Memo.Text="Код"/>
+      <TfrxMemoView Name="Memo78" Align="baLeft" Left="207,87415" Top="226,7718" Width="94,48825" Height="18,89765" Memo.Text="[REEZB_KPK]"/>
+      <TfrxMemoView Name="Memo79" Align="baLeft" Left="302,3624" Top="226,7718" Width="143,62214" Height="18,89765" Frame.Typ="2" HAlign="haRight" Memo.Text="Назва"/>
+      <TfrxMemoView Name="Memo80" Left="445,98454" Top="226,7718" Width="309,92146" Height="18,89765" Memo.Text="[REEZB_KPK_Name]"/>
+      <TfrxMemoView Name="Memo81" Left="3,77953" Top="249,44898" Width="105,82684" Height="18,89765" Memo.Text="Фонд"/>
+      <TfrxMemoView Name="Memo82" Align="baLeft" Left="109,60637" Top="249,44898" Width="98,26778" Height="18,89765" Frame.Typ="3" Memo.Text="Код"/>
+      <TfrxMemoView Name="Memo83" Align="baLeft" Left="207,87415" Top="249,44898" Width="94,48825" Height="18,89765" Memo.Text="[REEZB_Fond]"/>
+      <TfrxMemoView Name="Memo84" Align="baLeft" Left="302,3624" Top="249,44898" Width="143,62214" Height="18,89765" Frame.Typ="2" HAlign="haRight" Memo.Text="Назва"/>
+      <TfrxMemoView Name="Memo85" Left="445,98454" Top="249,44898" Width="309,92146" Height="18,89765" Memo.Text="[REEZB_Fond_Name]"/>
+      <TfrxMemoView Name="Memo86" Left="11,33859" Top="272,12616" Width="200,31509" Height="18,89765" Memo.Text="Реїстраційний номер"/>
+      <TfrxMemoView Name="Memo87" Left="11,33859" Top="291,02381" Width="200,31509" Height="18,89765" Memo.Text="Дата прийняття"/>
+      <TfrxMemoView Name="Memo88" Left="11,33859" Top="309,92146" Width="200,31509" Height="18,89765" Memo.Text="Дата взяття на облік"/>
+    </TfrxReportTitle>
+    <TfrxFooter Name="Footer1" Height="132,28355" Left="0" Top="574,48856" Width="1046,92981">
+      <TfrxMemoView Name="Memo31" Left="71,81107" Top="22,67718" Width="132,28355" Height="18,89765" Visible="False" Memo.Text="Керівник установи"/>
+      <TfrxMemoView Name="Memo32" Left="71,81107" Top="41,57483" Width="188,9765" Height="37,7953" Memo.Text="Головний бухгалтер&#13;&#10;(керівник фінансової служби)"/>
+      <TfrxMemoView Name="Memo33" Left="75,5906" Top="105,82684" Width="37,7953" Height="18,89765" Visible="False" Memo.Text="М.П."/>
+      <TfrxMemoView Name="Memo34" Left="529,1342" Top="22,67718" Width="400,63018" Height="18,89765" Visible="False" DataSet="frmReeUrzb.frxDataset_urzb_1" DataSetName="frxDataset_urzb_1" Memo.Text="[frxDBDataset_fnzb_1.&#34;KER_US&#34;]"/>
+      <TfrxMemoView Name="Memo35" Left="529,1342" Top="41,57483" Width="400,63018" Height="18,89765" DataSet="frmReeUrzb.frxDataset_urzb_1" DataSetName="frxDataset_urzb_1" Memo.Text="[frxDBDataset_fnzb_1.&#34;GL_BX&#34;]"/>
+      <TfrxMemoView Name="Memo36" Left="211,65368" Top="0" Width="90,70872" Height="22,67718" Color="15000804" DataSet="frmReeUrzb.frxDataset_urzb_1" DataSetName="frxDataset_urzb_1" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.2f" DisplayFormat.Kind="fkNumeric" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" Frame.Typ="15" HAlign="haRight" Memo.Text="[frxDBDataset_fnzb_1.&#34;SUMMA&#34;]" ParentFont="False" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo37" Left="302,3624" Top="0" Width="86,92919" Height="22,67718" Color="15000804" DataSet="frmReeUrzb.frxDataset_urzb_1" DataSetName="frxDataset_urzb_1" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.2f" DisplayFormat.Kind="fkNumeric" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" Frame.Typ="15" HAlign="haRight" Memo.Text="[frxDBDataset_fnzb_1.&#34;SUMMA_PREDOPL&#34;]" ParentFont="False" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo38" Left="0" Top="0" Width="211,65368" Height="22,67718" Color="15000804" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" Frame.Typ="15" HAlign="haRight" Memo.Text="Всьго по реєстру             " ParentFont="False" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo39" Left="389,291589999999" Top="0" Width="657,638220000001" Height="22,67718" Color="15000804" Frame.Typ="15" Memo.Text=""/>
+      <TfrxMemoView Name="Memo89" Left="71,81107" Top="79,37013" Width="94,48825" Height="18,89765" Memo.Text="Виконавець"/>
+    </TfrxFooter>
+    <TfrxMasterData Name="MasterData1" Height="18,89765" Left="0" Top="532,91373" Width="1046,92981" ColumnWidth="0" ColumnGap="0" DataSet="frxDBDatasetFnzb" DataSetName="frxDBDatasetFnzb" RowCount="0">
+      <TfrxMemoView Name="Memo40" Left="0" Top="0" Width="37,7953" Height="18,89765" DataField="NUMBER_FNZB" DataSet="frxDBDatasetFnzb" DataSetName="frxDBDatasetFnzb" Frame.Typ="15" Memo.Text="[frxDBDatasetFnzb.&#34;NUMBER_FNZB&#34;]"/>
+      <TfrxMemoView Name="Memo41" Left="37,7953" Top="0" Width="34,01577" Height="18,89765" DataField="KEKV" DataSet="frxDBDatasetFnzb" DataSetName="frxDBDatasetFnzb" Frame.Typ="15" Memo.Text="[frxDBDatasetFnzb.&#34;KEKV&#34;]"/>
+      <TfrxMemoView Name="Memo42" Left="71,81107" Top="0" Width="75,5906" Height="18,89765" DataSet="frxDBDatasetFnzb" DataSetName="frxDBDatasetFnzb" Frame.Typ="15" Memo.Text=" [frxDBDatasetFnzb.&#34;D_DOG&#34;]"/>
+      <TfrxMemoView Name="Memo43" Left="147,40167" Top="0" Width="64,25201" Height="18,89765" DataField="N_DOG" DataSet="frxDBDatasetFnzb" DataSetName="frxDBDatasetFnzb" Frame.Typ="15" Memo.Text="[frxDBDatasetFnzb.&#34;N_DOG&#34;]"/>
+      <TfrxMemoView Name="Memo44" Left="211,65368" Top="0" Width="90,70872" Height="18,89765" DataField="SUMMA" DataSet="frxDBDatasetFnzb" DataSetName="frxDBDatasetFnzb" Frame.Typ="15" HAlign="haRight" Memo.Text="[frxDBDatasetFnzb.&#34;SUMMA&#34;]"/>
+      <TfrxMemoView Name="Memo45" Left="302,3624" Top="0" Width="86,92919" Height="18,89765" DataField="SUM_PREDOPL" DataSet="frxDBDatasetFnzb" DataSetName="frxDBDatasetFnzb" Frame.Typ="15" HAlign="haRight" Memo.Text="[frxDBDatasetFnzb.&#34;SUM_PREDOPL&#34;]"/>
+      <TfrxMemoView Name="Memo46" Left="389,29159" Top="0" Width="83,14966" Height="18,89765" DataSet="frxDBDatasetFnzb" DataSetName="frxDBDatasetFnzb" Frame.Typ="15" Memo.Text=" [frxDBDatasetFnzb.&#34;KOD_EDRPOU&#34;]"/>
+      <TfrxMemoView Name="Memo47" Left="472,44125" Top="0" Width="249,44898" Height="18,89765" DataField="NAME_MFO" DataSet="frxDBDatasetFnzb" DataSetName="frxDBDatasetFnzb" Frame.Typ="15" Memo.Text="[frxDBDatasetFnzb.&#34;NAME_MFO&#34;]"/>
+      <TfrxMemoView Name="Memo48" Left="721,89023" Top="0" Width="68,03154" Height="18,89765" DataSet="frxDBDatasetFnzb" DataSetName="frxDBDatasetFnzb" Frame.Typ="15" HAlign="haRight" Memo.Text="[frxDBDatasetFnzb.&#34;MFO&#34;] "/>
+      <TfrxMemoView Name="Memo49" Left="789,92177" Top="0" Width="117,16543" Height="18,89765" DataSet="frxDBDatasetFnzb" DataSetName="frxDBDatasetFnzb" Frame.Typ="15" Memo.Text=" [frxDBDatasetFnzb.&#34;RATE_ACCOUNT&#34;]"/>
+      <TfrxMemoView Name="Memo50" Left="907,0872" Top="0" Width="75,5906" Height="18,89765" DataSet="frxDBDatasetFnzb" DataSetName="frxDBDatasetFnzb" Frame.Typ="15" Memo.Text=" [frxDBDatasetFnzb.&#34;DATE_URZB&#34;]"/>
+      <TfrxMemoView Name="Memo51" Left="982,6778" Top="0" Width="64,25201" Height="18,89765" DataField="NUMBER_URZB" DataSet="frxDBDatasetFnzb" DataSetName="frxDBDatasetFnzb" Frame.Typ="15" HAlign="haCenter" Memo.Text="[frxDBDatasetFnzb.&#34;NUMBER_URZB&#34;]"/>
+    </TfrxMasterData>
+  </TfrxReportPage>
+</TfrxReport>

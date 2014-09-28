@@ -1,0 +1,61 @@
+package sp_product;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  vcldb,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  cxCommonEditingVCLD7,
+  cxTreeListVCLD7,
+  cxExportVCLD7,
+  FR7,
+  tee,
+  bdertl,
+  designide,
+  vclactnband,
+  vclx,
+  VclSmp,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  Globals,
+  cxGridVCLD7,
+  LoadDog;
+
+contains
+  sp_Product_Form in 'sp_Product_Form.pas' {sp_product_form1},
+  sp_Product_Add in 'sp_Product_Add.pas' {sp_Product_Add_Form};
+
+end.

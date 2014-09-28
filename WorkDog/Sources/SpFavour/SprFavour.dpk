@@ -1,0 +1,78 @@
+package SprFavour;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  cxExtEditorsVCLD7,
+  cxCommonEditingVCLD7,
+  cxTreeListVCLD7,
+  fs7,
+  frxDB7,
+  frx7,
+  LoadDog,
+  AArrayPack,
+  vcl,
+  rtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  dbrtl,
+  vcljpg,
+  vcldb,
+  vclx,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  designide,
+  vclactnband,
+  Globals,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  CommonSP,
+  frxe7,
+  cn_Consts,
+  cn_Common,
+  St_Loader,
+  rxctl7,
+  VclSmp,
+  Loader;
+
+contains
+  Counters in 'Counters.pas' {CountersAdd},
+  Add_Favour in 'Add_Favour.pas' {Form1},
+  Favour_Spr in 'Favour_Spr.pas' {frmFavour},
+  FavCountAdd in 'FavCountAdd.pas' {Form3},
+  FavTypeAdd in 'FavTypeAdd.pas' {TypeFavAdd},
+  SprTypeFav in 'SprTypeFav.pas' {Form2},
+  Sum_Add in 'Sum_Add.pas' {SummAdd},
+  PriceAdd in 'PriceAdd.pas' {PriceAddForm},
+  ArndInflForm in '..\Shablon12\ArndInflForm.pas' {ArndInfl},
+  Sum_Infl in '..\Shablon12\Sum_Infl.pas' {FormSum};
+
+end.

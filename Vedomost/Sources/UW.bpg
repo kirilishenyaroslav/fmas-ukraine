@@ -1,0 +1,49 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = UWSpFuncLoader.bpl SpBankCard.bpl UWSpTypeVedomost.bpl \
+  UwVedomost.bpl UWReestr.bpl ImportBankCard.bpl UWOutputVedomost.bpl \
+  UWspTypeViplat.bpl UwVedomost2.bpl Vedomost.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+SpBankCard.bpl: SpBankCard\SpBankCard.dpk
+  $(DCC)
+
+UWSpFuncLoader.bpl: UWLoader\UWSpFuncLoader.dpk
+  $(DCC)
+
+Vedomost.exe: UWMainForm\Vedomost.dpr
+  $(DCC)
+
+UwVedomost.bpl: UWVedomost\UwVedomost.dpk
+  $(DCC)
+
+UWSpTypeVedomost.bpl: UWTypeVedomost\UWSpTypeVedomost.dpk
+  $(DCC)
+
+UWReestr.bpl: UWReestr\UWReestr.dpk
+  $(DCC)
+
+ImportBankCard.bpl: ImportBankCard\ImportBankCard.dpk
+  $(DCC)
+
+UWOutputVedomost.bpl: UWOutputVedomost\UWOutputVedomost.dpk
+  $(DCC)
+
+UWspTypeViplat.bpl: UWSpTypViplat\UWspTypeViplat.dpk
+  $(DCC)
+
+UwVedomost2.bpl: UWVedomost2\UwVedomost2.dpk
+  $(DCC)
+
+

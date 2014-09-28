@@ -1,0 +1,109 @@
+=========== ИНСТРУКЦИЯ ПО ВЫЗОВУ ДОГОВОРОВ ==============
+
+1. Для вызова договоров необходимы следующие файлы:
+LoadDog.bpl
+DogLangPack.bpl
+FilterPackage.bpl
+WaitPack.bpl
+WorkDog\dogMain.bpl
+LoadDog.dcp
+Также может понадобиться DogLangPack.dcp
+
+2. В uses необходимо прописать DogLoaderUnit
+3. В requires добавить LoadDog
+4. После коннекта с БД вызвать процедуру LoadSysData;
+5. В нужном месте программы написать следующее:
+
+var
+ input : TDogInput;
+ res   : TDogResult;
+begin
+ input              := SYS_DEFAULT_DOG_INPUT;
+ input.Owner        := Self;
+ input.DBHandle     := dm.Database.Handle;
+ input.ReadTrans    := dm.ReadTransaction.Handle;
+ input.WriteTrans   := dm.WriteTransaction.Handle;
+ input.FormStyle    := fsNormal;
+ input.id_Group_add := ID группы которые пользователь сможет добавлять;
+ input.id_Group     := ID группы которые пользователь сможет видеть;
+ input.isZayav      := false;
+ res := ShowDogMain(input);
+ hwn := res.handle;
+end;
+
+6. Описание параметров:
+
+function ShowDogMain(input_params : TDogInput) : TDogResult;
+
+TDogLocateInfo = record // Информация для позиционирования
+  summa : Variant; // По сумме
+  name_customer : Variant; // По низванию контрагента
+  rate_acc : Variant; // По р/р
+ end;
+
+ TDogFilter = record         // Используеться для фильтрации
+  bUseFilter : boolean;      // Применен ли фильтр
+  bShowFilterForm : boolean; // отображать ли форму фильтрации при открытии договоров
+  RegNum     : string;       // Фильтр по рег. номеру
+  bRegNum    : boolean;      // Применять ли фильтр по рег. номеру
+  SummaFrom  : currency;     // Фильтр по сумме
+  SummaTo    : currency;     // Фильтр по сумме
+  bSumma     : boolean;      // Применять ли фильтр по сумме
+  DateBeg    : TDate;        // Фильтр по дате
+  DateEnd    : TDAte;        // Фильтр по дате
+  bDate      : boolean;      // Применять ли фильтр по дате
+  ShowClosed : integer;      // Отображать закрытые
+  NameCust   : string;       // Фильтр по названию контрагента
+  bNameCust  : boolean;      // Применять ли фильтр по названию контрагента
+  id_cust    : integer;      // Фильтр по идентификатору контрагента
+  bID_Cust   : boolean;      // Применять ли фильтр по идентификатору контрагента
+  NameTipDog : string;       // Значение названия типа договора
+  id_tip_dog : integer;      // Фильтр по типу договора
+  bTipdog    : boolean;      // Применять ли фильтр по типу договора
+ end;
+
+ TDogColumn = record  // Колонка 
+  FieldName : string; // Название поля
+  Caption   : string; // Название колонки
+ end;
+
+ TDogColumns = array of TDogColumn; // Колонки
+
+ TDogInput = record             // Запись используеться для передачи входящих параметров
+  Owner      : TComponent;      // Родительская форма
+  DBHandle   : TISC_DB_HANDLE;  // Хэндл БД
+  WriteTrans : TISC_TR_HANDLE;  // Хэндл пишущей транзакции
+  ReadTrans  : TISC_TR_HANDLE;  // Хэндл читающей транзакции
+  FormStyle  : TFormStyle;      // Стиль формы
+  isZayav    : boolean;         // Справочник вызываеться как реестр заявок к оплате
+  FormCaption : string;         // Заголофок формы договоров
+  //--------------------------
+  Summa       : Currency;       // Сумма передаваемая для разбивки
+  id_TypeDog  : integer;        // Не используеться
+  id_Group    : integer;        // ID группы которые пользователь сможет добавлять;
+  id_Group_add: integer;        // ID группы которые пользователь сможет видеть;
+  id_Customer : integer;        // Не используеться
+  MFO         : string;         // Не используеться
+  RateAcc     : string;         // Не используеться
+  DateSys     : TDate;          // Не используеться
+  NumDoc      : string;         // Не используеться
+  DateDoc     : TDate;          // Не используеться
+  id_dog      : integer;        // Не используеться
+  arndGetPay  : integer;        // При выборе договора аренды используеться оплатная разбивка(0, 1)
+  id_doc      : integer;        // Идентификатор который игнорируетьс при расчете суммы оплаты по ALL_PROV
+  lInfo       : TDogLocateInfo; // Используеться для позиционирования
+  filter      : TDogFilter;     // Используеться для фильтрации
+  columns     : TDogColumns;    // Колонки которые необходимо отображать
+  shablon_data: TShablonInputData; //Информация которая передаеться в шаблон(модуль LoadDogManedger);
+ end;
+ 
+ TShablonInputData = record //Используеться для передачи параметров ао умолчанию в шаблоны
+  bUse     : Boolean;  //использовать ли присланные параметры
+  num      : string;   //номер договора
+  date_dog : TDate;    //дата договора
+  note     : string;   //основание договора(Отображаеться в реестре внизу)
+  summa    : currency; //сумма договора(Отображаеться в реестре внизу)
+  id_rate_account    : Integer; //ид-р счета контрагента
+  id_rate_acc_native : Integer; //ид-р собственного счета
+ end;
+ 

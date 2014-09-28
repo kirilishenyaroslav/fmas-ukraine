@@ -1,0 +1,67 @@
+package ReeUrzb;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcljpg,
+  vcl,
+  dbrtl,
+  vcldb,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxGridVCLD7,
+  cxCommonEditingVCLD7,
+  cxTreeListVCLD7,
+  LoadDog,
+  fs7,
+  frxDB7,
+  frx7,
+  VclSmp,
+  rxctl7,
+  WaitPack,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  Globals,
+  AccMgmtBpl;
+
+contains
+  ReeUrzbUnit in 'ReeUrzbUnit.pas' {frmReeUrzb},
+  ReeUrzbAddUnit in 'ReeUrzbAddUnit.pas' {frmUrzbAdd},
+  ReeUrzbDogUnit in 'ReeUrzbDogUnit.pas' {frmUrzbDog},
+  DogZarplUnit in 'DogZarplUnit.pas' {frmDogZarp},
+  DateChooseUnit in 'DateChooseUnit.pas' {DateChooseForm},
+  Unit4 in 'Unit4.pas' {Form4},
+  fltReeUrzbUnit in 'fltReeUrzbUnit.pas' {fltReeUrzb},
+  ReeUrzbAddKekv in 'ReeUrzbAddKekv.pas' {frmAddKekv},
+  DateReeChangeUnit in 'DateReeChangeUnit.pas' {Form6};
+
+end.

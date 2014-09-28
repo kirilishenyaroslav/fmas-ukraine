@@ -1,0 +1,68 @@
+package Shablon_1;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  vcljpg,
+  vcl,
+  rtl,
+  dbrtl,
+  vclx,
+  vcldb,
+  VclSmp,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxExtEditorsVCLD7,
+  cxGridVCLD7,
+  rxctl7,
+  rxdb7,
+  FIBPlus7,
+  cxCommonEditingVCLD7,
+  cxTreeListVCLD7,
+  Globals,
+  LoadDog,
+  dogLangPack,
+  Kerneldpk,
+  visualdbclx,
+  visualclx,
+  cxExportVCLD7,
+  AccMgmtBpl,
+  dsnap,
+  ibxpress,
+  dxBarExtItemsD7,
+  dxComnD7,
+  dxBarD7,
+  designide,
+  vclactnband,
+  CommonSp,
+  Loader;
+
+contains
+  Shablon1 in 'Shablon1.pas' {frmShablon1},
+  Errmsg in 'Errmsg.pas' {FormErr};
+
+end.

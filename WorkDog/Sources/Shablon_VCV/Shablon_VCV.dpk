@@ -1,0 +1,47 @@
+package Shablon_VCV;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  CommonSp,
+  SpAllPeople,
+  LoadDog,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  cxExtEditorsVCLD7,
+  cxCommonEditingVCLD7,
+  cxTreeListVCLD7;
+
+contains
+  dt_contract_FORM_ADD in 'dt_contract_FORM_ADD.pas' {Fdt_contract_ADD},
+  dt_contract_stage_FORM_ADD in 'dt_contract_stage_FORM_ADD.pas' {Fdt_contract_stage_ADD},
+  dt_contract_pay_FORM_ADD in 'dt_contract_pay_FORM_ADD.pas' {Fdt_contract_pay_ADD},
+  dt_sched_deliver_FORM_ADD2 in 'dt_sched_deliver_FORM_ADD2.pas' {Fdt_sched_deliver_ADD2},
+  dt_sched_deliver_FORM_ADD in 'dt_sched_deliver_FORM_ADD.pas' {Fdt_sched_deliver_ADD},
+  Add_Product in 'add_product.pas' {Add_Product_Form},
+  prodDateUnit in 'prodDateUnit.pas' {frmProdDate};
+
+end.

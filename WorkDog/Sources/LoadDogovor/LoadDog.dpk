@@ -1,0 +1,49 @@
+package LoadDog;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  vcl,
+  rtl,
+  dbrtl,
+  FIBPlus7,
+  vcljpg,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxGridVCLD7,
+  Halcyon6D7,
+  SysL,
+  AArrayPack,
+  Globals,
+  AccMgmtBpl;
+
+contains
+  LoadDogManedger in 'LoadDogManedger.pas',
+  SumPropis in 'SumPropis.pas',
+  DogLoaderUnit in 'DogLoaderUnit.pas';
+
+end.

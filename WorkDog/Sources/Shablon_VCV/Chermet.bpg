@@ -1,0 +1,52 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = Dogovor.exe LoadDog.bpl Shablon_VCV.bpl sp_product.bpl \
+  ini_unit_meas.bpl ini_group_unitm.bpl sp_object.bpl Shablon_1.bpl dogMain.bpl \
+  PlatPackage.bpl CustPackage.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+Shablon_VCV.bpl: Shablon_VCV.dpk
+  $(DCC)
+
+LoadDog.bpl: ..\LoadDogovor\LoadDog.dpk
+  $(DCC)
+
+sp_product.bpl: ..\Chermet\sp_product\sp_product.dpk
+  $(DCC)
+
+ini_unit_meas.bpl: ..\Chermet\ini_Unit_Meas\ini_unit_meas.dpk
+  $(DCC)
+
+ini_group_unitm.bpl: ..\Chermet\ini_group_unitm\ini_group_unitm.dpk
+  $(DCC)
+
+Dogovor.exe: ..\Dogovor\Dogovor.dpr
+  $(DCC)
+
+sp_object.bpl: ..\Chermet\sp_object\sp_object.dpk
+  $(DCC)
+
+Shablon_1.bpl: ..\Shablon1\Shablon_1.dpk
+  $(DCC)
+
+dogMain.bpl: ..\dogForm\dogMain.dpk
+  $(DCC)
+
+PlatPackage.bpl: ..\PlatPoruch\PlatPackage.dpk
+  $(DCC)
+
+CustPackage.bpl: ..\..\..\Customer\Sources\CustomDPK\CustPackage.dpk
+  $(DCC)
+
+

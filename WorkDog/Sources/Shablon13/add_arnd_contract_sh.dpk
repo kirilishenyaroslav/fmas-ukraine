@@ -1,0 +1,64 @@
+package add_arnd_contract_sh;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  dbrtl,
+  vcljpg,
+  vcldb,
+  cxExtEditorsVCLD7,
+  vclx,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  visualclx,
+  visualdbclx,
+  cxCommonEditingVCLD7,
+  cxTreeListVCLD7,
+  LoadDog,
+  globals,
+  dxBarD7,
+  dxComnD7,
+  VclSmp,
+  rxctl7,
+  CommonSp,
+  dxBarExtItemsD7,
+  FIBPlus7,
+  jo9_PackLoader,
+  Loader;
+
+contains
+  Arnd_Contract_Add in 'Arnd_Contract_Add.pas' {Arnd_Contract_Add_Form},
+  Period_Add in 'Period_Add.pas' {Period_Add_Form},
+  Arnd_Dog_Hist in 'Arnd_Dog_Hist.pas' {Arnd_Dog_Hist_Form},
+  sp_Inflation in 'sp_Inflation\sp_Inflation.pas' {sp_Inflation_Form},
+  sp_Inflation_Add in 'sp_Inflation\sp_Inflation_Add.pas' {sp_Inflation_Add_Form};
+
+end.

@@ -1,0 +1,57 @@
+package sys_admin;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  vcl,
+  rtl,
+  vcljpg,
+  dbrtl,
+  vcldb,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxExtEditorsVCLD7,
+  cxCommonEditingVCLD7,
+  cxTreeListVCLD7,
+  cxGridVCLD7,
+  FIBPlus7,
+  fs7,
+  frx7,
+  frxDB7,
+  vclx;
+
+contains
+  SysUsers in 'SysUsers.pas' {frmSysUsers},
+  msgUnit in 'msgUnit.pas' {msgForm},
+  SysScrViewUnit in 'SysScrViewUnit.pas' {frmScrView},
+  sysSendMessageUnit in 'sysSendMessageUnit.pas' {frmSendMessage},
+  SysAdmin in 'SysAdmin.pas',
+  errUnit in 'errUnit.pas' {frmError},
+  sysErrors in 'sysErrors.pas' {frmSysErrors},
+  frmDisabledUnit in 'frmDisabledUnit.pas' {frmDisabled};
+
+end.
