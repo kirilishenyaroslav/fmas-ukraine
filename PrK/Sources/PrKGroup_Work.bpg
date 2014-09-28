@@ -1,0 +1,56 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = PrK_Loader.bpl PrK_Resources.bpl PrK.exe PrK_Abit.bpl \
+  PrK_rptLoader.bpl PrK_Spravochniki.bpl PrK_Vuz_License.bpl SpSpec.bpl \
+  PRK_SP_PERELIK_ISPIT.bpl PRK_REK_DO_ZARAH.bpl PrK_Ekz_Vedom.bpl \
+  PrK_ViewWithFilter.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+PrK.exe: PrK_Exe\PrK.dpr
+  $(DCC)
+
+PrK_Loader.bpl: PrK_Loader\PrK_Loader.dpk
+  $(DCC)
+
+PrK_Resources.bpl: PrK_Resources\PrK_Resources.dpk
+  $(DCC)
+
+PrK_Abit.bpl: PrK_Abit\PrK_Abit.dpk
+  $(DCC)
+
+PrK_Spravochniki.bpl: PrK_Spravochniki\PrK_Spravochniki.dpk
+  $(DCC)
+
+PrK_Vuz_License.bpl: PrK_Vuz_License\PrK_Vuz_License.dpk
+  $(DCC)
+
+PrK_rptLoader.bpl: PrK_rptLoader\PrK_rptLoader.dpk
+  $(DCC)
+
+SpSpec.bpl: PrK_JN_FAK_SPEC\SpSpec.dpk
+  $(DCC)
+
+PRK_SP_PERELIK_ISPIT.bpl: PRK_SP_PERELIK_ISPIT\PRK_SP_PERELIK_ISPIT.dpk
+  $(DCC)
+
+PRK_REK_DO_ZARAH.bpl: PRK_REK_DO_ZARAH\PRK_REK_DO_ZARAH.dpk
+  $(DCC)
+
+PrK_Ekz_Vedom.bpl: PrK_Ekz_Vedom\PrK_Ekz_Vedom.dpk
+  $(DCC)
+
+PrK_ViewWithFilter.bpl: PrK_ViewWithFilter\PrK_ViewWithFilter.dpk
+  $(DCC)
+
+

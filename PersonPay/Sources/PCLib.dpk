@@ -1,0 +1,53 @@
+package PCLib;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  cxEditorsVCLD7,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxDataD7,
+  vcljpg,
+  vcldb,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  cxExtEditorsVCLD7,
+  vclx,
+  AccMgmtBpl;
+
+contains
+  UPCPackMan in 'Modules\PCLib\UPCPackMan.pas',
+  uMainFanc in 'Modules\PCLib\uMainFanc.pas',
+  uMainPerem in 'Modules\PCLib\uMainPerem.pas',
+  uWate in 'Modules\PCLib\uWate.pas' {WateForm},
+  uDel in 'Modules\PCLib\uDel.pas' {DelForm},
+  TagTypes in 'Modules\PCLib\TagTypes.pas',
+  uSplashPc in 'Modules\PCLib\uSplashPc.pas' {SplashForm};
+
+end.

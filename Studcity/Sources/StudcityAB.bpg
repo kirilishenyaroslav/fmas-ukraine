@@ -1,0 +1,236 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = st_Const.bpl st_common.bpl St_Loader.bpl st_sp_type_kat.bpl \
+  st_sp_class_kat.bpl st_sp_kat_pay.bpl st_sp_lgots.bpl st_services.bpl \
+  st_sp_effective_area.bpl st_sp_tarif.bpl st_sp_norma.bpl st_prices.bpl \
+  StAccounts.bpl StudcityConstDPK.bpl LoadPackegeStudCityDPK.bpl \
+  St_BuildLivers.bpl StBuilds.bpl ReportsFilterDPK.bpl ReportsViewDPK.bpl \
+  RepotsFromDPK.bpl ReportsLgotPayDPK.bpl ReportsLiversDPK.bpl \
+  ReportZajavStayDPK.bpl ReportsNarushDPK.bpl ReportPropiskHistoryDPK.bpl \
+  ReportsPayersDPK.bpl ReportsCountPlacesDPK.bpl ReportsPrintVipDPK.bpl \
+  GetFileSubsOtdelDPK.bpl SubsReestrDPK.bpl WorkSubsOtdelDPK.bpl \
+  ViewBuildsRoomsDPK.bpl WorkWithNarushDPK.bpl FormaN35DPK.bpl \
+  PrintAdrListPRDPK.bpl PrintListPropDPK.bpl PrintAdrListVIPDPK.bpl \
+  PrintPropuskDPK.bpl ST_PAYDPK.bpl ST_PAY_CALCDPK.bpl PrintStatTalonDPK.bpl \
+  St_Access.bpl List_ROVDDPK.bpl St_Final.bpl Reestr.bpl GetSpravZPDPK.bpl \
+  List_PropMan.bpl St_Order.bpl PrintStatTalonVIPDPK.bpl PrintZajavkaDPK.bpl \
+  ReportsElectoratDPK.bpl Sp_Category.bpl ReportsFamilyDPK.bpl \
+  ReportsPayOnDayDPK.bpl ReportsSubsPayDPK.bpl st_WhatsNew.bpl VypisSubsDPK.bpl \
+  ReportsPrintOrderDPK.bpl ReportSpravRegDPK.bpl PrintRegTalonDPK.bpl \
+  PrintRegTalonVIPDPK.bpl RegNachSub.bpl PrintsFormsPack.bpl ReportsTMP.bpl \
+  PrintPrintAgreeDPK.bpl st_married.bpl Studgorodok.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+StudcityConstDPK.bpl: StudcityConst\StudcityConstDPK.dpk
+  $(DCC)
+
+LoadPackegeStudCityDPK.bpl: LoadPackegeStudCity\LoadPackegeStudCityDPK.dpk
+  $(DCC)
+
+St_Loader.bpl: Modules\St_Loader\St_Loader.dpk
+  $(DCC)
+
+St_BuildLivers.bpl: Modules\St_sp_Build_Livers\St_BuildLivers.dpk
+  $(DCC)
+
+StBuilds.bpl: Modules\St_sp_Builds\StBuilds.dpk
+  $(DCC)
+
+Studgorodok.exe: Modules\Studgorodok\Studgorodok.dpr
+  $(DCC)
+
+ReportsViewDPK.bpl: Reports\ReportsView\ReportsViewDPK.dpk
+  $(DCC)
+
+RepotsFromDPK.bpl: Reports\ReportsForm\RepotsFromDPK.dpk
+  $(DCC)
+
+ReportsLiversDPK.bpl: Reports\ReportsLivers\ReportsLiversDPK.dpk
+  $(DCC)
+
+ReportsNarushDPK.bpl: Reports\ReportsNarush\ReportsNarushDPK.dpk
+  $(DCC)
+
+ReportsPayersDPK.bpl: Reports\ReportsPayers\ReportsPayersDPK.dpk
+  $(DCC)
+
+ReportsCountPlacesDPK.bpl: Reports\ReportsCountPlaces\ReportsCountPlacesDPK.dpk
+  $(DCC)
+
+GetFileSubsOtdelDPK.bpl: ModulesSubs\GetFileSubsOtdel\GetFileSubsOtdelDPK.dpk
+  $(DCC)
+
+SubsReestrDPK.bpl: ModulesSubs\SubsReestr\SubsReestrDPK.dpk
+  $(DCC)
+
+WorkSubsOtdelDPK.bpl: ModulesSubs\WorkSubsOtdel\WorkSubsOtdelDPK.dpk
+  $(DCC)
+
+ViewBuildsRoomsDPK.bpl: Modules\ViewBuildsRooms\ViewBuildsRoomsDPK.dpk
+  $(DCC)
+
+WorkWithNarushDPK.bpl: Modules\WorkWithNarush\WorkWithNarushDPK.dpk
+  $(DCC)
+
+FormaN35DPK.bpl: Reports\FormaN35\FormaN35DPK.dpk
+  $(DCC)
+
+PrintAdrListPRDPK.bpl: Reports\ReportsPrintAdrListPR\PrintAdrListPRDPK.dpk
+  $(DCC)
+
+PrintListPropDPK.bpl: Reports\ReportsPrintListProp\PrintListPropDPK.dpk
+  $(DCC)
+
+PrintPropuskDPK.bpl: Reports\ReportsPrintPropusk\PrintPropuskDPK.dpk
+  $(DCC)
+
+ST_PAYDPK.bpl: Reports\ReportsPrintST_PAY\ST_PAYDPK.dpk
+  $(DCC)
+
+ST_PAY_CALCDPK.bpl: Reports\ReportsPrintST_PAY_CALC\ST_PAY_CALCDPK.dpk
+  $(DCC)
+
+PrintStatTalonDPK.bpl: Reports\ReportsStatTalon\PrintStatTalonDPK.dpk
+  $(DCC)
+
+St_Access.bpl: Modules\Access\St_Access.dpk
+  $(DCC)
+
+List_ROVDDPK.bpl: Modules\List_ROVD\List_ROVDDPK.dpk
+  $(DCC)
+
+St_Final.bpl: Modules\Final\St_Final.dpk
+  $(DCC)
+
+Reestr.bpl: Modules\St_Reestr_of_Registration\Reestr.dpk
+  $(DCC)
+
+GetSpravZPDPK.bpl: ModulesSubs\GetSpravZP\GetSpravZPDPK.dpk
+  $(DCC)
+
+PrintAdrListVIPDPK.bpl: Reports\ReportsPrintAdrListVIP\PrintAdrListVIPDPK.dpk
+  $(DCC)
+
+List_PropMan.bpl: Modules\St_List_of_Propusk_Man\List_PropMan.dpk
+  $(DCC)
+
+St_Order.bpl: Modules\St_Order\St_Order.dpk
+  $(DCC)
+
+PrintStatTalonVIPDPK.bpl: Reports\ReportsStatTalonVIP\PrintStatTalonVIPDPK.dpk
+  $(DCC)
+
+PrintZajavkaDPK.bpl: Reports\ReportsPrintZajavka\PrintZajavkaDPK.dpk
+  $(DCC)
+
+ReportsElectoratDPK.bpl: Reports\ReportsElectorat\ReportsElectoratDPK.dpk
+  $(DCC)
+
+Sp_Category.bpl: Modules\st_sp_Category\Sp_Category.dpk
+  $(DCC)
+
+ReportsFamilyDPK.bpl: Reports\ReportsFamily\ReportsFamilyDPK.dpk
+  $(DCC)
+
+ReportsPayOnDayDPK.bpl: Reports\ReportsPayOnDay\ReportsPayOnDayDPK.dpk
+  $(DCC)
+
+ReportsSubsPayDPK.bpl: Reports\ReportsSubsPay\ReportsSubsPayDPK.dpk
+  $(DCC)
+
+st_WhatsNew.bpl: Modules\St_WhatsNew\st_WhatsNew.dpk
+  $(DCC)
+
+VypisSubsDPK.bpl: Reports\ReportsVypisSubs\VypisSubsDPK.dpk
+  $(DCC)
+
+ReportsPrintOrderDPK.bpl: Reports\ReportsPrintOrder\ReportsPrintOrderDPK.dpk
+  $(DCC)
+
+ReportSpravRegDPK.bpl: Reports\ReportSpravReg\ReportSpravRegDPK.dpk
+  $(DCC)
+
+PrintRegTalonDPK.bpl: Reports\ReportsRegTalon\PrintRegTalonDPK.dpk
+  $(DCC)
+
+ReportsPrintVipDPK.bpl: Reports\ReportsPrintVip\ReportsPrintVipDPK.dpk
+  $(DCC)
+
+PrintRegTalonVIPDPK.bpl: Reports\ReportsRegTalonVIP\PrintRegTalonVIPDPK.dpk
+  $(DCC)
+
+RegNachSub.bpl: ModulesSubs\RegNachSub\RegNachSub.dpk
+  $(DCC)
+
+PrintsFormsPack.bpl: Modules\Sp_PrintsForms\PrintsFormsPack.dpk
+  $(DCC)
+
+ReportsFilterDPK.bpl: Reports\ReportsFilter\ReportsFilterDPK.dpk
+  $(DCC)
+
+ReportsLgotPayDPK.bpl: Reports\ReportsLgotPay\ReportsLgotPayDPK.dpk
+  $(DCC)
+
+ReportZajavStayDPK.bpl: Reports\ReportZajavStay\ReportZajavStayDPK.dpk
+  $(DCC)
+
+ReportPropiskHistoryDPK.bpl: Reports\ReportPropiskHistory\ReportPropiskHistoryDPK.dpk
+  $(DCC)
+
+ReportsTMP.bpl: Reports\ReportTMP\ReportsTMP.dpk
+  $(DCC)
+
+st_common.bpl: st_common.dpk
+  $(DCC)
+
+st_sp_kat_pay.bpl: st_sp_kat_pay.dpk
+  $(DCC)
+
+st_sp_class_kat.bpl: st_sp_class_kat.dpk
+  $(DCC)
+
+st_sp_type_kat.bpl: st_sp_type_kat.dpk
+  $(DCC)
+
+st_sp_lgots.bpl: st_sp_lgots.dpk
+  $(DCC)
+
+PrintPrintAgreeDPK.bpl: Reports\PrintAgree\PrintPrintAgreeDPK.dpk
+  $(DCC)
+
+st_married.bpl: st_married.dpk
+  $(DCC)
+
+st_Const.bpl: st_Const.dpk
+  $(DCC)
+
+StAccounts.bpl: StAccounts\StAccounts.dpk
+  $(DCC)
+
+st_services.bpl: st_services.dpk
+  $(DCC)
+
+st_prices.bpl: st_prices.dpk
+  $(DCC)
+
+st_sp_effective_area.bpl: st_sp_effective_area.dpk
+  $(DCC)
+
+st_sp_tarif.bpl: st_sp_tarif.dpk
+  $(DCC)
+
+st_sp_norma.bpl: st_sp_norma.dpk
+  $(DCC)
+
+

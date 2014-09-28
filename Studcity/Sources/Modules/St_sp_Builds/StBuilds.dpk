@@ -1,0 +1,55 @@
+package StBuilds;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  vcldb,
+  visualdbclx,
+  visualclx,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  cxDataD7,
+  cxEditorsVCLD7,
+  vcljpg,
+  cxExtEditorsVCLD7,
+  vclx,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  St_Loader;
+
+contains
+  St_sp_Hostel_Form_Add in 'St_sp_Hostel_Form_Add.pas' {BuildsFormAdd},
+  Nomer_Search_Build in 'Nomer_Search_Build.pas' {Nomer_Search_BuildForm},
+  St_sp_Hostel_Add_Many_Room in 'St_sp_Hostel_Add_Many_Room.pas' {BuildsFormAddRoom2},
+  St_sp_Hostel_Add_Room in 'St_sp_Hostel_Add_Room.pas' {BuildsFormAddRoom},
+  St_sp_Hostel_Form in 'St_sp_Hostel_Form.pas' {BuildsForm};
+
+end.

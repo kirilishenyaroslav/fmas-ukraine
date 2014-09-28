@@ -1,0 +1,115 @@
+package PrK_Spravochniki;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  cxLibraryVCLD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  dbrtl,
+  FIBPlus7,
+  vcljpg,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxGridVCLD7,
+  AccMgmtBpl,
+  PrK_Resources,
+  cxExtEditorsVCLD7,
+  cxCommonEditingVCLD7,
+  cxTreeListVCLD7,
+  dxThemeD7,
+  vcldb,
+  vclx,
+  PrK_Loader,
+  AArrayPack,
+  cxExportVCLD7,
+  visualdbclx,
+  visualclx;
+
+contains
+  uPrKKlassSprav in 'uPrKKlassSprav.pas' {FormPrKKlassSprav},
+  uPrK_SpravOneLevel in 'PrK_SpravOneLevel\uPrK_SpravOneLevel.pas' {FormPrK_SpravOneLevel},
+  uPRK_SP_RISH in 'PrK_SpravOneLevel\PRK_SP_RISH\uPRK_SP_RISH.pas' {FormPRK_SP_RISH},
+  uPrKKlassSpravEdit in 'uPrKKlassSpravEdit.pas' {FormPrKKlassSpravEdit},
+  uPRK_SP_DERG_ZAKAZ in 'PrK_SpravOneLevel\PRK_SP_DERG_ZAKAZ\uPRK_SP_DERG_ZAKAZ.pas' {FormPRK_SP_DERG_ZAKAZ},
+  uPRK_SP_EXZFORM in 'PrK_SpravOneLevel\PRK_SP_EXZFORM\uPRK_SP_EXZFORM.pas' {FormPRK_SP_EXZFORM},
+  uPRK_SP_GURTOG in 'PrK_SpravOneLevel\PRK_SP_GURTOG\uPRK_SP_GURTOG.pas' {FormPRK_SP_GURTOG},
+  uPRK_SP_IN_LANG in 'PrK_SpravOneLevel\PRK_SP_IN_LANG\uPRK_SP_IN_LANG.pas' {FormPRK_SP_IN_LANG},
+  uPRK_SP_IS_COPY in 'PrK_SpravOneLevel\PRK_SP_IS_COPY\uPRK_SP_IS_COPY.pas' {FormPRK_SP_IS_COPY},
+  uPRK_SP_KAT_PRI_X in 'PrK_SpravOneLevel\PRK_SP_KAT_PRI_X\uPRK_SP_KAT_PRI_X.pas' {FormPRK_SP_KAT_PRI_X},
+  uPRK_SP_KURS in 'PrK_SpravOneLevel\PRK_SP_KURS\uPRK_SP_KURS.pas' {FormPRK_SP_KURS},
+  uPRK_SP_MOVA in 'PrK_SpravOneLevel\PRK_SP_MOVA\uPRK_SP_MOVA.pas' {FormPRK_SP_MOVA},
+  uPRK_SP_LEVEL_VLADEN in 'PrK_SpravOneLevel\PRK_SP_LEVEL_VLADEN\uPRK_SP_LEVEL_VLADEN.pas' {FormPRK_SP_LEVEL_VLADEN},
+  uPRK_SP_NPK in 'PrK_SpravOneLevel\PRK_SP_NPK\uPRK_SP_NPK.pas' {FormPRK_SP_NPK},
+  uPRK_SP_OLD_PRICH in 'PrK_SpravOneLevel\PRK_SP_OLD_PRICH\uPRK_SP_OLD_PRICH.pas' {FormPRK_SP_OLD_PRICH},
+  uPRK_SP_PRICH in 'PrK_SpravOneLevel\PRK_SP_PRICH\uPRK_SP_PRICH.pas' {FormPRK_SP_PRICH},
+  uPRK_SP_PRIZN_ZACHISL in 'PrK_SpravOneLevel\PRK_SP_PRIZN_ZACHISL\uPRK_SP_PRIZN_ZACHISL.pas' {FormPRK_SP_PRIZN_ZACHISL},
+  uPRK_SP_TYPE_DOK_OBR in 'PrK_SpravOneLevel\PRK_SP_TYPE_DOK_OBR\uPRK_SP_TYPE_DOK_OBR.pas' {FormPRK_SP_TYPE_DOK_OBR},
+  uPRK_SP_TYPE_PEREKL in 'PrK_SpravOneLevel\PRK_SP_TYPE_PEREKL\uPRK_SP_TYPE_PEREKL.pas' {FormPRK_SP_TYPE_PEREKL},
+  uPRK_SP_TYPE_RAZN in 'PrK_SpravOneLevel\PRK_SP_TYPE_RAZN\uPRK_SP_TYPE_RAZN.pas' {FormPRK_SP_TYPE_RAZN},
+  uPRK_SP_TYPE_UCHZ in 'PrK_SpravOneLevel\PRK_SP_TYPE_UCHZ\uPRK_SP_TYPE_UCHZ.pas' {FormPRK_SP_TYPE_UCHZ},
+  uPRK_SP_UKR_LANG in 'PrK_SpravOneLevel\PRK_SP_UKR_LANG\uPRK_SP_UKR_LANG.pas' {FormPRK_SP_UKR_LANG},
+  uPRK_SP_VID_DII in 'PrK_SpravOneLevel\PRK_SP_VID_DII\uPRK_SP_VID_DII.pas' {FormPRK_SP_VID_DII},
+  uPRK_SP_ZABR in 'PrK_SpravOneLevel\PRK_SP_ZABR\uPRK_SP_ZABR.pas' {FormPRK_SP_ZABR},
+  uPRK_SP_FOB_PROT in 'PrK_SpravOneLevel\PRK_SP_FOB_PROT\uPRK_SP_FOB_PROT.pas' {FormPRK_SP_FOB_PROT},
+  uPrKSpravEditFobProt in 'PrK_SpravOneLevelEdit\PrKSpravEditFobProt\uPrKSpravEditFobProt.pas' {FormPrKSpravEditFobProt},
+  uPrKSpravEditStandart in 'PrK_SpravOneLevelEdit\PrKSpravEditStandart\uPrKSpravEditStandart.pas' {FormPrKSpravEditStandart},
+  uPRK_SP_GOD_NABORA in 'PrK_SpravOneLevel\PRK_SP_GOD_NABORA\uPRK_SP_GOD_NABORA.pas' {FormPRK_SP_GOD_NABORA},
+  uPRK_SP_OCENKA in 'PrK_SpravOneLevel\PRK_SP_OCENKA\uPRK_SP_OCENKA.pas' {FormPRK_SP_OCENKA},
+  uPrKSpravEditOCENKA in 'PrK_SpravOneLevelEdit\PrKSpravEditOCENKA\uPrKSpravEditOCENKA.pas' {FormPrKSpravEditOCENKA},
+  uPrK_SpravTwoLevel in 'PrK_SpravTwoLevel\uPrK_SpravTwoLevel.pas' {FormPrK_SpravTwoLevel},
+  uPRK_SP_PREIM in 'PrK_SpravTwoLevel\PRK_SP_PREIM\uPRK_SP_PREIM.pas' {FormPRK_SP_PREIM},
+  uPrKSpravEditGOD_NABORA in 'PrK_SpravOneLevelEdit\PrKSpravEditGOD_NABORA\uPrKSpravEditGOD_NABORA.pas' {FormPrKSpravEditGOD_NABORA},
+  uPrKSpravEditPREIM_KAT in 'PrK_SpravTwoLevelEdit\PrKSpravEditPREIM_KAT\uPrKSpravEditPREIM_KAT.pas' {FormPrKSpravEditPREIM_KAT},
+  uPRK_SP_PREDM in 'PrK_SpravTwoLevel\PRK_SP_PREDM\uPRK_SP_PREDM.pas' {FormPRK_SP_PREDM},
+  uPRK_SP_FORM_OBUCH_KATEGORY in 'PrK_SpravOneLevel\PRK_SP_FORM_OBUCH_KATEGORY\uPRK_SP_FORM_OBUCH_KATEGORY.pas' {FormPRK_SP_FORM_OBUCH_KATEGORY},
+  uPRK_SP_VID_DOG in 'PrK_SpravOneLevel\PRK_SP_VID_DOG\uPRK_SP_VID_DOG.pas' {FormPRK_SP_VID_DOG},
+  uPrKSpravEditPREIM_KAT_ForAdd in 'PrK_SpravTwoLevelEdit\PrKSpravEditPREIM_KAT\uPrKSpravEditPREIM_KAT_ForAdd.pas' {FormPrKSpravEditPREIM_KAT_ForAdd},
+  uPrKSpravEditSecLevelAdd in 'PrK_SpravTwoLevelEdit\uPrKSpravEditSecLevelAdd.pas' {FormPrKSpravEditSecLevelAdd},
+  uPRK_SP_MIN_PERELIK_PRIM in 'PrK_SpravOneLevel\PRK_SP_MIN_PERELIK_PRIM\uPRK_SP_MIN_PERELIK_PRIM.pas' {FormPRK_SP_MIN_PERELIK_PRIM},
+  uPRK_SP_MIN_PERELIK_SPEC in 'PrK_SpravTwoLevel\PRK_SP_MIN_PERELIK_SPEC\uPRK_SP_MIN_PERELIK_SPEC.pas' {FormPRK_SP_MIN_PERELIK_SPEC},
+  uPrKSpravEditMIN_TYPE_NAPR in 'PrK_SpravTwoLevelEdit\PrKSpravEditMIN_TYPE_NAPR\uPrKSpravEditMIN_TYPE_NAPR.pas' {FormPrKSpravEditMIN_TYPE_NAPR},
+  uPrKSpravEditMIN_TYPE_NAPR_ForAdd in 'PrK_SpravTwoLevelEdit\PrKSpravEditMIN_TYPE_NAPR\uPrKSpravEditMIN_TYPE_NAPR_ForAdd.pas' {FormPrKSpravEditMIN_TYPE_NAPR_ForAdd},
+  uPrKSpravEditMIN_PERELIK_SPEC in 'PrK_SpravTwoLevelEdit\PrKSpravEditMIN_PERELIK_SPEC\uPrKSpravEditMIN_PERELIK_SPEC.pas' {FormPrKSpravEditMIN_PERELIK_SPEC},
+  uPRK_SP_TYPE_KAT_STUD in 'PrK_SpravOneLevel\PRK_SP_TYPE_KAT_STUD\uPRK_SP_TYPE_KAT_STUD.pas' {FormPRK_SP_TYPE_KAT_STUD},
+  uPRK_SP_SROK_OB in 'PrK_SpravOneLevel\PRK_SP_SROK_OB\uPRK_SP_SROK_OB.pas' {FormPRK_SP_SROK_OB},
+  uPrKSpravEditSROK_OB in 'PrK_SpravOneLevelEdit\PrKSpravEditSROK_OB\uPrKSpravEditSROK_OB.pas' {FormPrKSpravEditSROK_OB},
+  uPrK_SP_PREDM_u in 'PrK_SpravOneLevel\PrK_SP_PREDM_u\uPrK_SP_PREDM_u.pas' {FormPrK_SP_PREDM_u},
+  uPRK_SP_POTOK in 'PrK_SpravOneLevel\PRK_SP_POTOK\uPRK_SP_POTOK.pas' {FormPRK_SP_POTOK},
+  uPRK_SP_ISPIT_VEDOM_TYPE in 'PrK_SpravOneLevel\PRK_SP_ISPIT_VEDOM_TYPE\uPRK_SP_ISPIT_VEDOM_TYPE.pas' {FormPRK_SP_ISPIT_VEDOM_TYPE},
+  uPRK_SP_TYPE_DOP_DOK in 'PrK_SpravOneLevel\PRK_SP_TYPE_DOP_DOK\uPRK_SP_TYPE_DOP_DOK.pas' {FormPRK_SP_TYPE_DOP_DOK},
+  uPrKSpravEditTYPE_DOP_DOK in 'PrK_SpravOneLevelEdit\PrKSpravEditTYPE_DOP_DOK\uPrKSpravEditTYPE_DOP_DOK.pas' {FormPrKSpravEditTYPE_DOP_DOK},
+  uPRK_SP_DOLGNOST_PK in 'PrK_SpravOneLevel\PRK_SP_DOLGNOST_PK\uPRK_SP_DOLGNOST_PK.pas' {FormPRK_SP_DOLGNOST_PK},
+  uPRK_SP_NPK_Edit in 'PrK_SpravOneLevelEdit\PRK_SP_NPK_Edit\uPRK_SP_NPK_Edit.pas' {FormPrK_SP_NPK_Edit},
+  uPRK_SP_KAT_PRI_D in 'PrK_SpravOneLevel\PRK_SP_KAT_PRI_D\uPRK_SP_KAT_PRI_D.pas' {FormPRK_SP_KAT_PRI_D},
+  uPRK_SP_TYPE_ZACH in 'PrK_SpravOneLevel\PRK_SP_TYPE_ZACH\uPRK_SP_TYPE_ZACH.pas' {Form1},
+  uPRK_SP_TYPE_DISC in 'PrK_SpravOneLevel\PRK_SP_TYPE_DISC\uPRK_SP_TYPE_DISC.pas' {FormPRK_SP_TYPE_DISC},
+  uPRK_SP_DISC_Edit in 'PrK_SpravOneLevelEdit\PrKSpravEditDISC\uPRK_SP_DISC_Edit.pas' {FormPrK_SP_DISC_Edit},
+  uPRK_SP_DISC in 'PrK_SpravOneLevel\PRK_SP_DISC\uPRK_SP_DISC.pas' {FormPRK_SP_DISC};
+
+end.

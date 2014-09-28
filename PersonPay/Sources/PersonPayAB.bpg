@@ -1,0 +1,42 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = PCLib.bpl PCSaldo.bpl PCDocMain.bpl PCOboroti.bpl PCSchOborot.bpl \
+  PCSvodSch.bpl PCKasOtchet.bpl PersonPay.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+PCLib.bpl: PCLib.dpk
+  $(DCC)
+
+PCDocMain.bpl: PCDocMain.dpk
+  $(DCC)
+
+PCOboroti.bpl: PCOboroti.dpk
+  $(DCC)
+
+PCSchOborot.bpl: PCSchOborot.dpk
+  $(DCC)
+
+PersonPay.exe: PersonPay.dpr
+  $(DCC)
+
+PCSaldo.bpl: PCSaldo.dpk
+  $(DCC)
+
+PCSvodSch.bpl: PCSvodSch.dpk
+  $(DCC)
+
+PCKasOtchet.bpl: PCKasOtchet.dpk
+  $(DCC)
+
+

@@ -1,0 +1,68 @@
+package SpSpec;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  PrK_Resources,
+  PrK_Loader,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  vcl,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  dbrtl,
+  vcljpg,
+  vcldb,
+  cxTreeListVCLD7,
+  cxCommonEditingVCLD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  cxExtEditorsVCLD7,
+  vclx,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  CommonSp;
+
+contains
+  uPrK_JN_FAK_SPEC in 'uPrK_JN_FAK_SPEC.pas' {frmJnFakSpec},
+  uPrK_JN_FAK_SPEC_dmCommonStyles in 'uPrK_JN_FAK_SPEC_dmCommonStyles.pas' {StylesDM: TDataModule},
+  uPrK_JN_FAK_SPEC_Edit in 'uPrK_JN_FAK_SPEC_Edit.pas' {frmPUB_JN_FAK_SPEC_Edit},
+  uSpecSpravEditStandart in 'uSpecSpravEditStandart.pas' {FormSpecSpravEditStandart},
+  uPUB_SP_SPEC in 'uPUB_SP_SPEC.pas' {FormPUB_SP_SPEC},
+  uPUB_SP_SPEC_Edit in 'uPUB_SP_SPEC_Edit.pas' {FormPUB_SP_SPEC_Edit},
+  uPUB_SP_USPEC in 'uPUB_SP_USPEC.pas' {FormPUB_SP_USPEC},
+  uPUB_SP_USPEC_Edit in 'uPUB_SP_USPEC_Edit.pas' {FormPUB_SP_USPEC_Edit},
+  uPUB_SP_MOVA in 'uPUB_SP_MOVA.pas' {FormPUB_SP_MOVA},
+  uSpecKlassSprav in 'uSpecKlassSprav.pas' {FormSpecKlassSprav},
+  uSpec_SpravOneLevel in 'uSpec_SpravOneLevel.pas' {FormSpec_SpravOneLevel},
+  uSpecKlassSpravEdit in 'uSpecKlassSpravEdit.pas' {FormSpecKlassSpravEdit},
+  uPEOPLE_TYPE_BANKCARD in 'uPEOPLE_TYPE_BANKCARD.pas' {FormPEOPLE_TYPE_BANKCARD};
+
+end.

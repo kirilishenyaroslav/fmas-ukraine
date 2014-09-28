@@ -1,0 +1,36 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = PrK_Resources.bpl PrK_Loader.bpl PrK.exe PrK_Spravochniki.bpl \
+  UO_KafDiscSpec.bpl UO_PrtUchPlan.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+PrK_Resources.bpl: PrK_Resources_UO\PrK_Resources.dpk
+  $(DCC)
+
+PrK_Loader.bpl: PrK_Loader_UO\PrK_Loader.dpk
+  $(DCC)
+
+PrK.exe: PrK_Exe_UO\PrK.dpr
+  $(DCC)
+
+PrK_Spravochniki.bpl: PrK_Spravochniki_UO\PrK_Spravochniki.dpk
+  $(DCC)
+
+UO_KafDiscSpec.bpl: ..\..\UO\Sources\UO_KafDiscSpec\UO_KafDiscSpec.dpk
+  $(DCC)
+
+UO_PrtUchPlan.bpl: ..\..\UO\Sources\UO_PrtUchPlan\UO_PrtUchPlan.dpk
+  $(DCC)
+
+

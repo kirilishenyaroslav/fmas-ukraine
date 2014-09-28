@@ -1,0 +1,57 @@
+package PCSaldo;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  PCLib,
+  cxGridVCLD7,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  dbrtl,
+  vcljpg,
+  vcldb,
+  cxExportVCLD7,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  LoadDog,
+  Globals,
+  cn_Common,
+  st_Const,
+  St_Loader;
+
+contains
+  uSaldo in 'Modules\PCSaldo\uSaldo.pas' {SaldoForm},
+  uAddDoc in 'Modules\PCSaldo\uAddDoc.pas' {AddDocForm},
+  uAddInsIstFin in 'Modules\PCSaldo\uAddInsIstFin.pas' {AddUpdIstFinForm},
+  uSaldoVal in 'Modules\PCSaldo\uSaldoVal.pas' {SaldoValForm},
+  uSpValSaldo in 'Modules\PCSaldo\uSpValSaldo.pas' {SpValSaldoForm},
+  uAddIstFinVal in 'Modules\PCSaldo\uAddIstFinVal.pas' {AddIstValForm};
+
+end.

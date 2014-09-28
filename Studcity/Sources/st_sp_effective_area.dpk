@@ -1,0 +1,67 @@
+package st_sp_effective_area;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  dxBarD7,
+  dxComnD7,
+  frxDB7,
+  fsDB7,
+  fs7,
+  vclx,
+  tee,
+  vcldb,
+  fqb70,
+  bdertl,
+  frx7,
+  vcljpg,
+  frxe7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  st_common,
+  cxExtEditorsVCLD7,
+  dxBarExtItemsD7,
+  rxctl7,
+  VclSmp,
+  rxdb7,
+  St_Loader;
+
+contains
+  uSp_effective_area_AE in 'st_sp_effective_area\uSp_effective_area_AE.pas' {frm_effective_area_AE},
+  uSp_effective_area_DM in 'st_sp_effective_area\uSp_effective_area_DM.pas' {frm_effective_area_DM: TDataModule},
+  uSp_effective_area_Loader in 'st_sp_effective_area\uSp_effective_area_Loader.pas',
+  uSp_effective_area_Main in 'st_sp_effective_area\uSp_effective_area_Main.pas' {frmeffective_area_main};
+
+end.

@@ -1,0 +1,68 @@
+package st_sp_type_kat;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Справочник типов категорий проживания'}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  FIBPlus7,
+  vcldb,
+  visualdbclx,
+  visualclx,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxDataD7,
+  cxEditorsVCLD7,
+  vcljpg,
+  cxExtEditorsVCLD7,
+  vclx,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  cxGridUtilsVCLD7,
+  dxBarD7,
+  st_Const,
+  dxComnD7,
+  frxDB7,
+  fsDB7,
+  fs7,
+  tee,
+  fqb70,
+  bdertl,
+  frx7,
+  frxe7,
+  st_common,
+  dxBarExtItemsD7,
+  VclSmp,
+  rxctl7;
+
+contains
+  uSp_Type_Kat_AE in 'Sp_Type_Kat\uSp_Type_Kat_AE.pas' {frmType_Kat_AE},
+  uSp_Type_Kat_Main in 'Sp_Type_Kat\uSp_Type_Kat_Main.pas' {frmType_Kat},
+  uSp_Type_Kat_loader in 'Sp_Type_Kat\uSp_Type_Kat_loader.pas',
+  uSp_Type_Kat_DM in 'Sp_Type_Kat\uSp_Type_Kat_DM.pas' {frmType_Kat_DM: TDataModule};
+
+end.

@@ -1,0 +1,80 @@
+package StAccounts;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  cxLibraryVCLD7,
+  FIBPlus7,
+  Globals,
+  AccMgmtBpl,
+  LoadDog,
+  Kerneldpk,
+  fs7,
+  frxDB7,
+  frx7,
+  CommonSp,
+  VclSmp,
+  vclx,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  vcldb,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  visualdbclx,
+  visualclx,
+  rxdb7,
+  rxctl7,
+  LoadPackegeStudCityDPK,
+  St_Loader,
+  st_common,
+  frxe7;
+
+contains
+  UMainAccounts in 'UMainAccounts.pas' {frmAccountMain},
+  UAccountsExport in 'UAccountsExport.pas',
+  UAccountConf in 'UAccountConf.pas' {frmAccConf},
+  UEditAccounts in 'UEditAccounts.pas' {frmEditAcc},
+  UAccountsRes in 'UAccountsRes.pas',
+  UShowProgressThread in 'UShowProgressThread.pas',
+  UShowProgress in 'UShowProgress.pas' {frmShowProcess},
+  UDoCalculationsThread in 'UDoCalculationsThread.pas',
+  UAccountDetail in 'UAccountDetail.pas' {frmAccDetail},
+  UDoProvsThread in 'UDoProvsThread.pas',
+  UErrors in 'UErrors.pas' {frmGetErrors},
+  UCloseSysThread in 'UCloseSysThread.pas',
+  UDocPrinting in 'UDocPrinting.pas' {frmDocPrinting},
+  UPrintFormThread in 'UPrintFormThread.pas',
+  UCalcConfigure in 'UCalcConfigure.pas' {frmCalcConfigure},
+  uPrintOborot in 'uPrintOborot.pas' {frmPrintOborot},
+  WarninigForm in 'WarninigForm.pas' {frmWarnFrm},
+  uPrint_Reestr in 'uPrint_Reestr.pas' {frmPrint_reestr},
+  DM_account in 'DM_account.pas' {DM_acc: TDataModule};
+
+end.

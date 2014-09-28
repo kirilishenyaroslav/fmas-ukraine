@@ -1,0 +1,67 @@
+package PrK_Abit;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  AArrayPack,
+  PrK_Resources,
+  AccMgmtBpl,
+  vclx,
+  VclSmp,
+  rxctl7,
+  cxExtEditorsVCLD7,
+  cxGridVCLD7,
+  dxBarD7,
+  dxComnD7,
+  rxdb7,
+  dxBarExtItemsD7,
+  PrK_Loader,
+  cn_Common,
+  SpAllPeople,
+  dxDockingD7,
+  indy;
+
+contains
+  uPRK_DT_ABIT in 'PRK_DT_ABIT\uPRK_DT_ABIT.pas' {FormPRK_DT_ABIT},
+  uFrameVstup in 'Frame\Vstup\uFrameVstup.pas' {FrameVstup: TFrame},
+  uDocEducation in 'Frame\DocEducation\uDocEducation.pas' {FrameDocEducation: TFrame},
+  uEditDocEducation in 'PRK_DT_ABIT\EditDocEducation\uEditDocEducation.pas' {FormEditDocEducation},
+  uFrameOcenki in 'Frame\Ocenki\uFrameOcenki.pas' {FrameOcenki: TFrame},
+  uFrameFioAbit in 'Frame\FioAbit\uFrameFioAbit.pas' {FrameFioAbit: TFrame},
+  uFramePerevagi in 'Frame\Perevagi\uFramePerevagi.pas' {FramePerevagi: TFrame},
+  uFrameWorkStaj in 'Frame\WorkStaj\uFrameWorkStaj.pas' {FrameWorkStaj: TFrame},
+  uFrameParents in 'Frame\Parents\uFrameParents.pas' {FrameParents: TFrame},
+  uFrameDopolnVedomosti in 'Frame\DopolnVedomosti\uFrameDopolnVedomosti.pas' {FrameDopolnVedomosti: TFrame},
+  uPrintAbit in 'PrK_PrintAbit\uPrintAbit.pas' {FormPrintAbit},
+  uFrameDopDoc in 'Frame\DopDoc\uFrameDopDoc.pas' {FrameDopDoc: TFrame},
+  uEditDopDoc in 'PRK_DT_ABIT\EditDopDoc\uEditDopDoc.pas' {FormEditDopDoc},
+  uFrameInLang in 'Frame\InLang\uFrameInLang.pas' {FrameInLang: TFrame},
+  uEditInLang in 'PRK_DT_ABIT\EditInLang\uEditInLang.pas' {FormEditInLang},
+  uSertifikat in 'Frame\Certifikat\uSertifikat.pas' {FrameSertifikat: TFrame},
+  uEditSertifikat in 'Frame\Certifikat\uEditSertifikat.pas' {frmEditSertifikat};
+
+end.

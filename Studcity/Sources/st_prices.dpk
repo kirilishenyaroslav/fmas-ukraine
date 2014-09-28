@@ -1,0 +1,73 @@
+package st_prices;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  dxBarD7,
+  dxComnD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  vcldb,
+  cxExtEditorsVCLD7,
+  vclx,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  rxctl7,
+  VclSmp,
+  frxDB7,
+  fsDB7,
+  fs7,
+  tee,
+  fqb70,
+  bdertl,
+  frx7,
+  frxe7,
+  Globals,
+  st_Const,
+  st_common,
+  dxBarExtItemsD7,
+  St_Loader,
+  rxdb7;
+
+contains
+  uPrices_Loader in 'st_prices\uPrices_Loader.pas',
+  uPrices_Main in 'st_prices\uPrices_Main.pas' {frmPrice_Main},
+  uPrices_DM in 'st_prices\uPrices_DM.pas' {frm_price_DM: TDataModule},
+  uPrice_AE in 'st_prices\uPrice_AE.pas' {frmPrice_AE},
+  uPrice_param in 'st_prices\uPrice_param.pas' {frm_price_param},
+  uPrice_param_AE in 'st_prices\uPrice_param_AE.pas' {frmprice_param_AE},
+  uGetParam in 'st_prices\uGetParam.pas' {frmGetFacult},
+  uPrices_services_AE in 'st_prices\uPrices_services_AE.pas' {frmPrices_services_AE};
+
+end.

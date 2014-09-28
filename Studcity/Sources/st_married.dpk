@@ -1,0 +1,42 @@
+package st_married;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Отчет о студентах, проживающих с семьей'}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  fs7,
+  frx7,
+  frxDB7,
+  st_common,
+  StudcityConstDPK,
+  LoadPackegeStudCityDPK;
+
+contains
+  uSt_married_loader in 'st_married\uSt_married_loader.pas',
+  uSt_married_DM in 'st_married\uSt_married_DM.pas' {frmMarried_DM: TDataModule},
+  uSt_married_main in 'st_married\uSt_married_main.pas' {frmMarried};
+
+end.

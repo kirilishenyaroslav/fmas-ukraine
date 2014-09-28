@@ -1,0 +1,60 @@
+package PCSchOborot;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  vcldb,
+  frx7,
+  fs7,
+  vclx,
+  tee,
+  fqb70,
+  bdertl,
+  frxDB7,
+  fsDB7,
+  rxdb7,
+  rxctl7,
+  VclSmp,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  PCLib,
+  frxe7;
+
+contains
+  uSchOborot in 'Modules\PCSchOborot\uSchOborot.pas' {SchOborotForm},
+  uSpSch in 'Modules\PCSchOborot\uSpSch.pas' {SpSchForm};
+
+end.

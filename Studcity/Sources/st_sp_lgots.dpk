@@ -1,0 +1,64 @@
+package st_sp_lgots;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  dxBarD7,
+  dxComnD7,
+  frxDB7,
+  fsDB7,
+  fs7,
+  vclx,
+  tee,
+  vcldb,
+  fqb70,
+  bdertl,
+  frx7,
+  vcljpg,
+  frxe7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  st_common,
+  cxExtEditorsVCLD7,
+  dxBarExtItemsD7;
+
+contains
+  uSp_Lgota_DM in 'sp_sp_lgot\uSp_Lgota_DM.pas' {frmLgot_DM: TDataModule},
+  uSp_Lgota_Loader in 'sp_sp_lgot\uSp_Lgota_Loader.pas',
+  uSp_Lgota_Main in 'sp_sp_lgot\uSp_Lgota_Main.pas' {frmLgota_main},
+  uSp_lgota_AE in 'sp_sp_lgot\uSp_lgota_AE.pas' {frm_Lgota_AE},
+  uSp_lgota_Persent_AE in 'sp_sp_lgot\uSp_lgota_Persent_AE.pas' {frmLgota_Procent_AE};
+
+end.

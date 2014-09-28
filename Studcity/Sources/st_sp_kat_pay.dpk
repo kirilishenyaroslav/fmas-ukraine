@@ -1,0 +1,74 @@
+package st_sp_kat_pay;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  dxBarD7,
+  dxComnD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  vcldb,
+  cxExtEditorsVCLD7,
+  vclx,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  rxctl7,
+  VclSmp,
+  frxDB7,
+  fsDB7,
+  fs7,
+  tee,
+  fqb70,
+  bdertl,
+  frx7,
+  frxe7,
+  Globals,
+  st_Const,
+  st_common,
+  dxBarExtItemsD7;
+
+contains
+  uSp_Kat_Pay_Loader in 'Sp_Kat_Pay\uSp_Kat_Pay_Loader.pas',
+  uSp_Kat_Pay_Main in 'Sp_Kat_Pay\uSp_Kat_Pay_Main.pas' {frmKat_Pay_Main},
+  uSp_kat_pay_DM in 'Sp_Kat_Pay\uSp_kat_pay_DM.pas' {frmDM: TDataModule},
+  uSp_Kat_Pay_Print in 'Sp_Kat_Pay\uSp_Kat_Pay_Print.pas' {frmPrint},
+  uSp_Kat_Pay_Summ_AE in 'Sp_Kat_Pay\uSp_Kat_Pay_Summ_AE.pas' {CategoryFormAddSum},
+  uSp_Kat_Pay_Xerox in 'Sp_Kat_Pay\uSp_Kat_Pay_Xerox.pas' {frm_Xerox},
+  uSp_Kat_Pay_AE in 'Sp_Kat_Pay\uSp_Kat_Pay_AE.pas' {CategoryFormAdd},
+  uSp_Kat_Pay_Nomer_Search in 'Sp_Kat_Pay\uSp_Kat_Pay_Nomer_Search.pas' {Nomer_SearchForm},
+  uSp_Kat_Pay_Search_Lgot in 'Sp_Kat_Pay\uSp_Kat_Pay_Search_Lgot.pas' {Search_LgotForm},
+  uSp_Kat_Pay_Search in 'Sp_Kat_Pay\uSp_Kat_Pay_Search.pas' {Search_Form},
+  uSp_Kat_Pay_Istoch_AE in 'Sp_Kat_Pay\uSp_Kat_Pay_Istoch_AE.pas' {CategoryFormAddFin};
+
+end.

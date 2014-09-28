@@ -1,0 +1,53 @@
+package PrK_OperWithAbit;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcljpg,
+  vcl,
+  dbrtl,
+  vcldb,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxExtEditorsVCLD7,
+  FIBPlus7,
+  PrK_Resources,
+  PrK_Loader,
+  AArrayPack,
+  vclx,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  visualdbclx,
+  visualclx;
+
+contains
+  OperWithAbit_Loader in 'OperWithAbit_Loader.pas',
+  OperWithAbit_uFrameVstup in 'OperWithAbit_uFrameVstup.pas' {FrameVstup: TFrame},
+  OperWithAbit_Perekl in 'OperWithAbit_Perekl.pas' {FPrKPereklad};
+
+end.

@@ -1,0 +1,98 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = PrK_Resources.bpl PrK_Loader.bpl PrK_rptLoader.bpl PrK.exe \
+  PrK_Edit_Ini.bpl PrK_Edit_ST_RPT.bpl PrK_Edit_Filtr.bpl PrK_Spravochniki.bpl \
+  PrK_Vuz_License.bpl PRK_SP_PERELIK_ISPIT.bpl PRK_SP_SOSTAV_PK.bpl \
+  PRK_SP_FORM_STUD_FOB_PROT.bpl PrK_Abit.bpl PrK_ViewWithFilter.bpl \
+  PRK_REK_DO_ZARAH.bpl PrK_Ekz_Vedom.bpl PrK_PROT_ZACH.bpl PRK_PROT_DOPUSK.bpl \
+  PrK_Kassa_Bank.bpl PrK_Show_Reports.bpl PrK_Filtr.bpl PrK_Results_of_Filtr.bpl \
+  PRK_ZACH_RULES.bpl PrK_OperWithAbit.bpl Prk_ContractsStudy.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+PrK.exe: PrK_Exe\PrK.dpr
+  $(DCC)
+
+PrK_Resources.bpl: PrK_Resources\PrK_Resources.dpk
+  $(DCC)
+
+PrK_Spravochniki.bpl: PrK_Spravochniki\PrK_Spravochniki.dpk
+  $(DCC)
+
+PrK_Loader.bpl: PrK_Loader\PrK_Loader.dpk
+  $(DCC)
+
+PrK_ViewWithFilter.bpl: PrK_ViewWithFilter\PrK_ViewWithFilter.dpk
+  $(DCC)
+
+PrK_Vuz_License.bpl: PrK_Vuz_License\PrK_Vuz_License.dpk
+  $(DCC)
+
+PrK_Abit.bpl: PrK_Abit\PrK_Abit.dpk
+  $(DCC)
+
+PRK_SP_PERELIK_ISPIT.bpl: PRK_SP_PERELIK_ISPIT\PRK_SP_PERELIK_ISPIT.dpk
+  $(DCC)
+
+PrK_rptLoader.bpl: PrK_rptLoader\PrK_rptLoader.dpk
+  $(DCC)
+
+PrK_Ekz_Vedom.bpl: PrK_Ekz_Vedom\PrK_Ekz_Vedom.dpk
+  $(DCC)
+
+PRK_REK_DO_ZARAH.bpl: PRK_REK_DO_ZARAH\PRK_REK_DO_ZARAH.dpk
+  $(DCC)
+
+PRK_SP_SOSTAV_PK.bpl: PRK_SP_SOSTAV_PK\PRK_SP_SOSTAV_PK.dpk
+  $(DCC)
+
+PRK_SP_FORM_STUD_FOB_PROT.bpl: PRK_SP_FORM_STUD_FOB_PROT\PRK_SP_FORM_STUD_FOB_PROT.dpk
+  $(DCC)
+
+PrK_PROT_ZACH.bpl: PrK_PROT_ZACH\PrK_PROT_ZACH.dpk
+  $(DCC)
+
+PrK_Edit_Ini.bpl: PrK_Edit_Ini\PrK_Edit_Ini.dpk
+  $(DCC)
+
+PrK_Kassa_Bank.bpl: PrK_Kassa_Bank\PrK_Kassa_Bank.dpk
+  $(DCC)
+
+PrK_Results_of_Filtr.bpl: PrK_Results_of_Filtr\PrK_Results_of_Filtr.dpk
+  $(DCC)
+
+PrK_Show_Reports.bpl: PrK_Show_Reports\PrK_Show_Reports.dpk
+  $(DCC)
+
+PrK_Edit_ST_RPT.bpl: PrK_Edit_ST_RPT\PrK_Edit_ST_RPT.dpk
+  $(DCC)
+
+PrK_Filtr.bpl: PrK_Filtr\PrK_Filtr.dpk
+  $(DCC)
+
+PrK_Edit_Filtr.bpl: PrK_Edit_Filtr\PrK_Edit_Filtr.dpk
+  $(DCC)
+
+PRK_PROT_DOPUSK.bpl: PRK_PROT_DOPUSK\PRK_PROT_DOPUSK.dpk
+  $(DCC)
+
+PRK_ZACH_RULES.bpl: PrK_Zach_Rules\PRK_ZACH_RULES.dpk
+  $(DCC)
+
+PrK_OperWithAbit.bpl: PrK_OperWithAbit\PrK_OperWithAbit.dpk
+  $(DCC)
+
+Prk_ContractsStudy.bpl: Prk_ContractsStudy\Prk_ContractsStudy.dpk
+  $(DCC)
+
+
