@@ -1,0 +1,78 @@
+package SpravkaBPL;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcljpg,
+  vcl,
+  dbrtl,
+  vcldb,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxExtEditorsVCLD7,
+  cxGridVCLD7,
+  FIBPlus7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  AlBPLMyLoad,
+  LoadDog,
+  AccMgmtBpl,
+  Globals,
+  FR7,
+  tee,
+  bdertl,
+  designide,
+  vclactnband,
+  vclx,
+  VclSmp,
+  visualdbclx,
+  visualclx,
+  rxctl7,
+  Kerneldpk,
+  rxdb7,
+  SpravkaL,
+  fs7,
+  frxDB7,
+  frx7,
+  St_Loader,
+  cn_Common;
+
+contains
+  MainSpravka in 'Spravka\MainSpravka.pas' {fmMainSpravka},
+  ShowAddDoc in 'Spravka\ShowAddDoc.pas' {fmShowAddDoc},
+  SpravkaDoc in 'Spravka\SpravkaDoc.pas' {fmSpravkaDoc},
+  FilterSpravka in 'Spravka\FilterSpravka.pas' {fmFilterSpravka},
+  SelOsnovSch in 'Spravka\SelOsnovSch.pas' {fmSelOsnovSch},
+  SpravkaAddChangeProv in 'Spravka\SpravkaAddChangeProv.pas' {fmAddChangeProvSpravka},
+  SpravkaSelectSch in 'Spravka\SpravkaSelectSch.pas' {fmSpravkaSelectSch},
+  SpravkaInputSumma in 'Spravka\SpravkaInputSumma.pas' {fmBankInputSumma},
+  SpravkaSelectDog in 'Spravka\SpravkaSelectDog.pas' {fmSpravkaSelectDog},
+  SpravkaFitterPrint in 'Spravka\SpravkaFitterPrint.pas' {fmSpravkaFitterPrint};
+
+end.

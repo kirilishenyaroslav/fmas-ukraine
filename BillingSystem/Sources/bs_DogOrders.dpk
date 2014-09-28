@@ -1,0 +1,57 @@
+package bs_DogOrders;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Пакет "Учет приказов по договорам"'}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  vcldb,
+  cxExtEditorsVCLD7,
+  vclx,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  bs_Common,
+  bs_Consts;
+
+contains
+  uDogOrders_AE in 'DogOrders\uDogOrders_AE.pas' {frmDogOrders_AE},
+  uDogOrders_DM in 'DogOrders\uDogOrders_DM.pas' {frmDogOrders_DM: TDataModule},
+  uDogOrders_Loader in 'DogOrders\uDogOrders_Loader.pas',
+  uDogOrders_main in 'DogOrders\uDogOrders_main.pas' {frmDogOrders};
+
+end.

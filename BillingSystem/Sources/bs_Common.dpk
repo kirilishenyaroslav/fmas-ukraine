@@ -1,0 +1,72 @@
+package bs_Common;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'ѕакет ядра'}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  dbrtl,
+  vcljpg,
+  vcldb,
+  FIBPlus7,
+  cxGridVCLD7,
+  rxctl7,
+  visualdbclx,
+  visualclx,
+  Pwd,
+  ibxpress,
+  rxdb7,
+  AccMgmtBpl,
+  cxExportVCLD7,
+  vclx,
+  VclSmp,
+  bs_Consts,
+  cxExtEditorsVCLD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  Globals,
+  dsnap;
+
+contains
+  uCommon_DM in 'Common\uCommon_DM.pas' {DM_Common: TDataModule},
+  uCommon_Funcs in 'Common\uCommon_Funcs.pas',
+  uCommon_Loader in 'Common\uCommon_Loader.pas',
+  uCommon_Messages in 'Common\uCommon_Messages.pas',
+  uCommon_Tray_Baloon in 'Common\uCommon_Tray_Baloon.pas',
+  uCommon_Types in 'Common\uCommon_Types.pas',
+  uCommon_WaitForm in 'Common\uCommon_WaitForm.pas' {bsWaitForm},
+  BsMemoFilter in 'Common\BsMemoFilter.pas',
+  BsUnivSprav in 'Common\BsUnivSprav.pas' {frmSprav};
+
+end.
+
+
+

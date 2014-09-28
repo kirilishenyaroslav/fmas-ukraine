@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TfrxReport Name="" Version="3.15" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="2047" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" ReportOptions.CreateDate="38799,7347779051" ReportOptions.Description.Text="" ReportOptions.LastChange="38806,7228246065" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end." PropData="044C65667403F80103546F7003000108446174617365747301010C3E00000020446174615365743D226672784442446174617365745265657374722220446174615365744E616D653D22667278444244617461736574526565737472220000095661726961626C65730100055374796C650100">
+  <TfrxReportPage Name="Page1" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Times New Roman" Font.Style="0" Orientation="poLandscape" PaperWidth="297" PaperHeight="210" PaperSize="9" LeftMargin="20" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxReportTitle Name="ReportTitle1" Height="75,5906" Left="0" Top="18,89765" Width="1009,13451">
+      <TfrxMemoView Name="Memo2" Left="0" Top="22,67718" Width="1009,13451" Height="41,57483" Font.Charset="1" Font.Color="0" Font.Height="-19" Font.Name="Times New Roman" Font.Style="1" HAlign="haCenter" Memo.Text="Реєстр виправних довідок&#13;&#10;за [mon]" ParentFont="False" VAlign="vaCenter"/>
+    </TfrxReportTitle>
+    <TfrxMasterData Name="MasterData1" Height="18,89765" Left="0" Top="287,24428" Width="1009,13451" ColumnWidth="0" ColumnGap="0" DataSet="frxDBDatasetReestr" DataSetName="frxDBDatasetReestr" RowCount="0" Stretched="True">
+      <TfrxMemoView Name="Memo18" Left="71,81107" Top="0" Width="90,70872" Height="18,89765" StretchMode="smMaxHeight" Frame.Typ="15" Memo.Text="[frxDBDatasetReestr.&#34;SCH_DEB&#34;]" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo19" Left="162,51979" Top="0" Width="105,82684" Height="18,89765" StretchMode="smMaxHeight" Frame.Typ="15" Memo.Text="[frxDBDatasetReestr.&#34;SCH_KRED&#34;]" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo20" Left="268,34663" Top="0" Width="147,40167" Height="18,89765" StretchMode="smMaxHeight" Frame.Typ="15" Memo.Text="[&#60;frxDBDatasetReestr.&#34;NUM_SMETA&#34;&#62;]/[&#60;frxDBDatasetReestr.&#34;NUM_RAZD&#34;&#62;]/[&#60;frxDBDatasetReestr.&#34;NUM_STATE&#34;&#62;]/[&#60;frxDBDatasetReestr.&#34;NUM_KEKV&#34;&#62;]" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo21" Left="461,10266" Top="0" Width="544,25232" Height="18,89765" StretchMode="smMaxHeight" Frame.Typ="15" Memo.Text="[&#60;frxDBDatasetReestr.&#34;NUM_DOG&#34;&#62; ] [frxDBDatasetReestr.&#34;DATE_DOG&#34;] [frxDBDatasetReestr.&#34;REG_DOG&#34;] [frxDBDatasetReestr.&#34;DOG_NAME_CUST&#34;]  [frxDBDatasetReestr.&#34;FIO_OBUCH&#34;]" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo9" Left="415,7483" Top="0" Width="45,35436" Height="18,89765" StretchMode="smMaxHeight" Frame.Typ="15" HAlign="haCenter" Memo.Text="[frxDBDatasetReestr.&#34;STORNO&#34;]" VAlign="vaCenter"/>
+    </TfrxMasterData>
+    <TfrxPageFooter Name="PageFooter1" Height="22,67718" Left="0" Top="366,61441" Width="1009,13451">
+      <TfrxMemoView Name="Memo1" Left="925,606897" Top="0" Width="75,5906" Height="18,89765" HAlign="haRight" Memo.Text="[Page#]"/>
+      <TfrxMemoView Name="Memo23" Left="3,77953" Top="0" Width="907,0872" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-7" Font.Name="Times New Roman" Font.Style="0" Memo.Text="Лаб.&#34;Модел.проц.фин.менедж.&#34;ДонНУ. Заказ № 2009 от 23.03.2006 (U[id_user][comp]DT [DATE][TIME])" ParentFont="False"/>
+    </TfrxPageFooter>
+    <TfrxGroupHeader Name="GroupHeader1" Height="22,67718" Left="0" Top="241,88992" Width="1009,13451" Condition="frxDBDatasetReestr.&#34;PK_ID&#34;" KeepChild="True" KeepTogether="True" Stretched="True">
+      <TfrxMemoView Name="Memo12" Left="3,77953" Top="3,77952999999999" Width="68,03154" Height="18,89765" StretchMode="smMaxHeight" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Times New Roman" Font.Style="2" Memo.Text="№ [frxDBDatasetReestr.&#34;NUM_SP&#34;]&#13;&#10;[frxDBDatasetReestr.&#34;DATE_SP&#34;]" ParentFont="False" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo14" Left="71,81107" Top="3,77952999999999" Width="90,70872" Height="18,89765" StretchMode="smMaxHeight" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Times New Roman" Font.Style="2" Memo.Text="№ [frxDBDatasetReestr.&#34;NUM_DOC&#34;]&#13;&#10;[frxDBDatasetReestr.&#34;DATE_DOC&#34;]" ParentFont="False" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo16" Left="268,34663" Top="3,77952999999999" Width="737,00835" Height="18,89765" StretchMode="smMaxHeight" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Times New Roman" Font.Style="2" Memo.Text="[frxDBDatasetReestr.&#34;FIO&#34;], &#13;&#10;[frxDBDatasetReestr.&#34;NOTE&#34;]" ParentFont="False" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo25" Left="162,51979" Top="3,77952999999999" Width="105,82684" Height="18,89765" StretchMode="smMaxHeight" DisplayFormat.DecimalSeparator="," DisplayFormat.FormatStr="%2.2n" DisplayFormat.Kind="fkNumeric" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Times New Roman" Font.Style="2" HAlign="haRight" Memo.Text="[frxDBDatasetReestr.&#34;SUM_DOC&#34;]" ParentFont="False" VAlign="vaCenter"/>
+    </TfrxGroupHeader>
+    <TfrxPageHeader Name="PageHeader1" Height="64,25201" Left="0" Top="117,16543" Width="1009,13451">
+      <TfrxMemoView Name="Memo3" Left="3,77953" Top="0" Width="68,03154" Height="45,35436" Color="-16777192" Frame.Typ="15" HAlign="haCenter" Memo.Text="№ довідки&#13;&#10;Дата провед-ня" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo4" Left="71,81107" Top="0" Width="90,70872" Height="45,35436" Color="-16777192" Frame.Typ="15" HAlign="haCenter" Memo.Text="№ документу&#13;&#10;Дата документу" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo5" Left="268,34663" Top="0" Width="737,00835" Height="45,35436" Color="-16777192" Frame.Typ="15" HAlign="haCenter" Memo.Text="[fio], &#13;&#10;підстава" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo6" Left="71,81107" Top="45,35436" Width="90,70872" Height="18,89765" Color="-16777192" Frame.Typ="15" HAlign="haCenter" Memo.Text="Д" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo7" Left="162,51979" Top="45,35436" Width="105,82684" Height="18,89765" Color="-16777192" Frame.Typ="15" HAlign="haCenter" Memo.Text="К" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo10" Left="268,34663" Top="45,35436" Width="147,40167" Height="18,89765" Color="-16777192" Frame.Typ="15" HAlign="haCenter" Memo.Text="Бюд./розд./ст./КЄКЗ" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo11" Left="461,10266" Top="45,35436" Width="544,25232" Height="18,89765" Color="-16777192" Frame.Typ="15" HAlign="haCenter" Memo.Text="№ договору, дата договору, рег. номер, контрагент" VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo24" Left="162,51979" Top="0" Width="105,82684" Height="45,35436" Color="-16777192" Frame.Typ="15" HAlign="haCenter" Memo.Text="Сума док." VAlign="vaCenter"/>
+      <TfrxMemoView Name="Memo8" Left="415,7483" Top="45,35436" Width="45,35436" Height="18,89765" Color="-16777192" Frame.Typ="15" Memo.Text="сторно"/>
+    </TfrxPageHeader>
+  </TfrxReportPage>
+</TfrxReport>

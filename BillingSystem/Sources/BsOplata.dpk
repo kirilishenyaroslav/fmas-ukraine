@@ -1,0 +1,46 @@
+package BsOplata;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  bs_Common,
+  bs_Consts,
+  bdertl,
+  Halcyon6D7,
+  cxCommonEditingVCLD7,
+  cxTreeListVCLD7,
+  Globals,
+  cxPageControlVCLD7;
+
+contains
+  uMainOplata in 'BsOplata\uMainOplata.pas' {frmMainOplata},
+  uImportSourceSel in 'BsOplata\uImportSourceSel.pas' {frmImportSourceSel},
+  uBsOplata_loader in 'BsOplata\uBsOplata_loader.pas',
+  uImportProgress in 'BsOplata\uImportProgress.pas' {frmImportProgress},
+  uImportPersAcc in 'BsOplata\uImportPersAcc.pas' {frmImportPersAcc},
+  uBsGrBalances in 'BsOplata\uBsGrBalances.pas' {frmGrBalances};
+
+end.

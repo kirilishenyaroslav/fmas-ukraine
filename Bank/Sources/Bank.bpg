@@ -1,0 +1,78 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = AlBPLMyLoad.bpl BankDay.bpl BankDocument.bpl BankFindDocument.bpl \
+  BankMemorial.bpl BankNastroykaBPL.bpl BankOstatki.bpl BankProsmNeob.bpl \
+  BankSpIniRas.bpl BankSchBpl.bpl Shabloni_Prov.bpl SpravkaL.bpl SpravkaBPL.bpl \
+  BankAnalyzErrorProvs.bpl BankService.bpl WorkWithErVstrech.bpl BankValuta.bpl \
+  BankSchValuta.bpl Bank.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+AlBPLMyLoad.bpl: ..\..\Kassa\Sources\KassaResurce\AlBPLMyLoad.dpk
+  $(DCC)
+
+BankDay.bpl: BankDay\BankDay.dpk
+  $(DCC)
+
+BankDocument.bpl: BankDoc\BankDocument.dpk
+  $(DCC)
+
+BankFindDocument.bpl: BankFindDocument\BankFindDocument.dpk
+  $(DCC)
+
+BankMemorial.bpl: BankMemorial\BankMemorial.dpk
+  $(DCC)
+
+BankNastroykaBPL.bpl: BankNastroyka\BankNastroykaBPL.dpk
+  $(DCC)
+
+BankOstatki.bpl: BankOstatki\BankOstatki.dpk
+  $(DCC)
+
+BankProsmNeob.bpl: BankProsmotrNeobrabot\BankProsmNeob.dpk
+  $(DCC)
+
+BankSpIniRas.bpl: BankSpIni\BankSpIniRas.dpk
+  $(DCC)
+
+BankSchBpl.bpl: BankSpSch\BankSchBpl.dpk
+  $(DCC)
+
+Bank.exe: MainFormBank\Bank.dpr
+  $(DCC)
+
+Shabloni_Prov.bpl: Shabloni\Shabloni_Prov.dpk
+  $(DCC)
+
+SpravkaBPL.bpl: Spravka\SpravkaBPL.dpk
+  $(DCC)
+
+SpravkaL.bpl: SpravkaLoader\SpravkaL.dpk
+  $(DCC)
+
+BankAnalyzErrorProvs.bpl: BankAnalyzErrorProvs\BankAnalyzErrorProvs.dpk
+  $(DCC)
+
+BankService.bpl: BankService\BankService.dpk
+  $(DCC)
+
+WorkWithErVstrech.bpl: WorkWithErVstrech\WorkWithErVstrech.dpk
+  $(DCC)
+
+BankValuta.bpl: BankValuta.dpk
+  $(DCC)
+
+BankSchValuta.bpl: BankSchValuta.dpk
+  $(DCC)
+
+

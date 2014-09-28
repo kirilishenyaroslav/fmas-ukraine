@@ -1,0 +1,32 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = SpravkaL.bpl AlBPLMyLoad.bpl SpravkaBPL.bpl Bank.exe Kassa.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+SpravkaL.bpl: ..\SpravkaLoader\SpravkaL.dpk
+  $(DCC)
+
+SpravkaBPL.bpl: SpravkaBPL.dpk
+  $(DCC)
+
+Bank.exe: ..\MainFormBank\Bank.dpr
+  $(DCC)
+
+Kassa.exe: ..\..\..\Kassa\Sources\MainForm\Kassa.dpr
+  $(DCC)
+
+AlBPLMyLoad.bpl: ..\..\..\Kassa\Sources\KassaResurce\AlBPLMyLoad.dpk
+  $(DCC)
+
+

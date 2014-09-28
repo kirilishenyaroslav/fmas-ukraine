@@ -1,0 +1,96 @@
+package BankDocument;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  AccMgmtBpl,
+  Globals,
+  Kerneldpk,
+  LoadClBank,
+  rxctl7,
+  rxdb7,
+  AlBPLMyLoad,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  vcl,
+  rtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  dbrtl,
+  vcljpg,
+  vcldb,
+  cxExtEditorsVCLD7,
+  vclx,
+  fs7,
+  frx7,
+  frxDB7,
+  LoadDog,
+  cxGridUtilsVCLD7,
+  dxsbD7,
+  FR7,
+  cn_Consts,
+  cn_Common,
+  St_Loader,
+  VclSmp,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  tee,
+  fqb70,
+  bdertl,
+  fsDB7,
+  cxTreeListVCLD7,
+  cxCommonEditingVCLD7,
+  Halcyon6D7,
+  designide,
+  vclactnband,
+  AArrayPack;
+
+contains
+  BankSelectShablon in 'BankSelectShablon.pas' {fmBankSelectShablon},
+  BankAddChangeProv in 'BankAddChangeProv.pas' {fmBankAddChangeProv},
+  BankDocClass in 'BankDocClass.pas',
+  BankInputSumma in 'BankInputSumma.pas' {fmBankInputSumma},
+  BankOrder in 'BankOrder.pas' {fmBankOrder},
+  BankAddSelectDoc in 'BankAddSelectDoc.pas' {fmBankAddSelectDoc},
+  BankTypeKassa in 'BankTypeKassa.pas' {fmBankTypeKassa},
+  BankSelectDocProvVstrech in 'BankSelectDocProvVstrech.pas' {fmBankSelectDocProvVstrech},
+  BankSelectKomisDoc in 'BankSelectKomisDoc.pas' {fmBankSelectKomisDoc},
+  BankKomOrder in 'BankKomOrder.pas' {fmBankKomOrder},
+  BankSelectPrintVip in 'BankSelectPrintVip.pas' {fmBankSelectPrintVip},
+  BankSelectKassa in 'BankSelectKassa.pas' {fmBankSelectKassa},
+  BankMoveToDay in 'BankMoveToDay.pas' {fmBankMoveToDay},
+  BankDocMainForm in 'BankDocMainForm.pas' {fmBankDocMainForm},
+  BankExpertSysSch in 'BankExpertSysSch.pas' {frmExpertSchSys},
+  BankNich in 'BankNich.pas' {fmBankNich},
+  BankNichAdd in 'BankNichAdd.pas' {fmBankNichAdd},
+  BankNichAddSmt in 'BankNichAddSmt.pas' {BankNichAddSm};
+
+end.

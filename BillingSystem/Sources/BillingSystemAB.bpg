@@ -1,0 +1,99 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = bs_Consts.bpl bs_Common.bpl bs_SysOptions.bpl bs_WhatsNew.bpl \
+  bs_About.bpl bs_Access.bpl bs_sp_kat.bpl bs_sp_lgots.bpl bs_sp_subsidy.bpl \
+  bs_sp_DocType.bpl bs_sp_HydrType.bpl bs_sp_HydrVid.bpl BsAdress.bpl \
+  BsDiscountObjects.bpl BsGroupObjects.bpl bs_sp_Inputs.bpl bs_sp_hydrometer.bpl \
+  bs_sp_shortcut.bpl bs_dt_accounts.bpl BsClientAccount.bpl BillingSystem.exe \
+  BsUnivReport.bpl BsDocuments.bpl BsReportsLoader.bpl bs_view_pers_acc_inf.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+
+
+bs_Consts.bpl: bs_Consts.dpk
+  $(DCC)
+
+bs_Common.bpl: bs_Common.dpk
+  $(DCC)
+
+bs_About.bpl: bs_About.dpk
+  $(DCC)
+
+bs_Access.bpl: bs_Access.dpk
+  $(DCC)
+
+bs_sp_kat.bpl: bs_sp_kat.dpk
+  $(DCC)
+
+bs_sp_lgots.bpl: bs_sp_lgots.dpk
+  $(DCC)
+
+bs_sp_subsidy.bpl: bs_sp_subsidy.dpk
+  $(DCC)
+
+bs_SysOptions.bpl: bs_SysOptions.dpk
+  $(DCC)
+
+bs_WhatsNew.bpl: bs_WhatsNew.dpk
+  $(DCC)
+
+BillingSystem.exe: BillingSystem.dpr
+  $(DCC)
+
+bs_sp_Inputs.bpl: bs_sp_Inputs.dpk
+  $(DCC)
+
+bs_sp_hydrometer.bpl: bs_sp_hydrometer.dpk
+  $(DCC)
+
+bs_sp_shortcut.bpl: bs_sp_shortcut.dpk
+  $(DCC)
+
+BsAdress.bpl: BsAdress.dpk
+  $(DCC)
+
+BsClientAccount.bpl: BsClientAccount.dpk
+  $(DCC)
+
+BsDiscountObjects.bpl: BsDiscountObjects.dpk
+  $(DCC)
+
+BsGroupObjects.bpl: BsGroupObjects.dpk
+  $(DCC)
+
+bs_sp_DocType.bpl: bs_sp_DocType.dpk
+  $(DCC)
+
+bs_sp_HydrType.bpl: bs_sp_HydrType.dpk
+  $(DCC)
+
+bs_sp_HydrVid.bpl: bs_sp_HydrVid.dpk
+  $(DCC)
+
+bs_dt_accounts.bpl: bs_dt_accounts.dpk
+  $(DCC)
+
+BsUnivReport.bpl: BsUnivReport.dpk
+  $(DCC)
+
+BsDocuments.bpl: BsDocuments.dpk
+  $(DCC)
+
+BsReportsLoader.bpl: BsReportsLoader.dpk
+  $(DCC)
+
+bs_view_pers_acc_inf.bpl: bs_view_pers_acc_inf.dpk
+  $(DCC)
+
+

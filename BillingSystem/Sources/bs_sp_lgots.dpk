@@ -1,0 +1,63 @@
+package bs_sp_lgots;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Пакет "Справочник типов льгот"'}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  vcldb,
+  cxExtEditorsVCLD7,
+  vclx,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  AccMgmtBpl,
+  rxctl7,
+  VclSmp,
+  bs_Common,
+  bs_Consts,
+  cxCommonEditingVCLD7,
+  cxTreeListVCLD7;
+
+contains
+  uLgots_AE in 'Sp_Lgots\uLgots_AE.pas' {frmLgots_AE},
+  uLgots_DM in 'Sp_Lgots\uLgots_DM.pas' {Lgots_DM: TDataModule},
+  uLgots_loader in 'Sp_Lgots\uLgots_loader.pas',
+  uLgots_main in 'Sp_Lgots\uLgots_main.pas' {frmLgots_Main},
+  uLgot_Sum_AE in 'Sp_Lgots\uLgot_Sum_AE.pas' {frmLgot_Sum_AE};
+
+end.

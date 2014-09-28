@@ -1,0 +1,62 @@
+package bs_sp_Hydrometer;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Пакет "Справочник Водомеров"'}
+{$IMPLICITBUILD ON}
+
+requires
+  bs_Common,
+  bs_Consts,
+  vcl,
+  rtl,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  vcldb,
+  cxExtEditorsVCLD7,
+  vclx,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  rxctl7,
+  VclSmp,
+  rxdb7;
+
+contains
+  uHydrometer_DM in 'Sp_Hydrometer\uHydrometer_DM.pas' {dmHydrometer_DM: TDataModule},
+  uHydrometer_loader in 'Sp_Hydrometer\uHydrometer_loader.pas',
+  uHydrometer_main in 'Sp_Hydrometer\uHydrometer_main.pas' {frmHydrometer_Main},
+  uMeter_log in 'Sp_Hydrometer\uMeter_log.pas' {frmMeter_log},
+  uMeter_AE in 'Sp_Hydrometer\uMeter_AE.pas' {frmMeter_AE},
+  uStatus_change in 'Sp_Hydrometer\uStatus_change.pas' {frmStatus_change};
+
+end.

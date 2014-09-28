@@ -1,0 +1,58 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = BankDay.bpl BankDocument.bpl BankFindDocument.bpl BankMemorial.bpl \
+  BankNastroykaBPL.bpl BankOstatki.bpl BankProsmNeob.bpl BankSchBpl.bpl \
+  BankSpIniRas.bpl Shabloni_Prov.bpl SpravkaL.bpl SpravkaBPL.bpl Bank.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+BankDay.bpl: BankDay.dpk
+  $(DCC)
+
+BankDocument.bpl: BankDocument.dpk
+  $(DCC)
+
+BankFindDocument.bpl: BankFindDocument.dpk
+  $(DCC)
+
+BankMemorial.bpl: BankMemorial.dpk
+  $(DCC)
+
+BankNastroykaBPL.bpl: BankNastroykaBPL.dpk
+  $(DCC)
+
+BankOstatki.bpl: BankOstatki.dpk
+  $(DCC)
+
+BankProsmNeob.bpl: BankProsmNeob.dpk
+  $(DCC)
+
+BankSchBpl.bpl: BankSchBpl.dpk
+  $(DCC)
+
+BankSpIniRas.bpl: BankSpIniRas.dpk
+  $(DCC)
+
+Shabloni_Prov.bpl: Shabloni_Prov.dpk
+  $(DCC)
+
+SpravkaBPL.bpl: SpravkaBPL.dpk
+  $(DCC)
+
+SpravkaL.bpl: SpravkaL.dpk
+  $(DCC)
+
+Bank.exe: Bank.dpr
+  $(DCC)
+
+

@@ -1,0 +1,61 @@
+package BankFindDocument;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  cxExtEditorsVCLD7,
+  vcl,
+  rtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  dbrtl,
+  vcljpg,
+  vcldb,
+  vclx,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  fs7,
+  frx7,
+  rxdb7,
+  cxPageControlVCLD7,
+  AlBPLMyLoad,
+  AccMgmtBpl,
+  LoadDog,
+  Globals,
+  Kerneldpk,
+  frxDB7,
+  frxe7,
+  cn_Common;
+
+contains
+  BankFindForm in 'BankFindForm.pas' {fmBankFindForm},
+  BankResultFindForm in 'BankResultFindForm.pas' {fmBankResultFindForm},
+  BankSchSelect in 'BankSchSelect.pas' {fmBankSchSelect},
+  BankShowP in 'BankShowP.pas' {fmBankShowP};
+
+end.
