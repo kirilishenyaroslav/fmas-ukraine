@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="OutPut\clinetsuiteb6.bpl"/>
+    <OBJFILES value="OutPut\clinetsuiteb6.obj OutPut\clActionInfo.obj OutPut\clBodyChooser.obj 
+      OutPut\clBodyEdit.obj OutPut\clCert.obj OutPut\clConnection.obj 
+      OutPut\clCookies.obj OutPut\clCryptAPI.obj OutPut\clCryptUtils.obj 
+      OutPut\clDC.obj OutPut\clDCUtils.obj OutPut\clDEditors.obj 
+      OutPut\clDnsMessage.obj OutPut\clDnsQuery.obj OutPut\clDownLoader.obj 
+      OutPut\clEncoder.obj OutPut\clFormChooser.obj OutPut\clFtp.obj 
+      OutPut\clFtpFileHandler.obj OutPut\clFtpServer.obj OutPut\clFtpUtils.obj 
+      OutPut\clGZip.obj OutPut\clHtmlParser.obj OutPut\clHttp.obj 
+      OutPut\clHttpAuth.obj OutPut\clHttpHeader.obj OutPut\clHttpMail.obj 
+      OutPut\clHttpRequest.obj OutPut\clHttpUtils.obj OutPut\clImap4.obj 
+      OutPut\clImap4FileHandler.obj OutPut\clImap4Server.obj 
+      OutPut\clImapUtils.obj OutPut\clInetSuiteReg.obj OutPut\clLogger.obj 
+      OutPut\clMailMessage.obj OutPut\clMC.obj OutPut\clMCUtils.obj 
+      OutPut\clMenuButton.obj OutPut\clMultiDC.obj OutPut\clMultiDownLoader.obj 
+      OutPut\clMultiUploader.obj OutPut\clNewsChecker.obj OutPut\clNntp.obj 
+      OutPut\clNntpServer.obj OutPut\clNntpUtils.obj OutPut\clPCRE.obj OutPut\clPCREDef.obj 
+      OutPut\clPop3.obj OutPut\clPop3FileHandler.obj OutPut\clPop3Server.obj 
+      OutPut\clProgressBar.obj OutPut\clRequestChooser.obj 
+      OutPut\clRequestEdit.obj OutPut\clSingleDC.obj OutPut\clSMimeMessage.obj 
+      OutPut\clSmtp.obj OutPut\clSmtpFileHandler.obj OutPut\clSmtpRelay.obj 
+      OutPut\clSmtpServer.obj OutPut\clSoap.obj OutPut\clSocket.obj 
+      OutPut\clSspi.obj OutPut\clSspiAuth.obj OutPut\clSspiUtils.obj OutPut\clStreams.obj 
+      OutPut\clSyncUtils.obj OutPut\clTcpClient.obj OutPut\clTcpServer.obj 
+      OutPut\clThreadPool.obj OutPut\clTlsSocket.obj OutPut\clTranslator.obj 
+      OutPut\clUpdateInfoForm.obj OutPut\clUploader.obj OutPut\clUriUtils.obj 
+      OutPut\clUserMgr.obj OutPut\clUtils.obj OutPut\clWebDav.obj OutPut\clWebUpdate.obj 
+      OutPut\clWinInet.obj OutPut\clWinSock2.obj OutPut\clXmlUtils.obj 
+      OutPut\clZLibStreams.obj OutPut\msxml_tlb.obj"/>
+    <RESFILES value="clinetsuiteb6.res clInetSuite.dcr"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value="rtl.lib vcl.lib"/>
+    <PACKAGES value="rtl.bpi vcl.bpi designide.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value=""/>
+    <SYSDEFINES value="_RTLDLL;NO_STRICT;USEPACKAGES"/>
+    <MAINSOURCE value="clinetsuiteb6.cpp"/>
+    <INCLUDEPATH value="..\Common;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\Source\ToolsAPI"/>
+    <LIBPATH value="$(BCB)\Projects\Lib;..\Common;$(BCB)\lib;$(BCB)\lib\obj;$(BCB)\Source\ToolsAPI"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I..\Common -I$(BCB)\include -I$(BCB)\include\vcl -I$(BCB)\Source\ToolsAPI 
+      -src_suffix cpp -boa"/>
+    <CFLAG1 value="-O2 -Vx -Ve -X- -a8 -b- -k- -vi -c -tWM"/>
+    <PFLAGS value="-N2OutPut -N0OutPut -$Y- -$L- -$D- -$C- -$A8 -v -JPHNE -M -LUDesignIde"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zn"/>
+    <LFLAGS value="-l.\OutPut -IOutPut -D&quot;Clever Internet Suite&quot; -aa -Tpp -x -Gn -Gl -Gi"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0pkg32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="clinetsuiteb6.cpp" FORMNAME="" UNITNAME="clinetsuiteb6" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clinetsuiteb6.res" FORMNAME="" UNITNAME="clinetsuiteb6" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clInetSuite.dcr" FORMNAME="" UNITNAME="clInetSuite" CONTAINERID="DcrTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clActionInfo.pas" FORMNAME="" UNITNAME="clActionInfo" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clBodyChooser.pas" FORMNAME="" UNITNAME="clBodyChooser" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clBodyEdit.pas" FORMNAME="" UNITNAME="clBodyEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clCert.pas" FORMNAME="" UNITNAME="clCert" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clConnection.pas" FORMNAME="" UNITNAME="clConnection" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clCookies.pas" FORMNAME="" UNITNAME="clCookies" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clCryptAPI.pas" FORMNAME="" UNITNAME="clCryptAPI" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clCryptUtils.pas" FORMNAME="" UNITNAME="clCryptUtils" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clDC.pas" FORMNAME="" UNITNAME="clDC" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clDCUtils.pas" FORMNAME="" UNITNAME="clDCUtils" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clDEditors.pas" FORMNAME="" UNITNAME="clDEditors" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clDnsMessage.pas" FORMNAME="" UNITNAME="clDnsMessage" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clDnsQuery.pas" FORMNAME="" UNITNAME="clDnsQuery" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clDownLoader.pas" FORMNAME="" UNITNAME="clDownLoader" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clEncoder.pas" FORMNAME="" UNITNAME="clEncoder" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clFormChooser.pas" FORMNAME="" UNITNAME="clFormChooser" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clFtp.pas" FORMNAME="" UNITNAME="clFtp" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clFtpFileHandler.pas" FORMNAME="" UNITNAME="clFtpFileHandler" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clFtpServer.pas" FORMNAME="" UNITNAME="clFtpServer" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clFtpUtils.pas" FORMNAME="" UNITNAME="clFtpUtils" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clGZip.pas" FORMNAME="" UNITNAME="clGZip" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clHtmlParser.pas" FORMNAME="" UNITNAME="clHtmlParser" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clHttp.pas" FORMNAME="" UNITNAME="clHttp" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clHttpAuth.pas" FORMNAME="" UNITNAME="clHttpAuth" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clHttpHeader.pas" FORMNAME="" UNITNAME="clHttpHeader" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clHttpMail.pas" FORMNAME="" UNITNAME="clHttpMail" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clHttpRequest.pas" FORMNAME="" UNITNAME="clHttpRequest" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clHttpUtils.pas" FORMNAME="" UNITNAME="clHttpUtils" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clImap4.pas" FORMNAME="" UNITNAME="clImap4" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clImap4FileHandler.pas" FORMNAME="" UNITNAME="clImap4FileHandler" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clImap4Server.pas" FORMNAME="" UNITNAME="clImap4Server" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clImapUtils.pas" FORMNAME="" UNITNAME="clImapUtils" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clInetSuiteReg.pas" FORMNAME="" UNITNAME="clInetSuiteReg" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clLogger.pas" FORMNAME="" UNITNAME="clLogger" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clMailMessage.pas" FORMNAME="" UNITNAME="clMailMessage" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clMC.pas" FORMNAME="" UNITNAME="clMC" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clMCUtils.pas" FORMNAME="" UNITNAME="clMCUtils" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clMenuButton.pas" FORMNAME="" UNITNAME="clMenuButton" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clMultiDC.pas" FORMNAME="" UNITNAME="clMultiDC" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clMultiDownLoader.pas" FORMNAME="" UNITNAME="clMultiDownLoader" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clMultiUploader.pas" FORMNAME="" UNITNAME="clMultiUploader" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clNewsChecker.pas" FORMNAME="" UNITNAME="clNewsChecker" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clNntp.pas" FORMNAME="" UNITNAME="clNntp" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clNntpServer.pas" FORMNAME="" UNITNAME="clNntpServer" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clNntpUtils.pas" FORMNAME="" UNITNAME="clNntpUtils" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clPCRE.pas" FORMNAME="" UNITNAME="clPCRE" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clPCREDef.pas" FORMNAME="" UNITNAME="clPCREDef" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clPop3.pas" FORMNAME="" UNITNAME="clPop3" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clPop3FileHandler.pas" FORMNAME="" UNITNAME="clPop3FileHandler" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clPop3Server.pas" FORMNAME="" UNITNAME="clPop3Server" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clProgressBar.pas" FORMNAME="" UNITNAME="clProgressBar" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clRequestChooser.pas" FORMNAME="" UNITNAME="clRequestChooser" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clRequestEdit.pas" FORMNAME="" UNITNAME="clRequestEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clSingleDC.pas" FORMNAME="" UNITNAME="clSingleDC" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clSMimeMessage.pas" FORMNAME="" UNITNAME="clSMimeMessage" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clSmtp.pas" FORMNAME="" UNITNAME="clSmtp" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clSmtpFileHandler.pas" FORMNAME="" UNITNAME="clSmtpFileHandler" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clSmtpRelay.pas" FORMNAME="" UNITNAME="clSmtpRelay" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clSmtpServer.pas" FORMNAME="" UNITNAME="clSmtpServer" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clSoap.pas" FORMNAME="" UNITNAME="clSoap" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clSocket.pas" FORMNAME="" UNITNAME="clSocket" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clSspi.pas" FORMNAME="" UNITNAME="clSspi" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clSspiAuth.pas" FORMNAME="" UNITNAME="clSspiAuth" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clSspiUtils.pas" FORMNAME="" UNITNAME="clSspiUtils" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clStreams.pas" FORMNAME="" UNITNAME="clStreams" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clSyncUtils.pas" FORMNAME="" UNITNAME="clSyncUtils" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clTcpClient.pas" FORMNAME="" UNITNAME="clTcpClient" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clTcpServer.pas" FORMNAME="" UNITNAME="clTcpServer" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clThreadPool.pas" FORMNAME="" UNITNAME="clThreadPool" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clTlsSocket.pas" FORMNAME="" UNITNAME="clTlsSocket" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clTranslator.pas" FORMNAME="" UNITNAME="clTranslator" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clUpdateInfoForm.pas" FORMNAME="" UNITNAME="clUpdateInfoForm" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clUploader.pas" FORMNAME="" UNITNAME="clUploader" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clUriUtils.pas" FORMNAME="" UNITNAME="clUriUtils" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clUserMgr.pas" FORMNAME="" UNITNAME="clUserMgr" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clUtils.pas" FORMNAME="" UNITNAME="clUtils" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clWebDav.pas" FORMNAME="" UNITNAME="clWebDav" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clWebUpdate.pas" FORMNAME="" UNITNAME="clWebUpdate" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clWinInet.pas" FORMNAME="" UNITNAME="clWinInet" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clWinSock2.pas" FORMNAME="" UNITNAME="clWinSock2" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clXmlUtils.pas" FORMNAME="" UNITNAME="clXmlUtils" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clZLibStreams.pas" FORMNAME="" UNITNAME="clZLibStreams" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="msxml_tlb.pas" FORMNAME="" UNITNAME="msxml_tlb" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clVer.inc" FORMNAME="" UNITNAME="clVer" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="rtl.bpi" FORMNAME="" UNITNAME="rtl" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="vcl.bpi" FORMNAME="" UNITNAME="vcl" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="designide.bpi" FORMNAME="" UNITNAME="designide" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=0
+MajorVer=6
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1033
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=Clever Components
+FileDescription=Clever Internet Suite
+FileVersion=6.0.0.0
+InternalName=clinetsuiteb6
+LegalCopyright=Copyright (C) 1999 - 2005 www.CleverComponents.com
+LegalTrademarks=ALL RIGHTS RESERVED
+OriginalFilename=clinetsuiteb6.bpl
+ProductName=Clever Internet Suite
+ProductVersion=6.2
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=2
+Item0=..\Common;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\Source\ToolsAPI
+Item1=zlib;..\Common;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\Source\ToolsAPI
+
+[HistoryLists\hlLibraryPath]
+Count=3
+Item0=$(BCB)\Projects\Lib;..\Common;$(BCB)\lib;$(BCB)\lib\obj;$(BCB)\Source\ToolsAPI
+Item1=zlib;..\Common;$(BCB)\lib;$(BCB)\lib\obj;$(BCB)\Source\ToolsAPI
+Item2=..\Common;$(BCB)\lib;$(BCB)\lib\obj;$(BCB)\Source\ToolsAPI
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=DELPHI6
+
+[HistoryLists\hlIntOutputDir]
+Count=1
+Item0=OutPut
+
+[HistoryLists\hlFinalOutputDir]
+Count=1
+Item0=OutPut\
+
+[HistoryLists\hIBPIOutputDir]
+Count=2
+Item0=.\OutPut
+Item1=D:\Progects\InetSuite\Cb6\OutPut
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Linker]
+LibPrefix=
+LibSuffix=
+LibVersion=
+  </IDEOPTIONS>
+</PROJECT>

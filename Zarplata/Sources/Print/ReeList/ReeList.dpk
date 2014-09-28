@@ -1,0 +1,52 @@
+package ReeList;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  FIBPlus7,
+  vcldb,
+  dbrtl,
+  visualdbclx,
+  visualclx,
+  frx7,
+  fs7,
+  vclx,
+  tee,
+  fqb70,
+  bdertl,
+  vcljpg,
+  frxDB7,
+  fsDB7,
+  ZarplataDPK,
+  ZSvodLoader,
+  frxe7;
+
+contains
+  ReeListUnitLoader in 'ReeListUnitLoader.pas',
+  ReeListPrintDataModul in 'ReeListPrintDataModul.pas' {DM: TDataModule};
+
+end.

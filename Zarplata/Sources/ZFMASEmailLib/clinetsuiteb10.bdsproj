@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<PersonalityInfo>
+		<Option>
+			<Option Name="Personality">CPlusPlusBuilder.Personality</Option>
+			<Option Name="ProjectType">CppPackage</Option>
+			<Option Name="Version">1.0</Option>
+			<Option Name="GUID">{21239F19-C24B-4C3E-95F7-77923298D703}</Option>
+		</Option>
+	</PersonalityInfo>
+	<CPlusPlusBuilder.Personality>
+		<BCBPROJECT>
+      <project version="10.0">
+        <property category="build.config" name="active" value="0"/>
+        <property category="build.config" name="count" value="1"/>
+        <property category="build.config" name="excludedefaultforzero" value="0"/>
+        <property category="build.config.0" name="builddir" value="Debug"/>
+        <property category="build.config.0" name="key" value="Debug_Build"/>
+        <property category="build.config.0" name="name" value="Debug Build"/>
+        <property category="build.config.0" name="settings.win32b" value="default"/>
+        <property category="build.config.0" name="type" value="Toolset"/>
+        <property category="build.config.0" name="win32.win32b.builddir" value="."/>
+        <property category="build.config.1" name="key" value="Release_Build"/>
+        <property category="build.config.1" name="name" value="Release Build"/>
+        <property category="build.config.1" name="settings.win32b" value="default"/>
+        <property category="build.config.1" name="type" value="Toolset"/>
+        <property category="build.config.1" name="win32.win32b.builddir" value="."/>
+        <property category="build.node" name="name" value="clinetsuiteb10.bpl"/>
+        <property category="build.node" name="packages" value="rtl;vcl;designide"/>
+        <property category="build.node" name="sparelibs" value="rtl.lib vcl.lib"/>
+        <property category="build.node" name="use_packages" value="1"/>
+        <property category="build.platform" name="active" value="win32"/>
+        <property category="build.platform" name="win32.Debug_Build.toolset" value="win32b"/>
+        <property category="build.platform" name="win32.Release_Build.toolset" value="win32b"/>
+        <property category="build.platform" name="win32.default" value="win32b"/>
+        <property category="build.platform" name="win32.enabled" value="1"/>
+        <property category="build.platform" name="win32.win32b.enabled" value="1"/>
+        <property category="win32.*.win32b.dcc32" name="param.filenames.merge" value="1"/>
+        <property category="win32.*.win32b.tasm32" name="param.listfile.merge" value="1"/>
+        <property category="win32.*.win32b.tasm32" name="param.objfile.merge" value="1"/>
+        <property category="win32.*.win32b.tasm32" name="param.xreffile.merge" value="1"/>
+        <property category="win32.Debug_Build.win32b.bcc32" name="option.D.arg.1" value="_DEBUG"/>
+        <property category="win32.Debug_Build.win32b.bcc32" name="option.D.arg.merge" value="1"/>
+        <property category="win32.Debug_Build.win32b.bcc32" name="option.D.enabled" value="1"/>
+        <property category="win32.Debug_Build.win32b.bcc32" name="option.Od.enabled" value="1"/>
+        <property category="win32.Debug_Build.win32b.bcc32" name="option.k.enabled" value="1"/>
+        <property category="win32.Debug_Build.win32b.bcc32" name="option.r.enabled" value="0"/>
+        <property category="win32.Debug_Build.win32b.bcc32" name="option.v.enabled" value="1"/>
+        <property category="win32.Debug_Build.win32b.bcc32" name="option.vi.enabled" value="0"/>
+        <property category="win32.Debug_Build.win32b.bcc32" name="option.y.enabled" value="1"/>
+        <property category="win32.Debug_Build.win32b.dcc32" name="option.$D.enabled" value="1"/>
+        <property category="win32.Debug_Build.win32b.dcc32" name="option.$O.enabled" value="0"/>
+        <property category="win32.Debug_Build.win32b.dcc32" name="option.D.arg.1" value="DEBUG"/>
+        <property category="win32.Debug_Build.win32b.dcc32" name="option.D.arg.merge" value="1"/>
+        <property category="win32.Debug_Build.win32b.dcc32" name="option.D.enabled" value="1"/>
+        <property category="win32.Debug_Build.win32b.dcc32" name="param.filenames.merge" value="1"/>
+        <property category="win32.Debug_Build.win32b.ilink32" name="option.D.arg.merge" value="1"/>
+        <property category="win32.Debug_Build.win32b.ilink32" name="option.D.enabled" value="1"/>
+        <property category="win32.Debug_Build.win32b.ilink32" name="option.L.arg.1" value="$(BDS)\lib\debug"/>
+        <property category="win32.Debug_Build.win32b.ilink32" name="option.L.arg.merge" value="1"/>
+        <property category="win32.Debug_Build.win32b.ilink32" name="option.L.enabled" value="1"/>
+        <property category="win32.Debug_Build.win32b.tasm32" name="option.z.enabled" value="1"/>
+        <property category="win32.Debug_Build.win32b.tasm32" name="option.zd.enabled" value="0"/>
+        <property category="win32.Debug_Build.win32b.tasm32" name="option.zi.enabled" value="1"/>
+        <property category="win32.Release_Build.win32b.bcc32" name="option.D.arg.1" value="NDEBUG"/>
+        <property category="win32.Release_Build.win32b.bcc32" name="option.D.arg.merge" value="1"/>
+        <property category="win32.Release_Build.win32b.bcc32" name="option.D.enabled" value="1"/>
+        <property category="win32.Release_Build.win32b.bcc32" name="option.r.enabled" value="1"/>
+        <property category="win32.Release_Build.win32b.dcc32" name="option.$D.enabled" value="0"/>
+        <property category="win32.Release_Build.win32b.dcc32" name="option.$O.enabled" value="1"/>
+        <property category="win32.Release_Build.win32b.dcc32" name="option.V.enabled" value="0"/>
+        <property category="win32.Release_Build.win32b.ilink32" name="option.L.arg.1" value="$(BDS)\lib\release"/>
+        <property category="win32.Release_Build.win32b.ilink32" name="option.L.arg.merge" value="1"/>
+        <property category="win32.Release_Build.win32b.ilink32" name="option.L.enabled" value="1"/>
+        <property category="win32.Release_Build.win32b.tasm32" name="option.z.enabled" value="0"/>
+        <property category="win32.Release_Build.win32b.tasm32" name="option.zd.enabled" value="0"/>
+        <property category="win32.Release_Build.win32b.tasm32" name="option.zi.enabled" value="0"/>
+        <property category="win32.Release_Build.win32b.tasm32" name="option.zn.enabled" value="1"/>
+        <optionset name="all_configurations">
+          <property category="node" name="displayname" value="All Configurations"/>
+          <property category="win32.*.win32b.bcc32" name="option.I.arg.1" value="OutPut"/>
+          <property category="win32.*.win32b.bcc32" name="option.I.arg.2" value="..\Common"/>
+          <property category="win32.*.win32b.bcc32" name="option.I.arg.3" value="$(BDS)\include"/>
+          <property category="win32.*.win32b.bcc32" name="option.I.arg.4" value="$(BDS)\include\vcl"/>
+          <property category="win32.*.win32b.bcc32" name="option.I.arg.5" value="$(BDS)\Source\ToolsAPI"/>
+          <property category="win32.*.win32b.bcc32" name="option.I.arg.6" value="$(BDS)\include\dinkumware"/>
+          <property category="win32.*.win32b.bcc32" name="option.I.arg.merge" value="1"/>
+          <property category="win32.*.win32b.bcc32" name="option.I.enabled" value="1"/>
+          <property category="win32.*.win32b.bcc32" name="option.O2.enabled" value="1"/>
+          <property category="win32.*.win32b.bcc32" name="option.Ve.enabled" value="1"/>
+          <property category="win32.*.win32b.bcc32" name="option.Vx.enabled" value="1"/>
+          <property category="win32.*.win32b.bcc32" name="option.X.enabled" value="0"/>
+          <property category="win32.*.win32b.bcc32" name="option.b.enabled" value="0"/>
+          <property category="win32.*.win32b.bcc32" name="option.k.enabled" value="0"/>
+          <property category="win32.*.win32b.bcc32" name="option.n.arg.1" value="OutPut\"/>
+          <property category="win32.*.win32b.bcc32" name="option.n.arg.merge" value="1"/>
+          <property category="win32.*.win32b.bcc32" name="option.n.enabled" value="1"/>
+          <property category="win32.*.win32b.bcc32" name="option.sysdefines.arg.1" value="_RTLDLL"/>
+          <property category="win32.*.win32b.bcc32" name="option.sysdefines.arg.2" value="NO_STRICT"/>
+          <property category="win32.*.win32b.bcc32" name="option.sysdefines.arg.3" value="USEPACKAGES"/>
+          <property category="win32.*.win32b.bcc32" name="option.sysdefines.arg.merge" value="1"/>
+          <property category="win32.*.win32b.bcc32" name="option.sysdefines.enabled" value="1"/>
+          <property category="win32.*.win32b.bcc32" name="option.tWM.enabled" value="1"/>
+          <property category="win32.*.win32b.bcc32" name="option.vi.enabled" value="1"/>
+          <property category="win32.*.win32b.brcc32" name="option.D.arg.merge" value="1"/>
+          <property category="win32.*.win32b.brcc32" name="option.D.enabled" value="0"/>
+          <property category="win32.*.win32b.brcc32" name="option.INCLUDEPATH.arg.1" value="..\Common"/>
+          <property category="win32.*.win32b.brcc32" name="option.INCLUDEPATH.arg.2" value="$(BDS)\include"/>
+          <property category="win32.*.win32b.brcc32" name="option.INCLUDEPATH.arg.3" value="$(BDS)\include\vcl"/>
+          <property category="win32.*.win32b.brcc32" name="option.INCLUDEPATH.arg.4" value="$(BDS)\Source\ToolsAPI"/>
+          <property category="win32.*.win32b.brcc32" name="option.INCLUDEPATH.arg.5" value="$(BDS)\include\dinkumware"/>
+          <property category="win32.*.win32b.brcc32" name="option.INCLUDEPATH.arg.merge" value="1"/>
+          <property category="win32.*.win32b.brcc32" name="option.INCLUDEPATH.enabled" value="1"/>
+          <property category="win32.*.win32b.brcc32" name="option.outputdir.arg.1" value="OutPut\"/>
+          <property category="win32.*.win32b.brcc32" name="option.outputdir.arg.merge" value="1"/>
+          <property category="win32.*.win32b.brcc32" name="option.outputdir.enabled" value="1"/>
+          <property category="win32.*.win32b.dcc32" name="option.$.arg.1" value="Y-"/>
+          <property category="win32.*.win32b.dcc32" name="option.$.arg.merge" value="1"/>
+          <property category="win32.*.win32b.dcc32" name="option.$.enabled" value="1"/>
+          <property category="win32.*.win32b.dcc32" name="option.$A1.enabled" value="0"/>
+          <property category="win32.*.win32b.dcc32" name="option.$A2.enabled" value="0"/>
+          <property category="win32.*.win32b.dcc32" name="option.$A4.enabled" value="0"/>
+          <property category="win32.*.win32b.dcc32" name="option.$C.enabled" value="0"/>
+          <property category="win32.*.win32b.dcc32" name="option.$D.enabled" value="0"/>
+          <property category="win32.*.win32b.dcc32" name="option.$L.enabled" value="0"/>
+          <property category="win32.*.win32b.dcc32" name="option.$Z2.enabled" value="0"/>
+          <property category="win32.*.win32b.dcc32" name="option.$Z4.enabled" value="0"/>
+          <property category="win32.*.win32b.dcc32" name="option.GD.enabled" value="0"/>
+          <property category="win32.*.win32b.dcc32" name="option.GP.enabled" value="0"/>
+          <property category="win32.*.win32b.dcc32" name="option.GS.enabled" value="0"/>
+          <property category="win32.*.win32b.dcc32" name="option.I.arg.1" value="OutPut"/>
+          <property category="win32.*.win32b.dcc32" name="option.I.arg.merge" value="1"/>
+          <property category="win32.*.win32b.dcc32" name="option.I.enabled" value="0"/>
+          <property category="win32.*.win32b.dcc32" name="option.J.enabled" value="0"/>
+          <property category="win32.*.win32b.dcc32" name="option.JP.enabled" value="0"/>
+          <property category="win32.*.win32b.dcc32" name="option.JPH.enabled" value="0"/>
+          <property category="win32.*.win32b.dcc32" name="option.JPHN.enabled" value="0"/>
+          <property category="win32.*.win32b.dcc32" name="option.LU.arg.1" value="DesignIde"/>
+          <property category="win32.*.win32b.dcc32" name="option.LU.arg.merge" value="1"/>
+          <property category="win32.*.win32b.dcc32" name="option.LU.enabled" value="1"/>
+          <property category="win32.*.win32b.dcc32" name="option.N0.arg.1" value="OutPut\"/>
+          <property category="win32.*.win32b.dcc32" name="option.N0.arg.merge" value="0"/>
+          <property category="win32.*.win32b.dcc32" name="option.N0.enabled" value="1"/>
+          <property category="win32.*.win32b.dcc32" name="option.NH.arg.1" value="OutPut\"/>
+          <property category="win32.*.win32b.dcc32" name="option.NH.arg.merge" value="1"/>
+          <property category="win32.*.win32b.dcc32" name="option.NH.enabled" value="1"/>
+          <property category="win32.*.win32b.dcc32" name="option.NO.arg.1" value="OutPut\"/>
+          <property category="win32.*.win32b.dcc32" name="option.NO.arg.merge" value="1"/>
+          <property category="win32.*.win32b.dcc32" name="option.NO.enabled" value="1"/>
+          <property category="win32.*.win32b.dcc32" name="option.O.arg.1" value="OutPut"/>
+          <property category="win32.*.win32b.dcc32" name="option.O.arg.merge" value="1"/>
+          <property category="win32.*.win32b.dcc32" name="option.O.enabled" value="0"/>
+          <property category="win32.*.win32b.dcc32" name="option.R.arg.1" value="OutPut"/>
+          <property category="win32.*.win32b.dcc32" name="option.R.arg.merge" value="1"/>
+          <property category="win32.*.win32b.dcc32" name="option.R.enabled" value="0"/>
+          <property category="win32.*.win32b.dcc32" name="option.U.arg.1" value="OutPut"/>
+          <property category="win32.*.win32b.dcc32" name="option.U.arg.2" value=".\"/>
+          <property category="win32.*.win32b.dcc32" name="option.U.arg.3" value="$(BDS)\lib"/>
+          <property category="win32.*.win32b.dcc32" name="option.U.arg.4" value="$(BDS)\lib\obj"/>
+          <property category="win32.*.win32b.dcc32" name="option.U.arg.merge" value="1"/>
+          <property category="win32.*.win32b.dcc32" name="option.U.enabled" value="1"/>
+          <property category="win32.*.win32b.dcc32" name="param.filenames.merge" value="1"/>
+          <property category="win32.*.win32b.idl2cpp" name="option.I.arg.1" value="OutPut"/>
+          <property category="win32.*.win32b.idl2cpp" name="option.I.arg.2" value="..\Common"/>
+          <property category="win32.*.win32b.idl2cpp" name="option.I.arg.3" value="$(BDS)\include"/>
+          <property category="win32.*.win32b.idl2cpp" name="option.I.arg.4" value="$(BDS)\include\vcl"/>
+          <property category="win32.*.win32b.idl2cpp" name="option.I.arg.5" value="$(BDS)\Source\ToolsAPI"/>
+          <property category="win32.*.win32b.idl2cpp" name="option.I.arg.merge" value="1"/>
+          <property category="win32.*.win32b.idl2cpp" name="option.I.enabled" value="1"/>
+          <property category="win32.*.win32b.idl2cpp" name="option.boa.enabled" value="1"/>
+          <property category="win32.*.win32b.idl2cpp" name="option.srcsuffix.arg" value="cpp"/>
+          <property category="win32.*.win32b.idl2cpp" name="option.srcsuffix.arg.merge" value="1"/>
+          <property category="win32.*.win32b.idl2cpp" name="option.srcsuffix.enabled" value="1"/>
+          <property category="win32.*.win32b.ilink32" name="container.SelectedWarnings.containerenabled" value="1"/>
+          <property category="win32.*.win32b.ilink32" name="option.-w-.enabled" value="0"/>
+          <property category="win32.*.win32b.ilink32" name="option.D.arg" value="&quot;Clever Internet Suite&quot;"/>
+          <property category="win32.*.win32b.ilink32" name="option.D.arg.merge" value="1"/>
+          <property category="win32.*.win32b.ilink32" name="option.D.enabled" value="1"/>
+          <property category="win32.*.win32b.ilink32" name="option.Gi.enabled" value="1"/>
+          <property category="win32.*.win32b.ilink32" name="option.Gl.enabled" value="1"/>
+          <property category="win32.*.win32b.ilink32" name="option.Gpd.enabled" value="0"/>
+          <property category="win32.*.win32b.ilink32" name="option.Gpr.enabled" value="0"/>
+          <property category="win32.*.win32b.ilink32" name="option.I.arg.1" value="OutPut"/>
+          <property category="win32.*.win32b.ilink32" name="option.I.arg.merge" value="0"/>
+          <property category="win32.*.win32b.ilink32" name="option.I.enabled" value="1"/>
+          <property category="win32.*.win32b.ilink32" name="option.L.arg.1" value="OutPut"/>
+          <property category="win32.*.win32b.ilink32" name="option.L.arg.2" value="$(BDS)\Projects\Lib"/>
+          <property category="win32.*.win32b.ilink32" name="option.L.arg.3" value="..\Common"/>
+          <property category="win32.*.win32b.ilink32" name="option.L.arg.4" value="$(BDS)\lib"/>
+          <property category="win32.*.win32b.ilink32" name="option.L.arg.5" value="$(BDS)\lib\obj"/>
+          <property category="win32.*.win32b.ilink32" name="option.L.arg.6" value="$(BDS)\Source\ToolsAPI"/>
+          <property category="win32.*.win32b.ilink32" name="option.L.arg.merge" value="1"/>
+          <property category="win32.*.win32b.ilink32" name="option.L.enabled" value="1"/>
+          <property category="win32.*.win32b.ilink32" name="option.Tpp.enabled" value="1"/>
+          <property category="win32.*.win32b.ilink32" name="option.aa.enabled" value="1"/>
+          <property category="win32.*.win32b.ilink32" name="option.dynamicrtl.enabled" value="1"/>
+          <property category="win32.*.win32b.ilink32" name="option.j.arg.1" value="OutPut"/>
+          <property category="win32.*.win32b.ilink32" name="option.j.arg.merge" value="1"/>
+          <property category="win32.*.win32b.ilink32" name="option.j.enabled" value="0"/>
+          <property category="win32.*.win32b.ilink32" name="option.l.arg.1" value=".\OutPut"/>
+          <property category="win32.*.win32b.ilink32" name="option.l.arg.merge" value="0"/>
+          <property category="win32.*.win32b.ilink32" name="option.l.enabled" value="1"/>
+          <property category="win32.*.win32b.ilink32" name="option.m.enabled" value="0"/>
+          <property category="win32.*.win32b.ilink32" name="option.map_segments.enabled" value="0"/>
+          <property category="win32.*.win32b.ilink32" name="option.outputdir.arg.1" value="OutPut\"/>
+          <property category="win32.*.win32b.ilink32" name="option.outputdir.arg.merge" value="1"/>
+          <property category="win32.*.win32b.ilink32" name="option.outputdir.enabled" value="1"/>
+          <property category="win32.*.win32b.ilink32" name="option.s.enabled" value="0"/>
+          <property category="win32.*.win32b.ilink32" name="option.w.enabled" value="0"/>
+          <property category="win32.*.win32b.ilink32" name="option.x.enabled" value="1"/>
+          <property category="win32.*.win32b.ilink32" name="param.libfiles.1" value="$(LIBRARIES)"/>
+          <property category="win32.*.win32b.ilink32" name="param.libfiles.2" value="import32.lib"/>
+          <property category="win32.*.win32b.ilink32" name="param.libfiles.3" value="cp32mti.lib"/>
+          <property category="win32.*.win32b.ilink32" name="param.libfiles.merge" value="1"/>
+          <property category="win32.*.win32b.ilink32" name="param.objfiles.1" value="c0pkg32.obj"/>
+          <property category="win32.*.win32b.ilink32" name="param.objfiles.2" value="$(PACKAGES)"/>
+          <property category="win32.*.win32b.ilink32" name="param.objfiles.3" value="Memmgr.Lib"/>
+          <property category="win32.*.win32b.ilink32" name="param.objfiles.4" value="sysinit.obj"/>
+          <property category="win32.*.win32b.ilink32" name="param.objfiles.merge" value="1"/>
+          <property category="win32.*.win32b.tasm32" name="option.i.arg.1" value="..\Common"/>
+          <property category="win32.*.win32b.tasm32" name="option.i.arg.2" value="$(BDS)\include"/>
+          <property category="win32.*.win32b.tasm32" name="option.i.arg.3" value="$(BDS)\include\vcl"/>
+          <property category="win32.*.win32b.tasm32" name="option.i.arg.4" value="$(BDS)\Source\ToolsAPI"/>
+          <property category="win32.*.win32b.tasm32" name="option.i.arg.5" value="$(BDS)\include\dinkumware"/>
+          <property category="win32.*.win32b.tasm32" name="option.i.arg.merge" value="1"/>
+          <property category="win32.*.win32b.tasm32" name="option.i.enabled" value="1"/>
+          <property category="win32.*.win32b.tasm32" name="option.outputdir.arg.1" value="OutPut\"/>
+          <property category="win32.*.win32b.tasm32" name="option.outputdir.arg.merge" value="1"/>
+          <property category="win32.*.win32b.tasm32" name="option.outputdir.enabled" value="1"/>
+          <property category="win32.*.win32b.tasm32" name="option.w2.enabled" value="1"/>
+          <property category="win32.*.win32b.tasm32" name="option.zn.enabled" value="1"/>
+          <property category="win32.*.win32b.tasm32" name="param.listfile.merge" value="1"/>
+          <property category="win32.*.win32b.tasm32" name="param.objfile.merge" value="1"/>
+          <property category="win32.*.win32b.tasm32" name="param.xreffile.merge" value="1"/>
+        </optionset>
+      </project>
+      <FILELIST>
+        <FILE FILENAME="clinetsuiteb10.cpp" CONTAINERID="CCompiler" LOCALCOMMAND="" UNITNAME="clinetsuiteb10" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clinetsuiteb10.res" CONTAINERID="ResTool" LOCALCOMMAND="" UNITNAME="clinetsuiteb10" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clInetSuite.dcr" CONTAINERID="DcrTool" LOCALCOMMAND="" UNITNAME="clInetSuite" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clActionInfo.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clActionInfo" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clBodyChooser.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clBodyChooser" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clBodyEdit.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clBodyEdit" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clCert.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clCert" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clConnection.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clConnection" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clCookies.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clCookies" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clCryptAPI.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clCryptAPI" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clCryptUtils.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clCryptUtils" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clDC.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clDC" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clDCUtils.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clDCUtils" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clDEditors.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clDEditors" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clDnsMessage.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clDnsMessage" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clDnsQuery.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clDnsQuery" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clDownLoader.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clDownLoader" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clEncoder.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clEncoder" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clFormChooser.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clFormChooser" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clFtp.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clFtp" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clFtpFileHandler.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clFtpFileHandler" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clFtpServer.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clFtpServer" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clFtpUtils.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clFtpUtils" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clGZip.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clGZip" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clHtmlParser.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clHtmlParser" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clHttp.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clHttp" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clHttpAuth.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clHttpAuth" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clHttpHeader.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clHttpHeader" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clHttpMail.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clHttpMail" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clHttpRequest.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clHttpRequest" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clHttpUtils.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clHttpUtils" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clImap4.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clImap4" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clImap4FileHandler.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clImap4FileHandler" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clImap4Server.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clImap4Server" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clImapUtils.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clImapUtils" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clInetSuiteReg.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clInetSuiteReg" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clLogger.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clLogger" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clMailMessage.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clMailMessage" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clMC.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clMC" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clMCUtils.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clMCUtils" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clMenuButton.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clMenuButton" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clMultiDC.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clMultiDC" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clMultiDownLoader.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clMultiDownLoader" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clMultiUploader.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clMultiUploader" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clNewsChecker.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clNewsChecker" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clNntp.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clNntp" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clNntpServer.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clNntpServer" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clNntpUtils.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clNntpUtils" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clPCRE.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clPCRE" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clPCREDef.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clPCREDef" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clPop3.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clPop3" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clPop3FileHandler.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clPop3FileHandler" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clPop3Server.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clPop3Server" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clProgressBar.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clProgressBar" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clRequestChooser.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clRequestChooser" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clRequestEdit.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clRequestEdit" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clSingleDC.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clSingleDC" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clSMimeMessage.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clSMimeMessage" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clSmtp.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clSmtp" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clSmtpFileHandler.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clSmtpFileHandler" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clSmtpRelay.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clSmtpRelay" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clSmtpServer.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clSmtpServer" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clSoap.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clSoap" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clSocket.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clSocket" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clSspi.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clSspi" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clSspiAuth.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clSspiAuth" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clSspiUtils.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clSspiUtils" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clStreams.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clStreams" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clSyncUtils.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clSyncUtils" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clTcpClient.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clTcpClient" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clTcpServer.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clTcpServer" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clThreadPool.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clThreadPool" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clTlsSocket.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clTlsSocket" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clTranslator.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clTranslator" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clUpdateInfoForm.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clUpdateInfoForm" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clUploader.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clUploader" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clUriUtils.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clUriUtils" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clUserMgr.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clUserMgr" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clUtils.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clUtils" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clWebDav.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clWebDav" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clWebUpdate.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clWebUpdate" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clWinInet.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clWinInet" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clWinSock2.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clWinSock2" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clXmlUtils.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clXmlUtils" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clZLibStreams.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="clZLibStreams" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="msxml_tlb.pas" CONTAINERID="PascalCompiler" LOCALCOMMAND="" UNITNAME="msxml_tlb" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="clVer.inc" CONTAINERID="" LOCALCOMMAND="" UNITNAME="clVer" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="C:\Documents and Settings\builder\My Documents\Borland Studio Projects\CB10\Lib\rtl.bpi" CONTAINERID="BPITool" LOCALCOMMAND="" UNITNAME="rtl" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="C:\Documents and Settings\builder\My Documents\Borland Studio Projects\CB10\Lib\vcl.bpi" CONTAINERID="BPITool" LOCALCOMMAND="" UNITNAME="vcl" FORMNAME="" DESIGNCLASS=""/>
+        <FILE FILENAME="C:\Documents and Settings\builder\My Documents\Borland Studio Projects\CB10\Lib\designide.bpi" CONTAINERID="BPITool" LOCALCOMMAND="" UNITNAME="designide" FORMNAME="" DESIGNCLASS=""/>
+      </FILELIST>
+      <IDEOPTIONS>
+        <VersionInfo>
+          <VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+          <VersionInfo Name="AutoIncBuild">False</VersionInfo>
+          <VersionInfo Name="MajorVer">6</VersionInfo>
+          <VersionInfo Name="MinorVer">0</VersionInfo>
+          <VersionInfo Name="Release">0</VersionInfo>
+          <VersionInfo Name="Build">0</VersionInfo>
+          <VersionInfo Name="Debug">False</VersionInfo>
+          <VersionInfo Name="PreRelease">False</VersionInfo>
+          <VersionInfo Name="Special">False</VersionInfo>
+          <VersionInfo Name="Private">False</VersionInfo>
+          <VersionInfo Name="DLL">False</VersionInfo>
+          <VersionInfo Name="Locale">1033</VersionInfo>
+          <VersionInfo Name="CodePage">1252</VersionInfo>
+        </VersionInfo>
+        <VersionInfoKeys>
+          <VersionInfoKeys Name="CompanyName">Clever Components</VersionInfoKeys>
+          <VersionInfoKeys Name="FileDescription">Clever Internet Suite</VersionInfoKeys>
+          <VersionInfoKeys Name="FileVersion">6.0.0.0</VersionInfoKeys>
+          <VersionInfoKeys Name="InternalName">clinetsuiteb10</VersionInfoKeys>
+          <VersionInfoKeys Name="LegalCopyright">Copyright (C) 1999 - 2005 www.CleverComponents.com</VersionInfoKeys>
+          <VersionInfoKeys Name="LegalTrademarks">ALL RIGHTS RESERVED</VersionInfoKeys>
+          <VersionInfoKeys Name="OriginalFilename">clinetsuiteb10.bpl</VersionInfoKeys>
+          <VersionInfoKeys Name="ProductName">Clever Internet Suite</VersionInfoKeys>
+          <VersionInfoKeys Name="ProductVersion">6.2</VersionInfoKeys>
+          <VersionInfoKeys Name="Comments"></VersionInfoKeys>
+        </VersionInfoKeys>
+        <Debugging>
+          <Debugging Name="DebugSourceDirs"></Debugging>
+        </Debugging>
+        <Parameters>
+          <Parameters Name="RunParams"></Parameters>
+          <Parameters Name="Launcher"></Parameters>
+          <Parameters Name="UseLauncher">False</Parameters>
+          <Parameters Name="DebugCWD"></Parameters>
+          <Parameters Name="HostApplication"></Parameters>
+          <Parameters Name="RemoteHost"></Parameters>
+          <Parameters Name="RemotePath"></Parameters>
+          <Parameters Name="RemoteParams"></Parameters>
+          <Parameters Name="RemoteLauncher"></Parameters>
+          <Parameters Name="UseRemoteLauncher">False</Parameters>
+          <Parameters Name="RemoteCWD"></Parameters>
+          <Parameters Name="RemoteDebug">False</Parameters>
+          <Parameters Name="Debug Symbols Search Path"></Parameters>
+          <Parameters Name="LoadAllSymbols">True</Parameters>
+          <Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+        </Parameters>
+        <Linker>
+          <Linker Name="LibPrefix"></Linker>
+          <Linker Name="LibSuffix"></Linker>
+          <Linker Name="LibVersion"></Linker>
+        </Linker>
+      </IDEOPTIONS>
+    </BCBPROJECT>
+		<Source>
+			<Source Name="MainSource">clinetsuiteb10.cpp</Source>
+		</Source>  <buildevents/>
+  </CPlusPlusBuilder.Personality>
+</BorlandProject>

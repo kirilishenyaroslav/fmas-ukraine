@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.05.03"/>
+    <PROJECT value="OutPut\clinetsuiteb5.bpl"/>
+    <OBJFILES value="OutPut\clActionInfo.obj OutPut\clBodyChooser.obj OutPut\clBodyEdit.obj 
+      OutPut\clCert.obj OutPut\clConnection.obj OutPut\clCookies.obj 
+      OutPut\clCryptAPI.obj OutPut\clCryptUtils.obj OutPut\clDC.obj 
+      OutPut\clDCUtils.obj OutPut\clDEditors.obj OutPut\clDnsMessage.obj 
+      OutPut\clDnsQuery.obj OutPut\clDownLoader.obj OutPut\clEncoder.obj 
+      OutPut\clFormChooser.obj OutPut\clFtp.obj OutPut\clFtpFileHandler.obj 
+      OutPut\clFtpServer.obj OutPut\clFtpUtils.obj OutPut\clGZip.obj 
+      OutPut\clHtmlParser.obj OutPut\clHttp.obj OutPut\clHttpAuth.obj 
+      OutPut\clHttpHeader.obj OutPut\clHttpMail.obj OutPut\clHttpRequest.obj 
+      OutPut\clHttpUtils.obj OutPut\clImap4.obj OutPut\clImap4FileHandler.obj 
+      OutPut\clImap4Server.obj OutPut\clImapUtils.obj OutPut\clInetSuiteReg.obj 
+      OutPut\clLogger.obj OutPut\clMailMessage.obj OutPut\clMC.obj 
+      OutPut\clMCUtils.obj OutPut\clMenuButton.obj OutPut\clMultiDC.obj 
+      OutPut\clMultiDownLoader.obj OutPut\clMultiUploader.obj 
+      OutPut\clNewsChecker.obj OutPut\clNntp.obj OutPut\clNntpServer.obj 
+      OutPut\clNntpUtils.obj OutPut\clPCRE.obj OutPut\clPCREDef.obj 
+      OutPut\clPop3.obj OutPut\clPop3FileHandler.obj 
+      OutPut\clPop3Server.obj OutPut\clProgressBar.obj 
+      OutPut\clRequestChooser.obj OutPut\clRequestEdit.obj OutPut\clSingleDC.obj 
+      OutPut\clSMimeMessage.obj OutPut\clSmtp.obj OutPut\clSmtpFileHandler.obj 
+      OutPut\clSmtpRelay.obj OutPut\clSmtpServer.obj OutPut\clSoap.obj 
+      OutPut\clSocket.obj OutPut\clSspi.obj OutPut\clSspiAuth.obj OutPut\clSspiUtils.obj 
+      OutPut\clStreams.obj OutPut\clSyncUtils.obj OutPut\clTcpClient.obj 
+      OutPut\clTcpServer.obj OutPut\clThreadPool.obj OutPut\clTlsSocket.obj 
+      OutPut\clTranslator.obj OutPut\clUpdateInfoForm.obj OutPut\clUploader.obj 
+      OutPut\clUriUtils.obj OutPut\clUserMgr.obj OutPut\clUtils.obj OutPut\clWebDav.obj 
+      OutPut\clWebUpdate.obj OutPut\clWinInet.obj OutPut\clWinSock2.obj 
+      OutPut\clXmlUtils.obj OutPut\clZLibStreams.obj OutPut\msxml_tlb.obj 
+      OutPut\clinetsuiteb5.obj"/>
+    <RESFILES value="clinetsuiteb5.res clInetSuite.dcr"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) clUpdateInfoForm.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value="vcl50.lib"/>
+    <PACKAGES value="vcl50.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="tlink32"/>
+    <USERDEFINES value=""/>
+    <SYSDEFINES value="_RTLDLL;NO_STRICT;USEPACKAGES"/>
+    <MAINSOURCE value="clinetsuiteb5.cpp"/>
+    <INCLUDEPATH value="$(BCB)\include;$(BCB)\include\vcl;$(BCB)\Source\ToolsAPI"/>
+    <LIBPATH value="$(BCB)\lib;$(BCB)\lib\obj;$(BCB)\Source\ToolsAPI"/>
+    <WARNINGS value="-w-par"/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I$(BCB)\include -I$(BCB)\include\vcl -I$(BCB)\Source\ToolsAPI -src_suffix 
+      cpp -boa"/>
+    <CFLAG1 value="-O2 -H=$(BCB)\lib\vcl50.csm -Hc -Vx -Ve -X- -a8 -b- -k- -vi -c -tWM"/>
+    <PFLAGS value="-N2OutPut -N0OutPut -$Y- -$L- -$D- -$C- -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zn"/>
+    <LFLAGS value="-l.\OutPut -IOutPut -D&quot;Clever Internet Suite&quot; -aa -Tpp -x -Gn -Gl -Gi"/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0pkg32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+  </LINKER>
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=0
+MajorVer=5
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1033
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=Clever Components
+FileDescription=Clever Internet Suite
+FileVersion=6.0.0.0
+InternalName=clinetsuiteb5
+LegalCopyright=Copyright (C) 1999 - 2005 www.CleverComponents.com
+LegalTrademarks=ALL RIGHTS RESERVED
+OriginalFilename=clinetsuiteb5.bpl
+ProductName=Clever Internet Suite
+ProductVersion=6.2
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=1
+Item0=zlib;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\Source\ToolsAPI
+
+[HistoryLists\hlLibraryPath]
+Count=1
+Item0=zlib;$(BCB)\lib;$(BCB)\lib\obj;$(BCB)\Source\ToolsAPI
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlIntOutputDir]
+Count=1
+Item0=OutPut
+
+[HistoryLists\hlFinalOutputDir]
+Count=1
+Item0=OutPut\
+
+[HistoryLists\hIBPIOutputDir]
+Count=1
+Item0=D:\Progects\InetSuite\Common\OutPut\
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+  </IDEOPTIONS>
+</PROJECT>

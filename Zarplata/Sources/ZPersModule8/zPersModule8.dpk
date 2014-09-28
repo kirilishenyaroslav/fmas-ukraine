@@ -1,0 +1,78 @@
+package zPersModule8;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  applib,
+  vcljpg,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxGridVCLD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  vcl,
+  rxdb7,
+  rxctl7,
+  vclx,
+  VclSmp,
+  vcldb,
+  dbrtl,
+  qFControls,
+  SpAllPeople,
+  UnivSprav,
+  ZarplataDPK,
+  Globals,
+  CommonSp,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  frxDB7,
+  fsDB7,
+  fs7,
+  tee,
+  fqb70,
+  bdertl,
+  frx7,
+  AccMgmtBpl,
+  Pwd,
+  SysL,
+  MD5,
+  dsnap,
+  ibxpress,
+  cxExtEditorsVCLD7,
+  cxExportVCLD7;
+
+contains
+  zPersModule8_intf in 'zPersModule8_intf.pas',
+  uMainForm8 in 'uMainForm8.pas' {frmZPersModule8},
+  AddManInfo in 'AddManInfo.pas' {frmAddManInfo},
+  GenerateMan in 'GenerateMan.pas' {frmGenerate},
+  PrintForm in 'PrintForm.pas' {frmPrint};
+
+end.

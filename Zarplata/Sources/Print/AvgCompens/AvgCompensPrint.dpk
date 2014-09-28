@@ -1,0 +1,57 @@
+package AvgCompensPrint;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  vcl,
+  rtl,
+  dbrtl,
+  FIBPlus7,
+  vcldb,
+  visualdbclx,
+  visualclx,
+  frx7,
+  fs7,
+  vclx,
+  tee,
+  fqb70,
+  bdertl,
+  vcljpg,
+  frxDB7,
+  fsDB7,
+  cxExtEditorsVCLD7,
+  cxDataD7,
+  cxEditorsVCLD7,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  ZSvodLoader,
+  ZarplataConsts,
+  ZarplataDPK;
+
+contains
+  AvgHolPrintDM in '..\AvgHol\AvgHolPrintDM.pas' {DM: TDataModule},
+  AvgHolPrintULoader in '..\AvgHol\AvgHolPrintULoader.pas';
+
+end.

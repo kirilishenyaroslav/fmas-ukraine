@@ -1,0 +1,55 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = Zarplata.exe ZarplataConsts.bpl ZarplataDPK.bpl ZSvodLoader.bpl \
+  RaschVed.bpl SvodByDepartment.bpl SvodByFOT.bpl SvodBySch.bpl SvodFOD.bpl \
+  SvodDocs.bpl SimpleReestr.bpl AccList.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+Zarplata.exe: Sources\ZarExe\Zarplata.dpr
+  $(DCC)
+
+ZarplataConsts.bpl: Sources\Consts\ZarplataConsts.dpk
+  $(DCC)
+
+ZarplataDPK.bpl: Sources\Common\ZarplataDPK.dpk
+  $(DCC)
+
+ZSvodLoader.bpl: Sources\Print\SvodDocs\Loader\ZSvodLoader.dpk
+  $(DCC)
+
+RaschVed.bpl: Sources\Print\SvodDocs\RaschVed\RaschVed.dpk
+  $(DCC)
+
+SvodByDepartment.bpl: Sources\Print\SvodDocs\SvodByDepartment\SvodByDepartment.dpk
+  $(DCC)
+
+SvodByFOT.bpl: Sources\Print\SvodDocs\SvodByFOT\SvodByFOT.dpk
+  $(DCC)
+
+SvodBySch.bpl: Sources\Print\SvodDocs\SvodBySch\SvodBySch.dpk
+  $(DCC)
+
+SvodFOD.bpl: Sources\Print\SvodDocs\SvodFOD\SvodFOD.dpk
+  $(DCC)
+
+SvodDocs.bpl: Sources\SvodDocs\SvodDocs.dpk
+  $(DCC)
+
+SimpleReestr.bpl: Sources\Print\SvodDocs\SimpleReestr\SimpleReestr.dpk
+  $(DCC)
+
+AccList.bpl: Sources\Print\AccList\AccList.dpk
+  $(DCC)
+
+

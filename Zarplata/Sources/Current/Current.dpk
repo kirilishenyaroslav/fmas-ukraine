@@ -1,0 +1,65 @@
+package Current;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcljpg,
+  vcl,
+  dbrtl,
+  vcldb,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxExtEditorsVCLD7,
+  cxGridVCLD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  FIBPlus7,
+  ZarplataDPK,
+  ZarplataConsts,
+  ZcxBarPlugins,
+  vclx,
+  visualdbclx,
+  visualclx,
+  fsDB7,
+  fs7,
+  tee,
+  frxDB7,
+  bdertl,
+  frx7,
+  Kerneldpk,
+  CommonSp;
+
+contains
+  Current_Zarplata in 'Current_Zarplata.pas' {FZCurrent},
+  Current_DM in 'Current_DM.pas' {DM: TDataModule},
+  Current_Filter in 'Current_Filter.pas' {fzCurrentFilter},
+  Current_Loader in 'Current_Loader.pas',
+  Current_LineView in 'Current_LineView.pas' {FZLineCurrent};
+
+end.

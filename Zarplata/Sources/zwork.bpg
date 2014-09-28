@@ -1,0 +1,101 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = ZarplataDPK.bpl ZarplataConsts.bpl ZSvodLoader.bpl Zarplata.exe \
+  CurrentControl.bpl NonSpisokControl.bpl ZEmail.bpl SotrData.bpl \
+  ZpersModule4.bpl ZPersonification2010.bpl ZpersModule1.bpl PaymentCount.bpl \
+  FormSheet.bpl PeopleComandiriovkiControl.bpl OperationEnd.bpl FullCount.bpl \
+  ZSmAss.bpl AccDates2.bpl AccDates.bpl SvodDocs.bpl ReeVed.bpl ProtFSS.bpl \
+  f1dfm.bpl XLSReadWriteII30DPK.bpl ExportDataSet.bpl SvodBySm.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+
+CurrentControl.bpl: CurrentControl\CurrentControl.dpk
+  $(DCC)
+
+NonSpisokControl.bpl: NonSpisokControl\NonSpisokControl.dpk
+  $(DCC)
+
+ZEmail.bpl: ZEmail\ZEmail.dpk
+  $(DCC)
+
+Zarplata.exe: ZarExe\Zarplata.dpr
+  $(DCC)
+
+ZarplataDPK.bpl: Common\ZarplataDPK.dpk
+  $(DCC)
+
+ZarplataConsts.bpl: Consts\ZarplataConsts.dpk
+  $(DCC)
+
+ZSvodLoader.bpl: Print\SvodDocs\Loader\ZSvodLoader.dpk
+  $(DCC)
+
+SotrData.bpl: SotrData\SotrData.dpk
+  $(DCC)
+
+ZpersModule4.bpl: ZPersModule4\ZpersModule4.dpk
+  $(DCC)
+
+ZPersonification2010.bpl: Personification2010\ZPersonification2010.dpk
+  $(DCC)
+
+ZpersModule1.bpl: ZPersModule1\ZpersModule1.dpk
+  $(DCC)
+
+PaymentCount.bpl: PaymentCount\PaymentCount.dpk
+  $(DCC)
+
+FormSheet.bpl: FormSheet\FormSheet.dpk
+  $(DCC)
+
+PeopleComandiriovkiControl.bpl: PeopleComandirovkiControl\PeopleComandiriovkiControl.dpk
+  $(DCC)
+
+OperationEnd.bpl: OperationEnd\OperationEnd.dpk
+  $(DCC)
+
+FullCount.bpl: FullCount\FullCount.dpk
+  $(DCC)
+
+ZSmAss.bpl: ZSmAssosiation\ZSmAss.dpk
+  $(DCC)
+
+AccDates2.bpl: ViewDateAcc2\AccDates2.dpk
+  $(DCC)
+
+AccDates.bpl: ViewDateAcc\AccDates.dpk
+  $(DCC)
+
+SvodDocs.bpl: SvodDocs\SvodDocs.dpk
+  $(DCC)
+
+ReeVed.bpl: ReeVed\ReeVed.dpk
+  $(DCC)
+
+ProtFSS.bpl: ProtFSS\ProtFSS.dpk
+  $(DCC)
+
+f1dfm.bpl: f1dfm\f1dfm.dpk
+  $(DCC)
+
+XLSReadWriteII30DPK.bpl: ..\..\Kernell\Sources\ExelComponent\XLSReadWriteII30DPK.dpk
+  $(DCC)
+
+ExportDataSet.bpl: ExportDataSet\ExportDataSet.dpk
+  $(DCC)
+
+SvodBySm.bpl: Print\SvodDocs\SvodBySm\SvodBySm.dpk
+  $(DCC)
+
+

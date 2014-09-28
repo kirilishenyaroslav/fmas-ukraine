@@ -1,0 +1,118 @@
+package clinetsuited7;
+
+{$R *.res}
+{$R 'clInetSuite.dcr'}
+{$ALIGN 8}
+{$ASSERTIONS OFF}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Clever Internet Suite'}
+{$IMPLICITBUILD OFF}
+
+requires
+  vcl,
+  designide;
+
+{%File 'clVer.inc'}
+
+contains
+  clActionInfo in 'clActionInfo.pas',
+  clBodyChooser in 'clBodyChooser.pas',
+  clBodyEdit in 'clBodyEdit.pas',
+  clCert in 'clCert.pas',
+  clConnection in 'clConnection.pas',
+  clCookies in 'clCookies.pas',
+  clCryptApi in 'clCryptApi.pas',
+  clCryptUtils in 'clCryptUtils.pas',
+  clDC in 'clDC.pas',
+  clDCUtils in 'clDCUtils.pas',
+  clDEditors in 'clDEditors.pas',
+  clDnsMessage in 'clDnsMessage.pas',
+  clDnsQuery in 'clDnsQuery.pas',
+  clDownLoader in 'clDownLoader.pas',
+  clEncoder in 'clEncoder.pas',
+  clFormChooser in 'clFormChooser.pas',
+  clFtp in 'clFtp.pas',
+  clFtpFileHandler in 'clFtpFileHandler.pas',
+  clFtpServer in 'clFtpServer.pas',
+  clFtpUtils in 'clFtpUtils.pas',
+  clgzip in 'clgzip.pas',
+  clHtmlParser in 'clHtmlParser.pas',
+  clHttp in 'clHttp.pas',
+  clHttpAuth in 'clHttpAuth.pas',
+  clHttpHeader in 'clHttpHeader.pas',
+  clHttpMail in 'clHttpMail.pas',
+  clHttpRequest in 'clHttpRequest.pas',
+  clHttpUtils in 'clHttpUtils.pas',
+  clImap4 in 'clImap4.pas',
+  clImap4FileHandler in 'clImap4FileHandler.pas',
+  clImap4Server in 'clImap4Server.pas',
+  clImapUtils in 'clImapUtils.pas',
+  clInetSuiteReg in 'clInetSuiteReg.pas',
+  clMailMessage in 'clMailMessage.pas',
+  clMC in 'clMC.pas',
+  clMCUtils in 'clMCUtils.pas',
+  clMenuButton in 'clMenuButton.pas',
+  clMultiDC in 'clMultiDC.pas',
+  clMultiDownLoader in 'clMultiDownLoader.pas',
+  clMultiUploader in 'clMultiUploader.pas',
+  clNewsChecker in 'clNewsChecker.pas',
+  clNntp in 'clNntp.pas',
+  clNntpServer in 'clNntpServer.pas',
+  clNntpUtils in 'clNntpUtils.pas',
+  clPCRE in 'clPCRE.pas',
+  clPCREDef in 'clPCREDef.pas',
+  clPop3 in 'clPop3.pas',
+  clPop3FileHandler in 'clPop3FileHandler.pas',
+  clPop3Server in 'clPop3Server.pas',
+  clProgressBar in 'clProgressBar.pas',
+  clRequestChooser in 'clRequestChooser.pas',
+  clRequestEdit in 'clRequestEdit.pas',
+  clSingleDC in 'clSingleDC.pas',
+  clSMimeMessage in 'clSMimeMessage.pas',
+  clSmtp in 'clSmtp.pas',
+  clSmtpFileHandler in 'clSmtpFileHandler.pas',
+  clSmtpRelay in 'clSmtpRelay.pas',
+  clSmtpServer in 'clSmtpServer.pas',
+  clSoap in 'clSoap.pas',
+  clSocket in 'clSocket.pas',
+  clSspi in 'clSspi.pas',
+  clSspiAuth in 'clSspiAuth.pas',
+  clSspiUtils in 'clSspiUtils.pas',
+  clStreams in 'clStreams.pas',
+  clSyncUtils in 'clSyncUtils.pas',
+  clTcpClient in 'clTcpClient.pas',
+  clTcpServer in 'clTcpServer.pas',
+  clThreadPool in 'clThreadPool.pas',
+  clTlsSocket in 'clTlsSocket.pas',
+  clTranslator in 'clTranslator.pas',
+  clUpdateInfoForm in 'clUpdateInfoForm.pas',
+  clUploader in 'clUploader.pas',
+  clUriUtils in 'clUriUtils.pas',
+  clUserMgr in 'clUserMgr.pas',
+  clUtils in 'clUtils.pas',
+  clWebDav in 'clWebDav.pas',
+  clWebUpdate in 'clWebUpdate.pas',
+  clWinInet in 'clWinInet.pas',
+  clWinSock2 in 'clWinSock2.pas',
+  clXmlUtils in 'clXmlUtils.pas',
+  clZLibStreams in 'clZLibStreams.pas';
+
+end.

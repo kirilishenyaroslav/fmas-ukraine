@@ -1,0 +1,75 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = Zarplata.exe ZarplataConsts.bpl ZarplataDPK.bpl Remont.bpl \
+  Current.bpl CurrentControl.bpl DopNachControl.bpl DedConst.bpl \
+  DedConstControl.bpl DopNach.bpl NonSpisok.bpl NonSpisokControl.bpl \
+  PeoplePriv.bpl PeoplePrivControl.bpl PeopleProp.bpl PeoplePropControl.bpl \
+  Alimony.bpl AlimonyControl.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+Zarplata.exe: Sources\ZarExe\Zarplata.dpr
+  $(DCC)
+
+ZarplataConsts.bpl: Sources\Consts\ZarplataConsts.dpk
+  $(DCC)
+
+ZarplataDPK.bpl: Sources\Common\ZarplataDPK.dpk
+  $(DCC)
+
+Remont.bpl: Sources\Remont\Remont.dpk
+  $(DCC)
+
+Current.bpl: Sources\Current\Current.dpk
+  $(DCC)
+
+CurrentControl.bpl: Sources\CurrentControl\CurrentControl.dpk
+  $(DCC)
+
+DopNachControl.bpl: Sources\DopNachControl\DopNachControl.dpk
+  $(DCC)
+
+DedConst.bpl: Sources\DedConst\DedConst.dpk
+  $(DCC)
+
+DedConstControl.bpl: Sources\DedConstControl\DedConstControl.dpk
+  $(DCC)
+
+DopNach.bpl: Sources\Dop_Nach\DopNach.dpk
+  $(DCC)
+
+NonSpisok.bpl: Sources\NonSpisok\NonSpisok.dpk
+  $(DCC)
+
+NonSpisokControl.bpl: Sources\NonSpisokControl\NonSpisokControl.dpk
+  $(DCC)
+
+PeoplePriv.bpl: Sources\PeoplePriv\PeoplePriv.dpk
+  $(DCC)
+
+PeoplePrivControl.bpl: Sources\PeoplePrivControl\PeoplePrivControl.dpk
+  $(DCC)
+
+PeopleProp.bpl: Sources\PeopleProp\PeopleProp.dpk
+  $(DCC)
+
+PeoplePropControl.bpl: Sources\PeoplePropControl\PeoplePropControl.dpk
+  $(DCC)
+
+Alimony.bpl: Sources\Alimony\Alimony.dpk
+  $(DCC)
+
+AlimonyControl.bpl: Sources\AlimonyControl\AlimonyControl.dpk
+  $(DCC)
+
+

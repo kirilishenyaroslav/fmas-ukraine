@@ -1,0 +1,172 @@
+[Form]
+Filter		 = Вибір співробітників 
+Workers		 = Співробітники		
+CardBankCont	 = Продовження карткових рахунків
+Current		 = Поточні операції
+
+[Button]
+Insert   	 = Додати
+Update 		 = Редагувати
+Delete  	 = Вилучити
+Detail   	 = Додатково
+Exit     	 = Вийти
+Filter   	 = Вибір співробітників
+KodSetup 	 = Період
+AcctCard 	 = Рахунок
+Avarage		 = Середнє
+Ok		 = Прийняти
+Cancel		 = Відмінити
+Do		 = Обробити
+Save		 = Зберегти
+Avans            = Аванс
+Refresh          = Оновити
+AddMan           = Додати особу
+LineView         = Лінійно
+Group            = Згрупувати
+Yes		 = Прийняти
+Cancel		 = Відмінити
+
+[RadioButton]
+Person           = Фізична особа
+Locate           = Пошук
+HasCharactic     = Існує
+HasNotCharactic  = Не існує
+
+
+[CheckBox]
+Percon		 = Фізична особа
+Man	 	 = Співробітник
+Tin		 = Ід. код
+Familiya	 = Прізвище
+Department       = Підрозділ
+Properties       = Властивість
+Privilege        = Пільга
+Raise            = Надбавка/доплата
+Period		 = Період
+MainJob          = Має сновне місце роботи
+NotMainJob       = Не має основного місця роботи
+LeavedJob        = Тільки звільнених
+
+
+[TabSheet]
+RMoving  	 = Трудовий договор
+BMoving  	 = Надбавки
+Hospital 	 = Лікарняні
+Holiday  	 = Відпустки
+Current  	 = Поточні
+Alimony  	 = Виконавчі листи
+Invalid  	 = Інваліди
+Priv     	 = Пільги
+Prop     	 = Властивості
+Exception	 = Винятки
+DopNach  	 = Додаткові нарахування 
+DedConst 	 = Постійні утримання
+Remont   	 = Ремонтні
+WorkMode         = Режим
+
+[Label]
+KodSetup	 = Період
+Smeta	 	 = Бюджет
+Department	 = Підрозділ
+EnterDate        = Дата введення
+Prikaz           = Наказ
+NDay             = Кількість днів
+Clock            = Кількість годин
+Percent          = Відсоток
+SumClock         = Сума за годину
+Category	 = Категорія
+Tin		 = Ід. код
+DateBirth	 = Дата народження
+Prikaz		 = Наказ
+Razryad		 = Клас/Розряд
+Category         = Категорія
+Document	 = Документ
+SendPeople	 = Одержувач
+SendAdress	 = Адреса одержувача
+Man		 = Фізична особа
+Familiya	 = Прізвище
+RecordCount	 = Кількість записів
+PeopleCount	 = Кількість осіб
+LocateDate	 = Дата пошуку
+IsOperationFilter= Фільтрувати операції
+Vidopl           = Вид операції
+Prikaz           = Наказ
+IdMan		 = Фізична особа
+KodSetupIndex = Cтарт індексації
+
+[GridColumn]
+Tn		 = Тн
+FIO              = П.І.Б. 
+Tin		 = Ід. код
+Man		 = Фізична особа
+PeriodBeg	 = Початок
+PeriodEnd	 = Закінчення
+DateBeg		 = З
+DateEnd		 = По
+Sovmest		 = Тип роботи
+Post		 = Посада
+Stavka		 = Ставка
+Oklad		 = Оклад
+SummaBase	 = Баз. сума
+SummaPPS	 = Сума ПВС
+KodSmBase	 = Баз. бюджет
+KodSmPPS	 = Бюджет ПВС
+Property	 = Властивість
+KodSetup	 = Період
+KodDepartment	 = Підрозділ
+Summa		 = Сума
+KodSmeta	 = Бюджет
+KodVidopl	 = ВО
+NameVidopl	 = Вид операції
+WorkPeriod	 = Період роботи
+Note 		 = Примітка
+PercentSign 	 = %
+MaxPercent	 = Найб. відсоток
+Dolg		 = Борг
+PochtaPercent 	 = Поштовий збір
+Expense		 = Кількість
+Kod		 = Код
+Priv		 = Пільга
+Prikaz 		 = Наказ
+Seria		 = Серія
+Number		 = Номер
+Percent		 = Відсоток
+Reestr		 = Реєстр
+Name		 = Назва
+AcctCard	 = Рахунок
+Imya		 = І'мя
+Fam		 = Прізвище
+Worker		 = Робітник
+Student		 = Студент
+Granter		 = Стипендіант
+WorkEnd		 = Закінчення роботи
+StudEnd		 = Закінчення навчання
+GrantEnd	 = Закінчення стипедії
+Prim		 = Примітка
+WorkModeTitle       = Режим праці
+Budget           = Бюджет
+BudgetKPO        = Бюджет КПО
+
+		
+
+[GroupBox]
+Period		 = Період
+
+[OtherConsts]
+NotInputDataError= Не введено дані
+AllOk      = Все добре
+Attention  =Увага
+Error		 = Помилка
+MonthJanuary     = Січень
+MonthFebruary    = Лютий
+MonthMarch       = Березень
+MonthApril       = Квітень
+MonthMay         = Травень
+MonthJune        = Червень
+MonthJuly        = Липень
+MonthAutumn      = Серпень
+MonthSeptember   = Вересень
+MonthOctober     = Жовтень
+MonthNovember    = Листопад
+MonthDecember	 = Грудень
+

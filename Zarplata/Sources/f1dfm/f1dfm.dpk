@@ -1,0 +1,83 @@
+package f1dfm;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  vcljpg,
+  vcldb,
+  cxExtEditorsVCLD7,
+  vclx,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  ZarplataConsts,
+  fsDB7,
+  fs7,
+  tee,
+  frxDB7,
+  bdertl,
+  frx7,
+  ZarplataDPK,
+  ZcxBarPlugins,
+  VclSmp,
+  rxctl7,
+  rxdb7,
+  cxGridUtilsVCLD7,
+  Halcyon6D7,
+  designide,
+  vclactnband,
+  dxDockingD7,
+  frxe7,
+  xmlrtl,
+  PI_Loader,
+  PI_Resources;
+
+contains
+  f1df_DMm in 'f1df_DMm.pas' {DM: TDataModule},
+  f1df_Loaderm in 'f1df_Loaderm.pas',
+  f1dfMainFormm in 'f1dfMainFormm.pas' {MainFormF1df},
+  f1df_AddReportm in 'f1df_AddReportm.pas' {FAddReport},
+  f1df_Ctrlm in 'f1df_Ctrlm.pas' {f1DfCtrl},
+  f1df_PrintDMm in 'f1df_PrintDMm.pas' {PrintDM: TDataModule},
+  f1df_CtrlCntWorkersm in 'f1df_CtrlCntWorkersm.pas' {FEditCntWorkers},
+  f1df_Insertm in 'f1df_Insertm.pas' {FInsert},
+  f1df_AddOstm in 'f1df_AddOstm.pas' {FAddOstm},
+  f1df_reportsm in 'f1df_reportsm.pas' {F1DfReports},
+  f1df_exportm in 'f1df_exportm.pas' {BankExportForm},
+  f1df_exportmXML in 'f1df_exportmXML.pas' {BankExportFormXML};
+
+end.

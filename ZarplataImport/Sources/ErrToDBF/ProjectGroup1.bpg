@@ -1,0 +1,26 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = Project1.exe f1df.bpl OrdersReestr.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+Project1.exe: Project1.dpr
+  $(DCC)
+
+f1df.bpl: ..\..\Zarplata\Sources\f1df\f1df.dpk
+  $(DCC)
+
+OrdersReestr.bpl: ..\..\Zarplata\Sources\OrdersReestr\OrdersReestr.dpk
+  $(DCC)
+
+

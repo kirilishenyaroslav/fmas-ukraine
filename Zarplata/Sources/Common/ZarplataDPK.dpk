@@ -1,0 +1,67 @@
+package ZarplataDPK;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  FIBPlus7,
+  vcldb,
+  visualdbclx,
+  visualclx,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxExtEditorsVCLD7,
+  ZarplataConsts,
+  vcljpg,
+  rxctl7,
+  vclx,
+  VclSmp,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  AsupTableCore;
+
+contains
+  Dates in 'dates.pas',
+  PackageLoad in 'PackageLoad.pas',
+  ZProc in 'ZProc.pas',
+  ZTypes in 'ZTypes.pas',
+  ZMessages in 'ZMessages.pas',
+  ZDPKConsts in 'ZDPKConsts.pas',
+  Z_Images_DM in 'Z_Images_DM.pas' {DMImages: TDataModule},
+  Z_StProc_DM in 'Z_StProc_DM.pas' {StProcDM: TDataModule},
+  ZWait in 'ZWait.pas' {Wait_Form},
+  zThread in 'zThread.pas',
+  z_dmCommonStyles in 'z_dmCommonStyles.pas' {StylesDM: TDataModule},
+  z_uWaitForm in 'z_uWaitForm.pas' {zWaitForm},
+  WorkModeInfo in 'WorkModeInfo.pas' {frmWorkModeInfo};
+
+end.

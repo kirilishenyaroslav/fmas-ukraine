@@ -1,0 +1,60 @@
+package ZarplataConsts;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  FIBPlus7,
+  vcldb,
+  visualdbclx,
+  visualclx,
+  vclx,
+  tee,
+  vcljpg;
+
+contains
+  Unit_Sp_VidOpl_Consts in 'Unit_Sp_VidOpl_Consts.pas',
+  SotrListConsts in 'SotrListConsts.pas',
+  Unit_SpViplat_Consts in 'Unit_SpViplat_Consts.pas',
+  Unit_SheetPrint_Consts in 'Unit_SheetPrint_Consts.pas',
+  Unit_Setup_Consts in 'Unit_Setup_Consts.pas',
+  Unit_PrintAccList_Consts in 'Unit_PrintAccList_Consts.pas',
+  Unit_PaymentCountConsts in 'Unit_PaymentCountConsts.pas',
+  Unit_ReCountData_Consts in 'Unit_ReCountData_Consts.pas',
+  Unit_RecountConsts in 'Unit_RecountConsts.pas',
+  Unit_SprSubs_Consts in 'Unit_SprSubs_Consts.pas',
+  Unit_Common_Consts in 'Unit_Common_Consts.pas',
+  Unit_SvodDocs_Consts in 'Unit_SvodDocs_Consts.pas',
+  Unit_ZGlobal_Consts in 'Unit_ZGlobal_Consts.pas',
+  Unit_NumericConsts in 'Unit_NumericConsts.pas',
+  Unit_VedView_Consts in 'Unit_VedView_Consts.pas',
+  Unit_VedInfo_Consts in 'Unit_VedInfo_Consts.pas',
+  uAvgPaymentConsts in 'uAvgPaymentConsts.pas',
+  UnitZarplataConsts in 'UnitZarplataConsts.pas',
+  Unit_Access_Consts in 'Unit_Access_Consts.pas';
+
+end.

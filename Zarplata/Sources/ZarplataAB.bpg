@@ -1,0 +1,90 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = gr_Common.bpl SvodBySch.bpl ZAccess.bpl ZarplataConsts.bpl \
+  Zarplata.exe ZarplataDPK.bpl SvodByGroupPr.bpl SvodByGroupSm.bpl SprSubs.bpl \
+  ReeVed.bpl AvgSocInsurance.bpl ProtFSS.bpl SpAllPeople.bpl SvodBySchSm.bpl \
+  ZSvodLoader.bpl SvodDocs.bpl SvodBySm.bpl SotrData.bpl f1dfm.bpl ReeDepVO.bpl \
+  CurrentControl.bpl AccDates2.bpl AccDates.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+SvodBySm.bpl: Sources\Print\SvodDocs\SvodBySm\SvodBySm.dpk
+  $(DCC)
+
+ZarplataDPK.bpl: Sources\Common\ZarplataDPK.dpk
+  $(DCC)
+
+Zarplata.exe: Sources\ZarExe\Zarplata.dpr
+  $(DCC)
+
+SprSubs.bpl: Sources\Print\SprSubs\SprSubs.dpk
+  $(DCC)
+
+SvodDocs.bpl: Sources\SvodDocs\SvodDocs.dpk
+  $(DCC)
+
+SvodByGroupPr.bpl: Sources\Print\SvodDocs\SvodByGroupProgram\SvodByGroupPr.dpk
+  $(DCC)
+
+ZSvodLoader.bpl: Sources\Print\SvodDocs\Loader\ZSvodLoader.dpk
+  $(DCC)
+
+SvodByGroupSm.bpl: Sources\Print\SvodDocs\SvodByGroupSmet\SvodByGroupSm.dpk
+  $(DCC)
+
+ReeVed.bpl: Sources\ReeVed\ReeVed.dpk
+  $(DCC)
+
+AvgSocInsurance.bpl: Sources\Print\AvgSocInsurance\AvgSocInsurance.dpk
+  $(DCC)
+
+ZarplataConsts.bpl: Sources\Consts\ZarplataConsts.dpk
+  $(DCC)
+
+ZAccess.bpl: Sources\Access\ZAccess.dpk
+  $(DCC)
+
+ProtFSS.bpl: Sources\ProtFSS\ProtFSS.dpk
+  $(DCC)
+
+SpAllPeople.bpl: ..\SpAllPeople\Sources\SpPeople\SpAllPeople.dpk
+  $(DCC)
+
+SvodBySchSm.bpl: Sources\Print\SvodDocs\SvodBySch\SvodBySchSm.dpk
+  $(DCC)
+
+SvodBySch.bpl: Sources\Print\SvodDocs\SvodBySch\SvodBySch.dpk
+  $(DCC)
+
+gr_Common.bpl: ..\Grant\Sources\gr_Common.dpk
+  $(DCC)
+
+SotrData.bpl: Sources\SotrData\SotrData.dpk
+  $(DCC)
+
+f1dfm.bpl: Sources\f1dfm\f1dfm.dpk
+  $(DCC)
+
+ReeDepVO.bpl: Sources\Print\ReeDepVo\ReeDepVO.dpk
+  $(DCC)
+
+CurrentControl.bpl: Sources\CurrentControl\CurrentControl.dpk
+  $(DCC)
+
+AccDates2.bpl: Sources\ViewDateAcc2\AccDates2.dpk
+  $(DCC)
+
+AccDates.bpl: Sources\ViewDateAcc\AccDates.dpk
+  $(DCC)
+
+

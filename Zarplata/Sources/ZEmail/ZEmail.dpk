@@ -1,0 +1,62 @@
+package ZEmail;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  applib,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  ZarplataDPK,
+  ZSvodLoader,
+  ztv70dt,
+  IndySystem70,
+  IndyCore70,
+  IndyProtocols70,
+  AccMgmtBpl,
+  frxDB7,
+  dclIndyCore70,
+  vcl,
+  dbrtl,
+  vcljpg,
+  vcldb,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  FMASEMailLib;
+
+contains
+  UZEmailIntf in 'UZEmailIntf.pas',
+  UZEmailMForm in 'UZEmailMForm.pas' {frmEmailMForm},
+  UZEmailConf in 'UZEmailConf.pas' {frmZEmailConf},
+  UZEmailHistory in 'UZEmailHistory.pas' {frmZEmailHistory},
+  EmailProtEX in 'EmailProtEX.pas' {frmEmailProtokolEx};
+
+end.

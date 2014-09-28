@@ -1,0 +1,70 @@
+package PaymentCount;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  vcljpg,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxExtEditorsVCLD7,
+  FIBPlus7,
+  ZarplataDPK,
+  ZarplataConsts,
+  cxGridVCLD7,
+  Globals,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  CommonSp,
+  vcldb,
+  vclx,
+  visualdbclx,
+  visualclx,
+  fsDB7,
+  fs7,
+  tee,
+  frxDB7,
+  fqb70,
+  bdertl,
+  frx7,
+  VclSmp,
+  rxctl7,
+  AsupDataCheck,
+  SpAllPeople;
+
+contains
+  dmPaymentCount in 'dmPaymentCount.pas' {MainDm: TDataModule},
+  uNotPassedOrdersList in 'uNotPassedOrdersList.pas' {NotPassedOrdersForm},
+  uCountListForm in 'uCountListForm.pas' {CountListForm},
+  uAddToCountList in 'uAddToCountList.pas' {AddPeopleToListForm},
+  PaymentCountUnit in 'PaymentCountUnit.pas' {PaymentCountForm},
+  uPaymentTableCheck in 'uPaymentTableCheck.pas' {TableCheckForm};
+
+end.

@@ -1,0 +1,39 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = Zarplata.exe ZarplataConsts.bpl ZarplataDPK.bpl VidOpl.bpl \
+  VoplFilter.bpl VoplProp.bpl VoplPropGroup.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+Zarplata.exe: Sources\ZarExe\Zarplata.dpr
+  $(DCC)
+
+ZarplataConsts.bpl: Sources\Consts\ZarplataConsts.dpk
+  $(DCC)
+
+ZarplataDPK.bpl: Sources\Common\ZarplataDPK.dpk
+  $(DCC)
+
+VidOpl.bpl: Sources\VidOpl\VidOpl.dpk
+  $(DCC)
+
+VoplFilter.bpl: Sources\VoplFilter\VoplFilter.dpk
+  $(DCC)
+
+VoplProp.bpl: Sources\VoplProp\VoplProp.dpk
+  $(DCC)
+
+VoplPropGroup.bpl: Sources\VoplPropGroup\VoplPropGroup.dpk
+  $(DCC)
+
+

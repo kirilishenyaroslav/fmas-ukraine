@@ -1,0 +1,73 @@
+package RaschVed;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  FIBPlus7,
+  vcldb,
+  visualdbclx,
+  visualclx,
+  cxDataD7,
+  cxEditorsVCLD7,
+  vcljpg,
+  fsDB7,
+  fs7,
+  vclx,
+  tee,
+  frxDB7,
+  frx7,
+  ZarplataDPK,
+  cxExtEditorsVCLD7,
+  cxCommonEditingVCLD7,
+  cxTreeListVCLD7,
+  cxExportVCLD7,
+  cxGridVCLD7,
+  dxBarD7,
+  dxComnD7,
+  dxBarExtItemsD7,
+  fqb70,
+  bdertl,
+  VclSmp,
+  rxctl7,
+  ZarplataConsts,
+  rxdb7,
+  gr_Common,
+  frxe7,
+  ZSvodLoader;
+
+contains
+  RaschVedMainDM in 'RaschVedMainDM.pas' {MainDM: TDataModule},
+  RaschVedLoader in 'RaschVedLoader.pas',
+  TreeFilterDepartment in 'TreeFilterDepartment.pas' {FTreeFilterDepartmen},
+  RaschVedPrintDM in 'RaschVedPrintDM.pas' {PrintDM: TDataModule},
+  RaschVedReestrPrintDM in 'RaschVedReestrPrintDM.pas' {DM: TDataModule},
+  FilterDepartment in 'FilterDepartment.pas' {FFilterDepartment};
+
+end.
