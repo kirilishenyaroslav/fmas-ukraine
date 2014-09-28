@@ -1,0 +1,70 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = Garage.exe GarageDPK.bpl Gar_Sp_Marka_Avto.bpl GAR_SP_MODEL.bpl \
+  GAR_SP_MARKA_TOPL.bpl Gar_Avto.bpl gar_Sp_People.bpl GAR_WAYBILL.bpl \
+  gar_Print_ComulativeList_By_Avto.bpl Gar_Ved.bpl Gar_Factor.bpl GarAccess.bpl \
+  gar_Print_Comulative_HelpList.bpl gar_Print_ComulativeList_ByPeriod.bpl \
+  ReportsSubsPayDPK.bpl Gar_FilterWaybill.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+
+Garage.exe: Garage.dpr
+  $(DCC)
+
+GarageDPK.bpl: LoadPackageGarageDPK\GarageDPK.dpk
+  $(DCC)
+
+Gar_Sp_Marka_Avto.bpl: Gar_Sp_Marka_Avto\Gar_Sp_Marka_Avto.dpk
+  $(DCC)
+
+GAR_SP_MODEL.bpl: GAR_SP_MODEL\GAR_SP_MODEL.dpk
+  $(DCC)
+
+GAR_SP_MARKA_TOPL.bpl: GAR_SP_MARKA_TOPL\GAR_SP_MARKA_TOPL.dpk
+  $(DCC)
+
+Gar_Avto.bpl: Gar_Sp_Avto\Gar_Avto.dpk
+  $(DCC)
+
+gar_Sp_People.bpl: gar_Sp_People\gar_Sp_People.dpk
+  $(DCC)
+
+GAR_WAYBILL.bpl: GAR_WAYBILL\GAR_WAYBILL.dpk
+  $(DCC)
+
+gar_Print_ComulativeList_By_Avto.bpl: Gar_Cumulative_List_Avto_By_Time\gar_Print_ComulativeList_By_Avto.dpk
+  $(DCC)
+
+Gar_Ved.bpl: Ved\Gar_Ved.dpk
+  $(DCC)
+
+Gar_Factor.bpl: Gar_Factor\Gar_Factor.dpk
+  $(DCC)
+
+GarAccess.bpl: Access\GarAccess.dpk
+  $(DCC)
+
+gar_Print_Comulative_HelpList.bpl: Gar_Cumulative_HelpList\gar_Print_Comulative_HelpList.dpk
+  $(DCC)
+
+gar_Print_ComulativeList_ByPeriod.bpl: Gar_Cumulative_List_By_Time\gar_Print_ComulativeList_ByPeriod.dpk
+  $(DCC)
+
+ReportsSubsPayDPK.bpl: ..\..\Studcity\Sources\Reports\ReportsSubsPay\ReportsSubsPayDPK.dpk
+  $(DCC)
+
+Gar_FilterWaybill.bpl: Gar_FilterWayBill\Gar_FilterWaybill.dpk
+  $(DCC)
+
+

@@ -1,0 +1,38 @@
+package Gar_FilterWaybill;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  gr_Common,
+  GarageDPK;
+
+contains
+  Gar_LoaderFilterWaybill in 'Gar_LoaderFilterWaybill.pas',
+  Gar_FilterSeriesWaybill in 'Gar_FilterSeriesWaybill.pas' {FormFilterSeriesWaybill},
+  Gar_DMFilterWaybill in 'Gar_DMFilterWaybill.pas' {DMFilterWaybill: TDataModule},
+  Gar_FilterSeriesWaybillResult in 'Gar_FilterSeriesWaybillResult.pas' {FormFilterSeriesWaybillResult};
+
+end.

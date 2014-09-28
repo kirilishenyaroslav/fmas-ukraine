@@ -1,0 +1,36 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = sp_Product_Pack.bpl ini_unit_meas.bpl ini_group_unitm.bpl \
+  ini_Cat_Customer.bpl fpop_Pack_Loader.bpl Planning.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+Planning.exe: fpop_proj\Planning.dpr
+  $(DCC)
+
+sp_Product_Pack.bpl: sp_product\sp_Product_Pack.dpk
+  $(DCC)
+
+ini_unit_meas.bpl: ini_Unit_Meas\ini_unit_meas.dpk
+  $(DCC)
+
+ini_group_unitm.bpl: ini_group_unitm\ini_group_unitm.dpk
+  $(DCC)
+
+ini_Cat_Customer.bpl: ini_cat_customer\ini_Cat_Customer.dpk
+  $(DCC)
+
+fpop_Pack_Loader.bpl: fpop_pack_loader\fpop_Pack_Loader.dpk
+  $(DCC)
+
+
