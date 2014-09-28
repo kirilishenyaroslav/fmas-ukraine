@@ -1,0 +1,66 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = AlBPLMyLoad.bpl AvanceOtchet.bpl AvanceReestrMan.bpl \
+  AvanceFindDocument.bpl AvanceShowOborot.bpl AvanceOstatok.bpl \
+  SpRazdelenieBPL.bpl Spschsys.bpl AvanceNeosnovnieProv.bpl ShowOborotNewAlg.bpl \
+  JNastroyka.bpl AvanceMemorialBPL.bpl AvanceVedomost.bpl AvanseOtchet.exe \
+  UwVedomost2.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+AvanceOtchet.bpl: Sources\Avance\AvanceOtchet.dpk
+  $(DCC)
+
+AvanceFindDocument.bpl: Sources\AvanceFindDocument\AvanceFindDocument.dpk
+  $(DCC)
+
+AvanseOtchet.exe: Sources\MainForm\AvanseOtchet.dpr
+  $(DCC)
+
+AvanceShowOborot.bpl: Sources\Oborot\AvanceShowOborot.dpk
+  $(DCC)
+
+AvanceOstatok.bpl: Sources\Ostatki\AvanceOstatok.dpk
+  $(DCC)
+
+SpRazdelenieBPL.bpl: Sources\SpRazdelenie\SpRazdelenieBPL.dpk
+  $(DCC)
+
+Spschsys.bpl: Sources\SpSchSystem\Spschsys.dpk
+  $(DCC)
+
+AlBPLMyLoad.bpl: ..\Kassa\Sources\KassaResurce\AlBPLMyLoad.dpk
+  $(DCC)
+
+ShowOborotNewAlg.bpl: Sources\OborotNewAlg\ShowOborotNewAlg.dpk
+  $(DCC)
+
+AvanceNeosnovnieProv.bpl: Sources\AvanceNeosnovnie\AvanceNeosnovnieProv.dpk
+  $(DCC)
+
+JNastroyka.bpl: Sources\JNastroyka\JNastroyka.dpk
+  $(DCC)
+
+AvanceMemorialBPL.bpl: Sources\AvanceMemorial\AvanceMemorialBPL.dpk
+  $(DCC)
+
+AvanceVedomost.bpl: Sources\AvanceVedomost\AvanceVedomost.dpk
+  $(DCC)
+
+UwVedomost2.bpl: ..\Vedomost\Sources\UWVedomost2\UwVedomost2.dpk
+  $(DCC)
+
+AvanceReestrMan.bpl: Sources\AvanceReestrMonthMan\AvanceReestrMan.dpk
+  $(DCC)
+
+

@@ -1,0 +1,61 @@
+package AvanceMemorialZvedenii;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  cxLibraryVCLD7,
+  dxThemeD7,
+  frx7,
+  fs7,
+  vclx,
+  tee,
+  fqb70,
+  bdertl,
+  vcldb,
+  vcljpg,
+  frxDB7,
+  fsDB7,
+  frxe7,
+  FIBPlus7,
+  visualdbclx,
+  visualclx,
+  rxdb7,
+  rxctl7,
+  VclSmp,
+  cxEditorsVCLD7,
+  cxDataD7,
+  cxExtEditorsVCLD7,
+  cxGridVCLD7,
+  cxExportVCLD7,
+  AlBPLMyLoad,
+  Globals;
+
+contains
+  AvanceMemorialZvedPrint in 'AvanceMemorialZvedPrint.pas' {fmAvanceMemorialZvedPrint};
+
+end.
