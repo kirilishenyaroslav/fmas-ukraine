@@ -999,10 +999,8 @@ begin
 //    ShowMessage('Неможливо змінити відпрацювання в обліку документа, що було відпрацьовано в минулому або майбутньому періоді!');
 //    exit;
    end;
-   if agMessageDlg(MAT_STR_WARNING, 'Ви дійсно бажаєте змінити поточне відпрацювання в обліку?', mtConfirmation, [mbYes, mbNo]) = ID_NO then
+   if agMessageDlg(MAT_STR_WARNING, 'Ви дійсно бажаєте змінити поточне відпрацювання в обліку?', mtConfirmation, [mbYes, mbNo]) = ID_YES then
    begin
-    exit;
-   end;
    work_mode:=3;
    try
     DocStoredProc.Close;
@@ -1021,6 +1019,8 @@ begin
      exit;
     end;
    end;
+   end
+   else  exit;
   end;
 
   ID_TIPD:=DocDataSet.FieldByName('ID_TIPD').AsInteger;

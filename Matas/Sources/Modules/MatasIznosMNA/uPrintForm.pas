@@ -190,10 +190,10 @@ begin
    end;
    if F_SCH then
    begin
-    zapros:= zapros+ prefix+' A.ID_SCH IN (SELECT ID_KEY FROM MAT_TMP_FILTER WHERE ID_OBJECT=2 AND ID_SESSION='+IntToStr(FILTER_ID_SESSION)+')';
-    zapros:= zapros+'OR A.BAL_ID_SCH IN (SELECT ID_KEY FROM MAT_TMP_FILTER WHERE ID_OBJECT=3 AND ID_SESSION='+IntToStr(FILTER_ID_SESSION)+')';
+    zapros:= zapros+ prefix+' (A.ID_SCH IN (SELECT ID_KEY FROM MAT_TMP_FILTER WHERE ID_OBJECT=2 AND ID_SESSION='+IntToStr(FILTER_ID_SESSION)+')';
+    zapros:= zapros+'OR A.BAL_ID_SCH IN (SELECT ID_KEY FROM MAT_TMP_FILTER WHERE ID_OBJECT=3 AND ID_SESSION='+IntToStr(FILTER_ID_SESSION)+'))';
    end;
-   zapros:= zapros+' order by A.sch_number, A.fio';
+   zapros:= zapros+' order by A.sch_number, A.fio, A.NNUM, A.NAME_NOMN';
    frxReport1.LoadFromFile(ExtractFilePath(Application.ExeName)+ _PATH_REPORTS+'\MNA_iznos_sch_mo.fr3');
   end;
 
@@ -208,10 +208,10 @@ begin
    end;
    if F_SCH then
    begin
-    zapros:= zapros+ prefix+' A.ID_SCH IN (SELECT ID_KEY FROM MAT_TMP_FILTER WHERE ID_OBJECT=2 AND ID_SESSION='+IntToStr(FILTER_ID_SESSION)+')';
-    zapros:= zapros+'OR A.BAL_ID_SCH IN (SELECT ID_KEY FROM MAT_TMP_FILTER WHERE ID_OBJECT=3 AND ID_SESSION='+IntToStr(FILTER_ID_SESSION)+')';
+    zapros:= zapros+ prefix+' (A.ID_SCH IN (SELECT ID_KEY FROM MAT_TMP_FILTER WHERE ID_OBJECT=2 AND ID_SESSION='+IntToStr(FILTER_ID_SESSION)+')';
+    zapros:= zapros+'OR A.BAL_ID_SCH IN (SELECT ID_KEY FROM MAT_TMP_FILTER WHERE ID_OBJECT=3 AND ID_SESSION='+IntToStr(FILTER_ID_SESSION)+'))';
    end;
-  zapros:= zapros+' order by A.sch_number, A.fio';
+  zapros:= zapros+' order by A.sch_number, A.fio, A.NNUM, A.NAME_NOMN';
   frxReport1.LoadFromFile(ExtractFilePath(Application.ExeName)+ _PATH_REPORTS+'\MNA_iznos_mo_sch.fr3');
   end;
 
@@ -226,11 +226,11 @@ begin
    end;
    if F_SCH then
    begin
-    zapros:= zapros+ prefix+' A.ID_SCH IN (SELECT ID_KEY FROM MAT_TMP_FILTER WHERE ID_OBJECT=2 AND ID_SESSION='+IntToStr(FILTER_ID_SESSION)+')';
-    zapros:= zapros+'OR A.BAL_ID_SCH IN (SELECT ID_KEY FROM MAT_TMP_FILTER WHERE ID_OBJECT=3 AND ID_SESSION='+IntToStr(FILTER_ID_SESSION)+')';
+    zapros:= zapros+ prefix+' (A.ID_SCH IN (SELECT ID_KEY FROM MAT_TMP_FILTER WHERE ID_OBJECT=2 AND ID_SESSION='+IntToStr(FILTER_ID_SESSION)+')';
+    zapros:= zapros+'OR A.BAL_ID_SCH IN (SELECT ID_KEY FROM MAT_TMP_FILTER WHERE ID_OBJECT=3 AND ID_SESSION='+IntToStr(FILTER_ID_SESSION)+'))';
    end;
   zapros:= zapros+' group by A.id_sch, A.sch_number, A.sch_title, A.bal_id_sch, A.bal_sch_number, A.bal_sch_title, A.id_mo, A.fio, A.sfio, A.name_department';
-  zapros:= zapros+' order by A.sch_number, A.fio';
+  zapros:= zapros+' order by A.sch_number, A.fio, A.NNUM, A.NAME_NOMN';
   frxReport1.LoadFromFile(ExtractFilePath(Application.ExeName)+ _PATH_REPORTS+'\MNA_iznos.fr3');
   end;
 
@@ -240,8 +240,8 @@ begin
   prefix:=' WHERE ';
    if F_SCH then
    begin
-    zapros:= zapros+ prefix+' A.ID_SCH IN (SELECT ID_KEY FROM MAT_TMP_FILTER WHERE ID_OBJECT=2 AND ID_SESSION='+IntToStr(FILTER_ID_SESSION)+')';
-    zapros:= zapros+'OR A.BAL_ID_SCH IN (SELECT ID_KEY FROM MAT_TMP_FILTER WHERE ID_OBJECT=3 AND ID_SESSION='+IntToStr(FILTER_ID_SESSION)+')';
+    zapros:= zapros+ prefix+' (A.ID_SCH IN (SELECT ID_KEY FROM MAT_TMP_FILTER WHERE ID_OBJECT=2 AND ID_SESSION='+IntToStr(FILTER_ID_SESSION)+')';
+    zapros:= zapros+'OR A.BAL_ID_SCH IN (SELECT ID_KEY FROM MAT_TMP_FILTER WHERE ID_OBJECT=3 AND ID_SESSION='+IntToStr(FILTER_ID_SESSION)+'))';
    end;
   zapros:= zapros+' group by A.id_sch, A.sch_number, A.sch_title, A.bal_id_sch, A.bal_sch_number, A.bal_sch_title';
   zapros:= zapros+' order by A.sch_number';

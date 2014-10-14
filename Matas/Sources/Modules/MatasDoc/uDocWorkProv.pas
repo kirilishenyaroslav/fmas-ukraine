@@ -1586,7 +1586,7 @@ CREATE PROCEDURE MAT_DT_DOC_PROV_INTF_EDIT_EX(
 5    PKR_KOD_DOG NUMERIC(16,0),
 6    PSUMMA NUMERIC(16,2))
 }
-    SetLength(Vals, 18);
+    SetLength(Vals, 26);
     Vals[0]  := ID_DOC;
     Vals[1]  := IntToStr(ID_PROV);
     Vals[2]  := pform.DB_ID_SCH;
@@ -1608,7 +1608,18 @@ CREATE PROCEDURE MAT_DT_DOC_PROV_INTF_EDIT_EX(
      Vals[17] := IntToStr(pform.FACED_ID_PROV)
     else
      Vals[17] := 0;
-    try
+    if cxCheckItogIstFin.checked=true then Vals[17]  := 2;
+
+    Vals[18]  := IstFinDataSet.FieldByName('DB_ID_SM').AsInteger;
+    Vals[19]  := IstFinDataSet.FieldByName('DB_ID_RZ').AsInteger;
+    Vals[20]  := IstFinDataSet.FieldByName('DB_ID_ST').AsInteger;
+    Vals[21]  := IstFinDataSet.FieldByName('DB_ID_KEKV').AsInteger;
+    Vals[22]  := IstFinDataSet.FieldByName('KR_ID_SM').AsInteger;
+    Vals[23]  := IstFinDataSet.FieldByName('KR_ID_RZ').AsInteger;
+    Vals[24] := IstFinDataSet.FieldByName('KR_ID_ST').AsInteger;
+    Vals[25] := IstFinDataSet.FieldByName('KR_ID_KEKV').AsInteger;
+
+     try
      StoredProc.Close;
      StoredProc.Transaction := WriteTransaction;
      StoredProc.Transaction.StartTransaction;
@@ -1682,7 +1693,7 @@ CREATE PROCEDURE MAT_DT_DOC_PROV_INTF_EDIT_EX(
 5    PKR_KOD_DOG NUMERIC(16,0),
 6    PSUMMA NUMERIC(16,2))
 }
-    SetLength(Vals, 18);
+    SetLength(Vals, 26);
     Vals[0]  := ID_DOC;
     Vals[1]  := IntToStr(ID_PROV);
     Vals[2]  := sform.DB_ID_SCH;
@@ -1701,6 +1712,16 @@ CREATE PROCEDURE MAT_DT_DOC_PROV_INTF_EDIT_EX(
     Vals[15] := IntToStr(sform.KR_KOD_DOG);
     Vals[16] := sform.cxSumma.Value;
     Vals[17] := 0;
+    if cxCheckItogIstFin.checked=true then Vals[17]  := 2;
+
+    Vals[18]  := IstFinDataSet.FieldByName('DB_ID_SM').AsInteger;
+    Vals[19]  := IstFinDataSet.FieldByName('DB_ID_RZ').AsInteger;
+    Vals[20]  := IstFinDataSet.FieldByName('DB_ID_ST').AsInteger;
+    Vals[21]  := IstFinDataSet.FieldByName('DB_ID_KEKV').AsInteger;
+    Vals[22]  := IstFinDataSet.FieldByName('KR_ID_SM').AsInteger;
+    Vals[23]  := IstFinDataSet.FieldByName('KR_ID_RZ').AsInteger;
+    Vals[24] := IstFinDataSet.FieldByName('KR_ID_ST').AsInteger;
+    Vals[25] := IstFinDataSet.FieldByName('KR_ID_KEKV').AsInteger;
     try
      StoredProc.Close;
      StoredProc.Transaction := WriteTransaction;
