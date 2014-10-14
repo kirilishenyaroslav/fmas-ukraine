@@ -56,6 +56,7 @@ USER_FIO: string;
  IS_EXISTS_NEUTV_DOC:Integer;
  KASS_DAY:Integer;
 // FLAG_FULL_DOG:Integer;
+USE_NALOG_NAKL:Integer;
  implementation
 
 end.

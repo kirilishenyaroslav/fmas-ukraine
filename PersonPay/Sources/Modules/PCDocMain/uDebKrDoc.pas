@@ -583,7 +583,7 @@ begin
   k := cxGrid1DBTableView1.DataController.FocusedRecordIndex;
 
   doc.NumDoc.Text   := cxGrid1DBTableView1.DataController.Values[k, 0];
-  doc.NoteMemo.Text := DebDSNOTE.AsString;//cxGrid1DBTableView1.DataController.Values[k, 6];
+  doc.NoteMemo.Text := cxGrid1DBTableView1.DataController.Values[k, 5];
   doc.DateDoc.Date  := cxGrid1DBTableView1.DataController.Values[k, 1];
   doc.PK_id         := DebDSPK_ID.Asint64;//cxGrid1DBTableView1.DataController.Values[k, 6];//DebDS.FieldValues['PK_ID'];
   doc.ID_TYPE_DOC   :=DebDSID_TYPE_DOC.AsInteger;

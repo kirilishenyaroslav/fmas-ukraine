@@ -18,7 +18,7 @@ object SchForm: TSchForm
   object pnl1: TPanel
     Left = 0
     Top = 0
-    Width = 371
+    Width = 363
     Height = 65
     Align = alTop
     TabOrder = 0
@@ -120,8 +120,8 @@ object SchForm: TSchForm
   object cxGrid2: TcxGrid
     Left = 0
     Top = 65
-    Width = 371
-    Height = 157
+    Width = 363
+    Height = 148
     Align = alClient
     TabOrder = 1
     object cxGridDBTableView1: TcxGridDBTableView

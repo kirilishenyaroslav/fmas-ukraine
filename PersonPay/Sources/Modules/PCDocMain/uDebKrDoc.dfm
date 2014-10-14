@@ -1,6 +1,6 @@
 object DocForm: TDocForm
-  Left = 410
-  Top = 298
+  Left = 361
+  Top = 418
   Width = 724
   Height = 550
   Color = clBtnFace

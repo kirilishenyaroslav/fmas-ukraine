@@ -10,7 +10,7 @@ DCC = $(ROOT)\bin\dcc32.exe $**
 BRCC = $(ROOT)\bin\brcc32.exe $**
 #------------------------------------------------------------------------------
 PROJECTS = PCLib.bpl PCSaldo.bpl PCDocMain.bpl PCOboroti.bpl PCSchOborot.bpl \
-  PCSvodSch.bpl PCKasOtchet.bpl PersonPay.exe
+  PCSvodSch.bpl PCKasOtchet.bpl PC_NalogNakl.bpl PersonPay.exe
 #------------------------------------------------------------------------------
 default: $(PROJECTS)
 #------------------------------------------------------------------------------
@@ -37,6 +37,9 @@ PCSvodSch.bpl: PCSvodSch.dpk
   $(DCC)
 
 PCKasOtchet.bpl: PCKasOtchet.dpk
+  $(DCC)
+
+PC_NalogNakl.bpl: PC_NalogNakl.dpk
   $(DCC)
 
 
