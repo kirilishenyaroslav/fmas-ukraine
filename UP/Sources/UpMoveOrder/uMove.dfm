@@ -1,6 +1,6 @@
 object frmMoveOrder: TfrmMoveOrder
-  Left = 327
-  Top = 98
+  Left = 328
+  Top = 99
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsDialog
   Caption = #1055#1077#1088#1077#1074#1077#1076#1077#1085#1085#1103'/'#1087#1086#1076#1086#1074#1078#1077#1085#1085#1103
@@ -201,9 +201,9 @@ object frmMoveOrder: TfrmMoveOrder
   end
   object cxGrid1: TcxGrid
     Left = 0
-    Top = 46
+    Top = 44
     Width = 790
-    Height = 225
+    Height = 227
     Align = alClient
     TabOrder = 1
     object cxGrid1DBTableView1: TcxGridDBTableView
@@ -858,7 +858,7 @@ object frmMoveOrder: TfrmMoveOrder
     Top = 279
     Width = 790
     Height = 214
-    ActivePage = cxTabSheet2
+    ActivePage = cxTabSheet1
     Align = alBottom
     TabOrder = 7
     object cxTabSheet1: TcxTabSheet
@@ -2586,8 +2586,8 @@ object frmMoveOrder: TfrmMoveOrder
   object dxBarManager1: TdxBarManager
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'Segoe UI'
+    Font.Height = -11
+    Font.Name = 'Tahoma'
     Font.Style = []
     Bars = <
       item
@@ -2647,7 +2647,7 @@ object frmMoveOrder: TfrmMoveOrder
     DockControlHeights = (
       0
       0
-      46
+      44
       0)
     object btnAdd: TdxBarLargeButton
       Caption = #1044#1086#1076#1072#1090#1080

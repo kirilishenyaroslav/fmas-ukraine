@@ -286,35 +286,35 @@ type
         cxGrid1DBTableView1Away_Info: TcxGridDBColumn;
         cxGrid2DBCardView1Away_Info: TcxGridDBCardViewRow;
         ReasonSet: TpFIBDataSet;
-    WorkModeSet: TpFIBDataSet;
-    TSWorkMode: TcxTabSheet;
-    cxGrid7: TcxGrid;
-    cxGridLevel6: TcxGridLevel;
-    cxGrid8: TcxGrid;
-    cxGridLevel7: TcxGridLevel;
-    WorkModeTableView1: TcxGridTableView;
-    WorkModeTableView2: TcxGridTableView;
-    WorkModeTableView1Column1: TcxGridColumn;
-    WorkModeTableView1Column2: TcxGridColumn;
-    WorkModeTableView1Column3: TcxGridColumn;
-    WorkModeTableView1Column4: TcxGridColumn;
-    WorkModeTableView1Column5: TcxGridColumn;
-    WorkModeTableView1Column6: TcxGridColumn;
-    WorkModeTableView1Column7: TcxGridColumn;
-    WorkModeTableView1Column8: TcxGridColumn;
-    WorkModeTableView2Column1: TcxGridColumn;
-    WorkModeTableView2Column2: TcxGridColumn;
-    WorkModeTableView2Column3: TcxGridColumn;
-    WorkModeTableView2Column4: TcxGridColumn;
-    WorkModeTableView2Column5: TcxGridColumn;
-    WorkModeTableView2Column6: TcxGridColumn;
-    WorkModeTableView2Column7: TcxGridColumn;
-    WorkModeTableView2Column8: TcxGridColumn;
-    WMDSet: TpFIBDataSet;
-    WMDSetNew: TpFIBDataSet;
-    Panel4: TPanel;
-    lblWShiftOld: TcxLabel;
-    lblWShiftNew: TcxLabel;
+        WorkModeSet: TpFIBDataSet;
+        TSWorkMode: TcxTabSheet;
+        cxGrid7: TcxGrid;
+        cxGridLevel6: TcxGridLevel;
+        cxGrid8: TcxGrid;
+        cxGridLevel7: TcxGridLevel;
+        WorkModeTableView1: TcxGridTableView;
+        WorkModeTableView2: TcxGridTableView;
+        WorkModeTableView1Column1: TcxGridColumn;
+        WorkModeTableView1Column2: TcxGridColumn;
+        WorkModeTableView1Column3: TcxGridColumn;
+        WorkModeTableView1Column4: TcxGridColumn;
+        WorkModeTableView1Column5: TcxGridColumn;
+        WorkModeTableView1Column6: TcxGridColumn;
+        WorkModeTableView1Column7: TcxGridColumn;
+        WorkModeTableView1Column8: TcxGridColumn;
+        WorkModeTableView2Column1: TcxGridColumn;
+        WorkModeTableView2Column2: TcxGridColumn;
+        WorkModeTableView2Column3: TcxGridColumn;
+        WorkModeTableView2Column4: TcxGridColumn;
+        WorkModeTableView2Column5: TcxGridColumn;
+        WorkModeTableView2Column6: TcxGridColumn;
+        WorkModeTableView2Column7: TcxGridColumn;
+        WorkModeTableView2Column8: TcxGridColumn;
+        WMDSet: TpFIBDataSet;
+        WMDSetNew: TpFIBDataSet;
+        Panel4: TPanel;
+        lblWShiftOld: TcxLabel;
+        lblWShiftNew: TcxLabel;
         procedure FormClose(Sender: TObject; var Action: TCloseAction);
         procedure btnAddClick(Sender: TObject);
         procedure btnDeleteClick(Sender: TObject);
@@ -343,23 +343,23 @@ type
             var Key: Word; Shift: TShiftState);
         procedure cxGridDBBandedTableView3KeyDown(Sender: TObject;
             var Key: Word; Shift: TShiftState);
-    procedure ReadDataSet2EndScroll(DataSet: TDataSet);
-    procedure FormResize(Sender: TObject);
-    procedure ReadDataSetEndScroll(DataSet: TDataSet);
-    procedure cxGrid8Resize(Sender: TObject);
+        procedure ReadDataSet2EndScroll(DataSet: TDataSet);
+        procedure FormResize(Sender: TObject);
+        procedure ReadDataSetEndScroll(DataSet: TDataSet);
+        procedure cxGrid8Resize(Sender: TObject);
     private
         isFrame: boolean;
         function ShowFilter(id_session, id_order_type: int64): boolean;
-        procedure SelectAll(IdManMoving:Integer);
+        procedure SelectAll(IdManMoving: Integer);
     public
         PC: TFMASAppModule;
         id_user: Integer;
         Input: TrxMemoryData;
         Mode, man_mov: integer;
-       // check_date_beg,check_date_end:date;
+        // check_date_beg,check_date_end:date;
         id_session: int64;
         err_id_order_item: int64;
-        IdOrderType:Integer;
+        IdOrderType: Integer;
         isContinue, isTemp, isEditSmet, isWorkModeEdit: boolean;
         isDepartmentEdit: Boolean;
         isChangeTeachingLoad: Boolean; //изменение пед.нагрузки
@@ -414,7 +414,8 @@ begin
 end;
 
 function TfrmMoveOrder.ShowFilter(id_session, id_order_type: int64): boolean;
-var Count: Integer;
+var
+    Count: Integer;
 begin
     Result := false;
     //Инициализация входящих параметров
@@ -429,12 +430,10 @@ begin
     //Запуск фильтра
     (PC as IFMASModule).Run;
 
-    if (PInteger(PC.OutParams.Items['Count'])^) = 0
-        then
+    if (PInteger(PC.OutParams.Items['Count'])^) = 0 then
         agMessageDlg('Увага!', 'За встановленими настройками фільтра не знайдено жодної позиції! Спробуйте ще раз!', mtInformation, [mbOk]);
 
-    if (PInteger(PC.OutParams.Items['Count'])^) > 0
-        then
+    if (PInteger(PC.OutParams.Items['Count'])^) > 0 then
     begin
         //Получение количества записей которые вернул фильтр
         Count := PInteger(PC.OutParams.Items['Count'])^;
@@ -451,10 +450,11 @@ begin
     StoredProc.ParamByName('KEY_SESSION').AsInt64 := id_session;
     StoredProc.ExecProc;
     WriteDataSet.Transaction.Commit;
-    if Assigned(PC) then PC.Free;
+    if Assigned(PC) then
+        PC.Free;
 end;
 
-procedure TfrmMoveOrder.SelectAll(IdManMoving:Integer);
+procedure TfrmMoveOrder.SelectAll(IdManMoving: Integer);
 begin
     DataSetNad.Close;
     DataSetNadNew.Close;
@@ -474,7 +474,8 @@ begin
     DataSetSmetNew.Open;
     DataSetNad.Open;
     DataSetNadNew.Open;
-    If IdManMoving<>-1 then ReadDataSet.Locate('Id_Man_Moving', IdManMoving, []);
+    if IdManMoving <> -1 then
+        ReadDataSet.Locate('Id_Man_Moving', IdManMoving, []);
 end;
 
 procedure TfrmMoveOrder.btnAddClick(Sender: TObject);
@@ -527,7 +528,8 @@ end;
 
 procedure TfrmMoveOrder.btnDeleteClick(Sender: TObject);
 begin
-    if ReadDataSet.RecordCount = 0 then exit;
+    if ReadDataSet.RecordCount = 0 then
+        exit;
     StoredProc.StoredProcName := 'UP_DT_MAN_MOVING_BUFF_MOV_DEL';
     StoredProc.Transaction.StartTransaction;
     StoredProc.Prepare;
@@ -550,7 +552,8 @@ var
 begin
     doCommit := true;
     err_id_order_item := -9999;
-    if Mode = 3 then btnCancelClick(Sender);
+    if Mode = 3 then
+        btnCancelClick(Sender);
 
     if ReadDataSet.RecordCount <> 0 then
     begin
@@ -573,7 +576,8 @@ begin
             st.ID_ORDER := input['ID_ORDER'];
             if not VarIsNull(input['id_item']) then
                 st.ID_ORDER_ITEM_IN := input['id_item']
-            else st.ID_ORDER_ITEM_IN := ReadDataSet['ID_ORDER_ITEM'];
+            else
+                st.ID_ORDER_ITEM_IN := ReadDataSet['ID_ORDER_ITEM'];
             st.KEY_SESSION := id_session;
             st.DBHANDLE := Database.Handle;
             st.TRHANDLE := WriteTransaction.Handle;
@@ -628,13 +632,13 @@ begin
             //end;
             DatasetShadow.Close;
             //выйти из цикла и откатить транзакзию
-            if doCommit = false then Break;
+            if doCommit = false then
+                Break;
 
             ReadDataSet.Next;
         end; {конец цикла по ReadDataSet}
 
-        if doCommit = false
-            then
+        if doCommit = false then
             WriteTransaction.Rollback
         else
         begin
@@ -646,7 +650,8 @@ begin
 end;
 
 constructor TfrmMoveOrder.Create(AOwner: TComponent; inp: TRxMemoryData; hnd: TISC_DB_HANDLE; in_isFrame: boolean);
-var i, check:Integer;
+var
+    i, check: Integer;
 begin
     inherited Create(AOwner);
     err_id_order_item := -9999;
@@ -659,7 +664,8 @@ begin
         BorderIcons := [];
         Visible := true;
         SendMessage(input['outer_hwnd'], FMAS_MESS_GET_BUTTON_OK, btnOk.Handle, btnOk.Handle);
-        SendMessage(input['outer_hwnd'], FMAS_MESS_GET_BUTTON_CANCEL, btnCancel.Handle, btnCancel.Handle); if isFrame then
+        SendMessage(input['outer_hwnd'], FMAS_MESS_GET_BUTTON_CANCEL, btnCancel.Handle, btnCancel.Handle);
+        if isFrame then
     end;
     Database.Handle := hnd;
     //  if Mode = 0 then
@@ -672,16 +678,17 @@ begin
     WriteDataSet.Close;
     WriteDataSet.Transaction.Commit;
 
-    for i:=0 to WorkModeTableView1.ColumnCount-1 do
-        WorkModeTableView1.Columns[i].DataBinding.ValueTypeClass:=TcxStringValueType;
+    for i := 0 to WorkModeTableView1.ColumnCount - 1 do
+        WorkModeTableView1.Columns[i].DataBinding.ValueTypeClass := TcxStringValueType;
 
-    for i:=0 to WorkModeTableView2.ColumnCount-1 do
-        WorkModeTableView2.Columns[i].DataBinding.ValueTypeClass:=TcxStringValueType;
-        
-    TSWorkMode.TabVisible:=True;
-    check:=fibCheckPermission('/ROOT/Up_order_system/Up_order_types/'+IntToStr(input['id_order_type'])+
-                             '_UP_ORDER_TYPE/'+IntToStr(input['id_order_type'])+'_WORKMODE_TAB', 'Edit');
-    if Check<>0 then TSWorkMode.TabVisible:=False;
+    for i := 0 to WorkModeTableView2.ColumnCount - 1 do
+        WorkModeTableView2.Columns[i].DataBinding.ValueTypeClass := TcxStringValueType;
+
+    TSWorkMode.TabVisible := True;
+    check := fibCheckPermission('/ROOT/Up_order_system/Up_order_types/' + IntToStr(input['id_order_type']) +
+        '_UP_ORDER_TYPE/' + IntToStr(input['id_order_type']) + '_WORKMODE_TAB', 'Edit');
+    if Check <> 0 then
+        TSWorkMode.TabVisible := False;
 
     WriteDataSet.Transaction.StartTransaction;
     WriteDataSet.SelectSQL.Text := 'select moving_type from UP_DT_ORDER_TYPE where id_type = ' + IntToStr(input['id_order_type']);
@@ -689,9 +696,9 @@ begin
     isContinue := WriteDataSet.fbn('MOVING_TYPE').AsInteger = 3; // Вызвано как продление
     isTemp := WriteDataSet.fbn('MOVING_TYPE').AsInteger = 23; // Вызвано как временный перевод
     isEditSmet := WriteDataSet.fbn('MOVING_TYPE').AsInteger = 24; // Вызвано как редактирование источников финансирования
-    isWorkModeEdit := input['ID_ORDER_TYPE']=26;
-    isDepartmentEdit := input['ID_ORDER_TYPE']=30;
-    isChangeTeachingLoad := input['ID_ORDER_TYPE']=32; // Вызвано как изменение пед.нагрузки
+    isWorkModeEdit := input['ID_ORDER_TYPE'] = 26;
+    isDepartmentEdit := input['ID_ORDER_TYPE'] = 30;
+    isChangeTeachingLoad := input['ID_ORDER_TYPE'] = 32; // Вызвано как изменение пед.нагрузки
     WriteDataSet.Close;
     WriteDataSet.Transaction.Commit;
 
@@ -723,337 +730,312 @@ procedure TfrmMoveOrder.btnEditMassClick(Sender: TObject);
 var
     frm: TfrmAddMoving;
     i, LocId: Integer;
-    Res:Variant;
+    Res: Variant;
 begin
-  try
-    if ReadDataSet.RecordCount > 0 then
-    begin
-        LocId:=ReadDataSet['Id_Man_Moving'];
-        ReasonSet.Close;
-        ReasonSet.SQLs.SelectSQL.Text := 'select * from UP_SYS_INI_CONSTS';
-        ReasonSet.Open;
-
-        TmpDataSet.Close;
-        TmpDataSet.SQLs.SelectSQL.Text := 'select * from UP_DT_MAN_MOVING_BUFF_MOV_SEL2(:ID_SESSION, :ID_ORDER_ITEM)';
-        TmpDataSet.ParamByName('ID_SESSION').AsInteger := id_session;
-        TmpDataSet.ParamByName('ID_ORDER_ITEM').AsInteger := TFIBBCDField(ReadDataSet.FBN('ID_ORDER_ITEM')).AsInteger;
-        TmpDataSet.Open;
-        man_mov := TmpDataSet['ID_MAN_MOVING'];
-
-        frm := TfrmAddMoving.Create(Self, Input['id_order_type']);
-        frm.Database.handle := Database.Handle;
-        frm.id_order_item := TFIBBCDField(ReadDataSet.FBN('ID_ORDER_ITEM')).AsInt64;
-        frm.id_session := id_session;
-        frm.MassEdit := Sender = btnEditMass;
-        frm.cxPageControl1.ActivePageIndex := cxPageControl1.ActivePageIndex;
-        frm.DSetSmet.Close;
-        frm.DSetSmet.SQLs.SelectSQL.Text := 'select * from UP_DT_MAN_SMET_BUFF_MOV_SEL(:ID_SESSION, 0, :ID_MAN_MOVING, :ID_ORDER_ITEM)';
-        frm.DSetSmet.ParamByName('ID_SESSION').AsInteger := id_session;
-        frm.DSetSmet.ParamByName('ID_ORDER_ITEM').AsInteger := TFIBBCDField(ReadDataSet.FBN('ID_ORDER_ITEM')).AsInteger;
-        frm.DSetSmet.ParamByName('ID_MAN_MOVING').AsInteger := man_mov;
-        frm.DSetSmet.Open;
-        //****
-        frm.WriteTransaction.StartTransaction;
-        frm.StoredProcSmet.Close;
-        frm.StoredProcSmet.StoredProcName := 'UP_DT_ID_SH_R_BUFF_MOV_SEL';
-        frm.StoredProcSmet.ParamByName('KEY_SESSION').AsInteger := id_session;
-        frm.StoredProcSmet.ParamByName('IS_NEW').AsInt64 := 1;
-        frm.StoredProcSmet.ParamByName('ID_MAN_MOVING').AsInteger := man_mov;
-    //перекладываем данные о идентификаторах ШР во временную таблицу
-        if frm.MassEdit then
-            frm.StoredProcSmet.ParamByName('ID_ORDER_ITEM').AsVariant := Null
-        else
-            frm.StoredProcSmet.ParamByName('ID_ORDER_ITEM').AsInteger := TFIBBCDField(ReadDataSet.FBN('ID_ORDER_ITEM')).AsInteger;
     try
-        frm.StoredProcSmet.ExecProc;
-        frm.StoredProcSmet.Transaction.Commit;
-    except on E:Exception do
+        if ReadDataSet.RecordCount > 0 then
         begin
-            ShowMessage(E.Message);
-            frm.StoredProcSmet.Transaction.Rollback;
-        end;
-    end;
-        frm.StoredProcSmet.Close;
+            LocId := ReadDataSet['Id_Man_Moving'];
+            ReasonSet.Close;
+            ReasonSet.SQLs.SelectSQL.Text := 'select * from UP_SYS_INI_CONSTS';
+            ReasonSet.Open;
 
-        frm.rc1 := frm.DSetSmet['sum_rate_count'];
-        frm.rc2 := frm.DSetSmet['sum_rate_count'];
-
-        frm.DSetIdShR.Close;
-        frm.DSetIdShR.SelectSQL.Text := 'SELECT * FROM Up_Accept_Sh_R_Tmp WHERE KEY_SESSION=:KEY_SESSION';
-        frm.DSetIdShR.ParamByName('key_session').AsInt64 := id_session;
-        frm.DSetIdShR.Open;
-        frm.DSetIdShR.FetchAll;
-
-        if frm.DSetIdShR.RecordCount > 0 then
-        begin
-            frm.DepartmentEdit.Blocked := True;
-
-            frm.PosadOkladEdit.Blocked := True;
-            frm.PersonalTypeEdit.Blocked := True;
-
-        end;
-
-        frm.man_m := man_mov;
-        if frm.MassEdit then
-        begin
-            frm.cxPageControl1.Pages[1].Destroy;
-            frm.cxPageControl1.Pages[1].Destroy;
-        end;
-
-        frm.isContinue := isContinue;
-        frm.isTemp := isTemp;
-        frm.IsEditSmet := isEditSmet;
-        frm.isWorkModeEdit:=isWorkModeEdit;
-        frm.isDepartmentEdit := isDepartmentEdit;
-        frm.isChangeTeachingLoad :=  isChangeTeachingLoad;
-        //  frm.cxPageControl1.Pages[2].Visible := not frm.MassEdit;
-          // Заполняем поля данными
-        ReadDataSet2.Last;
-        frm.cxDateBegEdit.Date := ReadDataSet2['DATE_BEG'];
-        if (DateToStr(ReadDataSet2['DATE_END']) = '31.12.9999') then
-        begin
-            frm.cxDateEndEdit.Visible := False;
-            frm.cbNoDateEnd.Value := True;
-        end;
-        frm.cxDateEndEdit.Date := ReadDataSet2['DATE_END'];
-        frm.Date_B := ReadDataSet2['DATE_BEG'];
-        frm.Date_E := ReadDataSet2['DATE_END'];
-        frm.Absent.Value := ReadDataSet2['Id_Key'];
-        frm.Absent.DisplayText := ReadDataSet2['Away_Info'];
-        if VarIsNull(ReadDataSet2['Id_Type_Away'])
-            then frm.Id_Type_Away := -1
-        else
-            frm.Id_Type_Away := ReadDataSet2['Id_Type_Away'];
-        if VarIsNull(ReadDataSet2['Id_PCard_Away'])
-            then frm.Id_PCard_Away := -1
-        else
-            frm.Id_PCard_Away := ReadDataSet2['Id_PCard_Away'];
-
-        If Not VarIsNull(ReadDataSet2['Absent_Date_Beg']) then frm.AbsentDateBeg:=ReadDataSet2['Absent_Date_Beg'];
-        If Not VarIsNull(ReadDataSet2['Absent_Date_End']) then frm.AbsentDateEnd:=ReadDataSet2['Absent_Date_End'];
-        if ReadDataSet2['Is_Ped_Work'] = 1 then
-        begin
-           frm.lblMonth.Visible := true;
-           frm.cntMonth.Visible := true;
-           frm.IsPedType := True;
-        end;
-        if (not VarIsNull(ReadDataSet2['Month_Hours_Count']))
-        then frm.cntMonth.Text := IntToStr(ReadDataSet2['Month_Hours_Count'])
-        else frm.cntMonth.Text := IntToStr(ReasonSet['months_count_default']);
-        frm.MaxCntMonth := ReasonSet['MAX_MONTHS_COUNT'];
-        frm.IdPcard := ReadDataSet2['Id_Pcard'];
-        //frm.HolidayEdit.Value := ReadDataSet2['ID_MAN_HOLIDAY'];
-        //frm.HolidayEdit.DisplayText := ReadDataSet2['HOLIDAY_DISPLAY_TEXT'];
-        //frm.HospitalEdit.Value := ReadDataSet2['ID_MAN_HOSPITAL'];
-        //frm.HospitalEdit.DisplayText := ReadDataSet2['HOSPITAL_DISPLAY_TEXT'];
-        frm.DepartmentEdit.Value := ReadDataSet2['ID_DEPARTMENT'];
-        frm.DepartmentEdit.DisplayText := ReadDataSet2['DEPARTMENT_NAME'];
-        frm.PosadOkladEdit.Value := ReadDataSet2['ID_POST_SALARY'];
-        frm.PosadOkladEdit.DisplayText := ReadDataSet2['POST_NAME'];
-        frm.FactOkladEdit.Value := ReadDataSet2['ID_POST_SALARY_REAL'];
-        frm.FactOkladEdit.DisplayText := ReadDataSet2['REAL_POST_NAME'];
-        frm.PersonalTypeEdit.Value := ReadDataSet2['ID_TYPE_POST'];
-        frm.PersonalTypeEdit.DisplayText := ReadDataSet2['NAME_TYPE_POST'];
-        frm.WorkReasonEdit.Value := ReadDataSet2['ID_WORK_REASON'];
-        frm.WorkReasonEdit.DisplayText := ReadDataSet2['NAME_WORK_REASON'];
-        frm.WorkCondEdit.Value := ReadDataSet2['ID_WORK_CONDITION'];
-        frm.WorkCondEdit.DisplayText := ReadDataSet2['NAME_WORK_COND'];
-        frm.PayFormEdit.Value := ReadDataSet2['ID_PAY_FORM'];
-        frm.PayFormEdit.DisplayText := ReadDataSet2['NAME_PAY_FORM'];
-        //If IsEditSmet then frm.ReasonEdit.Value:=ReasonSet['REASON_WORK']
-        frm.ReasonEdit.Value := ReadDataSet2['REASON'];
-        frm.NoteEdit.Value := ReadDataSet2['NOTE'];
-        frm.CondEdit.Value := ReadDataSet2['ID_ACCEPT_COND'];
-        frm.CondEdit.DisplayText := ReadDataSet2['NAME_ACCEPT_COND'];
-        if not VarIsNull(ReadDataSet2['ACCEPT_BEG']) then
-            frm.cxDateBegObrEdit.Date := ReadDataSet2['ACCEPT_BEG']
-        else
-            frm.cxDateBegObrEdit.Text := '';
-        if not VarIsNull(ReadDataSet2['ACCEPT_END']) then
-            frm.cxDateEndObrEdit.Date := ReadDataSet2['ACCEPT_END']
-        else
-            frm.cxDateEndObrEdit.Text := '';
-        frm.PayEdit.Value := ReadDataSet2['IS_TARIF'];
-        frm.cbIsMainPost.Value := ReadDataSet2['IS_POST_MAIN'];
-        If VarIsNull(ReadDataSet2['ID_WORK_MODE']) then frm.IdWorkMode:=Null
-        else
-        begin
-           frm.IdWorkMode:=ReadDataSet2['ID_WORK_MODE'];
-           Res:=GetWorkModeInfo(WorkModeSet, ReadDataSet2['ID_WORK_MODE']);
-           If VarIsArray(Res) then
-           begin
-              frm.WorkModeSprav.Text:=Res[0];
-              frm.MaxBound:=Res[1];
-           end;
-        end;
-        if VarIsNull(ReadDataSet2['WORK_MODE_SHIFT']) then frm.ShiftEdit.Value:=0
-        else frm.ShiftEdit.Value:=ReadDataSet2['WORK_MODE_SHIFT'];
-        //if isTemp then
-        //frm.cbBack.Value := 1
-        //else
-        //frm.cbBack.Value := 0;
-        //frm.cbHosp.Value := ReadDataSet2['IS_ON_HOSPITAL'];
-        //frm.cbHoliday.Value := ReadDataSet2['IS_ON_HOLIDAY'];
-
-        if frm.cxDateEndEdit.Date = EncodeDate(3333, 12, 31) then
-        begin
-            frm.cbNoDateEnd.Value := True;
-        end;
-
-        if frm.MassEdit then
-        begin
             TmpDataSet.Close;
-            TmpDataSet.SelectSQL.Text := 'select * from UP_DT_MAN_BONUS_BUFF_DIFF_SEL(:KEY_SESSION)';
-            TmpDataSet.ParamByName('KEY_SESSION').AsInt64 := id_session;
+            TmpDataSet.SQLs.SelectSQL.Text := 'select * from UP_DT_MAN_MOVING_BUFF_MOV_SEL2(:ID_SESSION, :ID_ORDER_ITEM)';
+            TmpDataSet.ParamByName('ID_SESSION').AsInteger := id_session;
+            TmpDataSet.ParamByName('ID_ORDER_ITEM').AsInteger := TFIBBCDField(ReadDataSet.FBN('ID_ORDER_ITEM')).AsInteger;
             TmpDataSet.Open;
+            man_mov := TmpDataSet['ID_MAN_MOVING'];
 
-            if TmpDataSet['DATE_BEG'] <> 1 then
-            begin
-                frm.cxDateBegEdit.Clear;
-                frm.LblDateBegEdit.Style.Font.Color := SYS_MASS_COLOR;
+            frm := TfrmAddMoving.Create(Self, Input['id_order_type']);
+            frm.Database.handle := Database.Handle;
+            frm.id_order_item := TFIBBCDField(ReadDataSet.FBN('ID_ORDER_ITEM')).AsInt64;
+            frm.id_session := id_session;
+            frm.MassEdit := Sender = btnEditMass;
+            frm.cxPageControl1.ActivePageIndex := cxPageControl1.ActivePageIndex;
+            frm.DSetSmet.Close;
+            frm.DSetSmet.SQLs.SelectSQL.Text := 'select * from UP_DT_MAN_SMET_BUFF_MOV_SEL(:ID_SESSION, 0, :ID_MAN_MOVING, :ID_ORDER_ITEM)';
+            frm.DSetSmet.ParamByName('ID_SESSION').AsInteger := id_session;
+            frm.DSetSmet.ParamByName('ID_ORDER_ITEM').AsInteger := TFIBBCDField(ReadDataSet.FBN('ID_ORDER_ITEM')).AsInteger;
+            frm.DSetSmet.ParamByName('ID_MAN_MOVING').AsInteger := man_mov;
+            frm.DSetSmet.Open;
+            //****
+            frm.WriteTransaction.StartTransaction;
+            frm.StoredProcSmet.Close;
+            frm.StoredProcSmet.StoredProcName := 'UP_DT_ID_SH_R_BUFF_MOV_SEL';
+            frm.StoredProcSmet.ParamByName('KEY_SESSION').AsInteger := id_session;
+            frm.StoredProcSmet.ParamByName('IS_NEW').AsInt64 := 1;
+            frm.StoredProcSmet.ParamByName('ID_MAN_MOVING').AsInteger := man_mov;
+            //перекладываем данные о идентификаторах ШР во временную таблицу
+            if frm.MassEdit then
+                frm.StoredProcSmet.ParamByName('ID_ORDER_ITEM').AsVariant := Null
+            else
+                frm.StoredProcSmet.ParamByName('ID_ORDER_ITEM').AsInteger := TFIBBCDField(ReadDataSet.FBN('ID_ORDER_ITEM')).AsInteger;
+            try
+                frm.StoredProcSmet.ExecProc;
+                frm.StoredProcSmet.Transaction.Commit;
+            except on E: Exception do
+                begin
+                    ShowMessage(E.Message);
+                    frm.StoredProcSmet.Transaction.Rollback;
+                end;
             end;
-            if TmpDataSet['DATE_END'] <> 1 then
-            begin
-                frm.cxDateEndEdit.Clear;
-                frm.LblDateEndEdit.Style.Font.Color := SYS_MASS_COLOR;
-            end;
+            frm.StoredProcSmet.Close;
 
-            {if TmpDataSet['ID_MAN_HOLIDAY'] <> 1 then
+            frm.rc1 := frm.DSetSmet['sum_rate_count'];
+            frm.rc2 := frm.DSetSmet['sum_rate_count'];
+
+            frm.DSetIdShR.Close;
+            frm.DSetIdShR.SelectSQL.Text := 'SELECT * FROM Up_Accept_Sh_R_Tmp WHERE KEY_SESSION=:KEY_SESSION';
+            frm.DSetIdShR.ParamByName('key_session').AsInt64 := id_session;
+            frm.DSetIdShR.Open;
+            frm.DSetIdShR.FetchAll;
+
+            if frm.DSetIdShR.RecordCount > 0 then
             begin
-              frm.HolidayEdit.Clear;
-              frm.HolidayEdit.LabelColor := SYS_MASS_COLOR;
-            end;
-            if TmpDataSet['ID_MAN_HOSPITAL'] <> 1 then
-            begin
-              frm.HospitalEdit.Clear;
-              frm.HospitalEdit.LabelColor := SYS_MASS_COLOR;
-            end;  }
-            if TmpDataSet['ID_DEPARTMENT'] <> 1 then
-            begin
-                frm.DepartmentEdit.Clear;
-                frm.DepartmentEdit.LabelColor := SYS_MASS_COLOR;
-            end;
-            if TmpDataSet['ID_POST_SALARY'] <> 1 then
-            begin
-                frm.PosadOkladEdit.Clear;
-                frm.PosadOkladEdit.LabelColor := SYS_MASS_COLOR;
-            end;
-            if TmpDataSet['ID_POST_SALARY_REAL'] <> 1 then
-            begin
-                frm.FactOkladEdit.Clear;
-                frm.FactOkladEdit.LabelColor := SYS_MASS_COLOR;
-            end;
-            if TmpDataSet['ID_TYPE_POST'] <> 1 then
-            begin
-                frm.PersonalTypeEdit.Clear;
-                frm.PersonalTypeEdit.LabelColor := SYS_MASS_COLOR;
-            end;
-            if TmpDataSet['ID_WORK_REASON'] <> 1 then
-            begin
-                frm.WorkReasonEdit.Clear;
-                frm.WorkReasonEdit.LabelColor := SYS_MASS_COLOR;
-            end;
-            if TmpDataSet['ID_WORK_CONDITION'] <> 1 then
-            begin
-                frm.WorkCondEdit.Clear;
-                frm.WorkCondEdit.LabelColor := SYS_MASS_COLOR;
-            end;
-            if TmpDataSet['ID_PAY_FORM'] <> 1 then
-            begin
-                frm.PayFormEdit.Clear;
-                frm.PayFormEdit.LabelColor := SYS_MASS_COLOR;
-            end;
-            if TmpDataSet['REASON'] <> 1 then
-            begin
-                frm.ReasonEdit.Clear;
-                frm.ReasonEdit.LabelColor := SYS_MASS_COLOR;
-            end;
-            if TmpDataSet['NOTE'] <> 1 then
-            begin
-                frm.NoteEdit.Clear;
-                frm.NoteEdit.LabelColor := SYS_MASS_COLOR;
-            end;
-            if TmpDataSet['ID_ACCEPT_COND'] <> 1 then
-            begin
-                frm.CondEdit.Clear;
-                frm.CondEdit.LabelColor := SYS_MASS_COLOR;
-            end;
-            if TmpDataSet['ACCEPT_BEG'] <> 1 then
-            begin
-                frm.cxDateBegObrEdit.Clear;
-                frm.LblDateBegObrEdit.Style.Font.Color := SYS_MASS_COLOR;
-            end;
-            if TmpDataSet['ACCEPT_END'] <> 1 then
-            begin
-                frm.cxDateEndObrEdit.Clear;
-                frm.LblDateEndObrEdit.Style.Font.Color := SYS_MASS_COLOR;
-            end;
-            if TmpDataSet['IS_TARIF'] <> 1 then
-            begin
-                frm.PayEdit.Clear;
-                frm.PayEdit.LabelColor := SYS_MASS_COLOR;
-            end;
-            if TmpDataSet['IS_POST_MAIN'] <> 1 then
-            begin
-                frm.cbIsMainPost.Clear;
-                frm.cbIsMainPost.LabelColor := SYS_MASS_COLOR;
-            end;
-            if TmpDataSet['WITH_RETURN'] <> 1 then
-            begin
-                //frm.cbBack.Clear;
-                //frm.cbBack.LabelColor := SYS_MASS_COLOR;
+                frm.DepartmentEdit.Blocked := True;
+
+                frm.PosadOkladEdit.Blocked := True;
+                frm.PersonalTypeEdit.Blocked := True;
+
             end;
 
-            if TmpDataSet['Id_Key'] <> 1 then
+            frm.man_m := man_mov;
+            if frm.MassEdit then
             begin
-                frm.Absent.Clear;
-                frm.Absent.LabelColor := SYS_MASS_COLOR;
+                frm.cxPageControl1.Pages[1].Destroy;
+                frm.cxPageControl1.Pages[1].Destroy;
             end;
-            {if TmpDataSet['IS_ON_HOSPITAL'] <> 1 then
-            begin
-              frm.cbHosp.Clear;
-              frm.cbHosp.LabelColor := SYS_MASS_COLOR;
-            end;
-            if TmpDataSet['IS_ON_HOLIDAY'] <> 1 then
-            begin
-              frm.cbHoliday.Clear;
-              frm.cbHoliday.LabelColor := SYS_MASS_COLOR;
-            end; }
-            TmpDataSet.close;
-        end;
 
-        if self.Mode = 2 then
-        begin
-            qFBlock(true, frm);
-            frm.PosadOkladEdit.Blocked := True;
-            frm.FactOkladEdit.Blocked := True;
-            frm.PersonalTypeEdit.Blocked := True;
-            frm.PosadOkladEdit.Enabled := false;
-            frm.FactOkladEdit.Enabled := false;
-            frm.PersonalTypeEdit.Enabled := false;
-            frm.btnAdd.Enabled := false;
-            frm.btnDelete.Enabled := false;
-            frm.btnAdd.Enabled := false;
-            frm.btnDelete.Enabled := false;
-            frm.btnEditBonusSmet.Enabled:=False;
-            frm.cxDateBegEdit.Enabled := false;
-            frm.cxDateEndEdit.Enabled := false;
-            frm.cxDateBegObrEdit.Enabled := false;
-            frm.cxDateEndObrEdit.Enabled := false;
-            frm.dxBarDockControl2.visible := true;
-            frm.IdShr.Enabled := false;
-            frm.RateCount.Enabled := false;
-            frm.ShowButton.Visible := false;
-            frm.FindIdShR.Visible := false;
-            frm.AddIdShr.Visible := false;
-            frm.DelIdShR.Visible := false;
-            frm.WorkModeSprav.Enabled:=False;
-            frm.ShiftEdit.Enabled:=False;
-            frm.ShowModal;
-        end
-        else
-        begin
-            if ((isEditSmet) or (isWorkModeEdit) or (isDepartmentEdit) or (isChangeTeachingLoad)) then
+            frm.isContinue := isContinue;
+            frm.isTemp := isTemp;
+            frm.IsEditSmet := isEditSmet;
+            frm.isWorkModeEdit := isWorkModeEdit;
+            frm.isDepartmentEdit := isDepartmentEdit;
+            frm.isChangeTeachingLoad := isChangeTeachingLoad;
+            //  frm.cxPageControl1.Pages[2].Visible := not frm.MassEdit;
+              // Заполняем поля данными
+            ReadDataSet2.Last;
+            frm.cxDateBegEdit.Date := ReadDataSet2['DATE_BEG'];
+            if (DateToStr(ReadDataSet2['DATE_END']) = '31.12.9999') then
+            begin
+                frm.cxDateEndEdit.Visible := False;
+                frm.cbNoDateEnd.Value := True;
+            end;
+            frm.cxDateEndEdit.Date := ReadDataSet2['DATE_END'];
+            frm.Date_B := ReadDataSet2['DATE_BEG'];
+            frm.Date_E := ReadDataSet2['DATE_END'];
+            frm.Absent.Value := ReadDataSet2['Id_Key'];
+            frm.Absent.DisplayText := ReadDataSet2['Away_Info'];
+            if VarIsNull(ReadDataSet2['Id_Type_Away']) then
+                frm.Id_Type_Away := -1
+            else
+                frm.Id_Type_Away := ReadDataSet2['Id_Type_Away'];
+            if VarIsNull(ReadDataSet2['Id_PCard_Away']) then
+                frm.Id_PCard_Away := -1
+            else
+                frm.Id_PCard_Away := ReadDataSet2['Id_PCard_Away'];
+
+            if not VarIsNull(ReadDataSet2['Absent_Date_Beg']) then
+                frm.AbsentDateBeg := ReadDataSet2['Absent_Date_Beg'];
+            if not VarIsNull(ReadDataSet2['Absent_Date_End']) then
+                frm.AbsentDateEnd := ReadDataSet2['Absent_Date_End'];
+            if ReadDataSet2['Is_Ped_Work'] = 1 then
+            begin
+                frm.lblMonth.Visible := true;
+                frm.cntMonth.Visible := true;
+                frm.IsPedType := True;
+            end;
+            if (not VarIsNull(ReadDataSet2['Month_Hours_Count'])) then
+                frm.cntMonth.Text := IntToStr(ReadDataSet2['Month_Hours_Count'])
+            else
+                frm.cntMonth.Text := IntToStr(ReasonSet['months_count_default']);
+            frm.MaxCntMonth := ReasonSet['MAX_MONTHS_COUNT'];
+            frm.IdPcard := ReadDataSet2['Id_Pcard'];
+            //frm.HolidayEdit.Value := ReadDataSet2['ID_MAN_HOLIDAY'];
+            //frm.HolidayEdit.DisplayText := ReadDataSet2['HOLIDAY_DISPLAY_TEXT'];
+            //frm.HospitalEdit.Value := ReadDataSet2['ID_MAN_HOSPITAL'];
+            //frm.HospitalEdit.DisplayText := ReadDataSet2['HOSPITAL_DISPLAY_TEXT'];
+            frm.DepartmentEdit.Value := ReadDataSet2['ID_DEPARTMENT'];
+            frm.DepartmentEdit.DisplayText := ReadDataSet2['DEPARTMENT_NAME'];
+            frm.PosadOkladEdit.Value := ReadDataSet2['ID_POST_SALARY'];
+            frm.PosadOkladEdit.DisplayText := ReadDataSet2['POST_NAME'];
+            frm.FactOkladEdit.Value := ReadDataSet2['ID_POST_SALARY_REAL'];
+            frm.FactOkladEdit.DisplayText := ReadDataSet2['REAL_POST_NAME'];
+            frm.PersonalTypeEdit.Value := ReadDataSet2['ID_TYPE_POST'];
+            frm.PersonalTypeEdit.DisplayText := ReadDataSet2['NAME_TYPE_POST'];
+            frm.WorkReasonEdit.Value := ReadDataSet2['ID_WORK_REASON'];
+            frm.WorkReasonEdit.DisplayText := ReadDataSet2['NAME_WORK_REASON'];
+            frm.WorkCondEdit.Value := ReadDataSet2['ID_WORK_CONDITION'];
+            frm.WorkCondEdit.DisplayText := ReadDataSet2['NAME_WORK_COND'];
+            frm.PayFormEdit.Value := ReadDataSet2['ID_PAY_FORM'];
+            frm.PayFormEdit.DisplayText := ReadDataSet2['NAME_PAY_FORM'];
+            //If IsEditSmet then frm.ReasonEdit.Value:=ReasonSet['REASON_WORK']
+            frm.ReasonEdit.Value := ReadDataSet2['REASON'];
+            frm.NoteEdit.Value := ReadDataSet2['NOTE'];
+            frm.CondEdit.Value := ReadDataSet2['ID_ACCEPT_COND'];
+            frm.CondEdit.DisplayText := ReadDataSet2['NAME_ACCEPT_COND'];
+            if not VarIsNull(ReadDataSet2['ACCEPT_BEG']) then
+                frm.cxDateBegObrEdit.Date := ReadDataSet2['ACCEPT_BEG']
+            else
+                frm.cxDateBegObrEdit.Text := '';
+            if not VarIsNull(ReadDataSet2['ACCEPT_END']) then
+                frm.cxDateEndObrEdit.Date := ReadDataSet2['ACCEPT_END']
+            else
+                frm.cxDateEndObrEdit.Text := '';
+            frm.PayEdit.Value := ReadDataSet2['IS_TARIF'];
+            frm.cbIsMainPost.Value := ReadDataSet2['IS_POST_MAIN'];
+            if VarIsNull(ReadDataSet2['ID_WORK_MODE']) then
+                frm.IdWorkMode := Null
+            else
+            begin
+                frm.IdWorkMode := ReadDataSet2['ID_WORK_MODE'];
+                Res := GetWorkModeInfo(WorkModeSet, ReadDataSet2['ID_WORK_MODE']);
+                if VarIsArray(Res) then
+                begin
+                    frm.WorkModeSprav.Text := Res[0];
+                    frm.MaxBound := Res[1];
+                end;
+            end;
+            if VarIsNull(ReadDataSet2['WORK_MODE_SHIFT']) then
+                frm.ShiftEdit.Value := 0
+            else
+                frm.ShiftEdit.Value := ReadDataSet2['WORK_MODE_SHIFT'];
+            //if isTemp then
+            //frm.cbBack.Value := 1
+            //else
+            //frm.cbBack.Value := 0;
+            //frm.cbHosp.Value := ReadDataSet2['IS_ON_HOSPITAL'];
+            //frm.cbHoliday.Value := ReadDataSet2['IS_ON_HOLIDAY'];
+
+            if frm.cxDateEndEdit.Date = EncodeDate(3333, 12, 31) then
+            begin
+                frm.cbNoDateEnd.Value := True;
+            end;
+
+            if frm.MassEdit then
+            begin
+                TmpDataSet.Close;
+                TmpDataSet.SelectSQL.Text := 'select * from UP_DT_MAN_BONUS_BUFF_DIFF_SEL(:KEY_SESSION)';
+                TmpDataSet.ParamByName('KEY_SESSION').AsInt64 := id_session;
+                TmpDataSet.Open;
+
+                if TmpDataSet['DATE_BEG'] <> 1 then
+                begin
+                    frm.cxDateBegEdit.Clear;
+                    frm.LblDateBegEdit.Style.Font.Color := SYS_MASS_COLOR;
+                end;
+                if TmpDataSet['DATE_END'] <> 1 then
+                begin
+                    frm.cxDateEndEdit.Clear;
+                    frm.LblDateEndEdit.Style.Font.Color := SYS_MASS_COLOR;
+                end;
+
+                {if TmpDataSet['ID_MAN_HOLIDAY'] <> 1 then
+                begin
+                  frm.HolidayEdit.Clear;
+                  frm.HolidayEdit.LabelColor := SYS_MASS_COLOR;
+                end;
+                if TmpDataSet['ID_MAN_HOSPITAL'] <> 1 then
+                begin
+                  frm.HospitalEdit.Clear;
+                  frm.HospitalEdit.LabelColor := SYS_MASS_COLOR;
+                end;  }
+                if TmpDataSet['ID_DEPARTMENT'] <> 1 then
+                begin
+                    frm.DepartmentEdit.Clear;
+                    frm.DepartmentEdit.LabelColor := SYS_MASS_COLOR;
+                end;
+                if TmpDataSet['ID_POST_SALARY'] <> 1 then
+                begin
+                    frm.PosadOkladEdit.Clear;
+                    frm.PosadOkladEdit.LabelColor := SYS_MASS_COLOR;
+                end;
+                if TmpDataSet['ID_POST_SALARY_REAL'] <> 1 then
+                begin
+                    frm.FactOkladEdit.Clear;
+                    frm.FactOkladEdit.LabelColor := SYS_MASS_COLOR;
+                end;
+                if TmpDataSet['ID_TYPE_POST'] <> 1 then
+                begin
+                    frm.PersonalTypeEdit.Clear;
+                    frm.PersonalTypeEdit.LabelColor := SYS_MASS_COLOR;
+                end;
+                if TmpDataSet['ID_WORK_REASON'] <> 1 then
+                begin
+                    frm.WorkReasonEdit.Clear;
+                    frm.WorkReasonEdit.LabelColor := SYS_MASS_COLOR;
+                end;
+                if TmpDataSet['ID_WORK_CONDITION'] <> 1 then
+                begin
+                    frm.WorkCondEdit.Clear;
+                    frm.WorkCondEdit.LabelColor := SYS_MASS_COLOR;
+                end;
+                if TmpDataSet['ID_PAY_FORM'] <> 1 then
+                begin
+                    frm.PayFormEdit.Clear;
+                    frm.PayFormEdit.LabelColor := SYS_MASS_COLOR;
+                end;
+                if TmpDataSet['REASON'] <> 1 then
+                begin
+                    frm.ReasonEdit.Clear;
+                    frm.ReasonEdit.LabelColor := SYS_MASS_COLOR;
+                end;
+                if TmpDataSet['NOTE'] <> 1 then
+                begin
+                    frm.NoteEdit.Clear;
+                    frm.NoteEdit.LabelColor := SYS_MASS_COLOR;
+                end;
+                if TmpDataSet['ID_ACCEPT_COND'] <> 1 then
+                begin
+                    frm.CondEdit.Clear;
+                    frm.CondEdit.LabelColor := SYS_MASS_COLOR;
+                end;
+                if TmpDataSet['ACCEPT_BEG'] <> 1 then
+                begin
+                    frm.cxDateBegObrEdit.Clear;
+                    frm.LblDateBegObrEdit.Style.Font.Color := SYS_MASS_COLOR;
+                end;
+                if TmpDataSet['ACCEPT_END'] <> 1 then
+                begin
+                    frm.cxDateEndObrEdit.Clear;
+                    frm.LblDateEndObrEdit.Style.Font.Color := SYS_MASS_COLOR;
+                end;
+                if TmpDataSet['IS_TARIF'] <> 1 then
+                begin
+                    frm.PayEdit.Clear;
+                    frm.PayEdit.LabelColor := SYS_MASS_COLOR;
+                end;
+                if TmpDataSet['IS_POST_MAIN'] <> 1 then
+                begin
+                    frm.cbIsMainPost.Clear;
+                    frm.cbIsMainPost.LabelColor := SYS_MASS_COLOR;
+                end;
+                if TmpDataSet['WITH_RETURN'] <> 1 then
+                begin
+                    //frm.cbBack.Clear;
+                    //frm.cbBack.LabelColor := SYS_MASS_COLOR;
+                end;
+
+                if TmpDataSet['Id_Key'] <> 1 then
+                begin
+                    frm.Absent.Clear;
+                    frm.Absent.LabelColor := SYS_MASS_COLOR;
+                end;
+                {if TmpDataSet['IS_ON_HOSPITAL'] <> 1 then
+                begin
+                  frm.cbHosp.Clear;
+                  frm.cbHosp.LabelColor := SYS_MASS_COLOR;
+                end;
+                if TmpDataSet['IS_ON_HOLIDAY'] <> 1 then
+                begin
+                  frm.cbHoliday.Clear;
+                  frm.cbHoliday.LabelColor := SYS_MASS_COLOR;
+                end; }
+                TmpDataSet.close;
+            end;
+
+            if self.Mode = 2 then
             begin
                 qFBlock(true, frm);
                 frm.PosadOkladEdit.Blocked := True;
@@ -1062,67 +1044,104 @@ begin
                 frm.PosadOkladEdit.Enabled := false;
                 frm.FactOkladEdit.Enabled := false;
                 frm.PersonalTypeEdit.Enabled := false;
-                frm.cxDateBegEdit.Enabled := True; //f
-                frm.cxDateEndEdit.Enabled := True; //f
+                frm.btnAdd.Enabled := false;
+                frm.btnDelete.Enabled := false;
+                frm.btnAdd.Enabled := false;
+                frm.btnDelete.Enabled := false;
+                frm.btnEditBonusSmet.Enabled := False;
+                frm.cxDateBegEdit.Enabled := false;
+                frm.cxDateEndEdit.Enabled := false;
                 frm.cxDateBegObrEdit.Enabled := false;
                 frm.cxDateEndObrEdit.Enabled := false;
-                frm.ReasonEdit.Enabled := true;
-                frm.NoteEdit.Enabled := true;
-                frm.ReasonEdit.Blocked := false;
-                frm.NoteEdit.Blocked := false;
-
+                frm.dxBarDockControl2.visible := true;
                 frm.IdShr.Enabled := false;
                 frm.RateCount.Enabled := false;
-                frm.cntHours.Enabled := false;
-                frm.cntMonth.Enabled := false;
                 frm.ShowButton.Visible := false;
                 frm.FindIdShR.Visible := false;
                 frm.AddIdShr.Visible := false;
                 frm.DelIdShR.Visible := false;
-                frm.cbNoDateEnd.Blocked:=False;
+                frm.WorkModeSprav.Enabled := False;
+                frm.ShiftEdit.Enabled := False;
+                frm.ShowModal;
             end
             else
             begin
-                qFBlock(false, frm);
-                frm.PosadOkladEdit.Blocked := false;
-                frm.FactOkladEdit.Blocked := false;
-                frm.PersonalTypeEdit.Blocked := false;
-                frm.PosadOkladEdit.Enabled := True;
-                frm.FactOkladEdit.Enabled := True;
-                frm.PersonalTypeEdit.Enabled := True;
-                frm.btnAdd.Enabled := True;
-                frm.btnDelete.Enabled := True;
-                frm.btnAdd.Enabled := True;
-                frm.btnDelete.Enabled := True;
-                frm.cxDateBegEdit.Enabled := True;
-                frm.cxDateEndEdit.Enabled := True;
-                frm.cxDateBegObrEdit.Enabled := True;
-                frm.cxDateEndObrEdit.Enabled := True;
-                frm.dxBarDockControl2.visible := true;
-                frm.IdShr.Enabled := true;
-                frm.RateCount.Enabled := true;
-                frm.ShowButton.Visible := true;
-                frm.FindIdShR.Visible := true;
-                frm.AddIdShr.Visible := true;
-                frm.DelIdShR.Visible := true;
+                if ((isEditSmet) or (isWorkModeEdit) or (isDepartmentEdit) or (isChangeTeachingLoad)) then
+                begin
+                    qFBlock(true, frm);
+                    frm.PosadOkladEdit.Blocked := True;
+                    frm.FactOkladEdit.Blocked := True;
+                    frm.PersonalTypeEdit.Blocked := True;
+                    frm.PosadOkladEdit.Enabled := false;
+                    frm.FactOkladEdit.Enabled := false;
+                    frm.PersonalTypeEdit.Enabled := false;
+                    frm.cxDateBegEdit.Enabled := True; //f
+                    frm.cxDateEndEdit.Enabled := True; //f
+                    frm.cxDateBegObrEdit.Enabled := false;
+                    frm.cxDateEndObrEdit.Enabled := false;
+                    frm.ReasonEdit.Enabled := true;
+                    frm.NoteEdit.Enabled := true;
+                    frm.ReasonEdit.Blocked := false;
+                    frm.NoteEdit.Blocked := false;
+
+                    frm.IdShr.Enabled := false;
+                    frm.RateCount.Enabled := false;
+                    frm.cntHours.Enabled := false;
+                    frm.cntMonth.Enabled := false;
+                    frm.ShowButton.Visible := false;
+                    frm.FindIdShR.Visible := false;
+                    frm.AddIdShr.Visible := false;
+                    frm.DelIdShR.Visible := false;
+                    frm.cbNoDateEnd.Blocked := False;
+                end
+                else
+                begin
+                    qFBlock(false, frm);
+                    frm.PosadOkladEdit.Blocked := false;
+                    frm.FactOkladEdit.Blocked := false;
+                    frm.PersonalTypeEdit.Blocked := false;
+                    frm.PosadOkladEdit.Enabled := True;
+                    frm.FactOkladEdit.Enabled := True;
+                    frm.PersonalTypeEdit.Enabled := True;
+                    frm.btnAdd.Enabled := True;
+                    frm.btnDelete.Enabled := True;
+                    frm.btnAdd.Enabled := True;
+                    frm.btnDelete.Enabled := True;
+                    frm.cxDateBegEdit.Enabled := True;
+                    frm.cxDateEndEdit.Enabled := True;
+                    frm.cxDateBegObrEdit.Enabled := True;
+                    frm.cxDateEndObrEdit.Enabled := True;
+                    frm.dxBarDockControl2.visible := true;
+                    frm.IdShr.Enabled := true;
+                    frm.RateCount.Enabled := true;
+                    frm.ShowButton.Visible := true;
+                    frm.FindIdShR.Visible := true;
+                    frm.AddIdShr.Visible := true;
+                    frm.DelIdShR.Visible := true;
+                end;
+                frm.WriteTransaction.StartTransaction;
+                if frm.ShowModal = mrOk then
+                begin
+                    frm.WriteTransaction.Commit;
+                    if self.Mode <> 2 then
+                        Selectall(LocId);
+                end
+                else
+                    frm.WriteTransaction.Rollback;
             end;
-            frm.WriteTransaction.StartTransaction;
-            if frm.ShowModal = mrOk then
-            begin
-                frm.WriteTransaction.Commit;
-                if self.Mode <> 2 then Selectall(LocId);
-            end else frm.WriteTransaction.Rollback;
+            frm.Free;
         end;
-        frm.Free;
+    except on e: Exception do
+            ShowMessage(e.Message);
     end;
-   except on e:Exception
-   do ShowMessage(e.Message);
-   end; 
 end;
 
 procedure TfrmMoveOrder.btnCancelClick(Sender: TObject);
 begin
-    if isFrame then SendMessage(input['outer_hwnd'], FMAS_MESS_CLOSE_FRAME, 0, 0) else Close;
+    if isFrame then
+        SendMessage(input['outer_hwnd'], FMAS_MESS_CLOSE_FRAME, 0, 0)
+    else
+        Close;
 end;
 
 procedure TfrmMoveOrder.btnViewClick(Sender: TObject);
@@ -1166,8 +1185,8 @@ begin
     with TFMASAppModuleCreator.Create do
     begin
         PC := CreateFMASModule(ExtractFilePath(Application.ExeName) + 'up\', 'up_filter');
-        if (PC = nil)
-            then agMessageDlg('Увага!', 'Помилка при роботі з модулем up_filter.bpl', mtError, [mbOk]);
+        if (PC = nil) then
+            agMessageDlg('Увага!', 'Помилка при роботі з модулем up_filter.bpl', mtError, [mbOk]);
     end;
 end;
 
@@ -1184,88 +1203,99 @@ end;
 procedure TfrmMoveOrder.cxGrid1DBTableView1KeyDown(Sender: TObject;
     var Key: Word; Shift: TShiftState);
 begin
-    if key = VK_insert then btnAddClick(Self);
-    if key = VK_DELETE then btnDeleteClick(Self);
-    if key = VK_F2 then btnEditMassClick(Self);
+    if key = VK_insert then
+        btnAddClick(Self);
+    if key = VK_DELETE then
+        btnDeleteClick(Self);
+    if key = VK_F2 then
+        btnEditMassClick(Self);
     if ((ReadDataSet.RecordCount > 0) and (Key = VK_F12)
-        and (ssShift in Shift)) then ShowInfo(ReadDataSet);
+        and (ssShift in Shift)) then
+        ShowInfo(ReadDataSet);
 end;
 
 procedure TfrmMoveOrder.FormShow(Sender: TObject);
-var Check:Integer;
+var
+    Check: Integer;
 begin
     cxGrid1.SetFocus;
-    lblWShiftOld.Width:=100;
-    lblWShiftNew.Width:=100;
+    lblWShiftOld.Width := 100;
+    lblWShiftNew.Width := 100;
 end;
 
 procedure TfrmMoveOrder.cxGrid2DBCardView1KeyDown(Sender: TObject;
     var Key: Word; Shift: TShiftState);
 begin
     if ((ReadDataSet2.RecordCount > 0) and (Key = VK_F12)
-        and (ssShift in Shift)) then ShowInfo(ReadDataSet2);
+        and (ssShift in Shift)) then
+        ShowInfo(ReadDataSet2);
 end;
 
 procedure TfrmMoveOrder.cxGridDBBandedTableView2KeyDown(Sender: TObject;
     var Key: Word; Shift: TShiftState);
 begin
     if ((DataSetSmet.RecordCount > 0) and (Key = VK_F12)
-        and (ssShift in Shift)) then ShowInfo(DataSetSmet);
+        and (ssShift in Shift)) then
+        ShowInfo(DataSetSmet);
 end;
 
 procedure TfrmMoveOrder.cxGridDBBandedTableView1KeyDown(Sender: TObject;
     var Key: Word; Shift: TShiftState);
 begin
     if ((DataSetSmetNew.RecordCount > 0) and (Key = VK_F12)
-        and (ssShift in Shift)) then ShowInfo(DataSetSmetNew);
+        and (ssShift in Shift)) then
+        ShowInfo(DataSetSmetNew);
 end;
 
 procedure TfrmMoveOrder.cxGridDBBandedTableView4KeyDown(Sender: TObject;
     var Key: Word; Shift: TShiftState);
 begin
     if ((DataSetNad.RecordCount > 0) and (Key = VK_F12)
-        and (ssShift in Shift)) then ShowInfo(DataSetNad);
+        and (ssShift in Shift)) then
+        ShowInfo(DataSetNad);
 end;
 
 procedure TfrmMoveOrder.cxGridDBBandedTableView3KeyDown(Sender: TObject;
     var Key: Word; Shift: TShiftState);
 begin
     if ((DataSetNadNew.RecordCount > 0) and (Key = VK_F12)
-        and (ssShift in Shift)) then ShowInfo(DataSetNadNew);
+        and (ssShift in Shift)) then
+        ShowInfo(DataSetNadNew);
 end;
-
 
 procedure TfrmMoveOrder.ReadDataSet2EndScroll(DataSet: TDataSet);
 begin
-   if ReadDataSet2['Fck_Order']=0 then
-   begin
-      FillWorkModeDSet(WMDSet, ReadDataSet2['Date_Beg'], ReadDataSet2['Date_End'], ReadDataSet2['Id_Work_Mode'],
-                       Null, Null, ReadDataSet2['Work_Mode_Shift'], 7);
-      FillWorkModeGrid(WorkModeTableView1, WMDSet);
-      if ReadDataSet2['Work_Mode_Shift']=0 then
-         lblWShiftOld.Caption:='Зсув: Не має'
-      else lblWShiftOld.Caption:='Зсув: '+IntToStr(ReadDataSet2['Work_Mode_Shift'])+' д.'
-   End;
+    if ReadDataSet2['Fck_Order'] = 0 then
+    begin
+        FillWorkModeDSet(WMDSet, ReadDataSet2['Date_Beg'], ReadDataSet2['Date_End'], ReadDataSet2['Id_Work_Mode'],
+            Null, Null, ReadDataSet2['Work_Mode_Shift'], 7);
+        FillWorkModeGrid(WorkModeTableView1, WMDSet);
+        if ReadDataSet2['Work_Mode_Shift'] = 0 then
+            lblWShiftOld.Caption := 'Зсув: Не має'
+        else
+            lblWShiftOld.Caption := 'Зсув: ' + IntToStr(ReadDataSet2['Work_Mode_Shift']) + ' д.'
+    end;
 end;
 
 procedure TfrmMoveOrder.FormResize(Sender: TObject);
 begin
-   cxgrid7.Width:=Round(Self.Width/2);
+    cxgrid7.Width := Round(Self.Width / 2);
 end;
 
 procedure TfrmMoveOrder.ReadDataSetEndScroll(DataSet: TDataSet);
 begin
-   FillWorkModeDSet(WMDSetNew, ReadDataSet['Date_Beg'], ReadDataSet['Date_End'], ReadDataSet['Id_Work_Mode'],
-                    Null, Null, ReadDataSet['Work_Mode_Shift'], 7);
-   FillWorkModeGrid(WorkModeTableView2, WMDSetNew);
-   if ReadDataSet['Work_Mode_Shift']=0 then
-      lblWShiftNew.Caption:='Зсув: Не має'
-   else lblWShiftNew.Caption:='Зсув: '+IntToStr(ReadDataSet['Work_Mode_Shift'])+' д.'
+    FillWorkModeDSet(WMDSetNew, ReadDataSet['Date_Beg'], ReadDataSet['Date_End'], ReadDataSet['Id_Work_Mode'],
+        Null, Null, ReadDataSet['Work_Mode_Shift'], 7);
+    FillWorkModeGrid(WorkModeTableView2, WMDSetNew);
+    if ReadDataSet['Work_Mode_Shift'] = 0 then
+        lblWShiftNew.Caption := 'Зсув: Не має'
+    else
+        lblWShiftNew.Caption := 'Зсув: ' + IntToStr(ReadDataSet['Work_Mode_Shift']) + ' д.'
 end;
 
 procedure TfrmMoveOrder.cxGrid8Resize(Sender: TObject);
 begin
-   lblWShiftNew.Left:=cxGrid8.Left
+    lblWShiftNew.Left := cxGrid8.Left
 end;
 
 end.

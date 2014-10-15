@@ -59,7 +59,7 @@ type
         TableViewNAME_WORK_COND: TcxGridDBColumn;
         TableViewID_WORK_MODE: TcxGridDBColumn;
         TableViewNAME_WORK_MODE: TcxGridDBColumn;
-    TableViewNUM_DIGIT: TcxGridDBColumn;
+        TableViewNUM_DIGIT: TcxGridDBColumn;
         procedure TableViewDblClick(Sender: TObject);
         procedure TableViewKeyUp(Sender: TObject; var Key: Word;
             Shift: TShiftState);
@@ -94,7 +94,8 @@ end;
 procedure TfmMoveFreeFundsSelect.TableViewKeyUp(Sender: TObject; var Key: Word;
     Shift: TShiftState);
 begin
-    if Key = VK_RETURN then SelectButton.Click;
+    if Key = VK_RETURN then
+        SelectButton.Click;
 end;
 
 procedure TfmMoveFreeFundsSelect.SelectActionExecute(Sender: TObject);
@@ -116,14 +117,16 @@ procedure TfmMoveFreeFundsSelect.TableViewKOL_STAVOKGetDisplayText(
     Sender: TcxCustomGridTableItem; ARecord: TcxCustomGridRecord;
     var AText: string);
 begin
-    if not mov_fdostup then AText := '***';
+    if not mov_fdostup then
+        AText := '***';
 end;
 
 procedure TfmMoveFreeFundsSelect.TableViewKOL_VACANT_STAVOKGetDisplayText(
     Sender: TcxCustomGridTableItem; ARecord: TcxCustomGridRecord;
     var AText: string);
 begin
-    if not mov_fdostup then AText := '***';
+    if not mov_fdostup then
+        AText := '***';
 end;
 
 end.

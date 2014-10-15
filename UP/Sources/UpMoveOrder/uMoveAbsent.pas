@@ -20,7 +20,7 @@ type
         CancelAction: TAction;
         AwayInfo: TpFIBDataSet;
         IniAwayType: TpFIBDataSet;
-    ConstSet: TpFIBDataSet;
+        ConstSet: TpFIBDataSet;
         procedure CancelActionExecute(Sender: TObject);
         procedure AcceptActionExecute(Sender: TObject);
         procedure Id_PCard_AwayOpenSprav(Sender: TObject; var Value: Variant;
@@ -34,8 +34,8 @@ type
     public
         Date_Beg: TDate;
         Date_End: TDate;
-        InfinityDate:TDate;
-        InAwayType:Variant;
+        InfinityDate: TDate;
+        InAwayType: Variant;
         Reason, {Name_Work_Reason_W,} Name_Type_Away_W: string;
         //Id_Work_Reason_W: integer;
         Locate_Id_Type_Away: boolean;
@@ -67,10 +67,13 @@ begin
 
         Locate_Id_Type_Away := true;
     end
-    else Locate_Id_Type_Away := false;
+    else
+        Locate_Id_Type_Away := false;
 
-    if qFCheckAll(Self) then ModalResult := mrOk
-    else ModalResult := 0;
+    if qFCheckAll(Self) then
+        ModalResult := mrOk
+    else
+        ModalResult := 0;
 end;
 
 procedure TfmUpAbsentForm.Id_PCard_AwayOpenSprav(Sender: TObject;
@@ -139,7 +142,7 @@ begin
                 else
                 begin
                     //Date_End := TfrmMoveOrder(owner.owner).UpConsts['INFINITY_DATE'];
-                    Date_End:=InfinityDate;
+                    Date_End := InfinityDate;
                 end;
 
                 Reason := 'лист непрацездатності №' + sp.Output['Nomer'] +
@@ -193,16 +196,15 @@ begin
     Id_PCard_Away.Clear;
 end;
 
-
 procedure TfmUpAbsentForm.Prepare(In_Id_Type_Away: Variant; In_Id_PCard_Away: Variant;
     In_Id_Key: Variant);
 begin
     ConstSet.Close;
-    ConstSet.SQLs.SelectSQL.Text:='select infinity_date from pub_sys_data';
+    ConstSet.SQLs.SelectSQL.Text := 'select infinity_date from pub_sys_data';
     ConstSet.Open;
-    InfinityDate:=ConstSet['infinity_date'];
+    InfinityDate := ConstSet['infinity_date'];
 
-    InAwayType:=In_Id_Type_Away;
+    InAwayType := In_Id_Type_Away;
     AwayInfo.Close;
     AwayInfo.SelectSQL.Text := 'SELECT * FROM UP_GET_AWAY_INFO_2(:Id_Type_Away, :Id_PCard_Away, :Id_Key)';
     AwayInfo.ParamByName('Id_Type_Away').AsVariant := In_Id_Type_Away;
@@ -221,7 +223,8 @@ begin
 end;
 
 procedure TfmUpAbsentForm.FormShow(Sender: TObject);
-var val_string: string;
+var
+    val_string: string;
     first_value: Integer;
 begin
     IniAwayType.Close;
@@ -242,12 +245,18 @@ begin
         IniAwayType.Next;
     end;
     Id_Away_Type.ValuesString := val_string;
-    If Not VarIsNull(InAwayType) Then Id_Away_Type.Value:=InAwayType
-    Else Id_Away_Type.Value := first_value;
-    If Not VarIsNull(AwayInfo['Date_Beg']) then Date_Beg:=AwayInfo['Date_Beg']
-    Else Date_Beg := 0;
-    If Not VarIsNull(AwayInfo['Date_End']) then Date_End:=AwayInfo['Date_End']
-    Else Date_End := 0;
+    if not VarIsNull(InAwayType) then
+        Id_Away_Type.Value := InAwayType
+    else
+        Id_Away_Type.Value := first_value;
+    if not VarIsNull(AwayInfo['Date_Beg']) then
+        Date_Beg := AwayInfo['Date_Beg']
+    else
+        Date_Beg := 0;
+    if not VarIsNull(AwayInfo['Date_End']) then
+        Date_End := AwayInfo['Date_End']
+    else
+        Date_End := 0;
 end;
 
 end.

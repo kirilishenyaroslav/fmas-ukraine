@@ -104,11 +104,11 @@
 {$WARN UNSAFE_TYPE OFF}
 {$WARN UNSAFE_CODE OFF}
 {$WARN UNSAFE_CAST OFF}
-Unit uMoveAdd;
+unit uMoveAdd;
 
-Interface
+interface
 
-Uses
+uses
     Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
     Dialogs, cxStyles, cxCustomData, cxGraphics, cxFilter, cxData,
     cxDataStorage, cxEdit, DB, cxDBData, StdCtrls, Buttons, ExtCtrls,
@@ -124,8 +124,8 @@ Uses
     cxCurrencyEdit, ActnList, cxSpinEdit, TuCommonLoader, TuCommontypes, DateUtils,
     cxButtonEdit, uWMFillGrid, cxDBEdit;
 
-Type
-    TfrmAddMoving = Class(TForm)
+type
+    TfrmAddMoving = class(TForm)
         cxPageControl1: TcxPageControl;
         cxTabSheet1: TcxTabSheet;
         cxTabSheet2: TcxTabSheet;
@@ -302,92 +302,96 @@ Type
         ActAdd: TAction;
         ActDel: TAction;
         UpdBonusSmet: TpFIBStoredProc;
-    lblMonth: TcxLabel;
-    cntHours: TcxCurrencyEdit;
-    cxLabel3: TcxLabel;
-    cntMonth: TcxTextEdit;
-    SelectTypePostIS_PED_WORK: TSmallintField;
-    trShr: TpFIBTransaction;
-    IdShrSelect: TpFIBDataSet;
-    BotomPanel: TPanel;
-    lblHours: TcxLabel;
-    dbHours: TcxDBCurrencyEdit;
-    PeopleViewDBColumn2: TcxGridDBColumn;
-    RateCount: TcxCurrencyEdit;
-    cxLabel2: TcxLabel;
-    PeopleViewDBColumn1: TcxGridDBColumn;
-        Procedure FormShow(Sender: TObject);
-        Procedure btnCancelClick(Sender: TObject);
-        Procedure btnOkClick(Sender: TObject);
-        Procedure DepartmentEditOpenSprav(Sender: TObject; Var Value: Variant;
-            Var DisplayText: String);
-        Procedure PosadOkladEditOpenSprav(Sender: TObject; Var Value: Variant;
-            Var DisplayText: String);
-        Procedure DateBegEditChange(Sender: TObject);
-        Procedure PosadOkladEditChange(Sender: TObject);
-        Procedure WorkReasonEditOpenSprav(Sender: TObject; Var Value: Variant;
-            Var DisplayText: String);
-        Procedure PersonalTypeEditOpenSprav(Sender: TObject;
-            Var Value: Variant; Var DisplayText: String);
-        Procedure CondEditOpenSprav(Sender: TObject; Var Value: Variant;
-            Var DisplayText: String);
-        Procedure PayFormEditOpenSprav(Sender: TObject; Var Value: Variant;
-            Var DisplayText: String);
-        Procedure FactOkladEditOpenSprav(Sender: TObject; Var Value: Variant;
-            Var DisplayText: String);
-        Procedure WorkCondEditOpenSprav(Sender: TObject; Var Value: Variant;
-            Var DisplayText: String);
-        Procedure HospitalEditOpenSprav(Sender: TObject; Var Value: Variant;
-            Var DisplayText: String);
-        Procedure WorkReasonEditChange(Sender: TObject);
-        Procedure DateEndEditChange(Sender: TObject);
-        Procedure HolidayEditChange(Sender: TObject);
-        Procedure HospitalEditChange(Sender: TObject);
-        Procedure DepartmentEditChange(Sender: TObject);
-        Procedure FactOkladEditChange(Sender: TObject);
-        Procedure PersonalTypeEditChange(Sender: TObject);
-        Procedure WorkCondEditChange(Sender: TObject);
-        Procedure PayFormEditChange(Sender: TObject);
-        Procedure ReasonEditChange(Sender: TObject);
-        Procedure NoteEditChange(Sender: TObject);
-        Procedure CondEditChange(Sender: TObject);
-        Procedure DateBegObrEditChange(Sender: TObject);
-        Procedure DateEndObrEditChange(Sender: TObject);
-        Procedure PayEditChange(Sender: TObject);
-        Procedure cbIsMainPostChange(Sender: TObject);
-        Procedure cbBackChange(Sender: TObject);
-        Procedure cbNoDateEndChange(Sender: TObject);
-        Procedure btnEditClick(Sender: TObject);
-        Procedure cxGridDBBandedTableView2KeyDown(Sender: TObject;
-            Var Key: Word; Shift: TShiftState);
-        Procedure cxGridDBBandedTableView4KeyDown(Sender: TObject;
-            Var Key: Word; Shift: TShiftState);
-        Procedure AbsentChange(Sender: TObject);
-        Procedure AbsentOpenSprav(Sender: TObject; Var Value: Variant;
-            Var DisplayText: String);
-        Procedure AddIdShrClick(Sender: TObject);
-        Procedure DelIdShRClick(Sender: TObject);
-        Procedure ShowButtonClick(Sender: TObject);
-        Procedure Act_Find_Id_ShRExecute(Sender: TObject);
-        Procedure cxDateBegEditPropertiesChange(Sender: TObject);
-        Procedure ShiftEditPropertiesChange(Sender: TObject);
-        Procedure cxDateEndEditPropertiesChange(Sender: TObject);
-        Procedure WorkModeSpravPropertiesButtonClick(Sender: TObject;
+        lblMonth: TcxLabel;
+        cntHours: TcxCurrencyEdit;
+        cxLabel3: TcxLabel;
+        cntMonth: TcxTextEdit;
+        SelectTypePostIS_PED_WORK: TSmallintField;
+        trShr: TpFIBTransaction;
+        IdShrSelect: TpFIBDataSet;
+        BotomPanel: TPanel;
+        lblHours: TcxLabel;
+        dbHours: TcxDBCurrencyEdit;
+        PeopleViewDBColumn2: TcxGridDBColumn;
+        RateCount: TcxCurrencyEdit;
+        cxLabel2: TcxLabel;
+        PeopleViewDBColumn1: TcxGridDBColumn;
+        procedure FormShow(Sender: TObject);
+        procedure btnCancelClick(Sender: TObject);
+        procedure btnOkClick(Sender: TObject);
+        procedure DepartmentEditOpenSprav(Sender: TObject; var Value: Variant;
+            var DisplayText: string);
+        procedure PosadOkladEditOpenSprav(Sender: TObject; var Value: Variant;
+            var DisplayText: string);
+        procedure DateBegEditChange(Sender: TObject);
+        procedure PosadOkladEditChange(Sender: TObject);
+        procedure WorkReasonEditOpenSprav(Sender: TObject; var Value: Variant;
+            var DisplayText: string);
+        procedure PersonalTypeEditOpenSprav(Sender: TObject;
+            var Value: Variant; var DisplayText: string);
+        procedure CondEditOpenSprav(Sender: TObject; var Value: Variant;
+            var DisplayText: string);
+        procedure PayFormEditOpenSprav(Sender: TObject; var Value: Variant;
+            var DisplayText: string);
+        procedure FactOkladEditOpenSprav(Sender: TObject; var Value: Variant;
+            var DisplayText: string);
+        procedure WorkCondEditOpenSprav(Sender: TObject; var Value: Variant;
+            var DisplayText: string);
+        procedure HospitalEditOpenSprav(Sender: TObject; var Value: Variant;
+            var DisplayText: string);
+        procedure WorkReasonEditChange(Sender: TObject);
+        procedure DateEndEditChange(Sender: TObject);
+        procedure HolidayEditChange(Sender: TObject);
+        procedure HospitalEditChange(Sender: TObject);
+        procedure DepartmentEditChange(Sender: TObject);
+        procedure FactOkladEditChange(Sender: TObject);
+        procedure PersonalTypeEditChange(Sender: TObject);
+        procedure WorkCondEditChange(Sender: TObject);
+        procedure PayFormEditChange(Sender: TObject);
+        procedure ReasonEditChange(Sender: TObject);
+        procedure NoteEditChange(Sender: TObject);
+        procedure CondEditChange(Sender: TObject);
+        procedure DateBegObrEditChange(Sender: TObject);
+        procedure DateEndObrEditChange(Sender: TObject);
+        procedure PayEditChange(Sender: TObject);
+        procedure cbIsMainPostChange(Sender: TObject);
+        procedure cbBackChange(Sender: TObject);
+        procedure cbNoDateEndChange(Sender: TObject);
+        procedure btnEditClick(Sender: TObject);
+        procedure cxGridDBBandedTableView2KeyDown(Sender: TObject;
+            var Key: Word; Shift: TShiftState);
+        procedure cxGridDBBandedTableView4KeyDown(Sender: TObject;
+            var Key: Word; Shift: TShiftState);
+        procedure AbsentChange(Sender: TObject);
+        procedure AbsentOpenSprav(Sender: TObject; var Value: Variant;
+            var DisplayText: string);
+        procedure AddIdShrClick(Sender: TObject);
+        procedure DelIdShRClick(Sender: TObject);
+        procedure ShowButtonClick(Sender: TObject);
+        procedure Act_Find_Id_ShRExecute(Sender: TObject);
+        procedure cxDateBegEditPropertiesChange(Sender: TObject);
+        procedure ShiftEditPropertiesChange(Sender: TObject);
+        procedure cxDateEndEditPropertiesChange(Sender: TObject);
+        procedure WorkModeSpravPropertiesButtonClick(Sender: TObject;
             AButtonIndex: Integer);
-        Procedure EditBonusSmetExecute(Sender: TObject);
-        Procedure cxTabSheet3Show(Sender: TObject);
-        Procedure cxTabSheet2Show(Sender: TObject);
-        Procedure ActAddExecute(Sender: TObject);
-        Procedure ActDelExecute(Sender: TObject);
-    procedure cntMonthKeyPress(Sender: TObject; var Key: Char);
-    procedure cxPageControl1Change(Sender: TObject);
-    procedure cntHoursKeyUp(Sender: TObject; var Key: Word;
-      Shift: TShiftState);
-    procedure RateCountKeyUp(Sender: TObject; var Key: Word;
-      Shift: TShiftState);
+        procedure EditBonusSmetExecute(Sender: TObject);
+        procedure cxTabSheet3Show(Sender: TObject);
+        procedure cxTabSheet2Show(Sender: TObject);
+        procedure ActAddExecute(Sender: TObject);
+        procedure ActDelExecute(Sender: TObject);
+        procedure cntMonthKeyPress(Sender: TObject; var Key: Char);
+        procedure cxPageControl1Change(Sender: TObject);
+        procedure cntHoursKeyUp(Sender: TObject; var Key: Word;
+            Shift: TShiftState);
+        procedure RateCountKeyUp(Sender: TObject; var Key: Word;
+            Shift: TShiftState);
     private
         IdOrderType: Integer;
-        Function CheckVacById_Us: Boolean;
+        function CheckVacById_Us: Boolean;
+
+        function checkOrder: Boolean;
+        function checkOrderDialog: Boolean;
+
     public
         id_order_item: int64;
         id_session: int64;
@@ -395,7 +399,7 @@ Type
         isContinue, isWorkModeEdit: boolean;
         isTemp, IsEditSmet, IsPedType: boolean;
         isDepartmentEdit: Boolean;
-        isChangeTeachingLoad : Boolean;
+        isChangeTeachingLoad: Boolean;
         Id_Type_Away: integer;
         Id_PCard_Away, man_m, IdPcard, MaxCntMonth: integer;
         rc1, rc2: Real;
@@ -405,73 +409,67 @@ Type
         IdWorkMode: Variant;
         MaxBound: Integer;
         AbsentDateBeg, AbsentDateEnd: TDate;
-        Constructor Create(AOwner: Tcomponent; IdType: Integer);
-        Procedure SelectNad;
-        Procedure SelectSmet;
-        Procedure AddBonus;
-        Procedure DelBonus;
-        Function CheckShR: Boolean;
-        Procedure FindOnIdShr(Flag: Boolean);
-        Procedure SaveDataOnIdShr;
-        Function IsShowTabSheet(OrderType: Variant): Boolean;
-    End;
+        constructor Create(AOwner: Tcomponent; IdType: Integer);
+        procedure SelectNad;
+        procedure SelectSmet;
+        procedure AddBonus;
+        procedure DelBonus;
+        function CheckShR: Boolean;
+        procedure FindOnIdShr(Flag: Boolean);
+        procedure SaveDataOnIdShr;
+        function IsShowTabSheet(OrderType: Variant): Boolean;
+    end;
 
-Var
+var
     frmAddMoving: TfrmAddMoving;
 
-Implementation
-Uses uMove, qfTools, uSelectForm, uMoveAddSmet, uMoveBonusEdit, BaseTypes, uMoveAbsent;
+implementation
+uses uMove, qfTools, uSelectForm, uMoveAddSmet, uMoveBonusEdit, BaseTypes, uMoveAbsent;
 {$R *.dfm}
 
-{function ifthen2(condition : boolean;valTrue : Variant; valFalse : Variant) : Variant;
+constructor TfrmAddMoving.Create(AOwner: Tcomponent; IdType: Integer);
 begin
-  if condition then Result := valTrue else Result := valFalse;
-end;}
-
-{ TfrmAddMoving }
-
-Constructor TfrmAddMoving.Create(AOwner: Tcomponent; IdType: Integer);
-Begin
-    Inherited Create(AOwner);
+    inherited Create(AOwner);
     IdOrderType := IdType;
     IdWorkMode := null;
     IsPedType := false;
 
-    if TfrmMoveOrder(owner).Mode = 2 then  btnOk.Enabled := false;
-End;
+    if TfrmMoveOrder(owner).Mode = 2 then
+        btnOk.Enabled := false;
+end;
 
-Procedure TfrmAddMoving.SelectNad;
-Begin
+procedure TfrmAddMoving.SelectNad;
+begin
     DataSetNad.Close;
     DataSetNad.ParamByName('ID_SESSION').AsInt64 := id_session;
-    If MassEdit Then
+    if MassEdit then
         DataSetNad.ParamByName('ID_ORDER_ITEM').AsVariant := Null
-    Else
+    else
         DataSetNad.ParamByName('ID_ORDER_ITEM').AsInt64 := id_order_item;
 
     DataSetNad.Open;
     cxGridDBBandedTableView4.ViewData.Expand(true);
-End;
+end;
 
-Procedure TfrmAddMoving.FormShow(Sender: TObject);
-Var
+procedure TfrmAddMoving.FormShow(Sender: TObject);
+var
     i: Integer;
-Begin
-    If PosadOkladEdit.Enabled Then
-        PosadOkladEdit.Blocked := VarIsNull(cxDateBegEdit.Date) Or VarIsNull(DepartmentEdit.Value);
-    If FactOkladEdit.Enabled Then
-        FactOkladEdit.Blocked := VarIsNull(cxDateBegEdit.Date) Or VarIsNull(DepartmentEdit.Value);
-    If PersonalTypeEdit.Enabled Then
+begin
+    if PosadOkladEdit.Enabled then
+        PosadOkladEdit.Blocked := VarIsNull(cxDateBegEdit.Date) or VarIsNull(DepartmentEdit.Value);
+    if FactOkladEdit.Enabled then
+        FactOkladEdit.Blocked := VarIsNull(cxDateBegEdit.Date) or VarIsNull(DepartmentEdit.Value);
+    if PersonalTypeEdit.Enabled then
         PersonalTypeEdit.Blocked := VarIsNull(PosadOkladEdit.Value);
 
     check_date_beg := cxDateBegEdit.Date;
     check_date_end := cxDateEndEdit.Date;
 
-    If IsShowTabSheet(IdOrderType) = False Then
+    if IsShowTabSheet(IdOrderType) = False then
         TSWorkMode.TabVisible := False;
 
-    If isContinue  Then
-    Begin
+    if isContinue then
+    begin
         DepartmentEdit.Blocked := true;
         PosadOkladEdit.Blocked := true;
         FactOkladEdit.Blocked := true;
@@ -486,26 +484,25 @@ Begin
         AddIdShr.Visible := false;
         DelIdShR.Visible := false;
         cbIsMainPost.Blocked := true;
-        //cbBack.Blocked := true;
-    End;
+    end;
 
     if isChangeTeachingLoad then
         cntMonth.Enabled := true;
 
-    If isWorkModeEdit Then
-    Begin
+    if isWorkModeEdit then
+    begin
         cxTabSheet2.TabVisible := False;
         cxTabSheet3.TabVisible := False;
-    End;
+    end;
 
-    If IsEditSmet Then
-    Begin
+    if IsEditSmet then
+    begin
         WorkModeSprav.Enabled := False;
         ShiftEdit.Enabled := False;
-    End;
+    end;
 
-    If isDepartmentEdit Then
-    Begin
+    if isDepartmentEdit then
+    begin
         DepartmentEdit.Blocked := false;
         DepartmentEdit.Enabled := true;
         cbNoDateEnd.Enabled := False;
@@ -516,7 +513,7 @@ Begin
         btnEditBonusSmet.Enabled := False;
         WorkModeSprav.Enabled := False;
         ShiftEdit.Enabled := False;
-    End;
+    end;
     {* DSetIdShR.Close;
      DSetIdShR.SelectSQL.Text := 'SELECT * FROM UP_DT_ID_SH_R_BUFF_MOV_SEL(:key_session ,1, null, :Id_Order_Item)';
      DSetIdShR.ParamByName('key_session').AsInt64 := id_session;
@@ -528,313 +525,314 @@ Begin
      DSetIdShR.FetchAll;
      *}
 
-
-
     DSetIdShR.Close;
     DSetIdShR.SelectSQL.Text := 'SELECT DISTINCT * FROM Up_Accept_Sh_R_Tmp WHERE KEY_SESSION=:KEY_SESSION';
     DSetIdShR.ParamByName('key_session').AsInt64 := id_session;
     DSetIdShR.Open;
     DSetIdShR.FetchAll;
 
-    If DSetIdShR.RecordCount > 0 Then
-    Begin
+    if DSetIdShR.RecordCount > 0 then
+    begin
         DepartmentEdit.Blocked := true;
         PosadOkladEdit.Blocked := true;
         PersonalTypeEdit.Blocked := true;
-    End;
+    end;
 
     SelectNad;
     SelectSmet;
-    For i := 0 To WorkModeGridTableView1.ColumnCount - 1 Do
-    Begin
+    for i := 0 to WorkModeGridTableView1.ColumnCount - 1 do
+    begin
         WorkModeGridTableView1.Columns[i].DataBinding.ValueTypeClass := TcxStringValueType;
-    End;
+    end;
     FillWorkModeDSet(WMByPeriodSet, cxDateBegEdit.Date, cxDateEndEdit.Date, IdWorkMode, Null, Null, ShiftEdit.Value, 7);
     FillWorkModeGrid(WorkModeGridTableView1, WMByPeriodSet);
     IsOnlyOpenSpr := False;
-End;
+end;
 
-Function TfrmAddMoving.IsShowTabSheet(OrderType: Variant): Boolean;
-Var
+function TfrmAddMoving.IsShowTabSheet(OrderType: Variant): Boolean;
+var
     check: Integer;
-Begin
+begin
     Result := True;
-    If VarIsNull(OrderType) Then
+    if VarIsNull(OrderType) then
         Exit;
     check := fibCheckPermission('/ROOT/Up_order_system/Up_order_types/' + IntToStr(OrderType) +
         '_UP_ORDER_TYPE/' + IntToStr(OrderType) + '_WORKMODE_TAB', 'Edit');
-    If check <> 0 Then
+    if check <> 0 then
         Result := False;
-End;
+end;
 
-Procedure TfrmAddMoving.btnCancelClick(Sender: TObject);
-Begin
+procedure TfrmAddMoving.btnCancelClick(Sender: TObject);
+begin
     Close;
-End;
+end;
 
-Procedure TfrmAddMoving.btnOkClick(Sender: TObject);
-Var
+procedure TfrmAddMoving.btnOkClick(Sender: TObject);
+var
     i: Integer;
-Begin
-    If Not qFCheckAll(Self) Then
+begin
+    if not qFCheckAll(Self) then
         exit;
 
     if (IsPedType) then
     begin
-       if (cntMonth.Text = '') then
-       begin
-          agMessageDlg('Увага!', 'Треба ввести кількість місяців!', mtInformation, [mbOK]);
-          Exit;
-       end
-       else if (MaxCntMonth < StrToInt(cntMonth.Text)) then
-            begin
-               cntMonth.SetFocus;
-               cntMonth.Style.Color := clRed;
-               agMessageDlg('Увага!', 'Кількість місяців не може перевищувати ('+IntToStr(MaxCntMonth)+'!', mtInformation, [mbOK]);
-               Exit;
-            end;
+        if (cntMonth.Text = '') then
+        begin
+            agMessageDlg('Увага!', 'Треба ввести кількість місяців!', mtInformation, [mbOK]);
+            Exit;
+        end
+        else if (MaxCntMonth < StrToInt(cntMonth.Text)) then
+        begin
+            cntMonth.SetFocus;
+            cntMonth.Style.Color := clRed;
+            agMessageDlg('Увага!', 'Кількість місяців не може перевищувати (' + IntToStr(MaxCntMonth) + '!', mtInformation, [mbOK]);
+            Exit;
+        end;
     end;
 
-    If Not VarIsNull(Absent.Value) Then
-    Begin
-        If (cxDateBegEdit.Date < AbsentDateBeg) Or
-            (cxDateBegEdit.Date > AbsentDateEnd) Or
-            (cxDateEndEdit.Date < AbsentDateBeg) Or
-            (cxDateEndEdit.Date > AbsentDateEnd) Then
-        Begin
+    if not VarIsNull(Absent.Value) then
+    begin
+        if (cxDateBegEdit.Date < AbsentDateBeg) or
+            (cxDateBegEdit.Date > AbsentDateEnd) or
+            (cxDateEndEdit.Date < AbsentDateBeg) or
+            (cxDateEndEdit.Date > AbsentDateEnd) then
+        begin
             cxDateBegEdit.Style.Color := clRed;
             cxDateEndEdit.Style.Color := clRed;
             agMessageDlg('Увага!', 'Період переведення повинен належати періоду відсутності працівника!', mtInformation, [mbOK]);
             Exit;
-        End;
-    End;
+        end;
+    end;
 
-    If IsEditSmet Then
-    Begin
-        If rc1 <> rc2 Then
-        Begin
+    if IsEditSmet then
+    begin
+        if rc1 <> rc2 then
+        begin
             showmessage('Кількість ставок повинна співпадати з тією кількістю ставок, що була до переводу');
             exit;
-        End;
-    End;
-
+        end;
+    end;
 
     // проверка на заполнение даты
-    If Trim(cxDateBegEdit.Text) = '' Then
-    Begin
+    if Trim(cxDateBegEdit.Text) = '' then
+    begin
         agMessageDlg('Увага!', 'Введіть дату початку!', mtError, [mbOk]);
         cxDateBegEdit.SetFocus;
         cxDateBegEdit.Style.Color := clRed;
         Exit;
-    End;
+    end;
 
     // проверка на заполнение даты
-    If Trim(cxDateEndEdit.Text) = '' Then
-    Begin
+    if Trim(cxDateEndEdit.Text) = '' then
+    begin
         agMessageDlg('Увага!', 'Введіть дату кінця!', mtError, [mbOk]);
         cxDateEndEdit.SetFocus;
         cxDateEndEdit.Style.Color := clRed;
         Exit;
-    End;
+    end;
 
     // проверка на корректность даты
-    If cxDateBegEdit.Date > cxDateEndEdit.Date Then
-    Begin
+    if cxDateBegEdit.Date > cxDateEndEdit.Date then
+    begin
         agMessageDlg('Увага!', 'Дата кінця повинна бути більше дати початку!', mtError, [mbOk]);
         cxDateBegEdit.SetFocus;
         cxDateBegEdit.Style.Color := clRed;
         cxDateEndEdit.Style.Color := clRed;
         Exit;
-    End;
+    end;
 
     // проверка на корректность даты избрания
-    If ((Trim(cxDateBegObrEdit.Text) <> '') And
-        (Trim(cxDateEndObrEdit.Text) <> '') And
-        (cxDateBegObrEdit.Date > cxDateEndObrEdit.Date))
-        Then
-    Begin
+    if ((Trim(cxDateBegObrEdit.Text) <> '') and
+        (Trim(cxDateEndObrEdit.Text) <> '') and
+        (cxDateBegObrEdit.Date > cxDateEndObrEdit.Date)) then
+    begin
         agMessageDlg('Увага!', 'Дата кінця обрання повинна бути більше дати початку!', mtError, [mbOk]);
         cxDateBegObrEdit.SetFocus;
         cxDateBegObrEdit.Style.Color := clRed;
         cxDateEndObrEdit.Style.Color := clRed;
         Exit;
-    End;
- try
-    StoredProc.StoredProcName := 'UP_DT_MAN_MOVING_BUFF_MAS_UPD';
-    StoredProc.Prepare;
+    end;
 
-    If Trim(cxDateBegEdit.Text) = '' Then
-        StoredProc.ParamByName('date_beg').AsVariant := Null
-    Else
-        StoredProc.ParamByName('date_beg').asDate := cxDateBegEdit.Date;
+    // Проверка даты обрання з датой перемещения и диалог с пользователем
+    if not checkOrder then
+        if not checkOrderDialog then
+            Exit;
 
-    If Trim(cxDateEndEdit.Text) = '' Then
-        StoredProc.ParamByName('date_end').AsVariant := Null
-    Else
-        StoredProc.ParamByName('date_end').AsDate := cxDateEndEdit.Date;
+    try
+        StoredProc.StoredProcName := 'UP_DT_MAN_MOVING_BUFF_MAS_UPD';
+        StoredProc.Prepare;
 
-    StoredProc.ParamByName('id_pcard').AsVariant := Null;
-    StoredProc.ParamByName('id_department').AsVariant := DepartmentEdit.Value;
-    If PayEdit.LabelColor = SYS_MASS_COLOR Then
-        StoredProc.ParamByName('is_tarif').AsVariant := Null
-    Else
-        StoredProc.ParamByName('is_tarif').AsInteger := PayEdit.Value;
+        if Trim(cxDateBegEdit.Text) = '' then
+            StoredProc.ParamByName('date_beg').AsVariant := Null
+        else
+            StoredProc.ParamByName('date_beg').asDate := cxDateBegEdit.Date;
 
-    StoredProc.ParamByName('id_post_salary_real').AsVariant := FactOkladEdit.Value;
-    StoredProc.ParamByName('id_post_salary').AsVariant := PosadOkladEdit.Value;
-    StoredProc.ParamByName('id_type_post').AsVariant := PersonalTypeEdit.Value;
-    If cbIsMainPost.LabelColor = SYS_MASS_COLOR Then
-        StoredProc.ParamByName('is_post_main').AsVariant := Null
-    Else
-        StoredProc.ParamByName('is_post_main').AsInteger := round(sqr(cbIsMainPost.Value));
-    StoredProc.ParamByName('id_work_reason').AsVariant := WorkReasonEdit.Value;
-    StoredProc.ParamByName('id_work_condition').AsVariant := WorkCondEdit.Value;
-    StoredProc.ParamByName('id_pay_form').AsVariant := PayFormEdit.Value;
-    StoredProc.ParamByName('id_man_hospital').AsVariant := Null; //HospitalEdit.Value;
-    StoredProc.ParamByName('id_man_holiday').AsVariant := Null; //HolidayEdit.Value;
-    StoredProc.ParamByName('key_session').AsInt64 := id_session;
-    StoredProc.ParamByName('id_accept_cond').AsVariant := CondEdit.Value;
-    If Trim(cxDateBegObrEdit.Text) = '' Then
-        StoredProc.ParamByName('accept_beg').AsVariant := Null
-    Else
-        StoredProc.ParamByName('accept_beg').AsDate := cxDateBegObrEdit.Date;
-    If Trim(cxDateEndObrEdit.Text) = '' Then
-        StoredProc.ParamByName('accept_end').AsVariant := Null
-    Else
-        StoredProc.ParamByName('accept_end').AsDate := cxDateEndObrEdit.Date;
-    StoredProc.ParamByName('note').AsVariant := NoteEdit.Value;
-    StoredProc.ParamByName('num_item').AsVariant := Null;
-    StoredProc.ParamByName('num_sub_item').AsVariant := Null;
-    StoredProc.ParamByName('id_order').AsVariant := (owner As TfrmMoveOrder).Input['ID_ORDER'];
-    StoredProc.ParamByName('id_order_type').AsVariant := (owner As TfrmMoveOrder).Input['ID_ORDER_TYPE'];
-    StoredProc.ParamByName('reason').AsVariant := ReasonEdit.Value;
-    StoredProc.ParamByName('id_man_moving').AsVariant := Null;
-    { If cbBack.LabelColor = SYS_MASS_COLOR Then
-         StoredProc.ParamByName('with_return').AsVariant := Null
-     Else
-         StoredProc.ParamByName('with_return').AsInteger := round(sqr(cbBack.Value));     }
-    If isTemp Then
-        StoredProc.ParamByName('with_return').AsInteger := 1;
-    If isContinue Then
-        StoredProc.ParamByName('with_return').AsVariant := Null;
-    If IsEditSmet Then
-        StoredProc.ParamByName('with_return').AsVariant := 1;
-    If MassEdit Then
-        StoredProc.ParamByName('id_order_item').AsVariant := Null
-    Else
-        StoredProc.ParamByName('id_order_item').AsInt64 := id_order_item;
+        if Trim(cxDateEndEdit.Text) = '' then
+            StoredProc.ParamByName('date_end').AsVariant := Null
+        else
+            StoredProc.ParamByName('date_end').AsDate := cxDateEndEdit.Date;
 
-    If Absent.DisplayText = '' Then
-        Id_Type_Away := -1;
+        StoredProc.ParamByName('id_pcard').AsVariant := Null;
+        StoredProc.ParamByName('id_department').AsVariant := DepartmentEdit.Value;
 
-    If Id_Type_Away = -1 Then
-    Begin
-        StoredProc.ParamByName('Id_Type_Away').AsVariant := Null;
-    End
-    Else
-    Begin
-        StoredProc.ParamByName('Id_Type_Away').AsInteger := Id_Type_Away;
-    End;
+        if PayEdit.LabelColor = SYS_MASS_COLOR then
+            StoredProc.ParamByName('is_tarif').AsVariant := Null
+        else
+            StoredProc.ParamByName('is_tarif').AsInteger := PayEdit.Value;
 
-    If Absent.DisplayText = '' Then
-        Id_Pcard_Away := -1;
-    If Id_Pcard_Away = -1 Then
-        StoredProc.ParamByName('Id_Pcard_Away').AsVariant := Null
-    Else
-        StoredProc.ParamByName('Id_Pcard_Away').AsInt64 := Id_Pcard_Away;
+        StoredProc.ParamByName('id_post_salary_real').AsVariant := FactOkladEdit.Value;
+        StoredProc.ParamByName('id_post_salary').AsVariant := PosadOkladEdit.Value;
+        StoredProc.ParamByName('id_type_post').AsVariant := PersonalTypeEdit.Value;
 
-    If VarIsNull(Absent.Value) Then
-        StoredProc.ParamByName('Id_Key').AsVariant := Null
-    Else
-        StoredProc.ParamByName('Id_Key').AsInt64 := Absent.Value;
+        if cbIsMainPost.LabelColor = SYS_MASS_COLOR then
+            StoredProc.ParamByName('is_post_main').AsVariant := Null
+        else
+            StoredProc.ParamByName('is_post_main').AsInteger := round(sqr(cbIsMainPost.Value));
 
-    If VarIsNull(IdWorkMode) Then
-        StoredProc.ParamByName('Id_Work_Mode').AsVariant := Null
-    Else
-        StoredProc.ParamByName('Id_Work_Mode').AsInteger := IdWorkMode;
+        StoredProc.ParamByName('id_work_reason').AsVariant := WorkReasonEdit.Value;
+        StoredProc.ParamByName('id_work_condition').AsVariant := WorkCondEdit.Value;
+        StoredProc.ParamByName('id_pay_form').AsVariant := PayFormEdit.Value;
+        StoredProc.ParamByName('id_man_hospital').AsVariant := Null;
+        StoredProc.ParamByName('id_man_holiday').AsVariant := Null;
+        StoredProc.ParamByName('key_session').AsInt64 := id_session;
+        StoredProc.ParamByName('id_accept_cond').AsVariant := CondEdit.Value;
 
-    StoredProc.ParamByName('Work_Mode_Shift').AsInteger := ShiftEdit.Value;
-    if not IsPedType then cntMonth.Text := '';
-    if cntMonth.Text = '' then StoredProc.ParamByName('month_hours_count').Value := null
-    else StoredProc.ParamByName('month_hours_count').AsShort := StrToInt(cntMonth.Text);
+        if Trim(cxDateBegObrEdit.Text) = '' then
+            StoredProc.ParamByName('accept_beg').AsVariant := Null
+        else
+            StoredProc.ParamByName('accept_beg').AsDate := cxDateBegObrEdit.Date;
 
+        if Trim(cxDateEndObrEdit.Text) = '' then
+            StoredProc.ParamByName('accept_end').AsVariant := Null
+        else
+            StoredProc.ParamByName('accept_end').AsDate := cxDateEndObrEdit.Date;
 
-    { if cbHosp.LabelColor = SYS_MASS_COLOR then
-       StoredProc.ParamByName('is_on_hospital').AsVariant := Null
-                                           else
-       StoredProc.ParamByName('is_on_hospital').AsInteger := round(sqr(cbHosp.Value));
-     if cbHoliday.LabelColor = SYS_MASS_COLOR then
-       StoredProc.ParamByName('is_on_holiday').AsVariant := Null
-                                              else
-       StoredProc.ParamByName('is_on_holiday').AsInteger := round(sqr(cbHoliday.Value));}
-    StoredProc.ExecProc;
- except on E:Exception do
-    Showmessage(E.Message);
- end;
-    ModalResult := mrOk;
-End;
+        StoredProc.ParamByName('note').AsVariant := NoteEdit.Value;
+        StoredProc.ParamByName('num_item').AsVariant := Null;
+        StoredProc.ParamByName('num_sub_item').AsVariant := Null;
+        StoredProc.ParamByName('id_order').AsVariant := (owner as TfrmMoveOrder).Input['ID_ORDER'];
+        StoredProc.ParamByName('id_order_type').AsVariant := (owner as TfrmMoveOrder).Input['ID_ORDER_TYPE'];
+        StoredProc.ParamByName('reason').AsVariant := ReasonEdit.Value;
+        StoredProc.ParamByName('id_man_moving').AsVariant := Null;
 
-Procedure TfrmAddMoving.DepartmentEditOpenSprav(Sender: TObject;
-    Var Value: Variant; Var DisplayText: String);
-Var
+        if isTemp then
+            StoredProc.ParamByName('with_return').AsInteger := 1;
+        if isContinue then
+            StoredProc.ParamByName('with_return').AsVariant := Null;
+        if IsEditSmet then
+            StoredProc.ParamByName('with_return').AsVariant := 1;
+        if MassEdit then
+            StoredProc.ParamByName('id_order_item').AsVariant := Null
+        else
+            StoredProc.ParamByName('id_order_item').AsInt64 := id_order_item;
+
+        if Absent.DisplayText = '' then
+            Id_Type_Away := -1;
+
+        if Id_Type_Away = -1 then
+        begin
+            StoredProc.ParamByName('Id_Type_Away').AsVariant := Null;
+        end
+        else
+        begin
+            StoredProc.ParamByName('Id_Type_Away').AsInteger := Id_Type_Away;
+        end;
+
+        if Absent.DisplayText = '' then
+            Id_Pcard_Away := -1;
+        if Id_Pcard_Away = -1 then
+            StoredProc.ParamByName('Id_Pcard_Away').AsVariant := Null
+        else
+            StoredProc.ParamByName('Id_Pcard_Away').AsInt64 := Id_Pcard_Away;
+
+        if VarIsNull(Absent.Value) then
+            StoredProc.ParamByName('Id_Key').AsVariant := Null
+        else
+            StoredProc.ParamByName('Id_Key').AsInt64 := Absent.Value;
+
+        if VarIsNull(IdWorkMode) then
+            StoredProc.ParamByName('Id_Work_Mode').AsVariant := Null
+        else
+            StoredProc.ParamByName('Id_Work_Mode').AsInteger := IdWorkMode;
+
+        StoredProc.ParamByName('Work_Mode_Shift').AsInteger := ShiftEdit.Value;
+
+        if not IsPedType then
+            cntMonth.Text := '';
+
+        if cntMonth.Text = '' then
+            StoredProc.ParamByName('month_hours_count').Value := null
+        else
+            StoredProc.ParamByName('month_hours_count').AsShort := StrToInt(cntMonth.Text);
+
+        StoredProc.ExecProc;
+
+        Modalresult := mrOk;
+
+    except on E: Exception do
+            Showmessage(E.Message);
+    end;
+end;
+
+procedure TfrmAddMoving.DepartmentEditOpenSprav(Sender: TObject;
+    var Value: Variant; var DisplayText: string);
+var
     sp: TSprav;
     OldValue: integer;
-Begin
-    If (Not VarIsNull(DepartmentEdit.Value))
-        Then
+begin
+    if (not VarIsNull(DepartmentEdit.Value)) then
         OldValue := DepartmentEdit.Value
-    Else
+    else
         OldValue := -1;
     sp := GetSprav('SpDepartment');
-    If sp <> Nil Then
-    Begin
-        With sp.Input Do
-        Begin
+    if sp <> nil then
+    begin
+        with sp.Input do
+        begin
             Append;
             FieldValues['DBHandle'] := Integer(Database.Handle);
             FieldValues['Actual_Date'] := Date();
             FieldValues['AllowEdit'] := False;
             Post;
-        End;
+        end;
         sp.Show;
-        If (sp.Output <> Nil) And Not sp.Output.IsEmpty Then
-        Begin
+        if (sp.Output <> nil) and not sp.Output.IsEmpty then
+        begin
             Value := sp.Output['Id_Department'];
             DisplayText := sp.Output['Name_Full'];
 
-            If (Value <> OldValue)
-                Then
-            Begin
+            if (Value <> OldValue) then
+            begin
                 PosadOkladEdit.Clear;
                 PosadOkladEdit.LabelColor := SYS_MASS_NORM_COLOR;
                 FactOkladEdit.Clear;
                 FactOkladEdit.LabelColor := SYS_MASS_NORM_COLOR;
                 PersonalTypeEdit.Clear;
                 PersonalTypeEdit.LabelColor := SYS_MASS_NORM_COLOR;
-            End;
-        End;
+            end;
+        end;
         sp.Free;
-    End;
-End;
+    end;
+end;
 
-Procedure TfrmAddMoving.PosadOkladEditOpenSprav(Sender: TObject;
-    Var Value: Variant; Var DisplayText: String);
-Var
+procedure TfrmAddMoving.PosadOkladEditOpenSprav(Sender: TObject;
+    var Value: Variant; var DisplayText: string);
+var
     Res: Variant;
-Begin
-    If VarIsNull(DepartmentEdit.Value) Then
-    Begin
+begin
+    if VarIsNull(DepartmentEdit.Value) then
+    begin
         MessageDlg('Спочатку треба обрати підрозділ!', mtError, [mbYes], -1);
         Exit;
-    End;
+    end;
 
     PostSalarySelect.Close;
     PostSalarySelect.ParamByName('Id_Department').AsInteger := DepartmentEdit.Value;
     PostSalarySelect.ParamByName('Act_Date').AsDate := cxDateBegEdit.Date;
     PostSalarySelect.Open;
 
-    If qSelect(PostSalarySelect) Then
-    Begin
+    if qSelect(PostSalarySelect) then
+    begin
         Value := PostSalarySelect['id_post_salary'];
         DisplayText := PostSalarySelect['Post_name'];
 
@@ -847,11 +845,11 @@ Begin
         FillWorkModeDSet(WMByPeriodSet, cxDateBegEdit.Date, cxDateEndEdit.Date, IdWorkMode, Null, Null, ShiftEdit.Value, 7);
         FillWorkModeGrid(WorkModeGridTableView1, WMByPeriodSet);
         Res := GetWorkModeInfo(GetWorkMode, IdWorkMode);
-        If VarIsArray(Res) Then
-        Begin
+        if VarIsArray(Res) then
+        begin
             WorkModeSprav.Text := Res[0];
             MaxBound := Res[1];
-        End;
+        end;
 
         // попробуем автоматически проставить тип персонала
         SelectTypePost.Close;
@@ -861,51 +859,51 @@ Begin
         SelectTypePost.Open;
 
         SelectTypePost.FetchAll;
-        If SelectTypePost.RecordCount = 1 Then
-        Begin
+        if SelectTypePost.RecordCount = 1 then
+        begin
             PersonalTypeEdit.Value := SelectTypePost['Id_Type_Post'];
             PersonalTypeEdit.DisplayText := SelectTypePost['Name_Type_Post'];
-            if (not VarIsNull(SelectTypePost['IS_PED_WORK']))  then
+            if (not VarIsNull(SelectTypePost['IS_PED_WORK'])) then
             begin
-               cntMonth.Visible := (SelectTypePost['IS_PED_WORK'] = 1);
+                cntMonth.Visible := (SelectTypePost['IS_PED_WORK'] = 1);
             end
             else
             begin
-               cntMonth.Visible := false;
+                cntMonth.Visible := false;
             end;
             lblMonth.Visible := cntMonth.Visible;
             IsPedType := cntMonth.Visible;
             //            qFSC_TypePost.Blocked := True;
-        End
+        end
             //        else
             //            qFSC_TypePost.Blocked := False;
-    End;
-End;
+    end;
+end;
 
-Procedure TfrmAddMoving.DateBegEditChange(Sender: TObject);
-Begin
-    If Not isContinue Then
-    Begin
-        PosadOkladEdit.Blocked := VarIsNull(cxDateBegEdit.Date) Or VarIsNull(DepartmentEdit.Value);
-        FactOkladEdit.Blocked := VarIsNull(cxDateBegEdit.Date) Or VarIsNull(DepartmentEdit.Value);
-    End;
+procedure TfrmAddMoving.DateBegEditChange(Sender: TObject);
+begin
+    if not isContinue then
+    begin
+        PosadOkladEdit.Blocked := VarIsNull(cxDateBegEdit.Date) or VarIsNull(DepartmentEdit.Value);
+        FactOkladEdit.Blocked := VarIsNull(cxDateBegEdit.Date) or VarIsNull(DepartmentEdit.Value);
+    end;
 
     LblDateBegEdit.Style.Font.Color := SYS_MASS_NORM_COLOR;
     cxDateBegObrEdit.Date := cxDateBegEdit.Date;
-End;
+end;
 
-Procedure TfrmAddMoving.PosadOkladEditChange(Sender: TObject);
-Begin
+procedure TfrmAddMoving.PosadOkladEditChange(Sender: TObject);
+begin
     PersonalTypeEdit.Blocked := VarIsNull(PosadOkladEdit.Value);
     PosadOkladEdit.LabelColor := SYS_MASS_NORM_COLOR;
-End;
+end;
 
-Procedure TfrmAddMoving.WorkReasonEditOpenSprav(Sender: TObject;
-    Var Value: Variant; Var DisplayText: String);
-Var
+procedure TfrmAddMoving.WorkReasonEditOpenSprav(Sender: TObject;
+    var Value: Variant; var DisplayText: string);
+var
     Params: TUnivParams;
     OutPut: TRxMemoryData;
-Begin
+begin
     Params.FormCaption := 'Довідник підстав роботи';
     Params.ShowMode := fsmSelect;
     Params.ShowButtons := [fbExit];
@@ -918,23 +916,23 @@ Begin
 
     OutPut := TRxMemoryData.Create(self);
 
-    If GetUnivSprav(Params, OutPut) Then
-    Begin
+    if GetUnivSprav(Params, OutPut) then
+    begin
         value := output['ID_WORK_REASON'];
         DisplayText := VarToStr(output['NAME_FULL']);
-    End;
-    If Value <> 1 Then
+    end;
+    if Value <> 1 then
         cbIsMainPost.Value := False;
-End;
+end;
 
-Procedure TfrmAddMoving.PersonalTypeEditOpenSprav(Sender: TObject;
-    Var Value: Variant; Var DisplayText: String);
-Begin
-    If VarIsNull(DepartmentEdit.Value) Then
-    Begin
+procedure TfrmAddMoving.PersonalTypeEditOpenSprav(Sender: TObject;
+    var Value: Variant; var DisplayText: string);
+begin
+    if VarIsNull(DepartmentEdit.Value) then
+    begin
         MessageDlg('Спочатку треба обрати посаду!', mtError, [mbYes], -1);
         Exit;
-    End;
+    end;
 
     SelectTypePost.Close;
     SelectTypePost.ParamByName('Id_Post_Salary').AsInteger := PosadOkladEdit.Value;
@@ -942,11 +940,11 @@ Begin
     SelectTypePost.ParamByName('Act_Date').AsDate := cxDateBegEdit.Date;
     SelectTypePost.Open;
 
-    If qSelect(SelectTypePost) Then
-    Begin
+    if qSelect(SelectTypePost) then
+    begin
         value := SelectTypePost['Id_Type_Post'];
         DisplayText := SelectTypePost['Name_Type_Post'];
-        if (not VarIsNull(SelectTypePost['IS_PED_WORK']))  then
+        if (not VarIsNull(SelectTypePost['IS_PED_WORK'])) then
         begin
             cntMonth.Visible := (SelectTypePost['IS_PED_WORK'] = 1);
         end
@@ -956,15 +954,15 @@ Begin
         end;
         lblMonth.Visible := cntMonth.Visible;
         IsPedType := cntMonth.Visible;
-    End;
-End;
+    end;
+end;
 
-Procedure TfrmAddMoving.CondEditOpenSprav(Sender: TObject;
-    Var Value: Variant; Var DisplayText: String);
-Var
+procedure TfrmAddMoving.CondEditOpenSprav(Sender: TObject;
+    var Value: Variant; var DisplayText: string);
+var
     Params: TUnivParams;
     OutPut: TRxMemoryData;
-Begin
+begin
     Params.FormCaption := 'Умови вступу на посаду';
     Params.ShowMode := fsmSelect;
     Params.ShowButtons := [fbExit];
@@ -977,9 +975,8 @@ Begin
 
     OutPut := TRxMemoryData.Create(self);
 
-    If GetUnivSprav(Params, OutPut)
-        Then
-    Begin
+    if GetUnivSprav(Params, OutPut) then
+    begin
         value := output['ID_ACCEPT_COND'];
         DisplayText := VarToStr(output['NAME_ACCEPT_COND']);
         AcceptSet.Close;
@@ -988,25 +985,25 @@ Begin
         AcceptSet.ParamByName('id_accept_cond').AsInteger := value;
         AcceptSet.ParamByName('date_beg').AsDate := cxDateBegEdit.Date;
         AcceptSet.Open;
-        If (AcceptSet['kol_month'] <> 0) Then
-        Begin
+        if (AcceptSet['kol_month'] <> 0) then
+        begin
             cxDateBegObrEdit.Date := cxDateBegEdit.Date;
             cxDateEndObrEdit.Date := AcceptSet['date_end'];
-        End
-        Else
-        Begin
+        end
+        else
+        begin
             cxDateBegObrEdit.EditValue := null;
             cxDateEndObrEdit.EditValue := null;
-        End;
-    End;
-End;
+        end;
+    end;
+end;
 
-Procedure TfrmAddMoving.PayFormEditOpenSprav(Sender: TObject;
-    Var Value: Variant; Var DisplayText: String);
-Var
+procedure TfrmAddMoving.PayFormEditOpenSprav(Sender: TObject;
+    var Value: Variant; var DisplayText: string);
+var
     Params: TUnivParams;
     OutPut: TRxMemoryData;
-Begin
+begin
     Params.FormCaption := 'Довідник форм оплати праці';
     Params.ShowMode := fsmSelect;
     Params.ShowButtons := [fbExit];
@@ -1019,25 +1016,24 @@ Begin
 
     OutPut := TRxMemoryData.Create(self);
 
-    If GetUnivSprav(Params, OutPut)
-        Then
-    Begin
+    if GetUnivSprav(Params, OutPut) then
+    begin
         value := output['ID_PAY_FORM'];
         DisplayText := VarToStr(output['NAME_PAY_FORM']);
-    End;
-End;
+    end;
+end;
 
-Procedure TfrmAddMoving.FactOkladEditOpenSprav(Sender: TObject;
-    Var Value: Variant; Var DisplayText: String);
-Var
+procedure TfrmAddMoving.FactOkladEditOpenSprav(Sender: TObject;
+    var Value: Variant; var DisplayText: string);
+var
     Params: TUnivParams;
     OutPut: TRxMemoryData;
-Begin
-    If VarIsNull(PosadOkladEdit.Value) Then
-    Begin
+begin
+    if VarIsNull(PosadOkladEdit.Value) then
+    begin
         MessageDlg('Спочатку треба обрати штатну посаду!', mtError, [mbYes], -1);
         Exit;
-    End;
+    end;
 
     Params.FormCaption := 'Посадові оклади';
     Params.ShowMode := fsmSelect;
@@ -1051,20 +1047,19 @@ Begin
 
     OutPut := TRxMemoryData.Create(self);
 
-    If GetUnivSprav(Params, OutPut)
-        Then
-    Begin
+    if GetUnivSprav(Params, OutPut) then
+    begin
         value := output['ID_POST_SALARY'];
         DisplayText := VarToStr(output['POST_NAME']);
-    End;
-End;
+    end;
+end;
 
-Procedure TfrmAddMoving.WorkCondEditOpenSprav(Sender: TObject;
-    Var Value: Variant; Var DisplayText: String);
-Var
+procedure TfrmAddMoving.WorkCondEditOpenSprav(Sender: TObject;
+    var Value: Variant; var DisplayText: string);
+var
     Params: TUnivParams;
     OutPut: TRxMemoryData;
-Begin
+begin
     Params.FormCaption := 'Умови праці';
     Params.ShowMode := fsmSelect;
     Params.ShowButtons := [fbExit];
@@ -1077,19 +1072,18 @@ Begin
 
     OutPut := TRxMemoryData.Create(self);
 
-    If GetUnivSprav(Params, OutPut)
-        Then
-    Begin
+    if GetUnivSprav(Params, OutPut) then
+    begin
         value := output['ID_WORK_COND'];
         DisplayText := VarToStr(output['NAME_WORK_COND']);
-    End;
-End;
+    end;
+end;
 
-Procedure TfrmAddMoving.HospitalEditOpenSprav(Sender: TObject;
-    Var Value: Variant; Var DisplayText: String);
+procedure TfrmAddMoving.HospitalEditOpenSprav(Sender: TObject;
+    var Value: Variant; var DisplayText: string);
 {var
     sp: TSprav; }
-Begin
+begin
     {sp := GetSprav('Asup\AsupHospital');
     if sp <> nil then
     begin
@@ -1119,182 +1113,181 @@ Begin
         end;
         sp.Free;
     end; }
-End;
+end;
 
-Procedure TfrmAddMoving.WorkReasonEditChange(Sender: TObject);
-Begin
+procedure TfrmAddMoving.WorkReasonEditChange(Sender: TObject);
+begin
     WorkReasonSelect.Close;
     WorkReasonSelect.Open;
     WorkReasonSelect.Locate('ID_WORK_REASON', WorkReasonEdit.Value, []);
 
-    If WorkReasonSelect['IS_SHTAT'] = 'T' Then
+    if WorkReasonSelect['IS_SHTAT'] = 'T' then
         cbIsMainPost.Value := True
-    Else
+    else
         cbIsMainPost.Value := False;
 
-
-    If WorkReasonSelect['FIX_MAIN_POST'] = 'T' Then
+    if WorkReasonSelect['FIX_MAIN_POST'] = 'T' then
         cbIsMainPost.Blocked := True
-    Else
+    else
         cbIsMainPost.Blocked := False;
 
     WorkReasonSelect.Close;
     WorkReasonEdit.LabelColor := SYS_MASS_NORM_COLOR;
-End;
+end;
 
-Procedure TfrmAddMoving.DateEndEditChange(Sender: TObject);
-Begin
+procedure TfrmAddMoving.DateEndEditChange(Sender: TObject);
+begin
     LblDateEndEdit.Style.Font.Color := SYS_MASS_NORM_COLOR;
     cxDateEndObrEdit.Date := cxDateEndEdit.Date;
-End;
+end;
 
-Procedure TfrmAddMoving.HolidayEditChange(Sender: TObject);
-Begin
+procedure TfrmAddMoving.HolidayEditChange(Sender: TObject);
+begin
     //HolidayEdit.LabelColor := SYS_MASS_NORM_COLOR;
-End;
+end;
 
-Procedure TfrmAddMoving.HospitalEditChange(Sender: TObject);
-Begin
+procedure TfrmAddMoving.HospitalEditChange(Sender: TObject);
+begin
     //HospitalEdit.LabelColor := SYS_MASS_NORM_COLOR;
-End;
+end;
 
-Procedure TfrmAddMoving.DepartmentEditChange(Sender: TObject);
-Begin
-    If isDepartmentEdit Then
+procedure TfrmAddMoving.DepartmentEditChange(Sender: TObject);
+begin
+    if isDepartmentEdit then
         DepartmentEdit.LabelColor := SYS_MASS_NORM_COLOR
-    Else
-    Begin
-        PosadOkladEdit.Blocked := VarIsNull(cxDateBegEdit.Date) Or VarIsNull(DepartmentEdit.Value);
-        FactOkladEdit.Blocked := VarIsNull(cxDateBegEdit.Date) Or VarIsNull(DepartmentEdit.Value);
+    else
+    begin
+        PosadOkladEdit.Blocked := VarIsNull(cxDateBegEdit.Date) or VarIsNull(DepartmentEdit.Value);
+        FactOkladEdit.Blocked := VarIsNull(cxDateBegEdit.Date) or VarIsNull(DepartmentEdit.Value);
         DepartmentEdit.LabelColor := SYS_MASS_NORM_COLOR;
-    End;
-End;
+    end;
+end;
 
-Procedure TfrmAddMoving.FactOkladEditChange(Sender: TObject);
-Begin
+procedure TfrmAddMoving.FactOkladEditChange(Sender: TObject);
+begin
     FactOkladEdit.LabelColor := SYS_MASS_NORM_COLOR;
-End;
+end;
 
-Procedure TfrmAddMoving.PersonalTypeEditChange(Sender: TObject);
-Begin
+procedure TfrmAddMoving.PersonalTypeEditChange(Sender: TObject);
+begin
     PersonalTypeEdit.LabelColor := SYS_MASS_NORM_COLOR;
-End;
+end;
 
-Procedure TfrmAddMoving.WorkCondEditChange(Sender: TObject);
-Begin
+procedure TfrmAddMoving.WorkCondEditChange(Sender: TObject);
+begin
     WorkCondEdit.LabelColor := SYS_MASS_NORM_COLOR;
-End;
+end;
 
-Procedure TfrmAddMoving.PayFormEditChange(Sender: TObject);
-Begin
+procedure TfrmAddMoving.PayFormEditChange(Sender: TObject);
+begin
     PayFormEdit.LabelColor := SYS_MASS_NORM_COLOR;
-End;
+end;
 
-Procedure TfrmAddMoving.ReasonEditChange(Sender: TObject);
-Begin
+procedure TfrmAddMoving.ReasonEditChange(Sender: TObject);
+begin
     ReasonEdit.LabelColor := SYS_MASS_NORM_COLOR;
-End;
+end;
 
-Procedure TfrmAddMoving.NoteEditChange(Sender: TObject);
-Begin
+procedure TfrmAddMoving.NoteEditChange(Sender: TObject);
+begin
     NoteEdit.LabelColor := SYS_MASS_NORM_COLOR;
-End;
+end;
 
-Procedure TfrmAddMoving.CondEditChange(Sender: TObject);
-Begin
+procedure TfrmAddMoving.CondEditChange(Sender: TObject);
+begin
     CondEdit.LabelColor := SYS_MASS_NORM_COLOR;
-End;
+end;
 
-Procedure TfrmAddMoving.DateBegObrEditChange(Sender: TObject);
-Begin
+procedure TfrmAddMoving.DateBegObrEditChange(Sender: TObject);
+begin
     LblDateBegObrEdit.Style.Font.Color := SYS_MASS_NORM_COLOR;
-End;
+end;
 
-Procedure TfrmAddMoving.DateEndObrEditChange(Sender: TObject);
-Begin
+procedure TfrmAddMoving.DateEndObrEditChange(Sender: TObject);
+begin
     LblDateEndObrEdit.Style.Font.Color := SYS_MASS_NORM_COLOR;
-End;
+end;
 
-Procedure TfrmAddMoving.PayEditChange(Sender: TObject);
-Begin
+procedure TfrmAddMoving.PayEditChange(Sender: TObject);
+begin
     PayEdit.LabelColor := SYS_MASS_NORM_COLOR;
-End;
+end;
 
-Procedure TfrmAddMoving.cbIsMainPostChange(Sender: TObject);
-Begin
+procedure TfrmAddMoving.cbIsMainPostChange(Sender: TObject);
+begin
     cbIsMainPost.LabelColor := SYS_MASS_NORM_COLOR;
-End;
+end;
 
-Procedure TfrmAddMoving.cbBackChange(Sender: TObject);
-Begin
+procedure TfrmAddMoving.cbBackChange(Sender: TObject);
+begin
     { cbBack.LabelColor := SYS_MASS_NORM_COLOR; }
-End;
+end;
 
-Procedure TfrmAddMoving.cbNoDateEndChange(Sender: TObject);
-Begin
+procedure TfrmAddMoving.cbNoDateEndChange(Sender: TObject);
+begin
     cbNoDateEnd.LabelColor := SYS_MASS_NORM_COLOR;
-    If cbNoDateEnd.Value = True Then
-    Begin
+    if cbNoDateEnd.Value = True then
+    begin
         cxDateEndEdit.Date := EncodeDate(9999, 12, 31);
         cxDateEndEdit.Enabled := false;
         //cbBack.Value := false;
         //cbBack.Blocked := true;
         cxDateEndEdit.Visible := False;
         LblDateEndEdit.Visible := False;
-    End
-    Else
-    Begin
+    end
+    else
+    begin
         //cbBack.Blocked := false;
         cxDateEndEdit.Enabled := True;
         cxDateEndEdit.Visible := True;
         LblDateEndEdit.Visible := True;
-    End;
-End;
-
-Procedure TfrmAddMoving.SelectSmet;
-Begin
-  try
-    DataSetSmet.Close;
-    DataSetSmet.ParamByName('ID_SESSION').AsInt64 := id_session;
-    If MassEdit Then
-        DataSetSmet.ParamByName('ID_ORDER_ITEM').AsVariant := Null
-    Else
-        DataSetSmet.ParamByName('ID_ORDER_ITEM').AsInt64 := id_order_item;
-
-    DataSetSmet.Open;
-
-    {* StoredProcSmet.Close;
-     StoredProcSmet.StoredProcName := 'UP_DT_ID_SH_R_BUFF_MOV_SEL';
-     StoredProcSmet.ParamByName('KEY_SESSION').AsInt64 := id_session;
-     StoredProcSmet.ParamByName('IS_NEW').AsInt64 := 1;
-     StoredProcSmet.ParamByName('ID_MAN_MOVING').AsVariant := Null;
-     //перекладываем данные о идентификаторах ШР во временную таблицу
-     if MassEdit then
-         StoredProcSmet.ParamByName('ID_ORDER_ITEM').AsVariant := Null
-     else
-         StoredProcSmet.ParamByName('ID_ORDER_ITEM').AsInt64 := id_order_item;
-     StoredProcSmet.ExecProc;
-     StoredProcSmet.Close;
-    *}
-   {*  DSetIdShR.SelectSQL.Text := 'SELECT * FROM UP_DT_ID_SH_R_BUFF_MOV_SEL(:key_session ,1, null, :Id_Order_Item)';
-     DSetIdShR.ParamByName('key_session').AsInt64 := id_session;
-     if MassEdit then
-         DataSetSmet.ParamByName('ID_ORDER_ITEM').AsVariant := Null
-     else
-         DataSetSmet.ParamByName('ID_ORDER_ITEM').AsInt64 := id_order_item;
-    *}
-    except on E:Exception
-           do begin
-                 ShowMessage(E.Message);
-           end;
     end;
-End;
+end;
 
-Procedure TfrmAddMoving.btnEditClick(Sender: TObject);
-Var
+procedure TfrmAddMoving.SelectSmet;
+begin
+    try
+        DataSetSmet.Close;
+        DataSetSmet.ParamByName('ID_SESSION').AsInt64 := id_session;
+        if MassEdit then
+            DataSetSmet.ParamByName('ID_ORDER_ITEM').AsVariant := Null
+        else
+            DataSetSmet.ParamByName('ID_ORDER_ITEM').AsInt64 := id_order_item;
+
+        DataSetSmet.Open;
+
+        {* StoredProcSmet.Close;
+         StoredProcSmet.StoredProcName := 'UP_DT_ID_SH_R_BUFF_MOV_SEL';
+         StoredProcSmet.ParamByName('KEY_SESSION').AsInt64 := id_session;
+         StoredProcSmet.ParamByName('IS_NEW').AsInt64 := 1;
+         StoredProcSmet.ParamByName('ID_MAN_MOVING').AsVariant := Null;
+         //перекладываем данные о идентификаторах ШР во временную таблицу
+         if MassEdit then
+             StoredProcSmet.ParamByName('ID_ORDER_ITEM').AsVariant := Null
+         else
+             StoredProcSmet.ParamByName('ID_ORDER_ITEM').AsInt64 := id_order_item;
+         StoredProcSmet.ExecProc;
+         StoredProcSmet.Close;
+        *}
+       {*  DSetIdShR.SelectSQL.Text := 'SELECT * FROM UP_DT_ID_SH_R_BUFF_MOV_SEL(:key_session ,1, null, :Id_Order_Item)';
+         DSetIdShR.ParamByName('key_session').AsInt64 := id_session;
+         if MassEdit then
+             DataSetSmet.ParamByName('ID_ORDER_ITEM').AsVariant := Null
+         else
+             DataSetSmet.ParamByName('ID_ORDER_ITEM').AsInt64 := id_order_item;
+        *}
+    except on E: Exception do
+        begin
+            ShowMessage(E.Message);
+        end;
+    end;
+end;
+
+procedure TfrmAddMoving.btnEditClick(Sender: TObject);
+var
     frm: TfrmAddSmet;
     id_rec: int64;
-Begin
+begin
     frm := TfrmAddSmet.Create(Self);
     frm.Caption := 'Змінити ' + frm.Caption;
     frm.Smet.Value := DataSetSmet['ID_SMET'];
@@ -1305,8 +1298,8 @@ Begin
     frm.RateCount.Value := DataSetSmet['RATE_COUNT'];
     id_rec := TFIBBCDField(DataSetSmet.FBN('ID_REC')).AsInt64;
 
-    If frm.ShowModal = mrOk Then
-    Begin
+    if frm.ShowModal = mrOk then
+    begin
         //Удаляем
         StoredProcSmet.Close;
         StoredProcSmet.StoredProcName := 'UP_DT_MAN_SMET_BUFF_MOV_DEL';
@@ -1336,14 +1329,14 @@ Begin
         StoredProcSmet.Close;
         SelectSmet;
 
-    End;
+    end;
     frm.Free;
-End;
+end;
 
-Procedure TfrmAddMoving.AddBonus;
-Var
+procedure TfrmAddMoving.AddBonus;
+var
     frm: TfmMoveBonusEdit;
-Begin
+begin
     frm := TfmMoveBonusEdit.Create(Self);
     frm.Caption := 'Додати ' + frm.Caption;
     frm.Smets.Database := Database;
@@ -1353,8 +1346,8 @@ Begin
     frm.id_session := id_session;
     frm.mode := 1;
 
-    If frm.ShowModal = mrOk Then
-    Begin
+    if frm.ShowModal = mrOk then
+    begin
         StoredProcSmet.Close;
         StoredProcSmet.StoredProcName := 'UP_DT_MAN_BONUS_BUFF_MOV_INS';
         StoredProcSmet.ParamByName('KEY_SESSION').AsInt64 := id_session;
@@ -1373,12 +1366,12 @@ Begin
         StoredProcSmet.ExecProc;
         StoredProcSmet.Close;
         SelectNad;
-    End;
+    end;
     frm.Free;
-End;
+end;
 
-Procedure TfrmAddMoving.DelBonus;
-Begin
+procedure TfrmAddMoving.DelBonus;
+begin
     StoredProcSmet.Close;
     StoredProcSmet.StoredProcName := 'UP_DT_MAN_BONUS_BUFF_MOV_DEL';
     StoredProcSmet.ParamByName('ID_REC').AsInt64 := DataSetNad['ID_REC'];
@@ -1389,58 +1382,58 @@ Begin
     StoredProcSmet.Close;
 
     DataSetNad.CacheDelete;
-End;
+end;
 
-Procedure TfrmAddMoving.cxGridDBBandedTableView2KeyDown(Sender: TObject;
-    Var Key: Word; Shift: TShiftState);
-Begin
-    If ((DataSetSmet.RecordCount > 0) And (Key = VK_F12)
-        And (ssShift In Shift)) Then
+procedure TfrmAddMoving.cxGridDBBandedTableView2KeyDown(Sender: TObject;
+    var Key: Word; Shift: TShiftState);
+begin
+    if ((DataSetSmet.RecordCount > 0) and (Key = VK_F12)
+        and (ssShift in Shift)) then
         ShowInfo(DataSetSmet);
-End;
+end;
 
-Procedure TfrmAddMoving.cxGridDBBandedTableView4KeyDown(Sender: TObject;
-    Var Key: Word; Shift: TShiftState);
-Begin
-    If ((DataSetNad.RecordCount > 0) And (Key = VK_F12)
-        And (ssShift In Shift)) Then
+procedure TfrmAddMoving.cxGridDBBandedTableView4KeyDown(Sender: TObject;
+    var Key: Word; Shift: TShiftState);
+begin
+    if ((DataSetNad.RecordCount > 0) and (Key = VK_F12)
+        and (ssShift in Shift)) then
         ShowInfo(DataSetNad);
-End;
+end;
 
-Procedure TfrmAddMoving.AbsentChange(Sender: TObject);
-Begin
+procedure TfrmAddMoving.AbsentChange(Sender: TObject);
+begin
     Absent.LabelColor := SYS_MASS_NORM_COLOR;
-    If {FormControl.Mode <> fmInfo} TfrmMoveOrder(owner).Mode <> 2 Then
-    Begin
-        If VarIsNull(Absent.Value) Then
-        Begin
+    if {FormControl.Mode <> fmInfo} TfrmMoveOrder(owner).Mode <> 2 then
+    begin
+        if VarIsNull(Absent.Value) then
+        begin
             //WorkReasonEdit.Blocked := False;
             WorkReasonEdit.AutoSaveToRegistry := True;
-        End
-        Else
-        Begin
+        end
+        else
+        begin
             WorkReasonEdit.AutoSaveToRegistry := False;
             //WorkReasonEdit.Blocked := True;
-        End;
-    End;
+        end;
+    end;
 
-    If Absent.DisplayText = '' Then
-    Begin
+    if Absent.DisplayText = '' then
+    begin
         //Id_Type_Away.Clear;
         //Id_PCard_Away.Clear;
         Id_Type_Away := -1;
         Id_PCard_Away := -1;
 
-    End;
-End;
+    end;
+end;
 
-Procedure TfrmAddMoving.AbsentOpenSprav(Sender: TObject;
-    Var Value: Variant; Var DisplayText: String);
-Const
+procedure TfrmAddMoving.AbsentOpenSprav(Sender: TObject;
+    var Value: Variant; var DisplayText: string);
+const
     INFINITY_DATE = '31.12.9999';
-Var
+var
     frm: TfmUpAbsentForm;
-Begin
+begin
     frm := TfmUpAbsentForm.Create(Self);
     frm.IniAwayType.Database := Database;
     frm.IniAwayType.Transaction := ReadTransaction;
@@ -1450,14 +1443,14 @@ Begin
     frm.ConstSet.Transaction := ReadTransaction;
 
     //if TfrmMoveOrder(owner).Mode <> 1 then
-    If Not VarIsNull(Absent.Value) Then
-    Begin
+    if not VarIsNull(Absent.Value) then
+    begin
         frm.Prepare(Id_Type_Away, Id_PCard_Away,
             Absent.Value);
-    End;
+    end;
 
-    If frm.ShowModal = mrOk Then
-    Begin
+    if frm.ShowModal = mrOk then
+    begin
         Id_Type_Away := frm.Id_Away_Type.Value;
         Value := frm.Id_Key.Value;
         Id_PCard_Away := frm.Id_PCard_Away.Value;
@@ -1475,28 +1468,28 @@ Begin
             //     UnLimit.Value := True;
          end;   }
 
-        If frm.Locate_Id_Type_Away Then
-        Begin
+        if frm.Locate_Id_Type_Away then
+        begin
             // WorkReasonEdit.Value := frm.Id_Work_Reason_W;
             // WorkReasonEdit.DisplayText := frm.Name_Work_Reason_W;
             DisplayText := frm.Name_Type_Away_W + ' працівника '
                 + frm.Id_PCard_Away.DisplayText;
-            If Not VarIsNull(frm.Id_Key.Value) Then
-            Begin
+            if not VarIsNull(frm.Id_Key.Value) then
+            begin
                 DisplayText := DisplayText + ' (підстава: ' + frm.Reason + ')';
-            End;
-        End;
+            end;
+        end;
 
-    End;
+    end;
     frm.Free;
 
-End;
+end;
 
-Function TfrmAddMoving.CheckVacById_Us: Boolean;
-Var
+function TfrmAddMoving.CheckVacById_Us: Boolean;
+var
     IUStoredProc: TpFibStoredProc;
     Res: Integer;
-Begin
+begin
     IUStoredProc := TpFibStoredProc.Create(self);
     IUStoredProc.Database := Database;
     IUStoredProc.Transaction := WriteTransaction;
@@ -1508,27 +1501,25 @@ Begin
     IUStoredProc.Close;
     IUStoredProc.Free;
 
-    If (Res = 1)
-        Then
+    if (Res = 1) then
         Result := true
-    Else
+    else
         Result := false;
-End;
+end;
 
-Procedure TfrmAddMoving.AddIdShrClick(Sender: TObject);
-Begin
-    If (IdShr.Text = '') Then
+procedure TfrmAddMoving.AddIdShrClick(Sender: TObject);
+begin
+    if (IdShr.Text = '') then
         agMessageDlg('Увага!', 'Не можна додавати позицію, якщо не заповнено поле "Ідентифікатор ШР"!', mtInformation, [mbOk]);
 
-    If (((IdShr.Text = '') And (RateCount.Value = Null)) or ((IdShr.Text = '') And (cntHours.Text = '')) ) Then
+    if (((IdShr.Text = '') and (RateCount.Value = Null)) or ((IdShr.Text = '') and (cntHours.Text = ''))) then
         exit;
 
     DSetIdShR.Close;
     DSetIdShR.Open;
 
-    If CheckShR
-        Then
-    Begin
+    if CheckShR then
+    begin
         InsertShR.StoredProcName := 'UP_ACCEPT_SH_R_INS';
         InsertShR.Prepare;
         InsertShR.ParamByName('KEY_SESSION').AsInt64 := id_session;
@@ -1544,17 +1535,17 @@ Begin
         RateCount.Value := Null;
 
         SaveDataOnIdShr;
-    End;
+    end;
 
-End;
+end;
 
-Procedure TfrmAddMoving.DelIdShRClick(Sender: TObject);
-Begin
+procedure TfrmAddMoving.DelIdShRClick(Sender: TObject);
+begin
     {    if ShRDataSet.Active
             then if ShRDataSet.RecordCount > 0
             then ShRDataSet.Delete;}
-    If DSetIdShR.RecordCount > 0 Then
-    Begin
+    if DSetIdShR.RecordCount > 0 then
+    begin
         InsertShR.StoredProcName := 'UP_ACCEPT_SH_R_DEL_IDSHR';
         InsertShR.Prepare;
         InsertShR.ParamByName('KEY_SESSION').AsInt64 := id_session;
@@ -1563,9 +1554,9 @@ Begin
         FindOnIdShr(false);
         DSetIdShR.Close;
         DSetIdShR.Open;
-    End;
-    If DSetIdShR.IsEmpty Then
-    Begin
+    end;
+    if DSetIdShR.IsEmpty then
+    begin
         ShowButton.Caption := '<<';
         IdShrPanel.Align := alTop;
         Panel_Bottom.Align := alCustom; //alClient;
@@ -1576,16 +1567,14 @@ Begin
         DepartmentEdit.Blocked := False;
         PosadOkladEdit.Blocked := False;
         PersonalTypeEdit.Blocked := False;
-    End;
-End;
+    end;
+end;
 
-Procedure TfrmAddMoving.ShowButtonClick(Sender: TObject);
-Begin
-    If (ShowButton.Caption = '<<')
-        Then
-    Begin
-        If Not DSetIdShR.Active
-            Then
+procedure TfrmAddMoving.ShowButtonClick(Sender: TObject);
+begin
+    if (ShowButton.Caption = '<<') then
+    begin
+        if not DSetIdShR.Active then
             DSetIdShR.Active := True;
         ShowButton.Caption := '>>';
         IdShrPanel.Align := alClient;
@@ -1595,9 +1584,9 @@ Begin
         AddIdShr.Visible := True;
         Panel_Bottom.Visible := False;
 
-    End
-    Else
-    Begin
+    end
+    else
+    begin
         ShowButton.Caption := '<<';
         IdShrPanel.Align := alTop;
         Panel_Bottom.Align := alCustom; //alClient;
@@ -1605,125 +1594,119 @@ Begin
         AddIdShr.Visible := false;
         Panel_Bottom.Visible := True;
         Panel2.Top := Panel_Bottom.Top + Panel_Bottom.Height;
-    End;
-End;
+    end;
+end;
 
-Function TfrmAddMoving.CheckShR: Boolean;
-Var
+function TfrmAddMoving.CheckShR: Boolean;
+var
     IUStoredProc: TpFibStoredProc;
     Res: Integer;
-    Mess: String;
-Begin
+    Mess: string;
+begin
     Res := 1;
     IUStoredProc := TpFibStoredProc.Create(self);
     IUStoredProc.Database := Database;
     IUStoredProc.Transaction := ReadTransaction;
     IUStoredProc.StoredProcName := 'UP_ACCEPT_CHECK_SH_R';
 
-    If DSetIdShR.RecordCount > 0
-        Then
-    Begin
+    if DSetIdShR.RecordCount > 0 then
+    begin
         DSetIdShR.First;
-        While (Not DSetIdShR.Eof) And (Res = 1) Do
-        Begin
-            If DSetIdShR.FieldByName('ID_SH_R').Value = IdShr.Value
-                Then
-            Begin
+        while (not DSetIdShR.Eof) and (Res = 1) do
+        begin
+            if DSetIdShR.FieldByName('ID_SH_R').Value = IdShr.Value then
+            begin
                 Res := 0;
                 agMessageDlg('Увага!', 'Не можна додавати однакові значення ідентифікатору ШР!', mtInformation, [mbOk]);
-            End
-            Else
-            Begin
+            end
+            else
+            begin
                 IUStoredProc.Prepare;
                 IUStoredProc.ParamByName('ID_SH_R').Value := DSetIdShR.FieldByName('ID_SH_R').Value;
                 IUStoredProc.ParamByName('ID_SH_R_PROV').Value := IdShr.Value;
                 IUStoredProc.ExecProc;
                 Res := IUStoredProc.ParamByName('RESULT').Value;
                 Mess := IUStoredProc.ParamByName('MESS').Value;
-                If Res = 0 Then
+                if Res = 0 then
                     agMessageDlg('Увага!', Mess, mtInformation, [mbOk]);
                 DSetIdShR.Next;
-            End;
-        End;
+            end;
+        end;
         IUStoredProc.Free;
-    End
-    Else
-    Begin
+    end
+    else
+    begin
         IUStoredProc.Prepare;
         IUStoredProc.ParamByName('ID_SH_R').Value := Null;
         IUStoredProc.ParamByName('ID_SH_R_PROV').Value := IdShr.Value;
         IUStoredProc.ExecProc;
         Res := IUStoredProc.ParamByName('RESULT').Value;
         Mess := IUStoredProc.ParamByName('MESS').Value;
-        If Res = 0 Then
+        if Res = 0 then
             agMessageDlg('Увага!', Mess, mtInformation, [mbOk]);
-    End;
+    end;
 
-    If (Res = 1)
-        Then
+    if (Res = 1) then
         Result := true
-    Else
+    else
         Result := false;
-End;
+end;
 
-Procedure TfrmAddMoving.FindOnIdShr(Flag: Boolean);
-Var
+procedure TfrmAddMoving.FindOnIdShr(Flag: Boolean);
+var
     OldValue, i: integer;
-Begin
-    If Flag Then
-    Begin
+begin
+    if Flag then
+    begin
         {поля не заполнены, в таблице ничего нет}
-        If ((DSetIdShR.RecordCount = 0) And
-            ((IdShr.Text = '') And ((RateCount.Text = '') Or (cntHours.Text = ''))))
-            Then
-        Begin
+        if ((DSetIdShR.RecordCount = 0) and
+            ((IdShr.Text = '') and ((RateCount.Text = '') or (cntHours.Text = '')))) then
+        begin
             agMessageDlg('Увага!', 'За введеним(-и) ідентифікатором(-ами) ШР дані не знайдено!', mtInformation, [mbOk]);
             DepartmentEdit.Blocked := False;
             PosadOkladEdit.Blocked := False;
             PersonalTypeEdit.Blocked := False;
             exit;
-        End;
+        end;
 
-        If (IdShr.Text = '') Then
-        Begin
+        if (IdShr.Text = '') then
+        begin
             agMessageDlg('Увага!', 'Не можна додавати позицію, якщо не заповнено поле "Ідентифікатор ШР"!', mtInformation, [mbOk]);
             DepartmentEdit.Blocked := False;
             PosadOkladEdit.Blocked := False;
             PersonalTypeEdit.Blocked := False;
             Exit;
-        End;
-
-        If (IdShr.Text <> '') Then
-        begin
-          if ((RateCount.Text = '') and (cntHours.Text = '')) then
-          Begin
-              agMessageDlg('Увага!', 'Не можна додавати позицію, якщо не заповнено поле "Кількість ставок" або "Кількість годин"!', mtInformation, [mbOk]);
-              DepartmentEdit.Blocked := False;
-              PosadOkladEdit.Blocked := False;
-              PersonalTypeEdit.Blocked := False;
-              Exit;
-          End;
-
-          if ((RateCount.Text <> '') and (cntHours.Text <> '')) then
-          Begin
-              agMessageDlg('Увага!', 'Треба заповнити поле або "Кількість ставок" або "Кількість годин"!', mtInformation, [mbOk]);
-              DepartmentEdit.Blocked := False;
-              PosadOkladEdit.Blocked := False;
-              PersonalTypeEdit.Blocked := False;
-              Exit;
-          End;
         end;
 
-        If ((IdShr.Text <> '') And ((RateCount.Text <> '') or (cntHours.Text <> '')))
-            Then
-        Begin
+        if (IdShr.Text <> '') then
+        begin
+            if ((RateCount.Text = '') and (cntHours.Text = '')) then
+            begin
+                agMessageDlg('Увага!', 'Не можна додавати позицію, якщо не заповнено поле "Кількість ставок" або "Кількість годин"!', mtInformation, [mbOk]);
+                DepartmentEdit.Blocked := False;
+                PosadOkladEdit.Blocked := False;
+                PersonalTypeEdit.Blocked := False;
+                Exit;
+            end;
+
+            if ((RateCount.Text <> '') and (cntHours.Text <> '')) then
+            begin
+                agMessageDlg('Увага!', 'Треба заповнити поле або "Кількість ставок" або "Кількість годин"!', mtInformation, [mbOk]);
+                DepartmentEdit.Blocked := False;
+                PosadOkladEdit.Blocked := False;
+                PersonalTypeEdit.Blocked := False;
+                Exit;
+            end;
+        end;
+
+        if ((IdShr.Text <> '') and ((RateCount.Text <> '') or (cntHours.Text <> ''))) then
+        begin
             {добавляем данные в таблицу}
             //DSetIdShR.Close;
             //DSetIdShR.Open;
 
-            If CheckShR
-                Then
-            Begin
+            if CheckShR then
+            begin
                 InsertShR.StoredProcName := 'UP_ACCEPT_SH_R_INS';
                 InsertShR.Prepare;
                 InsertShR.ParamByName('KEY_SESSION').AsInt64 := id_session;
@@ -1740,25 +1723,23 @@ Begin
                 DSetIdShR.FetchAll;
 
                 IdShr.Text := '';
-                RateCount.Text :='';
+                RateCount.Text := '';
                 cntHours.Text := '';
-            End
-            Else
-            Begin
+            end
+            else
+            begin
                 exit;
-            End;
-        End;
+            end;
+        end;
 
         SaveDataOnIdShr;
         FactOkladEdit.Blocked := False;
 
         {разворачиваем таблицу, по которой будет выполнятся поиск}
-        If (ShowButton.Caption = '<<')
-            Then
-        Begin
-            If Not DSetIdShR.Active
-                Then
-                DSetIdShR.Active := True;  
+        if (ShowButton.Caption = '<<') then
+        begin
+            if not DSetIdShR.Active then
+                DSetIdShR.Active := True;
             ShowButton.Caption := '>>';
             IdShrPanel.Align := alClient;
             Panel_Bottom.Align := alBottom;
@@ -1766,18 +1747,17 @@ Begin
 
             AddIdShr.Visible := True;
             Panel_Bottom.Visible := False;
-        End;
-    End;
-End;
+        end;
+    end;
+end;
 
-Procedure TfrmAddMoving.SaveDataOnIdShr;
-Var
+procedure TfrmAddMoving.SaveDataOnIdShr;
+var
     OldValue, i: integer;
-Begin
+begin
     {если есть данные для поиска, то ищем}
-    If (DSetIdShR.RecordCount > 0)
-        Then
-    Begin
+    if (DSetIdShR.RecordCount > 0) then
+    begin
         FindIdShR.Enabled := False;
         IdShr.Properties.ReadOnly := True;
         IdShr.Style.Color := $00EBEBEB;
@@ -1790,7 +1770,7 @@ Begin
         PersonalTypeEdit.Blocked := True;
         PosadOkladEdit.Blocked := True;
 
-        Try
+        try
             IdShRSelect.Close;
             IdShRSelect.SelectSQL.Text := 'SELECT * FROM UP_DT_ID_SH_R_SELECT(:DATE_BEG, :DATE_END, :KEY_SESSION, :ID_PCARD)';
             IdShRSelect.ParamByName('DATE_BEG').AsDate := cxDateBegEdit.Date;
@@ -1800,10 +1780,10 @@ Begin
             IdShRSelect.Open;
             IdShRSelect.FetchAll;
 
-            If IdShRSelect.RecordCount > 0 Then
-            Begin
-                If VarIsNull(IdShRSelect['Id_Department']) Then
-                Begin
+            if IdShRSelect.RecordCount > 0 then
+            begin
+                if VarIsNull(IdShRSelect['Id_Department']) then
+                begin
                     agMessageDlg('Увага!', 'За введеним(-и) ідентифікатором(-ами) ШР дані не знайдено!', mtInformation, [mbOk]);
                     FindIdShR.Enabled := True;
                     IdShr.Properties.ReadOnly := False;
@@ -1814,7 +1794,7 @@ Begin
                     PersonalTypeEdit.Blocked := False;
                     IdShRSelect.Close;
                     exit;
-                End;
+                end;
 
                 DepartmentEdit.Blocked := True;
                 PersonalTypeEdit.Blocked := True;
@@ -1830,7 +1810,7 @@ Begin
                 PersonalTypeEdit.Value := IdShRSelect['ID_TYPE_POST'];
                 PersonalTypeEdit.DisplayText := IdShRSelect['NAME_TYPE_POST'];
 
-                cntMonth.Visible := (IdShRSelect['is_ped_work']=1);
+                cntMonth.Visible := (IdShRSelect['is_ped_work'] = 1);
                 lblMonth.Visible := cntMonth.Visible;
                 IsPedType := cntMonth.Visible;
 
@@ -1845,23 +1825,23 @@ Begin
                 SmetShR.Open;
                 SmetShR.FetchAll;
 
-                If SmetShR.RecordCount > 0 Then
-                Begin
+                if SmetShR.RecordCount > 0 then
+                begin
                     StoredProcSmet.StoredProcName := 'UP_DT_MAN_MOVING_BUFF_DEL_ALL';
                     StoredProcSmet.Prepare;
                     StoredProcSmet.ParamByName('KEY_SESSION').AsInt64 := id_session;
-                    Try
+                    try
                         StoredProcSmet.ExecProc;
-                    Except
+                    except
                         StoredProcSmet.Close;
                         exit;
-                    End;
+                    end;
 
                     StoredProcSmet.Close;
                     StoredProcSmet.StoredProcName := 'UP_DT_MAN_SMET_BUFF_MOV_INS';
                     SmetShR.First;
-                    For i := 0 To SmetShR.RecordCount - 1 Do
-                    Begin
+                    for i := 0 to SmetShR.RecordCount - 1 do
+                    begin
                         StoredProcSmet.Close;
                         StoredProcSmet.ParamByName('ID_SMET').Value := SmetShR['ID_SMET'];
                         StoredProcSmet.ParamByName('ID_SMET_PPS').Value := SmetShR['ID_SMET_PPS'];
@@ -1876,8 +1856,8 @@ Begin
                         SelectSmet;
                         rc2 := DataSetSmet['RATE_COUNT']; //f
                         SmetShR.Next;
-                    End;
-                End;
+                    end;
+                end;
 
                 DataSetSmet.Close;
                 DataSetSmet.ParamByName('ID_SESSION').AsInt64 := id_session;
@@ -1891,14 +1871,14 @@ Begin
                 {if not VarIsNull(PosadOkladEdit.Value) then }PosadOkladEdit.Blocked := True;
                 {if not VarIsNull(FactOkladEdit.Value) then }FactOkladEdit.Blocked := True;
                 {if not VarIsNull(PersonalTypeEdit.Value) then }PersonalTypeEdit.Blocked := True;
-            End
-            Else
-            Begin
+            end
+            else
+            begin
                 agMessageDlg('Увага!', 'За введеним(-и) ідентифікатором(-ами) ШР дані не знайдено!', mtInformation, [mbOk]);
-            End;
+            end;
 
-        Except On e: Exception Do
-            Begin
+        except on e: Exception do
+            begin
                 ShowMessage(e.Message);
                 FindIdShR.Enabled := True;
                 IdShr.Properties.ReadOnly := False;
@@ -1907,87 +1887,87 @@ Begin
                 DepartmentEdit.Blocked := False;
                 PosadOkladEdit.Blocked := False;
                 PersonalTypeEdit.Blocked := False;
-            End;
-        End;
+            end;
+        end;
         FindIdShR.Enabled := True;
         IdShr.Properties.ReadOnly := False;
         IdShr.Style.Color := clWindow;
         RateCount.Enabled := true;
-    End;
-End;
+    end;
+end;
 
-Procedure TfrmAddMoving.Act_Find_Id_ShRExecute(Sender: TObject);
-Begin
+procedure TfrmAddMoving.Act_Find_Id_ShRExecute(Sender: TObject);
+begin
     FindOnIdShr(true);
-End;
+end;
 
-Procedure TfrmAddMoving.cxDateBegEditPropertiesChange(Sender: TObject);
-Begin
-    If IsEditSmet Then
-    Begin
-        If cxDateBegEdit.Date < Date_B Then
-        Begin
+procedure TfrmAddMoving.cxDateBegEditPropertiesChange(Sender: TObject);
+begin
+    if IsEditSmet then
+    begin
+        if cxDateBegEdit.Date < Date_B then
+        begin
             agMessageDlg('Увага!', 'Початок не може бути менш ніж дата початку трудового договору!', mtError, [mbOk]);
             cxDateBegEdit.SetFocus;
             cxDateBegEdit.Style.Color := clRed;
             Exit;
-        End;
-    End;
+        end;
+    end;
     FillWorkModeDSet(WMByPeriodSet, cxDateBegEdit.Date, cxDateEndEdit.Date, IdWorkMode, Null, Null, ShiftEdit.Value, 7);
     FillWorkModeGrid(WorkModeGridTableView1, WMByPeriodSet);
-End;
+end;
 
-Procedure TfrmAddMoving.ShiftEditPropertiesChange(Sender: TObject);
-Begin
-    If ShiftEdit.Value > MaxBound - 1 Then
+procedure TfrmAddMoving.ShiftEditPropertiesChange(Sender: TObject);
+begin
+    if ShiftEdit.Value > MaxBound - 1 then
         ShiftEdit.Value := MaxBound - 1;
-    If ShiftEdit.Value < 0 Then
+    if ShiftEdit.Value < 0 then
         ShiftEdit.Value := 0;
     FillWorkModeDSet(WMByPeriodSet, cxDateBegEdit.Date, cxDateEndEdit.Date, IdWorkMode, Null, Null, ShiftEdit.Value, 7);
     FillWorkModeGrid(WorkModeGridTableView1, WMByPeriodSet);
-End;
+end;
 
-Procedure TfrmAddMoving.cxDateEndEditPropertiesChange(Sender: TObject);
-Begin
+procedure TfrmAddMoving.cxDateEndEditPropertiesChange(Sender: TObject);
+begin
     FillWorkModeDSet(WMByPeriodSet, cxDateBegEdit.Date, cxDateEndEdit.Date, IdWorkMode, Null, Null, ShiftEdit.Value, 7);
     FillWorkModeGrid(WorkModeGridTableView1, WMByPeriodSet);
-End;
+end;
 
-Procedure TfrmAddMoving.WorkModeSpravPropertiesButtonClick(Sender: TObject;
+procedure TfrmAddMoving.WorkModeSpravPropertiesButtonClick(Sender: TObject;
     AButtonIndex: Integer);
-Var
+var
     res: Variant;
     Parameter: TTuSimpleParam;
-Begin
+begin
     Parameter := TTuSimpleParam.Create;
     Parameter.DB_Handle := Database.Handle;
     Parameter.Owner := self;
     Parameter.CFStyle := tfsModal;
     res := DoFunctionFromPackage(Parameter, Tu_SpWorkMode_Pack);
-    If VarIsArray(res) Then
-    Begin
+    if VarIsArray(res) then
+    begin
         IdWorkMode := res[0];
         WorkModeSprav.Text := res[1];
         MaxBound := res[2];
-    End;
+    end;
     FillWorkModeDSet(WMByPeriodSet, cxDateBegEdit.Date, cxDateEndEdit.Date, IdWorkMode, Null, Null, ShiftEdit.Value, 7);
     FillWorkModeGrid(WorkModeGridTableView1, WMByPeriodSet);
     Parameter.Destroy;
-End;
+end;
 
-Procedure TfrmAddMoving.EditBonusSmetExecute(Sender: TObject);
-Var
+procedure TfrmAddMoving.EditBonusSmetExecute(Sender: TObject);
+var
     frm: TfmMoveBonusEdit;
-    er: String;
+    er: string;
     Id: Integer;
     SmDateBeg, SmDateEnd: TDate;
-Begin
-    If cxPageControl1.ActivePage = cxTabSheet1 Then
+begin
+    if cxPageControl1.ActivePage = cxTabSheet1 then
         Exit;
-    If ((btnEditBonusSmet.Visible = ivNever) Or (btnEditBonusSmet.Enabled = False)) Then
+    if ((btnEditBonusSmet.Visible = ivNever) or (btnEditBonusSmet.Enabled = False)) then
         Exit;
-    If ((IsEditSmet) And (DataSetNad['id_calc_type'] <> 1)
-        And (DataSetNad['id_calc_type'] <> 4)) Then
+    if ((IsEditSmet) and (DataSetNad['id_calc_type'] <> 1)
+        and (DataSetNad['id_calc_type'] <> 4)) then
         Exit;
     Id := DataSetNad['id_rec'];
     frm := TfmMoveBonusEdit.Create(Self);
@@ -1996,10 +1976,10 @@ Begin
     frm.Percent.Blocked := True;
     frm.Summa.Blocked := True;
     frm.Kod_Sm_Pps.Blocked := True;
-    If IsEditSmet Then
+    if IsEditSmet then
         frm.All_Periods.Blocked := True
-    Else
-    Begin
+    else
+    begin
         frm.All_Periods.Value := False;
         frm.All_Periods.Visible := False;
         frm.Smeta.Blocked := True;
@@ -2011,26 +1991,26 @@ Begin
         frm.LblDateEnd.Top := 168;
         frm.cxDateBeg.Top := 168;
         frm.cxDateEnd.Top := 168;
-    End;
+    end;
     frm.IdRaise.Required := False;
     frm.IdRaise.DisplayText := DataSetNad['raise_name'];
-    If DataSetNad['percent'] = DataSetNad['summa'] Then
+    if DataSetNad['percent'] = DataSetNad['summa'] then
         frm.Summa.Value := DataSetNad['summa']
-    Else
+    else
         frm.Percent.Value := DataSetNad['percent'];
     frm.Smeta.Value := DataSetNad['id_smet'];
     frm.Smeta.DisplayText := DataSetNad['Smeta_Name'];
-    If Not VarIsNull(DataSetNad['Id_Smet_Pps']) Then
-    Begin
+    if not VarIsNull(DataSetNad['Id_Smet_Pps']) then
+    begin
         frm.Kod_Sm_Pps.Value := DataSetNad['Id_Smet_Pps'];
         frm.Kod_Sm_Pps.DisplayText := DataSetNad['Smeta_Pps_Name'];
-    End;
+    end;
     frm.cxDateBeg.Date := DataSetNad['date_beg'];
     SmDateBeg := DataSetNad['date_beg'];
     frm.cxDateEnd.Date := DataSetNad['date_end'];
     SmDateEnd := DataSetNad['date_end'];
-    If frm.ShowModal = mrOk Then
-    Begin
+    if frm.ShowModal = mrOk then
+    begin
         UpdBonusSmet.StoredProcName := 'UP_DT_MAN_BONUS_BUFF_MOV_UPD';
         UpdBonusSmet.Prepare;
         UpdBonusSmet.ParamByName('key_session').AsInteger := id_session;
@@ -2047,170 +2027,275 @@ Begin
         UpdBonusSmet.ParamByName('SMET_PERIOD_END').AsDate := SmDateEnd;
         UpdBonusSmet.ExecProc;
         er := UpdBonusSmet.FieldByName('ERROR_MESSAGE').AsString;
-        If er <> 'No' Then
+        if er <> 'No' then
             agMessageDlg('Увага!', er, mtInformation, [mbOK]);
-    End;
+    end;
     SelectSmet;
     SelectNad;
     frm.Free;
     DataSetNad.Locate('Id_Rec', Id, []);
-End;
+end;
 
-Procedure TfrmAddMoving.cxTabSheet3Show(Sender: TObject);
-Begin
-    If IsEditSmet = True Then
-    Begin
+procedure TfrmAddMoving.cxTabSheet3Show(Sender: TObject);
+begin
+    if IsEditSmet = True then
+    begin
         btnAdd.Visible := ivNever;
         btnDelete.Visible := ivNever;
-    End;
+    end;
     //else btnEditBonusSmet.Visible:=ivNever;
-End;
+end;
 
-Procedure TfrmAddMoving.cxTabSheet2Show(Sender: TObject);
-Begin
+procedure TfrmAddMoving.cxTabSheet2Show(Sender: TObject);
+begin
     btnAdd.Visible := ivAlways;
     btnDelete.Visible := ivAlways;
-End;
+end;
 
-Procedure TfrmAddMoving.ActAddExecute(Sender: TObject);
-Var
+procedure TfrmAddMoving.ActAddExecute(Sender: TObject);
+var
     frm: TfrmAddSmet;
     mov_dost: Boolean;
-Begin
-  try
-    If cxPageControl1.ActivePage = cxTabSheet1 Then
-        Exit;
-    If ((btnAdd.Visible = ivNever) Or (btnAdd.Enabled = False)) Then
-        Exit;
-    If cxPageControl1.ActivePageIndex = 2 Then
-    Begin
-        AddBonus;
-        exit;
-    End;
+begin
+    try
+        if cxPageControl1.ActivePage = cxTabSheet1 then
+            Exit;
+        if ((btnAdd.Visible = ivNever) or (btnAdd.Enabled = False)) then
+            Exit;
+        if cxPageControl1.ActivePageIndex = 2 then
+        begin
+            AddBonus;
+            exit;
+        end;
 
-    frm := TfrmAddSmet.Create(Self);
-    frm.Caption := 'Додати ' + frm.Caption;
+        frm := TfrmAddSmet.Create(Self);
+        frm.Caption := 'Додати ' + frm.Caption;
 
-    frm.mov_dostup := False;
-    If CheckVacById_Us Then
-        frm.mov_dostup := True
-    Else
         frm.mov_dostup := False;
+        if CheckVacById_Us then
+            frm.mov_dostup := True
+        else
+            frm.mov_dostup := False;
 
+        frm.RateCount.Enabled := not IsPedType;
+        frm.cntHours.Visible := IsPedType;
+        frm.PPSVal.Blocked := IsPedType;
 
-    frm.RateCount.Enabled := not IsPedType;
-    frm.cntHours.Visible := IsPedType;
-    frm.PPSVal.Blocked := IsPedType;
+        if IsPedType then
+        begin
+            frm.lblRateCount.Left := 188;
+            frm.RateCount.Left := 300;
+            frm.LblFreeRate.Left := 361;
+            frm.FreeRate.Left := 475;
+        end;
 
-    if IsPedType then
-    begin
-       frm.lblRateCount.Left := 188;
-       frm.RateCount.Left := 300;
-       frm.LblFreeRate.Left := 361;
-       frm.FreeRate.Left := 475;
+        if (not VarIsNull(FactOkladEdit.Value)) then
+        begin
+            frm.PeriodBeg := cxDateBegEdit.Date;
+            frm.PeriodEnd := cxDateEndEdit.Date;
+            frm.IdPostSalary := FactOkladEdit.Value;
+            frm.IdTypePost := PersonalTypeEdit.Value;
+            frm.cntMonth := StrToInt(cntMonth.Text);
+        end;
+
+        if frm.ShowModal = mrOk then
+        begin
+            StoredProcSmet.Close;
+            StoredProcSmet.StoredProcName := 'UP_DT_MAN_SMET_BUFF_MOV_INS';
+            StoredProcSmet.Prepare;
+            StoredProcSmet.ParamByName('ID_SMET').AsInt64 := frm.Smet.Value;
+            if frm.PPSSmet.Value = null then
+                StoredProcSmet.ParamByName('ID_SMET_PPS').Value := null
+            else
+                StoredProcSmet.ParamByName('ID_SMET_PPS').AsInt64 := frm.PPSSmet.Value;
+            if frm.PPSVal.Value = null then
+                StoredProcSmet.ParamByName('KOEFF_PPS').Value := null
+            else
+                StoredProcSmet.ParamByName('KOEFF_PPS').AsDouble := frm.PPSVal.Value;
+            StoredProcSmet.ParamByName('RATE_COUNT').AsDouble := StrToFloat(frm.RateCount.Text);
+            StoredProcSmet.ParamByName('KEY_SESSION').AsInt64 := id_session;
+            StoredProcSmet.ParamByName('ID_ORDER_ITEM').AsInt64 := id_order_item;
+            StoredProcSmet.ParamByName('ID_SH_R').AsVariant := null; //добавлено без идентификатора ШР
+            if frm.cntHours.Text = '' then
+                StoredProcSmet.ParamByName('HOURS_COUNT').AsDouble := 0
+            else
+                StoredProcSmet.ParamByName('HOURS_COUNT').AsCurrency := frm.cntHours.Value;
+            StoredProcSmet.ExecProc;
+            StoredProcSmet.Close;
+            SelectSmet;
+            rc2 := DataSetSmet['SUM_RATE_COUNT']; //f
+        end;
+        frm.Free;
+    except on E: Exception do
+        begin
+            ShowMessage(e.Message);
+        end;
     end;
+end;
 
-    if (not VarIsNull(FactOkladEdit.Value)) then
-    begin
-        frm.PeriodBeg := cxDateBegEdit.Date;
-        frm.PeriodEnd := cxDateEndEdit.Date;
-        frm.IdPostSalary := FactOkladEdit.Value;
-        frm.IdTypePost := PersonalTypeEdit.Value;
-        frm.cntMonth := StrToInt(cntMonth.Text);
-    end;
+procedure TfrmAddMoving.ActDelExecute(Sender: TObject);
+begin
+    try
+        if cxPageControl1.ActivePage = cxTabSheet1 then
+            Exit;
+        if ((btnDelete.Visible = ivNever) or (btnDelete.Enabled = False)) then
+            Exit;
 
-    If frm.ShowModal = mrOk Then
-    Begin
+        if cxPageControl1.ActivePageIndex = 2 then
+        begin
+            DelBonus;
+            exit;
+        end;
+
         StoredProcSmet.Close;
-        StoredProcSmet.StoredProcName := 'UP_DT_MAN_SMET_BUFF_MOV_INS';
-        StoredProcSmet.Prepare;
-        StoredProcSmet.ParamByName('ID_SMET').AsInt64 := frm.Smet.Value;
-        if frm.PPSSmet.Value = null then StoredProcSmet.ParamByName('ID_SMET_PPS').Value := null
-        else StoredProcSmet.ParamByName('ID_SMET_PPS').AsInt64 := frm.PPSSmet.Value;
-        if frm.PPSVal.Value = null then StoredProcSmet.ParamByName('KOEFF_PPS').Value := null
-        else StoredProcSmet.ParamByName('KOEFF_PPS').AsDouble := frm.PPSVal.Value;
-        StoredProcSmet.ParamByName('RATE_COUNT').AsDouble := StrToFloat(frm.RateCount.Text);
+        StoredProcSmet.StoredProcName := 'UP_DT_MAN_SMET_BUFF_MOV_DEL';
+        StoredProcSmet.ParamByName('ID_REC').AsInt64 := DataSetSmet['ID_REC'];
+        StoredProcSmet.ParamByName('ID_SMET').AsInt64 := DataSetSmet['ID_SMET'];
+        StoredProcSmet.ParamByName('ID_SMET_PPS').Value := DataSetSmet['ID_SMET_PPS'];
+        StoredProcSmet.ParamByName('KOEFF_PPS').Value := DataSetSmet['KOEFF_PPS'];
+        StoredProcSmet.ParamByName('RATE_COUNT').Value := DataSetSmet['RATE_COUNT'];
         StoredProcSmet.ParamByName('KEY_SESSION').AsInt64 := id_session;
         StoredProcSmet.ParamByName('ID_ORDER_ITEM').AsInt64 := id_order_item;
-        StoredProcSmet.ParamByName('ID_SH_R').AsVariant := null; //добавлено без идентификатора ШР
-        if frm.cntHours.Text = '' then  StoredProcSmet.ParamByName('HOURS_COUNT').AsDouble := 0
-        else StoredProcSmet.ParamByName('HOURS_COUNT').AsCurrency := frm.cntHours.Value;
+
         StoredProcSmet.ExecProc;
         StoredProcSmet.Close;
-        SelectSmet;
-        rc2 := DataSetSmet['SUM_RATE_COUNT']; //f
-    End;
-    frm.Free;
-  except on E:Exception
-         do begin
-              ShowMessage(e.Message);
-         end;
-  end;
-End;
 
-Procedure TfrmAddMoving.ActDelExecute(Sender: TObject);
-Begin
-  try
-    If cxPageControl1.ActivePage = cxTabSheet1 Then
-        Exit;
-    If ((btnDelete.Visible = ivNever) Or (btnDelete.Enabled = False)) Then
-        Exit;
-
-    If cxPageControl1.ActivePageIndex = 2 Then
-    Begin
-        DelBonus;
-        exit;
-    End;
-
-    StoredProcSmet.Close;
-    StoredProcSmet.StoredProcName := 'UP_DT_MAN_SMET_BUFF_MOV_DEL';
-    StoredProcSmet.ParamByName('ID_REC').AsInt64 := DataSetSmet['ID_REC'];
-    StoredProcSmet.ParamByName('ID_SMET').AsInt64 := DataSetSmet['ID_SMET'];
-    StoredProcSmet.ParamByName('ID_SMET_PPS').Value := DataSetSmet['ID_SMET_PPS'];
-    StoredProcSmet.ParamByName('KOEFF_PPS').Value := DataSetSmet['KOEFF_PPS'];
-    StoredProcSmet.ParamByName('RATE_COUNT').Value := DataSetSmet['RATE_COUNT'];
-    StoredProcSmet.ParamByName('KEY_SESSION').AsInt64 := id_session;
-    StoredProcSmet.ParamByName('ID_ORDER_ITEM').AsInt64 := id_order_item;
-
-    StoredProcSmet.ExecProc;
-    StoredProcSmet.Close;
-
-    DataSetSmet.CacheDelete;
-    DataSetSmet.CloseOpen(True);
-    if not VarIsNull(DataSetSmet['Sum_Rate_Count']) then rc2 := DataSetSmet['Sum_Rate_Count'];
-  except on E:Exception
-         do begin
-              ShowMessage(E.Message);
-         end;
-  end;
-End;
+        DataSetSmet.CacheDelete;
+        DataSetSmet.CloseOpen(True);
+        if not VarIsNull(DataSetSmet['Sum_Rate_Count']) then
+            rc2 := DataSetSmet['Sum_Rate_Count'];
+    except on E: Exception do
+        begin
+            ShowMessage(E.Message);
+        end;
+    end;
+end;
 
 procedure TfrmAddMoving.cntMonthKeyPress(Sender: TObject; var Key: Char);
 begin
-   if ((Key = #8) or (Key in ['0'..'9'])) then cntMonth.Properties.ReadOnly := false
-   else cntMonth.Properties.ReadOnly := true;
+    if ((Key = #8) or (Key in ['0'..'9'])) then
+        cntMonth.Properties.ReadOnly := false
+    else
+        cntMonth.Properties.ReadOnly := true;
 end;
 
 procedure TfrmAddMoving.cxPageControl1Change(Sender: TObject);
 begin
-   if (cxPageControl1.ActivePage = cxTabSheet2) then
-   begin
-      BotomPanel.Visible := IsPedType;
-   end;
+    if (cxPageControl1.ActivePage = cxTabSheet2) then
+    begin
+        BotomPanel.Visible := IsPedType;
+    end;
 end;
 
 procedure TfrmAddMoving.cntHoursKeyUp(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
+    Shift: TShiftState);
 begin
-   RateCount.Text := '';
+    RateCount.Text := '';
 end;
-
 
 procedure TfrmAddMoving.RateCountKeyUp(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
+    Shift: TShiftState);
 begin
-   cntHours.Text := '';
+    cntHours.Text := '';
 end;
 
-End.
+//Диалог с пользователем после проверки даты перемещение и обрання
+
+function tfrmaddmoving.checkOrderDialog: boolean;
+var
+    dialog: TForm;
+    btnOne, btnTwo, btnEdit, btnSave: TBitBtn;
+    messageText: string;
+begin
+    messageText := 'Термін закінчення дії контракту ';
+
+    if (cxDateEndObrEdit.Date > cxDateEndEdit.Date) then
+        messageText := messageText + 'більший';
+
+    if (cxDateEndObrEdit.Date < cxDateEndEdit.Date) then
+        messageText := messageText + 'менший';
+
+    messageText := messageText + ' за' + #13#10 +
+        'термін закінчення нового переміщення.' + #13#10 + #13#10 +
+        'Термін дії контракту: ' + DateToStr(cxDateBegObrEdit.Date) +
+        ' - ' + DateToStr(cxDateEndObrEdit.Date) + '.' + #13#10 +
+        'Термін нового переміщення: ' + DateToStr(cxDateBegEdit.Date) +
+        ' - ' + DateToStr(cxDateEndEdit.Date) + '.';
+
+    dialog := CreateMessageDialog(messageText
+        , mtWarning, []);
+
+    dialog.Caption := ' Увага';
+
+    btnOne := TBitBtn.Create(dialog);
+    btnOne.Caption := 'Повернутись до редагування';
+    btnOne.Parent := dialog;
+    btnOne.Default := True;
+    btnOne.ModalResult := mrCancel;
+    btnOne.Cancel := True;
+    btnOne.Width := 190;
+    btnOne.Top := dialog.ClientHeight - btnOne.Height - 10;
+    btnOne.Left := 15;
+
+    btnTwo := TBitBtn.Create(dialog);
+    btnTwo.Caption := 'Продовжити збереження';
+    btnTwo.Parent := dialog;
+    btnTwo.ModalResult := mrOk;
+    btnTwo.Width := 190;
+    btnTwo.Top := dialog.ClientHeight - btnTwo.Height - 10;
+    btnTwo.Left := btnOne.Left + btnOne.Width + 10;
+
+    dialog.Width := btnTwo.Left + btnTwo.Width + 20;
+
+    if dialog.ShowModal = mrOk then
+        Result := True
+    else
+        Result := False;
+
+    btnOne.Free;
+    btnTwo.Free;
+    dialog.Free;
+end;
+
+// Функция проверки правильности даты перемещения и обрання
+
+function TfrmAddMoving.checkOrder: Boolean;
+var
+    checkVariant: integer;
+begin
+    if (CondEdit.Value <> null) and (cxDateEndObrEdit.Text<>'') then
+    begin
+        if isContinue then
+            checkVariant := 0;
+        if isEditSmet then
+            checkVariant := 0;
+        if isWorkModeEdit then
+            checkVariant := 0;
+        if isDepartmentEdit then
+            checkVariant := 0;
+        if isChangeTeachingLoad then
+            checkVariant := 0;
+        if isTemp then
+            checkVariant := 1;
+
+        result := True;
+
+        if (checkVariant = 0) then
+        begin
+            if (cxDateEndEdit.Date <> cxDateEndObrEdit.Date) then
+            begin
+                result := False;
+            end;
+        end
+        else
+        begin
+            if not (cxDateEndEdit.Date <= cxDateEndObrEdit.Date) then
+            begin
+                result := False;
+            end;
+        end;
+    end;
+end;
+
+end.
 

@@ -177,17 +177,19 @@ begin
         RaiseDefaults.ParamByName('Id_Raise').AsInteger := IdRaise.Value;
         RaiseDefaults.Open;
 
-        if RaiseDefaults.IsEmpty then Id_Calc_Type := 2
-        else //Id_Calc_Type := RaiseDefaults['Id_Calc_Type'];
-            if ((RaiseDefaults['Id_Calc_Type'] = 1) or
-                (RaiseDefaults['Id_Calc_Type'] = 3) or
-                (RaiseDefaults['Id_Calc_Type'] = 6)) then Id_Calc_Type := 1
-            else Id_Calc_Type := 2;
+        if RaiseDefaults.IsEmpty then
+            Id_Calc_Type := 2
+        else {//Id_Calc_Type := RaiseDefaults['Id_Calc_Type'];} if ((RaiseDefaults['Id_Calc_Type'] = 1) or
+            (RaiseDefaults['Id_Calc_Type'] = 3) or
+            (RaiseDefaults['Id_Calc_Type'] = 6)) then
+            Id_Calc_Type := 1
+        else
+            Id_Calc_Type := 2;
 
         // заполнить процент по умолчанию для случая добавления
         if Mode = 1 then
-            if (not RaiseDefaults.IsEmpty) and (not VarISNUll(RaiseDefaults['Percent']))
-                then Percent.Value := RaiseDefaults['Percent'];
+            if (not RaiseDefaults.IsEmpty) and (not VarISNUll(RaiseDefaults['Percent'])) then
+                Percent.Value := RaiseDefaults['Percent'];
 
         if Id_Calc_Type = 2 then // жесткая надбавка - согласно сметам оклада
         begin
@@ -326,12 +328,13 @@ begin
 end;
 
 procedure TfmMoveBonusEdit.AcceptActionExecute(Sender: TObject);
-var BonCheck: TpFibDataSet;
+var
+    BonCheck: TpFibDataSet;
 begin
-    if not qFCheckAll(Self) then exit;
+    if not qFCheckAll(Self) then
+        exit;
 
-    if not All_Periods.Value
-        then
+    if not All_Periods.Value then
     begin
         // проверка на заполнение даты
         if Trim(cxDateBeg.Text) = '' then
@@ -361,24 +364,20 @@ begin
             Exit;
         end;
 
-
         if not (((cxDateBeg.Date >= TfrmAddMoving(Owner).check_date_beg)
             and (cxDateBeg.Date <= TfrmAddMoving(Owner).check_date_end))
             and ((cxDateEnd.Date >= TfrmAddMoving(Owner).check_date_beg)
             and (cxDateEnd.Date <= TfrmAddMoving(Owner).check_date_end)))
 
-
         {(((cxDateBeg.Date >= TfrmAddMoving(Owner).cxDateBegEdit.Date)
             and (cxDateBeg.Date <= TfrmAddMoving(Owner).cxDateEndEdit.Date))
             and ((cxDateEnd.Date >= TfrmAddMoving(Owner).cxDateBegEdit.Date)
-            and (cxDateEnd.Date <= TfrmAddMoving(Owner).cxDateEndEdit.Date))) }
-        then
+            and (cxDateEnd.Date <= TfrmAddMoving(Owner).cxDateEndEdit.Date))) }then
         begin
             if (((cxDateBeg.Date >= TfrmAddMoving(Owner).cxDateBegEdit.Date)
                 and (cxDateBeg.Date <= TfrmAddMoving(Owner).cxDateEndEdit.Date))
                 and ((cxDateEnd.Date >= TfrmAddMoving(Owner).cxDateBegEdit.Date)
-                and (cxDateEnd.Date <= TfrmAddMoving(Owner).cxDateEndEdit.Date)))
-                then
+                and (cxDateEnd.Date <= TfrmAddMoving(Owner).cxDateEndEdit.Date))) then
             begin
                 agMessageDlg('Увага!', 'Щоб додати цю надбавку з заданими датами треба спочатку зберегти інформацію по фінансуванню!', mtError, [mbOk]);
                 Exit;
@@ -409,10 +408,11 @@ begin
 end;
 
 procedure TfmMoveBonusEdit.NumBonChange(Sender: TObject);
-var CalcTypeBon: TpFibDataSet;
+var
+    CalcTypeBon: TpFibDataSet;
 begin
-    if VarIsNull(NumBon.Value)
-        then exit;
+    if VarIsNull(NumBon.Value) then
+        exit;
 
     try
         PubSprRaise.Close;
@@ -460,4 +460,3 @@ initialization
     RegisterClass(TfmMoveBonusEdit);
 
 end.
-

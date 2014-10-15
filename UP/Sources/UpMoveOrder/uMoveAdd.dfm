@@ -1,6 +1,6 @@
 object frmAddMoving: TfrmAddMoving
-  Left = 503
-  Top = 141
+  Left = 795
+  Top = 282
   Width = 603
   Height = 491
   BorderIcons = [biSystemMenu]
@@ -19,7 +19,7 @@ object frmAddMoving: TfrmAddMoving
   object cxPageControl1: TcxPageControl
     Left = 0
     Top = 0
-    Width = 587
+    Width = 595
     Height = 417
     ActivePage = cxTabSheet1
     Align = alTop
@@ -31,7 +31,7 @@ object frmAddMoving: TfrmAddMoving
       object Panel_Top: TPanel
         Left = 0
         Top = 0
-        Width = 587
+        Width = 595
         Height = 73
         Align = alTop
         BevelOuter = bvNone
@@ -646,9 +646,9 @@ object frmAddMoving: TfrmAddMoving
       OnShow = cxTabSheet2Show
       object cxGrid3: TcxGrid
         Left = 0
-        Top = 46
-        Width = 587
-        Height = 322
+        Top = 44
+        Width = 595
+        Height = 324
         Align = alClient
         TabOrder = 0
         object cxGridDBBandedTableView2: TcxGridDBBandedTableView
@@ -806,15 +806,15 @@ object frmAddMoving: TfrmAddMoving
       object dxBarDockControl1: TdxBarDockControl
         Left = 0
         Top = 0
-        Width = 587
-        Height = 46
+        Width = 595
+        Height = 44
         Align = dalTop
         BarManager = dxBarManager1
       end
       object BotomPanel: TPanel
         Left = 0
         Top = 368
-        Width = 587
+        Width = 595
         Height = 26
         Align = alBottom
         TabOrder = 2
@@ -844,9 +844,9 @@ object frmAddMoving: TfrmAddMoving
       OnShow = cxTabSheet3Show
       object cxGrid6: TcxGrid
         Left = 0
-        Top = 46
-        Width = 587
-        Height = 348
+        Top = 44
+        Width = 595
+        Height = 350
         Align = alClient
         TabOrder = 0
         object cxGridDBBandedTableView4: TcxGridDBBandedTableView
@@ -1081,8 +1081,8 @@ object frmAddMoving: TfrmAddMoving
       object dxBarDockControl2: TdxBarDockControl
         Left = 0
         Top = 0
-        Width = 587
-        Height = 46
+        Width = 595
+        Height = 44
         Align = dalTop
         BarManager = dxBarManager1
       end
@@ -1268,13 +1268,13 @@ object frmAddMoving: TfrmAddMoving
   object Panel2: TPanel
     Left = 0
     Top = 417
-    Width = 587
+    Width = 595
     Height = 35
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 1
     DesignSize = (
-      587
+      595
       35)
     object Bevel1: TBevel
       Left = 0
@@ -1486,8 +1486,8 @@ object frmAddMoving: TfrmAddMoving
   object dxBarManager1: TdxBarManager
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'Segoe UI'
+    Font.Height = -11
+    Font.Name = 'Tahoma'
     Font.Style = []
     Bars = <
       item
