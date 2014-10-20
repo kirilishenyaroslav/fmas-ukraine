@@ -92,8 +92,8 @@ ExeDescription=
 [Directories]
 OutputDir=
 UnitOutputDir=
-PackageDLLOutputDir=..\..\
-PackageDCPOutputDir=..\..\
+PackageDLLOutputDir=..\
+PackageDCPOutputDir=..\
 SearchPath=
 Packages=
 Conditionals=
@@ -133,3 +133,27 @@ LegalTrademarks=
 OriginalFilename=
 ProductName=
 ProductVersion=1.0.0.0
+[Excluded Packages]
+D:\FMAS-WIN\Customizer.bpl=(untitled)
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=D:\Install\For Delphi\Halcyon\;D:\COPY PROJECT\buhg\Source\Sprav\Lena\астеп\Buffer\;D:\Projects\!FMAS-WIN\ASUP\Sources\CommonDB\;D:\Projects\!FMAS-WIN\ASUP\Sources\Buffer\
+[HistoryLists\hlUnitAliases]
+Count=2
+Item0=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;DebugSystem
+Item1=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;
+[HistoryLists\hlSearchPath]
+Count=2
+Item0=$(DELPHI)\Lib\Debug
+Item1=$(DELPHI)\Lib\Debug;C:\Program Files\Automated QA\TestComplete 3\Open Apps\Delphi&BCB\
+[HistoryLists\hlOutputDirectorry]
+Count=3
+Item0=..\..\
+Item1=E:\Donnu_2502\Application\WorkDog
+Item2=..\..\..\
+[HistoryLists\hlBPLOutput]
+Count=1
+Item0=..\..\
+[HistoryLists\hlDCPOutput]
+Count=1
+Item0=..\..\

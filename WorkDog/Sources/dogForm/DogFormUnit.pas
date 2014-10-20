@@ -1431,9 +1431,6 @@ begin
   pFIBQuery1.ExecQuery;
   pFIBQuery1.Transaction.Commit;
 
-
-
-//  ShowMessage('alg 3');
   new_sa := Calc(sa, input.Summa, TFIBBCDField(DataSet.fbn('ID_DOG')).AsInt64);
   // Забираешь у Антона по ИД договора разбивку суммы по договору
   // Calc(Разбивка_Антона, Сумма, ИД_Договора) -  новая разбивка
@@ -2414,6 +2411,8 @@ begin
   DataSetArnd.Next;
  end;
 
+ showmessage('norm1');
+
  DataSetArnd.Close;
 
  for i := 0 to Length(Periods) - 1 do begin
@@ -2437,7 +2436,7 @@ begin
 
   DataSetArnd.Close;
  end;
-
+ showmessage('norm2');
  // Filling sum
 
  St := Sx + InSum;
@@ -2500,6 +2499,7 @@ begin
   if St = 0 then Break;
  end;
 
+ showmessage('norm3');
  // Result := Plan - Fact
 
  for i := 0 to Length(InArray) - 1 do begin
