@@ -1561,6 +1561,7 @@ var
   rs : TResourceStream;
   selected : integer;
   f : TForm;
+  error_mes_note : String;
 begin
   if (cbKod.CurItemIndex = 0) then DbfExport.TranslateASCII := True
       else DbfExport.TranslateASCII := False;
@@ -1662,6 +1663,7 @@ begin
     DbfExport['BUDGET'] := DataSetExport.FBN('BUDGET').AsString;
     DbfExport['NREE'] := DataSetExport.FBN('NREE').AsInteger;
     DbfExport['DATEPOCH'] := DataSetExport.FBN('DATEPOCH').AsDateTime;
+    error_mes_note := DataSetExport.FBN('error_mes_note').AsString;
     DbfExport.Post;
     DataSetExport.Next;
     WaitScreenStep(F);
@@ -1669,6 +1671,7 @@ begin
   DbfExport.Exclusive := false;
   DbfExport.Close;
   WaitScreenClose(f);
+  if(error_mes_note <> '0') then ShowMessage('Примітка була обрізана до 20 символів.');
   ShowMessage('Експорт завершено.');
 end;
 

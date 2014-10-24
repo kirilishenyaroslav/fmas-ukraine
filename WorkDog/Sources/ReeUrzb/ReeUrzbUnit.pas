@@ -342,6 +342,7 @@ var
   rs : TResourceStream;
   selected : integer;
   f : TForm;
+  error_mes_note : String;
 begin
   if (cbKod.CurItemIndex = 0) then DbfExport.TranslateASCII := True
     else DbfExport.TranslateASCII := False;
@@ -473,6 +474,8 @@ begin
     DbfExport['BUDGET'] := DataSetExport.FBN('BUDGET').AsString;
     DbfExport['NREE'] := DataSetExport.FBN('NREE').AsInteger;
     DbfExport['DATEPOCH'] := DataSetExport.FBN('DATEPOCH').AsDateTime;
+    error_mes_note := DataSetExport.FBN('error_mes_note').AsString;
+    if(error_mes_note <> '0') then ShowMessage('У реєстрі '+VarToStr(DataSetExport.FBN('NREE').AsInteger)+' примітка була обрізана до 20 символів.');
     DbfExport.Post;
     DataSetExport.Next;
     WaitScreenStep(F);
