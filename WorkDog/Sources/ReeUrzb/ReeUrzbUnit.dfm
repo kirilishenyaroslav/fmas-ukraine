@@ -1,8 +1,8 @@
 object frmReeUrzb: TfrmReeUrzb
-  Left = 237
-  Top = 238
+  Left = 303
+  Top = 240
   Width = 1043
-  Height = 572
+  Height = 570
   Caption = #1056#1077#1108#1089#1090#1088' '#1102#1088#1080#1076#1080#1095#1085#1080#1093' '#1079#1086#1073#1086#1074#39#1103#1079#1072#1085#1100
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -23,7 +23,7 @@ object frmReeUrzb: TfrmReeUrzb
     Left = 0
     Top = 81
     Width = 1027
-    Height = 433
+    Height = 431
     Align = alClient
     TabOrder = 0
     LookAndFeel.Kind = lfFlat
@@ -171,7 +171,7 @@ object frmReeUrzb: TfrmReeUrzb
   end
   object dxStatusBar1: TdxStatusBar
     Left = 0
-    Top = 514
+    Top = 512
     Width = 1027
     Height = 20
     Panels = <
@@ -3409,7 +3409,8 @@ object frmReeUrzb: TfrmReeUrzb
       'NOTE;C;20;0'
       'BUDGET;C;10;0'
       'NREE;N;5;0'
-      'DATEPOCH;D;8;0')
+      'DATEPOCH;D;8;0'
+      'OZNTN;C;2;0')
     DBFTable = DbfExport
     DBFType = DBaseIV
     Left = 37

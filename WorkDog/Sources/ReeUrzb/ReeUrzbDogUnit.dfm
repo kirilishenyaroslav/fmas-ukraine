@@ -1,8 +1,8 @@
 object frmUrzbDog: TfrmUrzbDog
-  Left = 97
-  Top = 196
-  Width = 1183
-  Height = 729
+  Left = 370
+  Top = 58
+  Width = 1053
+  Height = 702
   Caption = #1056#1077#1108#1089#1090#1088' '#1102#1088#1080#1076#1080#1095#1085#1080#1093' '#1079#1086#1073#1086#1074#39#1103#1079#1072#1085#1100
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -20,8 +20,8 @@ object frmUrzbDog: TfrmUrzbDog
   TextHeight = 13
   object dxStatusBar1: TdxStatusBar
     Left = 0
-    Top = 671
-    Width = 1167
+    Top = 644
+    Width = 1037
     Height = 20
     Panels = <
       item
@@ -69,8 +69,8 @@ object frmUrzbDog: TfrmUrzbDog
   end
   object Panel1: TPanel
     Left = 0
-    Top = 505
-    Width = 1167
+    Top = 478
+    Width = 1037
     Height = 166
     Align = alBottom
     BevelInner = bvLowered
@@ -335,8 +335,8 @@ object frmUrzbDog: TfrmUrzbDog
   object cxGrid2: TcxGrid
     Left = 0
     Top = 50
-    Width = 1167
-    Height = 429
+    Width = 1037
+    Height = 402
     Align = alClient
     BevelInner = bvNone
     TabOrder = 2
@@ -573,6 +573,13 @@ object frmUrzbDog: TfrmUrzbDog
       end
       object cxGrid2TableView1ColumnIfKEKV: TcxGridColumn
         Visible = False
+      end
+      object cxGrid2TableView1ColumnOZNTN: TcxGridColumn
+        Caption = #1050#1086#1076' '#1079#1072#1082#1091#1087#1110#1074#1083#1110
+        PropertiesClassName = 'TcxTextEditProperties'
+        Properties.MaxLength = 2
+        Properties.OnValidate = cxGrid2TableView1ColumnOZNTNPropertiesValidate
+        Width = 64
       end
     end
     object cxGridLevel1: TcxGridLevel
@@ -3201,7 +3208,8 @@ object frmUrzbDog: TfrmUrzbDog
       'NOTE;C;20;0'
       'BUDGET;C;10;0'
       'NREE;N;5;0'
-      'DATEPOCH;D;8;0')
+      'DATEPOCH;D;8;0'
+      'OZNTN;C;2;0')
     DBFTable = DbfExport
     DBFType = DBaseIV
     Left = 224

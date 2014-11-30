@@ -474,6 +474,7 @@ begin
     DbfExport['BUDGET'] := DataSetExport.FBN('BUDGET').AsString;
     DbfExport['NREE'] := DataSetExport.FBN('NREE').AsInteger;
     DbfExport['DATEPOCH'] := DataSetExport.FBN('DATEPOCH').AsDateTime;
+    DbfExport['OZNTN'] := DataSetExport.FBN('OZNTN').AsString;
     error_mes_note := DataSetExport.FBN('error_mes_note').AsString;
     if(error_mes_note <> '0') then ShowMessage('У реєстрі '+VarToStr(DataSetExport.FBN('NREE').AsInteger)+' примітка була обрізана до 20 символів.');
     DbfExport.Post;

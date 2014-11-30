@@ -112,6 +112,7 @@ type
     StProc: TpFIBStoredProc;
     Label3: TLabel;
     cxGrid2TableView1Column_note: TcxGridColumn;
+    cxGrid2TableView1ColumnOZNTN: TcxGridColumn;
     dxBarLargeButton2: TdxBarLargeButton;
     RTransaction: TpFIBTransaction;
     dxBarLargeButton3: TdxBarLargeButton;
@@ -218,6 +219,9 @@ type
     procedure cxGrid2TableView1EditChanged(Sender: TcxCustomGridTableView;
       AItem: TcxCustomGridTableItem);
     procedure dxBarButton10RefClick(Sender: TObject);
+    procedure cxGrid2TableView1ColumnOZNTNPropertiesValidate(
+      Sender: TObject; var DisplayValue: Variant; var ErrorText: TCaption;
+      var Error: Boolean);
   private
     procedure SaveDog;
     function DiscInDrive(Drive: char): Boolean;
@@ -478,6 +482,10 @@ begin
 
                 cxGrid2TableView1ColumnIfKEKV.DataBinding.ValueTypeClass := TcxStringValueType;
                 cxGrid2TableView1ColumnIfKEKV.DataBinding.DataController.Values[i, 20] := '0';
+
+                cxGrid2TableView1ColumnOZNTN.DataBinding.ValueTypeClass := TcxStringValueType;       // 2
+                cxGrid2TableView1ColumnOZNTN.DataBinding.DataController.Values[i, 21] := '';
+
                 DataSetDog.Next;
 
                 cxGrid2TableView1.DataController.Post;
@@ -632,6 +640,9 @@ begin
 
                 cxGrid2TableView1ColumnIfKEKV.DataBinding.ValueTypeClass := TcxStringValueType;
                 cxGrid2TableView1ColumnIfKEKV.DataBinding.DataController.Values[i, 20] := '0';
+
+                cxGrid2TableView1ColumnOZNTN.DataBinding.ValueTypeClass := TcxStringValueType;       // 2
+                cxGrid2TableView1ColumnOZNTN.DataBinding.DataController.Values[i, 21] := '';
                 DataSetDog.Next;
 
                 cxGrid2TableView1.DataController.Post;
@@ -700,6 +711,7 @@ begin
                 StoredProc.ParamByName('ID_URZB_DATA').AsInt64 := cxGrid2TableView1Column_id_urzb.DataBinding.DataController.Values[l, 9];
                 StoredProc.ParamByName('NOTE').Value := cxGrid2TableView1Column_note.DataBinding.DataController.Values[l, 18];
                 StoredProc.ParamByName('SUM_PAY').Value := cxGrid2TableView1Column_summa_fact_pay.DataBinding.DataController.Values[l, 13];
+                StoredProc.ParamByName('OZNTN').Value := cxGrid2TableView1ColumnOZNTN.DataBinding.DataController.Values[l, 21];
                 try
                    StoredProc.ExecProc;
                    StoredProc.Close;
@@ -818,6 +830,7 @@ begin
     cxGrid2TableView1Column_reg_nomer.DataBinding.DataController.Values[i, 15] := DataSet.FBN('REG_NOMER').AsString;
     cxGrid2TableView1Column_note.DataBinding.DataController.Values[i, 18] := DataSet['NOTE'];
     cxGrid2TableView1Column_date_beg.DataBinding.DataController.Values[i, 19] := DataSet['DATE_BEG'];
+    cxGrid2TableView1ColumnOZNTN.DataBinding.DataController.Values[i, 21] := DataSet['OZNTN'];
     DataSet.Next;
   end;
 
@@ -877,11 +890,12 @@ begin
         end
         else
         {Обновляем}
-        begin 
+        begin
             if (cxGrid2TableView1Column_flag_del.DataBinding.DataController.Values[i, 16] = 1) then
             begin
                DelUrzb(i);
             end;
+
                StoredProc.StoredProcName := 'DOG_REE_URZB_DATA_UPD';
                StoredProc.Prepare;
                StoredProc.ParamByName('ID_DOG').AsInt64 := cxGrid2TableView1Column_id_dog.DataBinding.DataController.Values[i, 8];
@@ -899,6 +913,7 @@ begin
                StoredProc.ParamByName('NOTE').Value := cxGrid2TableView1Column_note.DataBinding.DataController.Values[i, 18];
                StoredProc.ParamByName('SUM_PAY').Value := cxGrid2TableView1Column_summa_fact_pay.DataBinding.DataController.Values[i, 13];
                StoredProc.ParamByName('NUMBER_URZB').Value := cxGrid2TableView1Column_n_uz.DataBinding.DataController.Values[i, 0];
+               StoredProc.ParamByName('OZNTN').Value := cxGrid2TableView1ColumnOZNTN.DataBinding.DataController.Values[i, 21];
                 try
                  StoredProc.ExecProc;
                  StoredProc.Close;
@@ -977,6 +992,7 @@ begin
     cxGrid2TableView1Column_flag_del.DataBinding.ValueTypeClass := TcxIntegerValueType;        // 17
     cxGrid2TableView1Column_note.DataBinding.ValueTypeClass  := TcxStringValueType;           // 18
     cxGrid2TableView1ColumnIfKEKV.DataBinding.ValueTypeClass := TcxStringValueType;
+    cxGrid2TableView1ColumnOZNTN.DataBinding.ValueTypeClass := TcxStringValueType;
 
     cxGrid1DBTableView1DBNumInfo.DataBinding.ValueTypeClass:=TcxStringValueType;
     cxGrid1DBTableView1DBColumn1.DataBinding.ValueTypeClass:=TcxStringValueType;
@@ -1169,6 +1185,9 @@ begin
 
       cxGrid2TableView1ColumnIfKEKV.DataBinding.ValueTypeClass := TcxStringValueType;
       cxGrid2TableView1ColumnIfKEKV.DataBinding.DataController.Values[i, 20] := '1';
+
+      cxGrid2TableView1ColumnOZNTN.DataBinding.ValueTypeClass := TcxStringValueType;
+      cxGrid2TableView1ColumnOZNTN.DataBinding.DataController.Values[i, 21] := '';
 
       cxGrid2TableView1.DataController.Post;
 
@@ -1500,6 +1519,7 @@ procedure TfrmUrzbDog.cxGrid2TableView1FocusedRecordChanged(
 begin
   //if (cxGrid2TableView1.DataController.RecordCount <> 0) then
   //begin
+
     pFIBDataSet1.Close;
     pFIBDataSet1.ParamByName('id_urzb_data').AsInt64 := cxGrid2TableView1Column_id_urzb.DataBinding.DataController.Values[cxGrid2TableView1Column_id_urzb.DataBinding.DataController.FocusedRecordIndex, 9];
     pFIBDataSet1.ParamByName('ACTUAL_DATE').AsDate := cxGrid2TableView1Column_date_beg.DataBinding.DataController.Values[cxGrid2TableView1Column_id_urzb.DataBinding.DataController.FocusedRecordIndex, 19];
@@ -1524,9 +1544,10 @@ begin
       cxGrid1DBTableView1DBKekvId.DataBinding.DataController.Values[i, 13] := pFIBDataSet1['ID_KEKV'];
       cxGrid1DBTableView1DBKekvName.DataBinding.DataController.Values[i, 14] := pFIBDataSet1['KEKV_NAME'];
       cxGrid1DBTableView1DBInfoId.DataBinding.DataController.Values[i, 15] := pFIBDataSet1['ID_INFO'];
-      pFIBDataSet1.Next;
+      pFIBDataSet1.Next; 
     end;
-  // end; 
+
+  // end;
 end;
 
 
@@ -1663,6 +1684,7 @@ begin
     DbfExport['BUDGET'] := DataSetExport.FBN('BUDGET').AsString;
     DbfExport['NREE'] := DataSetExport.FBN('NREE').AsInteger;
     DbfExport['DATEPOCH'] := DataSetExport.FBN('DATEPOCH').AsDateTime;
+    DbfExport['OZNTN'] := DataSetExport.FBN('OZNTN').AsString;
     error_mes_note := DataSetExport.FBN('error_mes_note').AsString;
     DbfExport.Post;
     DataSetExport.Next;
@@ -1842,7 +1864,7 @@ begin
       StoredProc.ParamByName('ID_URZB_DATA').AsInt64 := cxGrid2TableView1Column_id_urzb.DataBinding.DataController.Values[i, 9];
       StoredProc.ParamByName('NOTE').Value := cxGrid2TableView1Column_note.DataBinding.DataController.Values[i, 18];
       StoredProc.ParamByName('SUM_PAY').Value := cxGrid2TableView1Column_summa_fact_pay.DataBinding.DataController.Values[i, 13];
-      StoredProc.ParamByName('NUMBER_URZB').Value := cxGrid2TableView1Column_n_uz.DataBinding.DataController.Values[i, 0];
+      StoredProc.ParamByName('OZNTN').Value := cxGrid2TableView1ColumnOZNTN.DataBinding.DataController.Values[i, 21];
       try
          StoredProc.ExecProc;
          StoredProc.Close;
@@ -1939,6 +1961,7 @@ begin
             StProc.Close;
             StProc.Transaction.Commit;
 
+
             for i := 0 to cxGrid2TableView1Column_n_uz.DataBinding.DataController.RecordCount - 1 do
             begin
               StoredProc.StoredProcName := 'DOG_REE_URZB_DATA_UPD';
@@ -1958,6 +1981,7 @@ begin
               StoredProc.ParamByName('NOTE').Value := cxGrid2TableView1Column_note.DataBinding.DataController.Values[i, 18];
               StoredProc.ParamByName('SUM_PAY').Value := cxGrid2TableView1Column_summa_fact_pay.DataBinding.DataController.Values[i, 13];
               StoredProc.ParamByName('NUMBER_URZB').Value := cxGrid2TableView1Column_n_uz.DataBinding.DataController.Values[i, 0];
+              StoredProc.ParamByName('OZNTN').Value := cxGrid2TableView1ColumnOZNTN.DataBinding.DataController.Values[i, 21];
               try
                  StoredProc.ExecProc;
                  StoredProc.Close;
@@ -2080,6 +2104,7 @@ begin
       StProc.Close;
       StProc.Transaction.Commit;
 
+
       for i := 0 to cxGrid2TableView1Column_n_uz.DataBinding.DataController.RecordCount - 1 do
       begin
         StoredProc.StoredProcName := 'DOG_REE_URZB_DATA_UPD';
@@ -2099,6 +2124,7 @@ begin
         StoredProc.ParamByName('NOTE').Value := cxGrid2TableView1Column_note.DataBinding.DataController.Values[i, 18];
         StoredProc.ParamByName('SUM_PAY').Value := cxGrid2TableView1Column_summa_fact_pay.DataBinding.DataController.Values[i, 13];
         StoredProc.ParamByName('NUMBER_URZB').Value := cxGrid2TableView1Column_n_uz.DataBinding.DataController.Values[i, 0];
+        StoredProc.ParamByName('OZNTN').Value := cxGrid2TableView1ColumnOZNTN.DataBinding.DataController.Values[i, 21];
         try
            StoredProc.ExecProc;
            StoredProc.Close;
@@ -2164,6 +2190,7 @@ begin
     StProc.Close;
     StProc.Transaction.Commit;
 
+
     for i := 0 to cxGrid2TableView1Column_n_uz.DataBinding.DataController.RecordCount - 1 do
     begin
       StoredProc.StoredProcName := 'DOG_REE_URZB_DATA_UPD';
@@ -2183,6 +2210,7 @@ begin
       StoredProc.ParamByName('NOTE').Value := cxGrid2TableView1Column_note.DataBinding.DataController.Values[i, 18];
       StoredProc.ParamByName('SUM_PAY').Value := cxGrid2TableView1Column_summa_fact_pay.DataBinding.DataController.Values[i, 13];
       StoredProc.ParamByName('NUMBER_URZB').Value := cxGrid2TableView1Column_n_uz.DataBinding.DataController.Values[i, 0];
+      StoredProc.ParamByName('OZNTN').Value := cxGrid2TableView1ColumnOZNTN.DataBinding.DataController.Values[i, 21];
       try
          StoredProc.ExecProc;
          StoredProc.Close;
@@ -2310,6 +2338,7 @@ procedure TfrmUrzbDog.dxBarButton10RefClick(Sender: TObject);
 var
   l, j : Integer;
 begin
+
   l:=cxGrid2TableView1Column_id_urzb.DataBinding.DataController.FocusedRecordIndex;
   StoredProc.StoredProcName := 'DOG_REE_URZB_DATA_UPD';
   StoredProc.Prepare;
@@ -2327,6 +2356,7 @@ begin
   StoredProc.ParamByName('ID_URZB_DATA').AsInt64 := cxGrid2TableView1Column_id_urzb.DataBinding.DataController.Values[l, 9];
   StoredProc.ParamByName('NOTE').Value := cxGrid2TableView1Column_note.DataBinding.DataController.Values[l, 18];
   StoredProc.ParamByName('SUM_PAY').Value := cxGrid2TableView1Column_summa_fact_pay.DataBinding.DataController.Values[l, 13];
+  StoredProc.ParamByName('OZNTN').Value := cxGrid2TableView1ColumnOZNTN.DataBinding.DataController.Values[l, 21];
   try
     StoredProc.ExecProc;
     StoredProc.Close;
@@ -2370,5 +2400,41 @@ begin
   end;
 end;
 
+
+procedure TfrmUrzbDog.cxGrid2TableView1ColumnOZNTNPropertiesValidate(
+  Sender: TObject; var DisplayValue: Variant; var ErrorText: TCaption;
+  var Error: Boolean);
+var
+  ozntn_kod : String;
+begin
+  StoredProc.StoredProcName := 'DOG_REE_URZB_USE_OZNTN_SELECT';
+   StoredProc.Prepare;
+   StoredProc.ParamByName('KOD').Value := VarToStr(DisplayValue);
+  try
+    StoredProc.ExecProc;
+    StoredProc.Close;
+  except on e: Exception do
+  begin
+     ShowMessage(e.Message);
+     StoredProc.Transaction.Rollback;
+  Exit;
+  end;
+  end;
+  StoredProc.Transaction.Commit;
+
+  if(StoredProc.FldByName['MES'].AsString <> '') then
+  begin
+    ShowMessage(StoredProc.FldByName['MES'].AsString);
+
+    Q1.Close;
+    Q1.SQL.Text := 'select OZNTN from DOG_SYS_OPTIONS';
+    Q1.ExecQuery;
+    ozntn_kod := Q1.FldByName['OZNTN'].AsString;
+    Q1.Close;
+
+    cxGrid2TableView1ColumnOZNTN.DataBinding.DataController.Values[cxGrid2TableView1ColumnOZNTN.DataBinding.DataController.FocusedRecordIndex, 21]:=ozntn_kod;
+  end;
+
+end;
 
 end.
