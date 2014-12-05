@@ -312,7 +312,14 @@ var
     DataSetDog : TpFIBDataSet;
     StrTMP: string;
     AAddKekv : TfrmAddKekv;
+    ozntn_kod : String;
 begin
+        Q1.Close;
+        Q1.SQL.Text := 'select OZNTN from DOG_SYS_OPTIONS';
+        Q1.ExecQuery;
+        ozntn_kod := Q1.FldByName['OZNTN'].AsString;
+        Q1.Close;
+
         DataSetDog := TpFIBDataSet.Create(Self);
 
         DecodeDate(now, myYear, myMonth, myDay);
@@ -484,7 +491,7 @@ begin
                 cxGrid2TableView1ColumnIfKEKV.DataBinding.DataController.Values[i, 20] := '0';
 
                 cxGrid2TableView1ColumnOZNTN.DataBinding.ValueTypeClass := TcxStringValueType;       // 2
-                cxGrid2TableView1ColumnOZNTN.DataBinding.DataController.Values[i, 21] := '';
+                cxGrid2TableView1ColumnOZNTN.DataBinding.DataController.Values[i, 21] := ozntn_kod;
 
                 DataSetDog.Next;
 
@@ -642,7 +649,7 @@ begin
                 cxGrid2TableView1ColumnIfKEKV.DataBinding.DataController.Values[i, 20] := '0';
 
                 cxGrid2TableView1ColumnOZNTN.DataBinding.ValueTypeClass := TcxStringValueType;       // 2
-                cxGrid2TableView1ColumnOZNTN.DataBinding.DataController.Values[i, 21] := '';
+                cxGrid2TableView1ColumnOZNTN.DataBinding.DataController.Values[i, 21] := ozntn_kod;
                 DataSetDog.Next;
 
                 cxGrid2TableView1.DataController.Post;
@@ -1072,7 +1079,14 @@ var
   id_adding_flag:Integer;
   AAddKekv : TfrmAddKekv;
   DateSetTemp : TpFIBDataSet;
+  ozntn_kod : String;
 begin
+    Q1.Close;
+    Q1.SQL.Text := 'select OZNTN from DOG_SYS_OPTIONS';
+    Q1.ExecQuery;
+    ozntn_kod := Q1.FldByName['OZNTN'].AsString;
+    Q1.Close;
+
   AAddKekv:=TfrmAddKekv.Create(self, WorkDatabase.Handle);
   if (AAddKekv.ShowModal <> MrOk) then Exit;
   record_p:=record_p + 1;
@@ -1187,7 +1201,7 @@ begin
       cxGrid2TableView1ColumnIfKEKV.DataBinding.DataController.Values[i, 20] := '1';
 
       cxGrid2TableView1ColumnOZNTN.DataBinding.ValueTypeClass := TcxStringValueType;
-      cxGrid2TableView1ColumnOZNTN.DataBinding.DataController.Values[i, 21] := '';
+      cxGrid2TableView1ColumnOZNTN.DataBinding.DataController.Values[i, 21] := ozntn_kod;
 
       cxGrid2TableView1.DataController.Post;
 
@@ -2406,6 +2420,7 @@ procedure TfrmUrzbDog.cxGrid2TableView1ColumnOZNTNPropertiesValidate(
   var Error: Boolean);
 var
   ozntn_kod : String;
+  l : Integer;
 begin
   StoredProc.StoredProcName := 'DOG_REE_URZB_USE_OZNTN_SELECT';
    StoredProc.Prepare;
@@ -2432,9 +2447,9 @@ begin
     ozntn_kod := Q1.FldByName['OZNTN'].AsString;
     Q1.Close;
 
+    DisplayValue:=ozntn_kod;
     cxGrid2TableView1ColumnOZNTN.DataBinding.DataController.Values[cxGrid2TableView1ColumnOZNTN.DataBinding.DataController.FocusedRecordIndex, 21]:=ozntn_kod;
-  end;
-
+ end;
 end;
 
 end.

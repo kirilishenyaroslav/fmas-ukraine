@@ -1,7 +1,7 @@
 object frmUrzbDog: TfrmUrzbDog
-  Left = 370
-  Top = 58
-  Width = 1053
+  Left = 443
+  Top = 55
+  Width = 846
   Height = 702
   Caption = #1056#1077#1108#1089#1090#1088' '#1102#1088#1080#1076#1080#1095#1085#1080#1093' '#1079#1086#1073#1086#1074#39#1103#1079#1072#1085#1100
   Color = clBtnFace
@@ -21,7 +21,7 @@ object frmUrzbDog: TfrmUrzbDog
   object dxStatusBar1: TdxStatusBar
     Left = 0
     Top = 644
-    Width = 1037
+    Width = 830
     Height = 20
     Panels = <
       item
@@ -70,7 +70,7 @@ object frmUrzbDog: TfrmUrzbDog
   object Panel1: TPanel
     Left = 0
     Top = 478
-    Width = 1037
+    Width = 830
     Height = 166
     Align = alBottom
     BevelInner = bvLowered
@@ -335,7 +335,7 @@ object frmUrzbDog: TfrmUrzbDog
   object cxGrid2: TcxGrid
     Left = 0
     Top = 50
-    Width = 1037
+    Width = 830
     Height = 402
     Align = alClient
     BevelInner = bvNone
