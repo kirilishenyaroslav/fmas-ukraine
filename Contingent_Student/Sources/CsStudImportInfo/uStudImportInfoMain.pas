@@ -92,6 +92,7 @@ type
       function GetStudInfoFromEdbo: Boolean;
       function GetPersonDocument(PersonCodeU: AnsiString; NumDocument: Integer): Variant;
       function GetPersonAdresses(PersonCodeU: AnsiString): variant;
+      function GetPersonContacts(PersonCodeU: AnsiString): string;
        /// property InicFormCaption: string read FInicFormCaption write SetInicFormCaption;
        constructor  Create(AParameter:TcsParamPacks);reintroduce;
   end;
@@ -297,9 +298,9 @@ begin
         EDBOPersonIntf.InParams.Items['UniversityKode'] := PAnsiString(@University_Code_U);
 
         Id_PersonRequestSeasons := ComboBoxSeason.EditValue;
+        Id_PersonRequestSeasons := 4;
         EDBOPersonIntf.InParams.Items['Id_PersonRequestSeasons'] := PInteger(@Id_PersonRequestSeasons);
-
-
+      
         MemoryData_Edbo := TRxMemoryData.Create(Self);
 
         (EDBOPersonIntf as IEDBOTools).GetXMLDataFromService('PersonEducationsFullGet', MemoryData_EDBO);
@@ -742,7 +743,8 @@ var
     Res: Variant;
     Id_Man: Integer;
     Innstr,OtchestvoStr,NumberPassStr,SeriaPassStr,PassVidanStr : string;
-
+    PhoneNumber : String;
+    iPos: integer;
 begin
     Result := True;
     PersonCode  := DM.RxMem_EdboStud['PersonCodeU'];
@@ -751,9 +753,28 @@ begin
     NumberPassStr :=vartostr(NumberPass);
     SeriaPassStr :=vartostr(SeriaPass);
     PassVidanStr :=vartostr(PassVidan);
+    iPos := Pos('`',Familiya);
+    while iPos <> 0 do
+    begin
+        Familiya[iPos] := '''';
+        iPos := Pos('`',Familiya);
+    end;
+    iPos := Pos('`',Imya);
+    while iPos <> 0 do
+    begin
+        Imya[iPos] := '''';
+        iPos := Pos('`',Imya);
+    end;
+    iPos := Pos('`',OtchestvoStr);
+    while iPos <> 0 do
+    begin
+        OtchestvoStr[iPos] := '''';
+        iPos := Pos('`',OtchestvoStr);
+    end;
 
     try
         Res := GetPersonAdresses(PersonCodeU);
+        PhoneNumber := GetPersonContacts(PersonCodeU);
         DM.SyncStorProc.Transaction := DM.SyncTrans;
         DM.SyncStorProc.Transaction.StartTransaction;
 
@@ -780,7 +801,7 @@ begin
         if (length(InnStr) = 10) then //10 cимволов ИНН
             DM.SyncStorProc.ParamByName('INN').AsVariant := inn;
         DM.SyncStorProc.ParamByName('IS_RESIDENT').AsInteger := DM.RxMem_EdboStud['Resident'];
-        DM.SyncStorProc.ParamByName('PHONE_NUMBER').AsString := '';
+        DM.SyncStorProc.ParamByName('PHONE_NUMBER').AsString := PhoneNumber;
         DM.SyncStorProc.ExecProc;
         Id_Man := DM.SyncStorProc.FieldByName('ID_MAN').AsInteger;
         DM.SyncStorProc.Transaction.Commit;
@@ -896,7 +917,45 @@ begin
     end;
 end;
 
-
-
+function TfmStudImportInfo.GetPersonContacts(PersonCodeU: AnsiString): string;
+var
+    MemoryData_Edbo: TRxMemoryData;
+    res_str, str_connect, contact: string;
+    i: integer;
+    type_contact: integer;
+begin
+    try
+        MemoryData_Edbo := TRxMemoryData.Create(Self);
+        EDBOPersonIntf.InParams.Items['PersonCodeU'] := PAnsiString(@PersonCodeU);
+        (EDBOPersonIntf as IEDBOTools).GetXMLDataFromService('PersonContactsGet', MemoryData_Edbo);
+        res_str := '';
+        if MemoryData_Edbo.RecordCount > 0 then
+        begin
+            str_connect := ''; //связка вначале пустая
+            for i := 0 to MemoryData_Edbo.RecordCount - 1 do
+            begin
+                if not (VarIsNull(MemoryData_Edbo['FValue'])) then
+                begin
+                    type_contact := MemoryData_Edbo['FId_PersonContactType'];
+                    if (type_contact in [1, 2]) then //мобильный и телефонный номера
+                    begin
+                        contact := MemoryData_Edbo['FValue'];
+                        res_str := res_str + str_connect + contact; //добавляем связку ', ';
+                        str_connect := ', ';
+                    end;
+                end;
+                MemoryData_Edbo.Next;
+            end;
+        end;
+        result := res_str;
+        MemoryData_Edbo.Close;
+        MemoryData_Edbo.Free;
+    except on E: Exception do
+        begin
+            Showmessage('При імпортуванні контактів фіз.особи виникла помилка' + E.Message);
+            exit;
+        end;
+    end;
+end;                             
 
 end.
