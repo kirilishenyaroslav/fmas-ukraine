@@ -298,7 +298,6 @@ begin
         EDBOPersonIntf.InParams.Items['UniversityKode'] := PAnsiString(@University_Code_U);
 
         Id_PersonRequestSeasons := ComboBoxSeason.EditValue;
-        Id_PersonRequestSeasons := 4;
         EDBOPersonIntf.InParams.Items['Id_PersonRequestSeasons'] := PInteger(@Id_PersonRequestSeasons);
       
         MemoryData_Edbo := TRxMemoryData.Create(Self);
