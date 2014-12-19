@@ -81,7 +81,7 @@ object FZDateAcc2: TFZDateAcc2
     Left = 0
     Top = 76
     Width = 329
-    Height = 603
+    Height = 602
     Align = alLeft
     TabOrder = 1
     object Grid1: TcxGrid
@@ -162,7 +162,7 @@ object FZDateAcc2: TFZDateAcc2
       Left = 1
       Top = 369
       Width = 327
-      Height = 233
+      Height = 232
       Align = alClient
       BorderStyle = cxcbsNone
       TabOrder = 1
@@ -225,14 +225,14 @@ object FZDateAcc2: TFZDateAcc2
     Left = 337
     Top = 76
     Width = 671
-    Height = 603
+    Height = 602
     Align = alClient
     TabOrder = 3
     object Grid3: TcxGrid
       Left = 1
       Top = 1
       Width = 669
-      Height = 414
+      Height = 413
       Align = alClient
       BevelInner = bvNone
       BevelOuter = bvNone
@@ -455,7 +455,7 @@ object FZDateAcc2: TFZDateAcc2
     end
     object Grid5: TcxGrid
       Left = 1
-      Top = 423
+      Top = 422
       Width = 669
       Height = 104
       Align = alBottom
@@ -530,7 +530,7 @@ object FZDateAcc2: TFZDateAcc2
     end
     object PanelGrid3DopData: TPanel
       Left = 1
-      Top = 535
+      Top = 534
       Width = 669
       Height = 67
       Align = alBottom
@@ -651,7 +651,7 @@ object FZDateAcc2: TFZDateAcc2
     end
     object cxSplitter1: TcxSplitter
       Left = 1
-      Top = 527
+      Top = 526
       Width = 669
       Height = 8
       HotZoneClassName = 'TcxMediaPlayer9Style'
@@ -660,7 +660,7 @@ object FZDateAcc2: TFZDateAcc2
     end
     object cxSplitter2: TcxSplitter
       Left = 1
-      Top = 415
+      Top = 414
       Width = 669
       Height = 8
       HotZoneClassName = 'TcxXPTaskBarStyle'
@@ -672,13 +672,13 @@ object FZDateAcc2: TFZDateAcc2
     Left = 329
     Top = 76
     Width = 8
-    Height = 603
+    Height = 602
     HotZoneClassName = 'TcxXPTaskBarStyle'
     Control = Panel1
   end
   object Panel4: TPanel
     Left = 0
-    Top = 679
+    Top = 678
     Width = 1008
     Height = 21
     Align = alBottom

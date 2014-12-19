@@ -420,7 +420,6 @@ end;
 
 procedure TFZDateAcc2.RefreshBtnClick(Sender: TObject);
 begin
-
   DatesAcc2Dm.DSet1.CloseOpen(True);
   DatesAcc2Dm.DSet2.Close;
   DatesAcc2Dm.DSet2.SQLs.SelectSQL.Text:='SELECT * FROM Z_ACC_PEOPLE_LIST_ACCS_VIEW(?ID_MAN,'

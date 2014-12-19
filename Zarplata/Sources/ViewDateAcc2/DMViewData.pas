@@ -63,11 +63,10 @@ begin
   FillSpisokForCountQuery.ParamByName('KIND_OF_CHOOSE').Value:='F';
 
   FillSpisokForCountQuery.ParamByName('HOL_DATE_BEG').Value   :=ConvertKodToDate(KodSetupBeg);
-  FillSpisokForCountQuery.ParamByName('HOL_DATE_END').Value   :=ConvertKodToDate(KodSetupEnd);
-
+  FillSpisokForCountQuery.ParamByName('HOL_DATE_END').Value   :=ConvertKodToDate(KodSetupEnd+1)-1;
 
   FillSpisokForCountQuery.ParamByName('DATE_BEG').Value   :=ConvertKodToDate(KodSetupBeg);
-  FillSpisokForCountQuery.ParamByName('DATE_END').Value   :=ConvertKodToDate(KodSetupEnd);
+  FillSpisokForCountQuery.ParamByName('DATE_END').Value   :=ConvertKodToDate(KodSetupEnd+1)-1;
 
   FillSpisokForCountQuery.ParamByName('IN_ID_MAN').Value:=id_man;
 
@@ -92,7 +91,7 @@ begin
   SProcRaschet.StoredProcName:='Z_PAYMENT_COUNT_VIEW';
   SProcRaschet.ParamByName('id_man').AsInt64:=id_man;
   SProcRaschet.ParamByName('DATE_BEG').AsDate:=ConvertKodToDate(KodSetupBeg);
-  SProcRaschet.ParamByName('DATE_END').AsDate:=ConvertKodToDate(KodSetupEnd);
+  SProcRaschet.ParamByName('DATE_END').AsDate:=ConvertKodToDate(KodSetupEnd+1)-1;
 
   try
     SProcRaschet.ExecProc;
