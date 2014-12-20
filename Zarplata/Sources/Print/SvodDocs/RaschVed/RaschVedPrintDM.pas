@@ -255,6 +255,11 @@ else  PathReport:=FullNameReportTabulkaNoDep;
 
  Report.LoadFromFile(ExtractFilePath(Application.ExeName)+PathReport,True);
 
+ if ((PathReport=FullNameReportTabulkaNoDep) and (AParameter.Id_Group_Account<>-1)) then
+  Report.PreviewOptions.Zoom:=1.5
+ else
+  Report.PreviewOptions.Zoom:=1;
+
  Report.Variables.Clear;
  Report.Variables['P_CODE_DEPARTMENT']:=''''+FZPrintAccList_P_CODE_DEPARTMENT_Text+'''';
  Report.Variables['P_KOD_SETUP_3']:=''''+FZPrintAccList_P_KOD_SETUP_3_Text+'''';
