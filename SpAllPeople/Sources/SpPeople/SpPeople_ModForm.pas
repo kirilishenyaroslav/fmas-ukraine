@@ -291,34 +291,50 @@ begin
     begin
         if FMode = emNew then
         begin
-            GetIdManQuery.Open;
-            IdMan := GetIdManQuery['IDMAN'];
-            GetIdManQuery.Close;
+            try
+                GetIdManQuery.Open;
+                IdMan := GetIdManQuery['IDMAN'];
+                GetIdManQuery.Close;
 
-            PrepareData;
-            ManModProc.Transaction.StartTransaction;
-            ManModProc.ExecProcedure('PUB_ALL_PEOPLE_INSERT', [Familia,
-                Imya, Otchestvo, RusFamilia, RusImya, RusOtchestvo, IdSex,
-                    BirthDate, {Tin} GetCorrectTIN, FIdBirthAdress,
-                    FIdCurrentAdress, IDMAN, SocCardNum, FWork_Phone,
-                    FHome_Phone, FIdNationality, FidGrom, FIdLiveAdress]);
-            ManModProc.Transaction.Commit;
-            Result := True;
-        end;
-        if FMode = emModify then
-        begin
-            if pManModified then
-            begin
                 PrepareData;
                 ManModProc.Transaction.StartTransaction;
-                ManModProc.ExecProcedure('PUB_ALL_PEOPLE_UPDATE', [Familia,
+                ManModProc.ExecProcedure('PUB_ALL_PEOPLE_INSERT', [Familia,
                     Imya, Otchestvo, RusFamilia, RusImya, RusOtchestvo, IdSex,
                         BirthDate, {Tin} GetCorrectTIN, FIdBirthAdress,
                         FIdCurrentAdress, IDMAN, SocCardNum, FWork_Phone,
                         FHome_Phone, FIdNationality, FidGrom, FIdLiveAdress]);
                 ManModProc.Transaction.Commit;
+                Result := True;
+            except
+                on E: Exception do
+                begin
+                    MessageDlg('Не вдалося створити фізичну особу. Причина:' + #10#13 + E.Message, mtError, [mbOk], 0);
+                    ManModProc.Transaction.Rollback;
+                end;
             end;
-            Result := True;
+        end;
+        if FMode = emModify then
+        begin
+            if pManModified then
+            begin
+                try
+                    PrepareData;
+                    ManModProc.Transaction.StartTransaction;
+                    ManModProc.ExecProcedure('PUB_ALL_PEOPLE_UPDATE', [Familia,
+                        Imya, Otchestvo, RusFamilia, RusImya, RusOtchestvo, IdSex,
+                            BirthDate, {Tin} GetCorrectTIN, FIdBirthAdress,
+                            FIdCurrentAdress, IDMAN, SocCardNum, FWork_Phone,
+                            FHome_Phone, FIdNationality, FidGrom, FIdLiveAdress]);
+                    ManModProc.Transaction.Commit;
+                    Result := True;
+                except
+                    on E: Exception do
+                    begin
+                        MessageDlg('Не вдалося змінити фізичну особу. Причина:' + #10#13 + E.Message, mtError, [mbOk], 0);
+                        ManModProc.Transaction.Rollback;
+                    end;
+                end;
+            end;
         end;
     end;
 end;
@@ -1037,6 +1053,7 @@ begin
             pIdPasData := DSPassData['ID_PAS_DATA'];
         DSPassData.Close;
     end;
+
     if ActualPaspCB.Checked then
         DSPassData.SQLs.SelectSQL.Text := 'SELECT * FROM PASS_DATA_GET_BY_ID_MAN('
             + IntToStr(IdMan) + ',''T'')'
@@ -1045,12 +1062,14 @@ begin
             + IntToStr(IdMan) + ',''F'')';
 
     DSPassData.Open;
+
+    if pIdPasData <> -1 then
+        DSPassData.Locate('ID_PAS_DATA', pIdPasData, []);
+
     if VarIsNull(DSPassData['VIDAN']) then
         VidanDBText.Text := ''
     else
         VidanDBText.Text := DSPassData['VIDAN'];
-
-    DSPassData.Locate('ID_PAS_DATA', pIdPasData, []);
 end;
 
 procedure TfModifyMan.cxMaskEdit1PropertiesValidate(Sender: TObject;

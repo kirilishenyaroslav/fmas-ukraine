@@ -66,21 +66,21 @@ object fModifyMan: TfModifyMan
           end
           object Label4: TLabel
             Left = 8
-            Top = 52
+            Top = 54
             Width = 49
             Height = 13
             Caption = #1060#1072#1084#1080#1083#1080#1103
           end
           object Label5: TLabel
             Left = 179
-            Top = 52
+            Top = 54
             Width = 22
             Height = 13
             Caption = #1048#1084#1103
           end
           object Label6: TLabel
             Left = 306
-            Top = 52
+            Top = 54
             Width = 47
             Height = 13
             Caption = #1054#1090#1095#1077#1089#1090#1074#1086
@@ -136,7 +136,7 @@ object fModifyMan: TfModifyMan
           end
           object Label13: TLabel
             Left = 306
-            Top = 97
+            Top = 92
             Width = 73
             Height = 13
             Caption = #1043#1088#1086#1084#1072#1076#1103#1085#1089#1090#1074#1086
@@ -251,7 +251,7 @@ object fModifyMan: TfModifyMan
           end
           object Gromod: TcxButtonEdit
             Left = 305
-            Top = 110
+            Top = 108
             Width = 127
             Height = 21
             Properties.Buttons = <

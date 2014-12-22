@@ -134,11 +134,11 @@ begin
       end; }
    //******************************************************************************
     case FMode of
-        emNew: Caption := 'Паспортні дані:Додати';
-        emModify: Caption := 'Паспортні дані:Редагувати';
+        emNew: Caption := 'Паспортні дані: Додати';
+        emModify: Caption := 'Паспортні дані: Редагувати';
         emView:
             begin
-                Caption := 'Паспортні дані:Перегляд';
+                Caption := 'Паспортні дані: Перегляд';
                 PasportPanel.Enabled := False;
             end;
     end;

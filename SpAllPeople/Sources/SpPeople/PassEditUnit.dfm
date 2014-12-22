@@ -3,7 +3,7 @@ object fPassEdit: TfPassEdit
   Top = 152
   BorderStyle = bsDialog
   Caption = 'fPassEdit'
-  ClientHeight = 310
+  ClientHeight = 315
   ClientWidth = 444
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -45,7 +45,7 @@ object fPassEdit: TfPassEdit
       Caption = #1055#1088#1110#1079#1074#1080#1097#1077
     end
     object Label2: TLabel
-      Left = 168
+      Left = 172
       Top = 16
       Width = 19
       Height = 13
@@ -66,7 +66,7 @@ object fPassEdit: TfPassEdit
       Caption = #1060#1072#1084#1080#1083#1080#1103
     end
     object Label5: TLabel
-      Left = 168
+      Left = 172
       Top = 64
       Width = 22
       Height = 13
@@ -134,7 +134,7 @@ object fPassEdit: TfPassEdit
       OnKeyPress = FamiliaEditKeyPress
     end
     object ImyaEdit: TcxMaskEdit
-      Left = 168
+      Left = 172
       Top = 32
       Width = 113
       Height = 21
@@ -164,7 +164,7 @@ object fPassEdit: TfPassEdit
       OnKeyPress = RusOtchEditKeyPress
     end
     object RusImyaEdit: TcxMaskEdit
-      Left = 168
+      Left = 172
       Top = 80
       Width = 113
       Height = 21
@@ -244,12 +244,14 @@ object fPassEdit: TfPassEdit
     end
     object SelectVidanBtn: TcxButton
       Left = 392
-      Top = 184
-      Width = 25
-      Height = 25
+      Top = 186
+      Width = 20
+      Height = 20
       Caption = '...'
       TabOrder = 10
       OnClick = SelectVidanBtnClick
+      LookAndFeel.Kind = lfUltraFlat
+      LookAndFeel.NativeStyle = False
     end
   end
   object PassTypeDataSet: TpFIBDataSet
