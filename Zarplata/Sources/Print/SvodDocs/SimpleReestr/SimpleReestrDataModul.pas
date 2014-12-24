@@ -13,23 +13,23 @@ function IniFileNameReportByTypeSimpleReestr(TypeSimpleReestr:TTypeSimpleReestr)
 
 
 type
-  TDM = class(TDataModule)
-    DB: TpFIBDatabase;
-    ReadTransaction: TpFIBTransaction;
-    Designer: TfrxDesigner;
+  TSimpleDM = class(TDataModule)
+    SimpleDB: TpFIBDatabase;
+    RTransaction: TpFIBTransaction;
+    SimpleDesigner: TfrxDesigner;
     DSetData: TpFIBDataSet;
     ReportDsetData: TfrxDBDataset;
     DSetGlobalData: TpFIBDataSet;
     ReportDSetGlobalData: TfrxDBDataset;
     UserDSet: TfrxUserDataSet;
     frxXLSExport1: TfrxXLSExport;
-    DSetAdditionalData: TpFIBDataSet;
-    ReportDSetAdditionalData: TfrxDBDataset;
+    DSetAddData: TpFIBDataSet;
+    ReportDSetAddData: TfrxDBDataset;
     DataSourceInput: TDataSource;
     DSetInput: TRxMemoryData;
     frxDBDataset1: TfrxDBDataset;
-    Report: TfrxReport;
-    procedure ReportGetValue(const VarName: String; var Value: Variant);
+    SimpleReport: TfrxReport;
+    procedure SimpleReportGetValue(const VarName: String; var Value: Variant);
   private
     PTypeSimpleReestr:TTypeSimpleReestr;
     PId_man:integer;
@@ -71,7 +71,7 @@ const NameReportDodat23        = 'Reports\Zarplata\ReeDodat23.fr3';
 const NameReportAccrualSingle  = 'Reports\Zarplata\ReeAccrualSingle.fr3';
 const NameReportAccrualSingleForMan  ='Reports\Zarplata\ReeAccrualSingleForMan.fr3';
 
-function TDM.PrintSpr(AParameter:TSimpleReestrParam):variant;
+function TSimpleDM.PrintSpr(AParameter:TSimpleReestrParam):variant;
 var IniFile:TIniFile;
     ViewMode:integer;
     PathReport:string;
@@ -87,7 +87,7 @@ begin
  PId_man:=0;
  PTypeSimpleReestr:=AParameter.TypeSimpleReestr;
  PTn:=0;
- DB.Handle:=AParameter.SvodParam.DB_Handle;
+ SimpleDB.Handle:=AParameter.SvodParam.DB_Handle;
  ReportDsetData.DataSet:=DSetData;
  try
    Screen.Cursor:=crHourGlass;
@@ -142,7 +142,7 @@ begin
     begin
       DSetData.SQLs.SelectSQL.Text:='SELECT * FROM Z_REESTR_ACCRUAL_SINGLE_SUM('+
                                      IntToStr(AParameter.SvodParam.Kod_setup)+',''F'')';
-      DSetAdditionalData.SQLs.SelectSQL.Text:='SELECT * FROM Z_PAR_SET_SELECT_BY_KOD_SETUP('+
+      DSetAddData.SQLs.SelectSQL.Text:='SELECT * FROM Z_PAR_SET_SELECT_BY_KOD_SETUP('+
                                      IntToStr(AParameter.SvodParam.Kod_setup)+')';
       VNameReport:=NameReportAccrualSingle;
     end;
@@ -284,7 +284,7 @@ begin
     DSetData.Open;
     DSetGlobalData.Open;
     if AParameter.TypeSimpleReestr=tsrAccrualSingle then
-      DSetAdditionalData.Open;
+      DSetAddData.Open;
     MemoryData:=TRxMemoryData.Create(self);
     ReportDsetData.DataSet:=MemoryData;    //////////
     MemoryData.FieldDefs.Add('TN',ftInteger);
@@ -435,28 +435,28 @@ begin
                                   VNameReport);
 
    IniFile.Free;
-   Report.Clear;
+   SimpleReport.Clear;
 
-   Report.LoadFromFile(ExtractFilePath(Application.ExeName)+PathReport,True);
+   SimpleReport.LoadFromFile(ExtractFilePath(Application.ExeName)+PathReport,True);
 
-   Report.Variables.Clear;
-   Report.Variables[' '+'User Category']:=NULL;
-   Report.Variables.AddVariable('User Category',
+   SimpleReport.Variables.Clear;
+   SimpleReport.Variables[' '+'User Category']:=NULL;
+   SimpleReport.Variables.AddVariable('User Category',
                                 'PPeriod',
                                  ''''+KodSetupToPeriod(AParameter.SvodParam.Kod_setup,4)+'''');
 
    Screen.Cursor:=crDefault;
    if zDesignReport then
-      Report.DesignReport    else
-      Report.ShowReport;
-   Report.Free;
+      SimpleReport.DesignReport    else
+      SimpleReport.ShowReport;
+   SimpleReport.Free;
 
   finally
    CloseWaitForm(wf);
   end;
 end;
 
-procedure TDM.ReportGetValue(const VarName: String; var Value: Variant);
+procedure TSimpleDM.SimpleReportGetValue(const VarName: String; var Value: Variant);
 var tempIdMan:Integer;
 begin
  case PTypeSimpleReestr of

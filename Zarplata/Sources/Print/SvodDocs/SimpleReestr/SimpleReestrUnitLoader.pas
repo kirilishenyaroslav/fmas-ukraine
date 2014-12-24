@@ -12,9 +12,9 @@ implementation
 uses Math;
 
 function ReportSimpleReestr(Param:TSimpleReestrParam):variant;stdcall;
-var ReportSpr:TDM;
+var ReportSpr:TSimpleDM;
 begin
-  ReportSpr := TDM.Create(Param.SvodParam.AOwner);
+  ReportSpr := TSimpleDM.Create(Param.SvodParam.AOwner);
   ReportSpr.PrintSpr(Param);
   ReportSpr.Free;
 end;

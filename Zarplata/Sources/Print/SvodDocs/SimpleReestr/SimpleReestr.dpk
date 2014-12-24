@@ -55,7 +55,7 @@ requires
   cxExportVCLD7;
 
 contains
-  SimpleReestrDataModul in 'SimpleReestrDataModul.pas' {DM: TDataModule},
+  SimpleReestrDataModul in 'SimpleReestrDataModul.pas' {SimpleDM: TDataModule},
   SimpleReestrUnitLoader in 'SimpleReestrUnitLoader.pas',
   MultySmetaSimpleReestr in 'MultySmetaSimpleReestr.pas' {Fpub_spr_smet},
   FindSmetaSimpleReestr in 'FindSmetaSimpleReestr.pas' {frmGetPosForm};
