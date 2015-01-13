@@ -323,9 +323,11 @@ begin
 
            case DataSetHosp.FieldByName('PERCENT').AsInteger  of
              0: PercentBox.ItemIndex   := 0;
-             60: PercentBox.ItemIndex  := 1;
-             80: PercentBox.ItemIndex  := 2;
-             100: PercentBox.ItemIndex := 3;
+             50: PercentBox.ItemIndex  := 1;
+             60: PercentBox.ItemIndex  := 2;
+             70: PercentBox.ItemIndex  := 3;
+             80: PercentBox.ItemIndex  := 4;
+             100: PercentBox.ItemIndex := 5;
            end;
 
          if IDParent <> -1 then
@@ -407,9 +409,11 @@ begin
 
            case DataSetHosp.FieldByName('PERCENT').AsInteger  of
              0: PercentBox.ItemIndex   := 0;
-             60: PercentBox.ItemIndex  := 1;
-             80: PercentBox.ItemIndex  := 2;
-             100: PercentBox.ItemIndex := 3;
+             50: PercentBox.ItemIndex  := 1;
+             60: PercentBox.ItemIndex  := 2;
+             70: PercentBox.ItemIndex  := 3;
+             80: PercentBox.ItemIndex  := 4;
+             100: PercentBox.ItemIndex := 5;
            end;
 
          if IDParent <> -1 then
@@ -709,10 +713,13 @@ begin
          KodEdit.Text := T.DataSet.FieldByName('KOD').AsString;
          IllTypeBox.EditValue    := T.DataSet.FieldByName('ILLNESS_TYPE').AsInteger;
          case T.DataSet.FieldByName('PERCENT').AsInteger  of
-         0: PercentBox.ItemIndex := 0;
-         60: PercentBox.ItemIndex := 1;
-         80: PercentBox.ItemIndex := 2;
-         100: PercentBox.ItemIndex := 3;
+
+         0: PercentBox.ItemIndex   := 0;
+         50: PercentBox.ItemIndex  := 1;
+         60: PercentBox.ItemIndex  := 2;
+         70: PercentBox.ItemIndex  := 3;
+         80: PercentBox.ItemIndex  := 4;
+         100: PercentBox.ItemIndex := 5;
          end;
          VoplComboBox.EditValue := T.DataSet.FieldByName('VOPL').AsInteger;
          DM.DataSetHospDate.Close;

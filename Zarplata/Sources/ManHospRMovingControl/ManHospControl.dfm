@@ -350,7 +350,9 @@ object fmManHospControl: TfmManHospControl
           ParentFont = False
           Properties.Items.Strings = (
             '0'
+            '50'
             '60'
+            '70'
             '80'
             '100')
           Properties.OnChange = PercentBoxPropertiesChange
