@@ -4754,6 +4754,7 @@ end;
 procedure TTaxInvoicesKorigAddForm.DoPrintKorig;
   const NameReport = '\Reports\TaxInvoices\VidNaklKorig.fr3';
   const NameReportMart2014 = '\Reports\TaxInvoices\VidNaklKorigMart.fr3';
+  const NameReportDecember2014 = '\Reports\TaxInvoices\VidNaklKorigDecember2014.fr3';
 var
   num_specialnotes :string;
   data_nakl    :string;
@@ -4772,11 +4773,15 @@ var
   date_opl     : string;
 begin
   NotPDV := 'áåç ÏÄÂ';
-
-  if (TaxInvoicesKorigDM.VidNaklInfoDSet['DATE_ROZR']>=StrtoDate('01.03.2014')) then
-    TaxInvoicesKorigDM.Report.LoadFromFile(ExtractFilePath(Application.ExeName)+NameReportMart2014,True)
+  
+  if (TaxInvoicesKorigDM.VidNaklInfoDSet['DATA_VIPISKI']<StrtoDate('01.03.2014')) then
+    TaxInvoicesKorigDM.Report.LoadFromFile(ExtractFilePath(Application.ExeName)+NameReport,True)
   else
-    TaxInvoicesKorigDM.Report.LoadFromFile(ExtractFilePath(Application.ExeName)+NameReport,True);
+    if (TaxInvoicesKorigDM.VidNaklInfoDSet['DATA_VIPISKI']>=StrtoDate('01.03.2014'))and
+      (TaxInvoicesKorigDM.VidNaklInfoDSet['DATA_VIPISKI']<StrtoDate('01.12.2014')) then
+      TaxInvoicesKorigDM.Report.LoadFromFile(ExtractFilePath(Application.ExeName)+NameReportMart2014,True)
+    else
+      TaxInvoicesKorigDM.Report.LoadFromFile(ExtractFilePath(Application.ExeName)+NameReportDecember2014,True);
 
  // TaxInvoicesKorigDM.Report.LoadFromFile(ExtractFilePath(Application.ExeName)+NameReport,True);
   data_nakl    := DateToStr(TaxInvoicesKorigDM.VidNaklInfoDSet['DATA_VIPISKI']);
@@ -5174,6 +5179,7 @@ end;
 procedure TTaxInvoicesKorigAddForm.DoPrintKorigTwoEkz;
   const NameReport = '\Reports\TaxInvoices\VidNaklKorigTwoEkz.fr3';
   const NameReportMart2014 = '\Reports\TaxInvoices\VidNaklKorigTwoEkzMart.fr3';
+  const NameReportDecember2014 = '\Reports\TaxInvoices\VidNaklKorigTwoEkzDecember2014.fr3';
 var
   num_specialnotes :string;
   data_nakl    :string;
@@ -5192,10 +5198,16 @@ var
   date_opl     : string;
 begin
   NotPDV := 'áåç ÏÄÂ';
-  if (TaxInvoicesKorigDM.VidNaklInfoDSet['DATE_ROZR']>=StrtoDate('01.03.2014')) then
-    TaxInvoicesKorigDM.Report.LoadFromFile(ExtractFilePath(Application.ExeName)+NameReportMart2014,True)
+
+  if (TaxInvoicesKorigDM.VidNaklInfoDSet['DATA_VIPISKI']<StrtoDate('01.03.2014')) then
+    TaxInvoicesKorigDM.Report.LoadFromFile(ExtractFilePath(Application.ExeName)+NameReport,True)
   else
-    TaxInvoicesKorigDM.Report.LoadFromFile(ExtractFilePath(Application.ExeName)+NameReport,True);
+    if (TaxInvoicesKorigDM.VidNaklInfoDSet['DATA_VIPISKI']>=StrtoDate('01.03.2014'))and
+      (TaxInvoicesKorigDM.VidNaklInfoDSet['DATA_VIPISKI']<StrtoDate('01.12.2014')) then
+      TaxInvoicesKorigDM.Report.LoadFromFile(ExtractFilePath(Application.ExeName)+NameReportMart2014,True)
+    else
+      TaxInvoicesKorigDM.Report.LoadFromFile(ExtractFilePath(Application.ExeName)+NameReportDecember2014,True);
+
   //TaxInvoicesKorigDM.Report.LoadFromFile(ExtractFilePath(Application.ExeName)+NameReport,True);
   data_nakl    := DateToStr(TaxInvoicesKorigDM.VidNaklInfoDSet['DATA_VIPISKI']);
   ipn_prodavec := (TaxInvoicesKorigDM.VidNaklInfoDSet['ipn_seller']);

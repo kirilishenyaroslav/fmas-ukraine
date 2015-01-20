@@ -1,6 +1,6 @@
 object TaxInvoicesKorigAddForm: TTaxInvoicesKorigAddForm
-  Left = 200
-  Top = 180
+  Left = 0
+  Top = 284
   BorderStyle = bsDialog
   Caption = 'TaxInvoicesKorigAddForm'
   ClientHeight = 662
