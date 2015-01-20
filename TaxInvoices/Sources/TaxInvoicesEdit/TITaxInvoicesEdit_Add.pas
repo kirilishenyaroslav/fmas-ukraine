@@ -3326,6 +3326,7 @@ end;
 procedure TTaxInvoicesEditAddForm.DoPrintDecember;
   const NameReportDecabr2011 = '\Reports\TaxInvoices\VidNaklDecember.fr3';
   const NameReportMart2014 = '\Reports\TaxInvoices\VidNaklMart2014.fr3';
+  const NameReportDecabr2014 = '\Reports\TaxInvoices\VidNaklDecember2014.fr3';
 var
   num_specialnotes :string;
   data_nakl :string;
@@ -3342,10 +3343,13 @@ var
 begin
   NotPDV := 'áåç ÏÄÂ';
 
-  if (TaxInvoicesEditDM.VidNaklInfoDSet['DATA_VIPISKI']>=StrtoDate('01.03.2014')) then
-    TaxInvoicesEditDM.Report.LoadFromFile(ExtractFilePath(Application.ExeName)+NameReportMart2014,True)
+  if (TaxInvoicesEditDM.VidNaklInfoDSet['DATA_VIPISKI']<StrtoDate('01.03.2014')) then
+    TaxInvoicesEditDM.Report.LoadFromFile(ExtractFilePath(Application.ExeName)+NameReportDecabr2011,True)
   else
-    TaxInvoicesEditDM.Report.LoadFromFile(ExtractFilePath(Application.ExeName)+NameReportDecabr2011,True);
+    if (TaxInvoicesEditDM.VidNaklInfoDSet['DATA_VIPISKI']>=StrtoDate('01.03.2014'))and(TaxInvoicesEditDM.VidNaklInfoDSet['DATA_VIPISKI']<StrtoDate('01.12.2014')) then
+      TaxInvoicesEditDM.Report.LoadFromFile(ExtractFilePath(Application.ExeName)+NameReportMart2014,True)
+    else
+      TaxInvoicesEditDM.Report.LoadFromFile(ExtractFilePath(Application.ExeName)+NameReportDecabr2014,True);
 
   data_nakl := DateToStr(TaxInvoicesEditDM.VidNaklInfoDSet['DATA_VIPISKI']);
   ipn_prodavec := (TaxInvoicesEditDM.VidNaklInfoDSet['ipn_seller']);
@@ -3700,6 +3704,7 @@ end;
 procedure TTaxInvoicesEditAddForm.DoPrintDecemberTwoEkz;
   const NameReportDecabr2011 = '\Reports\TaxInvoices\VidNaklDecemberTwoEkz.fr3';
   const NameReportMart2014 = '\Reports\TaxInvoices\VidNaklMart2014TwoEkz.fr3';
+  const NameReportDecabr2014='\Reports\TaxInvoices\VidNaklDecember2014TwoEkz.fr3';
 var
   num_specialnotes   : string;
   data_nakl          : string;
@@ -3716,10 +3721,13 @@ var
 begin
   NotPDV := 'áåç ÏÄÂ';
 
-  if (TaxInvoicesEditDM.VidNaklInfoDSet['DATA_VIPISKI']>=StrtoDate('01.03.2014')) then
-    TaxInvoicesEditDM.Report.LoadFromFile(ExtractFilePath(Application.ExeName)+NameReportMart2014,True)
+  if (TaxInvoicesEditDM.VidNaklInfoDSet['DATA_VIPISKI']<StrtoDate('01.03.2014')) then
+    TaxInvoicesEditDM.Report.LoadFromFile(ExtractFilePath(Application.ExeName)+NameReportDecabr2011,True)
   else
-    TaxInvoicesEditDM.Report.LoadFromFile(ExtractFilePath(Application.ExeName)+NameReportDecabr2011,True);
+    if (TaxInvoicesEditDM.VidNaklInfoDSet['DATA_VIPISKI']>=StrtoDate('01.03.2014'))and(TaxInvoicesEditDM.VidNaklInfoDSet['DATA_VIPISKI']<StrtoDate('01.12.2014')) then
+      TaxInvoicesEditDM.Report.LoadFromFile(ExtractFilePath(Application.ExeName)+NameReportMart2014,True)
+    else
+      TaxInvoicesEditDM.Report.LoadFromFile(ExtractFilePath(Application.ExeName)+NameReportDecabr2014,True);
 
   data_nakl := DateToStr(TaxInvoicesEditDM.VidNaklInfoDSet['DATA_VIPISKI']);
   ipn_prodavec := (TaxInvoicesEditDM.VidNaklInfoDSet['ipn_seller']);
