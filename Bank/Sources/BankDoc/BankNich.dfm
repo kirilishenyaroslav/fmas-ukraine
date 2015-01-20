@@ -450,7 +450,7 @@ object fmBankNich: TfmBankNich
     object Label2: TLabel
       Left = 16
       Top = 8
-      Width = 73
+      Width = 3
       Height = 13
     end
     object cxButtonCancel: TcxButton

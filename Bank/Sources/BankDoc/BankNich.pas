@@ -11,7 +11,7 @@ uses
   cxCalendar, StdCtrls, ExtCtrls, cxMemo, dxBar, dxBarExtItems, BankNichAdd, pFIBDatabase,
   FIBDatabase, FIBDataSet, pFIBDataSet, cxImage, cxCurrencyEdit, FIBQuery,
   pFIBQuery, pFIBStoredProc, Un_R_file_Alex, cxSplitter,
-  cxLookAndFeelPainters, cxButtons;
+  cxLookAndFeelPainters, cxButtons,cn_Common_Types;
 
 type
   TfmBankNich = class(TForm)
@@ -122,7 +122,7 @@ uses
      ST_Loader_Unit,
      Un_form_info_doc,
      //cn_Common_Loader,
-     cn_Common_Types,
+
      BankExpertSysSch,
      BankMoveToDay,
      dateutils;
@@ -199,9 +199,12 @@ var
       DataSetProc : TpFIBDataSet;
       dataset_data : string;
       i, k : Integer;
+      MonthStr:string;
 begin
         if (cxParamGridTableView1.DataController.RecordCount > 0) then begin
-        dataset_data:='01.0'+VarToStr(cxParamGridTableView1month.DataBinding.DataController.Values[cxParamGridTableView1.DataController.FocusedRowIndex, 5])+'.'+VarToStr(cxParamGridTableView1ColumnYear.DataBinding.DataController.Values[cxParamGridTableView1.DataController.FocusedRowIndex, 1]);
+        MonthStr:=VarToStr(cxParamGridTableView1month.DataBinding.DataController.Values[cxParamGridTableView1.DataController.FocusedRowIndex, 5]);
+        if Length(MonthStr)<2 then MonthStr:='0'+MonthStr;
+        dataset_data:='01.'+ MonthStr+'.'+VarToStr(cxParamGridTableView1ColumnYear.DataBinding.DataController.Values[cxParamGridTableView1.DataController.FocusedRowIndex, 1]);
         DataSetProc:=TpFIBDataSet.Create(self);
         DataSetProc.Database:=DB;
         DataSetProc.Transaction:=pFIBTransaction1;
