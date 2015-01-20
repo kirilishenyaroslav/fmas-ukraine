@@ -29,7 +29,6 @@ requires
   rxctl7,
   rxdb7,
   dxBarD7,
-  AlBPLMyLoad,
   Kerneldpk,
   LoadDog,
   vcl,
@@ -50,7 +49,8 @@ requires
   frx7,
   frxDB7,
   vclx,
-  VclSmp;
+  VclSmp,
+  AlBPLMyLoad;
 
 contains
   mainAvanceOtchet in 'mainAvanceOtchet.pas' {fmAvanceOtchet},

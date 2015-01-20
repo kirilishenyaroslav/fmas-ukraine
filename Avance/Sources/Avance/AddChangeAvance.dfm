@@ -1,6 +1,6 @@
 object fmAddChangeAvance: TfmAddChangeAvance
-  Left = 190
-  Top = 231
+  Left = 444
+  Top = 246
   Width = 1090
   Height = 753
   Color = clInactiveBorder

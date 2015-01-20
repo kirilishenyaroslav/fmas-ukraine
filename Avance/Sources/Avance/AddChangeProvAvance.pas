@@ -569,7 +569,7 @@ begin
     summa_dog := all_summa;
     begin
         Class_Transaction_Wr.DefaultDatabase := Class_Database;
-//        LoadSysData(Class_Transaction_R);
+        LoadSysData(Class_Transaction_R);
         inputDog.Owner                  := self;
         inputDog.DBHandle               := Class_Database.Handle; //mm.database.Handle;
         inputDog.WriteTrans             := Class_Transaction_Wr.Handle; // mm.Class_Transaction_Wr.Handle;

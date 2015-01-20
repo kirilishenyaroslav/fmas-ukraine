@@ -1,6 +1,6 @@
 object fmAvanceOtchet: TfmAvanceOtchet
-  Left = 353
-  Top = 321
+  Left = 403
+  Top = 149
   Width = 915
   Height = 572
   Color = clBtnFace
