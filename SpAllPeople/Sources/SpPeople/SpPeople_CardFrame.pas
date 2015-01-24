@@ -215,11 +215,18 @@ begin
     DSetDog.SQLs.SelectSQL.Text := 'SELECT * FROM PEOPLE_DOG_BANKCARD_SELECT('
         + IntToStr(pIdMan) + ',NULL,' + IfThen(OpenDogCB.Checked, '0', 'NULL') + ')';
     DSetCard.SQLs.SelectSQL.Text := 'SELECT * FROM PEOPLE_BANKCARD_SELECT(?ID_DOG_BANKCARD)';
+    try
+        DSetDog.Open;
+        DSetDog.Locate('ID_DOG_BANKCARD', pId, []);
+        DSetCard.Open;
+        DSetCard.Locate('ID_BANKCARD', pId1, []);
+    except on E: Exception do
+        begin
+            MessageDlg('Не вдалося отримати дані. Причина: ' + #10#13 + E.Message, mtError, [mbOk], 0);
+            StProc1.Transaction.Rollback;
+        end;
+    end;
 
-    DSetDog.Open;
-    DSetDog.Locate('ID_DOG_BANKCARD', pId, []);
-    DSetCard.Open;
-    DSetCard.Locate('ID_BANKCARD', pId1, []);
 end;
 
 procedure TframeCard.RefreshBtn2Click(Sender: TObject);
@@ -245,14 +252,19 @@ begin
     if GetDogInfo(Self, DBFrame.Handle, emNew, DogData) then
     begin
         StProc1.Transaction.StartTransaction;
-
-        StProc1.ExecProcedure('PEOPLE_DOG_BANKCARD_ADD',
-            [DogData.ID_MAN, DogData.NUM_DOG,
-            DogData.DATE_DOG, DogData.DATE_BEG, DogData.DATE_END,
-                DogData.COMENT, DogData.NUM_LIC_ACCAUNT, DogData.ID_TYPE_PAYMENT,
-                DogData.IS_DOG_CLOSE, DogData.CONTROL_ID]);
-        StProc1.Transaction.Commit;
-
+        try
+            StProc1.ExecProcedure('PEOPLE_DOG_BANKCARD_ADD',
+                [DogData.ID_MAN, DogData.NUM_DOG,
+                DogData.DATE_DOG, DogData.DATE_BEG, DogData.DATE_END,
+                    DogData.COMENT, DogData.NUM_LIC_ACCAUNT, DogData.ID_TYPE_PAYMENT,
+                    DogData.IS_DOG_CLOSE, DogData.CONTROL_ID]);
+            StProc1.Transaction.Commit;
+        except on E: Exception do
+            begin
+                MessageDlg('Не вдалося додати договір. Причина:' + #10#13 + E.Message, mtError, [mbOk], 0);
+                StProc1.Transaction.Rollback;
+            end;
+        end;
         RefreshBtn1Click(Self);
     end;
 end;
@@ -286,12 +298,19 @@ begin
     begin
         StProc1.Transaction.StartTransaction;
 
-        StProc1.ExecProcedure('PEOPLE_DOG_BANKCARD_CHANGE',
-            [DSetDog['ID_DOG_BANKCARD'], DogData.ID_MAN, DogData.NUM_DOG,
-            DogData.DATE_DOG, DogData.DATE_BEG, DogData.DATE_END,
-                DogData.COMENT, DogData.NUM_LIC_ACCAUNT, DogData.ID_TYPE_PAYMENT,
-                DogData.IS_DOG_CLOSE, DogData.CONTROL_ID]);
-        StProc1.Transaction.Commit;
+        try
+            StProc1.ExecProcedure('PEOPLE_DOG_BANKCARD_CHANGE',
+                [DSetDog['ID_DOG_BANKCARD'], DogData.ID_MAN, DogData.NUM_DOG,
+                DogData.DATE_DOG, DogData.DATE_BEG, DogData.DATE_END,
+                    DogData.COMENT, DogData.NUM_LIC_ACCAUNT, DogData.ID_TYPE_PAYMENT,
+                    DogData.IS_DOG_CLOSE, DogData.CONTROL_ID]);
+            StProc1.Transaction.Commit;
+        except on E: Exception do
+            begin
+                MessageDlg('Не вдалося змінити договір. Причина:' + #10#13 + E.Message, mtError, [mbOk], 0);
+                StProc1.Transaction.Rollback;
+            end;
+        end;
 
         RefreshBtn1Click(Self);
     end;
@@ -314,8 +333,8 @@ begin
         except
             on e: Exception do
             begin
+                MessageDlg('Не вдалося видалити договір. Причина:' + #10#13 + E.Message, mtError, [mbOk], 0);
                 StProc1.Transaction.Rollback;
-                ZShowMessage('Помилка', E.Message, mtError, [mbOK]);
             end;
         end;
     end;
@@ -337,11 +356,18 @@ begin
     begin
         StProc1.Transaction.StartTransaction;
 
-        StProc1.ExecProcedure('PEOPLE_BANKCARD_ADD',
-            [DSetDog['ID_DOG_BANKCARD'], CardData.NUM_CARD,
-            CardData.DATE_BEG, CardData.DATE_END,
-                CardData.COMENT, CardData.ID_TYPE_BANKCARD, CardData.IS_CARD_CLOSE]);
-        StProc1.Transaction.Commit;
+        try
+            StProc1.ExecProcedure('PEOPLE_BANKCARD_ADD',
+                [DSetDog['ID_DOG_BANKCARD'], CardData.NUM_CARD,
+                CardData.DATE_BEG, CardData.DATE_END,
+                    CardData.COMENT, CardData.ID_TYPE_BANKCARD, CardData.IS_CARD_CLOSE]);
+            StProc1.Transaction.Commit;
+        except on E: Exception do
+            begin
+                MessageDlg('Не вдалося додати банківську картку. Причина:' + #10#13 + E.Message, mtError, [mbOk], 0);
+                StProc1.Transaction.Rollback;
+            end;
+        end;
 
         RefreshBtn2Click(Self);
     end;
@@ -365,12 +391,18 @@ begin
     if GetCardInfo(Self, DBFrame.Handle, emModify, CardData) then
     begin
         StProc1.Transaction.StartTransaction;
-
-        StProc1.ExecProcedure('PEOPLE_BANKCARD_CHANGE',
-            [DSetCard['ID_BANKCARD'], DSetDog['ID_DOG_BANKCARD'], CardData.NUM_CARD,
-            CardData.DATE_BEG, CardData.DATE_END,
-                CardData.COMENT, CardData.ID_TYPE_BANKCARD, CardData.IS_CARD_CLOSE]);
-        StProc1.Transaction.Commit;
+        try
+            StProc1.ExecProcedure('PEOPLE_BANKCARD_CHANGE',
+                [DSetCard['ID_BANKCARD'], DSetDog['ID_DOG_BANKCARD'], CardData.NUM_CARD,
+                CardData.DATE_BEG, CardData.DATE_END,
+                    CardData.COMENT, CardData.ID_TYPE_BANKCARD, CardData.IS_CARD_CLOSE]);
+            StProc1.Transaction.Commit;
+        except on E: Exception do
+            begin
+                MessageDlg('Не вдалося змінити банківську картку. Причина: ' + #10#13 + E.Message, mtError, [mbOk], 0);
+                StProc1.Transaction.Rollback;
+            end;
+        end;
 
         RefreshBtn2Click(Self);
     end;
@@ -390,13 +422,13 @@ begin
             StProc1.ExecProc;
             StProc1.Transaction.Commit;
             RefreshBtn2Click(Self);
-        except
-            on e: Exception do
+        except on E: Exception do
             begin
+                MessageDlg('Не вдалося видалити банківську картку. Причина: ' + #10#13 + E.Message, mtError, [mbOk], 0);
                 StProc1.Transaction.Rollback;
-                ZShowMessage('Помилка', E.Message, mtError, [mbOK]);
             end;
         end;
+
     end;
 
 end;

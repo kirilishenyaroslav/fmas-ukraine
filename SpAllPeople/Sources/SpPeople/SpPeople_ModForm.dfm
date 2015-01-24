@@ -1268,7 +1268,8 @@ object fModifyMan: TfModifyMan
             DataBinding.FieldName = 'NUMBER'
           end
           object cmnDATE_BEG: TcxGridDBColumn
-            Caption = #1044#1072#1090#1072' '#1074#1110#1076#1072#1095#1110
+            Caption = #1044#1072#1090#1072' '#1074#1080#1076#1072#1095#1110
+            SortOrder = soAscending
             Width = 97
             DataBinding.FieldName = 'DATE_BEG'
           end
@@ -1866,9 +1867,9 @@ object fModifyMan: TfModifyMan
           object WorkPhoneNum: TLabel
             Left = 14
             Top = 16
-            Width = 87
+            Width = 91
             Height = 13
-            Caption = #1056#1086#1073#1086#1095#1110#1081' '#1090#1077#1083#1077#1092#1086#1085':'
+            Caption = #1056#1086#1073#1086#1095#1080#1081' '#1090#1077#1083#1077#1092#1086#1085':'
           end
           object HomePhoneLabel: TLabel
             Left = 14

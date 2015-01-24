@@ -310,6 +310,7 @@ begin
                 begin
                     MessageDlg('Не вдалося створити фізичну особу. Причина:' + #10#13 + E.Message, mtError, [mbOk], 0);
                     ManModProc.Transaction.Rollback;
+                    Result := False;
                 end;
             end;
         end;
@@ -332,6 +333,7 @@ begin
                     begin
                         MessageDlg('Не вдалося змінити фізичну особу. Причина:' + #10#13 + E.Message, mtError, [mbOk], 0);
                         ManModProc.Transaction.Rollback;
+                        Result := False;
                     end;
                 end;
             end;
@@ -837,19 +839,25 @@ begin
     begin
         ProcPassData.Transaction.StartTransaction;
 
-        ProcPassData.ExecProcedure('PUB_PASS_DATA_INSERT',
-            [PassInfo.Familia, PassInfo.Imya, PassInfo.Otchestvo,
-            PassInfo.RusFamilia, PassInfo.RusImya, PassInfo.RusOtchestvo,
-                PassInfo.Seria, PassInfo.Number, DateToStr(PassInfo.GrantDate),
-                PassInfo.GrantedBy, IdMan, PassInfo.IdPassType]);
-        pIdPasData := ProcPassData.FN('ID_OUT').AsInt64;
-        ProcPassData.Transaction.Commit;
-
-        RefreshButtonClick(Self);
-        DSPassData.Locate('ID_PAS_DATA', pIdPasData, []);
-        if PassInfo.UpdateFIO then
-        begin
-            UpdateFIOOnForm;
+        try
+            ProcPassData.ExecProcedure('PUB_PASS_DATA_INSERT',
+                [PassInfo.Familia, PassInfo.Imya, PassInfo.Otchestvo,
+                PassInfo.RusFamilia, PassInfo.RusImya, PassInfo.RusOtchestvo,
+                    PassInfo.Seria, PassInfo.Number, DateToStr(PassInfo.GrantDate),
+                    PassInfo.GrantedBy, IdMan, PassInfo.IdPassType]);
+            pIdPasData := ProcPassData.FN('ID_OUT').AsInt64;
+            ProcPassData.Transaction.Commit;
+            RefreshButtonClick(Self);
+            DSPassData.Locate('ID_PAS_DATA', pIdPasData, []);
+            if PassInfo.UpdateFIO then
+            begin
+                UpdateFIOOnForm;
+            end;
+        except on E: Exception do
+            begin
+                MessageDlg('Не вдалося додати інформацію про паспортні дані. Причина: ' + #10#13 + E.Message, mtError, [mbOk], 0);
+                ProcPassData.Transaction.Rollback;
+            end;
         end;
     end;
 end;
@@ -862,6 +870,7 @@ end;
 procedure TfModifyMan.ModifyButtonClick(Sender: TObject);
 var
     PassInfo: TPassRec;
+    pIdPassData: Int64;
 begin
     if DSPassData.IsEmpty then
         Exit;
@@ -890,17 +899,26 @@ begin
     begin
         ProcPassData.Transaction.StartTransaction;
 
-        ProcPassData.ExecProcedure('PUB_PASS_DATA_UPDATE',
-            [PassInfo.Familia, PassInfo.Imya, PassInfo.Otchestvo,
-            PassInfo.RusFamilia, PassInfo.RusImya, PassInfo.RusOtchestvo,
-                PassInfo.Seria, PassInfo.Number, DateToStr(PassInfo.GrantDate),
-                PassInfo.GrantedBy, IdMan, PassInfo.IdPassType, DSPassData['ID_PAS_DATA']]);
-        ProcPassData.Transaction.Commit;
+        try
+            ProcPassData.ExecProcedure('PUB_PASS_DATA_UPDATE',
+                [PassInfo.Familia, PassInfo.Imya, PassInfo.Otchestvo,
+                PassInfo.RusFamilia, PassInfo.RusImya, PassInfo.RusOtchestvo,
+                    PassInfo.Seria, PassInfo.Number, DateToStr(PassInfo.GrantDate),
+                    PassInfo.GrantedBy, IdMan, PassInfo.IdPassType, DSPassData['ID_PAS_DATA']]);
+            ProcPassData.Transaction.Commit;
+            pIdPassData := DSPassData['ID_PAS_DATA'];
+            RefreshButtonClick(Self);
+            DSPassData.Locate('ID_PAS_DATA', pIdPassData, []);
 
-        RefreshButtonClick(Self);
-        if PassInfo.UpdateFIO then
-        begin
-            UpdateFIOOnForm;
+            if PassInfo.UpdateFIO then
+            begin
+                UpdateFIOOnForm;
+            end;
+        except on E: Exception do
+            begin
+                MessageDlg('Не вдалося змінити інформацію про паспортні дані. Причина: ' + #10#13 + E.Message, mtError, [mbOk], 0);
+                ProcPassData.Transaction.Rollback;
+            end;
         end;
     end;
 end;
@@ -950,6 +968,8 @@ var
     ViewMessageForm: TForm;
     i: integer;
     pUpdateFIO, pPassed: Boolean;
+    sOldImya, sOldFamilia: string;
+    sOldOtchestvo: string;
 begin
     if DSPassData.IsEmpty then
         Exit;
@@ -969,10 +989,15 @@ begin
             if ProcPassData.FN('IS_EQUAL').AsInteger = 0 then
             begin
                 pPassed := False;
+                sOldImya := ProcPassData.FN('OLD_IMYA').AsString;
+                if VarIsNull(ProcPassData.FN('OLD_OTCHESTVO').AsString) then
+                    sOldOtchestvo := ''
+                else sOldOtchestvo := ProcPassData.FN('OLD_OTCHESTVO').AsString;
+                sOldFamilia := ProcPassData.FN('OLD_FAMILIA').AsString;
                 ViewMessageForm := CreateMessageDialog('Змінити ПІБ у даних фізичної особи?' + #13 +
                     'Увага!!! Якщо Ви відповісте "ТАК", то у всіх вихідних документах,' + #13 +
                     'де вона зустрічається, її ПІБ буде записане як:' + #13 +
-                    FamiliaEdit.Text + ' ' + ImyaEdit.Text + ' ' + OtchestvoEdit.Text, mtWarning, [mbYes, mbNo, mbCancel]);
+                    sOldFamilia + ' ' + sOldImya + ' ' + sOldOtchestvo, mtWarning, [mbYes, mbNo, mbCancel]);
                 with ViewMessageForm do
                 begin
                     for i := 0 to ComponentCount - 1 do
@@ -1022,12 +1047,19 @@ begin
             if pPassed then
             begin
                 ProcPassData.StoredProcName := 'PASS_DATA_DELETE';
-                ProcPassData.Transaction.StartTransaction;
-                ProcPassData.ParamByName('ID_MAN').Value := IdMan;
-                ProcPassData.ParamByName('DATE_BEG').Value := DSPassData['DATE_BEG'];
-                ProcPassData.ParamByName('ID_PAS_DATA').Value := DSPassData['ID_PAS_DATA'];
-                ProcPassData.ExecProc;
-                ProcPassData.Transaction.Commit;
+                try
+                    ProcPassData.Transaction.StartTransaction;
+                    ProcPassData.ParamByName('ID_MAN').Value := IdMan;
+                    ProcPassData.ParamByName('DATE_BEG').Value := DSPassData['DATE_BEG'];
+                    ProcPassData.ParamByName('ID_PAS_DATA').Value := DSPassData['ID_PAS_DATA'];
+                    ProcPassData.ExecProc;
+                    ProcPassData.Transaction.Commit;
+                except on E: Exception do
+                    begin
+                        MessageDlg('Не вдалося додати інформацію про паспортні дані. Причина: ' + #10#13 + E.Message, mtError, [mbOk], 0);
+                        ProcPassData.Transaction.Rollback;
+                    end;
+                end;
                 DSPassData.CloseOpen(True);
 
                 if pUpdateFIO then
@@ -1037,8 +1069,9 @@ begin
             end;
         end
         else
-            Break;
+            pPassed := False;
     until pPassed;
+    RefreshButtonClick(Self);
 end;
 
 procedure TfModifyMan.RefreshButtonClick(Sender: TObject);
@@ -1061,8 +1094,11 @@ begin
         DSPassData.SQLs.SelectSQL.Text := 'SELECT * FROM PASS_DATA_GET_BY_ID_MAN('
             + IntToStr(IdMan) + ',''F'')';
 
-    DSPassData.Open;
-
+    try
+        DSPassData.Open;
+    except on E: Exception do
+        MessageDlg('Не вдалося отримати інформацію про паспортні дані. Причина: ' + #10#13 + E.Message, mtError, [mbOk], 0);
+    end;
     if pIdPasData <> -1 then
         DSPassData.Locate('ID_PAS_DATA', pIdPasData, []);
 
@@ -1287,34 +1323,43 @@ begin
 end;
 
 procedure TfModifyMan.CopyFIOBtnClick(Sender: TObject);
-var IdSex:integer;
-c :Char;
-s:string;
-p:Integer;
+var
+    IdSex: integer;
+    cLastSymbol :Char;
+    sName:  String;
+    bHasLowerCase: Boolean;
 begin
+    if (SexBox.ItemIndex = 1) then
+        IdSex := 2
+    else
+        IdSex := 1;   //mug po umolch
+    sName:= ImyaEdit.Text;
+    cLastSymbol := sName[Length(sName)];
 
-    if SexBox.ItemIndex <> 1 then  IdSex := 1        //mug po umolch
-    else if SexBox.ItemIndex = 1 then  IdSex := 2;   //mug po umolch
-    S:= ImyaEdit.Text;
-    c:=S[Length(S)];
-    if ((Ord(c) >= Ord('а')) and (Ord(c) <= Ord('я'))) then p:=1           // est mal bukv
-    else p:=0;
-
+    bHasLowerCase := ((Ord(cLastSymbol) >= Ord('а')) and (Ord(cLastSymbol) <= Ord('я')));
 
     STProcPerevodFioRus.Transaction.StartTransaction;
     STProcPerevodFioRus.StoredProcName := 'SYS_PEOPLE_FIO_CONVERT_RUS';
-    STProcPerevodFioRus.Prepare;
-    STProcPerevodFioRus.ParamByName('ID_SEX').AsInteger := IdSex;
-    STProcPerevodFioRus.ParamByName('FAMILIYA').AsString := FamiliaEdit.Text;
-    STProcPerevodFioRus.ParamByName('IMYA').AsString := ImyaEdit.Text;
-    STProcPerevodFioRus.ParamByName('OTCHESTVO').AsString := OtchestvoEdit.Text;
-    STProcPerevodFioRus.ParamByName('PRIZNAK').AsInteger := p;
-    STProcPerevodFioRus.ExecProc;
+    try
+        STProcPerevodFioRus.Prepare;
+        STProcPerevodFioRus.ParamByName('ID_SEX').AsInteger := IdSex;
+        STProcPerevodFioRus.ParamByName('FAMILIYA').AsString := FamiliaEdit.Text;
+        STProcPerevodFioRus.ParamByName('IMYA').AsString := ImyaEdit.Text;
+        STProcPerevodFioRus.ParamByName('OTCHESTVO').AsString := OtchestvoEdit.Text;
+        STProcPerevodFioRus.ParamByName('PRIZNAK').AsInteger := Integer(bHasLowerCase);
+        STProcPerevodFioRus.ExecProc;
 
-    RusFamEdit.Text   := STProcPerevodFioRus.ParamByName('FAMILIYA_RU').AsString;
-    RusImyaEdit.Text  := STProcPerevodFioRus.ParamByName('IMYA_RU').AsString;
-    RusOtchEdit.Text  := STProcPerevodFioRus.ParamByName('OTCHESTVO_RU').AsString;
-
+        RusFamEdit.Text   := STProcPerevodFioRus.ParamByName('FAMILIYA_RU').AsString;
+        RusImyaEdit.Text  := STProcPerevodFioRus.ParamByName('IMYA_RU').AsString;
+        RusOtchEdit.Text  := STProcPerevodFioRus.ParamByName('OTCHESTVO_RU').AsString;
+    except on E:Exception do
+        begin
+            MessageDlg('Не вдалося автоматично перекласти ФІО. Причина: ' + #10#13 + E.Message, mtError, [mbOk], 0);
+            RusFamEdit.Text   := FamiliaEdit.Text;
+            RusImyaEdit.Text  := ImyaEdit.Text;
+            RusOtchEdit.Text  := OtchestvoEdit.Text;
+        end
+    end;
     STProcPerevodFioRus.Transaction.Rollback;
 end;
 
@@ -1846,9 +1891,7 @@ procedure TfModifyMan.GromodPropertiesButtonClick(Sender: TObject;
     AButtonIndex: Integer);
 var
     AdressesSp: TSprav;
-    ShowStyle, Select: Integer;
     IdAdr: Variant;
-    id: Integer;
 begin
     AdressesSp := GetSprav('Adresses');
     if (AdressesSp <> nil) then
