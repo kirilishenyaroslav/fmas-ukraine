@@ -20,14 +20,14 @@ object fmPrepareDocMain: TfmPrepareDocMain
     Left = 417
     Top = 48
     Width = 8
-    Height = 514
+    Height = 513
     HotZoneClassName = 'TcxXPTaskBarStyle'
     HotZone.SizePercent = 100
     Control = PanelPeople
   end
   object dxStatusBar1: TdxStatusBar
     Left = 0
-    Top = 562
+    Top = 561
     Width = 984
     Height = 20
     Panels = <
@@ -64,7 +64,7 @@ object fmPrepareDocMain: TfmPrepareDocMain
     Left = 0
     Top = 48
     Width = 417
-    Height = 514
+    Height = 513
     Align = alLeft
     BevelOuter = bvNone
     TabOrder = 2
@@ -72,7 +72,7 @@ object fmPrepareDocMain: TfmPrepareDocMain
       Left = 0
       Top = 0
       Width = 417
-      Height = 456
+      Height = 455
       Align = alClient
       BorderStyle = cxcbsNone
       TabOrder = 0
@@ -141,7 +141,7 @@ object fmPrepareDocMain: TfmPrepareDocMain
     end
     object Panel1: TPanel
       Left = 0
-      Top = 456
+      Top = 455
       Width = 417
       Height = 58
       Align = alBottom
@@ -210,7 +210,7 @@ object fmPrepareDocMain: TfmPrepareDocMain
   end
   object dxStatusBar2: TdxStatusBar
     Left = 0
-    Top = 582
+    Top = 581
     Width = 984
     Height = 20
     Panels = <
@@ -247,16 +247,16 @@ object fmPrepareDocMain: TfmPrepareDocMain
     Left = 425
     Top = 48
     Width = 488
-    Height = 514
+    Height = 513
     Align = alClient
     DockType = 0
     OriginalWidth = 488
-    OriginalHeight = 514
+    OriginalHeight = 513
     object dxLayoutDockSite1: TdxLayoutDockSite
       Left = 0
       Top = 0
       Width = 488
-      Height = 514
+      Height = 513
       DockType = 1
       OriginalWidth = 300
       OriginalHeight = 200
@@ -265,7 +265,7 @@ object fmPrepareDocMain: TfmPrepareDocMain
       Left = 0
       Top = 0
       Width = 488
-      Height = 514
+      Height = 513
       AllowFloating = True
       AutoHide = False
       Caption = 'DockPanel1'
@@ -278,7 +278,7 @@ object fmPrepareDocMain: TfmPrepareDocMain
         Left = 0
         Top = 0
         Width = 484
-        Height = 487
+        Height = 486
         Align = alClient
         BorderStyle = cxcbsNone
         PopupMenu = PopupMenu
@@ -490,7 +490,7 @@ object fmPrepareDocMain: TfmPrepareDocMain
       end
       object BarDockLocate: TdxBarDockControl
         Left = 0
-        Top = 487
+        Top = 486
         Width = 484
         Height = 5
         Align = dalBottom

@@ -507,10 +507,10 @@ begin
     ViewForm.ButtonEditProp.Text                 := DM.DataSetDocRecord['name_prop'];
     ViewForm.ButtonEditFio.Text                  := DM.DataSetDocRecord['FIO'];
     ViewForm.TextEditTn.Text                     := DM.DataSetDocRecord['tin'];
-    ViewForm.MaskEditSumTaxD.EditValue           := DM.DataSetDocRecord['sum_taxn'];
-    ViewForm.MaskEditSumDoh.EditValue            := DM.DataSetDocRecord['sum_taxd'];
+    ViewForm.MaskEditSumTaxD.EditValue           := DM.DataSetDocRecord['sum_taxd'];
+    ViewForm.MaskEditSumDoh.EditValue            := DM.DataSetDocRecord['sum_doh'];
     ViewForm.MaskEditSumNar.EditValue            := DM.DataSetDocRecord['sum_nar'];
-    ViewForm.MaskEditSumTaxN.EditValue           := DM.DataSetDocRecord['sum_doh'];
+    ViewForm.MaskEditSumTaxN.EditValue           := DM.DataSetDocRecord['sum_taxn'];
     if(DM.DataSetDocRecord['date_accept']=null) then
        ViewForm.DateEditCame.EditValue           := null
     else

@@ -182,7 +182,7 @@ end;
 procedure TfmAddRecordDoc.MaskEditSumNarKeyPress(Sender: TObject;
   var Key: Char);
 begin
-    if (Key = '-') then Key := Chr(0);
+//    if (Key = '-') then Key := Chr(0);
 end;
 
 procedure TfmAddRecordDoc.ButtonEditFIOPropertiesButtonClick(
