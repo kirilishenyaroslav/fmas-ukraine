@@ -770,7 +770,7 @@ end;
 procedure TFZMainMenu.f_1dfBtnClick(Sender: TObject);
 var Param : string;
 begin
-    if((pNumPredpr=2) or (pNumPredpr=5)) then
+    if((pNumPredpr=2) or (pNumPredpr=5) or (pNumPredpr=8)) then
     begin
         param := login+' '+password;
         ShellApi.ShellExecute(Self.Handle, 'open',PAnsiChar(ExtractFilePath(Application.ExeName)+'Personal_income.exe'),PAnsiChar(Param) , nil, SW_SHOW);

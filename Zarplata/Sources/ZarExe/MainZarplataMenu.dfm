@@ -31,7 +31,7 @@ object FZMainMenu: TFZMainMenu
   end
   object dxStatusBar: TdxStatusBar
     Left = 0
-    Top = 388
+    Top = 387
     Width = 784
     Height = 20
     Images = Images
