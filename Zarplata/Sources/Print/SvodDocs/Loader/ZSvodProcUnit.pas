@@ -25,6 +25,7 @@ begin
   tsrCredit: Result:=71;
   tsrInvalid2: Result:=72;
   tsrAlimony_budget: Result:=64;
+  tsrNarLimit: Result:=73;
   else Result:=0;
  END;
 end;

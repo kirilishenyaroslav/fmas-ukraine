@@ -51,7 +51,7 @@ type TTypeSimpleReestr = (tsrHospList,tsrDuty,tsrDopPlat,tsrStrah,tsrAlimony,
                           tsrOtherUd,tsrPF,tsrPFU,tsrSumMoreVidrah,tsrInvalid,
                           tsrPererah,tsrCredit,tsrInvalid2, tsrAccrualSingle,
                           tsrAccrualSingleForManAll,tsrAccrualSingleForInvalid,
-                          tsrAccrualSingleForManOwer, tsrAlimony_budget);
+                          tsrAccrualSingleForManOwer, tsrAlimony_budget, tsrNarLimit);
 type TTypeHospFSS = (thfTVP, thfUnfortunate, thfUnfortunate1);
 
 type TSimpleReestrParam = record
