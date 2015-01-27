@@ -1,6 +1,6 @@
 object FOptionsSvod: TFOptionsSvod
-  Left = 297
-  Top = 301
+  Left = 257
+  Top = 162
   Width = 979
   Height = 544
   AlphaBlend = True
@@ -189,6 +189,10 @@ object FOptionsSvod: TFOptionsSvod
         item
           BeginGroup = True
           Item = ReeDutyBtn
+          Visible = True
+        end
+        item
+          Item = ReeNarLimit
           Visible = True
         end
         item
@@ -668,6 +672,13 @@ object FOptionsSvod: TFOptionsSvod
       Hint = #1047#1074#1110#1090' '#1087#1088#1086' '#1085#1072#1088#1072#1093#1091#1074#1072#1085#1085#1103' '#1090#1072' '#1091#1090#1088#1080#1084#1072#1085#1085#1103'('#1079#1074#1110#1090'+'#1073#1102#1076#1078#1077#1090')'
       Visible = ivAlways
       OnClick = dxBarLargeButton2Click
+    end
+    object ReeNarLimit: TdxBarButton
+      Caption = #1056#1077#1108#1089#1090#1088' '#1087#1088#1086' '#1085#1072#1088#1072#1093#1091#1074#1072#1085#1085#1103' ('#1083#1110#1084#1110#1090')'
+      Category = 0
+      Hint = #1056#1077#1108#1089#1090#1088' '#1087#1088#1086' '#1085#1072#1088#1072#1093#1091#1074#1072#1085#1085#1103' ('#1083#1110#1084#1110#1090')'
+      Visible = ivAlways
+      OnClick = ReeNarLimitClick
     end
   end
 end

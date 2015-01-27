@@ -71,6 +71,7 @@ type
     ReeAccrualSingleBySch: TdxBarButton;
     dxBarButton8: TdxBarButton;
     dxBarLargeButton2: TdxBarLargeButton;
+    ReeNarLimit: TdxBarButton;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure SvodBySchBtnClick(Sender: TObject);
     procedure ExitBtnClick(Sender: TObject);
@@ -113,6 +114,7 @@ type
     procedure dxBarButton8Click(Sender: TObject);
     procedure dxBarLargeButton2Click(Sender: TObject);
     procedure dxBarLargeButton1Click(Sender: TObject);
+    procedure ReeNarLimitClick(Sender: TObject);
   private
     PDb_handle:TISC_DB_HANDLE;
     PCurrentKodSetup:integer;
@@ -161,6 +163,7 @@ begin
  ReeHospListByTnBtn.Caption := ReestrHospListsByTn_Caption[PlanguageIndex];
  ReeHospListByDepartmentBtn.Caption := ReestrHospListsByDep_Caption[PlanguageIndex];
  ReeDutyBtn.Caption := ReestrDuty_Caption[PlanguageIndex];
+ ReeNarLimit.Caption := 'Реєстр про нарахування (ліміт)';
  ReeDopPlatBtn.Caption := ReestrDodPlat_Caption[PlanguageIndex];
  ReeStrahBtn.Caption := ReestrStrah_Caption[PlanguageIndex];
  ReeAlimonyBtn.Caption := ReestrAlimony_Caption[PlanguageIndex];
@@ -719,6 +722,23 @@ var Param:TSvodParam;
 begin
 Param:=PrepareParameter(True);
 PrintSvodSm(Param);
+end;
+
+procedure TFOptionsSvod.ReeNarLimitClick(Sender: TObject);
+var Parameter:TSimpleReestrParam;
+begin
+ {Parameter.SvodParam.Kod_setup:=PeriodToKodSetup(StrToInt(YearSpinEdit.Text),MonthesList.ItemIndex+1);
+ Parameter.SvodParam.DB_Handle := PDb_handle;
+ Parameter.SvodParam.AOwner := self;
+ Parameter.SvodParam.ID_Session:=Id_Session;
+ Parameter.SvodParam.Type_data:=tdAll;
+ Parameter.TypeSimpleReestr:=tsrNarLimit;
+
+ PrintSimpleReestr(Parameter);  }
+
+  Parameter.SvodParam:=PrepareParameter(False);
+  Parameter.TypeSimpleReestr:=tsrNarLimit;
+  PrintSimpleReestr(Parameter);
 end;
 
 end.
