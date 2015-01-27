@@ -50,6 +50,8 @@ function IniFileNameReportByTypeSimpleReestr(TypeSimpleReestr:TTypeSimpleReestr)
 begin
  case TypeSimpleReestr of
   tsrDuty: result:='DutyNameReport';
+  tsrNarLimit: result:='NarLimitNameReport';
+
   tsrInvalid: result:='InvNameReport';
   tsrSumMoreVidrah: result:='NonLimitNameReport';
   tsrPererah: result:='PererahNameReport';
@@ -63,6 +65,7 @@ const SectionOfIniFile         = 'SimpleReestr';
 const NameReport               = 'Reports\Zarplata\SimpleReestr.fr3';
 const NameReportBudget         = 'Reports\Zarplata\SimpleReestrBudget.fr3';
 const NameReportDuty           = 'Reports\Zarplata\Sv_Duty.fr3';
+const NameReportNarLimit       = 'Reports\Zarplata\Sv_NarLimit.fr3';
 const NameReportFondInv        = 'Reports\Zarplata\ReeFondInv.fr3';
 const NameReportFondInv2       = 'Reports\Zarplata\ReeFondInv2.fr3';
 const NameReportNonLimit       = 'Reports\Zarplata\ReeNonLimit.fr3';
@@ -108,6 +111,16 @@ begin
 
       VNameReport:=NameReportDuty;
      end;
+
+     tsrNarLimit:
+     begin
+      DSetData.SQLs.SelectSQL.Text:='SELECT * FROM Z_REESTR_NAR_LIMIT('+
+                                    IntToStr(AParameter.SvodParam.Kod_setup)+') order by fio';
+
+
+      VNameReport:=NameReportNarLimit;
+     end;
+
     tsrInvalid:
      begin
       DSetData.SQLs.SelectSQL.Text:='SELECT * FROM Z_REESTR_FONDINV('+
@@ -270,6 +283,7 @@ begin
 
    if((AParameter.TypeSimpleReestr=tsrDuty)or
      ((AParameter.TypeSimpleReestr<>tsrInvalid)and
+      (AParameter.TypeSimpleReestr<>tsrNarLimit)and
       (AParameter.TypeSimpleReestr<>tsrInvalid2)and
       (AParameter.TypeSimpleReestr<>tsrSumMoreVidrah)and
       (AParameter.TypeSimpleReestr<>tsrPererah)and
@@ -298,6 +312,17 @@ begin
     begin
       MemoryData.FieldDefs.Add('SUMMA_DOG_PODR',ftCurrency);
     end;
+
+    if(AParameter.TypeSimpleReestr=tsrNarLimit) then
+    begin
+      MemoryData.FieldDefs.Add('PERIOD',ftString,10);
+      MemoryData.FieldDefs.Add('SUMMA_FACT',ftString,10);
+      MemoryData.FieldDefs.Add('SUMMA_NAR',ftCurrency);
+      MemoryData.FieldDefs.Add('SUMMA_RAZN',ftCurrency);
+       MemoryData.FieldDefs.Add('ALLDAY',ftInteger);
+        MemoryData.FieldDefs.Add('FACT_DAY',ftInteger);
+    end;
+
     if(AParameter.TypeSimpleReestr=tsrDuty)then
     begin
       MemoryData.FieldDefs.Add('KOD_SMETA',ftInteger);
@@ -322,6 +347,17 @@ begin
       begin
         MemoryData['SUMMA_DOG_PODR']:=DSetData['SUMMA_DOG_PODR'];
       end;
+
+      if(AParameter.TypeSimpleReestr=tsrNarLimit) then
+      begin
+          MemoryData['PERIOD']:=DSetData['PERIOD'];
+          MemoryData['SUMMA_FACT']:=DSetData['SUMMA_FACT'];
+          MemoryData['SUMMA_NAR']:=DSetData['SUMMA_NAR'];
+          MemoryData['SUMMA_RAZN']:=DSetData['SUMMA_RAZN'];
+          MemoryData['ALLDAY']:=DSetData['ALLDAY'];
+          MemoryData['FACT_DAY']:=DSetData['FACT_DAY'];
+      end;
+
       if(AParameter.TypeSimpleReestr=tsrDuty)then
       begin
         MemoryData['KOD_SMETA']     :=DSetData['KOD_SMETA'];
@@ -340,6 +376,7 @@ begin
 
     if ((AParameter.TypeSimpleReestr=tsrDuty)or
        ((AParameter.TypeSimpleReestr<>tsrInvalid)and
+        (AParameter.TypeSimpleReestr<>tsrNarLimit)and
         (AParameter.TypeSimpleReestr<>tsrInvalid2)and
         (AParameter.TypeSimpleReestr<>tsrSumMoreVidrah)and
         (AParameter.TypeSimpleReestr<>tsrPererah)and
@@ -412,6 +449,22 @@ begin
       UserDSet.Fields.Add('P_SUMMA_DOG_PODR');
       UserDSet.Fields.Add('P_CODE_DEPARTMENT');
      end;
+
+     tsrNarLimit:
+     begin
+      UserDSet.RangeEndCount:=DSetData.RecordCount;
+      UserDSet.RangeEnd:=reCount;
+      UserDSet.Fields.Add('P_PERIOD');
+      UserDSet.Fields.Add('P_TN');
+      UserDSet.Fields.Add('P_FIO');
+
+      UserDSet.Fields.Add('P_SUMMA_FACT');
+      UserDSet.Fields.Add('P_SUMMA_NAR');
+      UserDSet.Fields.Add('P_SUMMA_RAZN');
+      UserDSet.Fields.Add('P_ALLDAY');
+      UserDSet.Fields.Add('P_FACT_DAY');
+     end;
+
     tsrSumMoreVidrah:
      begin
       UserDSet.RangeEndCount:=DSetData.RecordCount;
@@ -488,6 +541,17 @@ begin
     if UpperCase(VarName)='P_CODE_DEPARTMENT' then Value:=DSetData['CODE_DEPARTMENT'];
     if UpperCase(VarName)='P_PERIOD' then Value:=KodSetupToPeriod(DSetData['KOD_SETUP_O2'],1);
    end;
+
+   tsrNarLimit:
+   begin
+     if UpperCase(VarName)='P_SUMMA_FACT' then Value:=DSetData['SUMMA_FACT'];
+     if UpperCase(VarName)='P_SUMMA_NAR' then Value:=DSetData['SUMMA_NAR'];
+     if UpperCase(VarName)='P_SUMMA_RAZN' then Value:=DSetData['SUMMA_RAZN'];
+     if UpperCase(VarName)='P_ALLDAY' then Value:=DSetData['ALLDAY'];
+     if UpperCase(VarName)='P_FACT_DAY' then Value:=DSetData['FACT_DAY'];
+
+   end;
+
   tsrInvalid2:
    begin
 {    DSetData.RecNo:=UserDSet.RecNo+1;
