@@ -770,11 +770,11 @@ end;
 procedure TFZMainMenu.f_1dfBtnClick(Sender: TObject);
 var Param : string;
 begin
-    if((pNumPredpr=2) or (pNumPredpr=5) or (pNumPredpr=8)) then
-    begin
+//    if((pNumPredpr=2) or (pNumPredpr=5) or (pNumPredpr=8)) then
+//    begin
         param := login+' '+password;
         ShellApi.ShellExecute(Self.Handle, 'open',PAnsiChar(ExtractFilePath(Application.ExeName)+'Personal_income.exe'),PAnsiChar(Param) , nil, SW_SHOW);
-    end else
+{    end else
     begin
         if (fibCheckPermission('/ROOT/Zarplata/Z_Menu/Z_Menu_Reports/Z_Menu_1DF','Belong')=0)
         or (fibCheckPermission('/ROOT/Zarplata/Z_Menu/Z_Menu_Reports','Belong')=0)
@@ -783,7 +783,7 @@ begin
             LoadSimplePackage(Self,ZDataModule.DBZarplata.Handle,'Zarplata\f1dfm.bpl','View_F1df')
         end
         else MessageBox(self.Handle, 'Ви не маєте доступу до цієї інформації!','Увага!', MB_OK or MB_ICONWARNING);
-    end;
+    end;  }
 end;
 
 procedure TFZMainMenu.InvalidPunktMainMenuClick(Sender: TObject);
