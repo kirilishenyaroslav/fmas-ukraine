@@ -203,6 +203,7 @@ const  st_Propuk                     :array[1..2] of String=('Перепустка', 'Проп
 const  st_Fam                        :array[1..2] of String=('Прізвище', 'Фамилия');
 const  st_Name                       :array[1..2] of String=('Ім''я', 'Имя');
 const  st_Otch                       :array[1..2] of String=('По батькові', 'Отчество');
+const  st_Without_Otch               :array[1..2] of String=('Без по батькові', 'Без отчества');
 const  st_DateBorn                   :array[1..2] of String=('Дата народження', 'Дата рождения');
 const  st_Sex                        :array[1..2] of String=('Стать', 'Пол');
 const  st_Inostr                     :array[1..2] of String=('Іноземець', 'Иностранец');
