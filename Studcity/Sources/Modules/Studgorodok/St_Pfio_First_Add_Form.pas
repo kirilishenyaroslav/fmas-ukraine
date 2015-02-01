@@ -81,6 +81,7 @@ type
     ClearButton: TSpeedButton;
     Nalog_Edit: TcxCurrencyEdit;
     Dogovor_DateEdit: TcxDateEdit;
+    Without_Otch_CheckBox: TcxCheckBox;
     procedure FormShow(Sender: TObject);
     procedure CancelButtonClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -276,6 +277,7 @@ begin
  Label1.Caption:=               st_ConstUnit.st_Fam[PLanguageIndex];
  Label2.Caption:=               st_ConstUnit.st_Name[PLanguageIndex];
  Label3.Caption:=               st_ConstUnit.st_Otch[PLanguageIndex];
+ Without_Otch_CheckBox.Properties.Caption := st_ConstUnit.st_Without_Otch[PLanguageIndex];
  Label4.Caption:=               st_ConstUnit.st_DateBorn[PLanguageIndex];
  Label13.Caption:=              st_ConstUnit.st_Sex[PLanguageIndex];
  Inostranez_CheckBox.Properties.Caption:=  st_ConstUnit.st_Inostr[PLanguageIndex];
@@ -376,7 +378,7 @@ begin
     exit;
    end;
 
-  if Otch_Edit.Text ='' then
+   if (Otch_Edit.Text ='') and not(Without_Otch_CheckBox.Checked) then
    begin
     ShowMessage('Необходимо ввести отчество!');
     Otch_Edit.SetFocus;

@@ -22,12 +22,12 @@ object Registration_Form: TRegistration_Form
   OnShow = FormShow
   DesignSize = (
     916
-    453)
+    452)
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 359
+    Top = 358
     Width = 916
     Height = 46
     Align = alBottom
@@ -198,7 +198,7 @@ object Registration_Form: TRegistration_Form
     Left = 0
     Top = 96
     Width = 916
-    Height = 263
+    Height = 262
     Align = alClient
     PopupMenu = PopupMenu1
     TabOrder = 0
@@ -593,7 +593,7 @@ object Registration_Form: TRegistration_Form
   end
   object HotKey_StatusBar: TdxStatusBar
     Left = 0
-    Top = 429
+    Top = 428
     Width = 916
     Height = 24
     Hint = #1043#1086#1088#1103#1095#1080#1077' '#1082#1083#1072#1074#1080#1096#1080
@@ -682,7 +682,7 @@ object Registration_Form: TRegistration_Form
   end
   object dxStatusBar1: TdxStatusBar
     Left = 0
-    Top = 405
+    Top = 404
     Width = 916
     Height = 24
     Hint = #1043#1086#1088#1103#1095#1080#1077' '#1082#1083#1072#1074#1080#1096#1080

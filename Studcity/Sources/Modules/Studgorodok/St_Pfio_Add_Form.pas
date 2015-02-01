@@ -198,6 +198,7 @@ type
     cxGridLevel5: TcxGridLevel;
     cxGrid_id_serves_sub: TcxGridColumn;
     cxGrid_name_serves: TcxGridColumn;
+    Without_Otch_CheckBox: TcxCheckBox;
     procedure FormShow(Sender: TObject);
     procedure CancelButtonClick(Sender: TObject);
     procedure OkButtonClick(Sender: TObject);
@@ -426,6 +427,7 @@ begin
  Label1.Caption:=               st_ConstUnit.st_Fam[PLanguageIndex];
  Label2.Caption:=               st_ConstUnit.st_Name[PLanguageIndex];
  Label3.Caption:=               st_ConstUnit.st_Otch[PLanguageIndex];
+ Without_Otch_CheckBox.Properties.Caption := st_ConstUnit.st_Without_Otch[PLanguageIndex];
  Label4.Caption:=               st_ConstUnit.st_DateBorn[PLanguageIndex];
  Label10.Caption:=              st_ConstUnit.st_Sex[PLanguageIndex];
  Inostranez_CheckBox.Properties.Caption:=  st_ConstUnit.st_Inostr[PLanguageIndex];
@@ -1163,7 +1165,7 @@ begin
     exit;
    end;
 
-  if Otch_Edit.Text ='' then
+  if (Otch_Edit.Text ='') and not(Without_Otch_CheckBox.Checked) then
    begin
     ShowMessage('Необходимо ввести отчество!');
     Otch_Edit.SetFocus;

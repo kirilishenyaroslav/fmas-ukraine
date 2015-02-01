@@ -374,6 +374,7 @@ begin
  cxLabel5.Caption :=          st_ConstUnit.st_Status[PLanguageIndex];
  cxLabel4.Caption :=          st_ConstUnit.st_Dog[PLanguageIndex];
  cxLabel1.Caption :=          st_ConstUnit.st_Propuk[PLanguageIndex];
+
  // Грид
  cxGridDBTableView1.Columns[0].Caption:= st_ConstUnit.st_grid_FIO_Column[PLanguageIndex];
  cxGridDBTableView1.Columns[1].Caption:= st_ConstUnit.st_footer_Faculty[PLanguageIndex];
@@ -1176,6 +1177,10 @@ begin
   Registration_Form_Add.Familia_Edit.Text := DataSet['Familia'];
   Registration_Form_Add.Name_Edit.Text := DataSet['Imya'];
   Registration_Form_Add.Otch_Edit.Text := DataSet['Otchestvo'];
+  if Registration_Form_Add.Otch_Edit.Text <>'' then
+  Registration_Form_Add.Without_Otch_CheckBox.Checked:=false
+  else Registration_Form_Add.Without_Otch_CheckBox.Checked:=true;
+
   if DataSet['Data_R']<> null
    then Registration_Form_Add.DateBorn_Edit.date := DataSet['Data_R'];
   if DataSet['Pol']='м'
@@ -1217,7 +1222,7 @@ begin
   if DataSet['Imya_Uk']<> null
    then Registration_Form_Add.Name_Ukr.Text:=DataSet['Imya_Uk'];
   if DataSet['Ot_Uk']<> null
-   then Registration_Form_Add.Otch_Ukr.Text:=DataSet['Ot_Uk'];
+   then  Registration_Form_Add.Otch_Ukr.Text:=DataSet['Ot_Uk'];
 
   // Выбираем историю категорий проживания
   ReadDataSet.SelectSQL.Clear;
@@ -4225,6 +4230,10 @@ begin
   Registration_Form_Add.Familia_Edit.Text := DataSet['Familia'];
   Registration_Form_Add.Name_Edit.Text := DataSet['Imya'];
   Registration_Form_Add.Otch_Edit.Text := DataSet['Otchestvo'];
+  if Registration_Form_Add.Otch_Edit.Text <>'' then
+  Registration_Form_Add.Without_Otch_CheckBox.Checked:=false
+  else Registration_Form_Add.Without_Otch_CheckBox.Checked:=true;
+
   if DataSet['Data_R']<> null
    then Registration_Form_Add.DateBorn_Edit.date := DataSet['Data_R'];
   if DataSet['Pol']='м'

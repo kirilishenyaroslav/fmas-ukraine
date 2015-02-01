@@ -1,6 +1,6 @@
 object Registration_Form_Add: TRegistration_Form_Add
-  Left = 814
-  Top = 195
+  Left = 483
+  Top = 201
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = #1056#1077#1075#1080#1089#1090#1088#1072#1094#1080#1103':'
@@ -376,6 +376,24 @@ object Registration_Form_Add: TRegistration_Form_Add
       Style.Font.Style = []
       TabOrder = 5
       OnKeyPress = Nalog_EditKeyPress
+    end
+    object Without_Otch_CheckBox: TcxCheckBox
+      Left = 45
+      Top = 123
+      Width = 116
+      Height = 21
+      ParentColor = False
+      ParentFont = False
+      Properties.DisplayUnchecked = 'False'
+      Properties.Caption = #1041#1077#1079' '#1086#1090#1095#1077#1089#1090#1074#1072
+      Style.Color = clBtnFace
+      Style.Font.Charset = DEFAULT_CHARSET
+      Style.Font.Color = clWindowText
+      Style.Font.Height = -11
+      Style.Font.Name = 'MS Sans Serif'
+      Style.Font.Style = []
+      Style.LookAndFeel.NativeStyle = False
+      TabOrder = 6
     end
   end
   object cxPageControl1: TcxPageControl

@@ -249,7 +249,7 @@ object Registration_Form_First_Add: TRegistration_Form_First_Add
     TabStop = False
     object Propiska_CheckBox: TcxCheckBox
       Left = 8
-      Top = 20
+      Top = 28
       Width = 97
       Height = 21
       ParentColor = False
@@ -264,7 +264,7 @@ object Registration_Form_First_Add: TRegistration_Form_First_Add
     end
     object Propusk_CheckBox: TcxCheckBox
       Left = 112
-      Top = 20
+      Top = 28
       Width = 161
       Height = 21
       ParentColor = False
@@ -726,7 +726,7 @@ object Registration_Form_First_Add: TRegistration_Form_First_Add
     Left = 0
     Top = 0
     Width = 281
-    Height = 145
+    Height = 161
     Alignment = alTopLeft
     Caption = #1060#1048#1054
     Font.Charset = DEFAULT_CHARSET
@@ -984,6 +984,24 @@ object Registration_Form_First_Add: TRegistration_Form_First_Add
       TabOrder = 2
       OnKeyPress = DateBorn_EditKeyPress
       EditValue = 0d
+    end
+    object Without_Otch_CheckBox: TcxCheckBox
+      Left = 1
+      Top = 134
+      Width = 128
+      Height = 21
+      ParentColor = False
+      ParentFont = False
+      Properties.DisplayUnchecked = 'False'
+      Properties.Caption = #1041#1077#1079' '#1086#1090#1095#1077#1089#1090#1074#1072
+      Style.Color = clBtnFace
+      Style.Font.Charset = DEFAULT_CHARSET
+      Style.Font.Color = clWindowText
+      Style.Font.Height = -11
+      Style.Font.Name = 'MS Sans Serif'
+      Style.Font.Style = []
+      Style.LookAndFeel.NativeStyle = False
+      TabOrder = 5
     end
   end
   object Familia_Edit: TcxButtonEdit
