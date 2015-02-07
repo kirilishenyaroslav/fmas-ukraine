@@ -131,6 +131,12 @@ begin
   DM.DataSet_Report.ParamByName('DATE_END').AsDate:= cxDateEditPeriodEnd.EditValue;
   DM.DataSet_Report.Open;
 
+  DM.DataSet_Rashfr.close;
+  DM.DataSet_Rashfr.SQLs.SelectSQL.Text:='Select * from CN_REPORT_EXP_SER_RASHFR(:DATE_BEG,:DATE_END)';
+  DM.DataSet_Rashfr.ParamByName('DATE_BEG').AsDate:= cxDateEditPeriodBegin.EditValue;
+  DM.DataSet_Rashfr.ParamByName('DATE_END').AsDate:= cxDateEditPeriodEnd.EditValue;
+  DM.DataSet_Rashfr.Open;
+
   DM.Report.Clear;
   DM.Report.LoadFromFile(ExtractFilePath(Application.ExeName)+'Reports\Contracts\cn_exp_ser.fr3');
   DM.Report.Variables.Clear;

@@ -1,8 +1,8 @@
 object frmReportExpSer: TfrmReportExpSer
-  Left = 649
+  Left = 651
   Top = 322
-  Width = 325
-  Height = 120
+  Width = 333
+  Height = 126
   Caption = #1047#1074#1110#1090' '#1087#1088#1086' '#1077#1082#1089#1087#1086#1088#1090' '#1087#1086#1089#1083#1091#1075
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -11,14 +11,14 @@ object frmReportExpSer: TfrmReportExpSer
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
-  Position = poDesktopCenter
+  Position = poScreenCenter
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object cxButtonRun: TcxButton
-    Left = 160
+    Left = 152
     Top = 56
     Width = 75
     Height = 25
@@ -27,7 +27,7 @@ object frmReportExpSer: TfrmReportExpSer
     OnClick = cxButtonRunClick
   end
   object cxButtonQuit: TcxButton
-    Left = 240
+    Left = 232
     Top = 56
     Width = 75
     Height = 25
@@ -36,9 +36,9 @@ object frmReportExpSer: TfrmReportExpSer
     OnClick = cxButtonQuitClick
   end
   object cxGroupBoxPeriodStud: TcxGroupBox
-    Left = -5
-    Top = 0
-    Width = 322
+    Left = 3
+    Top = 5
+    Width = 310
     Height = 45
     Alignment = alTopLeft
     Caption = 'cxGroupBoxPeriodStud'
@@ -88,7 +88,7 @@ object frmReportExpSer: TfrmReportExpSer
   end
   object ActionList1: TActionList
     Left = 16
-    Top = 48
+    Top = 56
     object debug_act: TAction
       Caption = 'debug_act'
       ShortCut = 57412

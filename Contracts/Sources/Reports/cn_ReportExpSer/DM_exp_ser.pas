@@ -17,11 +17,13 @@ type
     Designer: TfrxDesigner;
     DBDataset: TfrxDBDataset;
     StoredProc: TpFIBStoredProc;
-    Report: TfrxReport;
     frxXLSExport1: TfrxXLSExport;
     frxRTFExport1: TfrxRTFExport;
     frxHTMLExport1: TfrxHTMLExport;
     frxPDFExport1: TfrxPDFExport;
+    DataSet_Rashfr: TpFIBDataSet;
+    DBDataset_Rashfr: TfrxDBDataset;
+    Report: TfrxReport;
   private
     { Private declarations }
   public
