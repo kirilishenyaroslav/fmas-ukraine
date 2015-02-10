@@ -401,7 +401,7 @@ object Registration_Form_Add: TRegistration_Form_Add
     Top = 192
     Width = 577
     Height = 201
-    ActivePage = cxTabSheet1
+    ActivePage = cxTabSheet3
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlue
     Font.Height = -11

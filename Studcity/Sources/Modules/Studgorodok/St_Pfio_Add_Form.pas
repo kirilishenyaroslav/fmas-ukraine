@@ -17,7 +17,7 @@ uses
   cxGridCustomTableView, cxGridTableView, cxGridDBTableView, cxClasses,
   cxGridCustomView, cxGrid, FIBDataSet, pFIBDataSet, cxCurrencyEdit,
   Buttons, ExtCtrls, uCommonSp, ActnList, AccMGMT, St_Proc, st_ConstUnit,
-  AllPeopleUnit, Main, uPost_choose, st_Common_Messages;
+  AllPeopleUnit, Main, uPost_choose, st_Common_Messages,st_common_types, st_common_loader;
 
 type
   TRegistration_Form_Add = class(TForm)
@@ -2919,10 +2919,10 @@ end;
 
 procedure TRegistration_Form_Add.Cur_Posada_TextEditPropertiesButtonClick(
   Sender: TObject; AButtonIndex: Integer);
-var
+{var
   ViewForm : TfrmPost_choose;
 begin
-  if id_department_dop = -1 then
+ if id_department_dop = -1 then
    begin
     ShowMessage('Необхідно обрати підрозділ!!!');
     exit;
@@ -2938,8 +2938,29 @@ begin
     Cur_Posada_TextEdit.Text := ViewForm.name_post;
    end;
    
-  ViewForm.Free; 
+  ViewForm.Free; }
+  var
+  aParameter : TstSimpleParams;
+  res : Variant;
+begin
+
+  aParameter                 := TstSimpleParams.Create;
+  aParameter.Owner           := self;
+  aParameter.Db_Handle       := DataModule1.DB.Handle;
+  AParameter.Formstyle       := fsNormal;
+  AParameter.WaitPakageOwner := self;
+  aParameter.is_admin        := is_admin;
+
+  res := RunFunctionFromPackage(aParameter, 'Studcity\st_sp_post.bpl', 'ShowSPPost');
+  if VarArrayDimCount(res) <>0 then
+   begin
+     id_post_dop := res[0];
+     Cur_Posada_TextEdit.Text    := res[1];
+   end;
+
+  aParameter.Free;
 end;
+
 
 procedure TRegistration_Form_Add.cxTabSheet7Show(Sender: TObject);
 begin
