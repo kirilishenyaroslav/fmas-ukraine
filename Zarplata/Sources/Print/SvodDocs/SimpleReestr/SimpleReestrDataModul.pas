@@ -115,7 +115,7 @@ begin
      tsrNarLimit:
      begin
       DSetData.SQLs.SelectSQL.Text:='SELECT * FROM Z_REESTR_NAR_LIMIT('+
-                                    IntToStr(AParameter.SvodParam.Kod_setup)+') order by fio';
+                                    IntToStr(AParameter.SvodParam.Kod_setup)+') order by Sch_Title, Fio Collate Win1251_Ua';
 
 
       VNameReport:=NameReportNarLimit;
