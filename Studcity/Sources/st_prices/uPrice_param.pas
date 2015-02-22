@@ -147,7 +147,6 @@ begin
    Begin
     DM.StoredProc.Transaction.StartTransaction;
     id_kat := ViewForm.id_kat_pay;
-
     if id_kat = -1 then
      Begin
       DM.StoredProc.StoredProcName := 'ST_SP_KAT_GEN_ID';
@@ -203,7 +202,6 @@ begin
 
       ViewForm.DM.MemoryData_services.Next;
      end;
-
     DM.StoredProc.StoredProcName := 'ST_DT_PRICE_KAT_INS';
     DM.StoredProc.Prepare;
     DM.StoredProc.ParamByName('ID_PRICE_PARAM').AsInt64 := ID_PRICE_PARAM;

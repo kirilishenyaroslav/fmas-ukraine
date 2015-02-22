@@ -19,7 +19,7 @@ object frm_price_param: Tfrm_price_param
     Left = 0
     Top = 48
     Width = 818
-    Height = 521
+    Height = 520
     Align = alClient
     Caption = 'Panel1'
     TabOrder = 4
@@ -27,7 +27,7 @@ object frm_price_param: Tfrm_price_param
       Left = 1
       Top = 1
       Width = 816
-      Height = 519
+      Height = 518
       Align = alClient
       TabOrder = 0
       LookAndFeel.Kind = lfUltraFlat
@@ -118,7 +118,7 @@ object frm_price_param: Tfrm_price_param
           DataBinding.FieldName = 'tariff'
         end
         object cxGrid1DB_norma_indicator: TcxGridDBColumn
-          Caption = #1053#1086#1088#1084#1072' '#1087#1086#1082#1072#1079#1085#1080#1082
+          Caption = #1053#1086#1088#1084#1086#1087#1086#1082#1072#1079#1085#1080#1082
           HeaderAlignmentHorz = taCenter
           Width = 121
           DataBinding.FieldName = 'norma'
@@ -137,7 +137,7 @@ object frm_price_param: Tfrm_price_param
   end
   object HotKey_StatusBar: TdxStatusBar
     Left = 0
-    Top = 569
+    Top = 568
     Width = 818
     Height = 24
     Hint = #1043#1086#1088#1103#1095#1080#1077' '#1082#1083#1072#1074#1080#1096#1080

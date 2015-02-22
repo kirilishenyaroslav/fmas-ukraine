@@ -284,7 +284,7 @@ begin
      3 : begin If kol_live <> 0 then norma := S_room * effective_area / kol_live; end;
      4 : begin norma := norma * (1 + ((kol_live - 1) * HeadCount)) end;
     end;
-    
+
     norma := Round(norma * 1000) / 1000;
 
     DM.DataSet_main.close;
@@ -293,7 +293,6 @@ begin
     DM.DataSet_main.ParamByName('ID_SERVICE').AsInt64 := ViewForm.id_serves;
     DM.DataSet_main.Open;
     DM.DataSet_main.FetchAll;
-
     If DM.DataSet_main.RecordCount = 0 then
      Begin
       ShowMessage('Обрана послуга не має вказаних параметрів з ПДВ або без ПДВ!');
@@ -319,6 +318,7 @@ begin
          DM.MemoryData_services['MemoryData_buget']           := ViewForm.sm_kod + '.' + IntToStr(DM.DataSet_main['KOD_RAZD']) + '.' + IntToStr(DM.DataSet_main['KOD_STAT']) + '.' + ViewForm.kekv_kod;
          DM.MemoryData_services['MemoryData_tariff']          := tarif;
          DM.MemoryData_services['MemoryData_norma']           := norma;
+         DM.MemoryData_services['MemoryData_norma']:=formatfloat('0.00', DM.MemoryData_services['MemoryData_norma']);
 
          case DM.DataSet_main['ST_OPTIONS'] of
           0: DM.MemoryData_services['MemoryData_summa'] := DM.MemoryData_services['MemoryData_norma'] * DM.MemoryData_services['MemoryData_tariff'];
@@ -337,8 +337,9 @@ begin
          DM.MemoryData_services['MemoryData_st_options']  := DM.DataSet_main['ST_OPTIONS'];
          DM.MemoryData_services.Post;
 
-         DM.DataSet_main.Next;
-        end; 
+
+        end;
+        DM.DataSet_main.Next;
      end;
    end;
 
@@ -429,7 +430,6 @@ begin
 
     DM.DataSet_read.close;
 
-    ShowMessage('kol= ' + IntToStr(kol_live));
     case ViewForm.ComboBox_type_norm.ItemIndex + 1 of
      1 : begin norma := S_room * effective_area; end;
      3 : begin If kol_live <> 0 then norma := S_room * effective_area / kol_live; end;
@@ -468,6 +468,7 @@ begin
         DM.MemoryData_services['MemoryData_buget']           := ViewForm.sm_kod + '.' + IntToStr(DM.DataSet_main['KOD_RAZD']) + '.' + IntToStr(DM.DataSet_main['KOD_STAT']) + '.' + ViewForm.kekv_kod;
         DM.MemoryData_services['MemoryData_tariff']          := tarif;
         DM.MemoryData_services['MemoryData_norma']           := norma;
+        DM.MemoryData_services['MemoryData_norma']:=formatfloat('0.00', DM.MemoryData_services['MemoryData_norma']);
 
         case DM.DataSet_main['ST_OPTIONS'] of
          0: DM.MemoryData_services['MemoryData_summa'] := DM.MemoryData_services['MemoryData_norma'] * DM.MemoryData_services['MemoryData_tariff'];
@@ -545,6 +546,7 @@ begin
 
     DM.MemoryData_services['MemoryData_tariff'] := tarif;
     DM.MemoryData_services['MemoryData_norma']  := norma;
+    DM.MemoryData_services['MemoryData_norma']:=formatfloat('0.00', DM.MemoryData_services['MemoryData_norma']);
 
     case DM.MemoryData_services['MemoryData_st_options'] of
      0: DM.MemoryData_services['MemoryData_summa'] := DM.MemoryData_services['MemoryData_norma'] * DM.MemoryData_services['MemoryData_tariff'];
