@@ -1,6 +1,6 @@
 object ImportXMLForm: TImportXMLForm
-  Left = 327
-  Top = 324
+  Left = 376
+  Top = 128
   Width = 798
   Height = 558
   Caption = #1044#1072#1085#1110' XML-'#1092#1072#1081#1083#1091
