@@ -9,7 +9,7 @@ uses
   cxControls, cxContainer, cxEdit, cxProgressBar, cxTextEdit,ZMessages,
   cxMaskEdit, cxButtonEdit, FIBQuery, pFIBQuery, pFIBStoredProc,
   unit_zGlobal_Consts, zProc, cxLabel, cxShellDlgs, cxShellBrowserDialog,
-  Dates;
+  Dates, ShlObj;
 
 type
   TFzPerosnification2010Export = class(TForm)
@@ -39,7 +39,6 @@ type
     NewDbfTableCreateT10: TCreateHalcyonDataSet;
     DbfExportT7: THalcyonDataSet;
     BtnCaption: TcxButton;
-    SaveDialog1: TOpenDialog;
     procedure StartBtnClick(Sender: TObject);
     procedure FileNameEditPropertiesButtonClick(Sender: TObject;
       AButtonIndex: Integer);
@@ -387,42 +386,93 @@ if ( FilePath.Text<>'') then
    end;
 end;
 
+function BrowseCallbackProc(hwnd: HWND; uMsg: UINT; lParam: LPARAM; lpData: LPARAM): Integer; stdcall;
+begin
+  if (uMsg = BFFM_INITIALIZED) then
+    SendMessage(hwnd, BFFM_SETSELECTION, 1, lpData);
+  BrowseCallbackProc:= 0;
+end;
+
+function GetFolderDialog(Handle: Integer; Caption: string; var strFolder: string): Boolean;
+const
+  BIF_STATUSTEXT           = $0004;
+  BIF_NEWDIALOGSTYLE       = $0040;
+  BIF_RETURNONLYFSDIRS     = $0080;
+  BIF_SHAREABLE            = $0100;
+  BIF_USENEWUI             = BIF_EDITBOX or BIF_NEWDIALOGSTYLE;
+
+var
+  BrowseInfo: TBrowseInfo;
+  ItemIDList: PItemIDList;
+  JtemIDList: PItemIDList;
+  Path: PAnsiChar;
+begin
+  Result:= False;
+  Path:= StrAlloc(MAX_PATH);
+  SHGetSpecialFolderLocation(Handle, CSIDL_DRIVES, JtemIDList);
+  with BrowseInfo do
+  begin
+    hwndOwner:= GetActiveWindow;
+    pidlRoot:= JtemIDList;
+    SHGetSpecialFolderLocation(hwndOwner, CSIDL_DRIVES, JtemIDList);
+
+    { Возврат названия выбранного элемента }
+    pszDisplayName:= StrAlloc(MAX_PATH);
+
+    { Установка названия диалога выбора папки }
+    lpszTitle:= PChar(Caption); // 'Выбрать папку на Delphi (Дельфи)';
+    { Флаги, контролирующие возврат }
+    lpfn:= @BrowseCallbackProc;
+    { Дополнительная информация, которая отдаётся обратно в обратный вызов (callback) }
+    lParam:= LongInt(PChar(strFolder));
+  end;
+
+  ItemIDList:= SHBrowseForFolder(BrowseInfo);
+
+  if (ItemIDList <> nil) then
+    if SHGetPathFromIDList(ItemIDList, Path) then
+    begin
+      strFolder:= Path;
+      Result:= True;
+    end;
+end;
+
 procedure TFzPerosnification2010Export.FileNameEditPropertiesButtonClick(
   Sender: TObject; AButtonIndex: Integer);
-
+var sFolder: String;
 begin
-  if(SaveDialog1.Execute)then
-  begin
-
-    FilePath.Text:=SaveDialog1.GetNamePath;
-    if  FilePath.Text[Length(FilePath.Text)]<>'\' then  FilePath.Text:=FilePath.Text+'\' ;
-    DbfExportT5.DatabaseName:=FilePath.Text+PeriodPath;
-    DbfExportT6.DatabaseName:=FilePath.Text+PeriodPath;
-    DbfExportT7.DatabaseName:=FilePath.Text+PeriodPath;
-    DbfExportT8.DatabaseName:=FilePath.Text+PeriodPath;
-    DbfExportT9.DatabaseName:=FilePath.Text+PeriodPath;
-    DbfExportT10.DatabaseName:=FilePath.Text+PeriodPath;
-    if((Y>=2013) and (M>=9))then
+    sFolder:= '';
+    if GetFolderDialog(Application.Handle, '', sFolder) then
     begin
-      DbfExportT5.TableName:='E04T05H.dbf ';
-      DbfExportT6.TableName:='E04T06H.dbf';
-      DbfExportT7.TableName:='E04T07H.dbf';
-    end
-    else if((Y>=2011) and (M>=9))then
-    begin
-      DbfExportT5.TableName:='E04T05D.dbf ';
-      DbfExportT6.TableName:='E04T06D.dbf';
-      DbfExportT7.TableName:='E04T07D.dbf';
-    end else
-    begin
-      DbfExportT5.TableName:='P04t05b.dbf';
-      DbfExportT6.TableName:='P04t06b.dbf';
-      DbfExportT7.TableName:='P04t07b.dbf';
-      DbfExportT8.TableName:='P04t08b.dbf';
-      DbfExportT9.TableName:='P04t09b.dbf';
-      DbfExportT10.TableName:='P04t010b.dbf';
-    end
-  end;
+        FilePath.Text:=sFolder;
+        if  FilePath.Text[Length(FilePath.Text)]<>'\' then  FilePath.Text:=FilePath.Text+'\' ;
+        DbfExportT5.DatabaseName:=FilePath.Text+PeriodPath;
+        DbfExportT6.DatabaseName:=FilePath.Text+PeriodPath;
+        DbfExportT7.DatabaseName:=FilePath.Text+PeriodPath;
+        DbfExportT8.DatabaseName:=FilePath.Text+PeriodPath;
+        DbfExportT9.DatabaseName:=FilePath.Text+PeriodPath;
+        DbfExportT10.DatabaseName:=FilePath.Text+PeriodPath;
+        if((Y>=2013) and (M>=9))then
+        begin
+          DbfExportT5.TableName:='E04T05H.dbf ';
+          DbfExportT6.TableName:='E04T06H.dbf';
+          DbfExportT7.TableName:='E04T07H.dbf';
+        end
+        else if((Y>=2011) and (M>=9))then
+        begin
+          DbfExportT5.TableName:='E04T05D.dbf ';
+          DbfExportT6.TableName:='E04T06D.dbf';
+          DbfExportT7.TableName:='E04T07D.dbf';
+        end else
+        begin
+          DbfExportT5.TableName:='P04t05b.dbf';
+          DbfExportT6.TableName:='P04t06b.dbf';
+          DbfExportT7.TableName:='P04t07b.dbf';
+          DbfExportT8.TableName:='P04t08b.dbf';
+          DbfExportT9.TableName:='P04t09b.dbf';
+          DbfExportT10.TableName:='P04t010b.dbf';
+        end
+    end;
 end;
 
 procedure TFzPerosnification2010Export.BtnCaptionClick(Sender: TObject);

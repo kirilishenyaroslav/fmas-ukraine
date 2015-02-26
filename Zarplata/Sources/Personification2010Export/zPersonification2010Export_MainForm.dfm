@@ -350,9 +350,4 @@ object FzPerosnification2010Export: TFzPerosnification2010Export
     Left = 184
     Top = 40
   end
-  object SaveDialog1: TOpenDialog
-    Filter = #1060#1072#1081#1083#1099' DBF(*.dbf)|*.dbf|'#1042#1089#1077' '#1092#1072#1081#1083#1099'(*.*)|*.*'
-    Left = 80
-    Top = 96
-  end
 end
