@@ -8,7 +8,7 @@ uses
   Halcn6db, ComCtrls, StdCtrls, cxLookAndFeelPainters, cxButtons,
   cxControls, cxContainer, cxEdit, cxProgressBar, cxTextEdit, ZMessages,
   zProc, cxMaskEdit, cxButtonEdit, cxLabel, pfibquery, cxShellDlgs,
-  cxShellBrowserDialog, XLSReadWriteII2, BIFFRecsII2, ComObj;
+  cxShellBrowserDialog, XLSReadWriteII2, BIFFRecsII2, ComObj, ShlObj;
 
   function ExpBankDataSet(AOwner:TComponent;DataSet:TpFIBDataSet;IdBank:integer):Variant;stdcall;
   exports ExpBankDataSet;
@@ -26,7 +26,6 @@ type
     ExitBtn: TcxButton;
     eFileNameEdit: TcxButtonEdit;
     DataSetConst: TpFIBDataSet;
-    cxshlbrwsrdlg1: TOpenDialog;
     procedure StartBtnClick(Sender: TObject);
     procedure FileNameEditPropertiesButtonClick(Sender: TObject;
       AButtonIndex: Integer);
@@ -170,10 +169,64 @@ begin
   end else ZShowMessage('Увага!','Не знайден шлях експорту!', mtInformation, [mbOk]);
 end;
 
-procedure TBankExportForm.FileNameEditPropertiesButtonClick(Sender: TObject; AButtonIndex: Integer);
+function BrowseCallbackProc(hwnd: HWND; uMsg: UINT; lParam: LPARAM; lpData: LPARAM): Integer; stdcall;
 begin
-  if not cxshlbrwsrdlg1.Execute then exit;
-  GenFileName(cxshlbrwsrdlg1.GetNamePath);
+  if (uMsg = BFFM_INITIALIZED) then
+    SendMessage(hwnd, BFFM_SETSELECTION, 1, lpData);
+  BrowseCallbackProc:= 0;
+end;
+
+function GetFolderDialog(Handle: Integer; Caption: string; var strFolder: string): Boolean;
+const
+  BIF_STATUSTEXT           = $0004;
+  BIF_NEWDIALOGSTYLE       = $0040;
+  BIF_RETURNONLYFSDIRS     = $0080;
+  BIF_SHAREABLE            = $0100;
+  BIF_USENEWUI             = BIF_EDITBOX or BIF_NEWDIALOGSTYLE;
+
+var
+  BrowseInfo: TBrowseInfo;
+  ItemIDList: PItemIDList;
+  JtemIDList: PItemIDList;
+  Path: PAnsiChar;
+begin
+  Result:= False;
+  Path:= StrAlloc(MAX_PATH);
+  SHGetSpecialFolderLocation(Handle, CSIDL_DRIVES, JtemIDList);
+  with BrowseInfo do
+  begin
+    hwndOwner:= GetActiveWindow;
+    pidlRoot:= JtemIDList;
+    SHGetSpecialFolderLocation(hwndOwner, CSIDL_DRIVES, JtemIDList);
+
+    { Возврат названия выбранного элемента }
+    pszDisplayName:= StrAlloc(MAX_PATH);
+
+    { Установка названия диалога выбора папки }
+    lpszTitle:= PChar(Caption); // 'Выбрать папку на Delphi (Дельфи)';
+    { Флаги, контролирующие возврат }
+    lpfn:= @BrowseCallbackProc;
+    { Дополнительная информация, которая отдаётся обратно в обратный вызов (callback) }
+    lParam:= LongInt(PChar(strFolder));
+  end;
+
+  ItemIDList:= SHBrowseForFolder(BrowseInfo);
+
+  if (ItemIDList <> nil) then
+    if SHGetPathFromIDList(ItemIDList, Path) then
+    begin
+      strFolder:= Path;
+      Result:= True;
+    end;
+end;
+
+procedure TBankExportForm.FileNameEditPropertiesButtonClick(Sender: TObject; AButtonIndex: Integer);
+var sFolder: String;
+begin
+    sFolder:= '';
+    if GetFolderDialog(Application.Handle, '', sFolder) then
+    GenFileName(sFolder)
+    else exit;
 end;
 
 procedure TBankExportForm.ExitBtnClick(Sender: TObject);
