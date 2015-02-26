@@ -39,7 +39,7 @@ type
     NewDbfTableCreateT10: TCreateHalcyonDataSet;
     DbfExportT7: THalcyonDataSet;
     BtnCaption: TcxButton;
-    SaveDialog1: TcxShellBrowserDialog;
+    SaveDialog1: TOpenDialog;
     procedure StartBtnClick(Sender: TObject);
     procedure FileNameEditPropertiesButtonClick(Sender: TObject;
       AButtonIndex: Integer);
@@ -394,7 +394,7 @@ begin
   if(SaveDialog1.Execute)then
   begin
 
-    FilePath.Text:=SaveDialog1.Path;
+    FilePath.Text:=SaveDialog1.GetNamePath;
     if  FilePath.Text[Length(FilePath.Text)]<>'\' then  FilePath.Text:=FilePath.Text+'\' ;
     DbfExportT5.DatabaseName:=FilePath.Text+PeriodPath;
     DbfExportT6.DatabaseName:=FilePath.Text+PeriodPath;
