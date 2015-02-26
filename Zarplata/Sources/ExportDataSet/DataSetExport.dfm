@@ -116,10 +116,6 @@ object BankExportForm: TBankExportForm
     Left = 8
     Top = 88
   end
-  object cxshlbrwsrdlg1: TcxShellBrowserDialog
-    Left = 352
-    Top = 8
-  end
   object DataSetConst: TpFIBDataSet
     SelectSQL.Strings = (
       'SELECT ID_MAN,TN,FIO,SUMMA'
@@ -130,5 +126,10 @@ object BankExportForm: TBankExportForm
     Left = 72
     Top = 56
     poSQLINT64ToBCD = True
+  end
+  object cxshlbrwsrdlg1: TOpenDialog
+    Filter = #1060#1072#1081#1083#1099' DBF(*.dbf)|*.dbf|'#1042#1089#1077' '#1092#1072#1081#1083#1099'(*.*)|*.*'
+    Left = 360
+    Top = 80
   end
 end

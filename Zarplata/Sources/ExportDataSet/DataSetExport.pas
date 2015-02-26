@@ -24,9 +24,9 @@ type
     ProgressBar: TcxProgressBar;
     StartBtn: TcxButton;
     ExitBtn: TcxButton;
-    cxshlbrwsrdlg1: TcxShellBrowserDialog;
     eFileNameEdit: TcxButtonEdit;
     DataSetConst: TpFIBDataSet;
+    cxshlbrwsrdlg1: TOpenDialog;
     procedure StartBtnClick(Sender: TObject);
     procedure FileNameEditPropertiesButtonClick(Sender: TObject;
       AButtonIndex: Integer);
@@ -173,7 +173,7 @@ end;
 procedure TBankExportForm.FileNameEditPropertiesButtonClick(Sender: TObject; AButtonIndex: Integer);
 begin
   if not cxshlbrwsrdlg1.Execute then exit;
-  GenFileName(cxshlbrwsrdlg1.Path);
+  GenFileName(cxshlbrwsrdlg1.GetNamePath);
 end;
 
 procedure TBankExportForm.ExitBtnClick(Sender: TObject);
