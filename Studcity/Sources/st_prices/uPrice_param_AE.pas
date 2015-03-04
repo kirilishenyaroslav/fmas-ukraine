@@ -322,7 +322,7 @@ begin
 
          case DM.DataSet_main['ST_OPTIONS'] of
           0: DM.MemoryData_services['MemoryData_summa'] := DM.MemoryData_services['MemoryData_norma'] * DM.MemoryData_services['MemoryData_tariff'];
-          1: DM.MemoryData_services['MemoryData_summa'] := DM.MemoryData_services['MemoryData_norma'] * DM.MemoryData_services['MemoryData_tariff'] - (DM.MemoryData_services['MemoryData_norma'] * DM.MemoryData_services['MemoryData_tariff'] / 5);
+          1: DM.MemoryData_services['MemoryData_summa'] := DM.MemoryData_services['MemoryData_norma'] * DM.MemoryData_services['MemoryData_tariff'];
           2: DM.MemoryData_services['MemoryData_summa'] := DM.MemoryData_services['MemoryData_norma'] * DM.MemoryData_services['MemoryData_tariff'] / 5;
          end;
 
@@ -472,7 +472,7 @@ begin
 
         case DM.DataSet_main['ST_OPTIONS'] of
          0: DM.MemoryData_services['MemoryData_summa'] := DM.MemoryData_services['MemoryData_norma'] * DM.MemoryData_services['MemoryData_tariff'];
-         1: DM.MemoryData_services['MemoryData_summa'] := DM.MemoryData_services['MemoryData_norma'] * DM.MemoryData_services['MemoryData_tariff'] - (DM.MemoryData_services['MemoryData_norma'] * DM.MemoryData_services['MemoryData_tariff'] / 5);
+         1: DM.MemoryData_services['MemoryData_summa'] := DM.MemoryData_services['MemoryData_norma'] * DM.MemoryData_services['MemoryData_tariff'];
          2: DM.MemoryData_services['MemoryData_summa'] := DM.MemoryData_services['MemoryData_norma'] * DM.MemoryData_services['MemoryData_tariff'] / 5;
         end;
 
@@ -550,7 +550,7 @@ begin
 
     case DM.MemoryData_services['MemoryData_st_options'] of
      0: DM.MemoryData_services['MemoryData_summa'] := DM.MemoryData_services['MemoryData_norma'] * DM.MemoryData_services['MemoryData_tariff'];
-     1: DM.MemoryData_services['MemoryData_summa'] := DM.MemoryData_services['MemoryData_norma'] * DM.MemoryData_services['MemoryData_tariff'] - (DM.MemoryData_services['MemoryData_norma'] * DM.MemoryData_services['MemoryData_tariff'] / 5);
+     1: DM.MemoryData_services['MemoryData_summa'] := DM.MemoryData_services['MemoryData_norma'] * DM.MemoryData_services['MemoryData_tariff'];
      2: DM.MemoryData_services['MemoryData_summa'] := DM.MemoryData_services['MemoryData_norma'] * DM.MemoryData_services['MemoryData_tariff'] / 5;
     end;
 

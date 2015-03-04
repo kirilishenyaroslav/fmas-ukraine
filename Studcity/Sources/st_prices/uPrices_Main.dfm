@@ -21,7 +21,7 @@ object frmPrice_Main: TfrmPrice_Main
     Left = 0
     Top = 48
     Width = 700
-    Height = 353
+    Height = 352
     Align = alClient
     PopupMenu = PopupMenu2
     TabOrder = 0
@@ -89,7 +89,7 @@ object frmPrice_Main: TfrmPrice_Main
   end
   object HotKey_StatusBar: TdxStatusBar
     Left = 0
-    Top = 401
+    Top = 400
     Width = 700
     Height = 24
     Hint = #1043#1086#1088#1103#1095#1080#1077' '#1082#1083#1072#1074#1080#1096#1080
