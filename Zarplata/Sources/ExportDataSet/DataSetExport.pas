@@ -782,7 +782,7 @@ begin
   CreateDBUniver.CreateFields.Add('SBK_FIO;C;40;0');
   CreateDBUniver.CreateFields.Add('SBK_INN;C;10;0');
   CreateDBUniver.CreateFields.Add('SBK_NUM;C;20;0');
-  CreateDBUniver.CreateFields.Add('SBK_SUMM;N;10;2');
+  CreateDBUniver.CreateFields.Add('SBK_SUM;N;10;2');
 
   ProgressBar.Properties.Max := RecordCount;
   ProgressBar.Position       := 0;
@@ -806,7 +806,7 @@ begin
       DbfExport['SBK_FIO'] := DSet['FIO'];
       DbfExport['SBK_INN'] := DSet['TIN'];
       DbfExport['SBK_NUM'] := DSet['ACCT_CARD'];
-      DbfExport['SBK_SUMM']:= DSet['SUMMA'];
+      DbfExport['SBK_SUM']:= DSet['SUMMA'];
 
 
       DbfExport.Post;
