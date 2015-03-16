@@ -57,6 +57,7 @@ type
     procedure ExportUkrKomunBank(DataSet: TpFIBDataSet);
     procedure ExportUkrsibbankSimple(DataSet: TpFIBDataSet);
     procedure ExportOschad(DataSet: TpFIBDataSet);
+    procedure ExportUkrSib2(DataSet: TpFIBDataSet);
     function ChangeByte(const FilePath: String; OldByte,NewByte: Byte; SetPos: int64): Boolean;
   end;
 
@@ -127,6 +128,7 @@ begin
   if q['EXPORT_PROC'].AsString = 'ExportProminvest2' then form.fType := 14;
   if q['EXPORT_PROC'].AsString = 'ExportUkrKomunBank' then form.fType := 15;
   if q['EXPORT_PROC'].AsString = 'ExportOschad' then form.fType := 16;
+    if q['EXPORT_PROC'].AsString = 'ExportUkrSib2' then form.fType := 17;
   form.GenFileName(q['DEFAULT_PATH'].AsString);
   q.Close;
   form.ShowModal;
@@ -165,6 +167,7 @@ begin
       14: ExportProminvest2(DSet);
       15: ExportUkrKomunBank(DSet);
       16: ExportOschad(DSet);
+      17: ExportUkrSib2(DSet);
     end;
   end else ZShowMessage('Увага!','Не знайден шлях експорту!', mtInformation, [mbOk]);
 end;
@@ -744,6 +747,67 @@ begin
           DbfExport['OPERATOR']  := DSet['EXPORT_OPERATOR']
       else
           DbfExport['OPERATOR']  := '';
+
+      DbfExport.Post;
+      DSet.Next;
+
+      ProgressBar.Position := ProgressBar.Position + 1;
+      Application.ProcessMessages;
+      num := num+1;
+    end;
+  except
+    on e:Exception do
+    begin
+      ZShowMessage('Помилка!', 'Неможливо зробити імпорт!' + #13 + e.Message, mtError, [mbOk]);
+      exit;
+    end;
+  end;
+  DbfExport.Close;
+  ZShowMessage('Завершення','Данні експортовано.',mtInformation, [mbOk]);
+end;
+
+
+procedure TBankExportForm.ExportUkrSib2(DataSet: TpFIBDataSet);
+var
+  RecordCount : integer;
+  num : integer;
+begin
+  DbfExport.Close;
+  DSet.Open;
+  DSet.FetchAll;
+  RecordCount := DSet.RecordCount;
+  DSet.First;
+  num := 1;
+  CreateDBUniver.CreateFields.Clear;
+  CreateDBUniver.CreateFields.Add('SBK_FIO;C;40;0');
+  CreateDBUniver.CreateFields.Add('SBK_INN;C;10;0');
+  CreateDBUniver.CreateFields.Add('SBK_NUM;C;20;0');
+  CreateDBUniver.CreateFields.Add('SBK_SUMM;N;10;2');
+
+  ProgressBar.Properties.Max := RecordCount;
+  ProgressBar.Position       := 0;
+
+  DeleteFile(PChar(DbfExport.DatabaseName + '\' + DbfExport.TableName));
+  if not CreateDBUniver.Execute then
+  begin
+    ZShowMessage('Помилка!', 'Неможливо створити файл!', mtError, [mbOk]);
+    Exit;
+  end;
+
+  DbfExport.Exclusive:=False;
+  DbfExport.Open;
+
+  try
+    While not(DSet.Eof) do
+    begin
+
+      DbfExport.Append;
+
+      DbfExport['SBK_FIO'] := DSet['FIO'];
+      DbfExport['SBK_INN'] := DSet['TIN'];
+      DbfExport['SBK_NUM'] := DSet['ACCT_CARD'];
+      DbfExport['SBK_SUMM']:= DSet['SUMMA'];
+
 
       DbfExport.Post;
       DSet.Next;
@@ -1395,6 +1459,7 @@ begin
     7 : s := '^001';
     12: s := 'IMEX' + s;
     15 : s := 'US' + s;
+    17 : s := 'US' +s;
   end;
 {  num := 0;
   while FileExists(path + s +   IfThen(num < 10, '0' + IntToStr(num), IntToStr(num)) + GetExt) do
