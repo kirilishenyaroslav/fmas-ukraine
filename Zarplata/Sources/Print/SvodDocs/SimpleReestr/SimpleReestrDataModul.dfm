@@ -27,9 +27,14 @@ object SimpleDM: TSimpleDM
     PreviewOptions.Zoom = 1.000000000000000000
     PrintOptions.Printer = #1055#1086' '#1091#1084#1086#1083#1095#1072#1085#1080#1102
     ReportOptions.CreateDate = 38464.547402754600000000
-    ReportOptions.LastChange = 42052.949892199070000000
+    ReportOptions.LastChange = 42081.882147905090000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
+      'procedure Page1OnBeforePrint(Sender: TfrxComponent);'
+      'begin'
+      ''
+      'end;'
+      ''
       'begin'
       ''
       'end.')
@@ -37,16 +42,12 @@ object SimpleDM: TSimpleDM
     Left = 168
     Datasets = <
       item
+        DataSet = ReportDSetAddData
+        DataSetName = 'ReportDSetAddData'
+      end
+      item
         DataSet = ReportDsetData
         DataSetName = 'ReportDsetData'
-      end
-      item
-        DataSet = ReportDSetGlobalData
-        DataSetName = 'ReportDsetGlobalData'
-      end
-      item
-        DataSet = UserDSet
-        DataSetName = 'UserDSet'
       end>
     Variables = <
       item
@@ -55,583 +56,1709 @@ object SimpleDM: TSimpleDM
       end
       item
         Name = 'PPeriod'
-        Value = #39#1063#1077#1088#1074#1077#1085#1100' 2010 '#1088'.'#39
+        Value = #39#1043#1088#1091#1076#1077#1085#1100' 2012 '#1088'.'#39
       end>
     Style = <>
     object Page1: TfrxReportPage
-      Orientation = poLandscape
-      PaperWidth = 297.000000000000000000
-      PaperHeight = 210.000000000000000000
+      PaperWidth = 210.000000000000000000
+      PaperHeight = 297.000000000000000000
       PaperSize = 9
-      LeftMargin = 10.000000000000000000
-      RightMargin = 10.000000000000000000
-      TopMargin = 10.000000000000000000
-      BottomMargin = 10.000000000000000000
-      object MasterData1: TfrxMasterData
+      LeftMargin = 20.000000000000000000
+      RightMargin = 20.000000000000000000
+      TopMargin = 20.000000000000000000
+      BottomMargin = 20.000000000000000000
+      OnBeforePrint = 'Page1OnBeforePrint'
+      object Memo1: TfrxMemoView
+        Align = baCenter
+        Left = -37.795300000000000000
+        Top = 11.338590000000000000
+        Width = 718.110700000000000000
+        Height = 19.377240000000000000
+        AutoWidth = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        HAlign = haRight
+        Memo.Strings = (
+          #1056#1077#1108#1089#1090#1088' '#1085#1072#1088#1072#1093#1091#1074#1072#1085#1100' '#1108#1076#1080#1085#1086#1075#1086' '#1089#1086#1094#1110#1072#1083#1100#1085#1086#1075#1086' '#1074#1085#1077#1089#1082#1091' '#1079#1072' [PPeriod]')
+        ParentFont = False
+      end
+      object Memo2: TfrxMemoView
+        Top = 75.590600000000000000
+        Width = 234.330860000000000000
         Height = 18.897650000000000000
-        Top = 154.960730000000000000
-        Width = 1046.929810000000000000
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        Memo.Strings = (
+          #1042#1089#1100#1086#1075#1086' '#1085#1072#1088#1072#1093#1086#1074#1072#1085#1086'  ')
+        ParentFont = False
+      end
+      object Memo3: TfrxMemoView
+        Top = 94.488250000000000000
+        Width = 234.330860000000000000
+        Height = 18.897650000000000000
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        Memo.Strings = (
+          #1055#1077#1088#1077#1074#1080#1097#1077#1085#1085#1103'     ')
+        ParentFont = False
+      end
+      object Memo4: TfrxMemoView
+        Left = 234.330860000000000000
+        Top = 75.590600000000000000
+        Width = 222.992270000000000000
+        Height = 18.897650000000000000
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDsetData."SUMMA_ALL"]')
+        ParentFont = False
+      end
+      object Memo5: TfrxMemoView
+        Left = 234.330860000000000000
+        Top = 94.488250000000000000
+        Width = 222.992270000000000000
+        Height = 18.897650000000000000
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDsetData."SUMMA_OVER"]')
+        ParentFont = False
+      end
+      object Memo6: TfrxMemoView
+        Top = 113.385900000000000000
+        Width = 234.330860000000000000
+        Height = 18.897650000000000000
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        Memo.Strings = (
+          #1053#1077' '#1086#1087#1086#1076#1072#1090#1082#1086#1074#1091#1108#1090#1100#1089#1103)
+        ParentFont = False
+      end
+      object Memo8: TfrxMemoView
+        Left = 234.330860000000000000
+        Top = 113.385900000000000000
+        Width = 222.992270000000000000
+        Height = 18.897650000000000000
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDsetData."SUMMA_NOT_TAXATION"]')
+        ParentFont = False
+      end
+      object Memo10: TfrxMemoView
+        Top = 151.181200000000000000
+        Width = 234.330860000000000000
+        Height = 34.015770000000000000
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        Memo.Strings = (
+          #1041#1072#1079#1072' '#1085#1072#1088#1072#1093#1091#1074#1072#1085#1085#1103' '
+          #1077#1076#1080#1085#1086#1075#1086' '#1089#1086#1094#1110#1072#1083#1100#1085#1086#1075#1086' '#1074#1085#1077#1089#1082#1091' ('#1028#1057#1042')')
+        ParentFont = False
+      end
+      object Memo12: TfrxMemoView
+        Left = 234.330860000000000000
+        Top = 151.181200000000000000
+        Width = 222.992270000000000000
+        Height = 34.015770000000000000
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDsetData."SUMMA_P3"]')
+        ParentFont = False
+        VAlign = vaBottom
+      end
+      object Line1: TfrxLineView
+        Top = 211.653680000000000000
+        Width = 642.520100000000000000
+        Frame.Typ = [ftTop]
+      end
+      object Memo22: TfrxMemoView
+        Top = 132.283550000000000000
+        Width = 234.330860000000000000
+        Height = 18.897650000000000000
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        Memo.Strings = (
+          #1042#1110#1076#39#1108#1084#1085#1072' '#1089#1091#1084#1072)
+        ParentFont = False
+      end
+      object Memo23: TfrxMemoView
+        Left = 234.330860000000000000
+        Top = 132.283550000000000000
+        Width = 222.992270000000000000
+        Height = 18.897650000000000000
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDsetData."SUMMA_P3_SUB_ZERO"]')
+        ParentFont = False
+      end
+      object Memo7: TfrxMemoView
+        Left = -3.779530000000000000
+        Top = 222.992270000000000000
+        Width = 113.385900000000000000
+        Height = 45.354360000000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        VAlign = vaCenter
+      end
+      object Memo9: TfrxMemoView
+        Left = 109.606370000000000000
+        Top = 222.992270000000000000
+        Width = 98.267780000000000000
+        Height = 45.354360000000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        Memo.Strings = (
+          #1053#1072#1088#1072#1093#1086#1074#1072#1085#1086)
+        VAlign = vaCenter
+      end
+      object Memo11: TfrxMemoView
+        Left = 207.874150000000000000
+        Top = 222.992270000000000000
+        Width = 86.929190000000000000
+        Height = 45.354360000000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        Memo.Strings = (
+          #1042#1110#1076#1089#1086#1090#1086#1082' '
+          #1091#1090#1088#1080#1084#1072#1085#1086#1075#1086' '#1028#1057#1042)
+        VAlign = vaCenter
+      end
+      object Memo13: TfrxMemoView
+        Left = 294.803340000000000000
+        Top = 222.992270000000000000
+        Width = 105.826840000000000000
+        Height = 45.354360000000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        Memo.Strings = (
+          #1057#1091#1084#1072' '#1091#1090#1088#1080#1084#1072#1085#1086#1075#1086' '#1028#1057#1042)
+        VAlign = vaCenter
+      end
+      object Memo14: TfrxMemoView
+        Left = 400.630180000000000000
+        Top = 222.992270000000000000
+        Width = 120.944960000000000000
+        Height = 45.354360000000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        Memo.Strings = (
+          #1042#1110#1076#1089#1086#1090#1086#1082' '
+          #1085#1072#1088#1072#1093#1086#1074#1072#1085#1086#1075#1086' '#1028#1057#1042)
+        VAlign = vaCenter
+      end
+      object Memo15: TfrxMemoView
+        Left = 521.575140000000000000
+        Top = 222.992270000000000000
+        Width = 120.944960000000000000
+        Height = 45.354360000000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        Memo.Strings = (
+          #1057#1091#1084#1072' '#1085#1072#1088#1072#1093#1086#1074#1072#1085#1086#1075#1086' '#1028#1057#1042)
+        VAlign = vaCenter
+      end
+      object Memo16: TfrxMemoView
+        Left = -3.779530000000000000
+        Top = 268.346630000000000000
+        Width = 113.385900000000000000
+        Height = 37.795300000000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        Memo.Strings = (
+          #1047#1072#1088#1086#1073#1110#1090#1085#1072' '#1087#1083#1072#1090#1072)
+        VAlign = vaCenter
+      end
+      object Memo19: TfrxMemoView
+        Left = 109.606370000000000000
+        Top = 268.346630000000000000
+        Width = 98.267780000000000000
+        Height = 18.897650000000000000
         DataSet = ReportDsetData
         DataSetName = 'ReportDsetData'
-        KeepFooter = True
-        KeepHeader = True
-        RowCount = 0
-        object Memo3: TfrxMemoView
-          Left = 449.007874020000000000
-          Width = 83.149606300000000000
-          Height = 18.897650000000000000
-          DataSet = UserDSet
-          DataSetName = 'UserDSet'
-          DisplayFormat.DecimalSeparator = ','
-          DisplayFormat.FormatStr = '%2.2f'
-          DisplayFormat.Kind = fkNumeric
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = []
-          Frame.Typ = [ftLeft, ftRight, ftBottom]
-          HAlign = haRight
-          Memo.Strings = (
-            '[ReportDsetData."SUMMA_FACT"]')
-          ParentFont = False
-        end
-        object SysMemo1: TfrxSysMemoView
-          Width = 41.574830000000000000
-          Height = 18.897650000000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = []
-          Frame.Typ = [ftLeft, ftRight, ftBottom]
-          HAlign = haRight
-          Memo.Strings = (
-            '[LINE#]')
-          ParentFont = False
-        end
-        object Memo4: TfrxMemoView
-          Left = 41.574830000000000000
-          Width = 64.251968500000000000
-          Height = 18.897650000000000000
-          DataSet = UserDSet
-          DataSetName = 'UserDSet'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = []
-          Frame.Typ = [ftLeft, ftRight, ftBottom]
-          HAlign = haCenter
-          Memo.Strings = (
-            '[ReportDsetData."TN"]')
-          ParentFont = False
-        end
-        object Memo10: TfrxMemoView
-          Left = 105.826840000000000000
-          Width = 282.708661417323000000
-          Height = 18.897650000000000000
-          DataSet = UserDSet
-          DataSetName = 'UserDSet'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = []
-          Frame.Typ = [ftRight, ftBottom]
-          Memo.Strings = (
-            '[ReportDsetData."FIO"]')
-          ParentFont = False
-        end
-        object Memo24: TfrxMemoView
-          Left = 388.535433070000000000
-          Width = 60.472440940000000000
-          Height = 18.897650000000000000
-          DataSet = UserDSet
-          DataSetName = 'UserDSet'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = []
-          Frame.Typ = [ftLeft, ftRight, ftBottom]
-          HAlign = haCenter
-          Memo.Strings = (
-            '[ReportDsetData."PERIOD"]')
-          ParentFont = False
-        end
-        object Memo25: TfrxMemoView
-          Left = 619.086614170000000000
-          Width = 56.692913390000000000
-          Height = 18.897650000000000000
-          DataSet = UserDSet
-          DataSetName = 'UserDSet'
-          DisplayFormat.DecimalSeparator = ','
-          DisplayFormat.FormatStr = '%2.2f'
-          DisplayFormat.Kind = fkNumeric
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = []
-          Frame.Typ = [ftLeft, ftBottom]
-          HAlign = haCenter
-          Memo.Strings = (
-            '[ReportDsetData."SUMMA_RAZN"]')
-          ParentFont = False
-        end
-        object Memo6: TfrxMemoView
-          Left = 532.157480310000000000
-          Width = 86.929133860000000000
-          Height = 18.897650000000000000
-          DataSet = UserDSet
-          DataSetName = 'UserDSet'
-          DisplayFormat.DecimalSeparator = ','
-          DisplayFormat.FormatStr = '%2.2f'
-          DisplayFormat.Kind = fkNumeric
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = []
-          Frame.Typ = [ftLeft, ftRight, ftBottom]
-          HAlign = haRight
-          Memo.Strings = (
-            '[ReportDsetData."SUMMA_NAR"]')
-          ParentFont = False
-        end
-        object Memo22: TfrxMemoView
-          Left = 849.637795280000000000
-          Width = 98.267716540000000000
-          Height = 18.897650000000000000
-          DataSet = UserDSet
-          DataSetName = 'UserDSet'
-          DisplayFormat.DecimalSeparator = '.'
-          DisplayFormat.FormatStr = '%2.2f'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = []
-          Frame.Typ = [ftLeft, ftRight, ftBottom]
-          HAlign = haCenter
-          Memo.Strings = (
-            '[ReportDsetData."ALLDAY"]')
-          ParentFont = False
-        end
-        object Memo23: TfrxMemoView
-          Left = 947.905511810000000000
-          Width = 98.267716540000000000
-          Height = 18.897650000000000000
-          DataSet = UserDSet
-          DataSetName = 'UserDSet'
-          DisplayFormat.DecimalSeparator = '.'
-          DisplayFormat.FormatStr = '%2.2f'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = []
-          Frame.Typ = [ftLeft, ftRight, ftBottom]
-          HAlign = haCenter
-          Memo.Strings = (
-            '[ReportDsetData."FACT_DAY"]')
-          ParentFont = False
-        end
-        object Memo29: TfrxMemoView
-          Left = 676.535433070000000000
-          Width = 52.913385830000000000
-          Height = 18.897650000000000000
-          DataSet = UserDSet
-          DataSetName = 'UserDSet'
-          DisplayFormat.DecimalSeparator = ','
-          DisplayFormat.FormatStr = '%2.2f'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = []
-          Frame.Typ = [ftLeft, ftRight, ftBottom]
-          HAlign = haCenter
-          Memo.Strings = (
-            '[ReportDsetData."NUM_SMET"]')
-          ParentFont = False
-        end
-        object Memo30: TfrxMemoView
-          Left = 729.449290000000000000
-          Width = 120.944925830000000000
-          Height = 18.897650000000000000
-          DataSet = UserDSet
-          DataSetName = 'UserDSet'
-          DisplayFormat.DecimalSeparator = ','
-          DisplayFormat.FormatStr = '%2.2f'
-          DisplayFormat.Kind = fkNumeric
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = []
-          Frame.Typ = [ftLeft, ftBottom]
-          HAlign = haCenter
-          Memo.Strings = (
-            '[ReportDsetData."SUMMA_SMETA"]')
-          ParentFont = False
-        end
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDsetData."SUMMA_P3_UCH_ST_NOT"]')
+        VAlign = vaCenter
       end
-      object Header1: TfrxHeader
-        Height = 70.811070000000000000
-        Top = 18.897650000000000000
-        Width = 1046.929810000000000000
-        object Memo1: TfrxMemoView
-          Left = 449.007827640000000000
-          Top = 51.913420000000000000
-          Width = 83.149589210000000000
-          Height = 18.897650000000000000
-          DataSet = ReportDsetData
-          DataSetName = 'ReportDsetData'
-          DisplayFormat.DecimalSeparator = '.'
-          DisplayFormat.FormatStr = '%2.2f'
-          DisplayFormat.Kind = fkNumeric
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
-          HAlign = haCenter
-          Memo.Strings = (
-            #1060#1072#1082#1090#1080#1095'. '#1089#1091#1084#1072)
-          ParentFont = False
-        end
-        object SysMemo2: TfrxSysMemoView
-          Top = 51.913420000000000000
-          Width = 41.574830000000000000
-          Height = 18.897650000000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
-          HAlign = haCenter
-          Memo.Strings = (
-            #8470' '#1087#1087'.')
-          ParentFont = False
-        end
-        object Memo11: TfrxMemoView
-          Left = 41.574830000000000000
-          Top = 51.913420000000000000
-          Width = 64.252010000000000000
-          Height = 18.897650000000000000
-          DataSet = ReportDsetData
-          DataSetName = 'ReportDsetData'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
-          HAlign = haCenter
-          Memo.Strings = (
-            #1058#1072#1073'. '#8470)
-          ParentFont = False
-        end
-        object Memo12: TfrxMemoView
-          Left = 105.826840000000000000
-          Top = 51.913420000000000000
-          Width = 282.708632130000000000
-          Height = 18.897650000000000000
-          DataSet = ReportDsetData
-          DataSetName = 'ReportDsetData'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
-          HAlign = haCenter
-          Memo.Strings = (
-            #1055#1088#1110#1079#1074#1080#1097#1077', '#1030#1084#39#1103', '#1055#1086'-'#1073#1072#1090#1100#1082#1086#1074#1110)
-          ParentFont = False
-        end
-        object Memo13: TfrxMemoView
-          Width = 1044.631640000000000000
-          Height = 26.456710000000000000
-          StretchMode = smMaxHeight
-          AllowHTMLTags = True
-          DataSet = ReportDSetGlobalData
-          DataSetName = 'ReportDsetGlobalData'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -16
-          Font.Name = 'Arial'
-          Font.Style = []
-          HAlign = haCenter
-          Memo.Strings = (
-            #1056#1077#1108#1089#1090#1088': <b>"[ReportDsetGlobalData."NAME_VOPL_PROP"]"</b>')
-          ParentFont = False
-        end
-        object Memo17: TfrxMemoView
-          Left = 83.149660000000000000
-          Top = 26.456710000000000000
-          Width = 846.614720000000000000
-          Height = 18.897650000000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          HAlign = haCenter
-          Memo.Strings = (
-            '[PPeriod]')
-          ParentFont = False
-        end
-        object SysMemo5: TfrxSysMemoView
-          Left = 929.764380000000000000
-          Top = 26.456692913385800000
-          Width = 113.385900000000000000
-          Height = 18.897650000000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = [fsItalic]
-          HAlign = haRight
-          Memo.Strings = (
-            #1089#1090#1086#1088'. [PAGE#] ')
-          ParentFont = False
-        end
-        object Memo18: TfrxMemoView
-          Top = 26.456710000000000000
-          Width = 79.370130000000000000
-          Height = 18.897650000000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Memo.Strings = (
-            '[Date]')
-          ParentFont = False
-        end
-        object Memo19: TfrxMemoView
-          Left = 388.535396460000000000
-          Top = 52.133890000000000000
-          Width = 60.472480000000000000
-          Height = 18.897650000000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
-          HAlign = haCenter
-          Memo.Strings = (
-            #1055#1077#1088#1110#1086#1076)
-          ParentFont = False
-        end
-        object Memo20: TfrxMemoView
-          Left = 849.637795280000000000
-          Top = 51.779527560000000000
-          Width = 98.267780000000000000
-          Height = 19.653543307086600000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
-          HAlign = haCenter
-          Memo.Strings = (
-            #1050#1072#1083'.'#1076#1085'.'#1091' '#1084#1110#1089'.')
-          ParentFont = False
-        end
-        object Memo5: TfrxMemoView
-          Left = 619.086536060000000000
-          Top = 51.779527560000000000
-          Width = 56.428346460000000000
-          Height = 19.653543310000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Frame.Typ = [ftLeft, ftTop, ftBottom]
-          HAlign = haCenter
-          Memo.Strings = (
-            #1056#1110#1079#1085#1080#1094#1103)
-          ParentFont = False
-        end
-        object Memo14: TfrxMemoView
-          Left = 947.905511810000000000
-          Top = 51.779527560000000000
-          Width = 98.267716540000000000
-          Height = 19.653543307086600000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
-          HAlign = haCenter
-          Memo.Strings = (
-            #1042#1110#1076#1087#1088#1072#1094#1100#1086#1074#1072#1085#1086)
-          ParentFont = False
-        end
-        object Memo21: TfrxMemoView
-          Left = 532.157416850000000000
-          Top = 51.779527560000000000
-          Width = 86.929119210000000000
-          Height = 19.653543310000000000
-          DataSet = ReportDsetData
-          DataSetName = 'ReportDsetData'
-          DisplayFormat.DecimalSeparator = '.'
-          DisplayFormat.FormatStr = '%2.2f'
-          DisplayFormat.Kind = fkNumeric
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
-          HAlign = haCenter
-          Memo.Strings = (
-            #1057#1091#1084#1072' '#1076#1083#1103' '#1085#1072#1088'.')
-          ParentFont = False
-        end
-        object Memo27: TfrxMemoView
-          Left = 676.535870000000000000
-          Top = 51.779527560000000000
-          Width = 52.913349210000000000
-          Height = 19.653543310000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
-          HAlign = haCenter
-          Memo.Strings = (
-            #1041#1102#1076#1078#1077#1090)
-          ParentFont = False
-        end
-        object Memo28: TfrxMemoView
-          Left = 729.449290000000000000
-          Top = 51.779527560000000000
-          Width = 120.944889210000000000
-          Height = 19.653543310000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Frame.Typ = [ftLeft, ftTop, ftBottom]
-          HAlign = haCenter
-          Memo.Strings = (
-            #1057#1091#1084#1072' '#1079#1072' '#1073#1102#1076#1078#1077#1090#1086#1084)
-          ParentFont = False
-        end
-      end
-      object GroupHeader1: TfrxGroupHeader
+      object Memo17: TfrxMemoView
+        Left = 109.606370000000000000
+        Top = 287.244280000000000000
+        Width = 98.267780000000000000
         Height = 18.897650000000000000
-        Top = 113.385900000000000000
-        Width = 1046.929810000000000000
-        Condition = '<ReportDsetData."SCH_TITLE">'
-        object Memo9: TfrxMemoView
-          Width = 1046.173228350000000000
-          Height = 18.897650000000000000
-          Color = clSilver
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
-          Memo.Strings = (
-            '[ReportDsetData."SCH_TITLE"]')
-          ParentFont = False
-        end
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDsetData."SUMMA_P3_UCH_ST"]')
+        VAlign = vaCenter
       end
-      object GroupFooter1: TfrxGroupFooter
+      object Memo18: TfrxMemoView
+        Left = 207.874150000000000000
+        Top = 268.346630000000000000
+        Width = 86.929190000000000000
         Height = 18.897650000000000000
-        Top = 196.535560000000000000
-        Width = 1046.929810000000000000
-        Stretched = True
-        object SysMemo4: TfrxSysMemoView
-          Left = 449.763752680000000000
-          Width = 83.149606299212600000
-          Height = 18.897650000000000000
-          StretchMode = smMaxHeight
-          DisplayFormat.DecimalSeparator = ','
-          DisplayFormat.FormatStr = '%2.2n'
-          DisplayFormat.Kind = fkNumeric
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Frame.Typ = [ftLeft, ftTop, ftBottom]
-          HAlign = haRight
-          Memo.Strings = (
-            '[SUM(<ReportDsetData."SUMMA_FACT">,MasterData1)]')
-          ParentFont = False
-        end
-        object Memo15: TfrxMemoView
-          Width = 449.007827640000000000
-          Height = 18.897650000000000000
-          StretchMode = smMaxHeight
-          DataSet = ReportDsetData
-          DataSetName = 'ReportDsetData'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Frame.Typ = [ftLeft, ftTop, ftBottom]
-          Memo.Strings = (
-            #1047#1072#1075#1072#1083#1086#1084' '#1079#1072' [ReportDsetData."SCH_TITLE"]:')
-          ParentFont = False
-        end
-        object Memo16: TfrxMemoView
-          Left = 532.157416850000000000
-          Width = 86.929133860000000000
-          Height = 18.897650000000000000
-          StretchMode = smMaxHeight
-          DisplayFormat.DecimalSeparator = ','
-          DisplayFormat.FormatStr = '%2.2n'
-          DisplayFormat.Kind = fkNumeric
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
-          HAlign = haRight
-          Memo.Strings = (
-            '[SUM(<ReportDsetData."SUMMA_NAR">,MasterData1)]')
-          ParentFont = False
-        end
-        object Memo26: TfrxMemoView
-          Left = 619.086536060000000000
-          Width = 56.692913385826800000
-          Height = 18.897650000000000000
-          StretchMode = smMaxHeight
-          DataSet = UserDSet
-          DataSetName = 'UserDSet'
-          DisplayFormat.DecimalSeparator = ','
-          DisplayFormat.FormatStr = '%2.2n'
-          DisplayFormat.Kind = fkNumeric
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -12
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
-          HAlign = haCenter
-          Memo.Strings = (
-            '[SUM(<ReportDsetData."SUMMA_RAZN">,MasterData1)]')
-          ParentFont = False
-        end
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDSetAddData."PERCENT_SOC_SINGLE"]%')
+        VAlign = vaCenter
+      end
+      object Memo20: TfrxMemoView
+        Left = 207.874150000000000000
+        Top = 287.244280000000000000
+        Width = 86.929190000000000000
+        Height = 18.897650000000000000
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDSetAddData."PERCENT_SOC_SCIENCE"]%')
+        VAlign = vaCenter
+      end
+      object Memo21: TfrxMemoView
+        Left = 294.803340000000000000
+        Top = 268.346630000000000000
+        Width = 105.826840000000000000
+        Height = 18.897650000000000000
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[<ReportDsetData."SUMMA_P3_UCH_ST_NOT">*0.036]')
+        VAlign = vaCenter
+      end
+      object Memo24: TfrxMemoView
+        Left = 294.803340000000000000
+        Top = 287.244280000000000000
+        Width = 105.826840000000000000
+        Height = 18.897650000000000000
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[<ReportDsetData."SUMMA_P3_UCH_ST">*0.061]')
+        VAlign = vaCenter
+      end
+      object Memo25: TfrxMemoView
+        Left = 400.630180000000000000
+        Top = 268.346630000000000000
+        Width = 120.944960000000000000
+        Height = 18.897650000000000000
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDSetAddData."ESN_R"]%')
+        VAlign = vaCenter
+      end
+      object Memo26: TfrxMemoView
+        Left = 400.630180000000000000
+        Top = 287.244280000000000000
+        Width = 120.944960000000000000
+        Height = 18.897650000000000000
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDSetAddData."ESN_R"]%')
+        VAlign = vaCenter
+      end
+      object Memo27: TfrxMemoView
+        Left = 521.575140000000000000
+        Top = 268.346630000000000000
+        Width = 120.944960000000000000
+        Height = 18.897650000000000000
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          
+            '[<ReportDsetData."SUMMA_P3_UCH_ST_NOT">*<ReportDSetAddData."ESN_' +
+            'R">/100]')
+        VAlign = vaCenter
+      end
+      object Memo28: TfrxMemoView
+        Left = 521.575140000000000000
+        Top = 287.244280000000000000
+        Width = 120.944960000000000000
+        Height = 18.897650000000000000
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          
+            '[<ReportDsetData."SUMMA_P3_UCH_ST">*<ReportDSetAddData."ESN_R">/' +
+            '100]')
+        VAlign = vaCenter
+      end
+      object Memo29: TfrxMemoView
+        Left = -3.779530000000000000
+        Top = 306.141930000000000000
+        Width = 113.385900000000000000
+        Height = 49.133890000000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        Memo.Strings = (
+          #1047#1072#1088#1086#1073#1110#1090#1085#1072' '#1087#1083#1072#1090#1072' '
+          '('#1087#1088#1072#1094#1102#1102#1095#1110' '#1110#1085#1074#1072#1083#1110#1076#1080')')
+        VAlign = vaCenter
+      end
+      object Memo30: TfrxMemoView
+        Left = 109.606370000000000000
+        Top = 306.141930000000000000
+        Width = 98.267780000000000000
+        Height = 22.677180000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDsetData."SUMMA_P3_UCH_ST_NOT_INV"]')
+        VAlign = vaCenter
+      end
+      object Memo31: TfrxMemoView
+        Left = 109.606370000000000000
+        Top = 328.819110000000000000
+        Width = 98.267780000000000000
+        Height = 26.456710000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDsetData."SUMMA_P3_UCH_ST_INV"]')
+        VAlign = vaCenter
+      end
+      object Memo32: TfrxMemoView
+        Left = 207.874150000000000000
+        Top = 306.141930000000000000
+        Width = 86.929190000000000000
+        Height = 22.677180000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDSetAddData."PERCENT_SOC_SINGLE"]%')
+        VAlign = vaCenter
+      end
+      object Memo33: TfrxMemoView
+        Left = 294.803340000000000000
+        Top = 306.141930000000000000
+        Width = 105.826840000000000000
+        Height = 22.677180000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[<ReportDsetData."SUMMA_P3_UCH_ST_NOT_INV">*0.036]')
+        VAlign = vaCenter
+      end
+      object Memo34: TfrxMemoView
+        Left = 400.630180000000000000
+        Top = 306.141930000000000000
+        Width = 120.944960000000000000
+        Height = 22.677180000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDSetAddData."ESN_INV"]%')
+        VAlign = vaCenter
+      end
+      object Memo35: TfrxMemoView
+        Left = 521.575140000000000000
+        Top = 306.141930000000000000
+        Width = 120.944960000000000000
+        Height = 22.677180000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          
+            '[<ReportDsetData."SUMMA_P3_UCH_ST_NOT_INV">*<ReportDSetAddData."' +
+            'ESN_INV">/100]')
+        VAlign = vaCenter
+      end
+      object Memo36: TfrxMemoView
+        Left = 207.874150000000000000
+        Top = 328.819110000000000000
+        Width = 86.929190000000000000
+        Height = 26.456710000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDSetAddData."PERCENT_SOC_SCIENCE"]%')
+        VAlign = vaCenter
+      end
+      object Memo37: TfrxMemoView
+        Left = 294.803340000000000000
+        Top = 328.819110000000000000
+        Width = 105.826840000000000000
+        Height = 26.456710000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[<ReportDsetData."SUMMA_P3_UCH_ST_INV">*0.061]')
+        VAlign = vaCenter
+      end
+      object Memo38: TfrxMemoView
+        Left = 400.630180000000000000
+        Top = 328.819110000000000000
+        Width = 120.944960000000000000
+        Height = 26.456710000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDSetAddData."ESN_INV"]%')
+        VAlign = vaCenter
+      end
+      object Memo39: TfrxMemoView
+        Left = 521.575140000000000000
+        Top = 328.819110000000000000
+        Width = 120.944960000000000000
+        Height = 26.456710000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          
+            '[<ReportDsetData."SUMMA_P3_UCH_ST_INV">*<ReportDSetAddData."ESN_' +
+            'INV">/100]')
+        VAlign = vaCenter
+      end
+      object Memo40: TfrxMemoView
+        Left = -3.779530000000000000
+        Top = 355.275820000000000000
+        Width = 113.385900000000000000
+        Height = 37.795275590000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        Memo.Strings = (
+          #1051#1080#1089#1090#1080' '#1090#1080#1084#1095#1072#1089#1086#1074#1086#1111' '#1085#1077#1087#1088#1072#1094#1077#1079#1076#1072#1090#1085#1086#1089#1090#1110)
+        VAlign = vaCenter
+      end
+      object Memo41: TfrxMemoView
+        Left = 109.606370000000000000
+        Top = 355.275820000000000000
+        Width = 98.267780000000000000
+        Height = 37.795300000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDsetData."SUMMA_P6_INV_NOT"]')
+        VAlign = vaCenter
+      end
+      object Memo42: TfrxMemoView
+        Left = 207.874150000000000000
+        Top = 355.275820000000000000
+        Width = 86.929190000000000000
+        Height = 37.795300000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDSetAddData."PERCENT_DFSS_SINGLE"]%')
+        VAlign = vaCenter
+      end
+      object Memo43: TfrxMemoView
+        Left = 294.803340000000000000
+        Top = 355.275820000000000000
+        Width = 105.826840000000000000
+        Height = 37.795300000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[<ReportDsetData."SUMMA_P6_INV_NOT">*0.02]')
+        VAlign = vaCenter
+      end
+      object Memo44: TfrxMemoView
+        Left = 400.630180000000000000
+        Top = 355.275820000000000000
+        Width = 120.944960000000000000
+        Height = 37.795300000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDSetAddData."ESN_LL"]%')
+        VAlign = vaCenter
+      end
+      object Memo45: TfrxMemoView
+        Left = 521.575140000000000000
+        Top = 355.275820000000000000
+        Width = 120.944960000000000000
+        Height = 37.795300000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          
+            '[<ReportDsetData."SUMMA_P6_INV_NOT">*<ReportDSetAddData."ESN_LL"' +
+            '>/100]')
+        VAlign = vaCenter
+      end
+      object Memo46: TfrxMemoView
+        Left = -3.779530000000000000
+        Top = 393.071120000000000000
+        Width = 113.385900000000000000
+        Height = 71.811070000000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        Memo.Strings = (
+          #1051#1080#1089#1090#1080' '#1090#1080#1084#1095#1072#1089#1086#1074#1086#1111' '#1085#1077#1087#1088#1072#1094#1077#1079#1076#1072#1090#1085#1086#1089#1090#1110
+          '('#1087#1088#1072#1094#1102#1102#1095#1110' '#1110#1085#1074#1072#1083#1110#1076#1080')')
+        VAlign = vaCenter
+      end
+      object Memo47: TfrxMemoView
+        Left = 109.606370000000000000
+        Top = 393.071120000000000000
+        Width = 98.267780000000000000
+        Height = 71.811070000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDsetData."SUMMA_P6_INV"]')
+        VAlign = vaCenter
+      end
+      object Memo48: TfrxMemoView
+        Left = 207.874150000000000000
+        Top = 393.071120000000000000
+        Width = 86.929190000000000000
+        Height = 71.811070000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDSetAddData."PERCENT_DFSS_SINGLE"]%')
+        VAlign = vaCenter
+      end
+      object Memo49: TfrxMemoView
+        Left = 294.803340000000000000
+        Top = 393.071120000000000000
+        Width = 105.826840000000000000
+        Height = 71.811070000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[<ReportDsetData."SUMMA_P6_INV">*0.02]')
+        VAlign = vaCenter
+      end
+      object Memo50: TfrxMemoView
+        Left = 400.630180000000000000
+        Top = 393.071120000000000000
+        Width = 120.944960000000000000
+        Height = 71.811070000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDSetAddData."ESN_INV"]%')
+        VAlign = vaCenter
+      end
+      object Memo51: TfrxMemoView
+        Left = 521.575140000000000000
+        Top = 393.071120000000000000
+        Width = 120.944960000000000000
+        Height = 71.811070000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          
+            '[<ReportDsetData."SUMMA_P6_INV">*<ReportDSetAddData."ESN_INV">/1' +
+            '00]')
+        VAlign = vaCenter
+      end
+      object Memo52: TfrxMemoView
+        Left = -3.779530000000000000
+        Top = 464.882190000000000000
+        Width = 113.385900000000000000
+        Height = 37.795300000000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        Memo.Strings = (
+          #1044#1086#1075#1086#1074#1086#1075#1072' '#1043#1055#1061)
+        VAlign = vaCenter
+      end
+      object Memo53: TfrxMemoView
+        Left = 109.606370000000000000
+        Top = 464.882190000000000000
+        Width = 98.267780000000000000
+        Height = 37.795300000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDsetData."SUMMA_P3_DOG_PIDRYD"]')
+        VAlign = vaCenter
+      end
+      object Memo54: TfrxMemoView
+        Left = 207.874150000000000000
+        Top = 464.882190000000000000
+        Width = 86.929190000000000000
+        Height = 37.795300000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDSetAddData."PERCENT_SINGLE_GR_PR_DOG"]%')
+        VAlign = vaCenter
+      end
+      object Memo55: TfrxMemoView
+        Left = 294.803340000000000000
+        Top = 464.882190000000000000
+        Width = 105.826840000000000000
+        Height = 37.795300000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[<ReportDsetData."SUMMA_P3_DOG_PIDRYD">*0.026]')
+        VAlign = vaCenter
+      end
+      object Memo56: TfrxMemoView
+        Left = 400.630180000000000000
+        Top = 464.882190000000000000
+        Width = 120.944960000000000000
+        Height = 37.795300000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDSetAddData."ESN_DP"]%')
+        VAlign = vaCenter
+      end
+      object Memo57: TfrxMemoView
+        Left = 521.575140000000000000
+        Top = 464.882190000000000000
+        Width = 120.944960000000000000
+        Height = 37.795300000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          
+            '[<ReportDsetData."SUMMA_P3_DOG_PIDRYD">*<ReportDSetAddData."ESN_' +
+            'DP">/100]')
+        VAlign = vaCenter
+      end
+      object Memo58: TfrxMemoView
+        Left = -3.779530000000000000
+        Top = 502.677490000000000000
+        Width = 113.385900000000000000
+        Height = 18.897650000000000000
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        Memo.Strings = (
+          #1056#1072#1079#1086#1084)
+        ParentFont = False
+      end
+      object Memo59: TfrxMemoView
+        Left = 109.606370000000000000
+        Top = 502.677490000000000000
+        Width = 98.267780000000000000
+        Height = 18.897650000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          
+            '[<ReportDsetData."SUMMA_P3_UCH_ST">+<ReportDsetData."SUMMA_P3_UC' +
+            'H_ST_NOT">+<ReportDsetData."SUMMA_P3_UCH_ST_INV">+<ReportDsetDat' +
+            'a."SUMMA_P3_UCH_ST_NOT_INV">+<ReportDsetData."SUMMA_P6_INV">+<Re' +
+            'portDsetData."SUMMA_P6_INV_NOT">+<ReportDsetData."SUMMA_P3_DOG_P' +
+            'IDRYD">]')
+        ParentFont = False
+        VAlign = vaCenter
+      end
+      object Memo60: TfrxMemoView
+        Left = 207.874150000000000000
+        Top = 502.677490000000000000
+        Width = 86.929190000000000000
+        Height = 18.897650000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        VAlign = vaCenter
+      end
+      object Memo62: TfrxMemoView
+        Left = 400.630180000000000000
+        Top = 502.677490000000000000
+        Width = 120.944960000000000000
+        Height = 18.897650000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        VAlign = vaCenter
+      end
+      object Line2: TfrxLineView
+        Top = 551.811380000000000000
+        Width = 642.520100000000000000
+        Frame.Typ = [ftTop]
+      end
+      object Memo64: TfrxMemoView
+        Top = 574.488560000000000000
+        Width = 136.062992130000000000
+        Height = 37.795300000000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        VAlign = vaCenter
+      end
+      object Memo65: TfrxMemoView
+        Left = 136.063080000000000000
+        Top = 574.488560000000000000
+        Width = 94.488250000000000000
+        Height = 37.795300000000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        Memo.Strings = (
+          #1053#1072#1088#1072#1093#1086#1074#1072#1085#1086)
+        VAlign = vaCenter
+      end
+      object Memo66: TfrxMemoView
+        Left = 230.551330000000000000
+        Top = 574.488560000000000000
+        Width = 105.826840000000000000
+        Height = 37.795300000000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        Memo.Strings = (
+          #1042#1110#1076#1089#1086#1090#1086#1082' '
+          #1091#1090#1088#1080#1084#1072#1085#1086#1075#1086' '#1028#1057#1042)
+        VAlign = vaCenter
+      end
+      object Memo67: TfrxMemoView
+        Left = 336.378170000000000000
+        Top = 574.488560000000000000
+        Width = 105.826840000000000000
+        Height = 37.795300000000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        Memo.Strings = (
+          #1057#1091#1084#1072' '#1091#1090#1088#1080#1084#1072#1085#1086#1075#1086' '#1028#1057#1042)
+        VAlign = vaCenter
+      end
+      object Memo68: TfrxMemoView
+        Top = 612.283860000000000000
+        Width = 136.062992130000000000
+        Height = 37.795300000000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        Memo.Strings = (
+          #1047#1072#1088#1086#1073#1110#1090#1085#1072' '#1087#1083#1072#1090#1072)
+        VAlign = vaCenter
+      end
+      object Memo69: TfrxMemoView
+        Top = 650.079160000000000000
+        Width = 136.062992130000000000
+        Height = 37.795275590000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        Memo.Strings = (
+          #1051#1080#1089#1090#1080' '#1090#1080#1084#1095#1072#1089#1086#1074#1086#1111' '#1085#1077#1087#1088#1072#1094#1077#1079#1076#1072#1090#1085#1086#1089#1090#1110)
+        VAlign = vaCenter
+      end
+      object Memo70: TfrxMemoView
+        Top = 687.874460000000000000
+        Width = 136.062992130000000000
+        Height = 37.795300000000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        Memo.Strings = (
+          #1044#1086#1075#1086#1074#1086#1075#1072' '#1043#1055#1061)
+        VAlign = vaCenter
+      end
+      object Memo73: TfrxMemoView
+        Left = 230.551330000000000000
+        Top = 612.283860000000000000
+        Width = 105.826840000000000000
+        Height = 18.897650000000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDSetAddData."PERCENT_SOC_SINGLE"]%')
+        VAlign = vaCenter
+      end
+      object Memo74: TfrxMemoView
+        Left = 230.551330000000000000
+        Top = 631.181510000000000000
+        Width = 105.826840000000000000
+        Height = 18.897650000000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDSetAddData."PERCENT_SOC_SCIENCE"]%')
+        VAlign = vaCenter
+      end
+      object Memo77: TfrxMemoView
+        Left = 136.063080000000000000
+        Top = 650.079160000000000000
+        Width = 94.488250000000000000
+        Height = 37.795300000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDsetData."SUMMA_P6"]')
+        VAlign = vaCenter
+      end
+      object Memo78: TfrxMemoView
+        Left = 230.551330000000000000
+        Top = 650.079160000000000000
+        Width = 105.826840000000000000
+        Height = 37.795300000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDSetAddData."PERCENT_DFSS_SINGLE"]%')
+        VAlign = vaCenter
+      end
+      object Memo80: TfrxMemoView
+        Left = 136.063080000000000000
+        Top = 687.874460000000000000
+        Width = 94.488250000000000000
+        Height = 37.795300000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDsetData."SUMMA_P3_DOG_PIDRYD"]')
+        VAlign = vaCenter
+      end
+      object Memo81: TfrxMemoView
+        Left = 230.551330000000000000
+        Top = 687.874460000000000000
+        Width = 105.826840000000000000
+        Height = 37.795300000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDSetAddData."PERCENT_SINGLE_GR_PR_DOG"]%')
+        VAlign = vaCenter
+      end
+      object Memo83: TfrxMemoView
+        Top = 725.669760000000000000
+        Width = 136.062992130000000000
+        Height = 18.897650000000000000
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        Memo.Strings = (
+          #1056#1072#1079#1086#1084)
+        ParentFont = False
+      end
+      object Memo85: TfrxMemoView
+        Left = 230.551330000000000000
+        Top = 725.669760000000000000
+        Width = 105.826840000000000000
+        Height = 18.897650000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        VAlign = vaCenter
+      end
+      object Memo87: TfrxMemoView
+        Top = 771.024120000000000000
+        Width = 136.063080000000000000
+        Height = 37.795300000000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        VAlign = vaCenter
+      end
+      object Memo88: TfrxMemoView
+        Left = 136.063080000000000000
+        Top = 771.024120000000000000
+        Width = 94.488250000000000000
+        Height = 37.795300000000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        Memo.Strings = (
+          #1053#1072#1088#1072#1093#1086#1074#1072#1085#1086)
+        VAlign = vaCenter
+      end
+      object Memo89: TfrxMemoView
+        Left = 230.551330000000000000
+        Top = 771.024120000000000000
+        Width = 105.826840000000000000
+        Height = 37.795300000000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        Memo.Strings = (
+          #1042#1110#1076#1089#1086#1090#1086#1082' '
+          #1091#1090#1088#1080#1084#1072#1085#1086#1075#1086' '#1028#1057#1042)
+        VAlign = vaCenter
+      end
+      object Memo90: TfrxMemoView
+        Left = 336.378170000000000000
+        Top = 771.024120000000000000
+        Width = 105.826840000000000000
+        Height = 37.795300000000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        Memo.Strings = (
+          #1057#1091#1084#1072' '#1091#1090#1088#1080#1084#1072#1085#1086#1075#1086' '#1028#1057#1042)
+        VAlign = vaCenter
+      end
+      object Memo91: TfrxMemoView
+        Top = 808.819420000000000000
+        Width = 136.063080000000000000
+        Height = 18.897650000000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        Memo.Strings = (
+          #1047#1072#1088#1086#1073#1110#1090#1085#1072' '#1087#1083#1072#1090#1072)
+        VAlign = vaCenter
+      end
+      object Memo92: TfrxMemoView
+        Top = 846.614720000000000000
+        Width = 136.063080000000000000
+        Height = 37.795275590000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        Memo.Strings = (
+          #1051#1080#1089#1090#1080' '#1090#1080#1084#1095#1072#1089#1086#1074#1086#1111' '#1085#1077#1087#1088#1072#1094#1077#1079#1076#1072#1090#1085#1086#1089#1090#1110)
+        VAlign = vaCenter
+      end
+      object Memo95: TfrxMemoView
+        Left = 230.551330000000000000
+        Top = 808.819420000000000000
+        Width = 105.826840000000000000
+        Height = 18.897650000000000000
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDSetAddData."ESN_R"]%')
+        VAlign = vaCenter
+      end
+      object Memo96: TfrxMemoView
+        Left = 230.551330000000000000
+        Top = 827.717070000000000000
+        Width = 105.826840000000000000
+        Height = 18.897650000000000000
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDSetAddData."ESN_INV"]%')
+        VAlign = vaCenter
+      end
+      object Memo99: TfrxMemoView
+        Left = 136.063080000000000000
+        Top = 846.614720000000000000
+        Width = 94.488250000000000000
+        Height = 37.795300000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDsetData."SUMMA_P6_INV_NOT"]')
+        VAlign = vaCenter
+      end
+      object Memo100: TfrxMemoView
+        Left = 230.551330000000000000
+        Top = 846.614720000000000000
+        Width = 105.826840000000000000
+        Height = 37.795300000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDSetAddData."ESN_LL"]%')
+        VAlign = vaCenter
+      end
+      object Memo102: TfrxMemoView
+        Top = 922.205320000000000000
+        Width = 136.063080000000000000
+        Height = 18.897650000000000000
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        Memo.Strings = (
+          #1056#1072#1079#1086#1084)
+        ParentFont = False
+      end
+      object Memo104: TfrxMemoView
+        Left = 230.551330000000000000
+        Top = 922.205320000000000000
+        Width = 105.826840000000000000
+        Height = 18.897650000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        VAlign = vaCenter
+      end
+      object Memo106: TfrxMemoView
+        Top = 884.410020000000000000
+        Width = 136.062992130000000000
+        Height = 37.795300000000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        Memo.Strings = (
+          #1044#1086#1075#1086#1074#1086#1075#1072' '#1043#1055#1061)
+        VAlign = vaCenter
+      end
+      object Memo107: TfrxMemoView
+        Left = 136.063080000000000000
+        Top = 884.410020000000000000
+        Width = 94.488250000000000000
+        Height = 37.795300000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDsetData."SUMMA_P3_DOG_PIDRYD"]')
+        VAlign = vaCenter
+      end
+      object Memo108: TfrxMemoView
+        Left = 230.551330000000000000
+        Top = 884.410020000000000000
+        Width = 105.826840000000000000
+        Height = 37.795300000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          '[ReportDSetAddData."ESN_DP"]%')
+        VAlign = vaCenter
+      end
+      object Memo110: TfrxMemoView
+        Top = 827.717070000000000000
+        Width = 136.063080000000000000
+        Height = 18.897650000000000000
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haCenter
+        Memo.Strings = (
+          #1055#1088#1072#1094#1102#1102#1095#1110' '#1110#1085#1074#1072#1083#1110#1076#1080)
+      end
+      object Memo61: TfrxMemoView
+        Left = 294.803340000000000000
+        Top = 502.677490000000000000
+        Width = 105.826840000000000000
+        Height = 18.897650000000000000
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          
+            '[<ReportDsetData."SUMMA_P3_UCH_ST_NOT">*<ReportDSetAddData."PERC' +
+            'ENT_SOC_SINGLE">/100+<ReportDsetData."SUMMA_P3_UCH_ST">*<ReportD' +
+            'SetAddData."PERCENT_SOC_SCIENCE">/100+<ReportDsetData."SUMMA_P3_' +
+            'UCH_ST_NOT_INV">*<ReportDSetAddData."PERCENT_SOC_SINGLE">/100+<R' +
+            'eportDsetData."SUMMA_P3_UCH_ST_INV">*<ReportDSetAddData."PERCENT' +
+            '_SOC_SCIENCE">/100+<ReportDsetData."SUMMA_P6_INV">*<ReportDSetAd' +
+            'dData."PERCENT_DFSS_SINGLE">/100+<ReportDsetData."SUMMA_P6_INV_N' +
+            'OT">*<ReportDSetAddData."PERCENT_DFSS_SINGLE">/100+<ReportDsetDa' +
+            'ta."SUMMA_P3_DOG_PIDRYD">*<ReportDSetAddData."PERCENT_SINGLE_GR_' +
+            'PR_DOG">/100]')
+        ParentFont = False
+        VAlign = vaCenter
+      end
+      object Memo63: TfrxMemoView
+        Left = 521.575140000000000000
+        Top = 502.677490000000000000
+        Width = 120.944960000000000000
+        Height = 18.897650000000000000
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          
+            '[<ReportDsetData."SUMMA_P3_UCH_ST_NOT">*<ReportDSetAddData."ESN_' +
+            'R">/100+<ReportDsetData."SUMMA_P3_UCH_ST">*<ReportDSetAddData."E' +
+            'SN_R">/100+<ReportDsetData."SUMMA_P3_UCH_ST_NOT_INV">*<ReportDSe' +
+            'tAddData."ESN_INV">/100+<ReportDsetData."SUMMA_P3_UCH_ST_INV">*<' +
+            'ReportDSetAddData."ESN_INV">/100+<ReportDsetData."SUMMA_P6_INV_N' +
+            'OT">*<ReportDSetAddData."ESN_LL">/100+<ReportDsetData."SUMMA_P6_' +
+            'INV">*<ReportDSetAddData."ESN_INV">/100+<ReportDsetData."SUMMA_P' +
+            '3_DOG_PIDRYD">*<ReportDSetAddData."ESN_DP">/100]')
+        ParentFont = False
+        VAlign = vaCenter
+      end
+      object Memo71: TfrxMemoView
+        Left = 136.063080000000000000
+        Top = 612.283860000000000000
+        Width = 94.488250000000000000
+        Height = 18.897650000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          
+            '[<ReportDsetData."SUMMA_P3_UCH_ST_NOT">+<ReportDsetData."SUMMA_P' +
+            '3_UCH_ST_NOT_INV">]')
+        VAlign = vaCenter
+      end
+      object Memo72: TfrxMemoView
+        Left = 136.063080000000000000
+        Top = 631.181510000000000000
+        Width = 94.488250000000000000
+        Height = 18.897650000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          
+            '[<ReportDsetData."SUMMA_P3_UCH_ST">+<ReportDsetData."SUMMA_P3_UC' +
+            'H_ST_INV">]')
+        VAlign = vaCenter
+      end
+      object Memo75: TfrxMemoView
+        Left = 136.063080000000000000
+        Top = 725.669760000000000000
+        Width = 94.488250000000000000
+        Height = 18.897650000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          
+            '[<ReportDsetData."SUMMA_P3_UCH_ST_NOT">+<ReportDsetData."SUMMA_P' +
+            '3_UCH_ST_NOT_INV">+<ReportDsetData."SUMMA_P3_UCH_ST">+<ReportDse' +
+            'tData."SUMMA_P3_UCH_ST_INV">+<ReportDsetData."SUMMA_P6">+<Report' +
+            'DsetData."SUMMA_P3_DOG_PIDRYD">]')
+        ParentFont = False
+        VAlign = vaCenter
+      end
+      object Memo76: TfrxMemoView
+        Left = 336.378170000000000000
+        Top = 612.283860000000000000
+        Width = 105.826840000000000000
+        Height = 18.897650000000000000
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          
+            '[(<ReportDsetData."SUMMA_P3_UCH_ST_NOT">+<ReportDsetData."SUMMA_' +
+            'P3_UCH_ST_NOT_INV">)*<ReportDSetAddData."PERCENT_SOC_SINGLE">/10' +
+            '0]')
+        VAlign = vaCenter
+      end
+      object Memo79: TfrxMemoView
+        Left = 336.378170000000000000
+        Top = 631.181510000000000000
+        Width = 105.826840000000000000
+        Height = 18.897650000000000000
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          
+            '[(<ReportDsetData."SUMMA_P3_UCH_ST">+<ReportDsetData."SUMMA_P3_U' +
+            'CH_ST_INV">)*<ReportDSetAddData."PERCENT_SOC_SCIENCE">/100]')
+        VAlign = vaCenter
+      end
+      object Memo82: TfrxMemoView
+        Left = 336.378170000000000000
+        Top = 650.079160000000000000
+        Width = 105.826840000000000000
+        Height = 37.795300000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          
+            '[<ReportDsetData."SUMMA_P6">*<ReportDSetAddData."PERCENT_DFSS_SI' +
+            'NGLE">/100]')
+        VAlign = vaCenter
+      end
+      object Memo84: TfrxMemoView
+        Left = 336.378170000000000000
+        Top = 687.874460000000000000
+        Width = 105.826840000000000000
+        Height = 37.795300000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          
+            '[<ReportDsetData."SUMMA_P3_DOG_PIDRYD">*<ReportDSetAddData."PERC' +
+            'ENT_SINGLE_GR_PR_DOG">/100]')
+        VAlign = vaCenter
+      end
+      object Memo86: TfrxMemoView
+        Left = 336.378170000000000000
+        Top = 725.669760000000000000
+        Width = 105.826840000000000000
+        Height = 18.897650000000000000
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          
+            '[(<ReportDsetData."SUMMA_P3_UCH_ST_NOT">+<ReportDsetData."SUMMA_' +
+            'P3_UCH_ST_NOT_INV">)*<ReportDSetAddData."PERCENT_SOC_SINGLE">/10' +
+            '0+(<ReportDsetData."SUMMA_P3_UCH_ST">+<ReportDsetData."SUMMA_P3_' +
+            'UCH_ST_INV">)*<ReportDSetAddData."PERCENT_SOC_SCIENCE">/100+<Rep' +
+            'ortDsetData."SUMMA_P6">*<ReportDSetAddData."PERCENT_DFSS_SINGLE"' +
+            '>/100+<ReportDsetData."SUMMA_P3_DOG_PIDRYD">*<ReportDSetAddData.' +
+            '"PERCENT_SINGLE_GR_PR_DOG">/100]')
+        ParentFont = False
+        VAlign = vaCenter
+      end
+      object Memo93: TfrxMemoView
+        Left = 136.063080000000000000
+        Top = 808.819420000000000000
+        Width = 94.488250000000000000
+        Height = 18.897650000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          
+            '[<ReportDsetData."SUMMA_P3_UCH_ST_NOT">+<ReportDsetData."SUMMA_P' +
+            '3_UCH_ST">]')
+        VAlign = vaCenter
+      end
+      object Memo94: TfrxMemoView
+        Left = 136.063080000000000000
+        Top = 827.717070000000000000
+        Width = 94.488250000000000000
+        Height = 18.897650000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          
+            '[<ReportDsetData."SUMMA_P3_UCH_ST_NOT_INV">+<ReportDsetData."SUM' +
+            'MA_P3_UCH_ST_INV">+<ReportDsetData."SUMMA_P6_INV">]')
+        VAlign = vaCenter
+      end
+      object Memo97: TfrxMemoView
+        Left = 336.378170000000000000
+        Top = 808.819420000000000000
+        Width = 105.826840000000000000
+        Height = 18.897650000000000000
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          
+            '[(<ReportDsetData."SUMMA_P3_UCH_ST_NOT">+<ReportDsetData."SUMMA_' +
+            'P3_UCH_ST">)*<ReportDSetAddData."ESN_R">/100]')
+        VAlign = vaCenter
+      end
+      object Memo98: TfrxMemoView
+        Left = 336.378170000000000000
+        Top = 827.717070000000000000
+        Width = 105.826840000000000000
+        Height = 18.897650000000000000
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          
+            '[(<ReportDsetData."SUMMA_P3_UCH_ST_NOT_INV">+<ReportDsetData."SU' +
+            'MMA_P3_UCH_ST_INV">+<ReportDsetData."SUMMA_P6_INV">)*<ReportDSet' +
+            'AddData."ESN_INV">/100]')
+        VAlign = vaCenter
+      end
+      object Memo101: TfrxMemoView
+        Left = 336.378170000000000000
+        Top = 846.614720000000000000
+        Width = 105.826840000000000000
+        Height = 37.795300000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          
+            '[<ReportDsetData."SUMMA_P6_INV_NOT">*<ReportDSetAddData."ESN_LL"' +
+            '>/100]')
+        VAlign = vaCenter
+      end
+      object Memo103: TfrxMemoView
+        Left = 336.378170000000000000
+        Top = 884.410020000000000000
+        Width = 105.826840000000000000
+        Height = 37.795300000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          
+            '[<ReportDsetData."SUMMA_P3_DOG_PIDRYD">*<ReportDSetAddData."ESN_' +
+            'DP">/100]')
+        VAlign = vaCenter
+      end
+      object Memo105: TfrxMemoView
+        Left = 136.063080000000000000
+        Top = 922.205320000000000000
+        Width = 94.488250000000000000
+        Height = 18.897650000000000000
+        DataSet = ReportDsetData
+        DataSetName = 'ReportDsetData'
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          
+            '[<ReportDsetData."SUMMA_P3_UCH_ST_NOT">+<ReportDsetData."SUMMA_P' +
+            '3_UCH_ST">+<ReportDsetData."SUMMA_P3_UCH_ST_NOT_INV">+<ReportDse' +
+            'tData."SUMMA_P3_UCH_ST_INV">+<ReportDsetData."SUMMA_P6_INV_NOT">' +
+            '+<ReportDsetData."SUMMA_P3_DOG_PIDRYD">+<ReportDsetData."SUMMA_P' +
+            '6_INV">]')
+        ParentFont = False
+        VAlign = vaCenter
+      end
+      object Memo109: TfrxMemoView
+        Left = 336.378170000000000000
+        Top = 922.205320000000000000
+        Width = 105.826840000000000000
+        Height = 18.897650000000000000
+        DisplayFormat.DecimalSeparator = ','
+        DisplayFormat.FormatStr = '%2.2f'
+        DisplayFormat.Kind = fkNumeric
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+        HAlign = haRight
+        Memo.Strings = (
+          
+            '[(<ReportDsetData."SUMMA_P3_UCH_ST_NOT">+<ReportDsetData."SUMMA_' +
+            'P3_UCH_ST">)*<ReportDSetAddData."ESN_R">/100+(<ReportDsetData."S' +
+            'UMMA_P3_UCH_ST_NOT_INV">+<ReportDsetData."SUMMA_P3_UCH_ST_INV">+' +
+            '<ReportDsetData."SUMMA_P6_INV">)*<ReportDSetAddData."ESN_INV">/1' +
+            '00+<ReportDsetData."SUMMA_P6_INV_NOT">*<ReportDSetAddData."ESN_L' +
+            'L">/100+<ReportDsetData."SUMMA_P3_DOG_PIDRYD">*<ReportDSetAddDat' +
+            'a."ESN_DP">/100]')
+        ParentFont = False
+        VAlign = vaCenter
       end
     end
   end

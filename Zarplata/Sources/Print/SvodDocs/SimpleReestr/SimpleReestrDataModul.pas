@@ -155,6 +155,7 @@ begin
     begin
       DSetData.SQLs.SelectSQL.Text:='SELECT * FROM Z_REESTR_ACCRUAL_SINGLE_SUM('+
                                      IntToStr(AParameter.SvodParam.Kod_setup)+',''F'')';
+
       DSetAddData.SQLs.SelectSQL.Text:='SELECT * FROM Z_PAR_SET_SELECT_BY_KOD_SETUP('+
                                      IntToStr(AParameter.SvodParam.Kod_setup)+')';
       VNameReport:=NameReportAccrualSingle;
@@ -299,6 +300,7 @@ begin
     DSetGlobalData.Open;
     if AParameter.TypeSimpleReestr=tsrAccrualSingle then
       DSetAddData.Open;
+
     MemoryData:=TRxMemoryData.Create(self);
     ReportDsetData.DataSet:=MemoryData;    //////////
     MemoryData.FieldDefs.Add('TN',ftInteger);
@@ -399,6 +401,8 @@ begin
                                       IntToStr(AParameter.SvodParam.Kod_setup)+','+
                                       VarToStr(sch[i])+') order by KOD_SCH descending, KOD_VIDOPL descending, FIO descending';
         DSetData.Open;
+        if AParameter.TypeSimpleReestr=tsrAccrualSingle then
+            DSetAddData.Open;
 
         while not(DSetData.Eof) do
         begin
@@ -435,6 +439,8 @@ begin
 
 
    if(DSetData.Active=false) then DSetData.Open;
+   if AParameter.TypeSimpleReestr=tsrAccrualSingle then
+   if(DSetAddData.Active=false) then DSetAddData.Open;
 
 
    case AParameter.TypeSimpleReestr of
