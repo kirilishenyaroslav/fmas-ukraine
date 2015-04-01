@@ -1,6 +1,6 @@
 object frmFindForm: TfrmFindForm
-  Left = 454
-  Top = 195
+  Left = 672
+  Top = 214
   Width = 343
   Height = 536
   Caption = #1060#1110#1083#1100#1090#1088

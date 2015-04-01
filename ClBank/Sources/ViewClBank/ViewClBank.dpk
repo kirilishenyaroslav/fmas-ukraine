@@ -25,7 +25,6 @@ package ViewClBank;
 {$IMPLICITBUILD ON}
 
 requires
-  PackageConstClBank,
   vcljpg,
   vcl,
   dbrtl,
@@ -36,14 +35,16 @@ requires
   cxDataD7,
   cxExtEditorsVCLD7,
   cxGridVCLD7,
-  LoadClBank,
-  AccMgmtBpl,
-  Globals,
-  LoadDog,
   fs7,
   frxDB7,
   frx7,
-  frxe7;
+  frxe7,
+  AlBPLMyLoad,
+  LoadDog,
+  Globals,
+  AArrayPack,
+  PackageConstClBank,
+  LoadClBank;
 
 contains
   MainFormView in 'MainFormView.pas' {frmMainFormView},

@@ -94,6 +94,7 @@ type
     ActionDel: TMenuItem;
     ActionDelAll: TMenuItem;
     Query: TpFIBQuery;
+    DATE_PROV: TcxGridDBColumn;
     
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure SpeedButton1Click(Sender: TObject);

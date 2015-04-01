@@ -1,8 +1,8 @@
 object frmMainFormView: TfrmMainFormView
-  Left = 333
-  Top = 368
+  Left = 253
+  Top = 119
   Width = 1036
-  Height = 704
+  Height = 549
   Caption = #1050#1083#1080#1077#1085#1090'-'#1041#1072#1085#1082
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -21,14 +21,14 @@ object frmMainFormView: TfrmMainFormView
   TextHeight = 13
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 647
+    Top = 492
     Width = 1020
     Height = 19
     Panels = <>
   end
   object GroupBox1: TGroupBox
     Left = 0
-    Top = 561
+    Top = 406
     Width = 1020
     Height = 86
     Align = alBottom
@@ -51,7 +51,7 @@ object frmMainFormView: TfrmMainFormView
     Left = 0
     Top = 41
     Width = 1020
-    Height = 489
+    Height = 334
     Align = alClient
     TabOrder = 1
     object cxGridDBTableView1: TcxGridDBTableView
@@ -106,9 +106,9 @@ object frmMainFormView: TfrmMainFormView
       Styles.NewItemRowInfoText = cxStyleYellow
       Styles.Preview = cxStyleYellow
       object DATE_VIP: TcxGridDBColumn
-        Caption = #1044#1072#1090#1072' '#1074#1080#1087#1080#1089#1082#1080
+        Caption = #1044#1072#1090#1072' '#1074#1080#1087#1080#1089#1082#1080' '#1074' dbf-'#1092#1072#1081#1083#1110
         SortOrder = soAscending
-        Width = 72
+        Width = 95
         DataBinding.FieldName = 'DATE_VIP'
       end
       object NUM_DOC: TcxGridDBColumn
@@ -168,6 +168,11 @@ object frmMainFormView: TfrmMainFormView
         Properties.ValueUnchecked = '0'
         Visible = False
         DataBinding.FieldName = 'IS_DELETE'
+      end
+      object DATE_PROV: TcxGridDBColumn
+        Caption = #1044#1072#1090#1072' '#1074#1080#1087#1080#1089#1082#1080' '#1074' '#1073#1072#1085#1082#1091
+        Width = 84
+        DataBinding.FieldName = 'DATE_PROV'
       end
       object IS_ADD_CLBANK: TcxGridDBColumn
         Caption = #1044#1086#1076#1072#1085' '#1079' '#1050#1041
@@ -277,7 +282,7 @@ object frmMainFormView: TfrmMainFormView
   end
   object GroupBox2: TGroupBox
     Left = 0
-    Top = 530
+    Top = 375
     Width = 1020
     Height = 31
     Align = alBottom
