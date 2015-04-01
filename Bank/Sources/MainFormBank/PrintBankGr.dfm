@@ -1,6 +1,6 @@
 object fmPrintBankGr: TfmPrintBankGr
   Left = 452
-  Top = 492
+  Top = 466
   Width = 644
   Height = 262
   Caption = 'fmPrintBankGr'
@@ -13,8 +13,8 @@ object fmPrintBankGr: TfmPrintBankGr
   OldCreateOrder = False
   Position = poScreenCenter
   DesignSize = (
-    636
-    228)
+    628
+    224)
   PixelsPerInch = 96
   TextHeight = 13
   object Bevel2: TBevel

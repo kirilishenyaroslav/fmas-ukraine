@@ -1,6 +1,6 @@
 object fmPrintBankJo: TfmPrintBankJo
-  Left = 615
-  Top = 290
+  Left = 546
+  Top = 278
   Width = 554
   Height = 335
   Caption = 'fmPrintBankJo'
@@ -278,6 +278,7 @@ object fmPrintBankJo: TfmPrintBankJo
     Height = 17
     Caption = 'cxCheckBoxEdit'
     TabOrder = 14
+    Visible = False
   end
   object cxLabel3: TcxLabel
     Left = 24

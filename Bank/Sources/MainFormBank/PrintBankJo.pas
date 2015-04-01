@@ -186,6 +186,7 @@ begin
     cxCheckBox4.Enabled         := false;
     cxCheckBox5.Enabled         := false;
     cxCheckBox8.Enabled         := false;
+    cxCheckBox8.Checked         := false;
     cxCheckBoxShow.Enabled      := false;
     cxButton1.Enabled           := true;
     cxButton2.Enabled           := false;
@@ -682,9 +683,9 @@ begin
             begin
                   frxReport5.Print;
             end
-            else frxReport5.ShowReport(true);
+            else frxReport5.ShowReport;
         end else
-        frxReport5.DesignReport;
+        //frxReport5.DesignReport;
     end;
 //------------------------------------------------------------------------------//
 
@@ -759,7 +760,6 @@ begin
     cxCheckBox3.Enabled         := true;
     cxCheckBox4.Enabled         := true;
     cxCheckBox5.Enabled         := true;
-    cxCheckBox8.Enabled         := true;
     cxCheckBoxShow.Enabled      := true;
     cxCheckBox6.Enabled         := true;
     cxCheckBox7.Enabled         := true;
@@ -767,7 +767,21 @@ begin
 //    cxComboBoxMonth.ItemIndex := monthOf(date)-1;
 //    cxSpinEditYear.Value := YearOf(date);
     cxButton2.Enabled           := true;
+    fmBankMainForm.pFIBTransaction1.StartTransaction;
+    pFIBStoredProc1.StoredProcName := 'BANK_BAL_SCH_VALUTE_PROVERKA';
+    pFIBStoredProc1.ParamByName('ID_SCH').AsInt64 := IndKassa[1, cxComboBoxSch.ItemIndex];
+    pFIBStoredProc1.ExecProc;
+    fmBankMainForm.pFIBTransaction1.Commit;
 
+    if (pFIBStoredProc1.ParamByName('OUT').AsInteger = 1)then
+    begin
+      cxCheckBox8.Enabled := True;
+    end
+    else
+    begin
+      cxCheckBox8.Enabled := False;
+      cxCheckBox8.Checked := false;
+    end;
 end;
 
 procedure TfmPrintBankJo.cxButton2Click(Sender: TObject);
@@ -784,6 +798,7 @@ begin
     cxCheckBox4.Enabled         := false;
     cxCheckBox5.Enabled         := false;
     cxCheckBox8.Enabled         := false;
+    cxCheckBox8.Checked         := false;
     cxCheckBoxShow.Enabled      := false;
     cxButton2.Enabled           := false;
     cxCheckBox6.Enabled         := false;
@@ -806,6 +821,7 @@ begin
   else
   begin
     cxCheckBox8.Enabled := False;
+    cxCheckBox8.Checked := false;
   end;
 
 end;

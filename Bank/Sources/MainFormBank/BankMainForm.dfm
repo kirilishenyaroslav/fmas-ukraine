@@ -1,6 +1,6 @@
 object fmBankMainForm: TfmBankMainForm
   Left = 433
-  Top = 211
+  Top = 181
   Width = 840
   Height = 547
   Caption = #1041#1072#1085#1082
