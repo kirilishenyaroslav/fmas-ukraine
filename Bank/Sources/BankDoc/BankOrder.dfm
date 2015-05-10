@@ -1,6 +1,6 @@
 object fmBankOrder: TfmBankOrder
-  Left = 147
-  Top = 412
+  Left = 300
+  Top = 37
   Width = 1066
   Height = 691
   Caption = 'showmessage('#39'2'

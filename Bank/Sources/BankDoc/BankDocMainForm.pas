@@ -617,6 +617,7 @@ begin
         begin
             decimalseparator := ',';
             id_DOC              := f_id_DOC;
+            //showmessage('id_doc '+inttostr(id_doc));
             ID_ALL_DOC          := f_ID_ALL_DOC;
             id_account_customer := f_id_account_customer;
             date_vip            := f_date_vip;

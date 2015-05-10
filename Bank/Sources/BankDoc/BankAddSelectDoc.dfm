@@ -1,6 +1,6 @@
 object fmBankAddSelectDoc: TfmBankAddSelectDoc
-  Left = 318
-  Top = 441
+  Left = 352
+  Top = 214
   Width = 952
   Height = 475
   Caption = 'fmBankAddSelectDoc'

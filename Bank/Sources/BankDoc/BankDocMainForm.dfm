@@ -1,6 +1,6 @@
 object fmBankDocMainForm: TfmBankDocMainForm
   Left = 275
-  Top = 235
+  Top = 101
   Width = 981
   Height = 627
   Caption = 'fmBankDocMainForm'

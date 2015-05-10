@@ -1,6 +1,6 @@
 object fmBankAddChangeProv: TfmBankAddChangeProv
   Left = 444
-  Top = 279
+  Top = 149
   Width = 724
   Height = 579
   Caption = 'fmBankAddChangeProv'

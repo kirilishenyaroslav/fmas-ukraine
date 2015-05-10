@@ -1,6 +1,6 @@
 object fmBankTypeKassa: TfmBankTypeKassa
-  Left = 419
-  Top = 341
+  Left = 450
+  Top = 175
   Width = 695
   Height = 404
   Caption = 'fmBankTypeKassa'

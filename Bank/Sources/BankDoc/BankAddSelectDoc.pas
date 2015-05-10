@@ -565,13 +565,25 @@ end;
 procedure TfmBankAddSelectDoc.ActionClonExecute(Sender: TObject);
 var
     id : int64;
+    idCloneDoc:Integer;
 begin
+    id := TFIBBCDField(DataSetSelectDoc.FieldByName('ID_DOC')).AsInt64;
+    idCloneDoc:=0;
     if DataSetSelectDoc['ADD_HAND'] = 1 then
     begin
-        id := TFIBBCDField(DataSetSelectDoc.FieldByName('ID_DOC')).AsInt64;
-        Un_lo_file_Alex.LClonDocClBank(self, m.Database.Handle, fsNormal, id);
+        //idCloneDoc =0 если не клонировали
+        //idCloneDoc <> 0 если клонировали
+        idCloneDoc:=Un_lo_file_Alex.LClonDocClBank(self, m.Database.Handle, fsNormal, id);
         ActionRefreshExecute(Sender);
-        //DataSetSelectDoc.Locate('ID_DOC', id, []);
+        //если клонировали - нужно спозиционироваться на клонированную запись
+        if (idCloneDoc<>0) then
+        begin
+          DataSetSelectDoc.Locate('ID_DOC', idCloneDoc, []);
+        end
+        else
+        begin
+          DataSetSelectDoc.Locate('ID_DOC', id, []);
+        end;  
     end;
 end;
 
