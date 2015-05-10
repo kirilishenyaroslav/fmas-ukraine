@@ -98,6 +98,7 @@ var
   id_acc_native,id_acc_cust:Variant;
   DateDocAdd:TdateTime;
   FlagClose:Integer;
+  idCloneDoc:Int64;
   id_shablon_add:Variant;
 implementation
 uses
@@ -183,7 +184,10 @@ begin
       AddDoc.ShowModal;
       AddDoc.free;
     end;
-  ClonDocClBank:=FlagClose;
+  if addDoc.modalresult=mrok then
+    ClonDocClBank:=idCloneDoc
+  else
+    ClonDocClBank:=0;
 end;
 
 
@@ -223,6 +227,7 @@ begin
   Flag_View_local:=Flag_view;
   cxDateEditDoc.Date:=Date;
   cxDateEditDateVip.Date:=Date;
+  idCloneDoc:=0;
 
   if (id_doc_edit=0) and (id_shablon_add<>0) then
     begin
@@ -337,6 +342,7 @@ begin
   FormStyle:=frmSt;
   id_doc_edit:=0;
   Flag_View_local:=0;
+  idCloneDoc:=0;
 
   if (id_doc_edit=0) and (id_shablon_add<>0) then
     begin
@@ -465,6 +471,8 @@ begin
 end;
 if id_doc_edit=0  then
   begin
+    //документ не клонирован
+    idCloneDoc:=0;
     if cxMaskEditNumdoc.Text='' then
       begin
         cxMaskEditNumdoc.Text:='0';
@@ -550,8 +558,10 @@ if id_doc_edit=0  then
     pFIBStoredProcAll.ParamByName('NOTE').AsString:=cxMemoNote.Text;
     try
       pFIBStoredProcAll.ExecProc;
+      idCloneDoc:=pFIBStoredProcAll.ParamByName('ID_DOC_RETURN').AsInt64;
     Except
       begin
+        idCloneDoc:=0;
         TransactionWrite.Rollback;
         ShowMessage('Помилка при доданні документу.');
         Exit;
@@ -559,13 +569,14 @@ if id_doc_edit=0  then
     end;
     if pFIBStoredProcAll.FieldByName('ERROR').AsVariant=2 then
       begin
+        idCloneDoc:=0;
         TransactionWrite.Commit;
         ShowMessage('Документ з такими данними існує.');
       end
       else
       begin
         TransactionWrite.Commit;
-        Close;
+        ModalResult:=mrOk;
       end;
   end
   else
@@ -662,6 +673,7 @@ end;
 procedure TfrmAddDocClBank.ButtonCloseClick(Sender: TObject);
 begin
   FlagClose:=1;
+  idCloneDoc:=0;
   Close;
 end;
 

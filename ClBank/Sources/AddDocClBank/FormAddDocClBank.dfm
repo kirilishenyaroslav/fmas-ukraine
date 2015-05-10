@@ -1,6 +1,6 @@
 object frmAddDocClBank: TfrmAddDocClBank
-  Left = 474
-  Top = 340
+  Left = 549
+  Top = 151
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsDialog
   Caption = 'frmAddDocClBank'
