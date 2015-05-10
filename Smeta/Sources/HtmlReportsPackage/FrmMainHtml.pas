@@ -14,7 +14,7 @@ uses
   cxDBEdit,pFibStoredProc, cxMaskEdit, cxDropDownEdit, cxCalendar,
   frxExportPDF, frxExportImage, frxExportRTF, frxExportXML, frxExportXLS,
   frxExportHTML, frxExportTXT, Placemnt, ComCtrls, cxCalc, cxSpinEdit,
-  cxMRUEdit, cxCurrencyEdit;
+  cxMRUEdit, cxCurrencyEdit, Registry;
 
 type
   QueneLevelInfo = class
@@ -258,6 +258,7 @@ type
     Assign_differ: TcxGridDBBandedColumn;
     ExtendedPopupMenu: TPopupMenu;
     N3: TMenuItem;
+    btnGetAssignInfo: TcxButton;
     procedure ViewLevel0DBColumn3GetDisplayText(
       Sender: TcxCustomGridTableItem; ARecord: TcxCustomGridRecord;
       var AText: String);
@@ -423,6 +424,7 @@ type
       Sender: TcxCustomGridTableView; ARecord: TcxCustomGridRecord;
       AItem: TcxCustomGridTableItem; out AStyle: TcxStyle);
     procedure N3Click(Sender: TObject);
+    procedure btnGetAssignInfoClick(Sender: TObject);
   private
     { Private declarations }
     CurActualDate: TDateTime;
@@ -543,17 +545,40 @@ function TfrmHtmlReport.getSQLTextByLevel(const Step:QueneLevelInfo): String;
 var  Res:String;
      T:TTypeUchQuery;
      TypeUch:Integer;
+     R : TRegistry;
+     ResS :string;
 begin
      Step.FActualDate:=CurActualDate;
      Step.FDateBeg   :=getStartDate;
      Step.FDateEnd   :=getEndDate;
      PrintButton.Kind:=cxbkStandard;
 
+     btnGetAssignInfo.Visible:=False;
+
+     R := TRegistry.Create;
+     try
+        R.RootKey := HKEY_CURRENT_USER;
+        if R.OpenKey('Software\FMAS\BU_HTML_REPORT\AssignInfo', True)
+        then begin
+             ResS:= R.ReadString('AssignInfoIsShowing');
+             if (ResS='1')
+             then begin
+                       Assign.Visible:=True;
+                       Assign_differ.Visible:=true;
+             end
+             else begin
+                       Assign.Visible:=False;
+                       Assign_differ.Visible:=False;
+             end
+        end;
+     finally
+        R.Free;
+     end;
+
      edtMonthBeg.Visible:=false;
      edtYearBeg.Visible:=false;
      edtMonthEnd.Visible:=false;
      edtYearEnd.Visible:=false;
-
 
      if (Step.FLevel=0)
      then begin
@@ -643,6 +668,7 @@ begin
 
                PrintButton.Kind:=cxbkDropDownButton;
                PrintButton.DropDownMenu:=PrintPopupMenu;
+               btnGetAssignInfo.Visible:=True;
      end;
 
      if (Step.FLevel=3)
@@ -2736,6 +2762,41 @@ procedure TfrmHtmlReport.N3Click(Sender: TObject);
 begin
      Assign.Visible:=true;
      Assign_differ.Visible:=true;
+end;
+
+procedure TfrmHtmlReport.btnGetAssignInfoClick(Sender: TObject);
+ var R: TRegistry;
+begin
+     if Assign.Visible
+     then begin
+         Assign.Visible:=false;
+         Assign_differ.Visible:=false;
+     end
+     else begin
+         Assign.Visible:=true;
+         Assign_differ.Visible:=true;
+     end;
+
+     R := TRegistry.Create;
+     try
+        R.RootKey := HKEY_CURRENT_USER;
+        if not R.OpenKey('Software\FMAS\BU_HTML_REPORT\AssignInfo', True)
+        then begin
+            R.CreateKey('Software\FMAS\BU_HTML_REPORT\AssignInfo');
+        end;
+        if Assign.Visible
+        then begin
+             R.WriteString('AssignInfoIsShowing', '1');
+        end
+        else begin
+             R.WriteString('AssignInfoIsShowing', '0');
+        end;
+
+     finally
+        R.Free;
+     end;
+
+
 end;
 
 end.

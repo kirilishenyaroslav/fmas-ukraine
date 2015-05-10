@@ -22,7 +22,7 @@ object frmHtmlReport: TfrmHtmlReport
     Left = 0
     Top = 0
     Width = 946
-    Height = 455
+    Height = 454
     Align = alClient
     TabOrder = 0
     object TitlePanel: TPanel
@@ -135,7 +135,7 @@ object frmHtmlReport: TfrmHtmlReport
     end
     object Panel1: TPanel
       Left = 1
-      Top = 326
+      Top = 325
       Width = 944
       Height = 128
       Align = alBottom
@@ -319,7 +319,7 @@ object frmHtmlReport: TfrmHtmlReport
         UseSystemPaint = False
       end
       object cxButton1: TcxButton
-        Left = 489
+        Left = 564
         Top = 0
         Width = 73
         Height = 36
@@ -375,12 +375,24 @@ object frmHtmlReport: TfrmHtmlReport
         Layout = blGlyphBottom
         UseSystemPaint = False
       end
+      object btnGetAssignInfo: TcxButton
+        Left = 489
+        Top = 0
+        Width = 75
+        Height = 36
+        Caption = #1040#1089#1080#1075#1085'.'
+        ModalResult = 1
+        TabOrder = 7
+        OnClick = btnGetAssignInfoClick
+        Layout = blGlyphBottom
+        UseSystemPaint = False
+      end
     end
     object BuReportsInfoGrid: TcxGrid
       Left = 1
       Top = 147
       Width = 944
-      Height = 179
+      Height = 178
       Align = alClient
       BevelEdges = []
       BevelInner = bvNone

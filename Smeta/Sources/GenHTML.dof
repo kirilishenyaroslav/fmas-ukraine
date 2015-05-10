@@ -92,19 +92,19 @@ ExeDescription=
 [Directories]
 OutputDir=
 UnitOutputDir=
-PackageDLLOutputDir=..\
+PackageDLLOutputDir=D:\FMAS\DonnU\Applications\Application\Smeta
 PackageDCPOutputDir=
-SearchPath=
+SearchPath=D:\FMAS\DonnU\Applications\Application
 Packages=vcl;rtl;vclx;indy;inet;xmlrtl;vclie;inetdbbde;inetdbxpress;dbrtl;dsnap;dsnapcon;vcldb;soaprtl;VclSmp;dbexpress;dbxcds;inetdb;bdertl;vcldbx;webdsnap;websnap;adortl;ibxpress;teeui;teedb;tee;dss;visualclx;visualdbclx;vclactnband;vclshlctrls;IntrawebDB_50_70;Intraweb_50_70;Rave50CLX;Rave50VCL;dclOfficeXP;fs7;frxDB7;frx7;fsDB7;frxADO7;fsADO7;frxBDE7;fsBDE7;frxDBX7;frxIBX7;fsIBX7;frxe7;cxLibraryVCLD7;cxEditorsVCLD7;dxThemeD7;cxDataD7;cxExtEditorsVCLD7;cxGridVCLD7;cxGridUtilsVCLD7;cxCommonEditingVCLD7;cxTreeListVCLD7;dxBarD7;dxComnD7;dxBarDBNavD7;dxBarExtItemsD7;dxBarExtDBItemsD7;dxsbD7;dxDockingD7;PKIECtrl7;PKIEDB7;Halcyon6D7;rxctl7;rxbde7;rxdb7;FIBDBMidas7;FR7;FRBDE7;FRADO7;FRDBX7;FRIBX7;SertPackageManager;SertResourceDPK
 Conditionals=
 DebugSourceDirs=
 UsePackages=0
 [Parameters]
 RunParams=
-HostApplication=D:\DonnU\SourcesSVN\FMAS-WIN\BdgtMgmnt.exe
+HostApplication=D:\FMAS\DonnU\Applications\Application\BdgtMgmnt.exe
 Launcher=
 UseLauncher=0
-DebugCWD=D:\DonnU\SourcesSVN\FMAS-WIN\
+DebugCWD=D:\FMAS\DonnU\Applications\Application\
 [Language]
 ActiveLang=
 ProjectLang=
@@ -134,20 +134,12 @@ OriginalFilename=
 ProductName=
 ProductVersion=1.0.0.0
 Comments=
-[Excluded Packages]
-c:\program files\borland\delphi7\Projects\Bpl\fr7.bpl=FastReport 2.52 Components
 [HistoryLists\hlUnitAliases]
 Count=1
 Item0=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;
 [HistoryLists\hlSearchPath]
 Count=1
-Item0=..\..\..\
-[HistoryLists\hlOutputDirectorry]
-Count=3
-Item0=..\..\..\
-Item1=D:\DonnU\SourcesSVN\FMAS-WIN
-Item2=D:\ймсрд\RELEASE\Applications
+Item0=D:\FMAS\DonnU\Applications\Application
 [HistoryLists\hlBPLOutput]
-Count=2
-Item0=..\
-Item1=..\..\
+Count=1
+Item0=D:\FMAS\DonnU\Applications\Application\Smeta
