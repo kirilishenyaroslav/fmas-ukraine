@@ -566,6 +566,7 @@ procedure TfmBankAddSelectDoc.ActionClonExecute(Sender: TObject);
 var
     id : int64;
     idCloneDoc:Integer;
+    isLocate:Boolean;
 begin
     id := TFIBBCDField(DataSetSelectDoc.FieldByName('ID_DOC')).AsInt64;
     idCloneDoc:=0;
@@ -578,7 +579,10 @@ begin
         //если клонировали - нужно спозиционироваться на клонированную запись
         if (idCloneDoc<>0) then
         begin
-          DataSetSelectDoc.Locate('ID_DOC', idCloneDoc, []);
+          isLocate:= DataSetSelectDoc.Locate('ID_DOC', idCloneDoc, []);
+          //если запись не найдена локейтом (например, поменяли реквизиты расчетного счета)
+          //нужно остаться на той же записи 
+          if isLocate=False then DataSetSelectDoc.Locate('ID_DOC', id, []);
         end
         else
         begin

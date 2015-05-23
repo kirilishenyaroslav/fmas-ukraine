@@ -1,8 +1,8 @@
 object fmBankAddSelectDoc: TfmBankAddSelectDoc
   Left = 352
-  Top = 214
+  Top = 228
   Width = 952
-  Height = 475
+  Height = 461
   Caption = 'fmBankAddSelectDoc'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -21,7 +21,7 @@ object fmBankAddSelectDoc: TfmBankAddSelectDoc
     Left = 0
     Top = 71
     Width = 936
-    Height = 253
+    Height = 239
     Align = alClient
     TabOrder = 0
     object cxGrid1DBBandedTableView1: TcxGridDBBandedTableView
@@ -158,7 +158,7 @@ object fmBankAddSelectDoc: TfmBankAddSelectDoc
   end
   object Panel1: TPanel
     Left = 0
-    Top = 324
+    Top = 310
     Width = 936
     Height = 113
     Align = alBottom
