@@ -70,6 +70,7 @@ contains
   uRepOper51 in 'Modules\MatasRep\uRepOper51.pas' {OperRep51Form},
   uRepOperProv in 'Modules\MatasRep\uRepOperProv.pas' {OperRepForm},
   uRepNoMoves in 'Modules\MatasRep\uRepNoMoves.pas' {RepNoMovesForm},
-  uRepMoOborot in 'Modules\MatasRep\uRepMoOborot.pas' {MoOborotRepForm};
+  uRepMoOborot in 'Modules\MatasRep\uRepMoOborot.pas' {MoOborotRepForm},
+  uShablonInvVed in 'Modules\MatasRep\uShablonInvVed.pas' {ShablonForm};
 
 end.

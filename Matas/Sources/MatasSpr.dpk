@@ -53,7 +53,7 @@ requires
 
 contains
   uSpMatOtv in 'Modules\MatasSpr\SpMatOtv\uSpMatOtv.pas' {fmSpMatOtv},
-  uSpMatOtvAdd in 'Modules\MatasSpr\SpMatOtv\uSpMatOtvAdd.pas' {fmSpMatOtvAdd},
+  uSpMatOtvAdd in 'Modules\MatasSpr\SpMatOtv\uSpMatOtvAdd.pas' {checkWeb},
   uSpTipDocFormEdit in 'Modules\MatasSpr\SpTipDoc\uSpTipDocFormEdit.pas' {TipDocEditForm},
   uSpMatSchEx in 'Modules\MatasSpr\SpMatSch\uSpMatSchEx.pas' {MatSchExForm},
   uSpKomissia in 'Modules\MatasSpr\SpKomissia\uSpKomissia.pas' {KomissiaMainForm},

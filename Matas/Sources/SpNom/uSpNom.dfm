@@ -20,20 +20,20 @@ object SpNomForm: TSpNomForm
   object Splitter1: TSplitter
     Left = 275
     Top = 50
-    Height = 471
+    Height = 462
   end
   object PanelNomMain: TPanel
     Left = 278
     Top = 50
-    Width = 367
-    Height = 471
+    Width = 359
+    Height = 462
     Align = alClient
     TabOrder = 0
     object cxNomGrid: TcxGrid
       Left = 1
       Top = 1
-      Width = 365
-      Height = 305
+      Width = 357
+      Height = 296
       Align = alClient
       DragMode = dmAutomatic
       PopupMenu = pmNomGrid
@@ -124,8 +124,8 @@ object SpNomForm: TSpNomForm
     end
     object cxSplitter1: TcxSplitter
       Left = 1
-      Top = 306
-      Width = 365
+      Top = 297
+      Width = 357
       Height = 8
       HotZoneClassName = 'TcxSimpleStyle'
       HotZone.SizePercent = 100
@@ -135,8 +135,8 @@ object SpNomForm: TSpNomForm
     end
     object PanelWork: TPanel
       Left = 1
-      Top = 314
-      Width = 365
+      Top = 305
+      Width = 357
       Height = 156
       Align = alBottom
       BevelOuter = bvNone
@@ -144,7 +144,7 @@ object SpNomForm: TSpNomForm
       object cxMemoryGrid: TcxGrid
         Left = 0
         Top = 0
-        Width = 365
+        Width = 357
         Height = 156
         Align = alClient
         DragMode = dmAutomatic
@@ -224,7 +224,7 @@ object SpNomForm: TSpNomForm
       object cxSearchGrid: TcxGrid
         Left = 0
         Top = 0
-        Width = 365
+        Width = 357
         Height = 156
         Align = alClient
         DragMode = dmAutomatic
@@ -313,14 +313,14 @@ object SpNomForm: TSpNomForm
     Left = 0
     Top = 50
     Width = 275
-    Height = 471
+    Height = 462
     Align = alLeft
     TabOrder = 1
     object cxNomTree: TcxDBTreeList
       Left = 1
       Top = 1
       Width = 273
-      Height = 311
+      Height = 302
       Styles.Background = cxStyle13
       Styles.Content = cxStyle13
       Styles.Inactive = cxStyle10
@@ -387,7 +387,7 @@ object SpNomForm: TSpNomForm
     end
     object cxTreePath: TcxDBTreeList
       Left = 1
-      Top = 320
+      Top = 311
       Width = 273
       Height = 150
       Styles.Background = cxStyle13
@@ -442,7 +442,7 @@ object SpNomForm: TSpNomForm
     end
     object cxSplitter3: TcxSplitter
       Left = 1
-      Top = 312
+      Top = 303
       Width = 273
       Height = 8
       HotZoneClassName = 'TcxSimpleStyle'
@@ -454,7 +454,7 @@ object SpNomForm: TSpNomForm
   object pnlButtons: TPanel
     Left = 0
     Top = 0
-    Width = 903
+    Width = 895
     Height = 50
     Align = alTop
     BevelOuter = bvNone
@@ -1436,10 +1436,10 @@ object SpNomForm: TSpNomForm
     end
   end
   object PanelSetup: TPanel
-    Left = 653
+    Left = 645
     Top = 50
     Width = 250
-    Height = 471
+    Height = 462
     Align = alRight
     TabOrder = 3
     object ApplyButton: TcxButton
@@ -1724,10 +1724,10 @@ object SpNomForm: TSpNomForm
     end
   end
   object cxSplitter2: TcxSplitter
-    Left = 645
+    Left = 637
     Top = 50
     Width = 8
-    Height = 471
+    Height = 462
     HotZoneClassName = 'TcxSimpleStyle'
     HotZone.SizePercent = 100
     AlignSplitter = salRight

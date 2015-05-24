@@ -1,6 +1,6 @@
 object DocWorkPosEditForm: TDocWorkPosEditForm
-  Left = 410
-  Top = 331
+  Left = 244
+  Top = 83
   BorderStyle = bsDialog
   Caption = 'DocWorkPosEditForm'
   ClientHeight = 223

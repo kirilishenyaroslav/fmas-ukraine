@@ -514,14 +514,14 @@ begin
       ForBSO.SelectSQL.Add(' :DATE_BEG BETWEEN C.DATE_BEG AND C.DATE_END ');
       ForBSO.SelectSQL.Add(' AND :DATE_BEG BETWEEN PR.DATE_BEG AND PR.DATE_END ');
       //DonNU
-      if ((_ORG_KOD_OKPO='02070803')and(Copy(SCH_NUMBER,1,2)='23')) then
-       ForBSO.SelectSQL.Add(' and exists(select * from mat_sp_nom_base where id_nomn=:id_nomn and linkto=14876099)');
+     // if ((_ORG_KOD_OKPO='02070803')and(Copy(SCH_NUMBER,1,2)='23')) then
+     //  ForBSO.SelectSQL.Add(' and exists(select * from mat_sp_nom_base where id_nomn=:id_nomn and linkto=14876099)');
       ForBSO.Prepare;
       ForBSO.ParamByName('DATE_BEG').AsDate:=_MATAS_PERIOD;
       ForBSO.ParamByName('ID_SCH').AsInteger:=ID_SCH;
       //DonNU
-      if ((_ORG_KOD_OKPO='02070803')and(Copy(SCH_NUMBER,1,2)='23')) then
-      ForBSO.ParamByName('ID_NOMN').AsInteger:=ID_NOMN;
+      //if ((_ORG_KOD_OKPO='02070803')and(Copy(SCH_NUMBER,1,2)='23')) then
+     // ForBSO.ParamByName('ID_NOMN').AsInteger:=ID_NOMN;
       ForBSO.CloseOpen(False);
       if ForBSO.FieldValues['ID_SCH']<> null then is_bso:=1
       else is_bso:=0;
