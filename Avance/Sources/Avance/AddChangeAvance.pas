@@ -754,6 +754,7 @@ begin
          DataSetChange.Close;
          DataSetChange.SQLs.SelectSQL.Text := 'Select * from J4_DT_AO_RASPREDELENIE_SELECT(' + IntToStr(id_ao_change) + ')';
          DataSetChange.Open;
+
          if DataSetChange.IsEmpty
              then flag_exists_ras := false
              else flag_exists_ras := true;
@@ -770,12 +771,15 @@ begin
                RxMemoryDataRas.Post;
                DataSetChange.Next;
          end;
+
          DataSetChange.Close;
          DataSetChange.SQLs.SelectSQL.Text := 'Select * from J4_SELECT_ALL_PROV('''+myform.DataSetMain.FieldByName('R_ID_DT_DOC').AsString +''')';
          DataSetChange.Open;
          DataSetChange.First;
          DefineKodSchAo(DataSetChange.FieldByName('ID_SCH').AsVariant);
-         cxDateEditAoPropertiesChange(Self);
+
+         //cxDateEditAoPropertiesChange(Self);
+
          i := 1;
          while not DataSetChange.Eof do
          begin
@@ -855,6 +859,7 @@ begin
                end;
                DataSetChange.Next;
          end;
+
     end;
 
     if  (m = ClonAvance) then
@@ -1070,6 +1075,7 @@ begin
 
 
     flag_na_aftoscroll := true;
+
 end;
 
 procedure TfmAddChangeAvance.Get_Date_Beg_end(var date_b, date_e: tdate);
