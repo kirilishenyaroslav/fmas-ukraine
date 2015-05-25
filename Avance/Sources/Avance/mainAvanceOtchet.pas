@@ -816,10 +816,23 @@ begin
     Class_StoredProc.ExecProc;
     Class_Transaction_Wr.Commit;
 
+    //если авансовый отчет подвязан к ведомости
     if (Class_StoredProc.ParamByName('out').AsInteger = 1) then
     begin
-      ShowMessage('Цей авансовий звіт є у відомостях. Не можна його редагувати');
-      Exit;
+      //проверяем, входит ли человек в ту группу, которая разрешает редактировать такие отчеты
+      error := Accmgmt.fibCheckPermission('/ROOT/JO4/Work_j4/Work_doc_j4/Avance_in_Ved_Edit','Edit');
+
+      //если не принадлежит
+      if error <> 0 then
+      begin
+        ShowMessage('Цей авансовий звіт є у відомостях. Не можна його редагувати');
+        Exit;
+      end
+      else //выдаем предупредительное сообщение; если передумал редактировать - выходим
+      if MessageDlg('УВАГА! Цей авансовий звіт є у відомостях. Ви дійсно бажаєте його редагувати?',
+        mtConfirmation, [mbYes, mbNo],0) = mrno
+      then
+        Exit;
     end;
     //*******************************
     prihod    := DataSetMain.fieldByName('R_PRIH_RAS').AsInteger;
