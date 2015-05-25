@@ -214,6 +214,16 @@ type
     cxgrdbclmnGrid1DBTableView1DBColumn2: TcxGridDBColumn;
     N7: TMenuItem;
     DS_helping: TpFIBDataSet;
+    DocOstDataSetGROUP_4: TFIBStringField;
+    DocOstDataSetGROUP_3: TFIBStringField;
+    DocOstDataSetGROUP_2: TFIBStringField;
+    DocOstDataSetGROUP_1: TFIBStringField;
+    cxGrid1Gruppa4: TcxGridDBColumn;
+    cxGrid1Gruppa3: TcxGridDBColumn;
+    cxGrid1Gruppa2: TcxGridDBColumn;
+    cxGrid1Gruppa1: TcxGridDBColumn;
+    cxShowPanelGrupp: TcxCheckBox;
+    cxShowGrpTMC: TcxCheckBox;
     procedure cxMatOtvPropertiesButtonClick(Sender: TObject;
       AButtonIndex: Integer);
     procedure FormCreate(Sender: TObject);
@@ -246,6 +256,8 @@ type
     procedure acExportExecute(Sender: TObject);
     procedure actRozedExecute(Sender: TObject);
     procedure N7Click(Sender: TObject);
+    procedure cxShowPanelGruppPropertiesChange(Sender: TObject);
+    procedure cxCheckBox1PropertiesChange(Sender: TObject);
   private
     { Private declarations }
    DBHANDLE : TISC_DB_HANDLE;
@@ -1267,6 +1279,19 @@ begin
    end;
 
  CloseWaitWindow(w);  
+end;
+
+procedure TOstBaseForm.cxShowPanelGruppPropertiesChange(Sender: TObject);
+begin
+ cxGrid1DBTableView1.OptionsView.GroupByBox := cxShowPanelGrupp.Checked;
+end;
+
+procedure TOstBaseForm.cxCheckBox1PropertiesChange(Sender: TObject);
+begin
+  cxGrid1Gruppa4.Visible := cxShowGrpTMC.Checked;
+  cxGrid1Gruppa3.Visible := cxShowGrpTMC.Checked;
+  cxGrid1Gruppa2.Visible := cxShowGrpTMC.Checked;
+  cxGrid1Gruppa1.Visible := cxShowGrpTMC.Checked;
 end;
 
 end.

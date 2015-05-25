@@ -155,6 +155,7 @@ _NDS_ST:Integer;
 _PRINT_ISPOLNIT_IN_DOC:Integer;
 
 _COMPARE_OST_OBOROT:Integer;
+_PRINT_INV_VED_BY_SCH:Integer; // формирование износа ос по счетам
 
 implementation
 

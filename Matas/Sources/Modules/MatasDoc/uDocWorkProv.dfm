@@ -1,6 +1,6 @@
 object DocWorkProv: TDocWorkProv
-  Left = 401
-  Top = 254
+  Left = 133
+  Top = 12
   BorderStyle = bsDialog
   Caption = #39' '
   ClientHeight = 513

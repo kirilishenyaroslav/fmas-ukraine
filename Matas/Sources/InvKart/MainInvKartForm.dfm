@@ -1,7 +1,7 @@
 object fmMainIvKartForm: TfmMainIvKartForm
-  Left = 30
-  Top = 236
-  Width = 1214
+  Left = 92
+  Top = 228
+  Width = 1044
   Height = 545
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -18,16 +18,16 @@ object fmMainIvKartForm: TfmMainIvKartForm
   TextHeight = 13
   object GroupBox1: TGroupBox
     Left = 201
-    Top = 73
-    Width = 997
-    Height = 434
+    Top = 109
+    Width = 827
+    Height = 398
     Align = alClient
     TabOrder = 0
     object cxGridInvKart: TcxGrid
       Left = 2
       Top = 15
-      Width = 993
-      Height = 197
+      Width = 823
+      Height = 161
       Align = alClient
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
@@ -153,8 +153,8 @@ object fmMainIvKartForm: TfmMainIvKartForm
     end
     object cxSplitter1: TcxSplitter
       Left = 2
-      Top = 212
-      Width = 993
+      Top = 176
+      Width = 823
       Height = 8
       HotZoneClassName = 'TcxSimpleStyle'
       HotZone.SizePercent = 100
@@ -168,17 +168,17 @@ object fmMainIvKartForm: TfmMainIvKartForm
     end
     object Panel1: TPanel
       Left = 2
-      Top = 220
-      Width = 993
+      Top = 184
+      Width = 823
       Height = 212
       Align = alBottom
       TabOrder = 2
       object PageControl1: TPageControl
         Left = 1
         Top = 1
-        Width = 991
+        Width = 821
         Height = 210
-        ActivePage = TabSheet6
+        ActivePage = TabSheet1
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -192,12 +192,12 @@ object fmMainIvKartForm: TfmMainIvKartForm
           object Panel3: TPanel
             Left = 0
             Top = 0
-            Width = 983
+            Width = 813
             Height = 182
             Align = alClient
             TabOrder = 0
             DesignSize = (
-              983
+              813
               182)
             object cxLabelTypKart: TLabel
               Left = 5
@@ -509,7 +509,7 @@ object fmMainIvKartForm: TfmMainIvKartForm
               TabOrder = 13
             end
             object CheckBoxShowSumma: TCheckBox
-              Left = 946
+              Left = 630
               Top = 8
               Width = 17
               Height = 17
@@ -1578,7 +1578,7 @@ object fmMainIvKartForm: TfmMainIvKartForm
           object cxGrid_history: TcxGrid
             Left = 0
             Top = 0
-            Width = 983
+            Width = 813
             Height = 182
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
@@ -1917,16 +1917,16 @@ object fmMainIvKartForm: TfmMainIvKartForm
   end
   object GroupBox2: TGroupBox
     Left = 0
-    Top = 73
+    Top = 109
     Width = 193
-    Height = 434
+    Height = 398
     Align = alLeft
     TabOrder = 1
     object cxDBTreeListPapka: TcxDBTreeList
       Left = 2
       Top = 15
       Width = 189
-      Height = 417
+      Height = 381
       Styles.Background = cxStyleYellow
       Styles.Content = cxStyleYellow
       Styles.Inactive = AfterSelection
@@ -1974,9 +1974,9 @@ object fmMainIvKartForm: TfmMainIvKartForm
   end
   object cxSplitter2: TcxSplitter
     Left = 193
-    Top = 73
+    Top = 109
     Width = 8
-    Height = 434
+    Height = 398
     HotZoneClassName = 'TcxSimpleStyle'
     HotZone.SizePercent = 100
     Control = GroupBox2
@@ -1988,17 +1988,17 @@ object fmMainIvKartForm: TfmMainIvKartForm
   object CoolBar1: TCoolBar
     Left = 0
     Top = 0
-    Width = 1198
-    Height = 40
+    Width = 1028
+    Height = 76
     AutoSize = True
     Bands = <
       item
         Break = False
         Control = ToolBar1
         ImageIndex = -1
-        MinHeight = 36
+        MinHeight = 72
         ParentColor = False
-        Width = 1194
+        Width = 1024
       end>
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -2009,8 +2009,8 @@ object fmMainIvKartForm: TfmMainIvKartForm
     object ToolBar1: TToolBar
       Left = 9
       Top = 0
-      Width = 1173
-      Height = 36
+      Width = 618
+      Height = 72
       Align = alNone
       AutoSize = True
       ButtonHeight = 36
@@ -2067,19 +2067,20 @@ object fmMainIvKartForm: TfmMainIvKartForm
         DropdownMenu = PopupMenu_Print
         ParentShowHint = False
         PopupMenu = PopupMenuPapka
+        Wrap = True
         ShowHint = True
         Style = tbsDropDown
       end
       object ToolButton6: TToolButton
-        Left = 555
-        Top = 0
+        Left = 0
+        Top = 36
         Action = ActionFind
         ParentShowHint = False
         ShowHint = True
       end
       object ToolButton7: TToolButton
-        Left = 653
-        Top = 0
+        Left = 98
+        Top = 36
         Caption = 'ToolButton7'
         DropdownMenu = PopupMenu_oper
         ImageIndex = 11
@@ -2088,28 +2089,28 @@ object fmMainIvKartForm: TfmMainIvKartForm
         Style = tbsDropDown
       end
       object ButAmort: TToolButton
-        Left = 766
-        Top = 0
+        Left = 211
+        Top = 36
         Caption = 'ButAmort'
         DropdownMenu = PopupMenuFor_Amort
         ImageIndex = 29
         Style = tbsDropDown
       end
       object btnNormIzn: TToolButton
-        Left = 879
-        Top = 0
+        Left = 324
+        Top = 36
         Action = actNormIzn
       end
       object btn1: TToolButton
-        Left = 977
-        Top = 0
+        Left = 422
+        Top = 36
         Caption = #1043#1088#1091#1087#1080' '#1090#1072' '#1072#1084#1086#1088#1090
         ImageIndex = 40
         OnClick = btn1Click
       end
       object ToolButton1: TToolButton
-        Left = 1075
-        Top = 0
+        Left = 520
+        Top = 36
         Action = ActionClose
         ParentShowHint = False
         ShowHint = True
@@ -2118,8 +2119,8 @@ object fmMainIvKartForm: TfmMainIvKartForm
   end
   object Panel2: TPanel
     Left = 0
-    Top = 40
-    Width = 1198
+    Top = 76
+    Width = 1028
     Height = 33
     Align = alTop
     TabOrder = 4

@@ -13,7 +13,8 @@ uses
   cxButtons, ComCtrls, DB, FIBDataSet, pFIBDataSet, FIBDatabase,
   pFIBDatabase, FIBQuery, pFIBQuery, DBCtrls, Ibase,
   cxCheckBox, uMatasVars, uMatasUtils, cxSpinEdit,
-  FR_DSet, FR_DBSet, FR_Class, FR_Desgn, DateUtils, ActnList;
+  FR_DSet, FR_DBSet, FR_Class, FR_Desgn, DateUtils, ActnList, FR_E_TXT,
+  FR_E_RTF, frOLEExl;
 
 type
   TfmMyShablon = (Shablon_doc, Shablon_ostatok);
@@ -45,6 +46,9 @@ type
     pFIBDataSetDocKart: TpFIBDataSet;
     frDBDataSetDocKart: TfrDBDataSet;
     pFIBDataSetDocMnaKart: TpFIBDataSet;
+    frOLEExcelExport1: TfrOLEExcelExport;
+    frRTFExport1: TfrRTFExport;
+    cxexport: TcxCheckBox;
     procedure cxButtonExitSHABClick(Sender: TObject);
     procedure cxButtonChectClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -54,7 +58,7 @@ type
     TmplArray: array of string;
     my_path : string;
     n : TfmMyShablon;
-    pid_d : integer;
+    pid_d, i : integer;
   public
     ID_TIPD_SHABLON, ID_DOC_SHABLON : Variant;
     NAMEREPORT : string;
@@ -149,6 +153,7 @@ begin
             end;
         cxComboBoxShablon.ItemIndex := 0;
     end;
+    i:=0;
 end;
 
 procedure TfmPrintShablonDoc.cxButtonExitSHABClick(Sender: TObject);
@@ -164,6 +169,7 @@ end;
 
 procedure TfmPrintShablonDoc.cxButtonChectClick(Sender: TObject);
 begin
+  i:=i+1;
     if not ShablonDataSet.IsEmpty then
     begin
      if n = Shablon_doc then
@@ -208,6 +214,17 @@ begin
          frVariables['STR_ICOUNT']:=uMatasUtils.KolMatToString(pFIBDataSetShapka.FieldByName('COUNT_POS').AsFloat);
          frVariables['STR_ISUMMA']:=uMatasUtils.SummaToString(pFIBDataSetShapka.FieldByName('SUMMA').AsFloat);
 
+         if pFIBDataSetShapka.FieldValues['DATE_DOC']<StrToDate('30.09.2013') then
+         begin
+         if TmplArray[cxComboBoxShablon.ItemIndex]= 'Akt_mbp_with_drag_met_hai.frf' then
+         TmplArray[cxComboBoxShablon.ItemIndex]:= 'Akt_mbp_with_drag_met_hai_old.frf';
+
+         if TmplArray[cxComboBoxShablon.ItemIndex]= 'Akt_mbp_hai.frf' then
+         TmplArray[cxComboBoxShablon.ItemIndex]:= 'Akt_mbp_hai_old.frf';
+
+         if TmplArray[cxComboBoxShablon.ItemIndex]= 'Akt_na_spisanie_os_hai.frf' then
+         TmplArray[cxComboBoxShablon.ItemIndex]:= 'Akt_na_spisanie_os_hai_old.frf';
+         end;
          frReportDoc.LoadFromFile(ExtractFilePath(Application.ExeName)+_PATH_REPORTS+'\'+TmplArray[cxComboBoxShablon.ItemIndex]);
          frReportDoc.PrepareReport;
          if cxCopies.Value>1 then
@@ -220,9 +237,14 @@ begin
             frReportDoc.PrintPreparedReport('', cxCopies.Value, false, frAll);
           end
          else
+         if cxexport.Checked = True then
+         frReportDoc.ExportTo(frOLEExcelExport1, 'c:/'+inttostr(i))
+         else
+         begin
           frReportDoc.ShowReport;
          if CheckBoxDoc.Checked then
           frReportDoc.DesignReport;
+         end;
      end;
     end
     else

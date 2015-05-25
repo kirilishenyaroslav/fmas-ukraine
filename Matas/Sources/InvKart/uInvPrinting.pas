@@ -14,7 +14,8 @@ uses
   cxControls, cxContainer, cxEdit, cxCheckBox,
   ActnList, ImgList, DB, FIBDataSet, pFIBDataSet, FR_DSet,
   FR_DBSet, FR_Class, cxLookupEdit, cxDBLookupEdit, cxDBLookupComboBox,
-  RxMemDS, uAmort_selection, ClassInvKart, frxCross, frxClass, frxDBSet, uResources;
+  RxMemDS, uAmort_selection, ClassInvKart, frxCross, frxClass, frxDBSet, uResources,
+  DateUtils;
 
 type
   TfmPrinting = class(TForm)
@@ -186,6 +187,7 @@ var
     god_amort, mesyac_amort : string;
     tip_uchet, primochka, grp_flag : integer;
 begin
+
     if ((Kod_shab = '1') or (Kod_shab = '2') or (Kod_shab = '0')) then
     begin
         frDBDataSetShab.Dataset := pFIBDataSet_All_Selection_For_shab;
@@ -217,9 +219,26 @@ begin
              god_amort    := pFIBDataSet_All_Selection_For_shab.FieldByName('GOD').AsString;
 
              //mesyac_amort := god_amort[4] + god_amort[5];
-
-             frVariables['period_nachisl']  := god_amort + ' р.'; {mesyac_amort + ' ' +}
-             frVariables['godok']           := ' ' + god_amort + ' р.';
+             if MonthOf(pFIBDataSet_All_Selection_For_shab.FieldByName('DATE_AMORT').AsDateTime) = 4 then
+             begin
+               frVariables['period_nachisl']  := ' 1 квартал ' + IntToStr(StrToInt(god_amort)+1);
+               frVariables['godok']           := ' 1 квартал ';
+             end;
+             if MonthOf(pFIBDataSet_All_Selection_For_shab.FieldByName('DATE_AMORT').AsDateTime) = 7 then
+             begin
+               frVariables['period_nachisl']  := ' 2 квартал ' + IntToStr(StrToInt(god_amort)+1);
+               frVariables['godok']           := ' 2 квартал ';
+             end;
+             if MonthOf(pFIBDataSet_All_Selection_For_shab.FieldByName('DATE_AMORT').AsDateTime) = 10 then
+             begin
+               frVariables['period_nachisl']  := ' 3 квартал ' + IntToStr(StrToInt(god_amort)+1);
+               frVariables['godok']           := ' 3 квартал ';
+             end;
+             if MonthOf(pFIBDataSet_All_Selection_For_shab.FieldByName('DATE_AMORT').AsDateTime) = 1 then
+             begin
+               frVariables['period_nachisl']  := ' 4 квартал ' + god_amort;
+               frVariables['godok']           := ' 4 квартал ';
+             end;
         end;
         If (tip_uchet = 1) or (tip_uchet = 0) then
         begin
@@ -275,8 +294,26 @@ begin
         If (tip_uchet = 2) then
         begin
              god_amort    := pFIBDataSet_All_Selection_For_shab.FieldByName('GOD').AsString;
-             frVariables['period_nachisl']  := god_amort + ' р.';
-             frVariables['godok']           := ' ' + god_amort + ' р.';
+             if MonthOf(pFIBDataSet_All_Selection_For_shab.FieldByName('DATE_AMORT').AsDateTime) = 4 then
+             begin
+               frVariables['period_nachisl']  := ' 1 квартал ' + IntToStr(StrToInt(god_amort)+1);
+               frVariables['godok']           := ' 1 квартал ';
+             end;
+             if MonthOf(pFIBDataSet_All_Selection_For_shab.FieldByName('DATE_AMORT').AsDateTime) = 7 then
+             begin
+               frVariables['period_nachisl']  := ' 2 квартал ' + IntToStr(StrToInt(god_amort)+1);
+               frVariables['godok']           := ' 2 квартал ';
+             end;
+             if MonthOf(pFIBDataSet_All_Selection_For_shab.FieldByName('DATE_AMORT').AsDateTime) = 10 then
+             begin
+               frVariables['period_nachisl']  := ' 3 квартал ' + IntToStr(StrToInt(god_amort)+1);
+               frVariables['godok']           := ' 3 квартал ';
+             end;
+             if MonthOf(pFIBDataSet_All_Selection_For_shab.FieldByName('DATE_AMORT').AsDateTime) = 1 then
+             begin
+               frVariables['period_nachisl']  := ' 4 квартал ' + god_amort;
+               frVariables['godok']           := ' 4 квартал ';
+             end;
         end;
         If (tip_uchet = 1) or (tip_uchet = 0) then
         begin
@@ -320,8 +357,29 @@ begin
         If (tip_uchet = 2) then
         begin
              god_amort    := pFIBDataSet_All_Selection_For_shab.FieldByName('GOD').AsString;
-             frVariables['period_nachisl']  := god_amort + ' р.'; {mesyac_amort + ' ' +}
-             frVariables['godok']           := ' ' + god_amort + ' р.';
+
+             //mesyac_amort := god_amort[4] + god_amort[5];
+             if MonthOf(pFIBDataSet_All_Selection_For_shab.FieldByName('DATE_AMORT').AsDateTime) = 4 then
+             begin
+               frVariables['period_nachisl']  := ' 1 квартал ' + IntToStr(StrToInt(god_amort)+1)+ ' р.';
+               frVariables['godok']           := ' 1 квартал ';
+             end;
+             if MonthOf(pFIBDataSet_All_Selection_For_shab.FieldByName('DATE_AMORT').AsDateTime) = 7 then
+             begin
+               frVariables['period_nachisl']  := ' 2 квартал ' + IntToStr(StrToInt(god_amort)+1)+ ' р.';
+               frVariables['godok']           := ' 2 квартал ';
+             end;
+             if MonthOf(pFIBDataSet_All_Selection_For_shab.FieldByName('DATE_AMORT').AsDateTime) = 10 then
+             begin
+               frVariables['period_nachisl']  := ' 3 квартал ' + IntToStr(StrToInt(god_amort)+1)+ ' р.';
+               frVariables['godok']           := ' 3 квартал ';
+             end;
+             if MonthOf(pFIBDataSet_All_Selection_For_shab.FieldByName('DATE_AMORT').AsDateTime) = 1 then
+             begin
+               frVariables['period_nachisl']  := ' 4 квартал ' + god_amort+ ' р.';
+               frVariables['godok']           := ' 4 квартал ';
+             end;
+
         end;
         If (tip_uchet = 1) or (tip_uchet = 0) then
         begin
@@ -347,6 +405,7 @@ begin
 
         frVariables['ustanova']        := _ORG_FULL_NAME;
         frVariables['OKPO']            := _ORG_KOD_OKPO;
+
     end;
 
     if (Kod_shab = '12') then
