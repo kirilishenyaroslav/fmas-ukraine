@@ -12,7 +12,7 @@ object PrintDM: TPrintDM
     PreviewOptions.Zoom = 1.000000000000000000
     PrintOptions.Printer = 'Default'
     ReportOptions.CreateDate = 38751.358712557900000000
-    ReportOptions.LastChange = 41747.593667881940000000
+    ReportOptions.LastChange = 42148.766354039360000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'procedure ReportTitle1OnBeforePrint(Sender: TfrxComponent);'
@@ -40,6 +40,118 @@ object PrintDM: TPrintDM
       '  memo9.text:='#39'-'#39';'
       'end;'
       ''
+      
+        'procedure Memo138OnPreviewClick(Sender: TfrxView; Button: TMouse' +
+        'Button; Shift: Integer; var Modified: Boolean);'
+      'var'
+      '  s: String;'
+      'begin'
+      '  s := TfrxMemoView(Sender).Text;'
+      '  SetLength(s, Length(s) - 2); // cut off #13#10'
+      
+        '  TfrxMemoView(Sender).Text := InputBox('#39#1047#1084#1110#1085#1080#1090#1080' '#1087#1086#1083#1077#39', '#39#1090#1077#1082#1089#1090':'#39 +
+        ', s);'
+      '  Modified := True;'
+      'end;'
+      ''
+      
+        'procedure Memo139OnPreviewClick(Sender: TfrxView; Button: TMouse' +
+        'Button; Shift: Integer; var Modified: Boolean);'
+      'var'
+      '  s: String;'
+      'begin'
+      '  s := TfrxMemoView(Sender).Text;'
+      '  SetLength(s, Length(s) - 2); // cut off #13#10'
+      
+        '  TfrxMemoView(Sender).Text := InputBox('#39#1047#1084#1110#1085#1080#1090#1080' '#1087#1086#1083#1077#39', '#39#1090#1077#1082#1089#1090':'#39 +
+        ', s);'
+      '  Modified := True;'
+      'end;'
+      ''
+      
+        'procedure Memo140OnPreviewClick(Sender: TfrxView; Button: TMouse' +
+        'Button; Shift: Integer; var Modified: Boolean);'
+      'var'
+      '  s: String;'
+      'begin'
+      '  s := TfrxMemoView(Sender).Text;'
+      '  SetLength(s, Length(s) - 2); // cut off #13#10'
+      
+        '  TfrxMemoView(Sender).Text := InputBox('#39#1047#1084#1110#1085#1080#1090#1080' '#1087#1086#1083#1077#39', '#39#1090#1077#1082#1089#1090':'#39 +
+        ', s);'
+      '  Modified := True;'
+      'end;'
+      ''
+      
+        'procedure Memo141OnPreviewClick(Sender: TfrxView; Button: TMouse' +
+        'Button; Shift: Integer; var Modified: Boolean);'
+      'var'
+      '  s: String;'
+      'begin'
+      '  s := TfrxMemoView(Sender).Text;'
+      '  SetLength(s, Length(s) - 2); // cut off #13#10'
+      
+        '  TfrxMemoView(Sender).Text := InputBox('#39#1047#1084#1110#1085#1080#1090#1080' '#1087#1086#1083#1077#39', '#39#1090#1077#1082#1089#1090':'#39 +
+        ', s);'
+      '  Modified := True;'
+      'end;'
+      ''
+      
+        'procedure Memo149OnPreviewClick(Sender: TfrxView; Button: TMouse' +
+        'Button; Shift: Integer; var Modified: Boolean);'
+      'var'
+      '  s: String;'
+      'begin'
+      '  s := TfrxMemoView(Sender).Text;'
+      '  SetLength(s, Length(s) - 2); // cut off #13#10'
+      
+        '  TfrxMemoView(Sender).Text := InputBox('#39#1047#1084#1110#1085#1080#1090#1080' '#1087#1086#1083#1077#39', '#39#1090#1077#1082#1089#1090':'#39 +
+        ', s);'
+      '  Modified := True;'
+      'end;'
+      ''
+      
+        'procedure Memo150OnPreviewClick(Sender: TfrxView; Button: TMouse' +
+        'Button; Shift: Integer; var Modified: Boolean);'
+      'var'
+      '  s: String;'
+      'begin'
+      '  s := TfrxMemoView(Sender).Text;'
+      '  SetLength(s, Length(s) - 2); // cut off #13#10'
+      
+        '  TfrxMemoView(Sender).Text := InputBox('#39#1047#1084#1110#1085#1080#1090#1080' '#1087#1086#1083#1077#39', '#39#1090#1077#1082#1089#1090':'#39 +
+        ', s);'
+      '  Modified := True;'
+      'end;'
+      ''
+      
+        'procedure Memo152OnPreviewClick(Sender: TfrxView; Button: TMouse' +
+        'Button; Shift: Integer; var Modified: Boolean);'
+      'var'
+      '  s: String;'
+      'begin'
+      '  s := TfrxMemoView(Sender).Text;'
+      '  SetLength(s, Length(s) - 2); // cut off #13#10'
+      
+        '  TfrxMemoView(Sender).Text := InputBox('#39#1047#1084#1110#1085#1080#1090#1080' '#1087#1086#1083#1077#39', '#39#1090#1077#1082#1089#1090':'#39 +
+        ', s);'
+      '  Modified := True;'
+      'end;'
+      ''
+      
+        'procedure Memo153OnPreviewClick(Sender: TfrxView; Button: TMouse' +
+        'Button; Shift: Integer; var Modified: Boolean);'
+      'var'
+      '  s: String;'
+      'begin'
+      '  s := TfrxMemoView(Sender).Text;'
+      '  SetLength(s, Length(s) - 2); // cut off #13#10'
+      
+        '  TfrxMemoView(Sender).Text := InputBox('#39#1047#1084#1110#1085#1080#1090#1080' '#1087#1086#1083#1077#39', '#39#1090#1077#1082#1089#1090':'#39 +
+        ', s);'
+      '  Modified := True;'
+      'end;'
+      ''
       'begin'
       ''
       'end.')
@@ -47,6 +159,10 @@ object PrintDM: TPrintDM
     Left = 32
     Top = 8
     Datasets = <
+      item
+        DataSet = frxDBSetWinning
+        DataSetName = 'frxDBSetWinning'
+      end
       item
         DataSet = frxDSet
         DataSetName = 'frxDSet'
@@ -73,18 +189,16 @@ object PrintDM: TPrintDM
         Font.Style = []
         Height = 11.338590000000000000
         ParentFont = False
-        Top = 604.724800000000000000
+        Top = 631.181510000000000000
         Width = 642.520100000000000000
         DataSet = frxDSet
         DataSetName = 'frxDSet'
-        KeepFooter = True
         KeepHeader = True
         RowCount = 0
         object Memo1: TfrxMemoView
           Left = 34.015770000000000000
           Width = 75.590600000000000000
           Height = 11.338590000000000000
-          DataField = 'TIN_PASPORT'
           DataSet = frxDSet
           DataSetName = 'frxDSet'
           Font.Charset = DEFAULT_CHARSET
@@ -283,14 +397,14 @@ object PrintDM: TPrintDM
         Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
-        Height = 83.149660000000000000
+        Height = 109.606370000000000000
         ParentFont = False
         Top = 498.897960000000000000
         Width = 642.520100000000000000
         ReprintOnNewPage = True
         object Memo12: TfrxMemoView
           Left = 177.637910000000000000
-          Top = 3.779530000000020000
+          Top = 30.236240000000000000
           Width = 68.031540000000000000
           Height = 64.252010000000000000
           DataSet = frxDSet
@@ -314,7 +428,7 @@ object PrintDM: TPrintDM
         end
         object Memo13: TfrxMemoView
           Left = 245.669450000000000000
-          Top = 52.913420000000000000
+          Top = 79.370130000000000000
           Width = 68.031540000000000000
           Height = 15.118120000000000000
           DataSet = frxDSet
@@ -336,7 +450,7 @@ object PrintDM: TPrintDM
         end
         object Memo14: TfrxMemoView
           Left = 313.700990000000000000
-          Top = 52.913420000000000000
+          Top = 79.370130000000000000
           Width = 68.031540000000000000
           Height = 15.118120000000000000
           DataSet = frxDSet
@@ -358,7 +472,7 @@ object PrintDM: TPrintDM
         end
         object Memo15: TfrxMemoView
           Left = 381.732530000000000000
-          Top = 3.779530000000020000
+          Top = 30.236240000000000000
           Width = 34.015770000000000000
           Height = 64.252010000000000000
           DataSet = frxDSet
@@ -378,7 +492,7 @@ object PrintDM: TPrintDM
         end
         object Memo16: TfrxMemoView
           Left = 415.748300000000000000
-          Top = 34.015770000000000000
+          Top = 60.472480000000000000
           Width = 68.031540000000000000
           Height = 34.015770000000000000
           DataSet = frxDSet
@@ -392,14 +506,13 @@ object PrintDM: TPrintDM
           HAlign = haCenter
           Memo.Strings = (
             #1087#1088#1080#1081#1085#1103#1090#1090#1103' '
-            #1085#1072' '#1088#1086#1073#1086#1090#1091
-            '')
+            #1085#1072' '#1088#1086#1073#1086#1090#1091)
           ParentFont = False
           VAlign = vaCenter
         end
         object Memo17: TfrxMemoView
           Left = 483.779840000000000000
-          Top = 34.015770000000000000
+          Top = 60.472480000000000000
           Width = 68.031540000000000000
           Height = 34.015770000000000000
           DataSet = frxDSet
@@ -413,14 +526,13 @@ object PrintDM: TPrintDM
           HAlign = haCenter
           Memo.Strings = (
             #1079#1074#1110#1083#1100#1085#1077#1085#1085#1103' '
-            #1079' '#1088#1086#1073#1086#1090#1080
-            '')
+            #1079' '#1088#1086#1073#1086#1090#1080)
           ParentFont = False
           VAlign = vaCenter
         end
         object Memo18: TfrxMemoView
           Left = 551.811380000000000000
-          Top = 3.779530000000000000
+          Top = 30.236240000000000000
           Width = 49.133890000000000000
           Height = 64.252010000000000000
           DataSet = frxDSet
@@ -442,7 +554,7 @@ object PrintDM: TPrintDM
         end
         object Memo19: TfrxMemoView
           Left = 415.748300000000000000
-          Top = 3.779530000000000000
+          Top = 30.236240000000000000
           Width = 136.063080000000000000
           Height = 18.897650000000000000
           DataSet = frxDSet
@@ -461,7 +573,7 @@ object PrintDM: TPrintDM
         end
         object Memo20: TfrxMemoView
           Left = 245.669450000000000000
-          Top = 3.779530000000020000
+          Top = 30.236240000000000000
           Width = 136.063080000000000000
           Height = 49.133890000000000000
           DataSet = frxDSet
@@ -483,7 +595,7 @@ object PrintDM: TPrintDM
           VAlign = vaCenter
         end
         object Memo108: TfrxMemoView
-          Top = 68.031539999999900000
+          Top = 94.488250000000000000
           Width = 34.015770000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -500,7 +612,7 @@ object PrintDM: TPrintDM
         end
         object Memo109: TfrxMemoView
           Left = 34.015770000000000000
-          Top = 68.031539999999900000
+          Top = 94.488250000000000000
           Width = 75.590600000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -517,7 +629,7 @@ object PrintDM: TPrintDM
         end
         object Memo110: TfrxMemoView
           Left = 109.606370000000000000
-          Top = 68.031539999999900000
+          Top = 94.488250000000000000
           Width = 68.031540000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -534,7 +646,7 @@ object PrintDM: TPrintDM
         end
         object Memo111: TfrxMemoView
           Left = 177.637910000000000000
-          Top = 68.031539999999900000
+          Top = 94.488250000000000000
           Width = 68.031540000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -551,7 +663,7 @@ object PrintDM: TPrintDM
         end
         object Memo112: TfrxMemoView
           Left = 245.669450000000000000
-          Top = 68.031539999999900000
+          Top = 94.488250000000000000
           Width = 68.031540000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -568,7 +680,7 @@ object PrintDM: TPrintDM
         end
         object Memo113: TfrxMemoView
           Left = 313.700990000000000000
-          Top = 68.031539999999900000
+          Top = 94.488250000000000000
           Width = 68.031540000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -585,7 +697,7 @@ object PrintDM: TPrintDM
         end
         object Memo114: TfrxMemoView
           Left = 381.732530000000000000
-          Top = 68.031539999999900000
+          Top = 94.488250000000000000
           Width = 34.015770000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -602,7 +714,7 @@ object PrintDM: TPrintDM
         end
         object Memo115: TfrxMemoView
           Left = 415.748300000000000000
-          Top = 68.031539999999900000
+          Top = 94.488250000000000000
           Width = 68.031540000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -619,7 +731,7 @@ object PrintDM: TPrintDM
         end
         object Memo116: TfrxMemoView
           Left = 483.779840000000000000
-          Top = 68.031539999999900000
+          Top = 94.488250000000000000
           Width = 68.031540000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -636,7 +748,7 @@ object PrintDM: TPrintDM
         end
         object Memo117: TfrxMemoView
           Left = 551.811380000000000000
-          Top = 68.031539999999900000
+          Top = 94.488250000000000000
           Width = 49.133890000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -653,7 +765,7 @@ object PrintDM: TPrintDM
         end
         object Memo10: TfrxMemoView
           Left = 34.015770000000000000
-          Top = 3.779530000000020000
+          Top = 30.236240000000000000
           Width = 75.590600000000000000
           Height = 64.252010000000000000
           DataSet = frxDSet
@@ -672,7 +784,7 @@ object PrintDM: TPrintDM
           VAlign = vaCenter
         end
         object Memo21: TfrxMemoView
-          Top = 3.779530000000020000
+          Top = 30.236240000000000000
           Width = 34.015770000000000000
           Height = 64.252010000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -690,7 +802,7 @@ object PrintDM: TPrintDM
         end
         object Memo11: TfrxMemoView
           Left = 109.606370000000000000
-          Top = 3.779530000000020000
+          Top = 30.236240000000000000
           Width = 68.031540000000000000
           Height = 64.252010000000000000
           DataSet = frxDSet
@@ -714,7 +826,7 @@ object PrintDM: TPrintDM
         end
         object Memo118: TfrxMemoView
           Left = 600.945270000000000000
-          Top = 3.779530000000020000
+          Top = 30.236240000000000000
           Width = 41.574830000000000000
           Height = 64.252010000000000000
           DataSet = frxDSet
@@ -734,7 +846,7 @@ object PrintDM: TPrintDM
         end
         object Memo119: TfrxMemoView
           Left = 600.945270000000000000
-          Top = 68.031539999999900000
+          Top = 94.488250000000000000
           Width = 41.574830000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -746,6 +858,22 @@ object PrintDM: TPrintDM
           HAlign = haCenter
           Memo.Strings = (
             '9')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo134: TfrxMemoView
+          Width = 642.520100000000000000
+          Height = 30.236240000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Memo.Strings = (
+            
+              #1056#1086#1079#1076#1110#1083' '#1030'.  '#1057#1091#1084#1080' '#1076#1086#1093#1086#1076#1091', '#1085#1072#1088#1072#1093#1086#1074#1072#1085#1086#1075#1086' ('#1089#1087#1083#1072#1095#1077#1085#1086#1075#1086') '#1085#1072' '#1082#1086#1088#1080#1089#1090#1100' '#1092#1110#1079 +
+              #1080#1095#1085#1080#1093' '#1086#1089#1110#1073', '#1110' '#1089#1091#1084#1080' '#1091#1090#1088#1080#1084#1072#1085#1086#1075#1086' '#1079' '#1085#1080#1093' '#1087#1086#1076#1072#1090#1082#1091' ')
           ParentFont = False
           VAlign = vaCenter
         end
@@ -773,8 +901,8 @@ object PrintDM: TPrintDM
           Font.Style = []
           Memo.Strings = (
             #1047#1040#1058#1042#1045#1056#1044#1046#1045#1053#1054
-            #1053#1072#1082#1072#1079' '#1052#1110#1085#1110#1089#1090#1077#1088#1089#1090#1074#1072' '#1076#1086#1093#1086#1076#1110#1074' '#1110' '#1079#1073#1086#1088#1110#1074' '#1059#1082#1088#1072#1111#1085#1080
-            '21.01.2014  '#8470' 49')
+            #1053#1072#1082#1072#1079' '#1052#1110#1085#1110#1089#1090#1077#1088#1089#1090#1074#1072' '#1092#1110#1085#1072#1085#1089#1110#1074' '#1059#1082#1088#1072#1111#1085#1080
+            '13 '#1089#1110#1095#1085#1103' 2015 '#8470' 4')
           ParentFont = False
         end
         object Memo23: TfrxMemoView
@@ -835,8 +963,8 @@ object PrintDM: TPrintDM
           Memo.Strings = (
             #1055#1086#1076#1072#1090#1082#1086#1074#1080#1081' '#1088#1086#1079#1088#1072#1093#1091#1085#1086#1082' '
             
-              #1089#1091#1084' '#1076#1086#1093#1086#1076#1091', '#1085#1072#1088#1072#1093#1086#1074#1072#1085#1086#1075#1086' ('#1089#1087#1083#1072#1095#1077#1085#1086#1075#1086') '#1085#1072' '#1082#1086#1088#1080#1089#1090#1100' '#1087#1083#1072#1090#1085#1080#1082#1110#1074' '#1087#1086#1076#1072#1090 +
-              #1082#1091', '#1110' '#1089#1091#1084' '#1091#1090#1088#1080#1084#1072#1085#1086#1075#1086' '#1079' '#1085#1080#1093' '#1087#1086#1076#1072#1090#1082#1091' ')
+              #1089#1091#1084' '#1076#1086#1093#1086#1076#1091', '#1085#1072#1088#1072#1093#1086#1074#1072#1085#1086#1075#1086' ('#1089#1087#1083#1072#1095#1077#1085#1086#1075#1086') '#1085#1072' '#1082#1086#1088#1080#1089#1090#1100' '#1092#1110#1079#1080#1095#1085#1080#1093' '#1086#1089#1110#1073', ' +
+              #1110' '#1089#1091#1084' '#1091#1090#1088#1080#1084#1072#1085#1086#1075#1086' '#1079' '#1085#1080#1093' '#1087#1086#1076#1072#1090#1082#1091' ')
           ParentFont = False
         end
         object Line1: TfrxLineView
@@ -914,7 +1042,7 @@ object PrintDM: TPrintDM
         end
         object Memo33: TfrxMemoView
           Top = 321.260050000000000000
-          Width = 124.724490000000000000
+          Width = 313.700990000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -922,12 +1050,12 @@ object PrintDM: TPrintDM
           Font.Name = 'Courier New'
           Font.Style = []
           Memo.Strings = (
-            #1055#1088#1072#1094#1102#1074#1072#1083#1086' '#1091' '#1096#1090#1072#1090#1110':')
+            #1055#1088#1072#1094#1102#1074#1072#1083#1086' '#1079#1072' '#1090#1088#1091#1076#1086#1074#1080#1084#1080' '#1076#1086#1075#1086#1074#1086#1088#1072#1084#1080' ('#1082#1086#1085#1090#1088#1072#1082#1090#1072#1084#1080'):')
           ParentFont = False
         end
         object Memo34: TfrxMemoView
           Top = 336.378170000000000000
-          Width = 196.535560000000000000
+          Width = 313.700990000000000000
           Height = 26.456710000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -940,8 +1068,8 @@ object PrintDM: TPrintDM
           ParentFont = False
         end
         object Memo35: TfrxMemoView
-          Left = 245.669450000000000000
-          Top = 347.716760000000000000
+          Left = 438.425480000000000000
+          Top = 343.937230000000000000
           Width = 56.692950000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -954,7 +1082,7 @@ object PrintDM: TPrintDM
           ParentFont = False
         end
         object Memo37: TfrxMemoView
-          Left = 192.756030000000000000
+          Left = 325.039580000000000000
           Top = 321.260050000000000000
           Width = 37.795300000000000000
           Height = 15.118120000000000000
@@ -971,8 +1099,8 @@ object PrintDM: TPrintDM
           ParentFont = False
         end
         object Memo38: TfrxMemoView
-          Left = 192.756030000000000000
-          Top = 347.716760000000000000
+          Left = 325.039580000000000000
+          Top = 347.716535430000000000
           Width = 37.795300000000000000
           Height = 15.118120000000000000
           DataSet = frxDSetGlobal
@@ -1201,8 +1329,8 @@ object PrintDM: TPrintDM
           VAlign = vaCenter
         end
         object Memo84: TfrxMemoView
-          Left = 302.362400000000000000
-          Top = 343.937230000000000000
+          Left = 495.118430000000000000
+          Top = 340.157700000000000000
           Width = 15.118120000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -1216,8 +1344,8 @@ object PrintDM: TPrintDM
           VAlign = vaCenter
         end
         object Memo85: TfrxMemoView
-          Left = 317.480520000000000000
-          Top = 343.937230000000000000
+          Left = 510.236550000000000000
+          Top = 340.157700000000000000
           Width = 15.118120000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -1231,8 +1359,8 @@ object PrintDM: TPrintDM
           VAlign = vaCenter
         end
         object Memo86: TfrxMemoView
-          Left = 332.598640000000000000
-          Top = 343.937230000000000000
+          Left = 525.354670000000000000
+          Top = 340.157700000000000000
           Width = 15.118120000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -1246,8 +1374,8 @@ object PrintDM: TPrintDM
           VAlign = vaCenter
         end
         object Memo87: TfrxMemoView
-          Left = 347.716760000000000000
-          Top = 343.937230000000000000
+          Left = 540.472790000000000000
+          Top = 340.157700000000000000
           Width = 15.118120000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -1261,8 +1389,8 @@ object PrintDM: TPrintDM
           VAlign = vaCenter
         end
         object Memo88: TfrxMemoView
-          Left = 362.834880000000000000
-          Top = 343.937230000000000000
+          Left = 555.590910000000000000
+          Top = 340.157700000000000000
           Width = 15.118120000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -1412,17 +1540,54 @@ object PrintDM: TPrintDM
           Frame.Typ = [ftTop]
         end
       end
+      object PageHeader1: TfrxPageHeader
+        Height = 22.677180000000000000
+        Top = 415.748300000000000000
+        Width = 642.520100000000000000
+        PrintOnFirstPage = False
+        object Memo74: TfrxMemoView
+          Left = 340.157700000000000000
+          Width = 302.362400000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Courier New'
+          Font.Style = []
+          HAlign = haRight
+          Memo.Strings = (
+            #1055#1088#1086#1076#1086#1074#1078#1077#1085#1085#1103' '#1060#1086#1088#1084#1072' '#8470'1'#1044#1060'   '#1057#1090#1086#1088'. [PAGE#]')
+          ParentFont = False
+        end
+      end
+      object Memo151: TfrxMemoView
+        Width = 34.015770000000000000
+        Height = 26.456692910000000000
+        DataSet = frxDSet
+        DataSetName = 'frxDSet'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -9
+        Font.Name = 'Courier New'
+        Font.Style = []
+        Frame.Typ = [ftLeft, ftRight]
+        HAlign = haCenter
+        Memo.Strings = (
+          'x')
+        ParentFont = False
+      end
       object Footer1: TfrxFooter
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
-        Height = 325.039580000000000000
+        Height = 15.118120000000000000
         ParentFont = False
-        Top = 638.740570000000000000
+        Top = 665.197280000000000000
         Width = 642.520100000000000000
-        object Memo43: TfrxMemoView
+        Stretched = True
+        object Memo36: TfrxMemoView
           Left = 34.015770000000000000
           Width = 75.590548740000000000
           Height = 15.118120000000000000
@@ -1433,13 +1598,13 @@ object PrintDM: TPrintDM
           Font.Height = -11
           Font.Name = 'Courier New'
           Font.Style = []
-          Frame.Typ = [ftTop]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
           HAlign = haCenter
           Memo.Strings = (
             'x')
           ParentFont = False
         end
-        object Memo44: TfrxMemoView
+        object Memo43: TfrxMemoView
           Left = 109.606370000000000000
           Width = 68.031540000000000000
           Height = 15.118120000000000000
@@ -1453,13 +1618,13 @@ object PrintDM: TPrintDM
           Font.Height = -11
           Font.Name = 'Courier New'
           Font.Style = []
-          Frame.Typ = [ftTop]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
           HAlign = haRight
           Memo.Strings = (
             '[SUM(<frxDSet."SUM_NAR">,MasterData1)]')
           ParentFont = False
         end
-        object Memo45: TfrxMemoView
+        object Memo44: TfrxMemoView
           Left = 177.637910000000000000
           Width = 68.031540000000000000
           Height = 15.118120000000000000
@@ -1473,13 +1638,13 @@ object PrintDM: TPrintDM
           Font.Height = -11
           Font.Name = 'Courier New'
           Font.Style = []
-          Frame.Typ = [ftTop]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
           HAlign = haRight
           Memo.Strings = (
             '[SUM(<frxDSet."SUM_VIPL">,MasterData1)]')
           ParentFont = False
         end
-        object Memo46: TfrxMemoView
+        object Memo45: TfrxMemoView
           Left = 245.669450000000000000
           Width = 68.031540000000000000
           Height = 15.118120000000000000
@@ -1493,13 +1658,13 @@ object PrintDM: TPrintDM
           Font.Height = -11
           Font.Name = 'Courier New'
           Font.Style = []
-          Frame.Typ = [ftTop]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
           HAlign = haRight
           Memo.Strings = (
             '[SUM(<frxDSet."SUM_UD">,MasterData1)]')
           ParentFont = False
         end
-        object Memo47: TfrxMemoView
+        object Memo46: TfrxMemoView
           Left = 313.700990000000000000
           Width = 68.031540000000000000
           Height = 15.118120000000000000
@@ -1513,13 +1678,13 @@ object PrintDM: TPrintDM
           Font.Height = -11
           Font.Name = 'Courier New'
           Font.Style = []
-          Frame.Typ = [ftTop]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
           HAlign = haRight
           Memo.Strings = (
             '[SUM(<frxDSet."SUM_PERER">,MasterData1)]')
           ParentFont = False
         end
-        object Memo48: TfrxMemoView
+        object Memo47: TfrxMemoView
           Left = 381.732530000000000000
           Width = 34.015770000000000000
           Height = 15.118120000000000000
@@ -1530,13 +1695,13 @@ object PrintDM: TPrintDM
           Font.Height = -11
           Font.Name = 'Courier New'
           Font.Style = []
-          Frame.Typ = [ftTop]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
           HAlign = haCenter
           Memo.Strings = (
             'x')
           ParentFont = False
         end
-        object Memo49: TfrxMemoView
+        object Memo48: TfrxMemoView
           Left = 415.748300000000000000
           Width = 68.031540000000000000
           Height = 15.118120000000000000
@@ -1547,13 +1712,13 @@ object PrintDM: TPrintDM
           Font.Height = -11
           Font.Name = 'Courier New'
           Font.Style = []
-          Frame.Typ = [ftTop]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
           HAlign = haCenter
           Memo.Strings = (
             'x')
           ParentFont = False
         end
-        object Memo50: TfrxMemoView
+        object Memo49: TfrxMemoView
           Left = 483.779840000000000000
           Width = 68.031540000000000000
           Height = 15.118120000000000000
@@ -1564,13 +1729,13 @@ object PrintDM: TPrintDM
           Font.Height = -11
           Font.Name = 'Courier New'
           Font.Style = []
-          Frame.Typ = [ftTop]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
           HAlign = haCenter
           Memo.Strings = (
             'x')
           ParentFont = False
         end
-        object Memo51: TfrxMemoView
+        object Memo50: TfrxMemoView
           Left = 551.811380000000000000
           Width = 49.133890000000000000
           Height = 15.118120000000000000
@@ -1581,7 +1746,7 @@ object PrintDM: TPrintDM
           Font.Height = -11
           Font.Name = 'Courier New'
           Font.Style = []
-          Frame.Typ = [ftTop]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
           HAlign = haCenter
           Memo.Strings = (
             'x')
@@ -1592,31 +1757,497 @@ object PrintDM: TPrintDM
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
+          Font.Height = -9
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.Strings = (
+            #1042#1089#1100#1086#1075#1086)
+          ParentFont = False
+        end
+        object Memo51: TfrxMemoView
+          Left = 600.945270000000000000
+          Width = 41.574830000000000000
+          Height = 15.118120000000000000
+          DataSet = frxDSet
+          DataSetName = 'frxDSet'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
           Font.Height = -11
           Font.Name = 'Courier New'
           Font.Style = []
-          Frame.Typ = [ftTop]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
           HAlign = haCenter
           Memo.Strings = (
             'x')
           ParentFont = False
         end
+      end
+    end
+    object Page2: TfrxReportPage
+      PaperWidth = 210.000000000000000000
+      PaperHeight = 297.000000000000000000
+      PaperSize = 256
+      LeftMargin = 30.000000000000000000
+      RightMargin = 10.000000000000000000
+      TopMargin = 10.000000000000000000
+      BottomMargin = 10.000000000000000000
+      PrintOnPreviousPage = True
+      object Header2: TfrxHeader
+        Height = 79.370130000000000000
+        Top = 102.047310000000000000
+        Width = 642.520100000000000000
+        ReprintOnNewPage = True
         object Memo52: TfrxMemoView
-          Top = 26.456710000000000000
-          Width = 105.826840000000000000
+          Left = 177.637910000000000000
+          Top = 15.118120000000000000
+          Width = 68.031540000000000000
+          Height = 64.252010000000000000
+          DataSet = frxDSet
+          DataSetName = 'frxDSet'
+          DisplayFormat.DecimalSeparator = ','
+          DisplayFormat.FormatStr = '%2.2f'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.Strings = (
+            #1047#1072#1075#1072#1083#1100#1085#1072' '#1089#1091#1084#1072
+            #1074#1080#1087#1083#1072#1095#1077#1085'.'
+            #1076#1086#1093#1086#1076#1091' ('#1075#1088#1085'.'#1082#1086#1087'.)')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo53: TfrxMemoView
+          Left = 245.669450000000000000
+          Top = 64.252010000000000000
+          Width = 68.031540000000000000
           Height = 15.118120000000000000
+          DataSet = frxDSet
+          DataSetName = 'frxDSet'
+          DisplayFormat.DecimalSeparator = ','
+          DisplayFormat.FormatStr = '%2.2f'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.Strings = (
+            #1085#1072#1088#1072#1093#1086#1074#1072#1085'.')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo54: TfrxMemoView
+          Left = 313.700990000000000000
+          Top = 64.252010000000000000
+          Width = 68.031540000000000000
+          Height = 15.118120000000000000
+          DataSet = frxDSet
+          DataSetName = 'frxDSet'
+          DisplayFormat.DecimalSeparator = ','
+          DisplayFormat.FormatStr = '%2.2f'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.Strings = (
+            #1087#1077#1088#1077#1088#1072#1093#1086#1074'.')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo55: TfrxMemoView
+          Left = 381.732530000000000000
+          Top = 15.118120000000000000
+          Width = 260.787570000000000000
+          Height = 64.252010000000000000
+          DataSet = frxDSet
+          DataSetName = 'frxDSet'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.Strings = (
+            'x')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo56: TfrxMemoView
+          Left = 245.669450000000000000
+          Top = 15.118120000000000000
+          Width = 136.063080000000000000
+          Height = 49.133890000000000000
+          DataSet = frxDSet
+          DataSetName = 'frxDSet'
+          DisplayFormat.DecimalSeparator = ','
+          DisplayFormat.FormatStr = '%2.2f'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.Strings = (
+            #1047#1072#1075#1072#1083#1100#1085#1072' '#1089#1091#1084#1072' '#1091#1090#1088#1080#1084#1072#1085#1086#1075#1086
+            #1087#1086#1076#1072#1090#1082#1091','#1079#1073#1086#1088#1091' ('#1075#1088#1085'.,'#1082#1086#1087'.)')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo57: TfrxMemoView
+          Left = 34.015770000000000000
+          Top = 15.118120000000000000
+          Width = 75.590600000000000000
+          Height = 64.252010000000000000
+          DataSet = frxDSet
+          DataSetName = 'frxDSet'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.Strings = (
+            'x')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo58: TfrxMemoView
+          Top = 15.118120000000000000
+          Width = 34.015770000000000000
+          Height = 64.252010000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.Strings = (
+            'x')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo59: TfrxMemoView
+          Left = 109.606370000000000000
+          Top = 15.118120000000000000
+          Width = 68.031540000000000000
+          Height = 64.252010000000000000
+          DataSet = frxDSet
+          DataSetName = 'frxDSet'
+          DisplayFormat.DecimalSeparator = ','
+          DisplayFormat.FormatStr = '%2.2f'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.Strings = (
+            #1047#1072#1075#1072#1083#1100#1085#1072' '#1089#1091#1084#1072
+            #1085#1072#1088#1072#1093#1086#1074#1072#1085'.'
+            #1076#1086#1093#1086#1076#1091' ('#1075#1088#1085'.'#1082#1086#1087'.)')
+          ParentFont = False
+          VAlign = vaCenter
+        end
+        object Memo71: TfrxMemoView
+          Width = 642.520100000000000000
+          Height = 15.118120000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -11
+          Font.Name = 'Courier New'
+          Font.Style = [fsBold]
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Memo.Strings = (
+            
+              #1056#1086#1079#1076#1110#1083' '#1030#1030'. '#1054#1087#1086#1076#1072#1090#1082#1091#1074#1072#1085#1085#1103' '#1087#1088#1086#1094#1077#1085#1090#1110#1074', '#1074#1080#1075#1088#1072#1096#1110#1074' ('#1087#1088#1080#1079#1110#1074') '#1091' '#1083#1086#1090#1077#1088#1077#1102' ' +
+              #1090#1072' '#1074#1110#1081#1089#1100#1082#1086#1074#1080#1081' '#1079#1073#1110#1088)
+          ParentFont = False
+          VAlign = vaCenter
+        end
+      end
+      object MasterData2: TfrxMasterData
+        Height = 22.677180000000000000
+        Top = 204.094620000000000000
+        Width = 642.520100000000000000
+        AllowSplit = True
+        DataSet = frxDBSetWinning
+        DataSetName = 'frxDBSetWinning'
+        KeepFooter = True
+        KeepHeader = True
+        RowCount = 0
+        Stretched = True
+        object Memo205: TfrxMemoView
+          Left = 34.015770000000000000
+          Width = 75.590600000000000000
+          Height = 22.677165350000000000
+          StretchMode = smMaxHeight
+          DataSet = frxDSet
+          DataSetName = 'frxDSet'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -9
+          Font.Name = 'Courier New'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          Memo.Strings = (
+            '[frxDBSetWinning."NAME"]')
+          ParentFont = False
+        end
+        object Memo206: TfrxMemoView
+          Left = 109.606370000000000000
+          Width = 68.031540000000000000
+          Height = 22.677165350000000000
+          StretchMode = smMaxHeight
+          DataSet = frxDSet
+          DataSetName = 'frxDSet'
+          DisplayFormat.DecimalSeparator = ','
+          DisplayFormat.FormatStr = '%2.2f'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -9
+          Font.Name = 'Courier New'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haRight
+          ParentFont = False
+        end
+        object Memo207: TfrxMemoView
+          Left = 177.637910000000000000
+          Width = 68.031540000000000000
+          Height = 22.677165350000000000
+          StretchMode = smMaxHeight
+          DataSet = frxDSet
+          DataSetName = 'frxDSet'
+          DisplayFormat.DecimalSeparator = ','
+          DisplayFormat.FormatStr = '%2.2f'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -9
+          Font.Name = 'Courier New'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haRight
+          Memo.Strings = (
+            '[frxDBSetWinning."ZAGAL_SUMA"]')
+          ParentFont = False
+        end
+        object Memo208: TfrxMemoView
+          Left = 245.669450000000000000
+          Width = 68.031540000000000000
+          Height = 22.677165350000000000
+          StretchMode = smMaxHeight
+          DataSet = frxDSet
+          DataSetName = 'frxDSet'
+          DisplayFormat.DecimalSeparator = ','
+          DisplayFormat.FormatStr = '%2.2f'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -9
+          Font.Name = 'Courier New'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haRight
+          ParentFont = False
+        end
+        object Memo209: TfrxMemoView
+          Left = 313.700990000000000000
+          Width = 68.031540000000000000
+          Height = 22.677165350000000000
+          StretchMode = smMaxHeight
+          DataSet = frxDSet
+          DataSetName = 'frxDSet'
+          DisplayFormat.DecimalSeparator = ','
+          DisplayFormat.FormatStr = '%2.2f'
+          DisplayFormat.Kind = fkNumeric
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -9
+          Font.Name = 'Courier New'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haRight
+          ParentFont = False
+        end
+        object Memo210: TfrxMemoView
+          Left = 381.732530000000000000
+          Width = 34.015770000000000000
+          Height = 22.677165350000000000
+          StretchMode = smMaxHeight
+          DataSet = frxDSet
+          DataSetName = 'frxDSet'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -9
+          Font.Name = 'Courier New'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.Strings = (
+            'x')
+          ParentFont = False
+        end
+        object Memo211: TfrxMemoView
+          Left = 415.748300000000000000
+          Width = 68.031540000000000000
+          Height = 22.677165350000000000
+          StretchMode = smMaxHeight
+          DataSet = frxDSet
+          DataSetName = 'frxDSet'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -9
+          Font.Name = 'Courier New'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.Strings = (
+            'x')
+          ParentFont = False
+        end
+        object Memo212: TfrxMemoView
+          Left = 483.779840000000000000
+          Width = 68.031540000000000000
+          Height = 22.677165350000000000
+          StretchMode = smMaxHeight
+          DataSet = frxDSet
+          DataSetName = 'frxDSet'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -9
+          Font.Name = 'Courier New'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.Strings = (
+            'x')
+          ParentFont = False
+        end
+        object Memo213: TfrxMemoView
+          Left = 551.811380000000000000
+          Width = 49.133890000000000000
+          Height = 22.677165350000000000
+          StretchMode = smMaxHeight
+          DataSet = frxDSet
+          DataSetName = 'frxDSet'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -9
+          Font.Name = 'Courier New'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.Strings = (
+            'x')
+          ParentFont = False
+        end
+        object Memo214: TfrxMemoView
+          Left = 600.945270000000000000
+          Width = 41.574830000000000000
+          Height = 22.677165350000000000
+          StretchMode = smMaxHeight
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -9
+          Font.Name = 'Courier New'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.Strings = (
+            'x')
+          ParentFont = False
+        end
+        object Memo215: TfrxMemoView
+          Width = 34.015748030000000000
+          Height = 22.677165350000000000
+          StretchMode = smMaxHeight
+          DataSet = frxDSet
+          DataSetName = 'frxDSet'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -9
+          Font.Name = 'Courier New'
+          Font.Style = []
+          Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+          HAlign = haCenter
+          Memo.Strings = (
+            'x')
+          ParentFont = False
+        end
+      end
+      object Footer2: TfrxFooter
+        Height = 313.700990000000000000
+        Top = 249.448980000000000000
+        Width = 642.520100000000000000
+        object Line4: TfrxLineView
+          Top = 268.346630000000000000
+          Width = 75.590600000000000000
+          Frame.Typ = [ftTop]
+        end
+        object Memo160: TfrxMemoView
+          Top = 272.126160000000000000
+          Width = 631.181510000000000000
+          Height = 41.574830000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -8
+          Font.Name = 'Courier New'
+          Font.Style = []
+          Memo.Strings = (
+            
+              '* '#1044#1083#1103' '#1092#1110#1079#1080#1095#1085#1086#1111' '#1086#1089#1086#1073#1080', '#1103#1082#1072' '#1084#1072#1108' '#1074#1110#1076#1084#1110#1090#1082#1091' '#1074' '#1087#1072#1089#1087#1086#1088#1090#1110' '#1087#1088#1086' '#1087#1088#1072#1074#1086' '#1079#1076#1110#1081 +
+              #1089#1085#1102#1074#1072#1090#1080' '#1073#1091#1076#1100'-'#1103#1082#1110' '#1087#1083#1072#1090#1077#1078#1110' '#1079#1072' '#1089#1077#1088#1110#1108#1102' '#1090#1072' '#1085#1086#1084#1077#1088#1086#1084' '#1087#1072#1089#1087#1086#1088#1090#1072'.'
+            
+              '** '#1042#1080#1082#1083#1102#1095#1077#1085#1085#1103' '#1110#1085#1092#1086#1088#1084#1072#1094#1110#1111' '#1097#1086#1076#1086' '#1086#1087#1086#1076#1072#1090#1082#1091#1074#1072#1085#1085#1103' '#1087#1088#1086#1094#1077#1085#1090#1110#1074' '#1087#1088#1080' '#1087#1088#1086#1074#1077#1076 +
+              #1077#1085#1085#1110' '#1082#1086#1088#1080#1075#1091#1074#1072#1085#1100'.'#9
+            
+              '*** '#1042#1080#1082#1083#1102#1095#1077#1085#1085#1103' '#1110#1085#1092#1086#1088#1084#1072#1094#1110#1111' '#1097#1086#1076#1086' '#1086#1087#1086#1076#1072#1090#1082#1091#1074#1072#1085#1085#1103' '#1074#1080#1075#1088#1072#1096#1110#1074' ('#1087#1088#1080#1079#1110#1074') '#1091 +
+              ' '#1083#1086#1090#1077#1088#1077#1102' '#1087#1088#1080' '#1087#1088#1086#1074#1077#1076#1077#1085#1085#1110' '#1082#1086#1088#1080#1075#1091#1074#1072#1085#1100'.'#9
+            
+              '**** '#1042#1080#1082#1083#1102#1095#1077#1085#1085#1103' '#1110#1085#1092#1086#1088#1084#1072#1094#1110#1111' '#1097#1086#1076#1086' '#1074#1110#1081#1089#1100#1082#1086#1074#1086#1075#1086' '#1079#1073#1086#1088#1091' '#1087#1088#1080' '#1087#1088#1086#1074#1077#1076#1077#1085#1085#1110 +
+              ' '#1082#1086#1088#1080#1075#1091#1074#1072#1085#1100'.'#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9 +
+              #9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9#9)
+          ParentFont = False
+        end
+        object Memo161: TfrxMemoView
+          Top = 3.779530000000000000
+          Width = 105.826840000000000000
+          Height = 26.456710000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -11
           Font.Name = 'Courier New'
           Font.Style = []
           Memo.Strings = (
-            #1050#1110#1083#1100#1082#1110#1089#1090#1100' '#1088#1103#1076#1082#1110#1074)
+            #1050#1110#1083#1100#1082#1110#1089#1090#1100' '#1088#1103#1076#1082#1110#1074
+            '('#1088#1086#1079#1076#1110#1083' I)')
           ParentFont = False
         end
         object SysMemo3: TfrxSysMemoView
           Left = 109.606370000000000000
-          Top = 26.456710000000000000
+          Top = 3.779530000000000000
           Width = 49.133890000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -1628,23 +2259,24 @@ object PrintDM: TPrintDM
             '[LINE#]')
           ParentFont = False
         end
-        object Memo53: TfrxMemoView
+        object Memo162: TfrxMemoView
           Left = 173.858380000000000000
-          Top = 26.456710000000000000
+          Top = 3.779530000000000000
           Width = 151.181200000000000000
-          Height = 15.118120000000000000
+          Height = 30.236240000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -11
           Font.Name = 'Courier New'
           Font.Style = []
           Memo.Strings = (
-            #1050#1110#1083#1100#1082#1110#1089#1090#1100' '#1092#1110#1079#1080#1095#1085#1080#1093' '#1086#1089#1110#1073)
+            #1050#1110#1083#1100#1082#1110#1089#1090#1100' '#1092#1110#1079#1080#1095#1085#1080#1093' '#1086#1089#1110#1073
+            '('#1088#1086#1079#1076#1110#1083' I)')
           ParentFont = False
         end
-        object Memo54: TfrxMemoView
+        object Memo163: TfrxMemoView
           Left = 328.819110000000000000
-          Top = 26.456710000000000000
+          Top = 3.779530000000000000
           Width = 68.031540000000000000
           Height = 15.118120000000000000
           DataField = 'CNT_ALL'
@@ -1659,9 +2291,9 @@ object PrintDM: TPrintDM
             '[frxDSetGlobal."CNT_ALL"]')
           ParentFont = False
         end
-        object Memo55: TfrxMemoView
+        object Memo164: TfrxMemoView
           Left = 404.409710000000000000
-          Top = 26.456710000000000000
+          Top = 3.779530000000000000
           Width = 120.944960000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -1670,12 +2302,12 @@ object PrintDM: TPrintDM
           Font.Name = 'Courier New'
           Font.Style = []
           Memo.Strings = (
-            #1050#1110#1083#1100#1082#1110#1089#1090#1100' '#1072#1088#1082#1091#1096#1110#1074)
+            #1050#1110#1083#1100#1082#1110#1089#1090#1100' '#1089#1090#1086#1088#1110#1085#1086#1082)
           ParentFont = False
         end
         object SysMemo4: TfrxSysMemoView
           Left = 525.354670000000000000
-          Top = 26.456710000000000000
+          Top = 3.779530000000000000
           Width = 49.133890000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -1687,8 +2319,8 @@ object PrintDM: TPrintDM
             '[TOTALPAGES#]')
           ParentFont = False
         end
-        object Memo56: TfrxMemoView
-          Top = 64.252010000000000000
+        object Memo165: TfrxMemoView
+          Top = 41.574830000000000000
           Width = 120.944960000000000000
           Height = 26.456710000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -1701,9 +2333,9 @@ object PrintDM: TPrintDM
             #1086#1089#1086#1073#1080)
           ParentFont = False
         end
-        object Memo57: TfrxMemoView
+        object Memo166: TfrxMemoView
           Left = 120.944960000000000000
-          Top = 75.590600000000000000
+          Top = 52.913420000000000000
           Width = 83.149660000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -1715,9 +2347,9 @@ object PrintDM: TPrintDM
             #1055#1086#1076#1072#1090#1082'. '#8470)
           ParentFont = False
         end
-        object Memo58: TfrxMemoView
+        object Memo167: TfrxMemoView
           Left = 120.944960000000000000
-          Top = 64.252010000000000000
+          Top = 41.574830000000000000
           Width = 83.149660000000000000
           Height = 15.118120000000000000
           DataField = 'TIN_DIRECTOR'
@@ -1732,9 +2364,9 @@ object PrintDM: TPrintDM
             '[frxDSetGlobal."TIN_DIRECTOR"]')
           ParentFont = False
         end
-        object Memo59: TfrxMemoView
+        object Memo168: TfrxMemoView
           Left = 207.874150000000000000
-          Top = 75.590600000000000000
+          Top = 52.913420000000000000
           Width = 56.692950000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -1747,9 +2379,9 @@ object PrintDM: TPrintDM
             '('#1087#1110#1076#1087#1080#1089')')
           ParentFont = False
         end
-        object Memo60: TfrxMemoView
+        object Memo169: TfrxMemoView
           Left = 264.567100000000000000
-          Top = 75.590600000000000000
+          Top = 52.913420000000000000
           Width = 177.637910000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -1762,9 +2394,9 @@ object PrintDM: TPrintDM
             '('#1110#1085#1110#1094#1110#1072#1083#1080','#1087#1088#1110#1079#1074#1080#1097#1077')')
           ParentFont = False
         end
-        object Memo61: TfrxMemoView
+        object Memo170: TfrxMemoView
           Left = 445.984540000000000000
-          Top = 75.590600000000000000
+          Top = 52.913420000000000000
           Width = 71.811070000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -1777,25 +2409,25 @@ object PrintDM: TPrintDM
             '('#1090#1077#1083'.)')
           ParentFont = False
         end
-        object Memo62: TfrxMemoView
+        object Memo171: TfrxMemoView
           Left = 524.688003330000000000
-          Top = 52.913420000000000000
+          Top = 30.236240000000000000
           Width = 50.246753320000000000
           Height = 26.456710000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -11
           Font.Name = 'Courier New'
-          Font.Style = []
+          Font.Style = [fsBold]
           Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
           Memo.Strings = (
             #1044#1072#1090#1072' '#1087#1086#1076#1072#1085#1085#1103)
           ParentFont = False
           VAlign = vaCenter
         end
-        object Memo63: TfrxMemoView
+        object Memo172: TfrxMemoView
           Left = 264.567100000000000000
-          Top = 60.472480000000000000
+          Top = 37.795300000000000000
           Width = 177.637910000000000000
           Height = 15.118120000000000000
           DataField = 'DIRECTOR'
@@ -1811,9 +2443,9 @@ object PrintDM: TPrintDM
             '[frxDSetGlobal."DIRECTOR"]')
           ParentFont = False
         end
-        object Memo64: TfrxMemoView
+        object Memo173: TfrxMemoView
           Left = 445.984540000000000000
-          Top = 60.472480000000000000
+          Top = 37.795300000000000000
           Width = 71.811070000000000000
           Height = 15.118120000000000000
           DataField = 'TEL_DIRECTOR'
@@ -1829,8 +2461,8 @@ object PrintDM: TPrintDM
             '[frxDSetGlobal."TEL_DIRECTOR"]')
           ParentFont = False
         end
-        object Memo65: TfrxMemoView
-          Top = 113.385900000000000000
+        object Memo174: TfrxMemoView
+          Top = 90.708720000000000000
           Width = 113.385900000000000000
           Height = 26.456710000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -1842,9 +2474,9 @@ object PrintDM: TPrintDM
             #1043#1086#1083#1086#1074#1085#1080#1081' '#1073#1091#1093#1075#1072#1083#1090#1077#1088)
           ParentFont = False
         end
-        object Memo66: TfrxMemoView
+        object Memo175: TfrxMemoView
           Left = 120.944960000000000000
-          Top = 124.724490000000000000
+          Top = 102.047310000000000000
           Width = 83.149660000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -1856,9 +2488,9 @@ object PrintDM: TPrintDM
             #1055#1086#1076#1072#1090#1082'. '#8470)
           ParentFont = False
         end
-        object Memo67: TfrxMemoView
+        object Memo176: TfrxMemoView
           Left = 120.944960000000000000
-          Top = 109.606370000000000000
+          Top = 86.929190000000000000
           Width = 83.149660000000000000
           Height = 15.118120000000000000
           DataSet = frxDSetGlobal
@@ -1872,9 +2504,9 @@ object PrintDM: TPrintDM
             '[frxDSetGlobal."TIN_GLAVBUHG"]')
           ParentFont = False
         end
-        object Memo68: TfrxMemoView
+        object Memo177: TfrxMemoView
           Left = 207.874150000000000000
-          Top = 124.724490000000000000
+          Top = 102.047310000000000000
           Width = 56.692950000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -1887,9 +2519,9 @@ object PrintDM: TPrintDM
             '('#1087#1110#1076#1087#1080#1089')')
           ParentFont = False
         end
-        object Memo69: TfrxMemoView
+        object Memo178: TfrxMemoView
           Left = 264.567100000000000000
-          Top = 124.724490000000000000
+          Top = 102.047310000000000000
           Width = 177.637910000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -1902,9 +2534,9 @@ object PrintDM: TPrintDM
             '('#1110#1085#1110#1094#1110#1072#1083#1080','#1087#1088#1110#1079#1074#1080#1097#1077')')
           ParentFont = False
         end
-        object Memo70: TfrxMemoView
+        object Memo179: TfrxMemoView
           Left = 445.984540000000000000
-          Top = 124.724490000000000000
+          Top = 102.047310000000000000
           Width = 68.031540000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -1917,9 +2549,9 @@ object PrintDM: TPrintDM
             '('#1090#1077#1083'.)')
           ParentFont = False
         end
-        object Memo71: TfrxMemoView
+        object Memo180: TfrxMemoView
           Left = 521.575140000000000000
-          Top = 117.165430000000000000
+          Top = 94.488250000000000000
           Width = 151.181200000000000000
           Height = 34.015770000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -1932,9 +2564,9 @@ object PrintDM: TPrintDM
             #1108' '#1087#1088#1072#1074#1080#1083#1100#1085#1086#1102)
           ParentFont = False
         end
-        object Memo72: TfrxMemoView
+        object Memo181: TfrxMemoView
           Left = 264.567100000000000000
-          Top = 109.606370000000000000
+          Top = 86.929190000000000000
           Width = 177.637910000000000000
           Height = 15.118120000000000000
           DataSet = frxDSetGlobal
@@ -1949,9 +2581,9 @@ object PrintDM: TPrintDM
             '[frxDSetGlobal."GLAVBUHG"]')
           ParentFont = False
         end
-        object Memo73: TfrxMemoView
+        object Memo182: TfrxMemoView
           Left = 445.984540000000000000
-          Top = 109.606370000000000000
+          Top = 86.929190000000000000
           Width = 68.031540000000000000
           Height = 15.118120000000000000
           DataSet = frxDSetGlobal
@@ -1966,44 +2598,44 @@ object PrintDM: TPrintDM
             '[frxDSetGlobal."TEL_GLAVBUHG"]')
           ParentFont = False
         end
-        object Line4: TfrxLineView
+        object Line5: TfrxLineView
           Left = 207.874150000000000000
-          Top = 75.590600000000000000
+          Top = 52.913420000000000000
           Width = 52.913420000000000000
           Frame.Typ = [ftTop]
         end
-        object Line5: TfrxLineView
+        object Line6: TfrxLineView
           Left = 264.567100000000000000
-          Top = 75.590600000000000000
+          Top = 52.913420000000000000
           Width = 177.637910000000000000
           Frame.Typ = [ftTop]
         end
-        object Line6: TfrxLineView
+        object Line7: TfrxLineView
           Left = 445.984540000000000000
-          Top = 75.590600000000000000
+          Top = 52.913420000000000000
           Width = 71.811070000000000000
           Frame.Typ = [ftTop]
         end
-        object Line7: TfrxLineView
+        object Line8: TfrxLineView
           Left = 207.874150000000000000
-          Top = 124.724490000000000000
+          Top = 102.047310000000000000
           Width = 56.692950000000000000
           Frame.Typ = [ftTop]
         end
-        object Line8: TfrxLineView
+        object Line9: TfrxLineView
           Left = 268.346630000000000000
-          Top = 124.724490000000000000
+          Top = 102.047310000000000000
           Width = 173.858380000000000000
           Frame.Typ = [ftTop]
         end
-        object Line9: TfrxLineView
+        object Line10: TfrxLineView
           Left = 445.984540000000000000
-          Top = 124.724490000000000000
+          Top = 102.047310000000000000
           Width = 68.031540000000000000
           Frame.Typ = [ftTop]
         end
-        object Memo90: TfrxMemoView
-          Top = 147.401670000000000000
+        object Memo183: TfrxMemoView
+          Top = 124.724490000000000000
           Width = 109.606370000000000000
           Height = 30.236240000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -2016,9 +2648,9 @@ object PrintDM: TPrintDM
             #1092#1110#1079#1080#1095#1085#1072' '#1086#1089#1086#1073#1072' ')
           ParentFont = False
         end
-        object Memo91: TfrxMemoView
+        object Memo184: TfrxMemoView
           Left = 207.874150000000000000
-          Top = 162.519790000000000000
+          Top = 139.842610000000000000
           Width = 56.692950000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -2031,15 +2663,15 @@ object PrintDM: TPrintDM
             '('#1087#1110#1076#1087#1080#1089')')
           ParentFont = False
         end
-        object Line10: TfrxLineView
+        object Line11: TfrxLineView
           Left = 207.874150000000000000
-          Top = 162.519790000000000000
+          Top = 139.842610000000000000
           Width = 56.692950000000000000
           Frame.Typ = [ftTop]
         end
-        object Memo92: TfrxMemoView
+        object Memo185: TfrxMemoView
           Left = 445.984540000000000000
-          Top = 162.519790000000000000
+          Top = 139.842610000000000000
           Width = 68.031540000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -2052,21 +2684,21 @@ object PrintDM: TPrintDM
             '('#1090#1077#1083'.)')
           ParentFont = False
         end
-        object Line11: TfrxLineView
+        object Line12: TfrxLineView
           Left = 445.984540000000000000
-          Top = 162.519790000000000000
+          Top = 139.842610000000000000
           Width = 68.031540000000000000
           Frame.Typ = [ftTop]
         end
-        object Line12: TfrxLineView
+        object Line22: TfrxLineView
           Left = 3.779530000000000000
-          Top = 196.535560000000000000
+          Top = 173.858380000000000000
           Width = 634.961040000000000000
           Frame.Style = fsDot
           Frame.Typ = [ftTop]
         end
-        object Memo93: TfrxMemoView
-          Top = 196.535560000000000000
+        object Memo186: TfrxMemoView
+          Top = 173.858380000000000000
           Width = 642.520100000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -2079,9 +2711,9 @@ object PrintDM: TPrintDM
             #1047#1072#1087#1086#1074#1085#1102#1108#1090#1100#1089#1103' '#1089#1083#1091#1078#1073#1086#1074#1080#1084#1080' '#1086#1089#1086#1073#1072#1084#1080' '#1082#1086#1085#1090#1088#1086#1083#1102#1102#1095#1086#1075#1086' '#1086#1088#1075#1072#1085#1091)
           ParentFont = False
         end
-        object Memo95: TfrxMemoView
-          Left = 64.252010000000000000
-          Top = 230.551330000000000000
+        object Memo187: TfrxMemoView
+          Left = 75.590600000000000000
+          Top = 207.874150000000000000
           Width = 540.472790000000000000
           Height = 45.354360000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -2092,9 +2724,9 @@ object PrintDM: TPrintDM
           Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
           ParentFont = False
         end
-        object Memo96: TfrxMemoView
+        object Memo188: TfrxMemoView
           Left = 574.934756660000000000
-          Top = 52.913420000000000000
+          Top = 30.236240000000000000
           Width = 17.118120000000000000
           Height = 26.456710000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -2109,10 +2741,10 @@ object PrintDM: TPrintDM
           ParentFont = False
           VAlign = vaCenter
         end
-        object Memo98: TfrxMemoView
+        object Memo189: TfrxMemoView
           Left = 608.504330000000000000
-          Top = 52.913420000000000000
-          Width = 41.574830000000000000
+          Top = 30.236240000000000000
+          Width = 34.015748030000000000
           Height = 26.456710000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -2126,15 +2758,15 @@ object PrintDM: TPrintDM
           ParentFont = False
           VAlign = vaCenter
         end
-        object Line22: TfrxLineView
+        object Line23: TfrxLineView
           Left = 268.346630000000000000
-          Top = 162.519790000000000000
+          Top = 139.842610000000000000
           Width = 173.858380000000000000
           Frame.Typ = [ftTop]
         end
-        object Memo103: TfrxMemoView
+        object Memo190: TfrxMemoView
           Left = 268.346630000000000000
-          Top = 162.519790000000000000
+          Top = 139.842610000000000000
           Width = 173.858380000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -2147,9 +2779,9 @@ object PrintDM: TPrintDM
             '('#1110#1085#1110#1094#1110#1072#1083#1080','#1087#1088#1110#1079#1074#1080#1097#1077')')
           ParentFont = False
         end
-        object Memo104: TfrxMemoView
+        object Memo191: TfrxMemoView
           Left = 120.944960000000000000
-          Top = 162.519790000000000000
+          Top = 139.842610000000000000
           Width = 83.149660000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -2161,9 +2793,9 @@ object PrintDM: TPrintDM
             #1055#1086#1076#1072#1090#1082'. '#8470)
           ParentFont = False
         end
-        object Memo105: TfrxMemoView
-          Left = 64.252010000000000000
-          Top = 257.008040000000000000
+        object Memo192: TfrxMemoView
+          Left = 75.590600000000000000
+          Top = 234.330860000000000000
           Width = 540.472790000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -2176,15 +2808,15 @@ object PrintDM: TPrintDM
             '  '#1057#1083#1091#1078#1073#1086#1074#1072' '#1086#1089#1086#1073#1072' '#1082#1086#1085#1090#1088#1086#1083#1102#1102#1095#1086#1075#1086' '#1086#1088#1075#1072#1085#1091'('#1087#1110#1076#1087#1080#1089','#1110#1085#1110#1094#1110#1072#1083#1080','#1087#1088#1110#1079#1074#1080#1097#1077')')
           ParentFont = False
         end
-        object Line23: TfrxLineView
-          Left = 75.590600000000000000
-          Top = 257.008040000000000000
+        object Line24: TfrxLineView
+          Left = 86.929190000000000000
+          Top = 234.330860000000000000
           Width = 517.795610000000000000
           Frame.Typ = [ftTop]
         end
-        object Memo94: TfrxMemoView
-          Left = 64.252010000000000000
-          Top = 230.551330000000000000
+        object Memo193: TfrxMemoView
+          Left = 75.590600000000000000
+          Top = 207.874150000000000000
           Width = 540.472790000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -2199,10 +2831,10 @@ object PrintDM: TPrintDM
               #1086#1089#1090#1110' "__" ____________ 20__  '#1088'.')
           ParentFont = False
         end
-        object Memo106: TfrxMemoView
-          Top = 226.771800000000000000
-          Width = 30.236240000000000000
-          Height = 15.118120000000000000
+        object Memo194: TfrxMemoView
+          Top = 207.874150000000000000
+          Width = 68.031540000000000000
+          Height = 30.236240000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -11
@@ -2210,55 +2842,12 @@ object PrintDM: TPrintDM
           Font.Style = [fsBold]
           HAlign = haCenter
           Memo.Strings = (
-            #1052'.'#1055'.')
+            #1052'. '#1055'. ('#1079#1072' '#1085#1072#1103#1074#1085#1086#1089#1090#1110')')
           ParentFont = False
         end
-        object Line24: TfrxLineView
-          Left = 3.779530000000000000
-          Top = 291.023810000000000000
-          Width = 75.590600000000000000
-          Frame.Typ = [ftTop]
-        end
-        object Memo107: TfrxMemoView
-          Left = 3.779530000000000000
-          Top = 294.803340000000000000
-          Width = 631.181510000000000000
-          Height = 26.456710000000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -8
-          Font.Name = 'Courier New'
-          Font.Style = []
-          Memo.Strings = (
-            
-              '* '#1044#1083#1103' '#1092#1110#1079#1080#1095#1085#1080#1093' '#1086#1089#1110#1073', '#1103#1082#1110' '#1095#1077#1088#1077#1079' '#1089#1074#1086#1111' '#1088#1077#1083#1110#1075#1110#1111#1085#1110' '#1087#1077#1088#1077#1082#1086#1085#1072#1085#1085#1103' '#1074#1110#1076#1084#1086#1074 +
-              #1083#1103#1102#1090#1100#1089#1103' '#1074#1110#1076' '#1087#1088#1080#1081#1085#1103#1090#1090#1103' '#1088#1077#1108#1089#1090#1088#1072#1094#1110#1081#1085#1086#1075#1086' '#1085#1086#1084#1077#1088#1072' '#1086#1073#1083#1110#1082#1086#1074#1086#1111' '#1082#1072#1088#1090#1082#1080' '
-            
-              '  '#1087#1083#1072#1090#1085#1080#1082#1072' '#1087#1086#1076#1072#1090#1082#1110#1074' '#1090#1072' '#1087#1086#1074#1110#1076#1086#1084#1080#1083#1080' '#1087#1088#1086' '#1094#1077' '#1074#1110#1076#1087#1086#1074#1110#1076#1085#1080#1081' '#1086#1088#1075#1072#1085' '#1076#1077#1088#1078#1072 +
-              #1074#1085#1086#1111' '#1087#1086#1076#1072#1090#1082#1086#1074#1086#1111' '#1089#1083#1091#1078#1073#1080' '#1110' '#1084#1072#1102#1090#1100' '#1074#1110#1076#1084#1110#1090#1082#1091' '#1091' '#1087#1072#1089#1087#1086#1088#1090#1110
-            '       ')
-          ParentFont = False
-        end
-        object Memo121: TfrxMemoView
-          Left = 600.945270000000000000
-          Width = 41.574830000000000000
-          Height = 15.118120000000000000
-          DataSet = frxDSet
-          DataSetName = 'frxDSet'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -11
-          Font.Name = 'Courier New'
-          Font.Style = []
-          Frame.Typ = [ftTop]
-          HAlign = haCenter
-          Memo.Strings = (
-            'x')
-          ParentFont = False
-        end
-        object Memo97: TfrxMemoView
+        object Memo195: TfrxMemoView
           Left = 592.000000000000000000
-          Top = 52.592763330000000000
+          Top = 30.236220470000000000
           Width = 16.451453340000000000
           Height = 26.456710000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -2274,12 +2863,12 @@ object PrintDM: TPrintDM
           VAlign = vaCenter
         end
       end
-      object PageHeader1: TfrxPageHeader
+      object PageHeader2: TfrxPageHeader
         Height = 22.677180000000000000
-        Top = 415.748300000000000000
+        Top = 18.897650000000000000
         Width = 642.520100000000000000
         PrintOnFirstPage = False
-        object Memo74: TfrxMemoView
+        object Memo196: TfrxMemoView
           Left = 340.157700000000000000
           Width = 302.362400000000000000
           Height = 18.897650000000000000
@@ -2368,5 +2957,19 @@ object PrintDM: TPrintDM
     Background = False
     Left = 448
     Top = 136
+  end
+  object DSetWinning: TpFIBDataSet
+    Database = DB
+    Transaction = DefaultTransaction
+    Left = 376
+    Top = 56
+    poSQLINT64ToBCD = True
+  end
+  object frxDBSetWinning: TfrxDBDataset
+    UserName = 'frxDBSetWinning'
+    CloseDataSource = False
+    DataSet = DSetWinning
+    Left = 376
+    Top = 104
   end
 end
