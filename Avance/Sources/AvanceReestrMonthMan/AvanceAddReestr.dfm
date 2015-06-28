@@ -1,8 +1,8 @@
 object frmAvanceAddReestr: TfrmAvanceAddReestr
-  Left = 481
-  Top = 302
+  Left = 553
+  Top = 305
   Width = 484
-  Height = 231
+  Height = 255
   Caption = 'frmAvanceAddReestr'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -14,8 +14,8 @@ object frmAvanceAddReestr: TfrmAvanceAddReestr
   PixelsPerInch = 96
   TextHeight = 13
   object ButtonAdd: TcxButton
-    Left = 240
-    Top = 152
+    Left = 232
+    Top = 184
     Width = 91
     Height = 25
     Caption = 'ButtonAdd'
@@ -51,8 +51,8 @@ object frmAvanceAddReestr: TfrmAvanceAddReestr
     UseSystemPaint = False
   end
   object ButtonClose: TcxButton
-    Left = 344
-    Top = 152
+    Left = 336
+    Top = 184
     Width = 89
     Height = 25
     Caption = #1047#1072#1082#1088#1080#1090#1080
@@ -99,7 +99,7 @@ object frmAvanceAddReestr: TfrmAvanceAddReestr
     Left = 8
     Top = 8
     Width = 441
-    Height = 129
+    Height = 169
     TabOrder = 2
     object cxLabel1: TcxLabel
       Left = 8
@@ -145,26 +145,48 @@ object frmAvanceAddReestr: TfrmAvanceAddReestr
       TabOrder = 4
       OnKeyPress = cxTextEdit1KeyPress
     end
+    object ButtonEditFioPrint: TcxButtonEdit
+      Left = 16
+      Top = 136
+      Width = 417
+      Height = 21
+      Properties.Buttons = <
+        item
+          Default = True
+          Kind = bkEllipsis
+        end>
+      Properties.OnButtonClick = ButtonEditFioCheckPropertiesButtonClick
+      TabOrder = 5
+      Text = 'ButtonEditFioPrint'
+    end
+    object cxLabel2: TcxLabel
+      Left = 8
+      Top = 112
+      Width = 153
+      Height = 17
+      TabOrder = 6
+      Caption = #1074#1080#1082#1086#1085#1072#1074#1077#1094#1100' '#1079#1074#1110#1090#1091' ('#1076#1083#1103' '#1076#1088#1091#1082#1091')'
+    end
   end
   object Database: TpFIBDatabase
     SQLDialect = 1
     Timeout = 0
     WaitForRestoreConnect = 0
-    Left = 8
-    Top = 120
+    Left = 152
+    Top = 72
   end
   object Transaction: TpFIBTransaction
     TimeoutAction = TARollback
-    Left = 72
-    Top = 120
+    Left = 216
+    Top = 72
   end
   object StoredProc: TpFIBStoredProc
-    Left = 104
-    Top = 120
+    Left = 248
+    Top = 72
   end
   object DataSetNum: TpFIBDataSet
-    Left = 40
-    Top = 120
+    Left = 184
+    Top = 72
     poSQLINT64ToBCD = True
   end
   object ImageList: TImageList
@@ -573,5 +595,18 @@ object frmAvanceAddReestr: TfrmAvanceAddReestr
       FF830001F10FE001FFC30001E387E001FFE30007C7C7E003FFF70007CFE7C007
       FFFF007FFFFF800FFFFF00FFFFFFFF9F00000000000000000000000000000000
       000000000000}
+  end
+  object DS: TpFIBDataSet
+    Database = frmAvanceReestrMain.Database
+    Transaction = Transaction
+    Left = 336
+    Top = 72
+    poSQLINT64ToBCD = True
+  end
+  object DataSetSigns: TpFIBDataSet
+    Transaction = Transaction
+    Left = 368
+    Top = 72
+    poSQLINT64ToBCD = True
   end
 end

@@ -8,7 +8,7 @@ uses
   pFIBQuery, pFIBStoredProc, FIBDatabase, pFIBDatabase,
   cxLookAndFeelPainters, ImgList, cxMemo, cxSpinEdit, cxMaskEdit,
   cxDropDownEdit, cxTextEdit, StdCtrls, cxButtons, cxControls, cxContainer,
-  cxEdit, cxLabel, Un_R_file_Alex;
+  cxEdit, cxLabel, Un_R_file_Alex, cxButtonEdit, cxCheckBox,Un_lo_file_Alex;
 
 type
   TfmAddMode = (Add , Change);
@@ -26,15 +26,29 @@ type
     cxMemo1: TcxMemo;
     ImageList: TImageList;
     cxTextEdit1: TcxTextEdit;
+    ButtonEditFioPrint: TcxButtonEdit;
+    DS: TpFIBDataSet;
+    DataSetSigns: TpFIBDataSet;
+    cxLabel2: TcxLabel;
     procedure ButtonCloseClick(Sender: TObject);
     procedure ButtonAddClick(Sender: TObject);
     procedure s(Sender: TObject; var Key: Char);
     procedure cxTextEdit1KeyPress(Sender: TObject; var Key: Char);
+    procedure ButtonEditFioCheckPropertiesButtonClick(Sender: TObject;
+      AButtonIndex: Integer);
   private
     flag          : TfmAddMode;
     myform        : TfrmAvanceReestrMain;
     id_reestr     : int64;
     num_reestr    : integer;
+    ID_MAN_FOR_PRINT  : Int64;
+    name_post_print: string;
+    fio_small_print: string;
+    fio_full_print: string;
+
+    procedure Get_Fio_post(id_man :int64;
+                           var name_post_out, fio_small_buhg_out,fio_full_buhg_out : string);
+
   public
     constructor Create(AOwner: TComponent; db : TpFIBDatabase; mform : TfrmAvanceReestrMain; m : TfmAddMode);
   end;
@@ -60,6 +74,10 @@ begin
 
     DataSetNum.Database             := Database;
     DataSetNum.Transaction          := Transaction;
+    DS.Database                     := Database;
+    DS.Transaction                  := Transaction;
+    DataSetSigns.Database           := Database;
+    DataSetSigns.Transaction        := Transaction;
 
     StoredProc.DataBase             := Database;
     StoredProc.Transaction          := Transaction;
@@ -81,7 +99,16 @@ begin
     begin
          Caption             := Un_R_file_Alex.J4_FORM_REESTR_ADD;
          ButtonAdd.Caption   := Un_R_file_Alex.MY_ACTION_ADD_CONST;
+         DS.Close;
+         DS.Sqls.SelectSQL.Text := 'select * from J4_INI';
+         DS.Open;
+
+         if DS['ID_MEN_CHECK']<>null then
+          ID_MAN_FOR_PRINT   := strtoint64(DS.fbn('ID_MEN_CHECK').AsString)
+         else
+           ID_MAN_FOR_PRINT   := 0;
     end;
+
     if m = change then
     begin
          Caption            := Un_R_file_Alex.J4_FORM_REESTR_EDIT;
@@ -89,7 +116,11 @@ begin
          id_reestr          := myform.DataSetMainReestr.fbn('id_reestr_month').AsInteger;
          TextEditNum.Text   := myform.DataSetMainReestr.fbn('num_reestr').AsString;
          cxMemo1.Text       := myform.DataSetMainReestr.fbn('comment_reestr').AsString;
+         ID_MAN_FOR_PRINT   := strtoint64(myform.DataSetMainReestr.fbn('ID_MAN_FOR_PRINT').AsString)
     end;
+
+    Get_Fio_post(ID_MAN_FOR_PRINT,name_post_print, fio_small_print,fio_full_print);
+    ButtonEditFioPrint.Text := fio_full_print;
 end;
 
 procedure TfrmAvanceAddReestr.ButtonCloseClick(Sender: TObject);
@@ -145,6 +176,7 @@ begin
               StoredProc.ParamByName('date_reestr').AsDate      := date_beg_period;
               StoredProc.ParamByName('id_user_add').AsInt64     := myform.id_user;
               StoredProc.ParamByName('id_jo').AsInt64           := myform.id_system;
+              StoredProc.ParamByName('ID_MAN_FOR_PRINT').AsInt64 := ID_MAN_FOR_PRINT;
 
               StoredProc.ExecProc;
               id_reestr                              := StoredProc.ParamByName('id_reestr_month').value;
@@ -180,7 +212,7 @@ begin
               StoredProc.ParamByName('num_reestr').AsInteger    := strtoint(TextEditNum.Text);
               StoredProc.ParamByName('comment_reestr').AsString := cxMemo1.Text;
               StoredProc.ParamByName('date_reestr').AsDate      := date_beg_period;
-
+              StoredProc.ParamByName('ID_MAN_FOR_PRINT').AsInt64 := ID_MAN_FOR_PRINT;
               StoredProc.ExecProc;
 
               exist_num                              := StoredProc.ParamByName('exist_num').value;
@@ -220,6 +252,42 @@ procedure TfrmAvanceAddReestr.cxTextEdit1KeyPress(Sender: TObject;
   var Key: Char);
 begin
     key := chr(0);
+end;
+
+procedure TfrmAvanceAddReestr.ButtonEditFioCheckPropertiesButtonClick(
+  Sender: TObject; AButtonIndex: Integer);
+var
+    res : Variant;
+    name_post, fio_small,fio_full : string;
+begin
+    res := Un_lo_file_Alex.MY_GetManEx(self, Database.Handle, false, false, ID_MAN_FOR_PRINT);
+    if VarArrayDimCount(res) > 0 then
+    begin
+        if (res[0]<>null) and (res[1]<>null) then
+        begin
+            if ID_MAN_FOR_PRINT <> res[0] then
+            begin
+                ID_MAN_FOR_PRINT            := res[0];
+                ButtonEditFioPrint.Text := res[1];
+                Get_Fio_post(ID_MAN_FOR_PRINT,name_post, fio_small,fio_full);
+                name_post_print    := name_post;
+                fio_small_print    := fio_small;
+                fio_full_print     := fio_full;
+            end;
+        end;
+    end;
+end;
+
+procedure TfrmAvanceAddReestr.Get_Fio_post(id_man :int64; var name_post_out, fio_small_buhg_out,fio_full_buhg_out : string);
+begin
+    DataSetSigns.Close;
+    DataSetSigns.SQLs.SelectSQL.Text := 'SELECT * FROM J4_GET_INFO_SIGN('+IntToStr(id_man)+','''+datetostr(date)+''')';
+    DataSetSigns.Open;
+
+    name_post_out          := DataSetSigns.FBN('name_post_buhg').AsString;
+    fio_small_buhg_out     := DataSetSigns.FBN('fio_small_buhg').AsString;
+    fio_full_buhg_out      := DataSetSigns.FBN('fio_full_buhg').AsString;
+
 end;
 
 end.

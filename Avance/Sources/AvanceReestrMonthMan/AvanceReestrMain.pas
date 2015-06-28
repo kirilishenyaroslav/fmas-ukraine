@@ -111,19 +111,11 @@ type
     DataSetManNUM_REESTR: TFIBIntegerField;
     DataSetManDATE_REESTR: TFIBDateField;
     DataSetManFIO_ADD: TFIBStringField;
-    DataSetMainReestrID_REESTR_MONTH: TFIBBCDField;
-    DataSetMainReestrNUM_REESTR: TFIBIntegerField;
-    DataSetMainReestrCOMMENT_REESTR: TFIBStringField;
-    DataSetMainReestrDATE_REESTR: TFIBDateField;
-    DataSetMainReestrID_USER_ADD: TFIBIntegerField;
-    DataSetMainReestrFIO_USER: TFIBStringField;
-    DataSetMainReestrCOUNT_RECORDS_MAN: TFIBIntegerField;
     cxDBLabel3: TcxDBLabel;
     TransactionManAll: TpFIBTransaction;
     frxDBDataset1: TfrxDBDataset;
     DataSetManNAME_PRED: TFIBStringField;
     DataSetManCOMMENT_REESTR: TFIBStringField;
-    DataSetMainReestrALL_NUM: TFIBStringField;
     DataSetManALL_NUM_REESTR: TFIBStringField;
     PopupMenu2: TPopupMenu;
     DelHand: TMenuItem;
@@ -132,6 +124,7 @@ type
     ReportReestr: TfrxReport;
     cxGridMainDBTableView1DBColumn3: TcxGridDBColumn;
     DataSetManKOD_SCH: TFIBIntegerField;
+    cxLabel2: TcxLabel;
     procedure cxComboBoxSystemClick(Sender: TObject);
     procedure ActionAddReestrExecute(Sender: TObject);
     procedure ActionRefreshExecute(Sender: TObject);
@@ -620,8 +613,10 @@ begin
 
      ReportReestr.Variables['month_oo']     := QuotedStr(cxComboBoxMonth.Text);
      ReportReestr.Variables['year_oo']      := IntToStr(cxSpinEdit1.Value);
-
+     ReportReestr.Variables['dolgnost']     := QuotedStr(DataSetMainReestr['NAME_POST_PRINT']);
+     ReportReestr.Variables['fio_bugh']     := QuotedStr(DataSetMainReestr['FIO_FULL_PRINT']);
      ReportReestr.PrepareReport(true);
+     //ReportReestr.designreport;
      ReportReestr.ShowReport(true);
 
     // Transaction.Commit;

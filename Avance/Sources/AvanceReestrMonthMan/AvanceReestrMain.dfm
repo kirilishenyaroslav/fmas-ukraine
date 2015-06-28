@@ -1,6 +1,6 @@
 object frmAvanceReestrMain: TfrmAvanceReestrMain
-  Left = 429
-  Top = 213
+  Left = 368
+  Top = 57
   Width = 807
   Height = 622
   Caption = 'frmAvanceReestrMain'
@@ -91,9 +91,9 @@ object frmAvanceReestrMain: TfrmAvanceReestrMain
       TabOrder = 1
       object cxDBLabel1: TcxDBLabel
         Left = 0
-        Top = 53
+        Top = 80
         Width = 305
-        Height = 52
+        Height = 25
         DataBinding.DataField = 'FIO_USER'
         DataBinding.DataSource = DataSourceReestrMain
         AutoSize = False
@@ -109,7 +109,7 @@ object frmAvanceReestrMain: TfrmAvanceReestrMain
         Left = -2
         Top = 5
         Width = 305
-        Height = 52
+        Height = 36
         DataBinding.DataField = 'COMMENT_REESTR'
         DataBinding.DataSource = DataSourceReestrMain
         AutoSize = False
@@ -120,6 +120,15 @@ object frmAvanceReestrMain: TfrmAvanceReestrMain
         Style.Font.Name = 'MS Sans Serif'
         Style.Font.Style = [fsBold]
         TabOrder = 1
+      end
+      object cxLabel2: TcxLabel
+        Left = 0
+        Top = 64
+        Width = 71
+        Height = 17
+        AutoSize = False
+        TabOrder = 2
+        Caption = #1079#1074#1110#1090' '#1089#1090#1074#1086#1088#1080#1074':'
       end
     end
   end
@@ -1388,38 +1397,6 @@ object frmAvanceReestrMain: TfrmAvanceReestrMain
     Left = 88
     Top = 361
     poSQLINT64ToBCD = True
-    object DataSetMainReestrID_REESTR_MONTH: TFIBBCDField
-      FieldName = 'ID_REESTR_MONTH'
-      Size = 0
-      RoundByScale = True
-    end
-    object DataSetMainReestrNUM_REESTR: TFIBIntegerField
-      FieldName = 'NUM_REESTR'
-    end
-    object DataSetMainReestrCOMMENT_REESTR: TFIBStringField
-      FieldName = 'COMMENT_REESTR'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object DataSetMainReestrDATE_REESTR: TFIBDateField
-      FieldName = 'DATE_REESTR'
-    end
-    object DataSetMainReestrID_USER_ADD: TFIBIntegerField
-      FieldName = 'ID_USER_ADD'
-    end
-    object DataSetMainReestrFIO_USER: TFIBStringField
-      FieldName = 'FIO_USER'
-      Size = 255
-      EmptyStrToNull = True
-    end
-    object DataSetMainReestrCOUNT_RECORDS_MAN: TFIBIntegerField
-      FieldName = 'COUNT_RECORDS_MAN'
-    end
-    object DataSetMainReestrALL_NUM: TFIBStringField
-      FieldName = 'ALL_NUM'
-      Size = 16
-      EmptyStrToNull = True
-    end
   end
   object DataSetSelectSystem: TpFIBDataSet
     Database = Database
