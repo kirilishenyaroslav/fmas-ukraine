@@ -27,7 +27,7 @@ implementation
 
 {$R *.dfm}
 const
-  LabelCntShtat_Caption   :array[1..2] of string = ('Працювало у штаті','Работало в штате');
+  LabelCntShtat_Caption   :array[1..2] of string = ('Працювало за труд. договорами (контрактами)','Работало по труд. договорам (контрактам)');
   LabelCntSovmest_Caption :array[1..2] of string = ('Працювало за ЦПД','Работало в ЦПД');
   EditData_Caption        :array[1..2] of string = ('Додаткові дані','Дополнительные данные');
 procedure EditCntWorkers(AOwner:TComponent;var CntShtat:integer;var CntSovmest:integer);

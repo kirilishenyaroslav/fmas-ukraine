@@ -3,8 +3,8 @@ object FEditCntWorkers: TFEditCntWorkers
   Top = 349
   BorderStyle = bsDialog
   Caption = 'FEditCntWorkers'
-  ClientHeight = 93
-  ClientWidth = 205
+  ClientHeight = 94
+  ClientWidth = 366
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,13 +18,13 @@ object FEditCntWorkers: TFEditCntWorkers
   object Bevel1: TBevel
     Left = 0
     Top = 0
-    Width = 205
+    Width = 366
     Height = 57
     Align = alTop
     Style = bsRaised
   end
   object SpinEditCntShtat: TcxSpinEdit
-    Left = 144
+    Left = 304
     Top = 8
     Width = 57
     Height = 21
@@ -39,7 +39,7 @@ object FEditCntWorkers: TFEditCntWorkers
     Value = 1
   end
   object SpinEditCntSovmest: TcxSpinEdit
-    Left = 144
+    Left = 304
     Top = 32
     Width = 57
     Height = 21
@@ -56,7 +56,7 @@ object FEditCntWorkers: TFEditCntWorkers
   object LabelCntShtat: TcxLabel
     Left = 2
     Top = 10
-    Width = 143
+    Width = 295
     Height = 17
     AutoSize = False
     ParentFont = False
@@ -69,7 +69,7 @@ object FEditCntWorkers: TFEditCntWorkers
     Caption = 'LabelCntShtat'
   end
   object YesBtn: TcxButton
-    Left = 128
+    Left = 288
     Top = 64
     Width = 75
     Height = 25
@@ -82,7 +82,7 @@ object FEditCntWorkers: TFEditCntWorkers
   object LabelCntSovmest: TcxLabel
     Left = 2
     Top = 34
-    Width = 143
+    Width = 295
     Height = 17
     AutoSize = False
     ParentFont = False

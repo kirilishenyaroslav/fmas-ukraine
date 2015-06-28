@@ -88,6 +88,7 @@ contains
   uShowAllVedPereoc in 'InvKart\uShowAllVedPereoc.pas' {fmPereocVed},
   uSelectShablon in 'InvKart\uSelectShablon.pas' {fmSelectShablon},
   AddGroupForm in 'invkart\AddGroupForm.pas' {fmInvAddPapka},
-  uKapRem in 'InvKart\uKapRem.pas' {KapRemForm};
+  uKapRem in 'InvKart\uKapRem.pas' {KapRemForm},
+  uLinkAmortAndGrupp in 'InvKart\uLinkAmortAndGrupp.pas' {GrpAmortForm};
 
 end.

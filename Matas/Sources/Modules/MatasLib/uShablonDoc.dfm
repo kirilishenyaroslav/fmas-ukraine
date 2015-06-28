@@ -4,8 +4,8 @@ object fmPrintShablonDoc: TfmPrintShablonDoc
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsDialog
   Caption = #1060#1086#1088#1084#1072' '#1076#1088#1091#1082#1091
-  ClientHeight = 141
-  ClientWidth = 372
+  ClientHeight = 135
+  ClientWidth = 368
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -227,6 +227,21 @@ object fmPrintShablonDoc: TfmPrintShablonDoc
     Style.Font.Style = [fsBold]
     TabOrder = 6
   end
+  object cxexport: TcxCheckBox
+    Left = 211
+    Top = 72
+    Width = 153
+    Height = 21
+    ParentFont = False
+    Properties.DisplayUnchecked = 'False'
+    Properties.Caption = #1045#1082#1089#1087#1086#1088#1090' '#1074' Excel'
+    Style.Font.Charset = DEFAULT_CHARSET
+    Style.Font.Color = clWindowText
+    Style.Font.Height = -11
+    Style.Font.Name = 'MS Sans Serif'
+    Style.Font.Style = [fsBold]
+    TabOrder = 7
+  end
   object ShablonDatabase: TpFIBDatabase
     DBName = 'localhost:'
     DBParams.Strings = (
@@ -292,8 +307,8 @@ object fmPrintShablonDoc: TfmPrintShablonDoc
   end
   object frDBDataSetPos: TfrDBDataSet
     DataSet = pFIBDataSetDannie
-    Left = 288
-    Top = 72
+    Left = 328
+    Top = 8
   end
   object pFIBDataSetKartData: TpFIBDataSet
     Database = ShablonDatabase
@@ -310,12 +325,12 @@ object fmPrintShablonDoc: TfmPrintShablonDoc
   end
   object frDBDataSetKart: TfrDBDataSet
     DataSet = pFIBDataSetKartData
-    Left = 328
-    Top = 72
+    Left = 272
+    Top = 8
   end
   object KeyActionList: TActionList
-    Left = 176
-    Top = 56
+    Left = 144
+    Top = 24
     object ActionCancel: TAction
       Caption = 'ActionCancel'
       ShortCut = 27
@@ -334,8 +349,8 @@ object fmPrintShablonDoc: TfmPrintShablonDoc
   object pFIBDataSetDocKart: TpFIBDataSet
     Database = ShablonDatabase
     Transaction = pFIBTransactionRead
-    Left = 224
-    Top = 64
+    Left = 176
+    Top = 24
     poSQLINT64ToBCD = True
   end
   object frDBDataSetDocKart: TfrDBDataSet
@@ -349,5 +364,23 @@ object fmPrintShablonDoc: TfmPrintShablonDoc
     Left = 248
     Top = 24
     poSQLINT64ToBCD = True
+  end
+  object frOLEExcelExport1: TfrOLEExcelExport
+    ShowDialog = False
+    CellsAlign = False
+    CellsFillColor = False
+    CellsFontColor = False
+    CellsFontName = False
+    CellsFontSize = False
+    CellsFontStyle = False
+    OpenExcelAfterExport = True
+    Left = 72
+    Top = 96
+  end
+  object frRTFExport1: TfrRTFExport
+    ScaleX = 1.300000000000000000
+    ScaleY = 1.000000000000000000
+    Left = 24
+    Top = 96
   end
 end

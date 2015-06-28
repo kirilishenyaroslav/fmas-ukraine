@@ -20,6 +20,8 @@ type
     frxXLSExport: TfrxXLSExport;
     frxRTFExport: TfrxRTFExport;
     frxHTMLExport: TfrxHTMLExport;
+    DSetWinning: TpFIBDataSet;
+    frxDBSetWinning: TfrxDBDataset;
     frxReport: TfrxReport;
     procedure frxReportGetValue(const VarName: String; var Value: Variant);
   private
@@ -69,6 +71,10 @@ try
   DSetGlobal.Open;
   Cnt_Shtat := DSetGlobal['CNT_SHTAT'];
   Cnt_Sovmest := DSetGlobal['CNT_SOVMEST'];
+
+  DSetWinning.SQLs.SelectSQL.Text := 'SELECT * FROM Z_1DF_PRINT_WINNING';
+  DSetWinning.Open;
+
   EditCntWorkers(Self.Owner,Cnt_Shtat,Cnt_Sovmest);
   DSet.SQLs.SelectSQL.Text := 'SELECT * FROM Z_1DF_REPORT_S('+IntToStr(ID_1Df)+') order by tin_pasport,kod_1df';
   DSet.Open;
